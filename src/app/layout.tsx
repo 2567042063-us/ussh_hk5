@@ -12,10 +12,10 @@ export const metadata: Metadata = {
   title: "langlang",
   description: "𓇢𓆸𓋼𖡼𖤣𖥧𖡼𓋼𖤣𖥧𓋼𓍊 studying chinese",
   metadataBase: new URL("https://ussh-hk5-neon.vercel.app/"),
-  openGraph: {
-    images:
-      "https://res.cloudinary.com/dpzkswl8u/image/upload/v1706692565/avatar_2025_aywrf7.png",
-  },
+  // openGraph: {
+  //   images:
+  //     "https://res.cloudinary.com/dpzkswl8u/image/upload/v1706692565/avatar_2025_aywrf7.png",
+  // },
 };
 
 export default function RootLayout({
