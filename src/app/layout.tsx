@@ -9,19 +9,12 @@ import "@shared/styles/globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "le vu trang dai",
+  title: "langlang",
   description: "𓇢𓆸𓋼𖡼𖤣𖥧𖡼𓋼𖤣𖥧𓋼𓍊 studying chinese",
-  // keywords: [
-  //   "front-end developer",
-  //   "JavaScript",
-  //   "React",
-  //   "Redux",
-  //   "Nextjs, TypeScript, Tailwind CSS",
-  // ],
-  metadataBase: new URL("https://levutrangdai.id.vn"),
+  metadataBase: new URL("https://ussh-hk5-neon.vercel.app/"),
   openGraph: {
     images:
-      "https://res.cloudinary.com/dpzkswl8u/image/upload/v1706692565/demon_slayer_ybgwdz.png",
+      "https://res.cloudinary.com/dpzkswl8u/image/upload/v1706692565/avatar_2025_aywrf7.png",
   },
 };
 

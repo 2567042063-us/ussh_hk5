@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${meta.titleseo} | lvtd`,
     alternates: {
-      canonical: `https://levutrangdai.id.vn/hk5/${slug}`,
+      canonical: `https://ussh-hk5-neon.vercel.app/hk5/${slug}`,
     },
   };
 }
@@ -42,7 +42,7 @@ export default async function ViewPage({ params }: Props) {
     <div className="flex min-h-screen flex-col dark:bg-slate-800">
       <Header
         title={filename}
-        canonical={`https://levutrangdai.id.vn/hk5/${filename}`}
+        canonical={`https://ussh-hk5-neon.vercel.app/hk5/${filename}`}
       />
 
       <div className="flex-1">

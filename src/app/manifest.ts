@@ -1,11 +1,10 @@
-
 import { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "le vu trang dai portfolio",
-    short_name: "dai",
-    description: "portfolio of le vu trang dai",
+    name: "ussh hk5",
+    short_name: "usshhk5",
+    description: "ussh hk5",
     start_url: "/",
     display: "standalone",
     background_color: "#fff",

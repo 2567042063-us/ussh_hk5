@@ -78,7 +78,7 @@ export default function LichOnThi() {
   return (
     <div className="text-slate-800 dark:text-slate-100">
       <div className="flex items-center justify-between">
-        <h1 className="my-2 text-2xl font-bold tracking-tight text-slate-500 dark:text-slate-400">
+        <h1 className="my-2 text-xl font-light tracking-tight text-slate-500 dark:text-slate-400">
           Lịch ôn thi GK - CK
         </h1>
         <a

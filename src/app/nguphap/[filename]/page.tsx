@@ -21,13 +21,13 @@ export default async function ViewHtmlPage({ params }: Props) {
   return (
     <div className="flex min-h-screen flex-col dark:bg-slate-800">
       <Header
-        title="le vu trang dai | about "
-        canonical="https://levutrangdai.id.vn/about"
+        title="langlang | about "
+        canonical="https://ussh-hk5-neon.vercel.app/about"
       />
 
       <div className="flex-1">
         <div className="mx-auto text-center">
-          <h1 className="text-2xl leading-tight mb-2 border-b-3 border-sky-300 py-3 border-dashed text-sky-500 dark:text-primary-dark font-extralight">
+          <h1 className="border-b-3 mb-2 border-dashed border-sky-300 py-3 text-2xl font-extralight leading-tight text-sky-500 dark:text-primary-dark">
             Ngữ Pháp Tiếng Trung
           </h1>
           <div className="container mx-auto flex justify-between">
@@ -44,11 +44,11 @@ export default async function ViewHtmlPage({ params }: Props) {
         </div>
       </div>
       {/* --- IFRAME EMBED HOÀN TOÀN FILE HTML --- */}
-      <main className="container mx-auto flex-1 mt-2">
+      <main className="container mx-auto mt-2 flex-1">
         <iframe
           src={`/nguphap/${actualHtmlFilename}`}
           title={meta.title}
-          className="w-full h-[calc(100vh-110px)] border-none block"
+          className="block h-[calc(100vh-110px)] w-full border-none"
         />
       </main>
 

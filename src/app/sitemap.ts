@@ -1,6 +1,6 @@
 import { MetadataRoute } from "next";
 
-const SITE_URL = "https://levutrangdai.id.vn";
+const SITE_URL = "https://ussh-hk5-neon.vercel.app/";
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
@@ -10,16 +10,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
-      url: `${SITE_URL}/about`,
+      url: `${SITE_URL}/hk5`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,
-    },
-    {
-      url: `${SITE_URL}/latest-projects`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.5,
     },
   ];
 }

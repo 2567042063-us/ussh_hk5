@@ -20,8 +20,8 @@ export default function HK5IndexPage() {
   return (
     <div className="flex min-h-screen flex-col items-center dark:bg-slate-800">
       <Header
-        title="le vu trang dai "
-        canonical="https://levutrangdai.id.vn/about"
+        title="langlang "
+        canonical="https://ussh-hk5-neon.vercel.app/about"
       />
       <div className="container flex-1">
         <div className="mx-auto text-center">

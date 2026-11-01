@@ -19,11 +19,11 @@ export const MAIN_NAV = [
     label: "HK5",
     href: "/hk5",
   },
-  {
-    id: "nguphap",
-    label: "Ngữ Pháp",
-    href: "/nguphap",
-  },
+  // {
+  //   id: "nguphap",
+  //   label: "Ngữ Pháp",
+  //   href: "/nguphap",
+  // },
   // {
   //   id: "about",
   //   label: "About",
