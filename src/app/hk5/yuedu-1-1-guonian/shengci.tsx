@@ -37,11 +37,37 @@ export default function ShengCi() {
             <td className="ztai__py">tuánjù</td>
             <td className="ztai__vi">Đoàn tụ</td>
           </tr>
+
+          <tr>
+            <td className="ztai__zh">
+              <span className="text-3xl">整理</span>
+            </td>
+            <td className="ztai__py">
+              zhěnglǐ<span className="uppercase">[chỉnh lí]</span>
+            </td>
+            <td className="ztai__vi">
+              (v) sắp xếp, dọn dẹp
+              <p className="text-xl">我把房间整理完了。</p>
+              <p>Tôi đã dọn dẹp xong phòng.</p>
+            </td>
+          </tr>
+
+          <tr>
+            <td className="ztai__zh">
+              <span className="text-3xl">整齐</span>
+            </td>
+            <td className="ztai__py">
+              zhěngqí<span className="uppercase">[chỉnh tề]</span>
+            </td>
+            <td className="ztai__vi">(adj) ngay ngắn, chỉnh tề, ngăn nắp</td>
+          </tr>
+
           <tr>
             <td className="ztai__zh">团圆</td>
             <td className="ztai__py">tuányuán</td>
             <td className="ztai__vi">Đoàn viên</td>
           </tr>
+
           <tr>
             <td className="ztai__zh">幼儿园</td>
             <td className="ztai__py">yòu'éryuán</td>
@@ -58,7 +84,9 @@ export default function ShengCi() {
             <td className="ztai__vi">Tán gẫu chuyện đời thường</td>
           </tr>
           <tr>
-            <td className="ztai__zh">哭鼻子</td>
+            <td className="ztai__zh">
+              <span className="text-3xl">哭鼻子</span>
+            </td>
             <td className="ztai__py">kū bízi</td>
             <td className="ztai__vi">Khóc nhè</td>
           </tr>
@@ -73,10 +101,7 @@ export default function ShengCi() {
             <td className="ztai__vi">Bố mẹ chồng</td>
           </tr>
           <tr>
-            <td className="ztai__zh">
-              爸爸、妈妈、老公、老婆
-              <p className="ztai__py">bàba, māma, lǎogōng, lǎopo</p>
-            </td>
+            <td className="ztai__zh">爸爸、妈妈、老公、老婆</td>
 
             <td className="ztai__vi" colSpan={2}>
               Trong giao tiếp hàng ngày, người Trung Quốc thường ưu tiên dùng

@@ -28,10 +28,26 @@ export default function GTHN() {
         </li>
         <li>
           <Link
-            href="/hk5/btsapxepcau"
+            href="/hk5/btsapxep302cau"
             className="mt-3 inline-block px-5 text-sky-700 hover:text-primary dark:text-sky-400 dark:hover:text-primary-dark"
           >
-            Bài tập sắp xếp câu
+            Bài tập sắp xếp 302 câu
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/hk5/btsapxepsbt1"
+            className="mt-3 inline-block px-5 text-sky-700 hover:text-primary dark:text-sky-400 dark:hover:text-primary-dark"
+          >
+            Bài tập sắp xếp câu SBT-01
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/hk5/btsapxepsbt2"
+            className="mt-3 inline-block px-5 text-sky-700 hover:text-primary dark:text-sky-400 dark:hover:text-primary-dark"
+          >
+            Bài tập sắp xếp câu SBT-02
           </Link>
         </li>
       </ul>
