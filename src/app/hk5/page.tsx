@@ -1,5 +1,6 @@
 import Footer from "../common/Footer";
 import Header from "../common/Header";
+import DocHieuSC from "./dochieusc";
 import GTHN from "./gthn";
 import KhauNgu from "./khaungu";
 import LichThi from "./lichthi";
@@ -28,8 +29,13 @@ export default function Page() {
         <div id="m1" className="my-5">
           <GTHN />
         </div>
+
         <div id="m2" className="my-5">
           <KhauNgu />
+        </div>
+
+        <div id="m3" className="my-5">
+          <DocHieuSC />
         </div>
       </div>
 

@@ -150,3 +150,79 @@ button:focus {
     color: #cbd5e1;
   }
 } */
+
+/* dochieu */
+
+.ztai__dochieu {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 16px;
+  color: #1f2933;
+}
+.ztai__dochieu__bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+.ztai__dochieu__btn {
+  padding: 8px 14px;
+  border: 1px solid #9aa5b1;
+  border-radius: 6px;
+  background: #fff;
+  color: #1f2933;
+  font-size: 14px;
+  cursor: pointer;
+}
+.ztai__dochieu__btn:hover {
+  background: #f0f4f8;
+}
+.ztai__dochieu__btn:focus-visible {
+  outline: 2px solid #2b6cb0;
+  outline-offset: 2px;
+}
+.ztai__dochieu__btn[aria-pressed="true"] {
+  background: #1f2933;
+  color: #fff;
+  border-color: #1f2933;
+}
+.ztai__dochieu__table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+.ztai__dochieu__table th,
+.ztai__dochieu__table td {
+  border: 1px solid #d2d6dc;
+  padding: 12px 14px;
+  vertical-align: top;
+  text-align: left;
+}
+.ztai__dochieu__table th {
+  background: #f0f4f8;
+  font-weight: 600;
+}
+.ztai__dochieu__title th,
+.ztai__dochieu__title td {
+  background: #fafbfc;
+  font-weight: 600;
+}
+/* .ztai__zh {
+  font-size: inherit;
+  line-height: 2;
+} */
+.ztai__py {
+  /* font-size: 15px; */
+  line-height: 1.9;
+  color: #64748b;
+}
+@media (max-width: 720px) {
+  .ztai__dochieu__table {
+    display: block;
+    overflow-x: auto;
+  }
+  .ztai__dochieu__table th,
+  .ztai__dochieu__table td {
+    min-width: 260px;
+  }
+}
