@@ -7,7 +7,7 @@ import Header from "../../common/Header";
 
 export default function Page() {
   return (
-    <div className="container flex min-h-screen flex-col">
+    <div className="flex min-h-screen flex-col items-center dark:bg-slate-800">
       <Header title="hk5" canonical="https://ussh-hk5-neon.vercel.app/hk5" />
       <div className="flex-1">
         <BaiTapSapXepCau />
