@@ -12,14 +12,14 @@ export default function Page() {
       <div className="flex-1">
         <BaiTapSapXepCauSBT02 />
         <div className="mt-4 flex justify-center">
-          {/* <Link
-            href="/hk5/dapan302_causapxepcau.pdf"
+          <Link
+            href="https://drive.google.com/file/d/1iUoPDbcdYWFoZYCCfOxHgauXoy5jFvTf/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             className="text-blue-600 hover:underline"
           >
             Đối chiếu với file đáp án gốc PDF
-          </Link> */}
+          </Link>
         </div>
       </div>
       <Footer />

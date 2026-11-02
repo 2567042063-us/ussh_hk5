@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function DocHieuSC() {
   return (
     <div className="mb-10">
-      <h2 className="border-t-3 border-b-3 mb-2 border-dashed border-sky-300 py-3 text-center text-2xl font-extralight leading-tight text-sky-500 dark:text-primary-dark">
+      <h2 className="border-t-3 border-b-3 mb-2 border-dashed border-sky-600 py-3 text-center text-2xl font-extralight leading-tight text-sky-600 dark:text-primary-dark">
         Đọc hiểu SC
       </h2>
       <p className="text-center text-xl font-light text-orange-600 dark:text-orange-400">
