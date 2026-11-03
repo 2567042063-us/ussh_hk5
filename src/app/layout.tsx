@@ -9,7 +9,7 @@ import "@shared/styles/globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "langlang",
+  title: "nhỏ yêu quái bận tu luyện",
   description: "𓇢𓆸𓋼𖡼𖤣𖥧𖡼𓋼𖤣𖥧𓋼𓍊 studying chinese",
   metadataBase: new URL("https://ussh-hk5-neon.vercel.app/"),
   // openGraph: {

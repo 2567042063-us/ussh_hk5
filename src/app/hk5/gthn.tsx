@@ -23,6 +23,14 @@ export default function GTHN() {
       <ul className="text-center text-xl">
         <li>
           <Link
+            href="/hk5/bt-bnkq"
+            className="mt-3 inline-block px-5 text-sky-700 hover:text-primary dark:text-sky-400 dark:hover:text-primary-dark"
+          >
+            Bài tập Bổ ngữ kết quả (结果补语)
+          </Link>
+        </li>
+        <li>
+          <Link
             href="/hk5/btchuba"
             className="mt-3 inline-block px-5 text-sky-700 hover:text-primary dark:text-sky-400 dark:hover:text-primary-dark"
           >

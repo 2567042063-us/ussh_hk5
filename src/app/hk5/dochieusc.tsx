@@ -13,7 +13,7 @@ export default function DocHieuSC() {
       <ul className="text-center text-xl">
         <li>
           <Link
-            href="/hk5/yuedu-1-1-guonian"
+            href="/hk5/yuedu-2-1-guonian"
             className="mt-3 inline-block px-5 text-sky-700 hover:text-primary dark:text-sky-400 dark:hover:text-primary-dark"
           >
             一、过年

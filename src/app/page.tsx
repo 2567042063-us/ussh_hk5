@@ -5,7 +5,10 @@ import HeroBanner from "./common/hero-banner";
 export default function Home() {
   return (
     <div className="flex min-h-screen flex-col items-center dark:bg-slate-800">
-      <Header title="langlang" canonical="https://ussh-hk5-neon.vercel.app/" />
+      <Header
+        title="nhỏ yêu quái bận tu luyện"
+        canonical="https://ussh-hk5-neon.vercel.app/"
+      />
 
       <div className="container mb-2 flex flex-1 items-center justify-center sm:mb-10">
         <div className="flex flex-col sm:mt-10 sm:flex-row-reverse">

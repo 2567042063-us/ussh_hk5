@@ -10,7 +10,7 @@ type Props = {
 };
 
 export default function Header({
-  title = "langlang",
+  title = "nhỏ yêu quái bận tu luyện",
   canonical = "https://levutrangdai.id.vn",
 }: Props) {
   return (
