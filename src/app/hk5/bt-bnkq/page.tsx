@@ -1,9 +1,15 @@
+import { Metadata } from "next";
 import Link from "next/link";
 
 import BaiTapBoNguKetQua from "@shared/components/BaiTapBoNguKetQua";
 
 import Footer from "../../common/Footer";
 import Header from "../../common/Header";
+
+export const metadata: Metadata = {
+  title: "BNKQ",
+  description: "bài tập Bổ ngữ kết quả (结果补语): tổng hợp từ Bài 4 và Bài 12",
+};
 
 export default function Page() {
   return (

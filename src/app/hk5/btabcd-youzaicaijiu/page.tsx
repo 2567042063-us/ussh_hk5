@@ -1,9 +1,15 @@
+import { Metadata } from "next";
 import Link from "next/link";
 
 import BtabcdYouzaicaijiu from "@shared/components/BtabcdYouzaicaijiu";
 
 import Footer from "../../common/Footer";
 import Header from "../../common/Header";
+
+export const metadata: Metadata = {
+  title: "就 才 再 又",
+  description: "bài tập phân biệt 就, 才, 再, 又",
+};
 
 export default function Page() {
   return (

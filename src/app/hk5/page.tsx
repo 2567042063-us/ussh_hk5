@@ -1,9 +1,16 @@
+import { Metadata } from "next";
+
 import Footer from "../common/Footer";
 import Header from "../common/Header";
 import DocHieuSC from "./dochieusc";
 import GTHN from "./gthn";
 import KhauNgu from "./khaungu";
 import LichThi from "./lichthi";
+
+export const metadata: Metadata = {
+  title: "HK5",
+  description: "HK5 – GTHN, Khẩu ngữ, Đọc hiểu SC",
+};
 
 export default function Page() {
   return (

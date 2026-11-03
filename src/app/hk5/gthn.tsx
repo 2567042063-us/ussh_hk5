@@ -26,7 +26,15 @@ export default function GTHN() {
             href="/hk5/bt-bnkq"
             className="mt-3 inline-block px-5 text-sky-700 hover:text-primary dark:text-sky-400 dark:hover:text-primary-dark"
           >
-            Bài tập Bổ ngữ kết quả (结果补语)
+            BT Bổ ngữ kết quả (结果补语)
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/hk5/btabc-lezheguo"
+            className="mt-3 inline-block px-5 text-sky-700 hover:text-primary dark:text-sky-400 dark:hover:text-primary-dark"
+          >
+            ABC - 着、了、过
           </Link>
         </li>
         <li>
@@ -34,7 +42,7 @@ export default function GTHN() {
             href="/hk5/btchuba"
             className="mt-3 inline-block px-5 text-sky-700 hover:text-primary dark:text-sky-400 dark:hover:text-primary-dark"
           >
-            Bài tập câu chữ 把
+            BT câu chữ 把
           </Link>
         </li>
         <li>
@@ -42,7 +50,7 @@ export default function GTHN() {
             href="/hk5/btsapxep302cau"
             className="mt-3 inline-block px-5 text-sky-700 hover:text-primary dark:text-sky-400 dark:hover:text-primary-dark"
           >
-            Bài tập sắp xếp 302 câu
+            BT sắp xếp 302 câu
           </Link>
         </li>
         <li>
@@ -50,7 +58,7 @@ export default function GTHN() {
             href="/hk5/btsapxepsbt1"
             className="mt-3 inline-block px-5 text-sky-700 hover:text-primary dark:text-sky-400 dark:hover:text-primary-dark"
           >
-            Bài tập sắp xếp câu SBT-01
+            BT sắp xếp câu SBT-01
           </Link>
         </li>
         <li>
@@ -58,7 +66,7 @@ export default function GTHN() {
             href="/hk5/btsapxepsbt2"
             className="mt-3 inline-block px-5 text-sky-700 hover:text-primary dark:text-sky-400 dark:hover:text-primary-dark"
           >
-            Bài tập sắp xếp câu SBT-02
+            BT sắp xếp câu SBT-02
           </Link>
         </li>
         <li>
@@ -66,7 +74,7 @@ export default function GTHN() {
             href="/hk5/btabcd-youzaicaijiu"
             className="mt-3 inline-block px-5 text-sky-700 hover:text-primary dark:text-sky-400 dark:hover:text-primary-dark"
           >
-            Chọn ABCD - Youzai Caijiu
+            ABCD - 就 才 再 又
           </Link>
         </li>
       </ul>
