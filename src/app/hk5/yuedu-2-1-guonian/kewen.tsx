@@ -87,6 +87,33 @@ export default function GuoNian() {
           ))}
         </tbody>
       </table>
+
+      <table className="ztai__dochieu__table">
+        <caption className="ztai__zh p-5 text-3xl text-sky-700">注释</caption>
+        {/* <thead>
+            <tr>
+              <th>STT</th>
+            </tr>
+          </thead> */}
+        <tbody>
+          <tr>
+            <td className="ztai__zh">大年三十</td>
+            <td>
+              <p className="ztai__zh">中国农历一年中的最后一天，即除夕。</p>
+              <p>
+                Ngày cuối cùng của năm âm lịch Trung Quốc, tức đêm giao thừa.
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td className="ztai__zh">超市</td>
+            <td>
+              <p className="ztai__zh">超级市场的简称。</p>
+              <p>Cách gọi tắt của siêu thị.</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   );
 }

@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import Image from "next/image";
 
 // import Link from "next/link";
@@ -6,6 +7,11 @@ import Footer from "../../common/Footer";
 import Header from "../../common/Header";
 import Kewen from "./kewen";
 import ShengCi from "./shengci";
+
+export const metadata: Metadata = {
+  title: "yuedu 2-1-guonian",
+  description: "Bài đọc hiểu 2-1: 过年 _ Tết Nguyên Đán",
+};
 
 export default function Page() {
   return (
