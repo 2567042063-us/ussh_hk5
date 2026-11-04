@@ -37,7 +37,8 @@ const config: Config = {
       animation: {
         background: "background 2s ease-in-out infinite",
         linear: "backgroundLinear 3s linear infinite",
-        slide: "backgroundSlide 120s linear infinite alternate-reverse forwards;",
+        slide:
+          "backgroundSlide 120s linear infinite alternate-reverse forwards;",
       },
       keyframes: {
         background: {
@@ -51,6 +52,10 @@ const config: Config = {
         backgroundSlide: {
           "0%": { backgroundPosition: "0 0%" },
           "100%": { backgroundPosition: "100% 50%" },
+        },
+        waviy: {
+          "0%, 40%, 100%": { transform: "translateY(0)" },
+          "20%": { transform: "translateY(-20px)" },
         },
       },
     },

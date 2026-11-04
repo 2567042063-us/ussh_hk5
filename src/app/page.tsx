@@ -12,14 +12,19 @@ export default function Home() {
 
       <div className="container mb-2 flex flex-1 items-center justify-center sm:mb-10">
         <div className="flex flex-col sm:mt-10 sm:flex-row-reverse">
-          <div className="relative mx-auto flex h-80 w-80 justify-center overflow-hidden rounded-full shadow sm:h-[360px] sm:w-[360px]">
+          <div className="sm:h-90 sm:w-90 relative mx-auto flex h-80 w-80 justify-center overflow-hidden rounded-full shadow">
             <HeroBanner />
           </div>
 
-          <div className="ml-auto max-w-[500px] flex-1 pr-0 text-center font-light sm:pr-5">
-            <p className="mt-10 text-5xl font-extralight leading-loose sm:mt-0">
-              hi, chúc các bạn học tốt thi tốt!!!
-            </p>
+          <div className="max-w-125 ml-auto flex-1 pr-0 text-center font-light sm:pr-5">
+            <div className="mt-5 flex h-full flex-col items-end justify-center">
+              <p className="bg-linear-to-r bg-size-[200%_auto] from-indigo-400 via-sky-500 to-indigo-400 bg-clip-text text-xl font-light text-transparent md:text-2xl">
+                hi, chúc các bạn
+              </p>
+              <p className="bg-linear-to-r bg-size-[200%_auto] mt-5 animate-linear from-indigo-400 via-sky-500 to-indigo-400 bg-clip-text text-3xl font-light text-transparent md:text-4xl">
+                học tốt thi tốt
+              </p>
+            </div>
           </div>
         </div>
       </div>

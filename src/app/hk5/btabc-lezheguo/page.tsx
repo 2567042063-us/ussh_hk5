@@ -7,21 +7,21 @@ import Footer from "../../common/Footer";
 import Header from "../../common/Header";
 
 export const metadata: Metadata = {
-  title: "了 – 着 – 过",
-  description: "bài tập phân biệt 了 – 着 – 过",
+  title: "了 - 着 - 过",
+  description: "bài tập phân biệt 了 - 着 - 过",
 };
 
 export default function Page() {
   return (
     <div className="flex min-h-screen flex-col items-center dark:bg-slate-800">
       <Header
-        title="Phân biệt 了 – 着 – 过"
+        title="Phân biệt 了 - 着 - 过"
         canonical="https://ussh-hk5-neon.vercel.app/hk5"
       />
-      <div className="flex-1">
-        <h2 className="mb-2 border-b-2 border-t-2 border-dashed border-sky-600 py-3 text-center text-2xl font-extralight leading-tight text-sky-600 dark:text-primary-dark">
-          Phân biệt 了 – 着 – 过
-        </h2>
+      <div className="container-bt flex-1">
+        <h1 className="mb-2 border-b-2 border-t-2 border-dashed border-sky-600 py-3 text-center text-2xl font-extralight leading-tight text-sky-600 dark:text-primary-dark">
+          Bài tập phân biệt 了 - 着 - 过
+        </h1>
         <BaiTapLeZheGuo />
         <div className="ztai__dochieu">
           <p>
@@ -102,6 +102,219 @@ export default function Page() {
             dụ 昨天 hay 已经 thường đi với 了, 一直 hay 正在…呢 thường đi với
             着, 曾经 hay 从来没 thường đi với 过.
           </p>
+
+          <table className="ztai__table">
+            <tbody>
+              <tr>
+                <td>
+                  <p>
+                    <strong>
+                      <span>Trợ từ</span>
+                    </strong>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <strong>
+                      <span>&Yacute; nghĩa cốt l&otilde;i</span>
+                    </strong>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <strong>
+                      <span>Từ tiếng Việt tương đương</span>
+                    </strong>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <strong>
+                      <span>V&iacute; dụ minh họa</span>
+                    </strong>
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <strong>
+                      <span>了</span>
+                    </strong>
+                    <strong>
+                      <span> (le)</span>
+                    </strong>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <strong>
+                      <span>
+                        H&agrave;nh động đ&atilde; ho&agrave;n th&agrave;nh
+                      </span>
+                    </strong>
+                    <span>
+                      &nbsp;hoặc trạng th&aacute;i đ&atilde; c&oacute; sự thay
+                      đổi.
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span>...rồi, ...xong</span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span>我吃了饭</span>
+                    <span>。</span>
+                    <span>
+                      &nbsp;
+                      <br />{" "}
+                      <em>
+                        (T&ocirc;i ăn cơm <strong>xong rồi</strong>.)
+                      </em>
+                    </span>
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <strong>
+                      <span>着</span>
+                    </strong>
+                    <strong>
+                      <span> (zhe)</span>
+                    </strong>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <strong>
+                      <span>Trạng th&aacute;i đang</span>
+                    </strong>
+                    <strong>
+                      <span> TIẾP DIỄN</span>
+                    </strong>
+                    <span>
+                      &nbsp;hoặc h&agrave;nh động đang duy tr&igrave; li&ecirc;n
+                      tục.
+                    </span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span>...đang, ...giữ nguy&ecirc;n</span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span>
+                      门开<strong>着</strong>。
+                    </span>
+                    <span>
+                      &nbsp;
+                      <br />{" "}
+                      <em>
+                        (Cửa <strong>đang</strong> mở - đang ở trạng th&aacute;i
+                        mở).
+                      </em>
+                    </span>
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <strong>
+                      <span>过</span>
+                    </strong>
+                    <strong>
+                      <span> (gu&ograve;)</span>
+                    </strong>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <strong>
+                      <span>Kinh nghiệm qu&aacute; khứ</span>
+                    </strong>
+                    <span>
+                      , h&agrave;nh động đ&atilde; qua v&agrave; hiện tại
+                      kh&ocirc;ng c&ograve;n nữa.
+                    </span>
+                  </p>
+                  <p>
+                    <span>
+                      Nếu h&agrave;nh động đ&oacute; chưa bao giờ xảy ra từ
+                      trước đến nay, bạn d&ugrave;ng&nbsp;
+                    </span>
+                    <span>没</span>
+                    <span>...</span>
+                    <span>过</span>
+                    <span>.</span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span>...từng, ...đ&atilde; từng</span>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span>
+                      我去<strong>过</strong>北京。
+                    </span>
+                    <span>
+                      &nbsp;
+                      <br />{" "}
+                      <em>
+                        (T&ocirc;i <strong>từng</strong> đi Bắc Kinh - giờ
+                        kh&ocirc;ng ở đ&oacute; nữa).
+                      </em>
+                    </span>
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <strong>
+                      <span>&nbsp;</span>
+                    </strong>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <strong>
+                      <span>Cấu tr&uacute;c V1 + </span>
+                    </strong>
+                    <strong>
+                      <span>着</span>
+                    </strong>
+                    <strong>
+                      <span> + V2</span>
+                    </strong>
+                  </p>
+                  <p>
+                    <span>
+                      他<strong>笑</strong>着<strong>说</strong>。
+                    </span>
+                    <span>&nbsp;</span>
+                  </p>
+                </td>
+                <td colSpan={2}>
+                  <p>
+                    <span>
+                      Vừa l&agrave;m c&aacute;i n&agrave;y vừa l&agrave;m
+                      c&aacute;i kia
+                    </span>
+                  </p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
         <div className="mt-4 flex justify-center">
           <Link

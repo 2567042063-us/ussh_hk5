@@ -87,6 +87,12 @@ button:focus {
   flex-shrink: 0;
 }
 
+.container-bt {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
 .ztai__fkaiti {
   font-family:
     "KaiTi", "STKaiti", "Songti SC", "SimSun", "Noto Serif CJK SC",

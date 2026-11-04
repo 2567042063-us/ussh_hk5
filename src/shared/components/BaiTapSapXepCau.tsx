@@ -1398,7 +1398,6 @@ export default function BaiTapSapXepCau() {
     <div className="bt">
       <style dangerouslySetInnerHTML={{ __html: CSS }} />
       <div className="bt-w">
-        <h1>Sắp xếp câu tiếng Trung HSK 3-4-5</h1>
         <p className="bt-sub">
           {ITEMS.length} câu. Sắp xếp các từ thành một câu hoàn chỉnh: chạm từ
           để xếp, chạm lại để gỡ ra.

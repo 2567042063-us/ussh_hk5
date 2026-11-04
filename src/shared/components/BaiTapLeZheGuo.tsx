@@ -1560,9 +1560,9 @@ export default function BaiTapLeZheGuo() {
   };
 
   return (
-    <div className="bt">
+    <div className="bt container-bt">
       <style dangerouslySetInnerHTML={{ __html: CSS }} />
-      <div className="bt-w rounded-lg bg-white p-5 shadow dark:bg-slate-700">
+      <div className="rounded-lg bg-white p-5 shadow dark:bg-slate-700">
         <p className="bt-sub">
           {total || ITEMS.reduce((n, it) => n + it[5].length, 0)} câu hỏi. Chọn
           了, 着 hoặc 过 điền vào chỗ trống, sau khi chọn sẽ có giải thích.
@@ -1693,7 +1693,6 @@ background:var(--bg);color:var(--tx);font-family:system-ui,-apple-system,"Segoe 
 .dark .bt{color-scheme:dark;--bg:#1b1a18;--card:#252320;--tx:#ece8e0;--mu:#a09a8e;--bd:#3a3731;--ac:#ff8a78;--acbg:#3a2623;--ok:#7bd88a;--okbg:#22331f;--no:#ff8a78}
 :where(.bt) *{box-sizing:border-box}
 :where(.bt) button,:where(.bt) select{font:inherit;color:var(--tx)}
-.bt-w{max-width:720px;margin:0 auto;padding:18px 14px 40px}
 .bt h1{margin:0 0 15px;text-align:center;}
 .bt-sub{color:var(--mu);font-size:.85rem;margin:0 0 12px}
 .bt-opt{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:.85rem;margin-bottom:12px}

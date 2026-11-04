@@ -1186,8 +1186,8 @@ export default function BoNguKetQuaGoDapAn() {
   return (
     <div className="bnkq">
       <style>{CSS}</style>
-      <div className="w">
-        <h1>Bài tập bổ ngữ kết quả: gõ cụm động từ vào chỗ trống</h1>
+      <div className="container-bt">
+        <h1>___ gõ cụm động từ vào chỗ trống ___</h1>
         <p className="sub">
           {BANK.length} câu từ file tổng hợp Bài 4 và Bài 12, kèm 8 câu bài tập
           trong ảnh ở trang đầu. Gõ bằng bộ gõ pinyin hoặc chữ Hán.
@@ -1378,7 +1378,7 @@ const CSS = `
 background:var(--bg);color:var(--tx);min-height:100vh;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.5;color-scheme:light dark}
 @media(prefers-color-scheme:dark){.bnkq{--bg:#101b2c;--card:#101b2c;--tx:#ece8e0;--mu:#a09a8e;--bd:#3a3731;--ac:#ff8a78;--acbg:#3a2623;--ok:#7bd88a;--okbg:#22331f;--no:#ff8a78}}
 .bnkq *{box-sizing:border-box}
-.bnkq .w{max-width:720px;margin:0 auto;padding:18px 14px}
+
 .bnkq h1{font-size:1.3rem;margin:0 0 2px}
 .bnkq .sub{color:var(--mu);font-size:.85rem;margin:0 0 12px}
 .bnkq button,.bnkq select,.bnkq input{font:inherit;color:var(--tx)}

@@ -1,5 +1,6 @@
 // app/bai-tap-ba/page.tsx
 import { Metadata } from "next";
+import Link from "next/link";
 
 import BaiTapBa from "@shared/components/BaiTapCauChuBa";
 
@@ -19,6 +20,16 @@ export default function Page() {
         canonical="https://ussh-hk5-neon.vercel.app/hk5/btchuba"
       />
       <BaiTapBa />
+      <div className="mt-4 flex justify-center">
+        <Link
+          href="https://docs.google.com/document/d/1B8rxzY-USIi7MN1e3Z9xhRzFUYettqW5wMRmPO8aC2k/edit?usp=drive_link"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-600 hover:underline"
+        >
+          Câu chữ 把
+        </Link>
+      </div>
       <Footer />
     </div>
   );
