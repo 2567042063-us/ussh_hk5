@@ -23,6 +23,14 @@ export default function GTHN() {
       <ul className="text-center text-xl">
         <li>
           <Link
+            href="/hk5/baitap-suacausai-1119"
+            className="mt-3 inline-block px-5 text-sky-700 hover:text-primary dark:text-sky-400 dark:hover:text-primary-dark"
+          >
+            BT Sửa câu sai bài 11-19
+          </Link>
+        </li>
+        <li>
+          <Link
             href="/hk5/bt-bnkq"
             className="mt-3 inline-block px-5 text-sky-700 hover:text-primary dark:text-sky-400 dark:hover:text-primary-dark"
           >
