@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 
 type Row = { zh: string; py: string; vi: string };
 
@@ -45,23 +46,33 @@ export default function GuoNian() {
     <div className="ztai__dochieu">
       {/* <style>{CSS}</style> */}
 
-      <div className="ztai__dochieu__bar">
-        <button
-          type="button"
-          className="ztai__dochieu__btn"
-          aria-pressed={!showPinyin}
-          onClick={() => setShowPinyin((v) => !v)}
-        >
-          {showPinyin ? "Tắt pinyin" : "Bật pinyin"}
-        </button>
-        <button
-          type="button"
-          className="ztai__dochieu__btn"
-          aria-pressed={!showVi}
-          onClick={() => setShowVi((v) => !v)}
-        >
-          {showVi ? "Tắt tiếng Việt" : "Bật tiếng Việt"}
-        </button>
+      <div className="ztai__dochieu__bar justify-between">
+        <div>
+          <button
+            type="button"
+            className="ztai__dochieu__btn mr-4"
+            aria-pressed={!showPinyin}
+            onClick={() => setShowPinyin((v) => !v)}
+          >
+            {showPinyin ? "Tắt pinyin" : "Bật pinyin"}
+          </button>
+          <button
+            type="button"
+            className="ztai__dochieu__btn"
+            aria-pressed={!showVi}
+            onClick={() => setShowVi((v) => !v)}
+          >
+            {showVi ? "Tắt tiếng Việt" : "Bật tiếng Việt"}
+          </button>
+        </div>
+        <div>
+          <Link
+            href="/hk5/yuedu-2-1-guonian-bt"
+            className="mt-3 inline-block px-5 text-sky-700 hover:text-primary dark:text-sky-400 dark:hover:text-primary-dark"
+          >
+            •̀ ᴗ - làm bài tập
+          </Link>
+        </div>
       </div>
 
       <table className="ztai__dochieu__table">

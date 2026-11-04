@@ -37,6 +37,29 @@ export default function ShengCi() {
             <td className="ztai__py">tuánjù</td>
             <td className="ztai__vi">Đoàn tụ</td>
           </tr>
+          <tr>
+            <td className="ztai__zh">
+              <span className="text-3xl">团圆饭</span>
+            </td>
+            <td className="ztai__py">tuányuánfàn</td>
+            <td className="ztai__vi">Bữa cơm sum họp</td>
+          </tr>
+          <tr>
+            <td className="ztai__zh">
+              <span className="text-3xl">围坐</span>
+            </td>
+            <td className="ztai__py">wéizuò</td>
+            <td className="ztai__vi">Ngồi quây quần</td>
+          </tr>
+          <tr>
+            <td className="ztai__zh">
+              <span className="text-3xl">老少三代</span>
+            </td>
+            <td className="ztai__py">lǎoshào sāndài</td>
+            <td className="ztai__vi">
+              Ba thế hệ già trẻ: Ba mẹ, con cái, cháu chắt
+            </td>
+          </tr>
 
           <tr>
             <td className="ztai__zh">
@@ -99,6 +122,11 @@ export default function ShengCi() {
             <td className="ztai__zh">公婆</td>
             <td className="ztai__py">gōngpó</td>
             <td className="ztai__vi">Bố mẹ chồng</td>
+          </tr>
+          <tr>
+            <td className="ztai__zh">婆家</td>
+            <td className="ztai__py">píjia</td>
+            <td className="ztai__vi">Nhà chồng</td>
           </tr>
           <tr>
             <td className="ztai__zh">爸爸、妈妈、老公、老婆</td>

@@ -34,6 +34,10 @@ export default function NdthiNPDsc3() {
         Phần 1-3-4: dựa theo GTHN từ bài 11-&gt;19 (xem kỹ lại các bài tập + ngữ
         pháp + bài khóa)
       </div>
+      <div>
+        Ngữ pháp 4 phần đều hoàn toàn trong GTHN → → → xem kỹ lại toàn bộ bài
+        khóa + bài tập.
+      </div>
       <div style={{ marginTop: 15 }}>
         💢 From đề thi CK sau này cũng như vậy, nhưng thêm số bài học.
       </div>
