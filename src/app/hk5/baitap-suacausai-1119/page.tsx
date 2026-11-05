@@ -14,12 +14,6 @@ export default function Page() {
 
         <section className="mx-auto mt-4 w-full max-w-xl rounded-sm bg-stone-50 p-4 md:p-6">
           <p dir="ltr">
-            Tr&ecirc;n điện thoại bạn c&oacute; thể vuốt tr&aacute;i/phải để
-            chuyển c&acirc;u. Tr&ecirc;n m&aacute;y t&iacute;nh d&ugrave;ng
-            ph&iacute;m &larr; &rarr; để chuyển c&acirc;u, ph&iacute;m Space
-            hoặc Enter để hiện hoặc ẩn đ&aacute;p &aacute;n.
-          </p>
-          <p dir="ltr">
             <strong>
               Lưu &yacute; về đ&aacute;p &aacute;n trong file PDF:
             </strong>{" "}

@@ -747,7 +747,7 @@ export default function GaiCuoiBaiTap() {
         className="sticky bottom-0 bg-white px-4 py-3"
         style={{ paddingBottom: "max(0.75rem, env(safe-area-inset-bottom))" }}
       >
-        <div className="mx-auto flex max-w-xl gap-3">
+        <div className="mx-auto flex max-w-xl gap-3 px-4">
           <button
             onClick={() => go(-1)}
             disabled={pos === 0}
