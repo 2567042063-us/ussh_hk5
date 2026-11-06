@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Bài khoá phụ 13</title>
+<style>
+:root{--bg:#fff;--card:#fff;--tx:#222;--mu:#6b6b6b;--ac:#b3261e;--ac2:#fbe9e7;--ln:#e5e0d5;--ok:#1b7a3d;--okb:#e3f4e8;--no:#b3261e;--nob:#fde8e6;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#17150f;--card:#221f17;--tx:#eee9dc;--mu:#a39e90;--ac:#ff8a80;--ac2:#3a2420;--ln:#3a3629;--ok:#7fd69a;--okb:#16301e;--no:#ff8a80;--nob:#3a1f1c;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#17150f;--card:#221f17;--tx:#eee9dc;--mu:#a39e90;--ac:#ff8a80;--ac2:#3a2420;--ln:#3a3629;--ok:#7fd69a;--okb:#16301e;--no:#ff8a80;--nob:#3a1f1c;color-scheme:dark}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--tx);font:16px/1.5 -apple-system,"Segoe UI",Roboto,"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;padding:12px}
+.box{max-width:720px;margin:0 auto;background:var(--card);border:1px solid var(--ln);border-radius:2px;overflow:hidden}
+h1{font-size:17px;margin:0;padding:14px 16px 8px}
+.tabs{display:flex;border-bottom:1px solid var(--ln);overflow-x:auto}
+.tabs button{flex:1;min-width:max-content;padding:10px 12px;background:none;border:0;border-bottom:3px solid transparent;color:var(--mu);font:inherit;font-size:14px;cursor:pointer}
+.tabs button.on{color:var(--ac);border-color:var(--ac);font-weight:600}
+.pane{display:none;padding:12px 14px 18px}.pane.on{display:block}
+.tools{display:flex;gap:8px;margin-bottom:10px}
+.chip{border:1px solid var(--ln);background:none;color:var(--tx);border-radius:99px;padding:5px 12px;font:inherit;font-size:13px;cursor:pointer}
+.chip.on{background:var(--ac2);border-color:var(--ac);color:var(--ac)}
+.s{padding:9px 0;border-bottom:1px dashed var(--ln);cursor:pointer}
+.s .h{font-size:22px;line-height:1.6; font-family: KaiTi, STKaiti, PingFang SC, Songti SC, SimSun, Noto Serif CJK SC, Noto Serif SC, serif;}
+.s .p,.s .v{display:none;font-size:14px; padding:2px 0 ;color:var(--mu)}
+.s .p { font-family: "Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;}
+.s .v{color:var(--tx);opacity:.85}
+.s.sp .p,.s.sv .v,.showp .s .p,.showv .s .v{display:block}
+.note{font-size:12.5px;color:var(--ac)}
+.g{border:1px solid var(--ln);border-radius:12px;padding:10px 12px;margin-bottom:10px}
+.g b{color:var(--ac)}
+.g .ex{font-size:17px;margin:4px 0 2px}
+.g small{color:var(--mu);display:block}
+.tag{font-size:11px;background:var(--ac2);color:var(--ac);border-radius:6px;padding:1px 6px;margin-left:4px}
+.sub{display:flex;gap:6px;margin-bottom:12px}
+.q{margin-bottom:14px;padding-bottom:12px;border-bottom:1px dashed var(--ln)}
+.q .t{font-size:18px;margin-bottom:8px}
+.opts{display:flex;flex-wrap:wrap;gap:8px}
+.o{border:1px solid var(--ln);background:none;color:var(--tx);border-radius:10px;padding:8px 12px;font:inherit;font-size:16px;cursor:pointer;text-align:left}
+.o.ok{background:var(--okb);border-color:var(--ok);color:var(--ok)}
+.o.no{background:var(--nob);border-color:var(--no);color:var(--no)}
+.fb{font-size:13.5px;margin-top:6px;color:var(--mu)}
+.ans{min-height:44px;border:1px dashed var(--ln);border-radius:10px;padding:6px;display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px}
+.btn{border:0;background:var(--ac);color:var(--bg);border-radius:10px;padding:8px 14px;font:inherit;font-size:14px;cursor:pointer}
+.btn.l{background:none;border:1px solid var(--ln);color:var(--tx)}
+.score{font-weight:600;margin-top:4px}
+</style>
+</head>
+<body>
+<div class="box">
+<h1>📖 Bài khoá phụ – Bài 13</h1>
+<div class="tabs" id="tabs">
+<button class="on" data-t="a">Bài 1</button><button data-t="b">Bài 2</button><button data-t="g">Ngữ pháp</button><button data-t="x">Bài tập</button>
+</div>
+<div class="pane on" id="a"></div>
+<div class="pane" id="b"></div>
+<div class="pane" id="g"></div>
+<div class="pane" id="x">
+<div class="sub" id="sub"><button class="chip on" data-e="1">1. Điền V+bổ ngữ</button><button class="chip" data-e="2">2. Sửa câu</button><button class="chip" data-e="3">3. Sắp xếp</button></div>
+<div id="ex"></div>
+</div>
+</div>
+<script>
+const T1=[
+['你去哪儿','Nǐ qù nǎr','Bạn đi đâu?'],
+['我的一个朋友在首都剧场附近开了一个小公司。','Wǒ de yí ge péngyou zài Shǒudū Jùchǎng fùjìn kāi le yí ge xiǎo gōngsī.','Một người bạn của tôi đã mở một công ty nhỏ gần Nhà hát Thủ Đô.'],
+['那天很忙，职员们都没有吃午饭，','Nà tiān hěn máng, zhíyuánmen dōu méiyǒu chī wǔfàn,','Hôm đó rất bận, các nhân viên đều chưa ăn trưa,'],
+['她为了给大家买吃的，就打的去了“麦当劳”，买好了饭就又打的往回走。','Tā wèile gěi dàjiā mǎi chī de, jiù dǎ dī qù le “Màidāngláo”, mǎi hǎo le fàn jiù yòu dǎ dī wǎng huí zǒu.','cô ấy vì muốn mua đồ ăn cho mọi người, liền bắt taxi đến McDonald’s, mua xong cơm lại bắt taxi đi về.'],
+['司机问她去哪儿，她说：“首都剧场。”','Sījī wèn tā qù nǎr, tā shuō: “Shǒudū jùchǎng.”','Tài xế hỏi cô đi đâu, cô nói: “Nhà hát Thủ Đô.” (nhưng phát âm thành jīchǎng – sân bay)'],
+['司机奇怪地看了她一眼，但还是开车走了。','Sījī qíguài de kàn le tā yì yǎn, dàn háishì kāichē zǒu le.','Tài xế nhìn cô một cách kỳ lạ, nhưng vẫn lái xe đi.'],
+['走了好长时间，我的朋友觉得不对，就对司机说，错了。','Zǒu le hǎo cháng shíjiān, wǒ de péngyou juéde bú duì, jiù duì sījī shuō, cuò le.','Đi đã rất lâu, bạn tôi thấy không ổn, liền nói với tài xế: “Nhầm rồi.”'],
+['司机说没错，这就是去首都机场的路。','Sījī shuō méi cuò, zhè jiù shì qù Shǒudū Jīchǎng de lù.','Tài xế nói không nhầm, đây chính là đường đi sân bay Thủ Đô.'],
+['朋友一听，坏了，忙说：','Péngyou yì tīng, huài le, máng shuō:','Bạn tôi nghe xong, thôi toang rồi, vội vàng nói:'],
+['“我不去首都机场，我去王府井的首都剧场。”','“Wǒ bú qù Shǒudū Jīchǎng, wǒ qù Wángfǔjǐng de Shǒudū Jùchǎng.”','“Tôi không đi sân bay Thủ Đô, tôi đi Nhà hát Thủ Đô ở Vương Phủ Tỉnh.”'],
+['司机说：“你刚才说的是去‘首都机场’。”','Sījī shuō: “Nǐ gāngcái shuō de shì qù ‘Shǒudū Jīchǎng’.”','Tài xế nói: “Vừa nãy cô nói là đi ‘Sân bay Thủ Đô’ mà.”'],
+['我朋友才知道自己发音有问题，','Wǒ péngyou cái zhīdào zìjǐ fāyīn yǒu wèntí,','Bạn tôi mới biết do phát âm của mình có vấn đề,'],
+['只好对司机说：“对不起，我汉语说得不好，发音不清楚。”','zhǐhǎo duì sījī shuō: “Duìbuqǐ, wǒ Hànyǔ shuō de bù hǎo, fāyīn bù qīngchu.”','đành phải nói với tài xế: “Xin lỗi, tiếng Hán của tôi nói không tốt, phát âm không rõ.”'],
+['回到公司，大家问她去哪儿了，','Huí dào gōngsī, dàjiā wèn tā qù nǎr le,','Về đến công ty, mọi người hỏi cô đã đi đâu,'],
+['她给大家讲了这件事，大家都笑了。','Tā gěi dàjiā jiǎng le zhè jiàn shì, dàjiā dōu xiào le.','cô kể cho mọi người nghe chuyện này, mọi người đều bật cười.'],
+['我想不少外国留学生都会碰到这种叫人哭笑不得的事吧。','Wǒ xiǎng bù shǎo wàiguó liúxuéshēng dōu huì pèngdào zhè zhǒng jiào rén kūxiàobùdé de shì ba.','Tôi nghĩ không ít du học sinh nước ngoài đều sẽ gặp chuyện dở khóc dở cười như thế này.'],
+['要学好汉语，发音是非常重要的。','Yào xué hǎo Hànyǔ, fāyīn shì fēicháng zhòngyào de.','Muốn học tốt tiếng Hán, phát âm là vô cùng quan trọng.']];
+const T2=[
+['早上起床一看，外边正在下雪，就想得早点出发。','Zǎoshang qǐchuáng yí kàn, wàibian zhèngzài xià xuě, jiù xiǎng děi zǎo diǎn chūfā.','Sáng dậy nhìn ra ngoài, tuyết đang rơi, liền nghĩ nên đi sớm một chút.'],
+['平时我一般七点才从家里走，今天怕迟到，六点钟就出来了。','Píngshí wǒ yībān qī diǎn cái cóng jiālǐ zǒu, jīntiān pà chídào, liù diǎn zhōng jiù chūlái le.','Bình thường tôi thường 7 giờ mới ra khỏi nhà, hôm nay sợ muộn, 6 giờ đã ra rồi.'],
+['刚出门就摔了一跤，眼镜儿也掉在地上摔坏了。','Gāng chūmén jiù shuāi le yì jiāo, yǎnjìngr yě diào zài dìshang shuāi huài le.','Vừa ra cửa thì ngã một cú, kính cũng rơi xuống đất vỡ hỏng.'],
+['你说倒霉不倒霉。','Nǐ shuō dǎoméi bù dǎoméi.','Bạn nói có xui xẻo không chứ.'],
+['路上又碰上一起交通事故，我的车整整堵了二十分钟。','Lùshang yòu pèngshang yì qǐ jiāotōng shìgù, wǒ de chē zhěngzhěng dǔ le èrshí fēnzhōng.','Trên đường lại gặp một vụ tai nạn, xe tôi bị tắc trọn 20 phút.'],
+['快八点了才到办公室。差点儿迟到。','Kuài bā diǎn le cái dào bàngōngshì. Chàdiǎnr chídào.','Gần 8 giờ mới tới văn phòng. Suýt nữa thì muộn.'],
+['城市交通是一个大问题。','Chéngshì jiāotōng shì yí ge dà wèntí.','Giao thông đô thị là một vấn đề lớn.'],
+['骑自行车的人多，有汽车的人也一年比一年多；','Qí zìxíngchē de rén duō, yǒu qìchē de rén yě yì nián bǐ yì nián duō;','Người đi xe đạp nhiều, người có ô tô cũng năm sau nhiều hơn năm trước;'],
+['有的人又不遵守交通规则，这是造成交通拥挤的主要原因。','Yǒu de rén yòu bù zūnshǒu jiāotōng guīzé, zhè shì zàochéng jiāotōng yōngjǐ de zhǔyào yuányīn.','Có người lại không tuân thủ luật giao thông, đây là nguyên nhân chính gây tắc nghẽn.'],
+['小黄说，最好赶快发展地铁。我想也是。','Xiǎo Huáng shuō, zuìhǎo gǎnkuài fāzhǎn dìtiě. Wǒ xiǎng yě shì.','Tiểu Hoàng nói, tốt nhất là mau phát triển tàu điện ngầm. Tôi nghĩ cũng vậy.']];
+const G=[
+['1','在 + nơi chốn + động từ','在首都剧场附近开了一个小公司','Cụm chỉ nơi chốn đứng TRƯỚC động từ chính, không đặt sau.'],
+['1','为了 + mục đích, 就 + hành động','她为了给大家买吃的，就打的去了麦当劳','为了 nêu mục đích; 就 = “liền, thế là” nối hành động tiếp theo.'],
+['1','给 / 对 + người + V','给大家买吃的 · 对司机说 · 给大家讲了这件事','Giới từ + đối tượng đứng trước động từ: mua/kể cho ai, nói với ai.'],
+['1','Cấu trúc liên động','打的去了麦当劳 · 开车走了','Hai động từ liền nhau: phương thức (打的/开车) rồi hành động (去/走). 往回走: 往 + hướng + V.'],
+['1','Bổ ngữ kết quả: V + 好/错/坏','买好了饭 · 学好汉语 · 错了','好 = xong/tốt, 坏 = hỏng. Động từ + kết quả của hành động.'],
+['1','Động lượng · thời lượng + 了','看了她一眼 · 走了好长时间','V + 了 + 一眼 (số lần) hoặc + khoảng thời gian (đã đi bao lâu).'],
+['1','没(有) + V','都没有吃午饭','Phủ định hành động chưa xảy ra/chưa hoàn thành (quá khứ) dùng 没(有), không dùng 不.'],
+['1','V + 得 + tính từ (bổ ngữ trạng thái)','汉语说得不好','Có tân ngữ thì lặp/đảo: 说汉语说得… hoặc 汉语说得… Phủ định đặt trước tính từ: 说得不好.'],
+['1','才 · 只好 · 还是','我朋友才知道… · 只好对司机说… · 但还是开车走了','才 = mãi mới/đến lúc đó mới; 只好 = đành phải; 还是 = vẫn (bất chấp).'],
+['1','一 + V…, (就)…','朋友一听，坏了','一听 = vừa nghe (là). Dùng 一 + V để nêu việc xảy ra ngay lập tức.'],
+['1','是……的 (nhấn mạnh)','你刚才说的是去首都机场 · 发音是非常重要的','是…的 nhấn mạnh sự việc đã xảy ra hoặc đánh giá, khẳng định.'],
+['1','V + 的 làm định ngữ · 叫人 + …','叫人哭笑不得的事 · 会碰到','Cụm + 的 + danh từ; 叫人… = khiến người ta…; 会 = sẽ (khả năng).'],
+['2','才 (muộn) vs 就 (sớm)','七点才从家里走 / 六点钟就出来了','才 + giờ: muộn, mãi mới. 就 + giờ: sớm, đã. Cùng một mẫu, đối lập nghĩa.'],
+['2','刚……就…… · 正在','刚出门就摔了一跤 · 正在下雪','刚…就… = vừa… thì…; 正在 + V = đang.'],
+['2','V + 在 + nơi chốn · V + 坏','眼镜儿掉在地上 · 摔坏了','在 + nơi chốn làm bổ ngữ sau V (kết quả vị trí); 坏 = hỏng.'],
+['2','V不V (câu hỏi chính phản)','你说倒霉不倒霉','Dạng khẳng định + phủ định; ở đây dùng như cảm thán “có xui không chứ”.'],
+['2','快……了 · 差点儿 + V','快八点了才到 · 差点儿迟到','快…了 = sắp; 差点儿 + V = suýt nữa (mà không xảy ra).'],
+['2','一A比一A + adj','一年比一年多','Mức độ tăng dần: năm sau hơn năm trước.'],
+['2','怕 · 得(děi) · 最好 · 也','怕迟到 · 得早点出发 · 最好赶快… · 我想也是','怕 = sợ (không muốn); 得 = phải; 最好 = tốt nhất; 也 = cũng vậy.']];
+function mk(id,arr,note){const p=document.getElementById(id);
+p.innerHTML='<div class="tools"><button class="chip" data-k="showp">Pinyin</button><button class="chip" data-k="showv">Nghĩa</button></div><div class="list">'+arr.map(r=>'<div class="s"><div class="h">'+r[0]+'</div><div class="p">'+r[1]+'</div><div class="v">'+r[2]+'</div></div>').join('')+'</div>'+(note||'')+'<div class="note" style="margin-top:8px">Chạm vào câu để xem pinyin + nghĩa.</div>';
+p.querySelectorAll('.s').forEach(s=>s.onclick=()=>{const on=!s.classList.contains('sp');s.classList.toggle('sp',on);s.classList.toggle('sv',on)});
+p.querySelectorAll('.chip').forEach(c=>c.onclick=()=>{c.classList.toggle('on');p.classList.toggle(c.dataset.k)})}
+mk('a',T1,'<div class="note">Lưu ý: 回到 = chắc chắn đã về tới nơi.</div>');mk('b',T2);
+document.getElementById('g').innerHTML=G.map(g=>'<div class="g"><b>'+g[1]+'</b><span class="tag">Bài '+g[0]+'</span><div class="ex">'+g[2]+'</div><small>'+g[3]+'</small></div>').join('');
+document.querySelectorAll('#tabs button').forEach(b=>b.onclick=()=>{document.querySelectorAll('#tabs button,.pane').forEach(e=>e.classList.remove('on'));b.classList.add('on');document.getElementById(b.dataset.t).classList.add('on')});
+/* Bài tập */
+const E1=[['她____了饭，就又打的往回走。',['买好','买对','买在'],0,'买好: V + 好 (kết quả: xong).'],
+['我的眼镜儿____地上了。',['掉在','掉好','掉得'],0,'掉在 + nơi chốn.'],
+['要____汉语，发音非常重要。',['学坏','学了','学好'],2,'学好 = học tốt.'],
+['我的车整整____二十分钟。',['堵好','堵着','堵了'],2,'V + 了 + thời lượng.'],
+['我汉语____不好，发音不清楚。',['说得','说了','说好'],0,'说得 + tính từ: bổ ngữ trạng thái.']];
+const E2=[['我的朋友开了一个小公司在首都剧场附近。',['我的朋友在首都剧场附近开了一个小公司。','我的朋友开了在首都剧场附近一个小公司。','在我的朋友首都剧场附近开了小公司一个。'],0,'在 + nơi chốn đứng trước động từ.'],
+['那天职员们都不吃午饭。(đã xảy ra, chưa ăn)',['那天职员们都没有吃午饭。','那天职员们都不有吃午饭。','那天职员们没都吃午饭。'],0,'Chưa xảy ra trong quá khứ → 没(有).'],
+['我说汉语得不好。',['我汉语说得不好。','我说汉语不得好。','我汉语说不好得。'],0,'V + 得 + tính từ; tân ngữ đặt trước hoặc lặp động từ.'],
+['平时我七点就从家里走，今天怕迟到，六点钟才出来了。',['平时我七点才从家里走，今天怕迟到，六点钟就出来了。','平时我七点才从家里走，今天怕迟到，六点钟才出来了。','平时我七点就从家里走，今天怕迟到，六点钟就出来了。'],0,'才 = muộn, 就 = sớm.'],
+['出门刚我就摔了一跤。',['刚出门我就摔了一跤。','我刚就出门摔了一跤。','我出门就刚摔了一跤。'],0,'刚 + V…就 + V.']];
+const E3=[['我的朋友','在首都剧场附近','开了','一个小公司'],['她为了','给大家','买吃的','就打的','去了麦当劳'],['我','汉语','说得','不好'],['刚出门','就','摔了','一跤'],['有汽车的人','也','一年','比','一年','多']];
+const st={};
+function pick(e,i,j,item){const q=document.querySelectorAll('.q')[i];const ok=j==item[2];q.querySelectorAll('.o').forEach((b,k)=>{b.disabled=true;if(k==item[2])b.classList.add('ok');else if(k==j)b.classList.add('no')});q.querySelector('.fb').textContent=(ok?'✔ ':'✘ ')+item[3];st[e]=(st[e]||0)+(ok?1:0);if(document.querySelectorAll('.o:disabled').length>=document.querySelectorAll('.q').length*3&&false){}
+const done=[...document.querySelectorAll('.q')].every(x=>x.querySelector('.o:disabled'));if(done)document.getElementById('sc').textContent='Điểm: '+st[e]+'/'+document.querySelectorAll('.q').length}
+function choice(e,data0){st[e]=0;const data=data0.map(it=>{const o=sh(it[1]);return [it[0],o.map(x=>x[0]),o.findIndex(x=>x[1]==it[2]),it[3]]});document.getElementById('ex').innerHTML=data.map((it,i)=>'<div class="q"><div class="t">'+(i+1)+'. '+it[0]+'</div><div class="opts">'+it[1].map((o,j)=>'<button class="o" data-i="'+i+'" data-j="'+j+'">'+o+'</button>').join('')+'</div><div class="fb"></div></div>').join('')+'<div class="score" id="sc"></div><button class="btn l" id="rs">Làm lại</button>';
+document.querySelectorAll('.o').forEach(b=>b.onclick=()=>pick(e,+b.dataset.i,+b.dataset.j,data[+b.dataset.i]));document.getElementById('rs').onclick=()=>choice(e,data0)}
+function sh(a){return a.map((v,i)=>[v,i]).sort(()=>Math.random()-.5)}
+function order(){let n=0;document.getElementById('ex').innerHTML=E3.map((it,i)=>'<div class="q" data-i="'+i+'"><div class="t" style="font-size:14px;color:var(--mu)">'+(i+1)+'. Chạm các mảnh để ghép thành câu:</div><div class="ans"></div><div class="opts"></div><div style="margin-top:8px"><button class="btn">Kiểm tra</button> <button class="btn l">Xoá</button></div><div class="fb"></div></div>').join('')+'<div class="score" id="sc"></div>';
+document.querySelectorAll('.q').forEach(q=>{const i=+q.dataset.i,ans=q.querySelector('.ans'),pool=q.querySelector('.opts'),fb=q.querySelector('.fb');
+const mkb=(t)=>{const b=document.createElement('button');b.className='o';b.textContent=t;return b};
+const fill=()=>{pool.innerHTML='';ans.innerHTML='';fb.textContent='';sh(E3[i]).forEach(([t])=>{const b=mkb(t);b.onclick=()=>{const c=mkb(t);c.onclick=()=>{c.remove();b.style.display=''};ans.appendChild(c);b.style.display='none'};pool.appendChild(b)})};
+fill();const [chk,clr]=q.querySelectorAll('.btn');clr.onclick=fill;
+chk.onclick=()=>{const s=[...ans.children].map(c=>c.textContent).join('');const ok=s==E3[i].join('');fb.textContent=ok?'✔ Đúng: '+s:'✘ Chưa đúng, thử lại. Gợi ý: '+E3[i].join(' ');fb.style.color=ok?'var(--ok)':'var(--no)'}})}
+document.querySelectorAll('#sub .chip').forEach(c=>c.onclick=()=>{document.querySelectorAll('#sub .chip').forEach(x=>x.classList.remove('on'));c.classList.add('on');run(c.dataset.e)});
+function run(e){e=='1'?choice(1,E1):e=='2'?choice(2,E2):order()}
+run('1');
+</script>
+</body>
+</html>

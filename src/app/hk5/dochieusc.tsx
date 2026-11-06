@@ -9,7 +9,7 @@ export default function DocHieuSC() {
           href="https://yuedusc.vercel.app/"
           target="_blank"
           rel="noopener noreferrer"
-          className="blocktext-blue-600 mt-2 text-xl hover:underline"
+          className="mt-2 block text-sm text-blue-600 hover:underline"
         >
           Xem đầy đủ tại đây
         </Link>

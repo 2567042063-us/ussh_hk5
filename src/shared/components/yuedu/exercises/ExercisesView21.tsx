@@ -138,13 +138,13 @@ function TrueFalseButton({
   icon,
 }: TrueFalseButtonProps) {
   let stateClass =
-    "border-stone-300 bg-white text-stone-700 hover:border-red-300 hover:bg-red-50/50";
+    "border-stone-300 bg-white text-stone-700 hover:border-sky-300 hover:bg-sky-50/50";
   if (submitted && isCorrectValue) {
     stateClass = "border-emerald-600 bg-emerald-50 text-emerald-900";
   } else if (submitted && active) {
     stateClass = "border-rose-600 bg-rose-50 text-rose-900";
   } else if (active) {
-    stateClass = "border-red-700 bg-red-50 text-red-900";
+    stateClass = "border-sky-700 bg-sky-50 text-sky-900";
   }
   return (
     <button

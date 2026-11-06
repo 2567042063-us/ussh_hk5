@@ -44,7 +44,7 @@ export default function Page() {
         </div>
 
         <div>
-          <table className="ztai__table">
+          <table className="ztai__table w-full">
             <thead>
               <tr>
                 <th>No.</th>
@@ -974,7 +974,7 @@ export default function Page() {
         </div>
 
         {/* bảng từ vựng */}
-        <table className="ztai__table" style={{ width: "fit-content" }}>
+        <table className="ztai__table w-fit">
           <tbody>
             <tr>
               <td width="283">
@@ -1061,7 +1061,7 @@ export default function Page() {
 
         <p>Từ vựng phần 练习 trang 221</p>
 
-        <table className="ztai__table" style={{ width: "fit-content" }}>
+        <table className="ztai__table w-fit">
           <tbody>
             <tr>
               <td>

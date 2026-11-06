@@ -15,11 +15,46 @@ export default function GTHN() {
   } catch (error) {
     console.error("Không tìm thấy thư mục public/hk5/:", error);
   }
+
+  const dirPathBkp = path.join(process.cwd(), "public", "hk5", "bkp");
+  let htmlFilesBkp: string[] = [];
+  try {
+    const files = fs.readdirSync(dirPathBkp);
+    htmlFilesBkp = files.filter((file) => file.endsWith(".html"));
+  } catch (error) {
+    console.error("Không tìm thấy thư mục public/hk5/bkp:", error);
+  }
   return (
     <div className="mb-10">
       <h2 className="border-t-3 border-b-3 mb-2 border-dashed border-sky-600 py-3 text-center text-2xl font-extralight leading-tight text-sky-600 dark:text-primary-dark">
         GTHN
       </h2>
+      <table className="ztai__table w-fit">
+        <thead>
+          <tr>
+            <th>Bài khoá phụ</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          {htmlFilesBkp.map((file) => (
+            <tr key={file}>
+              <td>{file.replace(/\.[^/.]+$/, "")} </td>
+              <td>
+                <Link
+                  href={`/hk5/bkp/${file}`}
+                  prefetch={false}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block px-5 text-slate-500 hover:text-primary dark:text-sky-400 dark:hover:text-primary-dark"
+                >
+                  bài học & bài tập
+                </Link>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
       <ul className="text-center text-xl">
         <li>
           <Link
@@ -95,6 +130,8 @@ export default function GTHN() {
             <Link
               href={`/hk5/${file}`}
               prefetch={false}
+              target="_blank"
+              rel="noopener noreferrer"
               className="mt-3 inline-block px-5 text-slate-500 hover:text-primary dark:text-sky-400 dark:hover:text-primary-dark"
             >
               {/*  `/\.[^/.]+$//` sẽ tìm dấu chấm và phần chữ theo sau ở cuối file */}

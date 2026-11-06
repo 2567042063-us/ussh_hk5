@@ -66,7 +66,7 @@ export default function Template() {
       >
         <h2>Danh sách các bổ ngữ</h2>
         <div className="tblwrap">
-          <table className="ztai__table sumtbl">
+          <table className="ztai__table sumtbl w-full">
             <thead>
               <tr>
                 <th>Bổ ngữ</th>
@@ -213,7 +213,7 @@ export default function Template() {
       </section>
 
       <div className="tblwrap">
-        <table className="ztai__table">
+        <table className="ztai__table w-full">
           <thead>
             <tr>
               <th>STT</th>

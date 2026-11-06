@@ -23,7 +23,7 @@ export default function KhauNgu() {
           <li>Phần 2 (2 điểm): phản xạ, trả lời câu hỏi của GV.</li>
         </ul>
         <div className="tblwrap">
-          <table className="ztai__table">
+          <table className="ztai__table w-full">
             <tbody>
               <tr>
                 <th>#</th>

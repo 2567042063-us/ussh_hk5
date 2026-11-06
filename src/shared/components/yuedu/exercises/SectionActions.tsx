@@ -1,4 +1,4 @@
-import { CheckCircle2, RotateCcw } from 'lucide-react';
+import { CheckCircle2, RotateCcw } from "lucide-react";
 
 interface SectionActionsProps {
   answeredCount: number;
@@ -9,7 +9,14 @@ interface SectionActionsProps {
   onReset: () => void;
 }
 
-export function SectionActions({ answeredCount, total, submitted, score, onSubmit, onReset }: SectionActionsProps) {
+export function SectionActions({
+  answeredCount,
+  total,
+  submitted,
+  score,
+  onSubmit,
+  onReset,
+}: SectionActionsProps) {
   if (submitted) {
     return (
       <div className="mt-8 flex flex-col gap-3 rounded-xl bg-emerald-50 p-4 sm:flex-row sm:items-center sm:justify-between">
@@ -38,7 +45,19 @@ export function SectionActions({ answeredCount, total, submitted, score, onSubmi
         type="button"
         onClick={onSubmit}
         disabled={answeredCount === 0}
-        className="rounded-lg bg-red-800 px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-red-900 disabled:cursor-not-allowed disabled:bg-stone-300 disabled:text-stone-600"
+        style={{
+          letterSpacing: ".03em",
+          alignItems: "center",
+          gap: "22px",
+          padding: "14px 18px",
+          fontSize: "11px",
+          fontWeight: 700,
+          display: "inline-flex",
+          color: "#fff",
+          // backgroundColor: "#172a2c",
+          // boxShadow: "4px 4px 0 #db786f",
+        }}
+        className="bg-zinc-800 px-5 py-2.5 text-sm font-medium text-white shadow-[4px_4px_0_#db786f] transition-colors hover:bg-zinc-900 disabled:cursor-not-allowed disabled:bg-stone-300 disabled:text-stone-600 disabled:shadow-[4px_4px_0_#78716c]"
       >
         Nộp bài
       </button>

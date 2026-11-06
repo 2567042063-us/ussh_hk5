@@ -112,7 +112,7 @@ interface BlankInputProps {
 }
 
 const BLANK_STATUS_CLASS = {
-  idle: "border-stone-400 focus:border-red-700",
+  idle: "border-stone-400 focus:border-sky-700",
   correct: "border-emerald-600 bg-emerald-50 text-emerald-900",
   wrong: "border-rose-600 bg-rose-50 text-rose-900",
 };
@@ -131,7 +131,7 @@ function BlankInput({
       disabled={disabled}
       aria-label={label}
       onChange={(event) => onChange(event.target.value)}
-      className={`font-chinese mx-1 inline-block w-28 rounded-md border-b-2 px-2 py-0.5 text-center text-stone-900 focus:outline-none focus:ring-2 focus:ring-red-200 disabled:cursor-default ${BLANK_STATUS_CLASS[status]}`}
+      className={`font-chinese mx-1 inline-block w-28 rounded-md border-b-2 px-2 py-0.5 text-center text-stone-900 focus:outline-none focus:ring-2 focus:ring-sky-300 disabled:cursor-default ${BLANK_STATUS_CLASS[status]}`}
     />
   );
 }

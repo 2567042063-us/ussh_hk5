@@ -33,7 +33,7 @@ export default function Page() {
             và phần giải thích.
           </p>
           <p>Câu hỏi chia thành 5 bộ:</p>
-          <table className="ztai__table">
+          <table className="ztai__table w-full">
             <thead>
               <tr>
                 <th scope="col">Bộ</th>
@@ -103,7 +103,7 @@ export default function Page() {
             着, 曾经 hay 从来没 thường đi với 过.
           </p>
 
-          <table className="ztai__table">
+          <table className="ztai__table w-full">
             <tbody>
               <tr>
                 <td>

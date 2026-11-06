@@ -1,7 +1,7 @@
 export default function ShengCi() {
   return (
     <div className="ztai__dochieu">
-      <table className="ztai__table">
+      <table className="ztai__table w-full">
         <thead>
           <tr>
             <th></th>
