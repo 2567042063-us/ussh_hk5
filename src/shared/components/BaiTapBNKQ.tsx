@@ -1651,7 +1651,7 @@ const CSS = `
 .zbn .btn{border:1px solid var(--line);background:var(--paper);color:var(--ink);border-radius:5px;padding:5px 14px;cursor:pointer}
 .zbn .btn.main{background:var(--accent);border-color:var(--accent);color:#fff}
 @media (prefers-color-scheme: dark){.zbn .btn.main{color:#0c1519}}
-.zbn button:focus-visible,.zbn input:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.zbn button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 .zbn-sec h2{margin:22px 0 10px;display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;font-size:1.35rem;color:var(--accent)}
 .zbn-sec h2 .mean{font-size:.85rem;font-weight:500;color:var(--mute);font-family:inherit}
 .zbn-list{list-style:decimal;padding-left:28px;margin:0;display:flex;flex-direction:column;gap:10px}

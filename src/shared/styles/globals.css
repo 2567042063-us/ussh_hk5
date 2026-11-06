@@ -122,8 +122,8 @@ button:focus {
 .ztai__table {
   /* width: 100%; */
   border-collapse: collapse;
-  margin: 10px 0 16px;
-  font-size: 14px;
+  /* margin: 10px 0 16px; */
+  /* font-size: 14px; */
 }
 
 .ztai__table caption {

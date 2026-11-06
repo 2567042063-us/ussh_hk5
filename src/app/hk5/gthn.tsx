@@ -4,8 +4,6 @@ import Link from "next/link";
 
 import NdthiNPDsc3 from "./NdthiNPDsc3";
 
-// target="_blank" // Mở ở tab mới (xóa dòng này nếu muốn mở đè lên tab hiện tại)
-// rel="noopener noreferrer"
 export default function GTHN() {
   const dirPath = path.join(process.cwd(), "public", "hk5");
   let htmlFiles: string[] = [];
@@ -29,11 +27,12 @@ export default function GTHN() {
       <h2 className="border-t-3 border-b-3 mb-2 border-dashed border-sky-600 py-3 text-center text-2xl font-extralight leading-tight text-sky-600 dark:text-primary-dark">
         GTHN
       </h2>
-      <table className="ztai__table w-fit">
+      <table className="ztai__table min-w-md mx-auto mt-5">
         <thead>
           <tr>
-            <th>Bài khoá phụ</th>
-            <th></th>
+            <th colSpan={2}>
+              <span className="block text-center">Bài khoá phụ</span>
+            </th>
           </tr>
         </thead>
         <tbody>
@@ -55,10 +54,49 @@ export default function GTHN() {
           ))}
         </tbody>
       </table>
+      <table className="ztai__table min-w-md mx-auto mt-5">
+        <thead>
+          <tr>
+            <th colSpan={2}>
+              <span className="block text-center">Ngữ pháp</span>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>BNKQ _ 结果补语</td>
+            <td>
+              <div>
+                <Link
+                  href="/hk5/bt-bnkq"
+                  prefetch={false}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-3 inline-block px-5 text-sky-700 hover:text-primary dark:text-sky-400 dark:hover:text-primary-dark"
+                >
+                  BT b04+b12
+                </Link>
+              </div>
+              <div>
+                <Link
+                  href="/hk5/bnkq"
+                  prefetch={false}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-3 inline-block px-5 text-sky-700 hover:text-primary dark:text-sky-400 dark:hover:text-primary-dark"
+                >
+                  Tổng hợp b04+b12
+                </Link>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
       <ul className="text-center text-xl">
         <li>
           <Link
             href="/hk5/baitap-suacausai-1119"
+            prefetch={false}
             className="mt-3 inline-block px-5 text-sky-700 hover:text-primary dark:text-sky-400 dark:hover:text-primary-dark"
           >
             BT Sửa câu sai bài 11-19
@@ -66,15 +104,8 @@ export default function GTHN() {
         </li>
         <li>
           <Link
-            href="/hk5/bt-bnkq"
-            className="mt-3 inline-block px-5 text-sky-700 hover:text-primary dark:text-sky-400 dark:hover:text-primary-dark"
-          >
-            BT Bổ ngữ kết quả (结果补语)
-          </Link>
-        </li>
-        <li>
-          <Link
             href="/hk5/btabc-lezheguo"
+            prefetch={false}
             className="mt-3 inline-block px-5 text-sky-700 hover:text-primary dark:text-sky-400 dark:hover:text-primary-dark"
           >
             ABC - 着、了、过
@@ -83,6 +114,7 @@ export default function GTHN() {
         <li>
           <Link
             href="/hk5/btchuba"
+            prefetch={false}
             className="mt-3 inline-block px-5 text-sky-700 hover:text-primary dark:text-sky-400 dark:hover:text-primary-dark"
           >
             BT câu chữ 把
@@ -91,6 +123,7 @@ export default function GTHN() {
         <li>
           <Link
             href="/hk5/btsapxep302cau"
+            prefetch={false}
             className="mt-3 inline-block px-5 text-sky-700 hover:text-primary dark:text-sky-400 dark:hover:text-primary-dark"
           >
             BT sắp xếp 302 câu
@@ -99,6 +132,7 @@ export default function GTHN() {
         <li>
           <Link
             href="/hk5/btsapxepsbt1"
+            prefetch={false}
             className="mt-3 inline-block px-5 text-sky-700 hover:text-primary dark:text-sky-400 dark:hover:text-primary-dark"
           >
             BT sắp xếp câu SBT-01
@@ -107,6 +141,7 @@ export default function GTHN() {
         <li>
           <Link
             href="/hk5/btsapxepsbt2"
+            prefetch={false}
             className="mt-3 inline-block px-5 text-sky-700 hover:text-primary dark:text-sky-400 dark:hover:text-primary-dark"
           >
             BT sắp xếp câu SBT-02

@@ -624,7 +624,7 @@ export default function GaiCuoiBaiTap() {
         </div>
       </header>
 
-      <main className="mx-auto flex w-full max-w-xl flex-1 flex-col gap-4 px-4 py-5">
+      <main className="mx-auto flex w-full max-w-xl flex-1 flex-col gap-4 px-4">
         <div>
           <div className="mb-2 flex items-center justify-between gap-2 text-sm text-stone-600">
             <span>
@@ -640,7 +640,7 @@ export default function GaiCuoiBaiTap() {
               style={{ width: `${((pos + 1) / total) * 100}%` }}
             />
           </div>
-          <div className="mt-3 flex gap-2">
+          <div className="mt-2 flex gap-2">
             <button
               onClick={doShuffle}
               className="rounded-lg border border-stone-400 px-3 py-1.5 text-sm font-medium active:bg-stone-200"
@@ -658,14 +658,14 @@ export default function GaiCuoiBaiTap() {
           </div>
         </div>
 
-        <section className="rounded-xl border border-stone-300 bg-white p-5">
-          <p className="mb-2 text-sm text-stone-500">Câu sai</p>
+        <section className="rounded-xl border border-stone-300 bg-white px-5 py-2">
+          <p className="text-sm text-stone-500">Câu sai</p>
           <p className="text-2xl leading-relaxed" lang="zh-CN">
             {wrong}
           </p>
         </section>
 
-        <section className="flex flex-col gap-3 rounded-xl border border-stone-300 bg-white p-5">
+        <section className="flex flex-col gap-3 rounded-xl border border-stone-300 bg-white px-5 py-2">
           <label htmlFor="ans" className="text-sm text-stone-500">
             Câu của bạn (sửa trực tiếp ở đây)
           </label>

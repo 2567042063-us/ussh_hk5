@@ -4637,7 +4637,7 @@ const CSS = `
 *{box-sizing:border-box}
 html{color-scheme:light dark}
 body{margin:0;
-  background: #f3f5f7;
+  background: #fff;
   line-height:1.55;font-size:15px}
 .wrap{max-width:1180px;margin:0 auto;padding:28px 18px}
 header h1{margin:0 0 6px;font-size:1.65rem;letter-spacing:.2px}

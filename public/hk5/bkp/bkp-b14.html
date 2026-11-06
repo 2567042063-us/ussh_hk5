@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Bài khoá phụ 14</title>
+<style>
+:root{--bg:#fff;--card:#fff;--tx:#222;--mu:#6b6b6b;--ac:#b3261e;--ac2:#fbe9e7;--ln:#e5e0d5;--ok:#1b7a3d;--okb:#e3f4e8;--no:#b3261e;--nob:#fde8e6;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#17150f;--card:#221f17;--tx:#eee9dc;--mu:#a39e90;--ac:#ff8a80;--ac2:#3a2420;--ln:#3a3629;--ok:#7fd69a;--okb:#16301e;--no:#ff8a80;--nob:#3a1f1c;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#17150f;--card:#221f17;--tx:#eee9dc;--mu:#a39e90;--ac:#ff8a80;--ac2:#3a2420;--ln:#3a3629;--ok:#7fd69a;--okb:#16301e;--no:#ff8a80;--nob:#3a1f1c;color-scheme:dark}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--tx);font:16px/1.5 -apple-system,"Segoe UI",Roboto,"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;padding:12px}
+.box{max-width:720px;margin:0 auto;background:var(--card);border:1px solid var(--ln);border-radius:2px;overflow:hidden}
+h1{font-size:17px;margin:0;padding:14px 16px 8px}
+.tabs{display:flex;border-bottom:1px solid var(--ln);overflow-x:auto}
+.tabs button{flex:1;min-width:max-content;padding:10px 12px;background:none;border:0;border-bottom:3px solid transparent;color:var(--mu);font:inherit;font-size:14px;cursor:pointer}
+.tabs button.on{color:var(--ac);border-color:var(--ac);font-weight:600}
+.pane{display:none;padding:12px 14px 18px}.pane.on{display:block}
+.tools{display:flex;gap:8px;margin-bottom:10px}
+.chip{border:1px solid var(--ln);background:none;color:var(--tx);border-radius:99px;padding:5px 12px;font:inherit;font-size:13px;cursor:pointer}
+.chip.on{background:var(--ac2);border-color:var(--ac);color:var(--ac)}
+.s{padding:9px 0;border-bottom:1px dashed var(--ln);cursor:pointer}
+.s .h{font-size:22px;line-height:1.6;  font-family: KaiTi, STKaiti, PingFang SC, Songti SC, SimSun, Noto Serif CJK SC, Noto Serif SC, serif;}
+.s .p,.s .v{display:none;font-size:13.5px;color:var(--mu)}
+.s .p { font-family: "Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;}
+
+.s .v{color:var(--tx);opacity:.85}
+.s.sp .p,.s.sv .v,.showp .s .p,.showv .s .v{display:block}
+.note{font-size:12.5px;color:var(--ac)}
+.g{border:1px solid var(--ln);border-radius:12px;padding:10px 12px;margin-bottom:10px}
+.g b{color:var(--ac)}
+.g .ex{font-size:17px;margin:4px 0 2px}
+.g small{color:var(--mu);display:block}
+.tag{font-size:11px;background:var(--ac2);color:var(--ac);border-radius:6px;padding:1px 6px;margin-left:4px}
+.sub{display:flex;gap:6px;margin-bottom:12px}
+.q{margin-bottom:14px;padding-bottom:12px;border-bottom:1px dashed var(--ln)}
+.q .t{font-size:18px;margin-bottom:8px}
+.opts{display:flex;flex-wrap:wrap;gap:8px}
+.o{border:1px solid var(--ln);background:none;color:var(--tx);border-radius:10px;padding:8px 12px;font:inherit;font-size:16px;cursor:pointer;text-align:left}
+.o.ok{background:var(--okb);border-color:var(--ok);color:var(--ok)}
+.o.no{background:var(--nob);border-color:var(--no);color:var(--no)}
+.fb{font-size:13.5px;margin-top:6px;color:var(--mu)}
+.ans{min-height:44px;border:1px dashed var(--ln);border-radius:10px;padding:6px;display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px}
+.btn{border:0;background:var(--ac);color:var(--bg);border-radius:10px;padding:8px 14px;font:inherit;font-size:14px;cursor:pointer}
+.btn.l{background:none;border:1px solid var(--ln);color:var(--tx)}
+.score{font-weight:600;margin-top:4px}
+</style>
+</head>
+<body>
+<div class="box">
+<h1>📖 Bài khoá phụ – Bài 14</h1>
+<div class="tabs" id="tabs">
+<button class="on" data-t="a">Bài khoá</button><button data-t="g">Ngữ pháp</button><button data-t="x">Bài tập</button>
+</div>
+<div class="pane on" id="a"></div>
+<div class="pane" id="g"></div>
+<div class="pane" id="x">
+<div class="sub" id="sub"><button class="chip on" data-e="1">1. Điền V+bổ ngữ</button><button class="chip" data-e="2">2. Sửa câu</button><button class="chip" data-e="3">3. Sắp xếp</button></div>
+<div id="ex"></div>
+</div>
+</div>
+<script>
+const T1=[
+['罗兰：','Luó Lán:','Gửi Roland:'],
+['你好。我已经到了泰山，我是爬上来的，没有坐缆车。','Nǐ hǎo. Wǒ yǐjīng dào le Tài Shān, wǒ shì pá shànglái de, méiyǒu zuò lǎnchē.','Xin chào. Mình đã đến Thái Sơn rồi, mình leo lên đấy, không đi cáp treo.'],
+['登上泰山，真有“一览众山小”的感觉。','Dēng shàng Tài Shān, zhēn yǒu “yì lǎn zhòng shān xiǎo” de gǎnjué.','Leo lên đỉnh Thái Sơn, đúng là có cảm giác “đứng trên cao nhìn núi non đều nhỏ bé”.'],
+['我还在山上住了一夜，等第二天早上看日出，能站在泰山上看日出，我很高兴。','Wǒ hái zài shān shang zhù le yí yè, děng dì-èr tiān zǎoshang kàn rìchū, néng zhàn zài Tài Shān shang kàn rìchū, wǒ hěn gāoxìng.','Mình còn ở lại trên núi một đêm, đợi sáng hôm sau xem mặt trời mọc; được đứng trên Thái Sơn ngắm bình minh, mình rất vui.'],
+['当我们看到太阳一下子跳出来的时候，都兴奋地大声叫了起来，真是美极了。','Dāng wǒmen kàndào tàiyáng yíxiàzi tiào chūlái de shíhou, dōu xīngfèn de dàshēng jiào le qǐlái, zhēn shì měi jí le.','Khi chúng mình thấy mặt trời bỗng nhảy vọt lên, ai cũng phấn khích kêu to lên, đẹp tuyệt vời.'],
+['下午，我又从泰山上走下来了。','Xiàwǔ, wǒ yòu cóng Tài Shān shang zǒu xiàlái le.','Buổi chiều, mình lại đi từ trên núi xuống.'],
+['明天我要去曲阜参观孔庙和孔林。','Míngtiān wǒ yào qù Qūfù cānguān Kǒngmiào hé Kǒnglín.','Ngày mai mình sẽ đi Khúc Phụ tham quan Khổng Miếu và Khổng Lâm.'],
+['到那儿以后再给你介绍曲阜的情况。','Dào nàr yǐhòu zài gěi nǐ jièshào Qūfù de qíngkuàng.','Đến đó rồi mình sẽ kể cho bạn tình hình ở Khúc Phụ.'],
+['这次来旅行我很愉快，山东大学的朋友很热情，给了我很多帮助。','Zhè cì lái lǚxíng wǒ hěn yúkuài, Shāndōng Dàxué de péngyou hěn rèqíng, gěi le wǒ hěn duō bāngzhù.','Chuyến đi này mình rất vui, bạn ở Đại học Sơn Đông rất nhiệt tình, giúp mình nhiều.'],
+['这是我用手机照的泰山日出，发给你看看。','Zhè shì wǒ yòng shǒujī zhào de Tài Shān rìchū, fā gěi nǐ kànkan.','Đây là ảnh bình minh Thái Sơn mình chụp bằng điện thoại, gửi bạn xem.'],
+['祝好','Zhù hǎo','Chúc bạn mọi điều tốt đẹp.'],
+['丹尼丝　7月28日','Dānnísī, qī yuè èrshíbā rì','Denise, ngày 28 tháng 7.']];
+const G=[
+['','Bổ ngữ xu hướng: V + 上/出/下 + 来','爬上来 · 跳出来 · 走下来 · 叫了起来','Hướng di chuyển so với người nói: 来 = về phía người nói. Người viết đang ở trên núi → 爬上来; mặt trời nhảy ra → 跳出来. 登上 = leo lên tới nơi.'],
+['','是……的 (nhấn mạnh cách thức)','我是爬上来的 · 这是我用手机照的','Sự việc đã xảy ra, nhấn mạnh cách thức/công cụ: 是 + cách thức + V + 的.'],
+['','没有 + V','没有坐缆车','Phủ định hành động đã/không xảy ra: 没有 + V, không thêm 了.'],
+['','真有……的感觉','真有“一览众山小”的感觉','有 + định ngữ + 的 + 感觉: có cảm giác như… (trích thơ Đỗ Phủ).'],
+['','在 + nơi chốn + V + 了 + thời lượng','我还在山上住了一夜','Nơi chốn trước động từ; thời lượng (一夜) đứng sau 了. 还 = còn, thêm nữa.'],
+['','等 · 能 + V','等第二天早上看日出 · 能站在泰山上看日出','等 = đợi tới lúc; 能 = có thể/được (điều kiện cho phép). 站在 + nơi chốn.'],
+['','当……的时候 · 一下子','当我们看到太阳一下子跳出来的时候','当…的时候 = khi…; 一下子 = bỗng chốc, trong chớp mắt.'],
+['','Trạng ngữ + 地 + V','兴奋地大声叫了起来','Tính từ + 地 đứng trước động từ để chỉ cách thức; 大声 = to tiếng.'],
+['','V + 起来 (bắt đầu)','叫了起来','起来 chỉ hành động bắt đầu và tiếp diễn: bật kêu lên.'],
+['','真是 + adj + 极了','真是美极了','Adj + 极了 = cực kỳ, vô cùng (cảm thán).'],
+['','又 · 从 + nơi chốn + V','我又从泰山上走下来了','又 = lại (việc đã xảy ra lặp lại); 从…V = từ đâu mà đi.'],
+['','要 + V · 到……以后再……','明天我要去曲阜参观 · 到那儿以后再给你介绍','要 = sẽ (dự định); …以后再… = sau khi… rồi mới/sẽ…'],
+['','给 + người + V · V给','给你介绍 · 给了我很多帮助 · 发给你看看','给 + người đứng trước V; V + 给 = V cho ai; 看看 = lặp động từ (thử xem, nhẹ nhàng).']];
+function mk(id,arr,note){const p=document.getElementById(id);
+p.innerHTML='<div class="tools"><button class="chip" data-k="showp">Pinyin</button><button class="chip" data-k="showv">Nghĩa</button></div><div class="list">'+arr.map(r=>'<div class="s"><div class="h">'+r[0]+'</div><div class="p">'+r[1]+'</div><div class="v">'+r[2]+'</div></div>').join('')+'</div>'+(note||'')+'<div class="note" style="margin-top:8px">一览众山小: muôn dặm nước non thu cả vào trong tầm mắt</div><div class="note" style="margin-top:8px">Chạm vào câu để xem pinyin + nghĩa.</div>';
+p.querySelectorAll('.s').forEach(s=>s.onclick=()=>{const on=!s.classList.contains('sp');s.classList.toggle('sp',on);s.classList.toggle('sv',on)});
+p.querySelectorAll('.chip').forEach(c=>c.onclick=()=>{c.classList.toggle('on');p.classList.toggle(c.dataset.k)})}
+mk('a',T1);
+document.getElementById('g').innerHTML=G.map(g=>'<div class="g"><b>'+g[1]+'</b><div class="ex">'+g[2]+'</div><small>'+g[3]+'</small></div>').join('');
+document.querySelectorAll('#tabs button').forEach(b=>b.onclick=()=>{document.querySelectorAll('#tabs button,.pane').forEach(e=>e.classList.remove('on'));b.classList.add('on');document.getElementById(b.dataset.t).classList.add('on')});
+/* Bài tập */
+const E1=[['我是爬____的，没有坐缆车。',['上来','上去','下来'],0,'爬上来: người viết đang ở trên núi.'],
+['太阳一下子跳____了。',['下去','出来','进去'],1,'跳出来: mặt trời nhảy ra khỏi đường chân trời.'],
+['真是美____了。',['极','得','着'],0,'美极了 = đẹp vô cùng.'],
+['下午，我又从泰山上走____了。(đang ở chân núi)',['上来','下来','出去'],1,'走下来: từ trên xuống, về phía người nói.'],
+['大家兴奋地大声叫____。',['起来','下来','出来'],0,'叫起来 = bật kêu lên.']];
+const E2=[['我爬上泰山来了的。',['我是爬上来的。','我爬上来是的。','我是爬来上的。'],0,'是……的 + 爬上来.'],
+['我没有坐了缆车。',['我没有坐缆车。','我不有坐缆车了。','我没坐了缆车。'],0,'没有 + V, không dùng 了.'],
+['太阳一下子出跳来。',['太阳一下子跳出来。','太阳一下子出来跳。','太阳跳一下子出来。'],0,'V + 出 + 来: 跳出来.'],
+['他们都兴奋大声叫了起来。',['他们都兴奋地大声叫了起来。','他们都兴奋得大声叫了起来。','他们兴奋都地大声叫起了来。'],0,'Tính từ + 地 + V làm trạng ngữ.'],
+['我住在山上了一夜。',['我在山上住了一夜。','我住了在山上一夜。','在我山上住了一夜。'],0,'在 + nơi chốn + V + 了 + thời lượng.']];
+const E3=[['我','是','爬上来','的'],['我','还','在山上','住了','一夜'],['太阳','一下子','跳','出来'],['我','用手机','照','泰山日出'],['到那儿以后','再','给你','介绍','曲阜的情况']];
+const st={};
+function pick(e,i,j,item){const q=document.querySelectorAll('.q')[i];const ok=j==item[2];q.querySelectorAll('.o').forEach((b,k)=>{b.disabled=true;if(k==item[2])b.classList.add('ok');else if(k==j)b.classList.add('no')});q.querySelector('.fb').textContent=(ok?'✔ ':'✘ ')+item[3];st[e]=(st[e]||0)+(ok?1:0);if(document.querySelectorAll('.o:disabled').length>=document.querySelectorAll('.q').length*3&&false){}
+const done=[...document.querySelectorAll('.q')].every(x=>x.querySelector('.o:disabled'));if(done)document.getElementById('sc').textContent='Điểm: '+st[e]+'/'+document.querySelectorAll('.q').length}
+function choice(e,data0){st[e]=0;const data=data0.map(it=>{const o=sh(it[1]);return [it[0],o.map(x=>x[0]),o.findIndex(x=>x[1]==it[2]),it[3]]});document.getElementById('ex').innerHTML=data.map((it,i)=>'<div class="q"><div class="t">'+(i+1)+'. '+it[0]+'</div><div class="opts">'+it[1].map((o,j)=>'<button class="o" data-i="'+i+'" data-j="'+j+'">'+o+'</button>').join('')+'</div><div class="fb"></div></div>').join('')+'<div class="score" id="sc"></div><button class="btn l" id="rs">Làm lại</button>';
+document.querySelectorAll('.o').forEach(b=>b.onclick=()=>pick(e,+b.dataset.i,+b.dataset.j,data[+b.dataset.i]));document.getElementById('rs').onclick=()=>choice(e,data0)}
+function sh(a){return a.map((v,i)=>[v,i]).sort(()=>Math.random()-.5)}
+function order(){let n=0;document.getElementById('ex').innerHTML=E3.map((it,i)=>'<div class="q" data-i="'+i+'"><div class="t" style="font-size:14px;color:var(--mu)">'+(i+1)+'. Chạm các mảnh để ghép thành câu:</div><div class="ans"></div><div class="opts"></div><div style="margin-top:8px"><button class="btn">Kiểm tra</button> <button class="btn l">Xoá</button></div><div class="fb"></div></div>').join('')+'<div class="score" id="sc"></div>';
+document.querySelectorAll('.q').forEach(q=>{const i=+q.dataset.i,ans=q.querySelector('.ans'),pool=q.querySelector('.opts'),fb=q.querySelector('.fb');
+const mkb=(t)=>{const b=document.createElement('button');b.className='o';b.textContent=t;return b};
+const fill=()=>{pool.innerHTML='';ans.innerHTML='';fb.textContent='';sh(E3[i]).forEach(([t])=>{const b=mkb(t);b.onclick=()=>{const c=mkb(t);c.onclick=()=>{c.remove();b.style.display=''};ans.appendChild(c);b.style.display='none'};pool.appendChild(b)})};
+fill();const [chk,clr]=q.querySelectorAll('.btn');clr.onclick=fill;
+chk.onclick=()=>{const s=[...ans.children].map(c=>c.textContent).join('');const ok=s==E3[i].join('');fb.textContent=ok?'✔ Đúng: '+s:'✘ Chưa đúng, thử lại. Gợi ý: '+E3[i].join(' ');fb.style.color=ok?'var(--ok)':'var(--no)'}})}
+document.querySelectorAll('#sub .chip').forEach(c=>c.onclick=()=>{document.querySelectorAll('#sub .chip').forEach(x=>x.classList.remove('on'));c.classList.add('on');run(c.dataset.e)});
+function run(e){e=='1'?choice(1,E1):e=='2'?choice(2,E2):order()}
+run('1');
+</script>
+</body>
+</html>
