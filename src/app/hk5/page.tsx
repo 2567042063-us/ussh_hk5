@@ -9,7 +9,7 @@ import LichThi from "./lichthi";
 
 export const metadata: Metadata = {
   title: "HK5",
-  description: "HK5 – GTHN, Khẩu ngữ, Đọc hiểu SC",
+  description: "HK5 - GTHN, Khẩu ngữ, Đọc hiểu SC",
 };
 
 export default function Page() {
@@ -23,13 +23,14 @@ export default function Page() {
             <a
               key={index}
               href={`#m${index + 1}`}
-              className="hover:rotate-5 mx-5 inline-block transform text-sky-600 transition-[transform,color] duration-300 ease-in-out hover:text-primary"
+              className="hover:rotate-5 mx-5 inline-block transform text-sky-600 transition-[transform,color] duration-300 ease-in-out hover:text-primary dark:text-sky-300"
             >
               ⭑.ᐟ {subject}
             </a>
           ))}
         </nav>
-        <div>
+
+        <div className="max-w-200 mx-auto my-5">
           <LichThi />
         </div>
 

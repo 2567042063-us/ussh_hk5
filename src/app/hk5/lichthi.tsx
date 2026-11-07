@@ -139,18 +139,6 @@ export default function LichOnThi() {
           })}
         </div>
       </div>
-
-      {/* Extra Info Banner */}
-      <div className="my-1 rounded-2xl border border-cyan-800/20 p-3 shadow-[0_0_0_2px_#0ea5e9] dark:border-slate-700">
-        <div className="flex flex-wrap items-baseline gap-2">
-          <span className="text-2xl font-bold text-sky-600 dark:text-sky-400">
-            Soạn Khẩu Ngữ + Giao Tiếp SC
-          </span>
-          <span className="text-xs text-slate-500 dark:text-slate-400">
-            4KN; 8GT; + (chưa có) CK KN
-          </span>
-        </div>
-      </div>
     </div>
   );
 }

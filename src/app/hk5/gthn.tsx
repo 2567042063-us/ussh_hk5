@@ -4,177 +4,158 @@ import Link from "next/link";
 
 import NdthiNPDsc3 from "./NdthiNPDsc3";
 
-export default function GTHN() {
-  const dirPath = path.join(process.cwd(), "public", "hk5");
-  let htmlFiles: string[] = [];
-  try {
-    const files = fs.readdirSync(dirPath);
-    htmlFiles = files.filter((file) => file.endsWith(".html"));
-  } catch (error) {
-    console.error("Không tìm thấy thư mục public/hk5/:", error);
-  }
+const btHrefs = [
+  {
+    name: "Bài tập Bổ ngữ kết quả",
+    href: "/hk5/baitap/bt-bnkq",
+  },
+  {
+    name: "Tổng hợp Bổ ngữ kết quả _ Bài 4 và Bài 12",
+    href: "/hk5/baitap/bnkq",
+  },
+  {
+    name: "Sửa câu sai _ b11 →	b19",
+    href: "/hk5/baitap/suacausai-1119",
+  },
+  {
+    name: "Câu chữ 把",
+    href: "/hk5/baitap/cauchuba",
+  },
+  {
+    name: "Phân biệt 了 - 着 - 过",
+    href: "/hk5/baitap/abc-lezheguo",
+  },
+  {
+    name: "Bài tập 就 才 再 又",
+    href: "/hk5/baitap/abcd-youzaicaijiu",
+  },
 
-  const dirPathBkp = path.join(process.cwd(), "public", "hk5", "bkp");
-  let htmlFilesBkp: string[] = [];
+  {
+    name: "Sắp xếp 302 câu tiếng Trung HSK 3-4-5",
+    href: "/hk5/baitap/sapxep302cau",
+  },
+  {
+    name: "Sắp xếp câu SBT1",
+    href: "/hk5/baitap/sapxepsbt1",
+  },
+  {
+    name: "Sắp xếp câu SBT2",
+    href: "/hk5/baitap/sapxepsbt2",
+  },
+];
+
+export default function GTHN() {
+  // Tất cả GTHN
+  const dirPathGthn = path.join(process.cwd(), "public", "hk5", "gthn");
+  let filesGthn: string[] = [];
   try {
-    const files = fs.readdirSync(dirPathBkp);
-    htmlFilesBkp = files.filter((file) => file.endsWith(".html"));
+    const files = fs.readdirSync(dirPathGthn);
+    const htmlFilesGthn = files.filter((file) => file.endsWith(".html"));
+    filesGthn = htmlFilesGthn.map((file) => file.replace(/\.html$/, ""));
   } catch (error) {
     console.error("Không tìm thấy thư mục public/hk5/bkp:", error);
   }
+  // Tất cả Bài khoá phụ
+  const dirPathBkp = path.join(process.cwd(), "public", "hk5", "bkp");
+  let filesBkp: string[] = [];
+  try {
+    const files = fs.readdirSync(dirPathBkp);
+    const htmlFilesBkp = files.filter((file) => file.endsWith(".html"));
+    filesBkp = htmlFilesBkp.map((file) => file.replace(/\.html$/, ""));
+  } catch (error) {
+    console.error("Không tìm thấy thư mục public/hk5/bkp:", error);
+  }
+
   return (
-    <div className="mb-10">
-      <h2 className="border-t-3 border-b-3 mb-2 border-dashed border-sky-600 py-3 text-center text-2xl font-extralight leading-tight text-sky-600 dark:text-primary-dark">
+    <div className="max-w-200 mx-auto">
+      <h2 className="mb-5 border-b-2 border-t-2 border-dashed border-sky-600 py-3 text-center text-2xl font-extralight leading-tight text-sky-600 dark:border-sky-300 dark:text-sky-300">
         GTHN
       </h2>
-      <table className="ztai__table min-w-md mx-auto mt-5">
-        <thead>
-          <tr>
-            <th colSpan={2}>
-              <span className="block text-center">Bài khoá phụ</span>
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          {htmlFilesBkp.map((file) => (
-            <tr key={file}>
-              <td>{file.replace(/\.[^/.]+$/, "")} </td>
-              <td>
-                <Link
-                  href={`/hk5/bkp/${file}`}
-                  prefetch={false}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block px-5 text-slate-500 hover:text-primary dark:text-sky-400 dark:hover:text-primary-dark"
-                >
-                  bài học & bài tập
-                </Link>
-              </td>
-            </tr>
+
+      {/* bài khoá chính và bài khoá phụ  */}
+      <div className="mb-4 grid grid-cols-1 gap-3 text-slate-500 dark:text-slate-300 md:grid-cols-[0.5fr_1fr]">
+        <div className="flex flex-col justify-center rounded-sm border border-cyan-800/20 p-3 dark:border-slate-700">
+          {["gthn3-bai11", ...filesGthn].map((fileName) => (
+            <div
+              key={fileName}
+              className={`flex justify-between gap-2 border-b border-dashed border-cyan-800/20 py-1 last:border-0 dark:border-slate-700`}
+            >
+              <Link
+                href={`/hk5/gthn/${fileName}`}
+                prefetch={false}
+                // target="_blank"
+                // rel="noopener noreferrer"
+                className="inline-block px-5 text-slate-500 hover:text-primary dark:text-sky-400 dark:hover:text-primary-dark"
+              >
+                {fileName}
+              </Link>
+            </div>
           ))}
-        </tbody>
-      </table>
-      <table className="ztai__table min-w-md mx-auto mt-5">
-        <thead>
-          <tr>
-            <th colSpan={2}>
-              <span className="block text-center">Ngữ pháp</span>
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>BNKQ _ 结果补语</td>
-            <td>
-              <div>
-                <Link
-                  href="/hk5/bt-bnkq"
-                  prefetch={false}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-3 inline-block px-5 text-sky-700 hover:text-primary dark:text-sky-400 dark:hover:text-primary-dark"
-                >
-                  BT b04+b12
-                </Link>
-              </div>
-              <div>
-                <Link
-                  href="/hk5/bnkq"
-                  prefetch={false}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-3 inline-block px-5 text-sky-700 hover:text-primary dark:text-sky-400 dark:hover:text-primary-dark"
-                >
-                  Tổng hợp b04+b12
-                </Link>
-              </div>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      <ul className="text-center text-xl">
-        <li>
-          <Link
-            href="/hk5/baitap-suacausai-1119"
-            prefetch={false}
-            className="mt-3 inline-block px-5 text-sky-700 hover:text-primary dark:text-sky-400 dark:hover:text-primary-dark"
-          >
-            BT Sửa câu sai bài 11-19
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/hk5/btabc-lezheguo"
-            prefetch={false}
-            className="mt-3 inline-block px-5 text-sky-700 hover:text-primary dark:text-sky-400 dark:hover:text-primary-dark"
-          >
-            ABC - 着、了、过
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/hk5/btchuba"
-            prefetch={false}
-            className="mt-3 inline-block px-5 text-sky-700 hover:text-primary dark:text-sky-400 dark:hover:text-primary-dark"
-          >
-            BT câu chữ 把
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/hk5/btsapxep302cau"
-            prefetch={false}
-            className="mt-3 inline-block px-5 text-sky-700 hover:text-primary dark:text-sky-400 dark:hover:text-primary-dark"
-          >
-            BT sắp xếp 302 câu
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/hk5/btsapxepsbt1"
-            prefetch={false}
-            className="mt-3 inline-block px-5 text-sky-700 hover:text-primary dark:text-sky-400 dark:hover:text-primary-dark"
-          >
-            BT sắp xếp câu SBT-01
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/hk5/btsapxepsbt2"
-            prefetch={false}
-            className="mt-3 inline-block px-5 text-sky-700 hover:text-primary dark:text-sky-400 dark:hover:text-primary-dark"
-          >
-            BT sắp xếp câu SBT-02
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/hk5/btabcd-youzaicaijiu"
-            className="mt-3 inline-block px-5 text-sky-700 hover:text-primary dark:text-sky-400 dark:hover:text-primary-dark"
-          >
-            ABCD - 就 才 再 又
-          </Link>
-        </li>
-      </ul>
+        </div>
+
+        <div className="flex flex-col gap-1.5 rounded-sm border border-cyan-800/20 p-3 dark:border-slate-700">
+          {filesBkp.map((fileName) => (
+            <div
+              key={fileName}
+              className={`flex justify-between gap-2 border-b border-dashed border-cyan-800/20 py-1 last:border-0 dark:border-slate-700`}
+            >
+              <Link
+                href={`/hk5/bkp/${fileName}`}
+                prefetch={false}
+                // target="_blank"
+                // rel="noopener noreferrer"
+                className="inline-block px-5 text-slate-500 hover:text-primary dark:text-sky-400 dark:hover:text-primary-dark"
+              >
+                Bài khoá phụ _ {fileName}
+              </Link>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* ngữ pháp và bài tập */}
+      <div className="mb-4 grid grid-cols-1 gap-3 text-slate-500 dark:text-slate-300 md:grid-cols-[0.5fr_1fr]">
+        <div className="flex flex-col justify-center rounded-sm border border-cyan-800/20 p-3 dark:border-slate-700">
+          ... to be continue
+        </div>
+
+        <div className="flex flex-col gap-1.5 rounded-sm border border-cyan-800/20 p-3 dark:border-slate-700">
+          {btHrefs.map((bt) => (
+            <div
+              key={bt.href}
+              className={`flex justify-between gap-2 border-b border-dashed border-cyan-800/20 py-1 last:border-0 dark:border-slate-700`}
+            >
+              <Link
+                href={bt.href}
+                prefetch={false}
+                // target="_blank"
+                // rel="noopener noreferrer"
+                className="inline-block px-5 text-slate-500 hover:text-primary dark:text-sky-400 dark:hover:text-primary-dark"
+              >
+                {bt.name}
+              </Link>
+            </div>
+          ))}
+        </div>
+      </div>
 
       <NdthiNPDsc3 />
-
-      <ul className="mt-5 flex flex-wrap justify-center gap-4">
-        {htmlFiles.map((file) => (
-          <li key={file}>
-            <Link
-              href={`/hk5/${file}`}
-              prefetch={false}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-3 inline-block px-5 text-slate-500 hover:text-primary dark:text-sky-400 dark:hover:text-primary-dark"
-            >
-              {/*  `/\.[^/.]+$//` sẽ tìm dấu chấm và phần chữ theo sau ở cuối file */}
-              {file.replace(/\.[^/.]+$/, "")}{" "}
-            </Link>
-          </li>
-        ))}
-      </ul>
     </div>
   );
 }
+
+// <ul className="mt-5 flex flex-wrap justify-center gap-4">
+//         {htmlFiles.map((file) => (
+//           <li key={file}>
+//             <Link
+//               href={`/hk5/${file}`}
+//               prefetch={false}
+//               target="_blank"
+//               rel="noopener noreferrer"
+//               className="mt-3 inline-block px-5 text-slate-500 hover:text-primary dark:text-sky-400 dark:hover:text-primary-dark"
+//             >
+//               {file.replace(/\.[^/.]+$/, "")}{" "}
+//             </Link>
+//           </li>
+//         ))}
+//       </ul>

@@ -1,10 +1,22 @@
 export default function KhauNgu() {
   return (
-    <div className="mb-10">
+    <div className="max-w-200 mx-auto mb-10">
       <h2 className="border-t-3 border-b-3 mb-2 border-dashed border-sky-600 py-3 text-center text-2xl font-extralight leading-tight text-sky-600 dark:text-primary-dark">
         Khẩu ngữ
       </h2>
-      <div className="mx-auto max-w-[800px] rounded-lg bg-white p-5 shadow dark:bg-slate-700">
+      {/* Extra Info Banner */}
+      <div className="my-5 rounded-2xl">
+        <div className="flex flex-wrap items-baseline gap-2">
+          <span className="text-2xl font-bold text-sky-600 dark:text-sky-400">
+            📌 📌 📌 Soạn Khẩu Ngữ + Giao Tiếp SC
+          </span>
+          <span className="text-xs text-slate-500 dark:text-slate-400">
+            4KN; 8GT; + (chưa có) CK KN
+          </span>
+        </div>
+      </div>
+
+      <div className="rounded-lg bg-white p-5 shadow dark:bg-slate-700">
         <h4 className="text-center text-xl text-cyan-600 dark:text-cyan-400">
           GK (26/12)
         </h4>

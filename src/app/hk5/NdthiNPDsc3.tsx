@@ -1,6 +1,6 @@
 export default function NdthiNPDsc3() {
   return (
-    <div className="mx-auto max-w-[800px] rounded-lg bg-white p-5 shadow dark:bg-slate-700">
+    <div className="max-w-200 mx-auto rounded-lg bg-white p-5 shadow dark:bg-slate-700">
       <h1 className="text-xl font-bold text-sky-700 dark:text-sky-400">
         💯 Nội dung Thi GK Ngữ Pháp-Dịch SC3.
       </h1>
