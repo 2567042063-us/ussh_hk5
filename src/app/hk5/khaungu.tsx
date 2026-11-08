@@ -1,7 +1,7 @@
 export default function KhauNgu() {
   return (
     <div className="max-w-200 mx-auto mb-10">
-      <h2 className="border-t-3 border-b-3 mb-2 border-dashed border-sky-600 py-3 text-center text-2xl font-extralight leading-tight text-sky-600 dark:text-primary-dark">
+      <h2 className="mb-5 border-b-2 border-t-2 border-dashed border-sky-600 py-3 text-center text-2xl font-extralight leading-tight text-sky-600 dark:border-sky-300 dark:text-sky-300">
         Khẩu ngữ
       </h2>
       {/* Extra Info Banner */}

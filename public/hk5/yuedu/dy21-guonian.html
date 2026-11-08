@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<title>第二单元 - 过年 | Bài 2.1 - Ăn Tết</title>
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body class="bg-sky-50 min-h-screen">
+
+<!-- MENU STICKY -->
+<nav class="sticky top-0 z-50 bg-white ">
+  <div class="flex flex-wrap gap-2 justify-center items-center">
+    <span class="font-bold text-sky-700 mr-2">📍 Menu:</span>
+    <a href="#vocab" class="menu-link px-4 py-2 rounded-lg bg-sky-100 text-sky-700 font-medium">📚 Từ vựng</a>
+    <a href="#passage" class="menu-link px-4 py-2 rounded-lg bg-sky-100 text-sky-700 font-medium">📖 Bài đọc</a>
+    <a href="#ex1" class="menu-link px-4 py-2 rounded-lg bg-sky-100 text-sky-700 font-medium">✏️ BT 1</a>
+    <a href="#ex2" class="menu-link px-4 py-2 rounded-lg bg-sky-100 text-sky-700 font-medium">✏️ BT 2</a>
+    <a href="#ex3" class="menu-link px-4 py-2 rounded-lg bg-sky-100 text-sky-700 font-medium">✏️ BT 3</a>
+    <a href="#ex4" class="menu-link px-4 py-2 rounded-lg bg-sky-100 text-sky-700 font-medium">✏️ BT 4</a>
+    <a href="#ex5" class="menu-link px-4 py-2 rounded-lg bg-sky-100 text-sky-700 font-medium">✏️ BT 5</a>
+  </div>
+</nav>
+
+<div class="mx-auto p-6">
+
+  <!-- HEADER -->
+  <header class="mb-5 border-b-2 border-t-2 border-dashed border-sky-600 py-3 text-center text-2xl font-extralight leading-tight text-sky-600 dark:border-sky-300 dark:text-sky-300">
+    <h1 class="ztai__zh " style="font-size: 24px;">第二单元 · 过年</h1>
+  </header>
+
+  <div>
+    <a class="inline-block text-sky-700 hover:text-sky-600 dark:text-sky-300 dark:hover:text-sky-100" href="/hk5/yuedu-2-1-guonian"><span class="flex flex-1 items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-move-left mr-2 h-4 w-4" aria-hidden="true"><path d="M6 8L2 12L6 16"></path><path d="M2 12H22"></path></svg> ٩(｡•ㅅ•｡)و qua bài học</span></a>
+    </div>
+
+  <!-- TỪ VỰNG -->
+  <section id="vocab" class="rounded-sm border border-slate-100 p-6 mb-6">
+    <h2 class="text-2xl font-bold text-sky-700 pb-2">📚 Từ mới (生词)</h2>
+    <div class="overflow-x-auto">
+      <table class="w-full border-collapse">
+        <thead>
+          <tr class="bg-sky-100">
+            <th class="border border-slate-300 p-2">汉字</th>
+            <th class="border border-slate-300 p-2">Pinyin</th>
+            <th class="border border-slate-300 p-2">Tiếng Việt</th>
+          </tr>
+        </thead>
+        <tbody id="vocabTable"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- BÀI ĐỌC -->
+  <section id="passage" class="rounded-sm border border-slate-100 p-6 mb-6">
+    <div class="flex justify-between items-center  pb-2 flex-wrap gap-2">
+      <h2 class="text-2xl font-bold text-sky-700">📖 Bài đọc (课文)</h2>
+      <div class="flex gap-2">
+        <button onclick="toggleView('pinyin')" id="btnPinyin" class="bg-sky-500 hover:bg-sky-600 text-white px-3 py-1.5 rounded-lg text-sm">
+          👁 Pinyin
+        </button>
+        <button onclick="toggleView('viet')" id="btnViet" class="bg-sky-500 hover:bg-sky-600 text-white px-3 py-1.5 rounded-lg text-sm">
+          🇻🇳 Tiếng Việt
+        </button>
+      </div>
+    </div>
+    <div id="passageContent" class="show-pinyin show-viet"></div>
+  </section>
+
+  <!-- BÀI TẬP -->
+  <section id="exercises" class="space-y-6">
+
+    <!-- PHẦN 1 -->
+    <div id="ex1" class="bg-white rounded-xl shadow p-6">
+      <h2 class="text-xl font-semibold text-sky-700 pb-2">
+        ✏️ (一) Chọn giải thích đúng cho từ
+      </h2>
+      <div id="part1"></div>
+      <div class="text-center mt-4">
+        <button onclick="submitPart(1)" class="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-lg font-bold shadow">
+          📝 Nộp bài phần 1
+        </button>
+      </div>
+      <div id="result1" class="mt-4"></div>
+    </div>
+
+    <!-- PHẦN 2 -->
+    <div id="ex2" class="bg-white rounded-xl shadow p-6">
+      <h2 class="text-xl font-semibold text-sky-700 pb-2">
+        ✏️ (二) Chọn đáp án đúng theo nội dung bài
+      </h2>
+      <div id="part2"></div>
+      <div class="text-center mt-4">
+        <button onclick="submitPart(2)" class="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-lg font-bold shadow">
+          📝 Nộp bài phần 2
+        </button>
+      </div>
+      <div id="result2" class="mt-4"></div>
+    </div>
+
+    <!-- PHẦN 3 -->
+    <div id="ex3" class="bg-white rounded-xl shadow p-6">
+      <h2 class="text-xl font-semibold text-sky-700 pb-2">
+        ✏️ (三) Đúng hay Sai (判断正误)
+      </h2>
+      <div id="part3"></div>
+      <div class="text-center mt-4">
+        <button onclick="submitPart(3)" class="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-lg font-bold shadow">
+          📝 Nộp bài phần 3
+        </button>
+      </div>
+      <div id="result3" class="mt-4"></div>
+    </div>
+
+    <!-- PHẦN 4 -->
+    <div id="ex4" class="bg-white rounded-xl shadow p-6">
+      <h2 class="text-xl font-semibold text-sky-700 pb-2">
+        ✏️ (四) Điền vào chỗ trống
+      </h2>
+      <div id="part4"></div>
+      <div class="text-center mt-4">
+        <button onclick="submitPart(4)" class="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-lg font-bold shadow">
+          📝 Nộp bài phần 4
+        </button>
+      </div>
+      <div id="result4" class="mt-4"></div>
+    </div>
+
+    <!-- PHẦN 5 -->
+    <div id="ex5" class="bg-white rounded-xl shadow p-6">
+      <h2 class="text-xl font-semibold text-sky-700 pb-2">
+        ✏️ (五) Trả lời câu hỏi
+      </h2>
+      <div id="part5"></div>
+      <div class="text-center mt-4">
+        <button onclick="submitPart(5)" class="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-lg font-bold shadow">
+          📝 Nộp bài phần 5
+        </button>
+      </div>
+      <div id="result5" class="mt-4"></div>
+    </div>
+
+  </section>
+
+</div>
+
+<script>
+// ============ DATA ============
+const vocabulary = [
+  { hanzi: "大年三十", pinyin: "dànián sānshí", viet: "Đêm giao thừa (30 Tết)" },
+  { hanzi: "超市", pinyin: "chāoshì", viet: "Siêu thị" },
+  { hanzi: "公婆", pinyin: "gōngpó", viet: "Bố mẹ chồng" },
+  { hanzi: "团聚", pinyin: "tuánjù", viet: "Đoàn tụ" },
+  { hanzi: "年夜饭", pinyin: "niányèfàn", viet: "Cơm tất niên (bữa tối 30 Tết)" },
+  { hanzi: "家务", pinyin: "jiāwù", viet: "Việc nhà" },
+  { hanzi: "聊家常", pinyin: "liáo jiācháng", viet: "Tám chuyện gia đình" },
+  { hanzi: "凑热闹", pinyin: "còu rènao", viet: "Hùa vào cho vui" },
+  { hanzi: "比比画画", pinyin: "bǐbǐ huàhuà", viet: "Vừa nói vừa múa tay" },
+  { hanzi: "哭鼻子", pinyin: "kū bízi", viet: "Khóc (trẻ con)" },
+  { hanzi: "欢天喜地", pinyin: "huāntiān xǐdì", viet: "Vui mừng hớn hở" },
+  { hanzi: "团圆", pinyin: "tuányuán", viet: "Đoàn viên, sum họp" },
+  { hanzi: "幼儿园", pinyin: "yòu'éryuán", viet: "Nhà trẻ, trường mẫu giáo" },
+  { hanzi: "春节联欢晚会", pinyin: "Chūnjié Liánhuān Wǎnhuì", viet: "Gala mừng Xuân (CCTV)" },
+  { hanzi: "婆家", pinyin: "pójia", viet: "Nhà chồng" },
+  { hanzi: "一大早", pinyin: "yī dà zǎo", viet: "Sớm tinh mơ" },
+  { hanzi: "穿戴整齐", pinyin: "chuāndài zhěngqí", viet: "Ăn mặc chỉnh tề" }
+];
+
+const passage = [
+  { chinese: "今天是大年三十。", pinyin: "Jīntiān shì dànián sānshí.", viet: "Hôm nay là đêm giao thừa." },
+  { chinese: "一大早她就开始忙起来。", pinyin: "Yī dà zǎo tā jiù kāishǐ máng qǐlái.", viet: "Sớm tinh mơ cô ấy đã bắt đầu bận rộn." },
+  { chinese: "整理房间，去超市给公婆买礼物。", pinyin: "Zhěnglǐ fángjiān, qù chāoshì gěi gōngpó mǎi lǐwù.", viet: "Dọn dẹp phòng, đi siêu thị mua quà cho bố mẹ chồng." },
+  { chinese: "孩子穿着一身漂亮的新衣服，在她身边跑来跑去，非常兴奋地等待着。", pinyin: "Háizi chuānzhe yī shēn piàoliang de xīn yīfu, zài tā shēnbiān pǎo lái pǎo qù, fēicháng xīngfèn de děngdài zhe.", viet: "Đứa trẻ mặc một bộ quần áo mới thật đẹp, chạy quanh cô ấy, vô cùng háo hức chờ đợi." },
+  { chinese: "在中国，过年时所有的人都要回到父母身边，一家人团聚在一起。", pinyin: "Zài Zhōngguó, guònián shí suǒyǒu de rén dōu yào huídào fùmǔ shēnbiān, yī jiā rén tuánjù zài yīqǐ.", viet: "Ở Trung Quốc, khi ăn Tết tất cả mọi người đều phải về bên cha mẹ, cả nhà đoàn tụ bên nhau." },
+  { chinese: "所以，今天晚上他们一家三口要回公婆家去吃年夜饭。", pinyin: "Suǒyǐ, jīntiān wǎnshang tāmen yī jiā sān kǒu yào huí gōngpó jiā qù chī niányèfàn.", viet: "Vì vậy, tối nay ba người trong gia đình họ sẽ về nhà bố mẹ chồng ăn cơm tất niên." },
+  { chinese: "平时她的丈夫工作很忙，买菜、做饭、洗衣服、照顾孩子等家务大部分是她做。", pinyin: "Píngshí tā de zhàngfu gōngzuò hěn máng, mǎi cài, zuò fàn, xǐ yīfu, zhàogù háizi děng jiāwù dà bùfen shì tā zuò.", viet: "Ngày thường chồng cô ấy rất bận, mua rau, nấu cơm, giặt quần áo, chăm con... phần lớn việc nhà là cô ấy làm." },
+  { chinese: "每天早上给一家人准备好简单的早饭，然后送孩子去幼儿园，送完孩子自己才去上班。", pinyin: "Měitiān zǎoshang gěi yī jiā rén zhǔnbèi hǎo jiǎndān de zǎofàn, ránhòu sòng háizi qù yòu'éryuán, sòng wán háizi zìjǐ cái qù shàngbān.", viet: "Mỗi sáng chuẩn bị bữa sáng đơn giản cho cả nhà, rồi đưa con đến nhà trẻ, đưa con xong cô mới đi làm." },
+  { chinese: "晚上下了班，先把孩子接回家，然后马上进厨房做晚饭。", pinyin: "Wǎnshang xià le bān, xiān bǎ háizi jiē huí jiā, ránhòu mǎshàng jìn chúfáng zuò wǎnfàn.", viet: "Tối tan làm, trước tiên đón con về nhà, rồi lập tức vào bếp nấu cơm tối." },
+  { chinese: "有时丈夫会在一旁帮助她。", pinyin: "Yǒushí zhàngfu huì zài yīpáng bāngzhù tā.", viet: "Thỉnh thoảng chồng cô ấy sẽ ở bên cạnh giúp cô." },
+  { chinese: "吃晚饭是一家人最愉快的时候。", pinyin: "Chī wǎnfàn shì yī jiā rén zuì yúkuài de shíhou.", viet: "Ăn cơm tối là lúc vui vẻ nhất của cả nhà." },
+  { chinese: "她和丈夫聊家常，谈论各自单位里的新闻。", pinyin: "Tā hé zhàngfu liáo jiācháng, tánlùn gèzì dānwèi lǐ de xīnwén.", viet: "Cô và chồng tám chuyện gia đình, bàn về tin tức ở cơ quan mỗi người." },
+  { chinese: "孩子也在一旁凑热闹，比比画画地给爸爸妈妈讲幼儿园里发生的事情：那个叫丽丽的小朋友哭鼻子了，冬冬又打架了……", pinyin: "Háizi yě zài yīpáng còu rènao, bǐbǐ huàhuà de gěi bàba māma jiǎng yòu'éryuán lǐ fāshēng de shìqing: nàge jiào Lìlì de xiǎopéngyǒu kū bízi le, Dōngdōng yòu dǎjià le...", viet: "Đứa trẻ cũng hùa vào cho vui, vừa nói vừa múa tay kể cho bố mẹ nghe chuyện xảy ra ở nhà trẻ: bạn nhỏ tên Lệ Lệ khóc nhè rồi, Đông Đông lại đánh nhau rồi..." },
+  { chinese: "孩子天真的话语和认真的神态，常常逗得夫妻俩哈哈大笑。", pinyin: "Háizi tiānzhēn de huàyǔ hé rènzhēn de shéntài, chángcháng dòu de fūqī liǎ hāhā dà xiào.", viet: "Lời nói ngây thơ và vẻ mặt nghiêm túc của con, thường khiến hai vợ chồng cười phá lên." },
+  { chinese: "下午四点多，丈夫下班回家了。", pinyin: "Xiàwǔ sì diǎn duō, zhàngfu xiàbān huí jiā le.", viet: "Hơn 4 giờ chiều, chồng tan làm về nhà." },
+  { chinese: "一家人穿戴整齐，欢天喜地地出了门。", pinyin: "Yī jiā rén chuāndài zhěngqí, huāntiān xǐdì de chū le mén.", viet: "Cả nhà ăn mặc chỉnh tề, vui mừng hớn hở ra khỏi nhà." },
+  { chinese: `在婆家，老少三代十几口人围坐在一张大圆桌旁，一边看中央电视台的"春节联欢晚会"，一边热热闹闹地吃团圆饭过年。`, pinyin: "Zài pójia, lǎoshào sān dài shí jǐ kǒu rén wéizuò zài yī zhāng dà yuánzhuō páng, yībiān kàn Zhōngyāng Diànshìtái de 'Chūnjié Liánhuān Wǎnhuì', yībiān rèrènāonào de chī tuányuánfàn guònián.", viet: "Ở nhà chồng, ba thế hệ già trẻ hơn chục người ngồi quanh chiếc bàn tròn lớn, vừa xem 'Gala Xuân' của đài truyền hình trung ương, vừa ăn cơm đoàn viên náo nhiệt đón năm mới." }
+];
+
+const part1 = [
+  { q: "一大早", options: ["A. 一个早晨", "B. 一个上午", "C. 很早", "D. 很快"], answer: "C",
+    explain: { pinyin: "yī dà zǎo", viet: "nghĩa là 'sớm tinh mơ', chỉ thời gian rất sớm vào buổi sáng.", ansText: "C. 很早 (rất sớm)" }},
+  { q: "团聚", options: ["A. 很多人坐成一个圆圈", "B. 一家人坐成一个圆圈", "C. 很多人在一起", "D. 一家人在一起"], answer: "D",
+    explain: { pinyin: "tuánjù", viet: "nghĩa là 'đoàn tụ', chỉ việc gia đình sum họp bên nhau.", ansText: "D. 一家人在一起 (cả nhà ở bên nhau)" }},
+  { q: "公婆", options: ["A. 丈夫称呼妻子的父母", "B. 妻子称呼丈夫的父母", "C. 老头儿和老太太", "D. 老太太"], answer: "B",
+    explain: { pinyin: "gōngpó", viet: "là cách vợ gọi bố mẹ chồng.", ansText: "B. 妻子称呼丈夫的父母 (vợ gọi bố mẹ chồng)" }},
+  { q: "年夜饭", options: ["A. 晚饭", "B. 夜里吃的饭", "C. 大年初一的晚饭", "D. 大年三十的晚饭"], answer: "D",
+    explain: { pinyin: "niányèfàn", viet: "là bữa cơm tối đêm giao thừa (30 Tết).", ansText: "D. 大年三十的晚饭 (bữa tối 30 Tết)" }},
+  { q: "家务", options: ["A. 家庭服务", "B. 家里的活儿", "C. 家庭服务员", "D. 家人的工作"], answer: "B",
+    explain: { pinyin: "jiāwù", viet: "là 'việc nhà', chỉ các công việc trong gia đình.", ansText: "B. 家里的活儿 (việc trong nhà)" }},
+  { q: "聊家常", options: ["A. 讨论发生的事", "B. 讨论生活中的问题", "C. 谈家里发生的事", "D. 谈家里的日常生活"], answer: "D",
+    explain: { pinyin: "liáo jiācháng", viet: "là 'tám chuyện gia đình', nói về sinh hoạt đời thường.", ansText: "D. 谈家里的日常生活 (nói về sinh hoạt thường ngày trong nhà)" }},
+  { q: "比比画画", options: ["A. 用手做动作来帮助说话", "B. 用手画画儿来表示意思", "C. 比较谁好谁坏", "D. 比一比谁画得好"], answer: "A",
+    explain: { pinyin: "bǐbǐ huàhuà", viet: "là 'vừa nói vừa múa tay', dùng cử chỉ tay để minh họa khi nói.", ansText: "A. 用手做动作来帮助说话 (dùng tay làm động tác giúp khi nói)" }},
+  { q: "哭鼻子", options: ["A. 鼻子不好", "B. 哭", "C. 鼻子哭了", "D. 小声地哭"], answer: "B",
+    explain: { pinyin: "kū bízi", viet: "là 'khóc' (thường dùng cho trẻ con, khóc nhè).", ansText: "B. 哭 (khóc)" }},
+  { q: "欢天喜地", options: ["A. 非常高兴的样子", "B. 非常喜欢", "C. 像喜欢天和地一样", "D. 很喜欢的样子"], answer: "A",
+    explain: { pinyin: "huāntiān xǐdì", viet: "là 'vui mừng hớn hở',形容 rất vui vẻ.", ansText: "A. 非常高兴的样子 (bộ dạng vô cùng vui vẻ)" }},
+  { q: "团圆", options: ["A. 大家住在一起", "B. 全家人聚到了一起", "C. 家人围坐成一个圆圈", "D. 大家围坐在一起"], answer: "B",
+    explain: { pinyin: "tuányuán", viet: "là 'đoàn viên', cả gia đình tụ họp đông đủ.", ansText: "B. 全家人聚到了一起 (cả nhà tụ họp)" }}
+];
+
+const part2 = [
+  { q: "大年三十晚上", options: ["A. 她一个人在家", "B. 她和孩子在家", "C. 一家三口吃团圆饭", "D. 全家人都不在家"], answer: "C",
+    explain: { pinyin: "tāmen yī jiā sān kǒu yào huí gōngpó jiā qù chī niányèfàn", viet: "ba người trong nhà về nhà bố mẹ chồng ăn cơm tất niên.", ansText: "C. 一家三口吃团圆饭" }},
+  { q: "大年三十这一天孩子没有做什么?", options: ["A. 穿新衣服", "B. 跑来跑去", "C. 去幼儿园", "D. 去爷爷家"], answer: "C",
+    explain: { pinyin: "jīntiān shì dànián sānshí... háizi méiyǒu qù yòu'éryuán", viet: "hôm nay là giao thừa, con không đi nhà trẻ.", ansText: "C. 去幼儿园 (không đi nhà trẻ)" }},
+  { q: "每天早上她不用做什么?", options: ["A. 洗衣服", "B. 做早饭", "C. 送孩子上幼儿园", "D. 上班"], answer: "A",
+    explain: { pinyin: "xǐ yīfu shì jiāwù, dàn zǎoshang tā zhǔyào zuò zǎofàn, sòng háizi, shàngbān", viet: "giặt quần áo là việc nhà nhưng không làm vào buổi sáng.", ansText: "A. 洗衣服 (không giặt đồ vào buổi sáng)" }},
+  { q: "下班以后她的第一件事是", options: ["A. 接孩子", "B. 买菜", "C. 进厨房", "D. 做晚饭"], answer: "A",
+    explain: { pinyin: "xià le bān, xiān bǎ háizi jiē huí jiā", viet: "tan làm, TRƯỚC TIÊN đón con về nhà.", ansText: "A. 接孩子 (đón con)" }},
+  { q: "孩子每天上幼儿园是", options: ["A. 妈妈送爸爸接", "B. 爸爸送妈妈接", "C. 妈妈送妈妈接", "D. 爸爸送爸爸接"], answer: "C",
+    explain: { pinyin: "sòng háizi qù yòu'éryuán... wǎnshang xià le bān, xiān bǎ háizi jiē huí jiā", viet: "đưa con đi nhà trẻ (cô ấy) ... tối đón con về (cô ấy).", ansText: "C. 妈妈送妈妈接 (mẹ đưa mẹ đón)" }},
+  { q: `"孩子也在一旁凑热闹"，意思是：孩子`, options: ["A. 在旁边看她和丈夫聊家常", "B. 给他们添麻烦", "C. 也和他们一起聊天儿", "D. 走过来听他们说什么"], answer: "C",
+    explain: { pinyin: "còu rènao", viet: "là 'hùa vào cho vui', ở đây con cũng tham gia nói chuyện cùng.", ansText: "C. 也和他们一起聊天儿 (cũng tham gia trò chuyện)" }},
+  { q: "他们什么时候去公婆家?", options: ["A. 一大早", "B. 做完家务以后", "C. 丈夫下班以后", "D. 晚上"], answer: "C",
+    explain: { pinyin: "xiàwǔ sì diǎn duō, zhàngfu xiàbān huí jiā le... yī jiā rén... chū le mén", viet: "hơn 4h chiều chồng về, cả nhà ra khỏi nhà.", ansText: "C. 丈夫下班以后 (sau khi chồng tan làm)" }}
+];
+
+const part3 = [
+  { q: "孩子跑来跑去，所以很兴奋。", answer: false, explain: { pinyin: "fēicháng xīngfèn de děngdài zhe", viet: "bài nói 'rất háo hức chờ đợi', không phải chạy nên mới háo hức.", ansText: "Sai. Trẻ háo hức chờ đợi, không phải vì chạy." }},
+  { q: "她是一位家庭妇女，每天只是在家做家务。", answer: false, explain: { pinyin: "sòng wán háizi zìjǐ cái qù shàngbān", viet: "cô ấy có đi làm (shàngbān).", ansText: "Sai. Cô ấy có đi làm." }},
+  { q: "她丈夫工作总是很忙。", answer: true, explain: { pinyin: "píngshí tā de zhàngfu gōngzuò hěn máng", viet: "ngày thường chồng cô ấy rất bận.", ansText: "Đúng." }},
+  { q: "丈夫从来不帮妻子做家务。", answer: false, explain: { pinyin: "yǒushí zhàngfu huì zài yīpáng bāngzhù tā", viet: "thỉnh thoảng chồng có giúp.", ansText: "Sai. Thỉnh thoảng chồng có giúp." }},
+  { q: "吃晚饭时，他们常常一边吃饭一边聊天儿。", answer: true, explain: { pinyin: "tā hé zhàngfu liáo jiācháng", viet: "cô và chồng trò chuyện khi ăn tối.", ansText: "Đúng." }},
+  { q: "他们的孩子名字叫冬冬。", answer: false, explain: { pinyin: "Dōngdōng shì yòu'éryuán lǐ de xiǎopéngyǒu", viet: "Đông Đông là bạn ở nhà trẻ, không phải con họ.", ansText: "Sai. Đông Đông là bạn ở nhà trẻ." }},
+  { q: "夫妻俩哈哈大笑是因为幼儿园很有意思。", answer: false, explain: { pinyin: "hái zi tiānzhēn de huàyǔ hé rènzhēn de shéntài", viet: "họ cười vì lời nói ngây thơ và vẻ mặt nghiêm túc của con.", ansText: "Sai. Họ cười vì sự ngây thơ của con." }},
+  { q: "过年了，全家人都穿得很漂亮。", answer: true, explain: { pinyin: "yī jiā rén chuāndài zhěngqí", viet: "cả nhà ăn mặc chỉnh tề.", ansText: "Đúng." }},
+  { q: "婆家的人不太多。", answer: false, explain: { pinyin: "lǎoshào sān dài shí jǐ kǒu rén", viet: "ba thế hệ hơn chục người - rất đông.", ansText: "Sai. Nhà chồng có hơn chục người." }},
+  { q: "大年三十，人们喜欢回到父母身边吃晚饭。", answer: true, explain: { pinyin: "guònián shí suǒyǒu de rén dōu yào huídào fùmǔ shēnbiān", viet: "khi ăn Tết mọi người đều về bên cha mẹ.", ansText: "Đúng." }}
+];
+
+const part4 = [
+  { q: "她去 ___ 给公婆买礼物。", answer: "超市", explain: { pinyin: "qù chāoshì gěi gōngpó mǎi lǐwù", viet: "đi siêu thị mua quà cho bố mẹ chồng.", ansText: "超市 (chāoshì - siêu thị)" }},
+  { q: "孩子穿着 ___ 漂亮的新衣服，在妈妈身边跑 ___ 跑 ___。", answer: "一身 / 来 / 去", explain: { pinyin: "chuānzhe yī shēn piàoliang de xīn yīfu... pǎo lái pǎo qù", viet: "mặc một bộ quần áo mới đẹp... chạy đi chạy lại.", ansText: "一身 / 来 / 去" }},
+  { q: "大部分家务事，比如 ___ 都是她做。", answer: "买菜、做饭、洗衣服、照顾孩子", explain: { pinyin: "mǎi cài, zuò fàn, xǐ yīfu, zhàogù háizi", viet: "mua rau, nấu cơm, giặt đồ, chăm con.", ansText: "买菜、做饭、洗衣服、照顾孩子" }},
+  { q: "孩子 ___ 的话语和 ___ 的神态，常常 ___ 父母哈哈大笑。", answer: "天真 / 认真 / 逗得", explain: { pinyin: "tiānzhēn de huàyǔ hé rènzhēn de shéntài, dòu de fūqī liǎ hāhā dà xiào", viet: "lời nói ngây thơ và vẻ mặt nghiêm túc, khiến bố mẹ cười lớn.", ansText: "天真 / 认真 / 逗得" }},
+  { q: "在婆家，___ 十几口人围在一起吃团圆饭。", answer: "老少三代", explain: { pinyin: "lǎoshào sān dài shí jǐ kǒu rén", viet: "ba thế hệ già trẻ hơn chục người.", ansText: "老少三代 (lǎoshào sān dài - ba thế hệ)" }}
+];
+
+const part5 = [
+  { q: "为什么她和家人要在大年三十这一天去公婆家?", answer: "因为在中国，过年时所有的人都要回到父母身边，一家人团聚在一起。",
+    explain: { pinyin: "yīnwèi zài Zhōngguó, guònián shí suǒyǒu de rén dōu yào huídào fùmǔ shēnbiān, yī jiā rén tuánjù zài yīqǐ", viet: "Vì ở TQ, khi ăn Tết mọi người đều về bên cha mẹ, cả nhà đoàn tụ." }},
+  { q: "她每天都要做什么事?", answer: "每天早上准备好早饭，送孩子去幼儿园，然后去上班。晚上下班后接孩子回家，做晚饭。",
+    explain: { pinyin: "měitiān zǎoshang zhǔnbèi zǎofàn, sòng háizi, shàngbān; wǎnshang jiē háizi, zuò wǎnfàn", viet: "Mỗi sáng chuẩn bị sáng, đưa con, đi làm; tối đón con, nấu cơm." }},
+  { q: "平时孩子白天在哪儿?", answer: "在幼儿园。", explain: { pinyin: "zài yòu'éryuán", viet: "Ở nhà trẻ." }},
+  { q: "她对自己的家庭生活满意吗?", answer: "满意。吃晚饭时一家人聊天儿，孩子讲幼儿园的事，夫妻俩哈哈大笑，很愉快。",
+    explain: { pinyin: "chī wǎnfàn shì yī jiā rén zuì yúkuài de shíhou", viet: "Ăn tối là lúc vui nhất, cả nhà trò chuyện, cười đùa." }}
+];
+
+// ============ RENDER ============
+function renderVocab() {
+  document.getElementById('vocabTable').innerHTML = vocabulary.map(v => `
+    <tr class="hover:bg-sky-50">
+      <td class="border border-slate-200 p-2 text-center text-lg ztai__zh">${v.hanzi}</td>
+      <td class="border border-slate-200 p-2 text-center italic text-sky-700">${v.pinyin}</td>
+      <td class="border border-slate-200 p-2">${v.viet}</td>
+    </tr>
+  `).join('');
+}
+
+function renderPassage() {
+  document.getElementById('passageContent').innerHTML = passage.map(s => `
+    <div class="sentence">
+      <div class="chinese font-medium">${s.chinese}</div>
+      <div class="pinyin">${s.pinyin}</div>
+      <div class="viet">${s.viet}</div>
+    </div>
+  `).join('');
+}
+
+function renderPart1() {
+  document.getElementById('part1').innerHTML = part1.map((item, i) => `
+    <div class="bg-sky-50 p-4 rounded-lg mb-3">
+      <p class="font-semibold mb-2"><span class="text-sky-700">${i+1}.</span> <span class="chinese">${item.q}</span></p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+        ${item.options.map((opt, j) => `
+          <label class="flex items-center bg-white p-2 rounded cursor-pointer hover:bg-sky-100">
+            <input type="radio" name="p1q${i}" value="${String.fromCharCode(65+j)}" class="mr-2">
+            <span>${opt}</span>
+          </label>
+        `).join('')}
+      </div>
+    </div>
+  `).join('');
+}
+
+function renderPart2() {
+  document.getElementById('part2').innerHTML = part2.map((item, i) => `
+    <div class="bg-sky-50 p-4 rounded-lg mb-3">
+      <p class="font-semibold mb-2"><span class="text-sky-700">${i+1}.</span> <span class="chinese">${item.q}</span></p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+        ${item.options.map((opt, j) => `
+          <label class="flex items-center bg-white p-2 rounded cursor-pointer hover:bg-sky-100">
+            <input type="radio" name="p2q${i}" value="${String.fromCharCode(65+j)}" class="mr-2">
+            <span>${opt}</span>
+          </label>
+        `).join('')}
+      </div>
+    </div>
+  `).join('');
+}
+
+function renderPart3() {
+  document.getElementById('part3').innerHTML = part3.map((item, i) => `
+    <div class="bg-sky-50 p-4 rounded-lg mb-3">
+      <p class="font-semibold mb-2"><span class="text-sky-700">${i+1}.</span> <span class="chinese">${item.q}</span></p>
+      <div class="flex gap-4">
+        <label class="flex items-center bg-white px-4 py-2 rounded cursor-pointer hover:bg-sky-100">
+          <input type="radio" name="p3q${i}" value="true" class="mr-2"> ✓ Đúng
+        </label>
+        <label class="flex items-center bg-white px-4 py-2 rounded cursor-pointer hover:bg-sky-100">
+          <input type="radio" name="p3q${i}" value="false" class="mr-2"> ✗ Sai
+        </label>
+      </div>
+    </div>
+  `).join('');
+}
+
+function renderPart4() {
+  document.getElementById('part4').innerHTML = part4.map((item, i) => `
+    <div class="bg-sky-50 p-4 rounded-lg mb-3">
+      <p class="font-semibold mb-2"><span class="text-sky-700">${i+1}.</span> <span class="chinese">${item.q}</span></p>
+      <input type="text" id="p4a${i}" class="w-full p-2 border-2 border-slate-300 rounded focus:border-slate-500 outline-none" placeholder="Nhập đáp án...">
+    </div>
+  `).join('');
+}
+
+function renderPart5() {
+  document.getElementById('part5').innerHTML = part5.map((item, i) => `
+    <div class="bg-sky-50 p-4 rounded-lg mb-3">
+      <p class="font-semibold mb-2"><span class="text-sky-700">${i+1}.</span> <span class="chinese">${item.q}</span></p>
+      <textarea id="p5a${i}" rows="3" class="w-full p-2 border-2 border-slate-300 rounded focus:border-slate-500 outline-none" placeholder="Nhập câu trả lời..."></textarea>
+    </div>
+  `).join('');
+}
+
+// ============ ẨN/HIỆN ============
+function toggleView(type) {
+  const content = document.getElementById('passageContent');
+  const btn = document.getElementById(type === 'pinyin' ? 'btnPinyin' : 'btnViet');
+  const cls = type === 'pinyin' ? 'show-pinyin' : 'show-viet';
+
+  content.classList.toggle(cls);
+
+  if (content.classList.contains(cls)) {
+    btn.classList.remove('bg-sky-500');
+    btn.classList.add('bg-green-500');
+  } else {
+    btn.classList.remove('bg-green-500');
+    btn.classList.add('bg-sky-500');
+  }
+}
+
+// ============ NỘP BÀI TỪNG PHẦN ============
+function submitPart(partNum) {
+  const resultDiv = document.getElementById('result' + partNum);
+  let html = '';
+  let data, getAnswer;
+
+  if (partNum === 1) data = part1;
+  else if (partNum === 2) data = part2;
+  else if (partNum === 3) data = part3;
+  else if (partNum === 4) data = part4;
+  else if (partNum === 5) data = part5;
+
+  let correctCount = 0;
+  const total = data.length;
+
+  data.forEach((item, i) => {
+    let userAns, correct, isCorrect;
+
+    if (partNum === 1 || partNum === 2) {
+      const selected = document.querySelector(`input[name="p${partNum}q${i}"]:checked`);
+      userAns = selected ? selected.value : '(chưa chọn)';
+      isCorrect = userAns === item.answer;
+    } else if (partNum === 3) {
+      const selected = document.querySelector(`input[name="p3q${i}"]:checked`);
+      userAns = selected ? selected.value : '(chưa chọn)';
+      isCorrect = userAns === String(item.answer);
+    } else if (partNum === 4) {
+      userAns = document.getElementById(`p4a${i}`).value.trim() || '(chưa trả lời)';
+      // So sánh đơn giản: bỏ qua khoảng trắng thừa
+      const normalize = s => s.replace(/\s+/g, ' ').trim();
+      isCorrect = normalize(userAns).toLowerCase() === normalize(item.answer).toLowerCase();
+    } else if (partNum === 5) {
+      userAns = document.getElementById(`p5a${i}`).value.trim() || '(chưa trả lời)';
+      isCorrect = null; // không chấm tự động
+    }
+
+    if (isCorrect === true) correctCount++;
+
+    const colorClass = isCorrect === true ? 'bg-green-50 border-green-300' :
+                       isCorrect === false ? 'bg-red-50 border-red-300' :
+                       'bg-sky-50 border-slate-300';
+    const icon = isCorrect === true ? '✓' : isCorrect === false ? '✗' : '💡';
+
+    html += `
+      <div class="p-3 mb-2 rounded border ${colorClass}">
+        <p><strong>Câu ${i+1}:</strong> ${item.q}</p>
+        <p>Bạn: <span class="font-bold">${userAns}</span> ${icon}</p>
+        <p class="text-green-700">Đáp án: <strong>${item.explain.ansText || item.answer}</strong></p>
+        <p class="text-slate-600 text-sm">💡 <span class="pinyin" style="display:inline">${item.explain.pinyin}</span> - ${item.explain.viet}</p>
+      </div>`;
+  });
+
+  const scoreHtml = partNum === 5 ? '' :
+    `<div class="bg-sky-100 p-3 rounded-lg mb-3 font-bold text-sky-800">
+       🎯 Điểm phần ${partNum}: ${correctCount}/${total} (${Math.round(correctCount/total*100)}%)
+     </div>`;
+
+  resultDiv.innerHTML = scoreHtml + html;
+  resultDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+// ============ ACTIVE MENU ============
+const sections = ['vocab', 'passage', 'ex1', 'ex2', 'ex3', 'ex4', 'ex5'];
+const menuLinks = document.querySelectorAll('.menu-link');
+
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(id => {
+    const el = document.getElementById(id);
+    if (el && el.getBoundingClientRect().top <= 100) current = id;
+  });
+  menuLinks.forEach(link => {
+    link.classList.toggle('active', link.getAttribute('href') === '#' + current);
+  });
+});
+
+// ============ INIT ============
+renderVocab();
+renderPassage();
+renderPart1();
+renderPart2();
+renderPart3();
+renderPart4();
+renderPart5();
+</script>
+
+</body>
+</html>

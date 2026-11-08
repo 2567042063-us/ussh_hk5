@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
+
+// import Link from "next/link";
 
 type Row = { zh: string; py: string; vi: string };
 
@@ -65,14 +66,14 @@ export default function GuoNian() {
             {showVi ? "Tắt tiếng Việt" : "Bật tiếng Việt"}
           </button>
         </div>
-        <div>
+        {/* <div>
           <Link
             href="/hk5/yuedu-2-1-guonian-bt"
             className="mt-3 inline-block px-5 text-sky-700 hover:text-primary dark:text-sky-400 dark:hover:text-primary-dark"
           >
             •̀ ᴗ - làm bài tập
           </Link>
-        </div>
+        </div> */}
       </div>
 
       <table className="ztai__dochieu__table">

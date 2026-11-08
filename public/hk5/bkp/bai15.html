@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Bài khoá phụ 15</title>
+<link rel="stylesheet" href="./styles.css">
+<style>
+  .chinese {
+  font-size: 22px;
+  line-height: 1.6;
+  font-family: KaiTi, STKaiti, PingFang SC, Songti SC, SimSun, Noto Serif CJK SC, Noto Serif SC, serif;
+}
+.pinyin {
+      color: #0284c7;
+    font-size: .9rem;
+    line-height: 1.45;
+}
+.speaker {
+  margin-top:15px;
+}
+.header {
+  text-align: center;
+}
+  </style>
+</head>
+<body>
+<div class="box">
+<h1>📖 Bài khoá phụ - Bài 15 - trang 65</h1>
+<div class="tabs" id="tabs">
+<button class="on" data-t="a">Bài khoá</button><button data-t="g">Ngữ pháp</button><button data-t="x">Bài tập</button>
+</div>
+<div class="pane on" id="a"></div>
+<div class="pane" id="g"></div>
+<div class="pane" id="x">
+<div class="sub" id="sub"><button class="chip on" data-e="1">1. Điền V+bổ ngữ</button><button class="chip" data-e="2">2. Sửa câu</button><button class="chip" data-e="3">3. Sắp xếp</button></div>
+<div id="ex"></div>
+</div>
+</div>
+<script>
+const T1=[
+['王老师已经好几天没有<b>给</b>我们上课了，因为他生病住院了。','Wáng lǎoshī yǐjīng hǎo jǐ tiān méiyǒu gěi wǒmen shàngkè le, yīnwèi tā shēngbìng zhùyuàn le.','Thầy Vương đã mấy ngày rồi không dạy chúng tôi, vì thầy bị bệnh nhập viện.'],
+['老师住院以后，我们班的学生都去医院看<b>过</b>他。','Lǎoshī zhùyuàn yǐhòu, wǒmen bān de xuésheng dōu qù yīyuàn kàn guo tā.','Sau khi thầy nhập viện, học sinh lớp chúng tôi đều đã đến bệnh viện thăm thầy.'],
+['我们都希望老师能早点儿好，因为我们觉得他是个好老师，对我们就像对自己的儿女一样。','Wǒmen dōu xīwàng lǎoshī néng zǎo diǎnr hǎo, yīnwèi wǒmen juéde tā shì ge hǎo lǎoshī, duì wǒmen jiù xiàng duì zìjǐ de érnǚ yíyàng.','Chúng tôi đều mong thầy sớm khỏe, vì thấy thầy là thầy giáo tốt, đối với chúng tôi như con ruột.'],
+['今天早上，我<b>刚</b>走进教室，就看见王老师在讲台旁边站<b>着</b>。','Jīntiān zǎoshang, wǒ gāng zǒujìn jiàoshì, jiù kànjiàn Wáng lǎoshī zài jiǎngtái pángbiān zhàn zhe.','Sáng nay, tôi vừa bước vào lớp thì thấy thầy Vương đang đứng cạnh bục giảng.'],
+['我高兴<b>地</b>向老师问了一声好。','Wǒ gāoxìng de xiàng lǎoshī wèn le yì shēng hǎo.','Tôi vui mừng chào thầy một tiếng.'],
+['我问：“老师，您什么时候出院的？”','Wǒ wèn: “Lǎoshī, nín shénme shíhou chūyuàn de?”','Tôi hỏi: “Thầy ơi, thầy xuất viện khi nào ạ?”'],
+['“我前天出的院。听说你也病了，好<b>了</b>吗？”','“Wǒ qiántiān chū de yuàn. Tīngshuō nǐ yě bìng le, hǎo le ma?”','“Thầy xuất viện hôm kia. Nghe nói em cũng bị bệnh, khỏi chưa?”'],
+['“好了。老师，您要保重身体！”“谢谢你！”','“Hǎo le. Lǎoshī, nín yào bǎozhòng shēntǐ!” “Xièxie nǐ!”','“Khỏi rồi ạ. Thầy nhớ giữ gìn sức khỏe!” “Cảm ơn em!”'],
+['这时，同学们都走进教室<b>来</b>了，大家看到王老师又能给我们上课了，都很高兴。','Zhèshí, tóngxuémen dōu zǒujìn jiàoshì lái le, dàjiā kàndào Wáng lǎoshī yòu néng gěi wǒmen shàngkè le, dōu hěn gāoxìng.','Lúc này các bạn đều vào lớp rồi, mọi người thấy thầy lại dạy được thì đều rất vui.'],
+['老师也高兴地和大家说<b>着</b>话，问每个同学的情况。','Lǎoshī yě gāoxìng de hé dàjiā shuō zhe huà, wèn měi ge tóngxué de qíngkuàng.','Thầy cũng vui vẻ vừa trò chuyện với mọi người vừa hỏi thăm từng bạn.'],
+['我们都知道王老师刚出院，身体还不太好。上课铃响了。','Wǒmen dōu zhīdào Wáng lǎoshī gāng chūyuàn, shēntǐ hái bú tài hǎo. Shàngkè líng xiǎng le.','Chúng tôi đều biết thầy vừa xuất viện, sức khỏe còn chưa tốt. Chuông vào học đã reo.'],
+['大家一起大声地说：“老师好！”王老师笑<b>着</b>点了点头，也对我们说：“同学们好！”','Dàjiā yìqǐ dàshēng de shuō: “Lǎoshī hǎo!” Wáng lǎoshī xiào zhe diǎn le diǎn tóu, yě duì wǒmen shuō: “Tóngxuémen hǎo!”','Mọi người cùng nói to: “Chào thầy!” Thầy Vương mỉm cười gật đầu, cũng nói với chúng tôi: “Chào các em!”'],
+['老师拿起书要开始讲课了。山本搬了一把椅子，走到老师面前，说：“老师，今天请您坐<b>着</b>讲吧。”','Lǎoshī ná qǐ shū yào kāishǐ jiǎngkè le. Shānběn bān le yì bǎ yǐzi, zǒu dào lǎoshī miànqián, shuō: “Lǎoshī, jīntiān qǐng nín zuò zhe jiǎng ba.”','Thầy cầm sách lên chuẩn bị giảng. Yamamoto bê một chiếc ghế, đi đến trước mặt thầy, nói: “Thầy ơi, hôm nay mời thầy ngồi giảng ạ.”'],
+['王老师说：“谢谢，我不累，我不习惯坐着上课。”王老师没有坐。','Wáng lǎoshī shuō: “Xièxie, wǒ bú lèi, wǒ bù xíguàn zuò zhe shàngkè.” Wáng lǎoshī méiyǒu zuò.','Thầy Vương nói: “Cảm ơn, thầy không mệt, thầy không quen ngồi dạy.” Thầy không ngồi.'],
+['“老师，请您坐下讲吧！”这时，班长带着全班同学一起大声地说。','“Lǎoshī, qǐng nín zuò xià jiǎng ba!” Zhèshí, bānzhǎng dài zhe quán bān tóngxué yìqǐ dàshēng de shuō.','“Thầy ơi, mời thầy ngồi xuống giảng ạ!” Lúc này, lớp trưởng dẫn cả lớp cùng nói to.'],
+['王老师有点儿激动地看着我们说：“谢谢大家！谢谢同学们！”','Wáng lǎoshī yǒudiǎnr jīdòng de kàn zhe wǒmen shuō: “Xièxie dàjiā! Xièxie tóngxuémen!”','Thầy Vương hơi xúc động nhìn chúng tôi nói: “Cảm ơn mọi người! Cảm ơn các em!”']];
+const G=[
+['','Bổ ngữ xu hướng đơn: V + 进/起/下…','走进教室 · 拿起书 · 坐下讲吧','进 = vào, 起 = lên (nhấc lên), 下 = xuống (ngồi xuống). Chỉ hướng của hành động.'],
+['','Bổ ngữ xu hướng kép + tân ngữ nơi chốn','同学们都走进教室来了','Tân ngữ chỉ nơi chốn đứng GIỮA: V + 进 + nơi chốn + 来. Không nói 走进来教室.'],
+['','Bổ ngữ kết quả: V + 见/到','看见王老师 · 看到王老师又能上课了 · 走到老师面前','见/到 = kết quả đã đạt được (thấy, tới nơi). 走到 + nơi chốn: đi tới đâu.'],
+['','Động lượng bổ ngữ','问了一声好 · 点了点头','Số lần/lượng của hành động: V + 了 + 一声/一下. 点了点头: lặp động từ nhẹ nhàng.'],
+['','着 – trạng thái đang tồn tại','王老师在讲台旁边站着','V + 着 = duy trì trạng thái. Dạng 在 + nơi chốn + V着 mô tả ai đang ở tư thế nào.'],
+['','V1着 + V2 (V1 là cách thức)','笑着点了点头 · 带着全班同学…说 · 看着我们说','V1着 cho biết trạng thái/cách thức đi kèm khi làm V2: cười mà gật đầu, nhìn mà nói.'],
+['','V + 着 + tân ngữ (hành động kéo dài)','和大家说着话 · 我不习惯坐着上课','说着话 = đang nói chuyện (kéo dài); 坐着上课 = ngồi mà dạy (tư thế khi làm việc).'],
+['','So sánh 坐着 và 坐下','请您坐着讲吧 / 请您坐下讲吧','坐着 = ở trạng thái ngồi; 坐下 = động tác ngồi xuống (bổ ngữ xu hướng). 没有坐 phủ định hành động, không nói 没有坐着了.'],
+['','Lưu ý: 了 sau V ≠ 着','问了一声好 / 站着','了 = hoàn thành; 着 = đang duy trì trạng thái. Không dùng 了 và 着 cùng lúc để nhấn trạng thái: không nói 站了着.']];
+function mk(id,arr,note){const p=document.getElementById(id);
+p.innerHTML='<div class="tools"><button class="chip" data-k="showp">Pinyin</button><button class="chip" data-k="showv">Nghĩa</button></div><div class="list">'+arr.map(r=>'<div class="s"><div class="h">'+r[0]+'</div><div class="p">'+r[1]+'</div><div class="v">'+r[2]+'</div></div>').join('')+'</div>'+(note||'')+'<div class="note" style="margin-top:8px">Chạm vào câu để xem pinyin + nghĩa.</div>';
+p.querySelectorAll('.s').forEach(s=>s.onclick=()=>{const on=!s.classList.contains('sp');s.classList.toggle('sp',on);s.classList.toggle('sv',on)});
+p.querySelectorAll('.chip').forEach(c=>c.onclick=()=>{c.classList.toggle('on');p.classList.toggle(c.dataset.k)})}
+mk('a',T1,'<div class="note">Chữ <b>đỏ đậm</b> = đáp án các chỗ trống ①–⑩ trong đề gốc.</div>');
+document.getElementById('g').innerHTML=G.map(g=>'<div class="g"><b>'+g[1]+'</b><div class="ex">'+g[2]+'</div><small>'+g[3]+'</small></div>').join('');
+document.querySelectorAll('#tabs button').forEach(b=>b.onclick=()=>{document.querySelectorAll('#tabs button,.pane').forEach(e=>e.classList.remove('on'));b.classList.add('on');document.getElementById(b.dataset.t).classList.add('on')});
+/* Bài tập */
+const E1=[['我刚____教室，就看见王老师。',['走进','走着','走过'],0,'走进 = bổ ngữ xu hướng: bước vào.'],
+['同学们都走进教室____了。',['来','着','起'],0,'走进 + nơi chốn + 来 (tân ngữ nơi chốn đứng giữa).'],
+['王老师在讲台旁边站____。',['着','了','起来'],0,'站着: trạng thái đứng.'],
+['王老师笑____点了点头。',['着','过','下'],0,'笑着 + V2: cười mà gật đầu.'],
+['老师不习惯坐____上课。',['着','下','起'],0,'坐着上课: ngồi trong khi dạy (tư thế).'],
+['老师，请您坐____吧！(mời ngồi xuống)',['下','着','过'],0,'坐下 = động tác ngồi xuống.']];
+const E2=[['老师在讲台旁边着站。',['老师在讲台旁边站着。','老师在讲台旁边站了着。','老师着在讲台旁边站。'],0,'着 đứng ngay sau động từ: 站着.'],
+['同学们都走进来教室了。',['同学们都走进教室来了。','同学们都进走教室来了。','同学们都走进教室了来。'],0,'Tân ngữ nơi chốn đứng giữa: 走进教室来.'],
+['王老师笑点了点头着。',['王老师笑着点了点头。','王老师着笑点了点头。','王老师笑点着了点头。'],0,'V1着 + V2: 笑着点头.'],
+['我不习惯坐了着上课。',['我不习惯坐着上课。','我不习惯坐着了上课。','我不习惯着坐上课。'],0,'Không dùng 了 chen vào V着.'],
+['我问了好一声老师。',['我向老师问了一声好。','我问了老师好一声。','我老师问了一声好。'],0,'Động lượng bổ ngữ: 问了一声好.']];
+const E3=[['王老师','在讲台旁边','站着'],['同学们','都','走进教室','来了'],['王老师','笑着','点了点头'],['我','不习惯','坐着','上课'],['班长','带着','全班同学','一起','大声地说']];
+const st={};
+function pick(e,i,j,item){const q=document.querySelectorAll('.q')[i];const ok=j==item[2];q.querySelectorAll('.o').forEach((b,k)=>{b.disabled=true;if(k==item[2])b.classList.add('ok');else if(k==j)b.classList.add('no')});q.querySelector('.fb').textContent=(ok?'✔ ':'✘ ')+item[3];st[e]=(st[e]||0)+(ok?1:0);if(document.querySelectorAll('.o:disabled').length>=document.querySelectorAll('.q').length*3&&false){}
+const done=[...document.querySelectorAll('.q')].every(x=>x.querySelector('.o:disabled'));if(done)document.getElementById('sc').textContent='Điểm: '+st[e]+'/'+document.querySelectorAll('.q').length}
+function choice(e,data0){st[e]=0;const data=data0.map(it=>{const o=sh(it[1]);return [it[0],o.map(x=>x[0]),o.findIndex(x=>x[1]==it[2]),it[3]]});document.getElementById('ex').innerHTML=data.map((it,i)=>'<div class="q"><div class="t">'+(i+1)+'. '+it[0]+'</div><div class="opts">'+it[1].map((o,j)=>'<button class="o" data-i="'+i+'" data-j="'+j+'">'+o+'</button>').join('')+'</div><div class="fb"></div></div>').join('')+'<div class="score" id="sc"></div><button class="btn l" id="rs">Làm lại</button>';
+document.querySelectorAll('.o').forEach(b=>b.onclick=()=>pick(e,+b.dataset.i,+b.dataset.j,data[+b.dataset.i]));document.getElementById('rs').onclick=()=>choice(e,data0)}
+function sh(a){return a.map((v,i)=>[v,i]).sort(()=>Math.random()-.5)}
+function order(){let n=0;document.getElementById('ex').innerHTML=E3.map((it,i)=>'<div class="q" data-i="'+i+'"><div class="t" style="font-size:14px;color:var(--mu)">'+(i+1)+'. Chạm các mảnh để ghép thành câu:</div><div class="ans"></div><div class="opts"></div><div style="margin-top:8px"><button class="btn">Kiểm tra</button> <button class="btn l">Xoá</button></div><div class="fb"></div></div>').join('')+'<div class="score" id="sc"></div>';
+document.querySelectorAll('.q').forEach(q=>{const i=+q.dataset.i,ans=q.querySelector('.ans'),pool=q.querySelector('.opts'),fb=q.querySelector('.fb');
+const mkb=(t)=>{const b=document.createElement('button');b.className='o';b.textContent=t;return b};
+const fill=()=>{pool.innerHTML='';ans.innerHTML='';fb.textContent='';sh(E3[i]).forEach(([t])=>{const b=mkb(t);b.onclick=()=>{const c=mkb(t);c.onclick=()=>{c.remove();b.style.display=''};ans.appendChild(c);b.style.display='none'};pool.appendChild(b)})};
+fill();const [chk,clr]=q.querySelectorAll('.btn');clr.onclick=fill;
+chk.onclick=()=>{const s=[...ans.children].map(c=>c.textContent).join('');const ok=s==E3[i].join('');fb.textContent=ok?'✔ Đúng: '+s:'✘ Chưa đúng, thử lại. Gợi ý: '+E3[i].join(' ');fb.style.color=ok?'var(--ok)':'var(--no)'}})}
+document.querySelectorAll('#sub .chip').forEach(c=>c.onclick=()=>{document.querySelectorAll('#sub .chip').forEach(x=>x.classList.remove('on'));c.classList.add('on');run(c.dataset.e)});
+function run(e){e=='1'?choice(1,E1):e=='2'?choice(2,E2):order()}
+run('1');
+</script>
+
+<div class="container">
+        <div class="header">
+            <p class="chinese" style="font-size:30px;color:#0284c7;">打听</p>
+            <div class="subtitle">Inquiring</div>
+            <div class="viet-title">Hỏi thăm / Hỏi đường</div>
+        </div>
+
+        <div class="dialogue">
+
+            <!-- Line 1 -->
+            <div class="line line-a">
+                <div class="speaker">A:</div>
+                <div class="chinese">请问，您看没看见一个姑娘（gūniang, girl）从这儿过去？</div>
+                <div class="pinyin">Qǐngwèn, nín kàn méi kànjiàn yí ge gūniang cóng zhèr guòqù?</div>
+                <div class="vietnamese">Xin hỏi, ông/bà có thấy một cô gái đi qua đây không?</div>
+            </div>
+
+            <!-- Line 2 -->
+            <div class="line line-b">
+                <div class="speaker">B:</div>
+                <div class="chinese">什么姑娘？长得什么样？</div>
+                <div class="pinyin">Shénme gūniang? Zhǎng de shénme yàng?</div>
+                <div class="vietnamese">Cô gái nào? Trông cô ấy như thế nào?</div>
+            </div>
+
+            <!-- Line 3 -->
+            <div class="line line-a">
+                <div class="speaker">A:</div>
+                <div class="chinese">身高一米六左右，留着长发，穿着一件白色的上衣，戴着一副眼镜儿。</div>
+                <div class="pinyin">Shēngāo yì mǐ liù zuǒyòu, liú zhe cháng fà, chuān zhe yí jiàn báisè de shàngyī, dài zhe yí fù yǎnjìngr.</div>
+                <div class="vietnamese">Cao khoảng 1 mét 6, để tóc dài, mặc một chiếc áo màu trắng, đeo một cặp kính.</div>
+            </div>
+
+            <!-- Line 4 -->
+            <div class="line line-b">
+                <div class="speaker">B:</div>
+                <div class="chinese">看见了。</div>
+                <div class="pinyin">Kànjiàn le.</div>
+                <div class="vietnamese">Có thấy rồi.</div>
+            </div>
+
+            <!-- Line 5 -->
+            <div class="line line-a">
+                <div class="speaker">A:</div>
+                <div class="chinese">她往哪儿走了？</div>
+                <div class="pinyin">Tā wǎng nǎr zǒu le?</div>
+                <div class="vietnamese">Cô ấy đi về hướng nào rồi?</div>
+            </div>
+
+            <!-- Line 6 -->
+            <div class="line line-b">
+                <div class="speaker">B:</div>
+                <div class="chinese">从这儿下山去了。</div>
+                <div class="pinyin">Cóng zhèr xià shān qù le.</div>
+                <div class="vietnamese">Đi xuống núi từ đây rồi.</div>
+            </div>
+
+            <!-- Line 7 -->
+            <div class="line line-a">
+                <div class="speaker">A:</div>
+                <div class="chinese">大概走多长时间了？</div>
+                <div class="pinyin">Dàgài zǒu duō cháng shíjiān le?</div>
+                <div class="vietnamese">Đi được khoảng bao lâu rồi?</div>
+            </div>
+
+            <!-- Line 8 -->
+            <div class="line line-b">
+                <div class="speaker">B:</div>
+                <div class="chinese">二十多分钟了。</div>
+                <div class="pinyin">Èrshí duō fēnzhōng le.</div>
+                <div class="vietnamese">Hơn hai mươi phút rồi.</div>
+            </div>
+
+            <!-- Line 9 -->
+            <div class="line line-a">
+                <div class="speaker">A:</div>
+                <div class="chinese">只她一个人吗？</div>
+                <div class="pinyin">Zhǐ tā yí ge rén ma?</div>
+                <div class="vietnamese">Chỉ có một mình cô ấy thôi sao?</div>
+            </div>
+
+            <!-- Line 10 -->
+            <div class="line line-b">
+                <div class="speaker">B:</div>
+                <div class="chinese">对。</div>
+                <div class="pinyin">Duì.</div>
+                <div class="vietnamese">Đúng vậy.</div>
+            </div>
+
+            <!-- Line 11 -->
+            <div class="line line-a">
+                <div class="speaker">A:</div>
+                <div class="chinese">就是她。我们也快点儿下去吧。谢谢您了！</div>
+                <div class="pinyin">Jiù shì tā. Wǒmen yě kuài diǎnr xiàqù ba. Xièxie nín le!</div>
+                <div class="vietnamese">Chính là cô ấy. Chúng ta cũng nhanh chóng xuống thôi. Cảm ơn ông/bà!</div>
+            </div>
+
+            <!-- Line 12 -->
+            <div class="line line-b">
+                <div class="speaker">B:</div>
+                <div class="chinese">不客气！</div>
+                <div class="pinyin">Bú kèqi!</div>
+                <div class="vietnamese">Không có gì!</div>
+            </div>
+
+        </div>
+
+        <!-- Vocabulary Section -->
+        <div class="vocab-section">
+            <h2>📚 Từ vựng / Vocabulary</h2>
+            <table class="ztai__table">
+                <thead>
+                    <tr>
+                        <th>Tiếng Trung</th>
+                        <th>Pinyin</th>
+                        <th>Tiếng Việt</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="text-lg ztai__zh">打听</td>
+                        <td class="py">dǎtīng</td>
+                        <td class="vi">hỏi thăm,打听 tin tức</td>
+                    </tr>
+                    <tr>
+                        <td class="text-lg ztai__zh">请问</td>
+                        <td class="py">qǐngwèn</td>
+                        <td class="vi">xin hỏi</td>
+                    </tr>
+                    <tr>
+                        <td class="text-lg ztai__zh">姑娘</td>
+                        <td class="py">gūniang</td>
+                        <td class="vi">cô gái</td>
+                    </tr>
+                    <tr>
+                        <td class="text-lg ztai__zh">长得什么样</td>
+                        <td class="py">zhǎng de shénme yàng</td>
+                        <td class="vi">trông như thế nào</td>
+                    </tr>
+                    <tr>
+                        <td class="text-lg ztai__zh">身高</td>
+                        <td class="py">shēngāo</td>
+                        <td class="vi">chiều cao</td>
+                    </tr>
+                    <tr>
+                        <td class="text-lg ztai__zh">左右</td>
+                        <td class="py">zuǒyòu</td>
+                        <td class="vi">khoảng, chừng</td>
+                    </tr>
+                    <tr>
+                        <td class="text-lg ztai__zh">留着长发</td>
+                        <td class="py">liú zhe cháng fà</td>
+                        <td class="vi">để tóc dài</td>
+                    </tr>
+                    <tr>
+                        <td class="text-lg ztai__zh">穿着</td>
+                        <td class="py">chuān zhe</td>
+                        <td class="vi">mặc (đang mặc)</td>
+                    </tr>
+                    <tr>
+                        <td class="text-lg ztai__zh">白色的上衣</td>
+                        <td class="py">báisè de shàngyī</td>
+                        <td class="vi">áo màu trắng</td>
+                    </tr>
+                    <tr>
+                        <td class="text-lg ztai__zh">戴着一副眼镜儿</td>
+                        <td class="py">dài zhe yí fù yǎnjìngr</td>
+                        <td class="vi">đeo một cặp kính</td>
+                    </tr>
+                    <tr>
+                        <td class="text-lg ztai__zh">往哪儿走</td>
+                        <td class="py">wǎng nǎr zǒu</td>
+                        <td class="vi">đi về hướng nào</td>
+                    </tr>
+                    <tr>
+                        <td class="text-lg ztai__zh">下山</td>
+                        <td class="py">xià shān</td>
+                        <td class="vi">xuống núi</td>
+                    </tr>
+                    <tr>
+                        <td class="text-lg ztai__zh">大概</td>
+                        <td class="py">dàgài</td>
+                        <td class="vi">khoảng, đại khái</td>
+                    </tr>
+                    <tr>
+                        <td class="text-lg ztai__zh">多长</td>
+                        <td class="py">duō cháng</td>
+                        <td class="vi">bao lâu</td>
+                    </tr>
+                    <tr>
+                        <td class="text-lg ztai__zh">分钟</td>
+                        <td class="py">fēnzhōng</td>
+                        <td class="vi">phút</td>
+                    </tr>
+                    <tr>
+                        <td class="text-lg ztai__zh">就是她</td>
+                        <td class="py">jiù shì tā</td>
+                        <td class="vi">chính là cô ấy</td>
+                    </tr>
+                    <tr>
+                        <td class="text-lg ztai__zh">快点儿</td>
+                        <td class="py">kuài diǎnr</td>
+                        <td class="vi">nhanh lên</td>
+                    </tr>
+                    <tr>
+                        <td class="text-lg ztai__zh">不客气</td>
+                        <td class="py">bú kèqi</td>
+                        <td class="vi">không có gì / đừng khách sáo</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</body>
+</html>

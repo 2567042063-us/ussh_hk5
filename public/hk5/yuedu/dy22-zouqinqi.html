@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<title>第二单元 - 走亲戚 | Bài 2.2 - Đi thăm họ hàng</title>
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body class="bg-sky-50 min-h-screen">
+
+<!-- MENU STICKY -->
+<nav class="sticky top-0 z-50 bg-white shadow-md border-b-2 border-sky-200">
+  <div class="max-w-5xl mx-auto px-4 py-3 flex flex-wrap gap-2 justify-center items-center">
+    <span class="font-bold text-sky-700 mr-2">📍 Menu:</span>
+    <a href="#vocab" class="menu-link px-4 py-2 rounded-lg bg-sky-100 text-sky-700 font-medium">📚 Từ vựng</a>
+    <a href="#passage" class="menu-link px-4 py-2 rounded-lg bg-sky-100 text-sky-700 font-medium">📖 Bài đọc</a>
+    <a href="#ex1" class="menu-link px-4 py-2 rounded-lg bg-sky-100 text-sky-700 font-medium">✏️ BT 1</a>
+    <a href="#ex2" class="menu-link px-4 py-2 rounded-lg bg-sky-100 text-sky-700 font-medium">✏️ BT 2</a>
+    <a href="#ex3" class="menu-link px-4 py-2 rounded-lg bg-sky-100 text-sky-700 font-medium">✏️ BT 3</a>
+    <a href="#ex4" class="menu-link px-4 py-2 rounded-lg bg-sky-100 text-sky-700 font-medium">✏️ BT 4</a>
+    <a href="#ex5" class="menu-link px-4 py-2 rounded-lg bg-sky-100 text-sky-700 font-medium">✏️ BT 5</a>
+  </div>
+</nav>
+
+<div class="max-w-5xl mx-auto p-6">
+
+  <!-- HEADER -->
+  <!-- <header class="bg-sky-600 text-white rounded-xl shadow-lg p-6 mb-6 text-center">
+    <h1 class="text-3xl font-bold">第二单元 · 走亲戚</h1>
+    <p class="text-sky-100 mt-2">Bài 2 - Đi thăm họ hàng</p>
+  </header> -->
+   <header class="mb-5 border-b-2 border-t-2 border-dashed border-sky-600 py-3 text-center text-2xl font-extralight leading-tight text-sky-600 dark:border-sky-300 dark:text-sky-300">
+    <h1 class="ztai__zh " style="font-size: 24px;">第二单元 · 走亲戚</h1>
+  </header>
+
+  <!-- TỪ VỰNG -->
+  <section id="vocab" class="bg-white rounded-xl shadow p-6 mb-6">
+    <h2 class="text-2xl font-bold text-sky-700 mb-4 border-b-2 border-sky-300 pb-2">📚 Từ mới (生词)</h2>
+    <div class="overflow-x-auto">
+      <table class="w-full border-collapse">
+        <thead>
+          <tr class="bg-sky-100">
+            <th class="border border-sky-300 p-2">汉字</th>
+            <th class="border border-sky-300 p-2">Pinyin</th>
+            <th class="border border-sky-300 p-2">Tiếng Việt</th>
+          </tr>
+        </thead>
+        <tbody id="vocabTable"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- BÀI ĐỌC -->
+  <section id="passage" class="bg-white rounded-xl shadow p-6 mb-6">
+    <div class="flex justify-between items-center mb-4 border-b-2 border-sky-300 pb-2 flex-wrap gap-2">
+      <h2 class="text-2xl font-bold text-sky-700">📖 Bài đọc (课文)</h2>
+      <div class="flex gap-2">
+        <button onclick="toggleView('pinyin')" id="btnPinyin" class="bg-sky-500 hover:bg-sky-600 text-white px-3 py-1.5 rounded-lg text-sm">
+          👁 Pinyin
+        </button>
+        <button onclick="toggleView('viet')" id="btnViet" class="bg-sky-500 hover:bg-sky-600 text-white px-3 py-1.5 rounded-lg text-sm">
+          🇻🇳 Tiếng Việt
+        </button>
+      </div>
+    </div>
+    <div id="passageContent" class="show-pinyin show-viet"></div>
+  </section>
+
+  <!-- BÀI TẬP -->
+  <section id="exercises" class="space-y-6">
+
+    <!-- PHẦN 1 -->
+    <div id="ex1" class="bg-white rounded-xl shadow p-6">
+      <h2 class="text-xl font-semibold text-sky-700 mb-3 border-b-2 border-sky-300 pb-2">
+        ✏️ (一) Chọn giải thích đúng cho từ
+      </h2>
+      <div id="part1"></div>
+      <div class="text-center mt-4">
+        <button onclick="submitPart(1)" class="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-lg font-bold shadow">
+          📝 Nộp bài phần 1
+        </button>
+      </div>
+      <div id="result1" class="mt-4"></div>
+    </div>
+
+    <!-- PHẦN 2 -->
+    <div id="ex2" class="bg-white rounded-xl shadow p-6">
+      <h2 class="text-xl font-semibold text-sky-700 mb-3 border-b-2 border-sky-300 pb-2">
+        ✏️ (二) Chọn đáp án đúng theo nội dung bài
+      </h2>
+      <div id="part2"></div>
+      <div class="text-center mt-4">
+        <button onclick="submitPart(2)" class="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-lg font-bold shadow">
+          📝 Nộp bài phần 2
+        </button>
+      </div>
+      <div id="result2" class="mt-4"></div>
+    </div>
+
+    <!-- PHẦN 3 -->
+    <div id="ex3" class="bg-white rounded-xl shadow p-6">
+      <h2 class="text-xl font-semibold text-sky-700 mb-3 border-b-2 border-sky-300 pb-2">
+        ✏️ (三) Đúng hay Sai (判断正误)
+      </h2>
+      <div id="part3"></div>
+      <div class="text-center mt-4">
+        <button onclick="submitPart(3)" class="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-lg font-bold shadow">
+          📝 Nộp bài phần 3
+        </button>
+      </div>
+      <div id="result3" class="mt-4"></div>
+    </div>
+
+    <!-- PHẦN 4 -->
+    <div id="ex4" class="bg-white rounded-xl shadow p-6">
+      <h2 class="text-xl font-semibold text-sky-700 mb-3 border-b-2 border-sky-300 pb-2">
+        ✏️ (四) Trả lời câu hỏi
+      </h2>
+      <div id="part4"></div>
+      <div class="text-center mt-4">
+        <button onclick="submitPart(4)" class="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-lg font-bold shadow">
+          📝 Nộp bài phần 4
+        </button>
+      </div>
+      <div id="result4" class="mt-4"></div>
+    </div>
+
+    <!-- PHẦN 5 -->
+    <div id="ex5" class="bg-white rounded-xl shadow p-6">
+      <h2 class="text-xl font-semibold text-sky-700 mb-3 border-b-2 border-sky-300 pb-2">
+        ✏️ (五) Sắp xếp câu thành đoạn (连句成段)
+      </h2>
+      <p class="text-slate-600 mb-3 italic">💡 Kéo thả các câu để sắp xếp thành đoạn văn hợp lý:</p>
+      <div id="part5" class="space-y-2"></div>
+      <div class="text-center mt-4 flex gap-3 justify-center">
+        <button onclick="resetPart5()" class="bg-slate-400 hover:bg-slate-500 text-white px-6 py-2 rounded-lg font-bold shadow">
+          🔄 Làm lại
+        </button>
+        <button onclick="submitPart(5)" class="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-lg font-bold shadow">
+          📝 Nộp bài phần 5
+        </button>
+      </div>
+      <div id="result5" class="mt-4"></div>
+    </div>
+
+  </section>
+
+</div>
+
+<script>
+// ============ DATA ============
+const vocabulary = [
+  { hanzi: "走亲戚", pinyin: "zǒu qīnqi", viet: "Đi thăm họ hàng" },
+  { hanzi: "农村", pinyin: "nóngcūn", viet: "Nông thôn" },
+  { hanzi: "亲戚", pinyin: "qīnqi", viet: "Họ hàng, người thân" },
+  { hanzi: "一时半会儿", pinyin: "yīshí bànhuìr", viet: "Trong thời gian ngắn, một lúc" },
+  { hanzi: "数不清", pinyin: "shǔ bù qīng", viet: "Không đếm xuể" },
+  { hanzi: "城里", pinyin: "chénglǐ", viet: "Trong thành phố" },
+  { hanzi: "媳妇", pinyin: "xífù", viet: "Con dâu / vợ (khẩu ngữ)" },
+  { hanzi: "老家", pinyin: "lǎojiā", viet: "Quê (nhà cũ)" },
+  { hanzi: "过年", pinyin: "guònián", viet: "Ăn Tết, đón năm mới" },
+  { hanzi: "亲戚关系", pinyin: "qīnqi guānxì", viet: "Quan hệ họ hàng" },
+  { hanzi: "好家伙", pinyin: "hǎo jiāhuo", viet: "Chà! (thán từ kinh ngạc)" },
+  { hanzi: "直接", pinyin: "zhíjiē", viet: "Trực tiếp" },
+  { hanzi: "走动", pinyin: "zǒudòng", viet: "Qua lại, thăm hỏi lẫn nhau" },
+  { hanzi: "显示", pinyin: "xiǎnshì", viet: "Hiển thị, thể hiện" },
+  { hanzi: "大年初一", pinyin: "dànián chūyī", viet: "Mùng 1 Tết" },
+  { hanzi: "拜年", pinyin: "bàinián", viet: "Chúc Tết" },
+  { hanzi: "走东家串西家", pinyin: "zǒu dōngjiā chuàn xījiā", viet: "Đi hết nhà này đến nhà khác" },
+  { hanzi: "抱怨", pinyin: "bàoyuàn", viet: "Phàn nàn, oán trách" },
+  { hanzi: "亲亲热热", pinyin: "qīnqīn rèrè", viet: "Thân mật, niềm nở" },
+  { hanzi: "聊家常", pinyin: "liáo jiācháng", viet: "Tám chuyện gia đình" },
+  { hanzi: "称呼", pinyin: "chēnghu", viet: "Xưng hô, gọi" },
+  { hanzi: "对方", pinyin: "duìfāng", viet: "Đối phương, người đối diện" },
+  { hanzi: "二舅", pinyin: "èr jiù", viet: "Cậu hai (em trai của mẹ)" },
+  { hanzi: "丈母娘", pinyin: "zhàngmǔniáng", viet: "Mẹ vợ" },
+  { hanzi: "外甥", pinyin: "wàisheng", viet: "Cháu trai (con của chị/em gái)" },
+  { hanzi: "惊叹", pinyin: "jīngtàn", viet: "Kinh ngạc thốt lên" },
+  { hanzi: "连", pinyin: "lián", viet: "Nối lại, kết nối" }
+];
+
+const passage = [
+  { chinese: "我们农村别的没有，就是亲戚多。", pinyin: "Wǒmen nóngcūn bié de méiyǒu, jiùshì qīnqi duō.", viet: "Ở nông thôn chúng tôi không có gì khác, chỉ có nhiều họ hàng." },
+  { chinese: "有多少呢？我一时半会儿也数不清。", pinyin: "Yǒu duōshǎo ne? Wǒ yīshí bànhuìr yě shǔ bù qīng.", viet: "Có bao nhiêu呢? Tôi một lúc cũng không đếm xuể." },
+  { chinese: "记得我第一次带那个城里生城里长的媳妇回老家过年时，我给她讲了一晚上我家的亲戚，可她还是搞不清楚。", pinyin: "Jìde wǒ dì yī cì dài nàge chénglǐ shēng chénglǐ zhǎng de xífù huí lǎojiā guònián shí, wǒ gěi tā jiǎng le yī wǎnshang wǒ jiā de qīnqi, kě tā háishì gǎo bù qīngchu.", viet: "Nhớ lần đầu tiên tôi đưa cô vợ sinh ra lớn lên ở thành phố về quê ăn Tết, tôi kể cho cô ấy nghe về họ hàng nhà tôi cả tối, nhưng cô ấy vẫn không hiểu rõ." },
+  { chinese: "第二天一大早，我给她画了一张图，把我的亲戚关系列了出来。", pinyin: "Dì èr tiān yī dà zǎo, wǒ gěi tā huà le yī zhāng tú, bǎ wǒ de qīnqi guānxì liè le chūlái.", viet: "Sáng sớm hôm sau, tôi vẽ cho cô ấy một bức tranh, liệt kê mối quan hệ họ hàng của tôi ra." },
+  { chinese: "我媳妇一看，眼睛睁得老大，好家伙，快上百了呢！", pinyin: "Wǒ xífù yī kàn, yǎnjing zhēng de lǎo dà, hǎo jiāhuo, kuài shàng bǎi le ne!", viet: "Vợ tôi vừa nhìn, mắt mở to, chà, gần cả trăm người rồi!" },
+  { chinese: "我心想，我说的还都是最直接的亲戚呢。", pinyin: "Wǒ xīn xiǎng, wǒ shuō de hái dōu shì zuì zhíjiē de qīnqi ne.", viet: "Tôi thầm nghĩ, tôi nói còn toàn là họ hàng trực tiếp nhất đấy." },
+  { chinese: "要知道，这些亲戚的亲戚也是我们的亲戚。", pinyin: "Yào zhīdào, zhèxiē qīnqi de qīnqi yě shì wǒmen de qīnqi.", viet: "Phải biết rằng, họ hàng của những người họ hàng này cũng là họ hàng của chúng ta." },
+  { chinese: "在老家，过年最重要的活动之一就是走亲戚。", pinyin: "Zài lǎojiā, guònián zuì zhòngyào de huódòng zhī yī jiùshì zǒu qīnqi.", viet: "Ở quê, một trong những hoạt động quan trọng nhất khi ăn Tết là đi thăm họ hàng." },
+  { chinese: "亲戚亲戚，只有走动才能显示出'亲'来。", pinyin: "Qīnqi qīnqi, zhǐyǒu zǒudòng cái néng xiǎnshì chū 'qīn' lái.", viet: "Họ hàng họ hàng, chỉ có qua lại mới thể hiện được chữ 'thân'." },
+  { chinese: "大年初一一过，我就开始带着媳妇走东家串西家地去拜年。", pinyin: "Dànián chūyī yī guò, wǒ jiù kāishǐ dài zhe xífù zǒu dōngjiā chuàn xījiā de qù bàinián.", viet: "Qua mùng 1 Tết, tôi bắt đầu dẫn vợ đi hết nhà này đến nhà khác chúc Tết." },
+  { chinese: "一天下来累得说话的劲儿都没有了。", pinyin: "Yī tiān xiàlái lèi de shuōhuà de jìnr dōu méiyǒu le.", viet: "Một ngày trôi qua mệt đến mức không còn sức để nói." },
+  { chinese: "我媳妇对这些倒没抱怨。", pinyin: "Wǒ xífù duì zhèxiē dào méi bàoyuàn.", viet: "Vợ tôi đối với những điều này lại không phàn nàn." },
+  { chinese: "她最怕的是，有人亲亲热热地和她聊家常，而她却不知道怎么称呼对方。", pinyin: "Tā zuì pà de shì, yǒu rén qīnqīn rèrè de hé tā liáo jiācháng, ér tā què bù zhīdào zěnme chēnghu duìfāng.", viet: "Điều cô ấy sợ nhất là, có người thân mật tám chuyện với cô, mà cô lại không biết xưng hô với người ta thế nào." },
+  { chinese: "晚上回来对着图找，怎么找也找不到。", pinyin: "Wǎnshang huílái duìzhe tú zhǎo, zěnme zhǎo yě zhǎo bù dào.", viet: "Tối về đối chiếu với hình để tìm, tìm thế nào cũng không thấy." },
+  { chinese: "于是，我便指着图中的一个人说，这是我二舅的丈母娘的姐姐的外甥，我们该叫他'舅舅'。", pinyin: "Yúshì, wǒ biàn zhǐzhe tú zhōng de yī gè rén shuō, zhè shì wǒ èr jiù de zhàngmǔniáng de jiějie de wàisheng, wǒmen gāi jiào tā 'jiùjiu'.", viet: "Thế là, tôi chỉ vào một người trong hình nói, đây là cháu trai của chị gái mẹ vợ của cậu hai tôi, chúng ta phải gọi ông ấy là 'cậu'." },
+  { chinese: "哇！我媳妇惊叹道，这样连下去，所有的中国人都会是亲戚呢。", pinyin: "Wa! Wǒ xífù jīngtàn dào, zhèyàng lián xiàqù, suǒyǒu de Zhōngguó rén dōu huì shì qīnqi ne.", viet: "Chà! Vợ tôi kinh ngạc thốt lên, cứ nối như vậy, tất cả người Trung Quốc đều sẽ là họ hàng thôi." }
+];
+
+const part1 = [
+  { q: "走亲戚", options: ["A. 走到亲戚那儿", "B. 亲戚们走来走去", "C. 亲戚到自己家里来", "D. 亲戚之间互相拜访"], answer: "D",
+    explain: { pinyin: "zǒu qīnqi", viet: "là 'đi thăm họ hàng', chỉ việc họ hàng qua lại thăm hỏi nhau.", ansText: "D. 亲戚之间互相拜访 (họ hàng thăm hỏi lẫn nhau)" }},
+  { q: "一时半会儿", options: ["A. 短时间内", "B. 一会儿的一半", "C. 一定的时间", "D. 一个半小时"], answer: "A",
+    explain: { pinyin: "yīshí bànhuìr", viet: "là 'trong thời gian ngắn', chỉ một khoảng thời gian rất ngắn.", ansText: "A. 短时间内 (trong thời gian ngắn)" }},
+  { q: "老家", options: ["A. 很老的家", "B. 故乡", "C. 有老人的家", "D. 农村"], answer: "B",
+    explain: { pinyin: "lǎojiā", viet: "là 'quê', nơi sinh ra hoặc gắn bó lâu dài.", ansText: "B. 故乡 (quê hương)" }},
+  { q: "列", options: ["A. 写", "B. 解释", "C. 算", "D. 介绍"], answer: "A",
+    explain: { pinyin: "liè", viet: "trong ngữ cảnh này là 'liệt kê, viết ra'.", ansText: "A. 写 (viết, liệt kê)" }},
+  { q: "好家伙", options: ["A. 很好的家", "B. 很好的人", "C. 表示吃惊", "D. 表示赞扬"], answer: "C",
+    explain: { pinyin: "hǎo jiāhuo", viet: "là thán từ biểu thị sự kinh ngạc 'Chà!'.", ansText: "C. 表示吃惊 (biểu thị kinh ngạc)" }},
+  { q: "走动", options: ["A. 走路运动", "B. 互相来往", "C. 访问", "D. 走路"], answer: "B",
+    explain: { pinyin: "zǒudòng", viet: "trong ngữ cảnh này là 'qua lại thăm hỏi lẫn nhau'.", ansText: "B. 互相来往 (qua lại với nhau)" }},
+  { q: "显示", options: ["A. 看出来", "B. 说出", "C. 明白", "D. 表现"], answer: "D",
+    explain: { pinyin: "xiǎnshì", viet: "là 'hiển thị, thể hiện ra'.", ansText: "D. 表现 (thể hiện, biểu hiện)" }},
+  { q: "抱怨", options: ["A. 心中生气", "B. 表示不满", "C. 觉得麻烦", "D. 很讨厌"], answer: "B",
+    explain: { pinyin: "bàoyuàn", viet: "là 'phàn nàn, tỏ ra không hài lòng'.", ansText: "B. 表示不满 (tỏ ra không hài lòng)" }},
+  { q: "亲亲热热", options: ["A. 亲自表示热情", "B. 亲人们很热情", "C. 很热情的样子", "D. 离得很近的样子"], answer: "C",
+    explain: { pinyin: "qīnqīn rèrè", viet: "là 'thân mật, niềm nở', chỉ thái độ rất nhiệt tình.", ansText: "C. 很热情的样子 (bộ dạng rất nhiệt tình/thân mật)" }},
+  { q: "惊叹", options: ["A. 吃惊地感叹", "B. 害怕地叹气", "C. 大声地喊", "D. 很感动"], answer: "A",
+    explain: { pinyin: "jīngtàn", viet: "là 'kinh ngạc thốt lên', vừa ngạc nhiên vừa cảm thán.", ansText: "A. 吃惊地感叹 (kinh ngạc cảm thán)" }}
+];
+
+const part2 = [
+  { q: "为什么我要给媳妇画一张图?", options: ["A. 媳妇听不清楚我讲的话", "B. 我说不清楚我家的亲戚关系", "C. 媳妇搞不清楚我家的亲戚关系", "D. 为了让媳妇知道亲戚的名字"], answer: "C",
+    explain: { pinyin: "kě tā háishì gǎo bù qīngchu... wǒ gěi tā huà le yī zhāng tú", viet: "vì cô ấy vẫn không hiểu rõ, nên tôi vẽ cho cô ấy một bức tranh.", ansText: "C. 媳妇搞不清楚我家的亲戚关系" }},
+  { q: `"亲戚亲戚，只有走动才能显示出'亲'来。"意思是`, options: ["A. 只有互相来往才能成为亲戚", "B. 经常来往才能保持较好的亲戚关系", "C. 亲戚和亲戚必须互相来往", "D. 因为经常来往所以是亲戚"], answer: "B",
+    explain: { pinyin: "zhǐyǒu zǒudòng cái néng xiǎnshì chū 'qīn' lái", viet: "ý nói chỉ có qua lại thường xuyên mới giữ được mối quan hệ thân thiết.", ansText: "B. 经常来往才能保持较好的亲戚关系" }},
+  { q: `"走东家串西家"的意思是`, options: ["A. 先去住在东边的人家，再去住在西边的人家", "B. 去住在东边和西边的人家拜访", "C. 从东边的人家走到西边的人家", "D. 从这一家走到那一家"], answer: "D",
+    explain: { pinyin: "zǒu dōngjiā chuàn xījiā", viet: "là thành ngữ chỉ việc đi từ nhà này sang nhà khác.", ansText: "D. 从这一家走到那一家 (từ nhà này sang nhà khác)" }},
+  { q: "为什么我和媳妇要去走亲戚?", options: ["A. 亲戚们请我们去", "B. 我喜欢去亲戚家", "C. 我媳妇喜欢去亲戚家", "D. 过年的时候应该去向亲戚们拜年"], answer: "D",
+    explain: { pinyin: "guònián zuì zhòngyào de huódòng zhī yī jiùshì zǒu qīnqi", viet: "vì đây là hoạt động quan trọng khi ăn Tết, đi chúc Tết họ hàng.", ansText: "D. 过年的时候应该去向亲戚们拜年" }},
+  { q: "我们什么时候开始走亲戚?", options: ["A. 大年三十", "B. 大年初一", "C. 大年初二", "D. 每天"], answer: "C",
+    explain: { pinyin: "dànián chūyī yī guò... jiù kāishǐ... qù bàinián", viet: "'qua mùng 1' nghĩa là bắt đầu từ mùng 2.", ansText: "C. 大年初二 (sau mùng 1 = mùng 2)" }},
+  { q: "我媳妇害怕什么?", options: ["A. 每天都要去走亲戚", "B. 太累了", "C. 有人和她聊家常", "D. 不知道怎么称呼对方"], answer: "D",
+    explain: { pinyin: "tā zuì pà de shì... bù zhīdào zěnme chēnghu duìfāng", viet: "điều cô ấy sợ nhất là không biết xưng hô thế nào.", ansText: "D. 不知道怎么称呼对方" }},
+  { q: "为什么有的人在我的图里找不到?", options: ["A. 我不认识那个人", "B. 我忘了那个人", "C. 那个人不是我们的亲戚", "D. 那个人不是我们直接的亲戚"], answer: "D",
+    explain: { pinyin: "wǒ shuō de hái dōu shì zuì zhíjiē de qīnqi ne", viet: "vì tôi chỉ liệt kê họ hàng trực tiếp nhất.", ansText: "D. 那个人不是我们直接的亲戚" }}
+];
+
+const part3 = [
+  { q: "农村的一个特点就是亲戚多。", answer: true, explain: { pinyin: "wǒmen nóngcūn bié de méiyǒu, jiùshì qīnqi duō", viet: "nông thôn chúng tôi không có gì khác, chỉ có nhiều họ hàng.", ansText: "Đúng." }},
+  { q: "我是农村人，媳妇是城里人。", answer: true, explain: { pinyin: "chénglǐ shēng chénglǐ zhǎng de xífù huí lǎojiā", viet: "vợ sinh ra lớn lên ở thành phố về quê (chồng là người quê).", ansText: "Đúng." }},
+  { q: "我给媳妇画的图里列出了我所有的亲戚。", answer: false, explain: { pinyin: "wǒ shuō de hái dōu shì zuì zhíjiē de qīnqi ne", viet: "tôi chỉ liệt kê họ hàng trực tiếp nhất, không phải tất cả.", ansText: "Sai. Chỉ liệt kê họ hàng trực tiếp nhất." }},
+  { q: "我家有一百多个直接的亲戚。", answer: false, explain: { pinyin: "kuài shàng bǎi le ne... wǒ shuō de hái dōu shì zuì zhíjiē de qīnqi", viet: "gần trăm người nhưng chưa đến 100, và là họ hàng trực tiếp.", ansText: "Sai. Gần trăm người, không phải hơn trăm." }},
+  { q: "在农村，亲戚的亲戚都是亲戚。", answer: true, explain: { pinyin: "zhèxiē qīnqi de qīnqi yě shì wǒmen de qīnqi", viet: "họ hàng của những người họ hàng này cũng là họ hàng của chúng ta.", ansText: "Đúng." }},
+  { q: "我媳妇比较了解我家的亲戚。", answer: false, explain: { pinyin: "kě tā háishì gǎo bù qīngchu", viet: "cô ấy vẫn không hiểu rõ.", ansText: "Sai. Cô ấy không hiểu rõ." }},
+  { q: "我媳妇喜欢到处去走亲戚。", answer: false, explain: { pinyin: "wǒ xífù duì zhèxiē dào méi bàoyuàn... tā zuì pà de shì...", viet: "cô ấy không phàn nàn nhưng cũng có điều sợ.", ansText: "Sai. Cô ấy không phàn nàn nhưng cũng không hẳn là thích." }},
+  { q: "有时我媳妇不认识和她说话的亲戚。", answer: true, explain: { pinyin: "bù zhīdào zěnme chēnghu duìfāng", viet: "không biết xưng hô, nghĩa là không nhận ra/người lạ.", ansText: "Đúng." }},
+  { q: "我媳妇害怕和别人谈话。", answer: false, explain: { pinyin: "tā zuì pà de shì... bù zhīdào zěnme chēnghu duìfāng", viet: "cô ấy chỉ sợ không biết xưng hô, không phải sợ nói chuyện.", ansText: "Sai. Chỉ sợ không biết xưng hô." }},
+  { q: "所有的中国人都是亲戚。", answer: false, explain: { pinyin: "zhèyàng lián xiàqù, suǒyǒu de Zhōngguó rén dōu huì shì qīnqi ne", viet: "đây chỉ là lời cảm thán của vợ, không phải sự thật.", ansText: "Sai. Đây chỉ là lời cảm thán." }}
+];
+
+const part4 = [
+  { q: "我知道我家有多少亲戚吗?", answer: "不知道，一时半会儿数不清。",
+    explain: { pinyin: "yǒu duōshǎo ne? wǒ yīshí bànhuìr yě shǔ bù qīng", viet: "có bao nhiêu呢? tôi một lúc cũng không đếm xuể." }},
+  { q: "城里人有没有那么多亲戚?", answer: "没有，农村亲戚多。",
+    explain: { pinyin: "wǒmen nóngcūn bié de méiyǒu, jiùshì qīnqi duō", viet: "nông thôn chúng tôi chỉ có nhiều họ hàng (ngụ ý thành phố không có nhiều)." }},
+  { q: "我给媳妇画了一张什么图?", answer: "亲戚关系图。",
+    explain: { pinyin: "bǎ wǒ de qīnqi guānxì liè le chūlái", viet: "liệt kê mối quan hệ họ hàng của tôi ra." }},
+  { q: "我媳妇了解农村的亲戚关系吗?", answer: "不了解，搞不清楚。",
+    explain: { pinyin: "kě tā háishì gǎo bù qīngchu", viet: "nhưng cô ấy vẫn không hiểu rõ." }},
+  { q: "在农村，过年最重要的活动是什么?", answer: "走亲戚。",
+    explain: { pinyin: "guònián zuì zhòngyào de huódòng zhī yī jiùshì zǒu qīnqi", viet: "một trong những hoạt động quan trọng nhất khi ăn Tết là đi thăm họ hàng." }}
+];
+
+const part5 = {
+  sentences: [
+    { id: 1, text: "大年初一一过，我和媳妇就开始去亲戚家拜年。" },
+    { id: 2, text: `亲戚亲戚，只有走动才能显示出"亲"来。` },
+    { id: 3, text: "我媳妇不怕辛苦，就怕不认识她的人和她聊家常。" },
+    { id: 4, text: "在农村，过年最重要的活动之一就是走亲戚。" },
+    { id: 5, text: "因为她不知道怎么称呼对方。" }
+  ],
+  correctOrder: [4, 2, 1, 3, 5],
+  explain: {
+    viet: "Thứ tự logic: (4) Giới thiệu chủ đề → (2) Giải thích tại sao → (1) Hành động cụ thể → (3) Tình huống khó khăn → (5) Lý do",
+    pinyin: "(4) Giới thiệu → (2) Giải thích → (1) Hành động → (3) Khó khăn → (5) Nguyên nhân"
+  }
+};
+
+// ============ RENDER ============
+function renderVocab() {
+  document.getElementById('vocabTable').innerHTML = vocabulary.map(v => `
+    <tr class="hover:bg-sky-50">
+      <td class="border border-slate-200 p-2 text-center text-lg ztai__zh">${v.hanzi}</td>
+      <td class="border border-sky-200 p-2 text-center italic text-sky-700">${v.pinyin}</td>
+      <td class="border border-sky-200 p-2">${v.viet}</td>
+    </tr>
+  `).join('');
+}
+
+function renderPassage() {
+  document.getElementById('passageContent').innerHTML = passage.map(s => `
+    <div class="sentence">
+      <div class="chinese font-medium">${s.chinese}</div>
+      <div class="pinyin">${s.pinyin}</div>
+      <div class="viet">${s.viet}</div>
+    </div>
+  `).join('');
+}
+
+function renderPart1() {
+  document.getElementById('part1').innerHTML = part1.map((item, i) => `
+    <div class="bg-sky-50 p-4 rounded-lg mb-3">
+      <p class="font-semibold mb-2"><span class="text-sky-700">${i+1}.</span> <span class="chinese">${item.q}</span></p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+        ${item.options.map((opt, j) => `
+          <label class="flex items-center bg-white p-2 rounded cursor-pointer hover:bg-sky-100">
+            <input type="radio" name="p1q${i}" value="${String.fromCharCode(65+j)}" class="mr-2">
+            <span>${opt}</span>
+          </label>
+        `).join('')}
+      </div>
+    </div>
+  `).join('');
+}
+
+function renderPart2() {
+  document.getElementById('part2').innerHTML = part2.map((item, i) => `
+    <div class="bg-sky-50 p-4 rounded-lg mb-3">
+      <p class="font-semibold mb-2"><span class="text-sky-700">${i+1}.</span> <span class="chinese">${item.q}</span></p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+        ${item.options.map((opt, j) => `
+          <label class="flex items-center bg-white p-2 rounded cursor-pointer hover:bg-sky-100">
+            <input type="radio" name="p2q${i}" value="${String.fromCharCode(65+j)}" class="mr-2">
+            <span>${opt}</span>
+          </label>
+        `).join('')}
+      </div>
+    </div>
+  `).join('');
+}
+
+function renderPart3() {
+  document.getElementById('part3').innerHTML = part3.map((item, i) => `
+    <div class="bg-sky-50 p-4 rounded-lg mb-3">
+      <p class="font-semibold mb-2"><span class="text-sky-700">${i+1}.</span> <span class="chinese">${item.q}</span></p>
+      <div class="flex gap-4">
+        <label class="flex items-center bg-white px-4 py-2 rounded cursor-pointer hover:bg-sky-100">
+          <input type="radio" name="p3q${i}" value="true" class="mr-2"> ✓ Đúng
+        </label>
+        <label class="flex items-center bg-white px-4 py-2 rounded cursor-pointer hover:bg-sky-100">
+          <input type="radio" name="p3q${i}" value="false" class="mr-2"> ✗ Sai
+        </label>
+      </div>
+    </div>
+  `).join('');
+}
+
+function renderPart4() {
+  document.getElementById('part4').innerHTML = part4.map((item, i) => `
+    <div class="bg-sky-50 p-4 rounded-lg mb-3">
+      <p class="font-semibold mb-2"><span class="text-sky-700">${i+1}.</span> <span class="chinese">${item.q}</span></p>
+      <textarea id="p4a${i}" rows="2" class="w-full p-2 border-2 border-sky-300 rounded focus:border-sky-500 outline-none" placeholder="Nhập câu trả lời..."></textarea>
+    </div>
+  `).join('');
+}
+
+// ============ PHẦN 5: KÉO THẢ ============
+let currentOrder = [];
+
+function renderPart5() {
+  // Xáo trộn thứ tự ban đầu
+  currentOrder = [...part5.sentences].sort(() => Math.random() - 0.5);
+  drawPart5();
+}
+
+function drawPart5() {
+  const container = document.getElementById('part5');
+  container.innerHTML = currentOrder.map((s, i) => `
+    <div class="sortable-item bg-sky-50 border-2 border-sky-200 p-3 rounded-lg flex items-center"
+         draggable="true" data-index="${i}" data-id="${s.id}">
+      <span class="order-number">${i + 1}</span>
+      <span class="chinese flex-1">${s.text}</span>
+      <span class="text-sky-400 ml-2">⋮⋮</span>
+    </div>
+  `).join('');
+  attachDragEvents();
+}
+
+function attachDragEvents() {
+  const items = document.querySelectorAll('.sortable-item');
+  let draggedItem = null;
+
+  items.forEach(item => {
+    item.addEventListener('dragstart', e => {
+      draggedItem = item;
+      item.classList.add('dragging');
+    });
+    item.addEventListener('dragend', e => {
+      item.classList.remove('dragging');
+      document.querySelectorAll('.drag-over').forEach(el => el.classList.remove('drag-over'));
+    });
+    item.addEventListener('dragover', e => {
+      e.preventDefault();
+      item.classList.add('drag-over');
+    });
+    item.addEventListener('dragleave', e => {
+      item.classList.remove('drag-over');
+    });
+    item.addEventListener('drop', e => {
+      e.preventDefault();
+      item.classList.remove('drag-over');
+      if (draggedItem === item) return;
+
+      const fromIndex = parseInt(draggedItem.dataset.index);
+      const toIndex = parseInt(item.dataset.index);
+
+      // Hoán vị trong mảng currentOrder
+      const temp = currentOrder[fromIndex];
+      currentOrder[fromIndex] = currentOrder[toIndex];
+      currentOrder[toIndex] = temp;
+
+      drawPart5();
+    });
+  });
+}
+
+function resetPart5() {
+  renderPart5();
+  document.getElementById('result5').innerHTML = '';
+}
+
+// ============ ẨN/HIỆN ============
+function toggleView(type) {
+  const content = document.getElementById('passageContent');
+  const btn = document.getElementById(type === 'pinyin' ? 'btnPinyin' : 'btnViet');
+  const cls = type === 'pinyin' ? 'show-pinyin' : 'show-viet';
+
+  content.classList.toggle(cls);
+
+  if (content.classList.contains(cls)) {
+    btn.classList.remove('bg-sky-500');
+    btn.classList.add('bg-green-500');
+  } else {
+    btn.classList.remove('bg-green-500');
+    btn.classList.add('bg-sky-500');
+  }
+}
+
+// ============ NỘP BÀI TỪNG PHẦN ============
+function submitPart(partNum) {
+  const resultDiv = document.getElementById('result' + partNum);
+  let html = '';
+  let data;
+
+  if (partNum === 1) data = part1;
+  else if (partNum === 2) data = part2;
+  else if (partNum === 3) data = part3;
+  else if (partNum === 4) data = part4;
+  else if (partNum === 5) data = part5;
+
+  let correctCount = 0;
+  let total;
+
+  if (partNum === 1 || partNum === 2 || partNum === 3) {
+    total = data.length;
+    data.forEach((item, i) => {
+      let userAns, isCorrect;
+
+      if (partNum === 1 || partNum === 2) {
+        const selected = document.querySelector(`input[name="p${partNum}q${i}"]:checked`);
+        userAns = selected ? selected.value : '(chưa chọn)';
+        isCorrect = userAns === item.answer;
+      } else if (partNum === 3) {
+        const selected = document.querySelector(`input[name="p3q${i}"]:checked`);
+        userAns = selected ? selected.value : '(chưa chọn)';
+        isCorrect = userAns === String(item.answer);
+      }
+
+      if (isCorrect) correctCount++;
+
+      const colorClass = isCorrect ? 'bg-green-50 border-green-300' : 'bg-red-50 border-red-300';
+      const icon = isCorrect ? '✓' : '✗';
+
+      html += `
+        <div class="p-3 mb-2 rounded border ${colorClass}">
+          <p><strong>Câu ${i+1}:</strong> ${item.q}</p>
+          <p>Bạn: <span class="font-bold">${userAns}</span> ${icon}</p>
+          <p class="text-green-700">Đáp án: <strong>${item.explain.ansText}</strong></p>
+          <p class="text-slate-600 text-sm">💡 <span class="pinyin" style="display:inline">${item.explain.pinyin}</span> - ${item.explain.viet}</p>
+        </div>`;
+    });
+  } else if (partNum === 4) {
+    total = data.length;
+    data.forEach((item, i) => {
+      const userAns = document.getElementById(`p4a${i}`).value.trim() || '(chưa trả lời)';
+      html += `
+        <div class="p-3 mb-2 rounded border bg-sky-50 border-sky-300">
+          <p><strong>Câu ${i+1}:</strong> ${item.q}</p>
+          <p class="italic">Bạn trả lời: ${userAns}</p>
+          <p class="text-green-700 mt-2"><strong>Gợi ý đáp án:</strong></p>
+          <p class="chinese">${item.answer}</p>
+          <p class="text-slate-600 text-sm">💡 <span class="pinyin" style="display:inline">${item.explain.pinyin}</span> - ${item.explain.viet}</p>
+        </div>`;
+    });
+  } else if (partNum === 5) {
+    total = 1;
+    const userOrder = currentOrder.map(s => s.id);
+    const isCorrect = JSON.stringify(userOrder) === JSON.stringify(part5.correctOrder);
+    if (isCorrect) correctCount = 1;
+
+    const colorClass = isCorrect ? 'bg-green-50 border-green-300' : 'bg-red-50 border-red-300';
+    const icon = isCorrect ? '✓' : '✗';
+
+    html += `
+      <div class="p-4 rounded border ${colorClass}">
+        <p><strong>Thứ tự bạn chọn:</strong></p>
+        <div class="bg-white p-3 rounded mt-2">
+          ${userOrder.map((id, i) => `<p><span class="order-number">${i+1}</span> ${part5.sentences.find(s => s.id === id).text}</p>`).join('')}
+        </div>
+        <p class="mt-3">Kết quả: <span class="font-bold text-lg">${icon} ${isCorrect ? 'CHÍNH XÁC!' : 'CHƯA ĐÚNG'}</span></p>
+        <p class="text-green-700 mt-2"><strong>Thứ tự đúng:</strong> ${part5.correctOrder.join(' → ')}</p>
+        <div class="bg-white p-3 rounded mt-2">
+          ${part5.correctOrder.map((id, i) => `<p><span class="order-number">${i+1}</span> ${part5.sentences.find(s => s.id === id).text}</p>`).join('')}
+        </div>
+        <p class="text-slate-600 text-sm mt-3">💡 <span class="pinyin" style="display:inline">${part5.explain.pinyin}</span></p>
+        <p class="text-slate-600 text-sm">💡 ${part5.explain.viet}</p>
+      </div>`;
+  }
+
+  const scoreHtml = (partNum === 4) ? '' :
+    `<div class="bg-sky-100 p-3 rounded-lg mb-3 font-bold text-sky-800">
+       🎯 Điểm phần ${partNum}: ${correctCount}/${total} (${Math.round(correctCount/total*100)}%)
+     </div>`;
+
+  resultDiv.innerHTML = scoreHtml + html;
+  resultDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+// ============ ACTIVE MENU ============
+const sections = ['vocab', 'passage', 'ex1', 'ex2', 'ex3', 'ex4', 'ex5'];
+const menuLinks = document.querySelectorAll('.menu-link');
+
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(id => {
+    const el = document.getElementById(id);
+    if (el && el.getBoundingClientRect().top <= 100) current = id;
+  });
+  menuLinks.forEach(link => {
+    link.classList.toggle('active', link.getAttribute('href') === '#' + current);
+  });
+});
+
+// ============ INIT ============
+renderVocab();
+renderPassage();
+renderPart1();
+renderPart2();
+renderPart3();
+renderPart4();
+renderPart5();
+</script>
+
+</body>
+</html>

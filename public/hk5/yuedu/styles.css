@@ -1,0 +1,45 @@
+html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+  body { font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif; }
+
+  /* Ẩn/Hiện Pinyin & Tiếng Việt */
+  .pinyin, .viet { display: none; }
+  .show-pinyin .pinyin { display: block; }
+  .show-viet .viet { display: block; }
+
+  .pinyin { color: #0284c7; font-size: 0.9em; font-style: italic; }
+  .chinese {
+        font-family: KaiTi, STKaiti, PingFang SC, Songti SC, SimSun, Noto Serif CJK SC, Noto Serif SC, serif;
+    font-size: 1.5rem;
+    line-height: 1.55;
+   }
+  .viet { color: #475569; font-size: 0.95em; }
+
+  .sentence { margin-bottom: 1rem; padding: 0.75rem; border-radius: 0.5rem; border-left: 3px solid transparent; }
+  .sentence:hover { background-color: #f0f9ff; border-left-color: #0284c7; }
+
+  .menu-link { transition: all 0.2s; }
+  .menu-link:hover { background-color: #0284c7; color: white; }
+  .menu-link.active { background-color: #0284c7; color: white; }
+
+  /* CSS mới cho phần sắp xếp câu */
+  .sortable-item {
+    cursor: grab;
+    transition: all 0.2s;
+    user-select: none;
+  }
+  .sortable-item:active { cursor: grabbing; }
+  .sortable-item.dragging { opacity: 0.5; background-color: #bae6fd; }
+  .sortable-item.drag-over { border-top: 3px solid #0284c7; }
+  .order-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: #0284c7;
+    color: white;
+    font-weight: bold;
+    margin-right: 0.5rem;
+    flex-shrink: 0;
+  }

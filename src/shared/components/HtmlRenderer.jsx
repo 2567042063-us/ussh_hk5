@@ -8,6 +8,11 @@ export default function HtmlRenderer({ htmlContent }) {
   useEffect(() => {
     if (!containerRef.current) return;
 
+    const title = containerRef.current
+      .querySelector("title")
+      ?.textContent?.trim();
+    if (title) document.title = title;
+
     // Tìm tất cả các thẻ <script> chưa xử lý
     const scripts = containerRef.current.querySelectorAll(
       "script:not([data-processed])",

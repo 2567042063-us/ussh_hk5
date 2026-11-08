@@ -1,51 +1,7 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Bài khoá phụ 14</title>
-<style>
-:root{--bg:#fff;--card:#fff;--tx:#222;--mu:#6b6b6b;--ac:#b3261e;--ac2:#fbe9e7;--ln:#e5e0d5;--ok:#1b7a3d;--okb:#e3f4e8;--no:#b3261e;--nob:#fde8e6;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#17150f;--card:#221f17;--tx:#eee9dc;--mu:#a39e90;--ac:#ff8a80;--ac2:#3a2420;--ln:#3a3629;--ok:#7fd69a;--okb:#16301e;--no:#ff8a80;--nob:#3a1f1c;color-scheme:dark}}
-:root[data-theme="dark"]{--bg:#17150f;--card:#221f17;--tx:#eee9dc;--mu:#a39e90;--ac:#ff8a80;--ac2:#3a2420;--ln:#3a3629;--ok:#7fd69a;--okb:#16301e;--no:#ff8a80;--nob:#3a1f1c;color-scheme:dark}
-*{box-sizing:border-box}
-html,body{margin:0}
-body{background:var(--bg);color:var(--tx);font:16px/1.5 -apple-system,"Segoe UI",Roboto,"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;padding:12px}
-.box{max-width:720px;margin:0 auto;background:var(--card);border:1px solid var(--ln);border-radius:2px;overflow:hidden}
-h1{font-size:17px;margin:0;padding:14px 16px 8px}
-.tabs{display:flex;border-bottom:1px solid var(--ln);overflow-x:auto}
-.tabs button{flex:1;min-width:max-content;padding:10px 12px;background:none;border:0;border-bottom:3px solid transparent;color:var(--mu);font:inherit;font-size:14px;cursor:pointer}
-.tabs button.on{color:var(--ac);border-color:var(--ac);font-weight:600}
-.pane{display:none;padding:12px 14px 18px}.pane.on{display:block}
-.tools{display:flex;gap:8px;margin-bottom:10px; align-items: center;}
-.chip{border:1px solid var(--ln);background:none;color:var(--tx);border-radius:99px;padding:5px 12px;font:inherit;font-size:13px;cursor:pointer}
-.chip.on{background:var(--ac2);border-color:var(--ac);color:var(--ac)}
-.s{padding:9px 0;border-bottom:1px dashed var(--ln);cursor:pointer}
-.s .h{font-size:22px;line-height:1.6;  font-family: KaiTi, STKaiti, PingFang SC, Songti SC, SimSun, Noto Serif CJK SC, Noto Serif SC, serif;}
-.s .p,.s .v{display:none;font-size:13.5px;color:var(--mu)}
-.s .p { font-family: "Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;}
-
-.s .v{color:var(--tx);opacity:.85}
-.s.sp .p,.s.sv .v,.showp .s .p,.showv .s .v{display:block}
-.note{font-size:12.5px;color:var(--ac)}
-.g{border:1px solid var(--ln);border-radius:12px;padding:10px 12px;margin-bottom:10px}
-.g b{color:var(--ac)}
-.g .ex{font-size:17px;margin:4px 0 2px}
-.g small{color:var(--mu);display:block}
-.tag{font-size:11px;background:var(--ac2);color:var(--ac);border-radius:6px;padding:1px 6px;margin-left:4px}
-.sub{display:flex;gap:6px;margin-bottom:12px}
-.q{margin-bottom:14px;padding-bottom:12px;border-bottom:1px dashed var(--ln)}
-.q .t{font-size:18px;margin-bottom:8px}
-.opts{display:flex;flex-wrap:wrap;gap:8px}
-.o{border:1px solid var(--ln);background:none;color:var(--tx);border-radius:10px;padding:8px 12px;font:inherit;font-size:16px;cursor:pointer;text-align:left}
-.o.ok{background:var(--okb);border-color:var(--ok);color:var(--ok)}
-.o.no{background:var(--nob);border-color:var(--no);color:var(--no)}
-.fb{font-size:13.5px;margin-top:6px;color:var(--mu)}
-.ans{min-height:44px;border:1px dashed var(--ln);border-radius:10px;padding:6px;display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px}
-.btn{border:0;background:var(--ac);color:var(--bg);border-radius:10px;padding:8px 14px;font:inherit;font-size:14px;cursor:pointer}
-.btn.l{background:none;border:1px solid var(--ln);color:var(--tx)}
-.score{font-weight:600;margin-top:4px}
-</style>
+<link rel="stylesheet" href="./styles.css">
 </head>
 <body>
 <div class="box">

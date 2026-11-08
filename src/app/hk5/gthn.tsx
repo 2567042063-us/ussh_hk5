@@ -85,7 +85,7 @@ export default function GTHN() {
                 prefetch={false}
                 // target="_blank"
                 // rel="noopener noreferrer"
-                className="inline-block px-5 text-slate-500 hover:text-primary dark:text-sky-400 dark:hover:text-primary-dark"
+                className="inline-block px-5 text-slate-500 hover:text-yellow-500 dark:text-sky-400 dark:hover:text-yellow-300"
               >
                 {fileName}
               </Link>
@@ -104,7 +104,7 @@ export default function GTHN() {
                 prefetch={false}
                 // target="_blank"
                 // rel="noopener noreferrer"
-                className="inline-block px-5 text-slate-500 hover:text-primary dark:text-sky-400 dark:hover:text-primary-dark"
+                className="inline-block px-5 text-slate-500 hover:text-yellow-500 dark:text-sky-400 dark:hover:text-yellow-300"
               >
                 Bài khoá phụ _ {fileName}
               </Link>
@@ -130,7 +130,7 @@ export default function GTHN() {
                 prefetch={false}
                 // target="_blank"
                 // rel="noopener noreferrer"
-                className="inline-block px-5 text-slate-500 hover:text-primary dark:text-sky-400 dark:hover:text-primary-dark"
+                className="inline-block px-5 text-slate-500 hover:text-yellow-500 dark:text-sky-400 dark:hover:text-yellow-300"
               >
                 {bt.name}
               </Link>
@@ -152,7 +152,7 @@ export default function GTHN() {
 //               prefetch={false}
 //               target="_blank"
 //               rel="noopener noreferrer"
-//               className="mt-3 inline-block px-5 text-slate-500 hover:text-primary dark:text-sky-400 dark:hover:text-primary-dark"
+//               className="mt-3 inline-block px-5 text-slate-500 hover:text-yellow-500 dark:text-sky-400 dark:hover:text-yellow-300"
 //             >
 //               {file.replace(/\.[^/.]+$/, "")}{" "}
 //             </Link>

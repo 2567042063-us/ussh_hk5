@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Bài khoá phụ 16</title>
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+<div class="box">
+<h1>📖 Bài khoá phụ - Bài 16 - trang 83</h1>
+<div class="tabs" id="tabs">
+<button class="on" data-t="a">Bài khoá</button><button data-t="g">Ngữ pháp</button><button data-t="x">Bài tập</button>
+</div>
+<div class="pane on" id="a"></div>
+<div class="pane" id="g"></div>
+<div class="pane" id="x">
+<div class="sub" id="sub"><button class="chip on" data-e="1">1. Điền V+bổ ngữ</button><button class="chip" data-e="2">2. Sửa câu</button><button class="chip" data-e="3">3. Sắp xếp</button></div>
+<div id="ex"></div>
+</div>
+</div>
+<script>
+const T1=[
+['昨天我们到田芳家去做客。','Zuótiān wǒmen dào Tián Fāng jiā qù zuòkè.','Hôm qua chúng tôi đến nhà Điền Phương làm khách.'],
+['去的时候，雨下<b>得</b>很大，不过我们一到田芳家雨就停了。','Qù de shíhou, yǔ xià de hěn dà, búguò wǒmen yí dào Tián Fāng jiā yǔ jiù tíng le.','Lúc đi mưa rơi rất to, nhưng chúng tôi vừa tới nhà Điền Phương thì mưa tạnh.'],
+['田芳家住<b>在</b>一个四合院儿里。','Tián Fāng jiā zhù zài yí ge sìhéyuànr li.','Nhà Điền Phương ở trong một tứ hợp viện.'],
+['院子里种着一棵枣树，还种着很多花儿，有红的，有黄的，非常漂亮。','Yuànzi li zhòng zhe yì kē zǎoshù, hái zhòng zhe hěn duō huār, yǒu hóng de, yǒu huáng de, fēicháng piàoliang.','Trong sân trồng một cây táo ta, còn trồng nhiều hoa, có hoa đỏ, hoa vàng, rất đẹp.'],
+['他们家的院子不太大，但是很干净，也很安静。','Tāmen jiā de yuànzi bú tài dà, dànshì hěn gānjìng, yě hěn ānjìng.','Sân nhà họ không to lắm nhưng rất sạch sẽ, cũng rất yên tĩnh.'],
+['田芳的爸爸妈妈一看我们来了，就走出来笑着说：“欢迎你们来我家做客，请到屋里坐吧。”','Tián Fāng de bàba māma yí kàn wǒmen lái le, jiù zǒu chūlái xiào zhe shuō: “Huānyíng nǐmen lái wǒ jiā zuòkè, qǐng dào wū li zuò ba.”','Bố mẹ Điền Phương vừa thấy chúng tôi đến liền đi ra, cười nói: “Chào mừng các cháu đến nhà làm khách, mời vào trong nhà ngồi.”'],
+['田芳给我们介绍了她的爸爸妈妈。','Tián Fāng gěi wǒmen jièshào le tā de bàba māma.','Điền Phương giới thiệu bố mẹ cho chúng tôi.'],
+['我知道田芳的爸爸妈妈都是大学教授。田芳的爸爸说：“你们就叫我们田老师和黄老师吧。”','Wǒ zhīdào Tián Fāng de bàba māma dōu shì dàxué jiàoshòu. Tián Fāng de bàba shuō: “Nǐmen jiù jiào wǒmen Tián lǎoshī hé Huáng lǎoshī ba.”','Tôi biết bố mẹ Điền Phương đều là giáo sư đại học. Bố nói: “Các cháu cứ gọi chúng tôi là thầy Điền và cô Hoàng.”'],
+['黄老师热情<b>地</b>给我们倒茶，请我们吃水果。她说：“你们跟田芳是同学，又是好朋友，到这儿来就像到自己家里一样，不要客气。”','Huáng lǎoshī rèqíng de gěi wǒmen dào chá, qǐng wǒmen chī shuǐguǒ. Tā shuō: “Nǐmen gēn Tián Fāng shì tóngxué, yòu shì hǎo péngyou, dào zhèr lái jiù xiàng dào zìjǐ jiā li yíyàng, búyào kèqi.”','Cô Hoàng nhiệt tình rót trà, mời ăn hoa quả. Cô nói: “Các cháu là bạn học, lại là bạn tốt của Điền Phương, đến đây như về nhà mình, đừng khách sáo.”'],
+['田芳说：“先参观参观我爸爸的书房吧。”她带着我们走进了她爸爸的书房。','Tián Fāng shuō: “Xiān cānguān cānguān wǒ bàba de shūfáng ba.” Tā dài zhe wǒmen zǒu jìn le tā bàba de shūfáng.','Điền Phương nói: “Tham quan phòng sách của bố mình trước nhé.” Cô dẫn chúng tôi vào phòng sách.'],
+['房间不太大，周围摆着几个大书架。书架里放着很多书，有中文的，也有外文的，有文学、历史方面的，也有政治、哲学方面的。','Fángjiān bú tài dà, zhōuwéi bǎi zhe jǐ ge dà shūjià. Shūjià li fàng zhe hěn duō shū, yǒu Zhōngwén de, yě yǒu wàiwén de, yǒu wénxué, lìshǐ fāngmiàn de, yě yǒu zhèngzhì, zhéxué fāngmiàn de.','Phòng không to lắm, xung quanh bày mấy giá sách lớn. Trong giá có rất nhiều sách, tiếng Trung lẫn ngoại ngữ, sách văn học, lịch sử, cả chính trị, triết học.'],
+['我看<b>了</b>一下儿，很多书我都不知道，我只认识鲁迅、毛泽东和邓小平的名字，因为我在国内时读过他们的书，当然是翻译成英文的。','Wǒ kàn le yí xiàr, hěn duō shū wǒ dōu bù zhīdào, wǒ zhǐ rènshi Lǔ Xùn, Máo Zédōng hé Dèng Xiǎopíng de míngzi, yīnwèi wǒ zài guónèi shí dú guo tāmen de shū, dāngrán shì fānyì chéng Yīngwén de.','Tôi nhìn qua một lượt, nhiều sách tôi không biết, chỉ biết tên Lỗ Tấn, Mao Trạch Đông, Đặng Tiểu Bình vì ở nước mình đã đọc sách của họ, tất nhiên là bản dịch sang tiếng Anh.'],
+['窗前是一张写字台，写字台旁边放着一台新电脑，电脑还开<b>着</b>呢。','Chuāng qián shì yì zhāng xiězìtái, xiězìtái pángbiān fàng zhe yì tái xīn diànnǎo, diànnǎo hái kāi zhe ne.','Trước cửa sổ là một cái bàn viết, cạnh bàn đặt một chiếc máy tính mới, máy vẫn đang mở.'],
+['沙发后面的墙上挂着几幅字画，田芳指着这些字画给我们介绍说：“这是徐悲鸿画的画儿，那是郭沫若写的字。”','Shāfā hòumiàn de qiáng shang guà zhe jǐ fú zìhuà, Tián Fāng zhǐ zhe zhèxiē zìhuà gěi wǒmen jièshào shuō: “Zhè shì Xú Bēihóng huà de huàr, nà shì Guō Mòruò xiě de zì.”','Trên tường sau ghế sofa treo mấy bức thư họa, Điền Phương chỉ vào giới thiệu: “Đây là tranh Từ Bi Hồng vẽ, kia là chữ Quách Mạt Nhược viết.”'],
+['田芳问我：“你知道徐悲鸿和郭沫若是谁吗？”我说不知道。我对中国了解得太少了。','Tián Fāng wèn wǒ: “Nǐ zhīdào Xú Bēihóng hé Guō Mòruò shì shéi ma?” Wǒ shuō bù zhīdào. Wǒ duì Zhōngguó liǎojiě de tài shǎo le.','Điền Phương hỏi: “Cậu biết Từ Bi Hồng và Quách Mạt Nhược là ai không?” Tôi nói không biết. Tôi hiểu về Trung Quốc quá ít.'],
+['田芳告诉我，徐悲鸿是中国有名的画家，郭沫若是中国有名的历史学家。','Tián Fāng gàosu wǒ, Xú Bēihóng shì Zhōngguó yǒumíng de huàjiā, Guō Mòruò shì Zhōngguó yǒumíng de lìshǐ xuéjiā.','Điền Phương bảo, Từ Bi Hồng là họa sĩ nổi tiếng, Quách Mạt Nhược là nhà sử học nổi tiếng của Trung Quốc.'],
+['田芳说：“这些书和字画都是我爷爷留给我们的。”','Tián Fāng shuō: “Zhèxiē shū hé zìhuà dōu shì wǒ yéye liú gěi wǒmen de.”','Điền Phương nói: “Số sách và thư họa này đều do ông nội để lại cho chúng tôi.”'],
+['参观<b>完</b>书房，田芳说：“我们到客厅坐一会儿吧，你们不是想学包饺子吗？今天，我爸爸妈妈请你们吃饺子。”','Cānguān wán shūfáng, Tián Fāng shuō: “Wǒmen dào kètīng zuò yíhuìr ba, nǐmen bú shì xiǎng xué bāo jiǎozi ma? Jīntiān, wǒ bàba māma qǐng nǐmen chī jiǎozi.”','Tham quan xong phòng sách, Điền Phương nói: “Mình ra phòng khách ngồi một lát nhé, các cậu chẳng phải muốn học gói sủi cảo sao? Hôm nay bố mẹ mình mời ăn sủi cảo.”'],
+['我们走进客厅的时候，田芳的爸爸妈妈正准备包饺子呢。她爸爸说：“你们坐着聊天儿吧，我们两个包就行了。”田芳说：“我们一起来吧，麦克和玛丽还想学学呢。”','Wǒmen zǒu jìn kètīng de shíhou, Tián Fāng de bàba māma zhèng zhǔnbèi bāo jiǎozi ne. Tā bàba shuō: “Nǐmen zuò zhe liáotiānr ba, wǒmen liǎng ge bāo jiù xíng le.” Tián Fāng shuō: “Wǒmen yìqǐ lái ba, Màikè hé Mǎlì hái xiǎng xuéxue ne.”','Lúc chúng tôi vào phòng khách, bố mẹ Điền Phương đang chuẩn bị gói sủi cảo. Bố nói: “Các cháu ngồi trò chuyện đi, hai bác gói là được.” Điền Phương nói: “Cùng làm đi ạ, Mike và Mary còn muốn học nữa.”'],
+['我们洗了手就开始包饺子。','Wǒmen xǐ le shǒu jiù kāishǐ bāo jiǎozi.','Chúng tôi rửa tay xong liền bắt đầu gói sủi cảo.'],
+['来中国以后我吃过一两次饺子，但没有包<b>过</b>饺子，这是第一次。我不会包，包了半天才包了一个，田芳说我包的饺子像小老鼠，说得大家都笑了。','Lái Zhōngguó yǐhòu wǒ chī guo yì liǎng cì jiǎozi, dàn méiyǒu bāo guo jiǎozi, zhè shì dì-yī cì. Wǒ bú huì bāo, bāo le bàntiān cái bāo le yí ge, Tián Fāng shuō wǒ bāo de jiǎozi xiàng xiǎo lǎoshǔ, shuō de dàjiā dōu xiào le.','Sau khi đến Trung Quốc tôi ăn sủi cảo một hai lần, nhưng chưa gói bao giờ, đây là lần đầu. Tôi không biết gói, mất cả buổi mới gói được một cái, Điền Phương bảo sủi cảo tôi gói giống con chuột nhỏ, nói làm mọi người bật cười.'],
+['我们大家一边包一边聊天儿，很热闹。我很喜欢这种欢乐的家庭气氛。','Wǒmen dàjiā yìbiān bāo yìbiān liáotiānr, hěn rènao. Wǒ hěn xǐhuan zhè zhǒng huānlè de jiātíng qìfēn.','Mọi người vừa gói vừa trò chuyện, rất náo nhiệt. Tôi rất thích không khí gia đình vui vẻ này.'],
+['饺子端出来<b>了</b>。今天的饺子真好吃，我吃了二十多个。','Jiǎozi duān chūlái le. Jīntiān de jiǎozi zhēn hǎochī, wǒ chī le èrshí duō ge.','Sủi cảo được bưng ra rồi. Sủi cảo hôm nay thật ngon, tôi ăn hơn hai mươi cái.'],
+['吃完饺子，我们又坐了一会儿，然后对两位老师说：“我们该走了，谢谢你们，我们过得很愉快。”两位老师一直送我们走出大门，对我们说：“欢迎你们常来玩儿。”','Chī wán jiǎozi, wǒmen yòu zuò le yíhuìr, ránhòu duì liǎng wèi lǎoshī shuō: “Wǒmen gāi zǒu le, xièxie nǐmen, wǒmen guò de hěn yúkuài.” Liǎng wèi lǎoshī yìzhí sòng wǒmen zǒu chū dàmén, duì wǒmen shuō: “Huānyíng nǐmen cháng lái wánr.”','Ăn xong, chúng tôi ngồi thêm một lát rồi nói với hai thầy cô: “Chúng cháu phải về rồi, cảm ơn thầy cô, chúng cháu đã rất vui.” Hai thầy cô tiễn tận ra cổng, nói: “Hoan nghênh các cháu thường xuyên đến chơi.”']];
+const G=[
+['','Bổ ngữ trạng thái: V + 得 + adj','雨下得很大 · 我对中国了解得太少了 · 我们过得很愉快','得 nối động từ với đánh giá, mô tả mức độ/cách thức. Có tân ngữ: 对中国了解得…'],
+['','V得 + kết quả (gây ra hệ quả)','说得大家都笑了','Sau 得 có thể là cả một cụm: lời nói khiến mọi người bật cười.'],
+['','Bổ ngữ xu hướng: 出来 / 进 / 出','走出来 · 走进客厅 · 走出大门 · 饺子端出来了','出 = ra, 进 = vào; 来 = về phía người nói. Tân ngữ nơi chốn đứng giữa: 走出大门去/来.'],
+['','Bổ ngữ kết quả: 完 · 成 · 给','参观完书房 · 吃完饺子 · 翻译成英文 · 留给我们','完 = xong; 成 = trở thành/dịch thành; 给 = trao cho ai.'],
+['','V + 在 + nơi chốn','田芳家住在一个四合院儿里','在 làm bổ ngữ: chỉ nơi hành động dừng lại/cư trú.'],
+['','Động lượng/thời lượng bổ ngữ','看了一下儿 · 坐一会儿 · 包了半天才包了一个 · 吃过一两次','一下儿, 一会儿, 半天, 一两次 đứng sau động từ chỉ lượng/thời gian/số lần.'],
+['','着 – câu tồn tại: nơi chốn + V着 + số lượng + N','院子里种着一棵枣树 · 墙上挂着几幅字画 · 书架里放着很多书','Mô tả vật đang ở trạng thái nào (trồng, treo, đặt, bày) ở đâu. Nơi chốn đứng đầu câu.'],
+['','V着 (+ 呢) – duy trì trạng thái','电脑还开着呢','着 chỉ trạng thái đang kéo dài; 呢 nhấn mạnh sự đang diễn ra.'],
+['','V1着 + V2','笑着说 · 指着字画给我们介绍 · 带着我们走进 · 坐着聊天儿','V1着 là cách thức/trạng thái đi kèm khi làm V2: cười mà nói, chỉ mà giới thiệu.']];
+function mk(id,arr,note){const p=document.getElementById(id);
+p.innerHTML='<div class="tools"><button class="chip" data-k="showp">Pinyin</button><button class="chip" data-k="showv">Nghĩa</button></div><div class="list">'+arr.map(r=>'<div class="s"><div class="h">'+r[0]+'</div><div class="p">'+r[1]+'</div><div class="v">'+r[2]+'</div></div>').join('')+'</div>'+(note||'')+'<div class="note" style="margin-top:8px">Chạm vào câu để xem pinyin + nghĩa.</div>';
+p.querySelectorAll('.s').forEach(s=>s.onclick=()=>{const on=!s.classList.contains('sp');s.classList.toggle('sp',on);s.classList.toggle('sv',on)});
+p.querySelectorAll('.chip').forEach(c=>c.onclick=()=>{c.classList.toggle('on');p.classList.toggle(c.dataset.k)})}
+mk('a',T1,'<div class="note">Chữ <b>đỏ đậm</b> = đáp án các chỗ trống ①–⑧ trong đề gốc.</div>');
+document.getElementById('g').innerHTML=G.map(g=>'<div class="g"><b>'+g[1]+'</b><div class="ex">'+g[2]+'</div><small>'+g[3]+'</small></div>').join('');
+document.querySelectorAll('#tabs button').forEach(b=>b.onclick=()=>{document.querySelectorAll('#tabs button,.pane').forEach(e=>e.classList.remove('on'));b.classList.add('on');document.getElementById(b.dataset.t).classList.add('on')});
+/* Bài tập */
+const E1=[['雨下____很大。',['得','着','完'],0,'下得很大: bổ ngữ trạng thái.'],
+['田芳家住____一个四合院儿里。',['在','着','得'],0,'住在 + nơi chốn.'],
+['院子里种____一棵枣树。',['着','得','完'],0,'Câu tồn tại: nơi chốn + 种着 + N.'],
+['参观____书房，我们到客厅坐一会儿吧。',['完','着','得'],0,'参观完 = xem xong.'],
+['书都是翻译____英文的。',['成','着','得'],0,'翻译成 = dịch thành.'],
+['饺子端____了。',['出来','出去','着'],0,'端出来: bưng ra phía người nói.']];
+const E2=[['墙上挂了着几幅字画。',['墙上挂着几幅字画。','墙上着挂几幅字画。','墙上挂几幅着字画。'],0,'着 đứng ngay sau động từ, không dùng cùng 了.'],
+['雨下很大得。',['雨下得很大。','雨很大下得。','雨下很得大。'],0,'V + 得 + adj.'],
+['我们吃饺子完，又坐了一会儿。',['我们吃完饺子，又坐了一会儿。','我们吃了完饺子，又坐了一会儿。','我们饺子吃完了，又坐一会儿了。'],0,'Bổ ngữ kết quả 完 đứng ngay sau V: 吃完饺子.'],
+['书架里放很多书着。',['书架里放着很多书。','书架里放很多着书。','书架里着放很多书。'],0,'放着 + số lượng + N.'],
+['两位老师送我们走大门出。',['两位老师送我们走出大门。','两位老师送我们出走大门。','两位老师送我们走大门出去。'],0,'走出大门: V + 出 + nơi chốn.']];
+const E3=[['院子里','种着','一棵枣树'],['雨','下得','很大'],['田芳','指着','字画','给我们介绍'],['我','对中国','了解得','太少了'],['电脑','还','开着','呢']];
+const st={};
+function pick(e,i,j,item){const q=document.querySelectorAll('.q')[i];const ok=j==item[2];q.querySelectorAll('.o').forEach((b,k)=>{b.disabled=true;if(k==item[2])b.classList.add('ok');else if(k==j)b.classList.add('no')});q.querySelector('.fb').textContent=(ok?'✔ ':'✘ ')+item[3];st[e]=(st[e]||0)+(ok?1:0);if(document.querySelectorAll('.o:disabled').length>=document.querySelectorAll('.q').length*3&&false){}
+const done=[...document.querySelectorAll('.q')].every(x=>x.querySelector('.o:disabled'));if(done)document.getElementById('sc').textContent='Điểm: '+st[e]+'/'+document.querySelectorAll('.q').length}
+function choice(e,data0){st[e]=0;const data=data0.map(it=>{const o=sh(it[1]);return [it[0],o.map(x=>x[0]),o.findIndex(x=>x[1]==it[2]),it[3]]});document.getElementById('ex').innerHTML=data.map((it,i)=>'<div class="q"><div class="t">'+(i+1)+'. '+it[0]+'</div><div class="opts">'+it[1].map((o,j)=>'<button class="o" data-i="'+i+'" data-j="'+j+'">'+o+'</button>').join('')+'</div><div class="fb"></div></div>').join('')+'<div class="score" id="sc"></div><button class="btn l" id="rs">Làm lại</button>';
+document.querySelectorAll('.o').forEach(b=>b.onclick=()=>pick(e,+b.dataset.i,+b.dataset.j,data[+b.dataset.i]));document.getElementById('rs').onclick=()=>choice(e,data0)}
+function sh(a){return a.map((v,i)=>[v,i]).sort(()=>Math.random()-.5)}
+function order(){let n=0;document.getElementById('ex').innerHTML=E3.map((it,i)=>'<div class="q" data-i="'+i+'"><div class="t" style="font-size:14px;color:var(--mu)">'+(i+1)+'. Chạm các mảnh để ghép thành câu:</div><div class="ans"></div><div class="opts"></div><div style="margin-top:8px"><button class="btn">Kiểm tra</button> <button class="btn l">Xoá</button></div><div class="fb"></div></div>').join('')+'<div class="score" id="sc"></div>';
+document.querySelectorAll('.q').forEach(q=>{const i=+q.dataset.i,ans=q.querySelector('.ans'),pool=q.querySelector('.opts'),fb=q.querySelector('.fb');
+const mkb=(t)=>{const b=document.createElement('button');b.className='o';b.textContent=t;return b};
+const fill=()=>{pool.innerHTML='';ans.innerHTML='';fb.textContent='';sh(E3[i]).forEach(([t])=>{const b=mkb(t);b.onclick=()=>{const c=mkb(t);c.onclick=()=>{c.remove();b.style.display=''};ans.appendChild(c);b.style.display='none'};pool.appendChild(b)})};
+fill();const [chk,clr]=q.querySelectorAll('.btn');clr.onclick=fill;
+chk.onclick=()=>{const s=[...ans.children].map(c=>c.textContent).join('');const ok=s==E3[i].join('');fb.textContent=ok?'✔ Đúng: '+s:'✘ Chưa đúng, thử lại. Gợi ý: '+E3[i].join(' ');fb.style.color=ok?'var(--ok)':'var(--no)'}})}
+document.querySelectorAll('#sub .chip').forEach(c=>c.onclick=()=>{document.querySelectorAll('#sub .chip').forEach(x=>x.classList.remove('on'));c.classList.add('on');run(c.dataset.e)});
+function run(e){e=='1'?choice(1,E1):e=='2'?choice(2,E2):order()}
+run('1');
+</script>
+</body>
+</html>
