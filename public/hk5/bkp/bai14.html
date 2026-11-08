@@ -17,7 +17,7 @@ h1{font-size:17px;margin:0;padding:14px 16px 8px}
 .tabs button{flex:1;min-width:max-content;padding:10px 12px;background:none;border:0;border-bottom:3px solid transparent;color:var(--mu);font:inherit;font-size:14px;cursor:pointer}
 .tabs button.on{color:var(--ac);border-color:var(--ac);font-weight:600}
 .pane{display:none;padding:12px 14px 18px}.pane.on{display:block}
-.tools{display:flex;gap:8px;margin-bottom:10px}
+.tools{display:flex;gap:8px;margin-bottom:10px; align-items: center;}
 .chip{border:1px solid var(--ln);background:none;color:var(--tx);border-radius:99px;padding:5px 12px;font:inherit;font-size:13px;cursor:pointer}
 .chip.on{background:var(--ac2);border-color:var(--ac);color:var(--ac)}
 .s{padding:9px 0;border-bottom:1px dashed var(--ln);cursor:pointer}
@@ -64,9 +64,9 @@ h1{font-size:17px;margin:0;padding:14px 16px 8px}
 const T1=[
 ['罗兰：','Luó Lán:','Gửi Roland:'],
 ['你好。我已经到了泰山，我是爬上来的，没有坐缆车。','Nǐ hǎo. Wǒ yǐjīng dào le Tài Shān, wǒ shì pá shànglái de, méiyǒu zuò lǎnchē.','Xin chào. Mình đã đến Thái Sơn rồi, mình leo lên đấy, không đi cáp treo.'],
-['登上泰山，真有“一览众山小”的感觉。','Dēng shàng Tài Shān, zhēn yǒu “yì lǎn zhòng shān xiǎo” de gǎnjué.','Leo lên đỉnh Thái Sơn, đúng là có cảm giác “đứng trên cao nhìn núi non đều nhỏ bé”.'],
+['登上泰山，真有“一览众山小”的感觉。','Dēng shàng Tài Shān, zhēn yǒu “yì lǎn zhòng shān xiǎo” de gǎnjué.','Leo lên đỉnh Thái Sơn, đúng là có cảm giác “đứng trên đỉnh núi cao nhìn các núi non khác đều nhỏ bé”.'],
 ['我还在山上住了一夜，等第二天早上看日出，能站在泰山上看日出，我很高兴。','Wǒ hái zài shān shang zhù le yí yè, děng dì-èr tiān zǎoshang kàn rìchū, néng zhàn zài Tài Shān shang kàn rìchū, wǒ hěn gāoxìng.','Mình còn ở lại trên núi một đêm, đợi sáng hôm sau xem mặt trời mọc; được đứng trên Thái Sơn ngắm bình minh, mình rất vui.'],
-['当我们看到太阳一下子跳出来的时候，都兴奋地大声叫了起来，真是美极了。','Dāng wǒmen kàndào tàiyáng yíxiàzi tiào chūlái de shíhou, dōu xīngfèn de dàshēng jiào le qǐlái, zhēn shì měi jí le.','Khi chúng mình thấy mặt trời bỗng nhảy vọt lên, ai cũng phấn khích kêu to lên, đẹp tuyệt vời.'],
+['当我们看到太阳一下子跳出来的时候，都兴奋地大声叫了起来，真是美极了。','Dāng wǒmen kàndào tàiyáng yíxiàzi tiào chūlái de shíhou, dōu xīngfèn de dàshēng jiào le qǐlái, zhēn shì měi jí le.','Khi chúng mình thấy mặt trời bỗng nhô lên, ai cũng phấn khích reo hò ầm ĩ, thật sự là đẹp tuyệt vời.'],
 ['下午，我又从泰山上走下来了。','Xiàwǔ, wǒ yòu cóng Tài Shān shang zǒu xiàlái le.','Buổi chiều, mình lại đi từ trên núi xuống.'],
 ['明天我要去曲阜参观孔庙和孔林。','Míngtiān wǒ yào qù Qūfù cānguān Kǒngmiào hé Kǒnglín.','Ngày mai mình sẽ đi Khúc Phụ tham quan Khổng Miếu và Khổng Lâm.'],
 ['到那儿以后再给你介绍曲阜的情况。','Dào nàr yǐhòu zài gěi nǐ jièshào Qūfù de qíngkuàng.','Đến đó rồi mình sẽ kể cho bạn tình hình ở Khúc Phụ.'],
@@ -89,7 +89,7 @@ const G=[
 ['','要 + V · 到……以后再……','明天我要去曲阜参观 · 到那儿以后再给你介绍','要 = sẽ (dự định); …以后再… = sau khi… rồi mới/sẽ…'],
 ['','给 + người + V · V给','给你介绍 · 给了我很多帮助 · 发给你看看','给 + người đứng trước V; V + 给 = V cho ai; 看看 = lặp động từ (thử xem, nhẹ nhàng).']];
 function mk(id,arr,note){const p=document.getElementById(id);
-p.innerHTML='<div class="tools"><button class="chip" data-k="showp">Pinyin</button><button class="chip" data-k="showv">Nghĩa</button></div><div class="list">'+arr.map(r=>'<div class="s"><div class="h">'+r[0]+'</div><div class="p">'+r[1]+'</div><div class="v">'+r[2]+'</div></div>').join('')+'</div>'+(note||'')+'<div class="note" style="margin-top:8px">一览众山小: muôn dặm nước non thu cả vào trong tầm mắt</div><div class="note" style="margin-top:8px">Chạm vào câu để xem pinyin + nghĩa.</div>';
+p.innerHTML='<div class="tools"><button class="chip" data-k="showp">Pinyin</button><button class="chip" data-k="showv">Nghĩa</button><div class="note">Chạm vào câu để xem pinyin + nghĩa.</div></div><div class="list">'+arr.map(r=>'<div class="s"><div class="h">'+r[0]+'</div><div class="p">'+r[1]+'</div><div class="v">'+r[2]+'</div></div>').join('')+'</div>'+(note||'')+'<div class="note" style="margin-top:8px">一览众山小: muôn dặm nước non thu cả vào trong tầm mắt</div><div class="note" style="margin-top:8px">住 zhù khác với 往 wǎng</div>';
 p.querySelectorAll('.s').forEach(s=>s.onclick=()=>{const on=!s.classList.contains('sp');s.classList.toggle('sp',on);s.classList.toggle('sv',on)});
 p.querySelectorAll('.chip').forEach(c=>c.onclick=()=>{c.classList.toggle('on');p.classList.toggle(c.dataset.k)})}
 mk('a',T1);

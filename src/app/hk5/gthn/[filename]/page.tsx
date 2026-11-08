@@ -1,11 +1,24 @@
 import fs from "fs";
 import path from "path";
+import { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 import HtmlRenderer from "@shared/components/HtmlRenderer";
 
 import Footer from "../../../common/Footer";
 import Header from "../../../common/Header";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ filename: string }>;
+}) {
+  const { filename } = await params;
+
+  return {
+    title: filename,
+  };
+}
 
 export default async function Page({
   params,

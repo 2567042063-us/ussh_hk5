@@ -13,9 +13,9 @@ export default function Page() {
     <div className="ztai__dochieu flex min-h-screen flex-col items-center dark:bg-slate-800">
       <Header title="hk5" canonical="https://ussh-hk5-neon.vercel.app/hk5" />
       <div className="flex-1">
-        <h2 className="border-t-3 border-b-3 mb-5 border-dashed border-sky-600 py-3 text-center text-2xl font-extralight leading-tight text-sky-600 dark:text-primary-dark">
+        <h1 className="border-t-3 border-b-3 mb-5 border-dashed border-sky-600 py-3 text-center text-2xl font-extralight leading-tight text-sky-600 dark:text-primary-dark">
           第11课：我是跟旅游团一起来的。
-        </h2>
+        </h1>
         <div className="ztai__dochieu__bar">
           <button
             type="button"

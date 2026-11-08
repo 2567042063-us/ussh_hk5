@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HSK – Bài khóa 4 cột</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 24px
+    }
+
+    main {
+      max-width: 1200px;
+      margin: auto;
+      padding: 24px;
+      border-radius: 14px;
+    }
+
+    h1 {
+      font-size: 24px;
+      margin: 0 0 8px
+    }
+
+    p {
+      color: #5f6368;
+      margin: 0 0 18px
+    }
+
+    .controls {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin: 16px 0
+    }
+
+    .controls button {
+      border: 1px solid #c9ced6;
+      background: #fff;
+      border-radius: 8px;
+      padding: 9px 13px;
+      cursor: pointer;
+      font-size: 14px
+    }
+
+    .controls button:hover {
+      background: #eef3fb
+    }
+
+    .controls button.active {
+      background: #e8f0fe;
+      border-color: #7ba7ed
+    }
+
+    .table-wrap {
+      overflow-x: auto
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      table-layout: fixed
+    }
+
+    th,
+    td {
+      border: 1px solid #d9dee7;
+      padding: 11px 12px;
+      text-align: left;
+      vertical-align: top;
+      line-height: 1.65;
+      overflow-wrap: anywhere
+    }
+
+    th {
+      background: #f0f3f8;
+      font-weight: 700
+    }
+
+    th:first-child,
+    td.no {
+      width: 52px;
+      text-align: center
+    }
+
+    /* th:nth-child(2){width:34%}th:nth-child(3){width:32%}th:nth-child(4){width:34%} */
+    td.zh {
+      font-family: "KaiTi", "STKaiti", "Songti SC", "SimSun", "Noto Serif CJK SC", "Noto Serif SC", serif;
+      font-size: 1.75rem;
+      line-height: 1.55
+    }
+
+    td.py {
+      color: #64748b
+    }
+
+    td.vi {
+      color: #333
+    }
+
+    .section-row td {
+      background: #eaf0f8;
+      font-weight: 700
+    }
+
+    .section-row td:not(:nth-child(2)) {
+      color: transparent
+    }
+
+    .hidden-col {
+      display: none
+    }
+
+    @media(max-width:650px) {
+      body {
+        padding: 10px
+      }
+
+      main {
+        padding: 14px
+      }
+
+      th,
+      td {
+        padding: 8px;
+        font-size: 14px
+      }
+
+      td.zh {
+        font-size: 16px
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <h1 class="border-t-3 border-b-3 mb-10 border-dashed border-sky-600 py-3 text-center text-2xl font-extralight leading-tight text-sky-600 dark:text-primary-dark">第十三课：我的眼镜儿摔坏了. </h1>
+    <p>Bấm nút để ẩn/hiện từng cột. Có thể bật lại bất cứ lúc nào.</p>
+    <div class="controls">
+      <button type="button" data-col="zh" class="active">Ẩn tiếng Trung</button>
+      <button type="button" data-col="py" class="active">Ẩn Pinyin</button>
+      <button type="button" data-col="vi" class="active">Ẩn tiếng Việt</button>
+      <button type="button" id="showAll">Hiện tất cả</button>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>No.</th>
+            <th class="zh">Tiếng Trung</th>
+            <th class="py">Pinyin</th>
+            <th class="vi">Tiếng Việt</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="section-row">
+            <td class="no"></td>
+            <td class="zh" colspan="3">（一）要洗的照片选好了吗</td>
+          </tr>
+          <tr class="section-row">
+            <td class="no"></td>
+            <td class="zh" colspan="3">（玛丽和麦克要选一些长城的照片去洗……）</td>
+          </tr>
+          <tr>
+            <td class="no">3</td>
+            <td class="zh">玛丽：我们在长城照的照片选好了吗？下午去洗吧。</td>
+            <td class="py">Wǒmen zài Chángchéng zhào de zhàopiàn xuǎnhǎo le ma? Xiàwǔ qù xǐ ba.</td>
+            <td class="vi">Những bức ảnh chúng ta chụp ở Trường Thành chọn xong chưa? Chiều đi rửa ảnh nhé.</td>
+          </tr>
+          <tr>
+            <td class="no">4</td>
+            <td class="zh">麦克：还没选呢，咱们一起选吧。</td>
+            <td class="py">Hái méi xuǎn ne, zánmen yìqǐ xuǎn ba.</td>
+            <td class="vi">Vẫn chưa chọn nữa, chúng mình cùng chọn đi.</td>
+          </tr>
+          <tr>
+            <td class="no">5</td>
+            <td class="zh">玛丽：快<span style="color:#da341c">放到</span>电脑上看看，照得怎么样。</td>
+            <td class="py">Kuài fàng dào diànnǎo shàng kànkan, zhào de zěnmeyàng.</td>
+            <td class="vi">Mau bỏ vào máy tính xem thử chụp như thế nào.</td>
+          </tr>
+          <tr>
+            <td class="no">6</td>
+            <td class="zh">麦克：这些照得都非常好，张张都很漂亮。</td>
+            <td class="py">Zhèxiē zhào de dōu fēicháng hǎo, zhāng zhāng dōu hěn piàoliang.</td>
+            <td class="vi">Mấy tấm này đều chụp rất đẹp, tấm nào cũng đẹp cả.</td>
+          </tr>
+          <tr>
+            <td class="no">7</td>
+            <td class="zh">玛丽：这张没照好，人照小了。你再看看这张，眼睛都闭上了，像睡着了一样。</td>
+            <td class="py">Zhè zhāng méi zhào hǎo, rén zhào xiǎo le. Nǐ zài kànkan zhè zhāng, yǎnjing dōu bì shàng le,
+              xiàng shuìzháo le yíyàng.</td>
+            <td class="vi">Tấm này chụp không đẹp, người bị chụp nhỏ quá. Bạn xem tiếp tấm này xem, mắt nhắm tịt lại
+              rồi, trông như đang ngủ vậy.</td>
+          </tr>
+          <tr>
+            <td class="no">8</td>
+            <td class="zh">麦克：这张怎么样？</td>
+            <td class="py">Zhè zhāng zěnmeyàng?</td>
+            <td class="vi">Tấm này thế nào?</td>
+          </tr>
+          <tr>
+            <td class="no">9</td>
+            <td class="zh">玛丽：不怎么样。</td>
+            <td class="py">Bù zěnmeyàng.</td>
+            <td class="vi">Không ra làm sao cả / Bình thường thôi.</td>
+          </tr>
+          <tr>
+            <td class="no">10</td>
+            <td class="zh">麦克：这张照得也不太好，照虚了，一点儿也不清楚。</td>
+            <td class="py">Zhè zhāng zhào de yě bú tài hǎo, zhào xū le, yìdiǎnr yě bù qīngchu.</td>
+            <td class="vi">Tấm này chụp cũng không tốt lắm, chụp mờ rồi, chẳng rõ chút nào.</td>
+          </tr>
+          <tr>
+            <td class="no">11</td>
+            <td class="zh">玛丽：照得不好的都删了吧。这两张照得最好，像油画一样。放大几张吧。</td>
+            <td class="py">Zhào de bù hǎo de dōu shān le ba. Zhè liǎng zhāng zhào de zuì hǎo, xiàng yóuhuà yíyàng.
+              Fàngdà jǐ zhāng ba.</td>
+            <td class="vi">Mấy tấm chụp không đẹp thì xóa hết đi. Hai tấm này chụp đẹp nhất, như tranh dầu vậy. Phóng to
+              vài tấm đi.</td>
+          </tr>
+          <tr>
+            <td class="no">12</td>
+            <td class="zh">麦克：你看放成多大的？</td>
+            <td class="py">Nǐ kàn fàng chéng duō dà de?</td>
+            <td class="vi">Cậu xem phóng ra cỡ bao lớn?</td>
+          </tr>
+          <tr>
+            <td class="no">13</td>
+            <td class="zh">玛丽：放成十寸的就行了。</td>
+            <td class="py">Fàng chéng shí cùn de jiù xíng le.</td>
+            <td class="vi">Phóng thành cỡ 10 inch là được rồi.</td>
+          </tr>
+          <tr class="section-row">
+            <td class="no"></td>
+            <td class="zh" colspan="3">（二）我的眼镜儿摔坏了</td>
+          </tr>
+          <tr class="section-row">
+            <td class="no"></td>
+            <td class="zh" colspan="3">（一个下雪天的早上，在办公室里，两个人在说城市交通问题……）</td>
+          </tr>
+          <tr>
+            <td class="no">16</td>
+            <td class="zh">小白：哎呀，差点儿迟到。</td>
+            <td class="py">Āiyā, chàdiǎnr chídào.</td>
+            <td class="vi">Ôi chao, suýt chút nữa thì trễ giờ.</td>
+          </tr>
+          <tr>
+            <td class="no">17</td>
+            <td class="zh">小黄：是开车来的吗？</td>
+            <td class="py">Shì kāichē lái de ma?</td>
+            <td class="vi">Cậu lái xe đến à?</td>
+          </tr>
+          <tr>
+            <td class="no">18</td>
+            <td class="zh">小白：是，一下雪就堵车，<span style="color:#da341c">又碰上一起交通事故</span>，我的<span style="color:#da341c">车在路上整整堵了二十分钟。</span></td>
+            <td class="py">Shì, yí xià xuě jiù dǔchē, yòu pèng shàng yì qǐ jiāotōng shìgù, wǒ de chē zài lù shàng
+              zhěngzhěng dǔ le èrshí fēnzhōng.</td>
+            <td class="vi">Đúng vậy, hễ tuyết rơi là tắc đường, lại gặp phải một vụ tai nạn giao thông, xe của tớ bị kẹt
+              cứng trên đường suốt 20 phút.</td>
+          </tr>
+          <tr>
+            <td class="no">19</td>
+            <td class="zh">小黄：你的眼镜儿怎么了？</td>
+            <td class="py">Nǐ de yǎnjìngr zěnme le?</td>
+            <td class="vi">Kính của cậu sao thế?</td>
+          </tr>
+          <tr>
+            <td class="no">20</td>
+            <td class="zh">小白：别提了，今天倒霉得很。我<span style="color:#da341c">刚出门就摔了一跤，眼镜儿也掉在地上摔坏了</span>。</td>
+            <td class="py">Bié tí le, jīntiān dǎoméi de hěn. Wǒ gāng chūmén jiù shuāi le yì jiāo, yǎnjìngr yě diào zài
+              dìshang shuāihuài le.</td>
+            <td class="vi">Đừng nhắc nữa, hôm nay xui xẻo hết sức. Tớ vừa ra khỏi cửa đã bị ngã một cú, kính cũng rơi
+              xuống đất vỡ hỏng mất rồi.</td>
+          </tr>
+          <tr>
+            <td class="no">21</td>
+            <td class="zh">小黄：你几点从家里出来的？</td>
+            <td class="py">Nǐ jǐ diǎn cóng jiālǐ chūlái de?</td>
+            <td class="vi">Cậu ra khỏi nhà lúc mấy giờ?</td>
+          </tr>
+          <tr>
+            <td class="no">22</td>
+            <td class="zh">小白：六点钟就从家里出来了，你看，快八点了才到。</td>
+            <td class="py">Liù diǎn zhōng jiù cóng jiālǐ chūlái le, nǐ kàn, kuài bā diǎn le cái dào.</td>
+            <td class="vi">6 giờ đã đi ra khỏi nhà rồi, cậu xem, gần 8 giờ mới tới.</td>
+          </tr>
+          <tr>
+            <td class="no">23</td>
+            <td class="zh">小黄：所以，我还是愿意骑车上班，骑车能保证时间，还可以锻炼身体。</td>
+            <td class="py">Suǒyǐ, wǒ háishì yuànyì qíchē shàngbān, qíchē néng bǎozhèng shíjiān, hái kěyǐ duànliàn
+              shēntǐ.</td>
+            <td class="vi">Cho nên tớ vẫn thích đi xe đạp đi làm hơn, đi xe đạp bảo đảm được thời gian, lại còn tập
+              luyện sức khỏe được nữa.</td>
+          </tr>
+          <tr>
+            <td class="no">24</td>
+            <td class="zh">小白：可是，你别忘了，骑车的人太多，有的人又不<span style="color:#da341c">遵守交通规则</span>，也是<span style="color:#da341c">造成交通拥挤的主要原因之一</span>。今天的事故就是一辆自行车引起的。</td>
+            <td class="py">Kěshì, nǐ bié wàng le, qíchē de rén tài duō, yǒu de rén yòu bù zūnshǒu jiāotōng guīzé, yě shì
+              zàochéng jiāotōng yōngjǐ de zhǔyào yuányīn zhī yī. Jīntiān de shìgù jiùshì yí liàng zìxíngchē yǐnqǐ de.
+            </td>
+            <td class="vi">Nhưng mà cậu đừng quên, người đi xe đạp đông quá, có vài người lại không tuân thủ luật giao
+              thông, đó cũng là một trong những nguyên nhân chính gây ra ùn tắc giao thông. Vụ tai nạn hôm nay chính là
+              do một chiếc xe đạp gây ra đấy.</td>
+          </tr>
+          <tr>
+            <td class="no">25</td>
+            <td class="zh">小黄：有汽车的人也一年比一年多，城市交通是一个大问题。我看最好还是赶快发展地铁。</td>
+            <td class="py">Yǒu qìchē de rén yě yì nián bǐ yì nián duō, chéngshì jiāotōng shì yí gè dà wèntí. Wǒ kàn zuì
+              hǎo háishì gǎnkuài fāzhǎn dìtiě.</td>
+            <td class="vi">Người có xe hơi cũng ngày một đông hơn, giao thông thành phố là một vấn đề lớn. Tớ thấy tốt
+              nhất là mau chóng phát triển tàu điện ngầm.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+  <script>
+    const columns = ['zh', 'py', 'vi'];
+    const labels = { zh: ['Ẩn tiếng Trung', 'Hiện tiếng Trung'], py: ['Ẩn Pinyin', 'Hiện Pinyin'], vi: ['Ẩn tiếng Việt', 'Hiện tiếng Việt'] };
+    const updateColspans = () => {
+      const visibleColumnCount = columns.filter(col =>
+        !document.querySelector('th.' + col).classList.contains('hidden-col')
+      ).length;
+
+      document.querySelectorAll('td[colspan]').forEach(cell => {
+        cell.colSpan = Math.max(visibleColumnCount, 1);
+      });
+    };
+
+    document.querySelectorAll('button[data-col]').forEach(btn => btn.addEventListener('click', () => {
+      const col = btn.dataset.col, hidden = document.querySelector('th.' + col).classList.toggle('hidden-col');
+      document.querySelectorAll('td.' + col).forEach(cell => cell.classList.toggle('hidden-col', hidden));
+      btn.textContent = labels[col][hidden ? 1 : 0]; btn.classList.toggle('active', !hidden);
+      updateColspans();
+    }));
+    document.getElementById('showAll').addEventListener('click', () => {
+      columns.forEach(col => {
+        document.querySelector('th.' + col).classList.remove('hidden-col');
+        document.querySelectorAll('td.' + col).forEach(cell => cell.classList.remove('hidden-col'));
+        const btn = document.querySelector('button[data-col="' + col + '"]'); btn.textContent = labels[col][0]; btn.classList.add('active');
+      });
+      updateColspans();
+    });
+
+    updateColspans();
+  </script>
+</body>
+
+</html>

@@ -17,7 +17,7 @@ export default function Page() {
     <div className="flex min-h-screen flex-col items-center dark:bg-slate-800">
       <Header title="hk5" canonical="https://ussh-hk5-neon.vercel.app/hk5" />
 
-      <div className="container flex-1">
+      <div className="container flex-1 px-3 md:px-0">
         <nav className="z-2 sticky top-0 flex flex-wrap justify-center gap-2 bg-white py-2 text-lg font-light dark:bg-slate-800">
           {["GTHN", "Khẩu ngữ", "Đọc hiểu SC"].map((subject, index) => (
             <a

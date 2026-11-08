@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Bài khoá phụ 13</title>
 <style>
 :root{--bg:#fff;--card:#fff;--tx:#222;--mu:#6b6b6b;--ac:#b3261e;--ac2:#fbe9e7;--ln:#e5e0d5;--ok:#1b7a3d;--okb:#e3f4e8;--no:#b3261e;--nob:#fde8e6;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#17150f;--card:#221f17;--tx:#eee9dc;--mu:#a39e90;--ac:#ff8a80;--ac2:#3a2420;--ln:#3a3629;--ok:#7fd69a;--okb:#16301e;--no:#ff8a80;--nob:#3a1f1c;color-scheme:dark}}
@@ -11,7 +8,7 @@
 *{box-sizing:border-box}
 html,body{margin:0}
 body{background:var(--bg);color:var(--tx);font:16px/1.5 -apple-system,"Segoe UI",Roboto,"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;padding:12px}
-.box{max-width:720px;margin:0 auto;background:var(--card);border:1px solid var(--ln);border-radius:2px;overflow:hidden}
+.box{max-width:720px;width:100%;margin:0 auto;background:var(--card);border:1px solid var(--ln);border-radius:2px;overflow:hidden}
 h1{font-size:17px;margin:0;padding:14px 16px 8px}
 .tabs{display:flex;border-bottom:1px solid var(--ln);overflow-x:auto}
 .tabs button{flex:1;min-width:max-content;padding:10px 12px;background:none;border:0;border-bottom:3px solid transparent;color:var(--mu);font:inherit;font-size:14px;cursor:pointer}
@@ -66,7 +63,7 @@ const T1=[
 ['我的一个朋友在首都剧场附近开了一个小公司。','Wǒ de yí ge péngyou zài Shǒudū Jùchǎng fùjìn kāi le yí ge xiǎo gōngsī.','Một người bạn của tôi đã mở một công ty nhỏ gần Nhà hát Thủ Đô.'],
 ['那天很忙，职员们都没有吃午饭，','Nà tiān hěn máng, zhíyuánmen dōu méiyǒu chī wǔfàn,','Hôm đó rất bận, các nhân viên đều chưa ăn trưa,'],
 ['她为了给大家买吃的，就打的去了“麦当劳”，买好了饭就又打的往回走。','Tā wèile gěi dàjiā mǎi chī de, jiù dǎ dī qù le “Màidāngláo”, mǎi hǎo le fàn jiù yòu dǎ dī wǎng huí zǒu.','cô ấy vì muốn mua đồ ăn cho mọi người, liền bắt taxi đến McDonald’s, mua xong cơm lại bắt taxi đi về.'],
-['司机问她去哪儿，她说：“首都剧场。”','Sījī wèn tā qù nǎr, tā shuō: “Shǒudū jùchǎng.”','Tài xế hỏi cô đi đâu, cô nói: “Nhà hát Thủ Đô.” (nhưng phát âm thành jīchǎng – sân bay)'],
+['司机问她去哪儿，她说：“首都jī场。”','Sījī wèn tā qù nǎr, tā shuō: “Shǒudū jùchǎng.”','Tài xế hỏi cô đi đâu, cô nói: “Nhà hát Thủ Đô.” (nhưng phát âm thành jīchǎng – sân bay)'],
 ['司机奇怪地看了她一眼，但还是开车走了。','Sījī qíguài de kàn le tā yì yǎn, dàn háishì kāichē zǒu le.','Tài xế nhìn cô một cách kỳ lạ, nhưng vẫn lái xe đi.'],
 ['走了好长时间，我的朋友觉得不对，就对司机说，错了。','Zǒu le hǎo cháng shíjiān, wǒ de péngyou juéde bú duì, jiù duì sījī shuō, cuò le.','Đi đã rất lâu, bạn tôi thấy không ổn, liền nói với tài xế: “Nhầm rồi.”'],
 ['司机说没错，这就是去首都机场的路。','Sījī shuō méi cuò, zhè jiù shì qù Shǒudū Jīchǎng de lù.','Tài xế nói không nhầm, đây chính là đường đi sân bay Thủ Đô.'],
@@ -111,10 +108,10 @@ const G=[
 ['2','一A比一A + adj','一年比一年多','Mức độ tăng dần: năm sau hơn năm trước.'],
 ['2','怕 · 得(děi) · 最好 · 也','怕迟到 · 得早点出发 · 最好赶快… · 我想也是','怕 = sợ (không muốn); 得 = phải; 最好 = tốt nhất; 也 = cũng vậy.']];
 function mk(id,arr,note){const p=document.getElementById(id);
-p.innerHTML='<div class="tools"><button class="chip" data-k="showp">Pinyin</button><button class="chip" data-k="showv">Nghĩa</button></div><div class="list">'+arr.map(r=>'<div class="s"><div class="h">'+r[0]+'</div><div class="p">'+r[1]+'</div><div class="v">'+r[2]+'</div></div>').join('')+'</div>'+(note||'')+'<div class="note" style="margin-top:8px">Chạm vào câu để xem pinyin + nghĩa.</div>';
+p.innerHTML='<div class="tools"><button class="chip" data-k="showp">Pinyin</button><button class="chip" data-k="showv">Nghĩa</button><div class="note" style="margin-top:8px">Hoặc chạm vào câu để xem pinyin + nghĩa.</div></div><div class="list">'+arr.map(r=>'<div class="s"><div class="h">'+r[0]+'</div><div class="p">'+r[1]+'</div><div class="v">'+r[2]+'</div></div>').join('')+'</div>'+(note||'');
 p.querySelectorAll('.s').forEach(s=>s.onclick=()=>{const on=!s.classList.contains('sp');s.classList.toggle('sp',on);s.classList.toggle('sv',on)});
 p.querySelectorAll('.chip').forEach(c=>c.onclick=()=>{c.classList.toggle('on');p.classList.toggle(c.dataset.k)})}
-mk('a',T1,'<div class="note">Lưu ý: 回到 = chắc chắn đã về tới nơi.</div>');mk('b',T2);
+mk('a',T1,'<div class="note"><p>Lưu ý: </p><p>打的往回走 = giới từ 往 +  từ chỉ phương hướng. Ko phải BNXH</p><p>回到 = chắc chắn đã về tới nơi. BNXH đơn</p></div>');mk('b',T2);
 document.getElementById('g').innerHTML=G.map(g=>'<div class="g"><b>'+g[1]+'</b><span class="tag">Bài '+g[0]+'</span><div class="ex">'+g[2]+'</div><small>'+g[3]+'</small></div>').join('');
 document.querySelectorAll('#tabs button').forEach(b=>b.onclick=()=>{document.querySelectorAll('#tabs button,.pane').forEach(e=>e.classList.remove('on'));b.classList.add('on');document.getElementById(b.dataset.t).classList.add('on')});
 /* Bài tập */
