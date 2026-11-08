@@ -23,7 +23,7 @@ export default function Header({
         <nav aria-label="Global" className="container mx-auto">
           <div className="relative flex items-center px-3 py-2 md:px-0 md:py-5">
             <Link className="flex-none font-semibold" href="/">
-              <span className="bg-linear-to-r bg-size-[200%_auto] mb-20 animate-linear from-primary via-tertiary to-primary bg-clip-text text-4xl font-bold text-transparent">
+              <span className="bg-linear-to-r bg-size-[200%_auto] mb-20 animate-linear from-yellow-300 via-sky-400 to-yellow-300 bg-clip-text text-4xl font-bold text-transparent">
                 ussh hk5
               </span>
             </Link>

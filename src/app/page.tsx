@@ -16,14 +16,35 @@ export default function Home() {
             <HeroBanner />
           </div>
 
-          <div className="max-w-125 ml-auto flex-1 pr-0 text-center font-light sm:pr-5">
-            <div className="mt-5 flex h-full flex-col items-end justify-center">
-              <p className="bg-linear-to-r bg-size-[200%_auto] from-indigo-400 via-sky-500 to-indigo-400 bg-clip-text text-xl font-light text-transparent md:text-2xl">
+          <div className="max-w-125 flex-1 pr-0 text-center font-light sm:pr-5 md:ml-auto">
+            <div className="mt-5 flex h-full flex-col items-center justify-center md:items-end">
+              <p className="bg-linear-to-r bg-size-[200%_auto] from-yellow-400 via-sky-500 to-yellow-400 bg-clip-text text-xl font-light text-transparent md:text-2xl">
                 hi, chúc các bạn
               </p>
-              <p className="bg-linear-to-r bg-size-[200%_auto] mt-5 animate-linear from-indigo-400 via-sky-500 to-indigo-400 bg-clip-text text-3xl font-light text-transparent md:text-4xl">
+              {/* animate-linear */}
+              {/* <p className="bg-linear-to-r bg-size-[200%_auto] mt-5 from-rose-500 via-fuchsia-500 to-rose-500 bg-clip-text text-3xl font-light text-transparent md:text-4xl">
                 học tốt thi tốt
-              </p>
+              </p> */}
+
+              <div className="mt-5 text-3xl font-light text-red-600 transition-transform duration-300 ease-in-out md:text-4xl">
+                <div className="text-animation">
+                  <span>h</span>
+                  <span>ọ</span>
+                  <span>c</span>
+                  <span className="px-2"></span>
+                  <span>t</span>
+                  <span>ố</span>
+                  <span>t</span>
+                  <span className="px-2"></span>
+                  <span>t</span>
+                  <span>h</span>
+                  <span>i</span>
+                  <span className="px-2"></span>
+                  <span>t</span>
+                  <span>ố</span>
+                  <span>t</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>

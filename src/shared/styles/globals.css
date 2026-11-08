@@ -87,6 +87,76 @@ button:focus {
   flex-shrink: 0;
 }
 
+/* animation học tốt thi tốt */
+@keyframes move-out {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.text-animation span {
+  display: inline-block;
+  animation: move-out 0.6s ease infinite;
+}
+
+.text-animation span {
+  animation: move-out 0.6s ease infinite;
+}
+
+.text-animation span:nth-child(1) {
+  animation-delay: 0s;
+}
+.text-animation span:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.text-animation span:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.text-animation span:nth-child(4) {
+  animation-delay: 0.3s;
+}
+.text-animation span:nth-child(5) {
+  animation-delay: 0.4s;
+}
+.text-animation span:nth-child(6) {
+  animation-delay: 0.5s;
+}
+.text-animation span:nth-child(7) {
+  animation-delay: 0.6s;
+}
+.text-animation span:nth-child(8) {
+  animation-delay: 0s;
+}
+.text-animation span:nth-child(9) {
+  animation-delay: 0.1s;
+}
+.text-animation span:nth-child(10) {
+  animation-delay: 0.2s;
+}
+.text-animation span:nth-child(11) {
+  animation-delay: 0.3s;
+}
+.text-animation span:nth-child(12) {
+  animation-delay: 0.4s;
+}
+.text-animation span:nth-child(13) {
+  animation-delay: 0.5s;
+}
+.text-animation span:nth-child(14) {
+  animation-delay: 0.6s;
+}
+.text-animation span:nth-child(15) {
+  animation-delay: 0s;
+}
+
+/* hk5 */
+
 .container-bt {
   max-width: 720px;
   margin: 0 auto;
