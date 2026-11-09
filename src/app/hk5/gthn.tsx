@@ -6,6 +6,10 @@ import NdthiNPDsc3 from "./NdthiNPDsc3";
 
 const btHrefs = [
   {
+    name: "Bài tập Bổ ngữ xu hướng",
+    href: "/hk5/baitap/bt-bnxh",
+  },
+  {
     name: "Bài tập Bổ ngữ kết quả",
     href: "/hk5/baitap/bt-bnkq",
   },

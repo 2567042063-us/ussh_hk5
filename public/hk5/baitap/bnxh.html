@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<!-- <meta charset="utf-8"> -->
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"> -->
+<!-- <title>去图书城 – Bổ ngữ xu hướng</title> -->
+<style>
+.ztai_bnxh{box-sizing:border-box;
+--bg:#f0f9ff;--surface:#fff;--ink:#0c2d48;--muted:#526b7f;--line:#cbdfea;--accent:#0284c7;--mark:#bae6fd;--ok:#0284c7;--bad:#b3261e}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .ztai_bnxh{--bg:#082f49;--surface:#0c4a6e;--ink:#e0f2fe;--muted:#bae6fd;--line:#075985;--accent:#38bdf8;--mark:#075985;--ok:#38bdf8;--bad:#ff8a80}}
+:root[data-theme="dark"] .ztai_bnxh,.ztai_bnxh[data-theme="dark"]{--bg:#082f49;--surface:#0c4a6e;--ink:#e0f2fe;--muted:#bae6fd;--line:#075985;--accent:#38bdf8;--mark:#075985;--ok:#38bdf8;--bad:#ff8a80}
+.ztai_bnxh,.ztai_bnxh *,.ztai_bnxh *::before,.ztai_bnxh *::after{box-sizing:border-box}
+/* .ztai_bnxh{margin:0;background:var(--bg);color:var(--ink);font:17px/1.7 "Noto Sans SC","PingFang SC","Microsoft YaHei",system-ui,sans-serif} */
+/* .ztai_bnxh{max-width:760px;margin:0 auto;padding:calc(24px + env(safe-area-inset-top,0px)) 18px calc(64px + env(safe-area-inset-bottom,0px))} */
+.ztai_bnxh h1{font-size:1.7rem;margin:.2em 0 .1em}
+/* .ztai_bnxh h2{font-size:1.25rem;margin:2.2em 0 .6em;padding-bottom:.3em;border-bottom:2px solid var(--accent)} */
+.ztai_bnxh .sub{color:var(--muted);margin:0 0 1.2em;font-size:.95rem}
+.ztai_bnxh .text p{margin:0 0 .9em;text-indent:2em;font-size:1.5rem;line-height:2}
+.ztai_bnxh .bar{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0}
+.ztai_bnxh button{font:inherit;font-size:.95rem;padding:8px 16px;border-radius:8px;border:1px solid var(--accent);background:var(--surface);color:var(--accent);cursor:pointer}
+.ztai_bnxh button.primary{background:var(--accent);color:var(--bg)}
+/* .ztai_bnxh button:focus-visible,.ztai_bnxh input:focus-visible{outline:3px solid var(--accent);outline-offset:2px} */
+.ztai_bnxh .hl mark.dc{background:var(--mark);color:inherit;border-radius:3px;padding:0 2px}
+.ztai_bnxh mark.dc{background:none;color:inherit;padding:0}
+.ztai_bnxh .hl mark.dc{background:var(--mark)}
+.ztai_bnxh .ex{font-size:1.5em;list-style:none;padding:0;margin:0;counter-reset:q}
+.ztai_bnxh .ex li{counter-increment:q;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 14px 12px 46px;margin:0 0 10px;position:relative;line-height:2.2}
+.ztai_bnxh .ex li::before{content:counter(q);position:absolute;left:14px;top:12px;font-weight:700;color:var(--accent)}
+.ztai_bnxh .hint{display:block;font-size:.82rem;color:var(--muted);line-height:1.4;margin-top:2px}
+.ztai_bnxh input{font:inherit;width:4.6em;text-align:center;border:0;border-bottom:2px solid var(--muted);background:transparent;color:var(--ink);padding:0 2px}
+.ztai_bnxh input.ok{border-color:var(--ok);color:var(--ok)}
+.ztai_bnxh input.bad{border-color:var(--bad);color:var(--bad)}
+.ztai_bnxh .ans{color:var(--ok);font-size:.9rem;font-weight:600}
+.ztai_bnxh #score{font-weight:700;margin-left:6px;align-self:center}
+</style>
+</head>
+<body>
+<main class="ztai_bnxh">
+<p class="text-center">第十四课 钥匙忘拔下来了</p>
+
+<h2>1. Đoạn văn</h2>
+<div class="bar"><button id="tg" class="primary" aria-pressed="false">Tô sáng bổ ngữ xu hướng</button></div>
+<div class="text" id="text">
+<p>星期天,我和麦克一起骑车到图书城去买书。图书城离我们学校比较远。那天刮风,我们骑了一个多小时才骑到。图书城很大,里边有很多书店。每个书店我们都想<mark class="dc">进去</mark>看看。我们从一个书店<mark class="dc">走出来</mark>,又<mark class="dc">走进</mark>另一个书店。看到书店里有各种各样的书,我很兴奋。从这个书架上<mark class="dc">拿下来</mark>一本看看,再<mark class="dc">放上去</mark>,又从另一个书架上<mark class="dc">抽出来</mark>一本看看。我挑了几本历史书,麦克选了一些中文小说儿。快放寒假了,我们都想买一些书<mark class="dc">带回</mark>国<mark class="dc">去</mark>。</p>
+<p>除了买书以外,我们还想买一些小礼品,<mark class="dc">带回去</mark>送朋友。于是我们又<mark class="dc">走进</mark>一家商场<mark class="dc">去</mark>。</p>
+<p>这家商场里边什么商品都有。我买了一些京剧脸谱的小饰物,还买了一些丝织品。麦克买了很多漂亮的钥匙链儿,还买了不少小玩具,有小熊猫、小汽车什么的。他说,这些玩具<mark class="dc">带回去</mark>送给小朋友们,他们肯定喜欢。</p>
+<p>售货员看我们买的东西多,不好拿,就给我们一人找了一个小纸箱。我们买的书和礼品正好都能<mark class="dc">放进去</mark>。</p>
+<p>从商场<mark class="dc">出来</mark>,已经十二点多了。我和麦克<mark class="dc">走进</mark>一个小饭馆儿<mark class="dc">去</mark>吃午饭。我们要了一盘饺子和几个菜,吃得很舒服。</p>
+<p>吃完饭,我们就骑车<mark class="dc">回来</mark>了。回到学校,我又累又困,想赶快回到宿舍去洗个澡,休息休息。我从车上<mark class="dc">拿下</mark>小纸箱。<mark class="dc">走进</mark>楼<mark class="dc">来</mark>,看见电梯门口贴了张通知:“电梯维修,请走楼梯。”我住十层,没办法,只好<mark class="dc">爬上去</mark>。我手里提着一箱子东西,一步一步地往上爬。爬了半天才爬到十层。到了门口,我<mark class="dc">放下</mark>箱子,要<mark class="dc">拿出</mark>钥匙开门的时候,却发现钥匙不见了,找了半天也没有找到。啊!我忽然<mark class="dc">想起来</mark>了,钥匙还在楼下自行车上插着呢,我忘<mark class="dc">拔下来</mark>了。这时,我真是哭笑不得。</p>
+<p>我刚要<mark class="dc">跑下</mark>楼<mark class="dc">去</mark>,就看见麦克也<mark class="dc">爬上来</mark>了,他手里拿的正是我的那串儿钥匙。</p>
+</div>
+
+<h2>2. Bài tập: điền động từ + bổ ngữ phù hợp</h2>
+<p class="sub">Mỗi chỗ trống điền cả động từ và bổ ngữ (ví dụ 走进, 拿下来). Có chỗ bổ ngữ bị tách bởi tân ngữ nên có hai ô.</p>
+<div class="bar">
+<button class="primary" id="chk">Kiểm tra</button>
+<button id="show">Hiện đáp án</button>
+<button id="rst">Làm lại</button>
+<span id="score"></span>
+</div>
+<ol class="ex" id="ex"></ol>
+<h2>3. Bài tập 5: điền bổ ngữ xu hướng kép</h2>
+<p class="sub">在空格里填入适当的复合趋向补语 (Điền bổ ngữ xu hướng kép thích hợp vào chỗ trống). Chỉ điền bổ ngữ, ví dụ 上来, 下去.</p>
+<div class="bar">
+<button class="primary" id="chk2">Kiểm tra</button>
+<button id="show2">Hiện đáp án</button>
+<button id="rst2">Làm lại</button>
+<span id="score2" style="font-weight:700;align-self:center"></span>
+</div>
+<ol class="ex" id="ex2"></ol>
+</main>
+
+<script>
+var Q=[
+["每个书店我们都想",["进去"],"看看。","đi vào (ra xa người nói)"],
+["我们从一个书店",["走出来"],",又",["走进"],"另一个书店。","đi ra (về phía người nói) / đi vào"],
+["从这个书架上",["拿下来"],"一本看看,再",["放上去"],",又从另一个书架上",["抽出来"],"一本看看。","lấy xuống / đặt lên / rút ra"],
+["我们都想买一些书",["带回"],"国",["去"],"。","mang về (nước), hướng đi xa người nói"],
+["我们还想买一些小礼品,",["带回去"],"送朋友。","mang về"],
+["于是我们又",["走进"],"一家商场",["去"],"。","đi vào (tân ngữ nơi chốn chen giữa)"],
+["这些玩具",["带回去"],"送给小朋友们。","mang về"],
+["我们买的书和礼品正好都能",["放进去"],"。","đặt vào trong"],
+["从商场",["出来"],",已经十二点多了。","ra (về phía người nói)"],
+["我和麦克",["走进"],"一个小饭馆儿",["去"],"吃午饭。","đi vào"],
+["吃完饭,我们就骑车",["回来"],"了。","quay về (về phía người nói)"],
+["我从车上",["拿下"],"小纸箱。","lấy xuống"],
+["",["走进"],"楼",["来"],",看见电梯门口贴了张通知。","đi vào (người nói ở trong tòa nhà)"],
+["电梯维修,没办法,只好",["爬上去"],"。","leo lên (ra xa người nói)"],
+["我放下箱子,要",["拿出"],"钥匙开门的时候,……","lấy ra"],
+["我放",["下"],"箱子,要拿出钥匙开门。","điền bổ ngữ đơn: đặt xuống",1],
+["啊!我忽然",["想起来"],"了。","nhớ ra (nghĩa mở rộng)"],
+["钥匙还插着呢,我忘",["拔下来"],"了。","rút xuống / nhổ ra"],
+["我刚要",["跑下"],"楼",["去"],",就看见麦克也",["爬上来"],"了。","chạy xuống / leo lên (về phía người nói)"]
+];
+var ex=document.getElementById('ex');
+Q=Q.filter(function(q){return q[q.length-1]!==1});
+Q.forEach(function(q){
+  var li=document.createElement('li');
+  for(var i=0;i<q.length-1;i++){
+    if(typeof q[i]==='string'){li.appendChild(document.createTextNode(q[i]));}
+    else{var inp=document.createElement('input');inp.type='text';inp.setAttribute('data-a',q[i][0]);inp.size=4;inp.setAttribute('aria-label','đáp án');li.appendChild(inp);}
+  }
+  var h=document.createElement('span');h.className='hint';h.textContent='Gợi ý: '+q[q.length-1];li.appendChild(h);
+  ex.appendChild(li);
+});
+function ins(){return ex.querySelectorAll('input')}
+document.getElementById('chk').onclick=function(){
+  var ok=0,all=0;
+  ins().forEach(function(i){all++;var v=i.value.trim();
+    i.classList.remove('ok','bad');
+    if(!v)return;
+    if(v===i.dataset.a){i.classList.add('ok');ok++}else i.classList.add('bad');});
+  document.getElementById('score').textContent=ok+' / '+all+' ô đúng';
+};
+document.getElementById('show').onclick=function(){
+  ins().forEach(function(i){i.value=i.dataset.a;i.classList.remove('bad');i.classList.add('ok');});
+};
+document.getElementById('rst').onclick=function(){
+  ins().forEach(function(i){i.value='';i.classList.remove('ok','bad');});
+  document.getElementById('score').textContent='';
+};
+var tg=document.getElementById('tg'),tx=document.getElementById('text');
+tg.onclick=function(){var on=tx.classList.toggle('hl');tg.setAttribute('aria-pressed',on);tg.textContent=on?'Tắt tô sáng':'Tô sáng bổ ngữ xu hướng';};
+var Q2=[
+["我们爬了半个多小时,才爬",["上来"],",往山下一看,风景漂亮极了。","người nói đang ở trên đỉnh núi"],
+["小心点儿,别掉",["下去"],"。","rơi xuống, ra xa người nói"],
+["她不小心,从楼梯上摔",["下来"],",腿摔坏了。","ngã xuống"],
+["太累了,我们找个地方,坐",["下来"],"休息一会儿吧。","ngồi xuống"],
+["我看见前边走",["来"],"一个人,就走",["过去"],"问她去图书城怎么走。","đi tới (về phía mình) / đi sang (chỗ người đó)"],
+["你别下来了,我给你拿",["上去"],"。","người nói ở dưới, mang lên"],
+["她从口袋里拿",["出来"],"一个钱包儿,又从钱包儿里拿",["出来"],"三千块钱,放在我手里,说:“快给你妈妈寄",["回去"],"吧,看病要紧。”","lấy ra / lấy ra / gửi về"],
+["“救命啊!有人掉",["进"],"水里",["去"],"了!”听见喊声,他很快脱下上衣,跑了",["过去"],"。人们看见他跳",["下"],"水",["去"],",向那个孩子游了",["过去"],"。","rơi xuống nước / chạy tới / nhảy xuống / bơi tới"]
+];
+var e2=document.getElementById('ex2');
+Q2.forEach(function(q){var li=document.createElement('li');
+ for(var i=0;i<q.length-1;i++){
+  if(typeof q[i]==='string'){li.appendChild(document.createTextNode(q[i]));}
+  else{var n=document.createElement('input');n.type='text';n.setAttribute('data-a',q[i][0]);n.size=4;n.setAttribute('aria-label','đáp án');li.appendChild(n);}
+ }
+ var h=document.createElement('span');h.className='hint';h.textContent='Gợi ý: '+q[q.length-1];li.appendChild(h);e2.appendChild(li);});
+function ins2(){return e2.querySelectorAll('input')}
+document.getElementById('chk2').onclick=function(){var ok=0,all=0;
+ ins2().forEach(function(i){all++;var v=i.value.trim();i.classList.remove('ok','bad');if(!v)return;
+  if(v===i.dataset.a){i.classList.add('ok');ok++}else i.classList.add('bad');});
+ document.getElementById('score2').textContent=ok+' / '+all+' ô đúng';};
+document.getElementById('show2').onclick=function(){ins2().forEach(function(i){i.value=i.dataset.a;i.classList.remove('bad');i.classList.add('ok');});};
+document.getElementById('rst2').onclick=function(){ins2().forEach(function(i){i.value='';i.classList.remove('ok','bad');});document.getElementById('score2').textContent='';};
+</script>
+</body>
+</html>
