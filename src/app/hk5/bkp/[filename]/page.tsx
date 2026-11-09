@@ -74,8 +74,10 @@ export default async function Page({
                 // rel="noopener noreferrer"
                 // className={``}
                 className={clsx(
-                  "inline-block px-5 text-slate-500 hover:text-yellow-500 dark:text-sky-400 dark:hover:text-yellow-300",
-                  fileName === filename ? classNameActive : "",
+                  "inline-block px-5 text-slate-500 dark:text-sky-400",
+                  fileName === filename
+                    ? classNameActive
+                    : "hover:text-yellow-500 dark:hover:text-yellow-300",
                 )}
               >
                 Bài khoá phụ _ {fileName}
@@ -83,7 +85,7 @@ export default async function Page({
             </div>
           ))}
         </div>
-        <div className="flex min-w-0 flex-1 flex-col gap-1.5 pl-5">
+        <div className="flex min-w-0 flex-1 flex-col gap-1.5 pl-0 md:pl-5">
           <HtmlRenderer htmlContent={htmlContent} />
         </div>
       </div>
