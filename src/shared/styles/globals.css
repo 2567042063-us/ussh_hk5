@@ -108,7 +108,7 @@ button:focus {
 .text-animation span {
   animation: move-out 0.6s ease infinite;
 }
-
+/* học */
 .text-animation span:nth-child(1) {
   animation-delay: 0s;
 }
@@ -118,41 +118,35 @@ button:focus {
 .text-animation span:nth-child(3) {
   animation-delay: 0.2s;
 }
-.text-animation span:nth-child(4) {
-  animation-delay: 0.3s;
-}
+/* tốt */
 .text-animation span:nth-child(5) {
-  animation-delay: 0.4s;
+  animation-delay: 0.3s;
 }
 .text-animation span:nth-child(6) {
-  animation-delay: 0.5s;
-}
-.text-animation span:nth-child(7) {
-  animation-delay: 0.6s;
-}
-.text-animation span:nth-child(8) {
-  animation-delay: 0s;
-}
-.text-animation span:nth-child(9) {
-  animation-delay: 0.1s;
-}
-.text-animation span:nth-child(10) {
-  animation-delay: 0.2s;
-}
-.text-animation span:nth-child(11) {
-  animation-delay: 0.3s;
-}
-.text-animation span:nth-child(12) {
   animation-delay: 0.4s;
 }
-.text-animation span:nth-child(13) {
+.text-animation span:nth-child(7) {
   animation-delay: 0.5s;
 }
-.text-animation span:nth-child(14) {
+/* thi */
+.text-animation span:nth-child(9) {
   animation-delay: 0.6s;
 }
-.text-animation span:nth-child(15) {
+.text-animation span:nth-child(10) {
   animation-delay: 0s;
+}
+.text-animation span:nth-child(11) {
+  animation-delay: 0.1s;
+}
+/* tốt */
+.text-animation span:nth-child(13) {
+  animation-delay: 0.2s;
+}
+.text-animation span:nth-child(14) {
+  animation-delay: 0.3s;
+}
+.text-animation span:nth-child(15) {
+  animation-delay: 0.4s;
 }
 
 /* hk5 */

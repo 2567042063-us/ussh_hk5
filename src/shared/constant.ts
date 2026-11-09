@@ -31,5 +31,6 @@ export const MAIN_NAV = [
   // },
 ];
 
+// fileName === filename ? classNameActive : "",
 export const classNameActive =
   "bg-linear-to-r bg-size-[160%_auto] cursor-default border-yellow-400 from-yellow-400 via-sky-500 to-yellow-400 bg-clip-text text-transparent";

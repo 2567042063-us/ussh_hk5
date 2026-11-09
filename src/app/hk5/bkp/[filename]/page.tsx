@@ -60,8 +60,8 @@ export default async function Page({
     <div className="flex min-h-screen flex-col items-center dark:bg-slate-800">
       <Header title="hk5" canonical="https://ussh-hk5-neon.vercel.app/hk5" />
 
-      <div className="container mx-auto grid grid-cols-1 gap-3 md:grid-cols-[0.5fr_1fr]">
-        <div className="flex flex-col gap-1.5 rounded-sm">
+      <div className="container mx-auto flex flex-col gap-3 md:flex-row">
+        <div className="md:w-50 flex flex-col gap-1.5 rounded-sm md:shrink-0">
           {filesBkp.map((fileName) => (
             <div
               key={fileName}
@@ -83,7 +83,7 @@ export default async function Page({
             </div>
           ))}
         </div>
-        <div className="flex flex-col gap-1.5">
+        <div className="flex min-w-0 flex-1 flex-col gap-1.5 pl-5">
           <HtmlRenderer htmlContent={htmlContent} />
         </div>
       </div>
