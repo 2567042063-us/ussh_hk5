@@ -60,7 +60,7 @@ export default async function Page({
     <div className="flex min-h-screen flex-col items-center dark:bg-slate-800">
       <Header title="hk5" canonical="https://ussh-hk5-neon.vercel.app/hk5" />
 
-      <div className="container mx-auto flex flex-col gap-3 md:flex-row">
+      <div className="container mx-auto flex flex-1 flex-col gap-3 md:flex-row">
         <div className="md:w-50 flex flex-col gap-1.5 rounded-sm md:shrink-0">
           {filesBkp.map((fileName) => (
             <div
@@ -70,9 +70,6 @@ export default async function Page({
               <Link
                 href={`/hk5/bkp/${fileName}`}
                 prefetch={false}
-                // target="_blank"
-                // rel="noopener noreferrer"
-                // className={``}
                 className={clsx(
                   "inline-block px-5 text-slate-500 dark:text-sky-400",
                   fileName === filename

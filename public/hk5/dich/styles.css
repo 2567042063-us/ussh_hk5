@@ -1,0 +1,25 @@
+:root{--bg:#fff;--card:#fff;--tx:#12332a;--mut:#5b7a6f;--pri:#0284c7;--ok:#047857;--bad:#b91c1c;--bd:#cfe5db;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1a16;--card:#17261f;--tx:#e6f4ee;--mut:#8fb0a3;--pri:#0284c7;--ok:#34d399;--bad:#f87171;--bd:#2a4339;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0f1a16;--card:#17261f;--tx:#e6f4ee;--mut:#8fb0a3;--pri:#0284c7;--ok:#34d399;--bad:#f87171;--bd:#2a4339;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}
+main{max-width:640px;margin:0 auto;padding:16px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:16px;padding:20px;margin-top:12px}
+h1{font-size:20px;margin:8px 0 0}
+.bar{height:8px;background:var(--bd);border-radius:8px;overflow:hidden;margin-top:8px}
+.bar i{display:block;height:100%;background:var(--pri);width:0}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:space-between}
+.mut{color:var(--mut);font-size:14px}
+.card button{font:inherit;border:0;border-radius:12px;padding:10px 16px;background:var(--pri);color:#fff;cursor:pointer}
+.card button.alt{background:transparent;color:var(--tx);border:1px solid var(--bd)}
+.spk{display:flex;gap:12px;justify-content:center;margin:8px 0 16px}
+.spk button{font-size:28px;width:84px;height:84px;border-radius:50%}
+.spk button.alt{font-size:24px;width:64px;height:64px;align-self:center}
+textarea{width:100%;box-sizing:border-box;font:inherit;font-size:18px;padding:12px;border-radius:12px;border:1px solid var(--bd);background:var(--bg);color:var(--tx);resize:vertical;min-height:84px}
+.res{margin-top:14px;padding:12px;border-radius:12px;border:1px solid var(--bd)}
+.res.ok{border-color:var(--ok)}.res.no{border-color:var(--bad)}
+.zh{font-size:24px;line-height:1.5}.py{color:var(--mut);margin-top:4px}
+.good{color:var(--ok);font-weight:600}.bad{color:var(--bad);font-weight:600}
+.hide{display:none}
+.vi{font-size:20px;line-height:1.6;margin:18px 0}
