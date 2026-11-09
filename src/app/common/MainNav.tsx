@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import clsx from "clsx";
 
-import { MAIN_NAV } from "@shared/constant";
+import { classNameActive, MAIN_NAV } from "@shared/constant";
 
 import ThemeSwitch from "./ThemeSwitch";
 
@@ -19,7 +19,7 @@ export default function MainNav() {
           className={clsx(
             "relative ml-8 border-b-[5px] text-lg font-light lowercase",
             currentRoute === item.href
-              ? "bg-linear-to-r bg-size-[160%_auto] cursor-default border-yellow-400 from-yellow-400 via-sky-500 to-yellow-400 bg-clip-text text-transparent"
+              ? classNameActive
               : "border-transparent hover:text-sky-500 dark:hover:text-sky-300",
           )}
         >

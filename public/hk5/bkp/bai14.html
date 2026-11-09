@@ -5,7 +5,7 @@
 </head>
 <body>
 <div class="box">
-<h1>📖 Bài khoá phụ – Bài 14</h1>
+<h1>📖 Bài khoá phụ - Bài 14 - trang 49</h1>
 <div class="tabs" id="tabs">
 <button class="on" data-t="a">Bài khoá</button><button data-t="g">Ngữ pháp</button><button data-t="x">Bài tập</button>
 </div>
@@ -45,7 +45,7 @@ const G=[
 ['','要 + V · 到……以后再……','明天我要去曲阜参观 · 到那儿以后再给你介绍','要 = sẽ (dự định); …以后再… = sau khi… rồi mới/sẽ…'],
 ['','给 + người + V · V给','给你介绍 · 给了我很多帮助 · 发给你看看','给 + người đứng trước V; V + 给 = V cho ai; 看看 = lặp động từ (thử xem, nhẹ nhàng).']];
 function mk(id,arr,note){const p=document.getElementById(id);
-p.innerHTML='<div class="tools"><button class="chip" data-k="showp">Pinyin</button><button class="chip" data-k="showv">Nghĩa</button><div class="note">Chạm vào câu để xem pinyin + nghĩa.</div></div><div class="list">'+arr.map(r=>'<div class="s"><div class="h">'+r[0]+'</div><div class="p">'+r[1]+'</div><div class="v">'+r[2]+'</div></div>').join('')+'</div>'+(note||'')+'<div class="note" style="margin-top:8px">一览众山小: muôn dặm nước non thu cả vào trong tầm mắt</div><div class="note" style="margin-top:8px">住 zhù khác với 往 wǎng</div>';
+p.innerHTML='<div class="tools"><button class="chip" data-k="showp">Pinyin</button><button class="chip" data-k="showv">Nghĩa</button><div class="note">Chạm vào câu để xem pinyin + nghĩa.</div></div><div class="list">'+arr.map(r=>'<div class="s"><div class="h">'+r[0]+'</div><div class="p">'+r[1]+'</div><div class="v">'+r[2]+'</div></div>').join('')+'</div>'+(note||'')+'<div class="note" style="margin-top:8px">一览众山小: muôn dặm nước non thu cả vào trong tầm mắt</div><div class="note" style="margin-top:8px">住 zhù khác với 往 wǎng</div><div class="note" style="margin-top:8px">孔林: bia mộ của Khổng Tử và gia tộc, nghĩa trang gia tộc họ Khổng</div>';
 p.querySelectorAll('.s').forEach(s=>s.onclick=()=>{const on=!s.classList.contains('sp');s.classList.toggle('sp',on);s.classList.toggle('sv',on)});
 p.querySelectorAll('.chip').forEach(c=>c.onclick=()=>{c.classList.toggle('on');p.classList.toggle(c.dataset.k)})}
 mk('a',T1);

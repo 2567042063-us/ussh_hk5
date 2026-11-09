@@ -2,8 +2,10 @@ import fs from "fs";
 import path from "path";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import clsx from "clsx";
 
 import HtmlRenderer from "@shared/components/HtmlRenderer";
+import { classNameActive } from "@shared/constant";
 
 import Footer from "../../../common/Footer";
 import Header from "../../../common/Header";
@@ -16,7 +18,7 @@ export async function generateMetadata({
   const { filename } = await params;
 
   return {
-    title: `Bài khoá phụ – ${filename}`,
+    title: `Bài khoá phụ - ${filename}`,
   };
 }
 
@@ -70,7 +72,11 @@ export default async function Page({
                 prefetch={false}
                 // target="_blank"
                 // rel="noopener noreferrer"
-                className="inline-block px-5 text-slate-500 hover:text-yellow-500 dark:text-sky-400 dark:hover:text-yellow-300"
+                // className={``}
+                className={clsx(
+                  "inline-block px-5 text-slate-500 hover:text-yellow-500 dark:text-sky-400 dark:hover:text-yellow-300",
+                  fileName === filename ? classNameActive : "",
+                )}
               >
                 Bài khoá phụ _ {fileName}
               </Link>

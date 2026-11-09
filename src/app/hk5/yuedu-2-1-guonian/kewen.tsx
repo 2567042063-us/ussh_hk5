@@ -2,8 +2,6 @@
 
 import { useState } from "react";
 
-// import Link from "next/link";
-
 type Row = { zh: string; py: string; vi: string };
 
 const TITLE = {
@@ -66,14 +64,6 @@ export default function GuoNian() {
             {showVi ? "Tắt tiếng Việt" : "Bật tiếng Việt"}
           </button>
         </div>
-        {/* <div>
-          <Link
-            href="/hk5/yuedu-2-1-guonian-bt"
-            className="mt-3 inline-block px-5 text-sky-700 hover:text-primary dark:text-sky-400 dark:hover:text-primary-dark"
-          >
-            •̀ ᴗ - làm bài tập
-          </Link>
-        </div> */}
       </div>
 
       <table className="ztai__dochieu__table">
@@ -102,11 +92,6 @@ export default function GuoNian() {
 
       <table className="ztai__dochieu__table">
         <caption className="ztai__zh p-5 text-3xl text-sky-700">注释</caption>
-        {/* <thead>
-            <tr>
-              <th>STT</th>
-            </tr>
-          </thead> */}
         <tbody>
           <tr>
             <td className="ztai__zh">大年三十</td>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+<div class="box">
+<h1>📖 Bài khoá phụ - Bài 11 - trang </h1>
+<div class="p-3">
+<audio controls class="w-full">
+      <source src="https://h3pksspholvm3tyu.private.blob.vercel-storage.com/gthn/gthn-q3-bai11.mp3?vercel-blob-delegation=eyJzdG9yZUlkIjoic3RvcmVfSDNQS1NzcEhvTFZNM1RZVSIsIm93bmVySWQiOiJ0ZWFtX2xOZEplZTFpRkFvdUhjclN0NjdBdUh5byIsInBhdGhuYW1lIjoiKiIsIm9wZXJhdGlvbnMiOlsiZ2V0IiwiaGVhZCJdLCJ2YWxpZFVudGlsIjoxNzk0MjQ0OTMxNTQ1LCJpYXQiOjE3OTQyMDE3MzE5NDN9.Jq-bRiG7s3f1JXzU2duvh1sQwmwfsMD4a04BZA1_S8A&vercel-blob-signature=15xCG5Vv6gPu3tqEwyXJ397Egip0r3PoeEra2IgSuJM" type="audio/mpeg">
+      Trình duyệt của bạn không hỗ trợ phát file âm thanh này.
+  </audio>
+</div>
+<div class="tabs" id="tabs">
+<button class="on" data-t="a">Bài khoá</button><button data-t="g">Ngữ pháp</button><button data-t="x">Bài tập</button>
+</div>
+<div class="pane on" id="a"></div>
+<div class="pane" id="g"></div>
+<div class="pane" id="x">
+<div class="sub" id="sub"><button class="chip on" data-e="1">1. Điền V+bổ ngữ</button><button class="chip" data-e="2">2. Sửa câu</button><button class="chip" data-e="3">3. Sắp xếp</button></div>
+<div id="ex"></div>
+</div>
+</div>
+<script>
+const T1=[
+['我是前天到的北京，两年前曾经在中国学过汉语，是王老师的学生。','Wǒ shì qiántiān dào de Běijīng, liǎng nián qián céngjīng zài Zhōngguó xué guo Hànyǔ, shì Wáng lǎoshī de xuésheng.','Tôi đến Bắc Kinh hôm kia, hai năm trước từng học tiếng Hán ở Trung Quốc, là học trò của thầy Vương.'],
+['这次我不是来学习的，是来旅行的。我不是一个人来的，是跟旅行团一起来的。','Zhè cì wǒ bú shì lái xuéxí de, shì lái lǚxíng de. Wǒ bú shì yí ge rén lái de, shì gēn lǚxíngtuán yìqǐ lái de.','Lần này tôi không đến để học mà để du lịch. Tôi không đến một mình mà đi cùng đoàn du lịch.'],
+['我是旅行团的导游兼翻译。','Wǒ shì lǚxíngtuán de dǎoyóu jiān fānyì.','Tôi là hướng dẫn viên kiêm phiên dịch của đoàn.'],
+['我现在还没有工作，在读研究生，研究的课题是《孔子与中国》，业余时间或寒暑假到一个旅行社去打工。','Wǒ xiànzài hái méiyǒu gōngzuò, zài dú yánjiūshēng, yánjiū de kètí shì 《Kǒngzǐ yǔ Zhōngguó》, yèyú shíjiān huò hánshǔjià dào yí ge lǚxíngshè qù dǎgōng.','Tôi hiện chưa đi làm, đang học cao học, đề tài nghiên cứu là 《Khổng Tử và Trung Quốc》, lúc rảnh hoặc nghỉ hè nghỉ đông thì đến một công ty du lịch làm thêm.'],
+['这次，他们组织了一个旅游团，老板就让我陪团来了。','Zhè cì, tāmen zǔzhī le yí ge lǚyóutuán, lǎobǎn jiù ràng wǒ péi tuán lái le.','Lần này họ tổ chức một đoàn du lịch, ông chủ liền cho tôi đi cùng đoàn.'],
+['他知道我需要经常来中国收集资料，所以，一有来中国的旅游团，就安排我陪团来。','Tā zhīdào wǒ xūyào jīngcháng lái Zhōngguó shōují zīliào, suǒyǐ, yì yǒu lái Zhōngguó de lǚyóutuán, jiù ānpái wǒ péi tuán lái.','Ông biết tôi cần thường xuyên đến Trung Quốc thu thập tài liệu, nên hễ có đoàn đến Trung Quốc là sắp xếp cho tôi đi cùng.'],
+['我们先到的香港，在香港玩儿了三天，又去了深圳，前天是从深圳坐高铁过来的。','Wǒmen xiān dào de Xiānggǎng, zài Xiānggǎng wánr le sān tiān, yòu qù le Shēnzhèn, qiántiān shì cóng Shēnzhèn zuò gāotiě guòlái de.','Chúng tôi đến Hồng Kông trước, chơi ở đó ba ngày, rồi đi Thâm Quyến, hôm kia đi tàu cao tốc từ Thâm Quyến sang đây.'],
+['原来打算坐飞机，但是旅行团的人都没有坐过中国的高铁，很想坐坐，看看铁路两边的风光。','Yuánlái dǎsuàn zuò fēijī, dànshì lǚxíngtuán de rén dōu méiyǒu zuò guo Zhōngguó de gāotiě, hěn xiǎng zuòzuo, kànkan tiělù liǎng biān de fēngguāng.','Ban đầu định đi máy bay, nhưng người trong đoàn chưa ai đi tàu cao tốc Trung Quốc, rất muốn thử ngồi, ngắm cảnh hai bên đường ray.'],
+['旅行团后天就回去了，我跟老板说好了，晚回去几天，等送他们上了飞机，我要到孔子的故乡去一趟。','Lǚxíngtuán hòutiān jiù huíqù le, wǒ gēn lǎobǎn shuō hǎo le, wǎn huíqù jǐ tiān, děng sòng tāmen shàng le fēijī, wǒ yào dào Kǒngzǐ de gùxiāng qù yí tàng.','Ngày kia đoàn về nước, tôi đã thỏa thuận với ông chủ là về muộn vài ngày, tiễn họ lên máy bay xong tôi sẽ đến quê hương Khổng Tử một chuyến.'],
+['今天下午是自由活动时间，来看看王老师。','Jīntiān xiàwǔ shì zìyóu huódòng shíjiān, lái kànkan Wáng lǎoshī.','Chiều nay là thời gian tự do hoạt động, tôi đến thăm thầy Vương.']];
+const G=[
+['','是……的: nhấn mạnh thời gian / mục đích','我是前天到的北京 · 我不是来学习的，是来旅行的','Việc đã xảy ra, cái cần nhấn mạnh đặt giữa 是 và 的. Tân ngữ có thể đứng sau 的: 到的北京.'],
+['','是……的: nhấn mạnh cách thức / người đi cùng','我不是一个人来的，是跟旅行团一起来的 · 我们先到的香港','Nhấn mạnh đi một mình hay đi cùng ai; phủ định dùng 不是……的.'],
+['','是……的: nơi xuất phát + phương tiện','前天是从深圳坐高铁过来的','Có thể gộp nhiều thông tin: 从 + nơi, 坐 + phương tiện, rồi bổ ngữ 过来.'],
+['','Bổ ngữ xu hướng đơn: 来 / 去','陪团来了 · 来中国 · 回去了 · 去一趟','来 = hướng về người nói, 去 = hướng ra xa người nói. 回去: về (nơi người nói không ở).'],
+['','Bổ ngữ xu hướng kép: 过来','坐高铁过来的','过来 = di chuyển sang tới chỗ người nói (từ Thâm Quyến sang Bắc Kinh).'],
+['','Bổ ngữ kết quả: V + 好','我跟老板说好了','好 = đã thỏa thuận xong, hoàn tất như ý. Kết quả của việc nói.'],
+['','Thời lượng bổ ngữ: V + 了 + thời gian','在香港玩儿了三天','Khoảng thời gian đứng sau động từ (và 了); địa điểm đứng trước động từ.'],
+['','晚 / 早 + V + số lượng thời gian','晚回去几天','Muộn/sớm bao nhiêu: số lượng đứng sau động từ, không dùng 了.'],
+['','Động lượng bổ ngữ: 一趟','我要到孔子的故乡去一趟','一趟 = một chuyến (đi, lại). Bổ ngữ đứng sau 去: 去一趟.'],
+['','Động từ lặp lại: V (一) V','坐坐 · 看看 · 来看看王老师','Thử, nhẹ nhàng, thoải mái: 想坐坐 = muốn thử ngồi; 看看 = xem một chút.'],
+['','Bổ sung: 一……就……','一有来中国的旅游团，就安排我陪团来','Hễ… là…; vế sau xảy ra ngay khi vế trước xảy ra.']];
+function mk(id,arr,note){const p=document.getElementById(id);
+p.innerHTML='<div class="tools"><button class="chip" data-k="showp">Pinyin</button><button class="chip" data-k="showv">Nghĩa</button></div><div class="list">'+arr.map(r=>'<div class="s"><div class="h">'+r[0]+'</div><div class="p">'+r[1]+'</div><div class="v">'+r[2]+'</div></div>').join('')+'</div>'+(note||'')+'<div class="note" style="margin-top:8px">Chạm vào câu để xem pinyin + nghĩa.</div>';
+p.querySelectorAll('.s').forEach(s=>s.onclick=()=>{const on=!s.classList.contains('sp');s.classList.toggle('sp',on);s.classList.toggle('sv',on)});
+p.querySelectorAll('.chip').forEach(c=>c.onclick=()=>{c.classList.toggle('on');p.classList.toggle(c.dataset.k)})}
+mk('a',T1);
+document.getElementById('g').innerHTML=G.map(g=>'<div class="g"><b>'+g[1]+'</b><div class="ex">'+g[2]+'</div><small>'+g[3]+'</small></div>').join('');
+document.querySelectorAll('#tabs button').forEach(b=>b.onclick=()=>{document.querySelectorAll('#tabs button,.pane').forEach(e=>e.classList.remove('on'));b.classList.add('on');document.getElementById(b.dataset.t).classList.add('on')});
+/* Bài tập */
+const E1=[['前天是从深圳坐高铁____的。',['过来','过去','出去'],0,'过来: sang tới chỗ người nói.'],
+['我们在香港玩儿____三天。',['了','着','得'],0,'V + 了 + thời lượng.'],
+['我跟老板说____了，晚回去几天。',['好','下','起'],0,'说好了: đã thỏa thuận xong.'],
+['我要到孔子的故乡去一____。',['趟','个','张'],0,'一趟: động lượng của 去.'],
+['旅行团后天就____了。',['回去','回来','回着'],0,'回去: về nước, xa chỗ người nói.']];
+const E2=[['我是前天来的到北京。',['我是前天到的北京。','我前天是到北京的了。','我是到前天的北京。'],0,'是 + thời gian + V + 的 + tân ngữ.'],
+['我不是一个人来，是跟旅行团一起来。',['我不是一个人来的，是跟旅行团一起来的。','我不是一个人来的，是跟旅行团一起来了。','我不是一个人的来，是一起来旅行团。'],0,'是……的 phải đủ cả 是 và 的.'],
+['我们在香港玩儿三天了。',['我们在香港玩儿了三天。','我们玩儿在香港了三天。','我们在香港三天玩儿了。'],0,'Thời lượng đứng sau V + 了.'],
+['前天是从深圳过坐高铁来的。',['前天是从深圳坐高铁过来的。','前天是坐高铁从深圳过来的。','前天是从深圳坐高铁来过的。'],0,'Thứ tự đúng: 从…坐…过来.'],
+['我要到孔子的故乡一趟去。',['我要到孔子的故乡去一趟。','我要一趟到孔子的故乡去。','我要到孔子的故乡去趟一。'],0,'去 + 一趟.']];
+const E3=[['我','是','前天','到的','北京'],['我','不是','一个人','来的'],['前天','是','从深圳','坐高铁','过来的'],['我们','在香港','玩儿了','三天'],['我','要','到孔子的故乡','去','一趟']];
+const st={};
+function pick(e,i,j,item){const q=document.querySelectorAll('.q')[i];const ok=j==item[2];q.querySelectorAll('.o').forEach((b,k)=>{b.disabled=true;if(k==item[2])b.classList.add('ok');else if(k==j)b.classList.add('no')});q.querySelector('.fb').textContent=(ok?'✔ ':'✘ ')+item[3];st[e]=(st[e]||0)+(ok?1:0);if(document.querySelectorAll('.o:disabled').length>=document.querySelectorAll('.q').length*3&&false){}
+const done=[...document.querySelectorAll('.q')].every(x=>x.querySelector('.o:disabled'));if(done)document.getElementById('sc').textContent='Điểm: '+st[e]+'/'+document.querySelectorAll('.q').length}
+function choice(e,data0){st[e]=0;const data=data0.map(it=>{const o=sh(it[1]);return [it[0],o.map(x=>x[0]),o.findIndex(x=>x[1]==it[2]),it[3]]});document.getElementById('ex').innerHTML=data.map((it,i)=>'<div class="q"><div class="t">'+(i+1)+'. '+it[0]+'</div><div class="opts">'+it[1].map((o,j)=>'<button class="o" data-i="'+i+'" data-j="'+j+'">'+o+'</button>').join('')+'</div><div class="fb"></div></div>').join('')+'<div class="score" id="sc"></div><button class="btn l" id="rs">Làm lại</button>';
+document.querySelectorAll('.o').forEach(b=>b.onclick=()=>pick(e,+b.dataset.i,+b.dataset.j,data[+b.dataset.i]));document.getElementById('rs').onclick=()=>choice(e,data0)}
+function sh(a){return a.map((v,i)=>[v,i]).sort(()=>Math.random()-.5)}
+function order(){let n=0;document.getElementById('ex').innerHTML=E3.map((it,i)=>'<div class="q" data-i="'+i+'"><div class="t" style="font-size:14px;color:var(--mu)">'+(i+1)+'. Chạm các mảnh để ghép thành câu:</div><div class="ans"></div><div class="opts"></div><div style="margin-top:8px"><button class="btn">Kiểm tra</button> <button class="btn l">Xoá</button></div><div class="fb"></div></div>').join('')+'<div class="score" id="sc"></div>';
+document.querySelectorAll('.q').forEach(q=>{const i=+q.dataset.i,ans=q.querySelector('.ans'),pool=q.querySelector('.opts'),fb=q.querySelector('.fb');
+const mkb=(t)=>{const b=document.createElement('button');b.className='o';b.textContent=t;return b};
+const fill=()=>{pool.innerHTML='';ans.innerHTML='';fb.textContent='';sh(E3[i]).forEach(([t])=>{const b=mkb(t);b.onclick=()=>{const c=mkb(t);c.onclick=()=>{c.remove();b.style.display=''};ans.appendChild(c);b.style.display='none'};pool.appendChild(b)})};
+fill();const [chk,clr]=q.querySelectorAll('.btn');clr.onclick=fill;
+chk.onclick=()=>{const s=[...ans.children].map(c=>c.textContent).join('');const ok=s==E3[i].join('');fb.textContent=ok?'✔ Đúng: '+s:'✘ Chưa đúng, thử lại. Gợi ý: '+E3[i].join(' ');fb.style.color=ok?'var(--ok)':'var(--no)'}})}
+document.querySelectorAll('#sub .chip').forEach(c=>c.onclick=()=>{document.querySelectorAll('#sub .chip').forEach(x=>x.classList.remove('on'));c.classList.add('on');run(c.dataset.e)});
+function run(e){e=='1'?choice(1,E1):e=='2'?choice(2,E2):order()}
+run('1');
+</script>
+</body>
+</html>

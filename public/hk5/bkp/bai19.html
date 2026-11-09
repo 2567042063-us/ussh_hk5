@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+<div class="box">
+<h1>📖 Bài khoá phụ - Bài 19 - trang 138</h1>
+<div class="tabs" id="tabs">
+<button class="on" data-t="a">7. Điền từ</button><button data-t="b">8. Hội thoại</button>
+</div>
+<div class="pane on" id="a"></div>
+<div class="pane" id="b"></div>
+</div>
+<script>
+const T7=[["“你还<span class=\"bl\" data-n=\"①\" data-a=\"在\">①＿＿</span>那家花店工作吗？”", "“Nǐ hái zài nà jiā huādiàn gōngzuò ma?”", "“Cậu vẫn làm ở tiệm hoa đó chứ?”"], ["“不了，我<span class=\"bl\" data-n=\"②\" data-a=\"被\">②＿＿</span>老板炒鱿鱼了。”", "“Bù le, wǒ bèi lǎobǎn chǎo yóuyú le.”", "“Không nữa, mình bị ông chủ cho nghỉ việc rồi.”"], ["“为什么？”", "“Wèi shénme?”", "“Tại sao?”"], ["“每次给人家送花儿之前，我得在每束花儿里放上一<span class=\"bl\" data-n=\"③\" data-a=\"张\">③＿＿</span>卡片。上次，我把两张卡片放错了。”", "“Měi cì gěi rénjia sòng huār zhīqián, wǒ děi zài měi shù huār li fàng shàng yì zhāng kǎpiàn. Shàng cì, wǒ bǎ liǎng zhāng kǎpiàn fàng cuò le.”", "“Mỗi lần trước khi giao hoa, mình phải bỏ vào mỗi bó hoa một tấm thiệp. Lần trước mình để nhầm hai tấm thiệp.”"], ["“你是怎么放<span class=\"bl\" data-n=\"④\" data-a=\"的\">④＿＿</span>？”", "“Nǐ shì zěnme fàng de?”", "“Cậu để thế nào vậy?”"], ["“我<span class=\"bl\" data-n=\"⑤\" data-a=\"把*\">⑤＿＿</span>送到婚礼上去的花儿里放上了一张‘致以深深的哀悼’；而那张新婚贺卡却被我放到了送给葬礼的花儿里去了。”", "“Wǒ [bǎ / zài] sòng dào hūnlǐ shang qù de huār li fàng shàng le yì zhāng ‘zhìyǐ shēnshēn de āidào’; ér nà zhāng xīnhūn hèkǎ què bèi wǒ fàng dào le sòng gěi zànglǐ de huār li qù le.”", "“Mình để vào bó hoa gửi đến đám cưới tấm thiệp ‘Xin gửi lời chia buồn sâu sắc’; còn tấm thiệp mừng tân hôn thì lại bị mình bỏ vào bó hoa gửi đến đám tang.”"], ["“上面写的什么？”", "“Shàngmiàn xiě de shénme?”", "“Trên đó viết gì?”"], ["“祝你们<span class=\"bl\" data-n=\"⑥\" data-a=\"在\">⑥＿＿</span>新的家幸福快乐！”", "“Zhù nǐmen zài xīn de jiā xìngfú kuàilè!”", "“Chúc hai bạn hạnh phúc, vui vẻ trong ngôi nhà mới!”"]],T8=[["<b>(1) 打听</b>", "Dǎtīng", "Hỏi thăm, nghe ngóng"], ["A：听说你先生出国了？", "A: Tīngshuō nǐ xiānsheng chūguó le?", "A: Nghe nói chồng cậu đi nước ngoài rồi?"], ["B：是啊，他被公司派到中国去工作了。", "B: Shì a, tā bèi gōngsī pài dào Zhōngguó qù gōngzuò le.", "B: Ừ, anh ấy được công ty cử sang Trung Quốc làm việc."], ["A：你去吗？", "A: Nǐ qù ma?", "A: Cậu có đi không?"], ["B：我下个月就去。", "B: Wǒ xià ge yuè jiù qù.", "B: Tháng sau mình đi."], ["<b>(2) 相信</b>", "Xiāngxìn", "Bày tỏ sự tin tưởng"], ["<span class=\"spk\">玛丽：</span>你的脖子（bózi：cổ）还疼吗？", "Mǎlì: Nǐ de bózi hái téng ma?", "Mary: Cổ cậu còn đau không?"], ["<span class=\"spk\">麦克：</span>一点儿也不疼了。", "Màikè: Yìdiǎnr yě bù téng le.", "Mike: Chẳng đau chút nào nữa."], ["<span class=\"spk\">玛丽：</span>吃的什么药？", "Mǎlì: Chī de shénme yào?", "Mary: Cậu uống thuốc gì vậy?"], ["<span class=\"spk\">麦克：</span>什么药也没吃就好了。", "Màikè: Shénme yào yě méi chī jiù hǎo le.", "Mike: Chẳng uống thuốc gì mà khỏi."], ["<span class=\"spk\">玛丽：</span>真的？我不相信。", "Mǎlì: Zhēn de? Wǒ bù xiāngxìn.", "Mary: Thật á? Mình không tin."], ["<span class=\"spk\">麦克：</span>真的！我不骗你。是让大夫按摩好的。", "Màikè: Zhēn de! Wǒ bú piàn nǐ. Shì ràng dàifu ànmó hǎo de.", "Mike: Thật! Mình không lừa cậu. Là nhờ bác sĩ xoa bóp mà khỏi."], ["<span class=\"spk\">玛丽：</span>是吗？按摩有那么灵（líng：hiệu nghiệm）吗？", "Mǎlì: Shì ma? Ànmó yǒu nàme líng ma?", "Mary: Vậy à? Xoa bóp linh nghiệm đến vậy sao?"], ["<span class=\"spk\">麦克：</span>开始我也不相信。大夫按摩以后，马上就不疼了。我才相信按摩真好，又舒服又治病。", "Màikè: Kāishǐ wǒ yě bù xiāngxìn. Dàifu ànmó yǐhòu, mǎshàng jiù bù téng le. Wǒ cái xiāngxìn ànmó zhēn hǎo, yòu shūfu yòu zhìbìng.", "Mike: Lúc đầu mình cũng không tin. Sau khi bác sĩ xoa bóp, đau hết ngay. Mình mới tin xoa bóp thật tốt, vừa dễ chịu vừa chữa bệnh."]];
+const VG="<div class=\"vg\"><div><b>炒鱿鱼</b>chǎo yóuyú · sa thải (tiếng lóng)</div><div><b>束</b>shù · bó (hoa)</div><div><b>卡片</b>kǎpiàn · thẻ, thiếp</div><div><b>致</b>zhì · gửi, bày tỏ</div><div><b>哀悼</b>āidào · thương tiếc, tưởng niệm</div><div><b>贺卡</b>hèkǎ · thiệp chúc mừng</div><div><b>葬礼</b>zànglǐ · đám tang</div></div>";
+function row(r){const a=r[3];return '<div class="s"><div class="h">'+r[0]+'</div><div class="p">'+r[1]+'</div><div class="v">'+r[2]+'</div>'+(a?'<button class="chip mini">Gợi ý đáp án (câu chữ 把)</button><div class="a"><div class="h">'+a[0]+'</div><div class="p">'+a[1]+'</div><div class="v">'+a[2]+'</div></div>':'')+'</div>'}
+function mk(id,arr,pre,post){const p=document.getElementById(id);
+p.innerHTML=(pre||'')+'<div class="tools"><button class="chip" data-k="showp">Pinyin</button><button class="chip" data-k="showv">Nghĩa</button></div><div class="list">'+arr.map(row).join('')+'</div><div class="note" style="margin-top:8px">'+(post||'Chạm vào câu để xem pinyin và nghĩa.')+'</div>';
+p.querySelectorAll('.s').forEach(s=>s.onclick=()=>{const on=!s.classList.contains('sp');s.classList.toggle('sp',on);s.classList.toggle('sv',on)});
+p.querySelectorAll('.mini').forEach(b=>b.onclick=e=>{e.stopPropagation();b.parentNode.classList.toggle('sa')});
+p.querySelectorAll('.tools .chip').forEach(c=>c.onclick=()=>{c.classList.toggle('on');p.classList.toggle(c.dataset.k)})}
+mk('a',T7,'<div class="ztaibkptitle" style="margin-bottom:6px">我被解雇了 (Tôi bị sa thải rồi) – 补充生词</div>'+VG+'<div class="note" style="margin-bottom:8px">Chạm vào chỗ trống ①–⑥ để xem đáp án.</div><button class="chip" id="ra" style="margin-bottom:8px">Hiện tất cả đáp án</button>','<b>* Lưu ý ⑤:</b> đáp án trong ảnh là 把, nhưng 我把送到婚礼上去的花儿里放上了… không thông về ngữ pháp. Mình thấy <b>在</b> hợp hơn: 我<b>在</b>送到婚礼上去的花儿里放上了一张… (在 + nơi chốn + V). Bạn nên hỏi lại thầy cô, có thể đáp án in nhầm.');
+document.querySelectorAll('.bl').forEach(b=>b.onclick=e=>{e.stopPropagation();const on=b.classList.toggle('on');b.textContent=b.dataset.n+(on?b.dataset.a:'＿＿')});
+document.getElementById('ra').onclick=function(){const on=this.classList.toggle('on');document.querySelectorAll('.bl').forEach(b=>{b.classList.toggle('on',on);b.textContent=b.dataset.n+(on?b.dataset.a:'＿＿')})};
+mk('b',T8);
+document.querySelectorAll('#tabs button').forEach(b=>b.onclick=()=>{document.querySelectorAll('#tabs button,.pane').forEach(e=>e.classList.remove('on'));b.classList.add('on');document.getElementById(b.dataset.t).classList.add('on')});
+</script>
+
+<div class="my-6 text-slate-600">
+  <p dir="ltr">Phần đ&aacute;p &aacute;n: m&igrave;nh d&ugrave;ng đ&uacute;ng đ&aacute;p &aacute;n trong ảnh bạn gửi (在, 被, 张, 的, 把, 在), ri&ecirc;ng ⑤ m&igrave;nh c&oacute; một nghi ngờ:</p>
+<ul dir="ltr">
+<li><strong>⑤ trong ảnh l&agrave; 把</strong>, nhưng c&acirc;u th&agrave;nh <em>我把送到婚礼上去的花儿里放上了&hellip;</em> th&igrave; kh&ocirc;ng th&ocirc;ng.</li>
+<li>M&igrave;nh thấy <strong>在</strong> hợp hơn: <em>我在送到婚礼上去的花儿里放上了一张&hellip;</em> (在 + nơi chốn + V).</li>
+<li>Tr&ecirc;n trang m&igrave;nh đ&aacute;nh dấu ⑤ bằng dấu * k&egrave;m ghi ch&uacute; n&agrave;y. Đ&aacute;p &aacute;n trong ảnh c&oacute; thể bị in nhầm hoặc bạn ch&eacute;p nhầm, bạn n&ecirc;n hỏi lại thầy c&ocirc; để chắc chắn.</li>
+</ul>
+<p dir="ltr">Năm đ&aacute;p &aacute;n c&ograve;n lại th&igrave; khớp với ngữ cảnh, v&iacute; dụ 被老板炒鱿鱼了, 一张卡片, 你是怎么放的.</p>
+  </div>
+</body>
+</html>
