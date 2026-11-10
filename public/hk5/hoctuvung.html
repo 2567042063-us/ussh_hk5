@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Game học từ vựng tiếng Trung</title>
+<style>
+:root{--bg:#faf8f4;--card:#fff;--tx:#1f1d1a;--mut:#7a746b;--ac:#c0392b;--ok:#2e8b57;--bad:#c0392b;--bd:#e4ded3;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1b1a18;--card:#262421;--tx:#f0ece4;--mut:#a29b8f;--ac:#e8806f;--ok:#5cc08a;--bad:#e8806f;--bd:#3a372f}}
+:root[data-theme="dark"]{--bg:#1b1a18;--card:#262421;--tx:#f0ece4;--mut:#a29b8f;--ac:#e8806f;--ok:#5cc08a;--bad:#e8806f;--bd:#3a372f}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:system-ui,-apple-system,"Segoe UI",sans-serif}
+main{max-width:520px;margin:0 auto;padding:16px}
+h1{font-size:18px;margin:4px 0 12px}
+.modes{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}
+button{font:inherit;color:inherit;cursor:pointer}
+.modes button{padding:6px 10px;border:1px solid var(--bd);border-radius:16px;background:var(--card);font-size:13px}
+.modes button.on{background:var(--ac);color:#fff;border-color:var(--ac)}
+.bar{display:flex;justify-content:space-between;color:var(--mut);font-size:13px;margin-bottom:8px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:20px;text-align:center}
+.q{font-size:40px;font-weight:600;margin:6px 0}
+.q.s{font-size:20px;line-height:1.5}
+.py{color:var(--mut);font-size:16px}
+.opts{display:grid;gap:8px;margin-top:16px}
+.opts button{padding:12px;border:1px solid var(--bd);border-radius:10px;background:var(--bg);font-size:16px}
+.opts button.ok{background:var(--ok);color:#fff;border-color:var(--ok)}
+.opts button.bad{background:var(--bad);color:#fff;border-color:var(--bad)}
+.fb{margin-top:14px;text-align:left;font-size:15px;line-height:1.6;border-top:1px dashed var(--bd);padding-top:12px}
+.next{margin-top:12px;width:100%;padding:12px;border:0;border-radius:10px;background:var(--ac);color:#fff;font-size:16px}
+.big{font-size:22px;margin:10px 0}
+</style>
+</head>
+<body>
+<main>
+<h1>🀄 Game học từ vựng tiếng Trung</h1>
+<div class="modes" id="modes"></div>
+<div class="bar"><span id="sc"></span><span id="left"></span></div>
+<div class="card" id="box"></div>
+</main>
+<script>
+const W=[
+["接","jiē","nhận; đón; bắt (máy)","我去机场接我的朋友。","Wǒ qù jīchǎng jiē wǒ de péngyou.","Tôi ra sân bay đón bạn tôi."],
+["报名","bàomíng","đăng ký (tham gia)","我想报名参加汉语班。","Wǒ xiǎng bàomíng cānjiā Hànyǔ bān.","Tôi muốn đăng ký tham gia lớp tiếng Hán."],
+["摆","bǎi","bày, sắp đặt","桌子上摆着很多酒和菜。","Zhuōzi shàng bǎizhe hěn duō jiǔ hé cài.","Trên bàn bày rất nhiều rượu và thức ăn."],
+["提","tí","xách (bằng tay)","我手里提着一箱子东西，一步一步地往上爬。","Wǒ shǒu li tízhe yì xiāngzi dōngxi, yí bù yí bù de wǎng shàng pá.","Tay tôi xách một thùng đồ, từng bước từng bước leo lên."],
+["打扫","dǎsǎo","quét dọn","周末我在家打扫房间。","Zhōumò wǒ zài jiā dǎsǎo fángjiān.","Cuối tuần tôi ở nhà dọn phòng."],
+["戴","dài","đeo (kính, đồng hồ, mũ)","他戴着手表，还戴着眼镜儿。","Tā dàizhe shǒubiǎo, hái dàizhe yǎnjìngr.","Anh ấy đeo đồng hồ, còn đeo cả kính."],
+["带","dài","mang, mang theo","我带着照相机去旅行。","Wǒ dàizhe zhàoxiàngjī qù lǚxíng.","Tôi mang máy ảnh đi du lịch."],
+["挂","guà","treo, móc","把这幅画儿挂在书房里。","Bǎ zhè fú huàr guà zài shūfáng li.","Hãy treo bức tranh này trong phòng sách."],
+["按摩","ànmó","massage, xoa bóp","他每天晚上给妈妈按摩。","Tā měitiān wǎnshang gěi māma ànmó.","Mỗi tối anh ấy massage cho mẹ."],
+["摸","mō","sờ, chạm vào","小孩儿喜欢摸小狗的头。","Xiǎoháir xǐhuan mō xiǎogǒu de tóu.","Trẻ con thích sờ đầu chú chó nhỏ."],
+["摔","shuāi","ngã; làm rơi vỡ","刚出门就摔了一跤，眼镜儿也掉在地上摔坏了。","Gāng chūmén jiù shuāile yì jiāo, yǎnjìngr yě diào zài dì shàng shuāihuài le.","Vừa ra khỏi cửa đã ngã một cái, kính cũng rơi xuống đất vỡ mất."],
+["拔","bá","nhổ, rút ra","钥匙忘拔下来了。","Yàoshi wàng bá xiàlai le.","Quên rút chìa khóa ra rồi."],
+["挑","tiāo","chọn, lựa","我挑了几本历史书。","Wǒ tiāole jǐ běn lìshǐ shū.","Tôi đã chọn mấy cuốn sách lịch sử."],
+["抽","chōu","rút ra, lấy ra","从一个书架上抽出来一本看看。","Cóng yí ge shūjià shàng chōu chūlai yì běn kànkan.","Rút một cuốn từ giá sách ra xem thử."],
+["插","chā","cắm, gài","钥匙还在自行车上插着呢。","Yàoshi hái zài zìxíngchē shàng chāzhe ne.","Chìa khóa vẫn còn cắm trên xe đạp đấy."],
+["扛","káng","vác (trên vai)","两个小伙子扛着摄像机。","Liǎng ge xiǎohuǒzi kángzhe shèxiàngjī.","Hai chàng trai vác máy quay."],
+["搞","gǎo","làm, xoay xở, giải quyết","这件事我搞不好。","Zhè jiàn shì wǒ gǎo bu hǎo.","Việc này tôi làm không xong."],
+["排","pái","xếp hàng; sắp xếp","大家排队上车。","Dàjiā páiduì shàng chē.","Mọi người xếp hàng lên xe."],
+["拉","lā","kéo","他拉着我的手往前走。","Tā lāzhe wǒ de shǒu wǎng qián zǒu.","Anh ấy kéo tay tôi đi về phía trước."],
+["撞","zhuàng","đâm, va vào","他骑车撞到了一棵树。","Tā qí chē zhuàngdào le yì kē shù.","Anh ấy đi xe đâm vào một cái cây."],
+["打扮","dǎban","trang điểm, ăn diện","她今天打扮得很漂亮。","Tā jīntiān dǎban de hěn piàoliang.","Hôm nay cô ấy ăn diện rất đẹp."],
+["擦","cā","lau, chùi","请把桌子擦干净。","Qǐng bǎ zhuōzi cā gānjìng.","Xin lau sạch cái bàn."],
+["扶手","fúshou","tay vịn","上楼的时候，请抓好扶手。","Shàng lóu de shíhou, qǐng zhuāhǎo fúshou.","Lúc lên lầu, xin nắm chắc tay vịn."]
+];
+const MODES=[["mix","Trộn"],["zh","汉 → Việt"],["vi","Việt → 汉"],["fill","Điền từ"]];
+let mode="mix",queue=[],score=0,total=0,cur=null,done=false;
+const $=id=>document.getElementById(id);
+const sh=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.random()*(i+1)|0;[a[i],a[j]]=[a[j],a[i]]}return a};
+function start(){queue=sh(W.map((_,i)=>i));score=0;total=0;draw();next()}
+function draw(){$("modes").innerHTML=MODES.map(m=>`<button class="${m[0]===mode?"on":""}" data-m="${m[0]}">${m[1]}</button>`).join("");
+$("modes").onclick=e=>{const m=e.target.dataset.m;if(m){mode=m;start()}}}
+function next(){
+$("sc").textContent="Đúng "+score+"/"+total;$("left").textContent="Còn "+queue.length+" từ";
+if(!queue.length){$("box").innerHTML=`<div class="big">🎉 Xong rồi!</div><div>Điểm: ${score}/${total}</div><button class="next" onclick="start()">Chơi lại</button>`;return}
+const i=queue.shift(),w=W[i];
+let t=mode==="mix"?["zh","vi","fill"][Math.random()*3|0]:mode;
+let q,ans,opts,cls="q";
+const others=sh(W.filter((_,k)=>k!==i)).slice(0,3);
+if(t==="zh"){q=w[0]+`<div class="py">${w[1]}</div>`;ans=w[2];opts=others.map(o=>o[2])}
+else if(t==="vi"){q=w[2];cls="q s";ans=w[0];opts=others.map(o=>o[0])}
+else{q=w[3].split(w[0]).join("＿＿");cls="q s";ans=w[0];opts=others.map(o=>o[0])}
+opts=sh(opts.concat(ans));
+cur={i,ans,done:false};
+$("box").innerHTML=`<div class="${cls}">${q}</div><div class="opts">${opts.map(o=>`<button data-a="${o}">${o}</button>`).join("")}</div><div id="fb"></div>`;
+$("box").querySelector(".opts").onclick=e=>{const a=e.target.dataset.a;if(a===undefined||cur.done)return;pick(e.target,a)}
+}
+function pick(btn,a){
+cur.done=true;total++;const w=W[cur.i],ok=a===cur.ans;
+if(ok)score++;else queue.push(cur.i);
+btn.classList.add(ok?"ok":"bad");
+document.querySelectorAll(".opts button").forEach(b=>{if(b.dataset.a===cur.ans)b.classList.add("ok")});
+$("fb").innerHTML=`<div class="fb"><b style="font-size:22px">${w[0]}</b> <span class="py">${w[1]}</span><br>${w[2]}<br><span style="color:var(--mut)">例：</span>${w[3]}<br><span class="py">${w[4]}</span><br>${w[5]}</div><button class="next" onclick="next()">Tiếp →</button>`;
+$("sc").textContent="Đúng "+score+"/"+total;$("left").textContent="Còn "+queue.length+" từ";
+}
+draw();start();
+</script>
+</body>
+</html>
