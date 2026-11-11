@@ -50,17 +50,17 @@ function fmt(d: Date) {
 }
 
 export default function LichOnThi() {
-  const [isClient, setIsClient] = useState(false);
   const [today, setToday] = useState<Date | null>(null);
 
   useEffect(() => {
+    // Avoid a hydration mismatch caused by rendering dates in the server timezone.
     const now = new Date();
     now.setHours(0, 0, 0, 0);
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setToday(now);
-    setIsClient(true);
   }, []);
 
-  if (!isClient || !today) {
+  if (!today) {
     return (
       <div className="p-4 text-center text-slate-500">
         Đang tải lịch ôn thi...
@@ -79,17 +79,8 @@ export default function LichOnThi() {
     <div className="text-slate-800 dark:text-slate-100">
       <div className="flex items-center justify-between">
         <h1 className="my-2 text-xl font-light tracking-tight text-slate-500 dark:text-slate-400">
-          Lịch ôn thi GK - CK
+          Lịch Thi GK - CK
         </h1>
-        <a
-          style={{ color: "#0069a8" }}
-          className="font-normal hover:underline"
-          href="/hk5/01-lich-on-thi.html"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          chi tiết
-        </a>
       </div>
 
       <div className="mb-4 grid grid-cols-1 gap-3 text-slate-500 dark:text-slate-300 md:grid-cols-[0.5fr_1fr]">
@@ -116,10 +107,10 @@ export default function LichOnThi() {
 
         {/* List Exams Card */}
         <div className="flex flex-col gap-1.5 rounded-2xl border border-cyan-800/20 p-3 text-xs dark:border-slate-700">
-          {EXAMS.map((e, idx) => {
+          {EXAMS.map((e) => {
             const d = pd(e.d);
             const n = daysLeft(d);
-            const isActive = idx === 0;
+            const isActive = e.d === nextExam?.d;
 
             return (
               <div

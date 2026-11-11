@@ -47,9 +47,9 @@ export default async function Page({
   return (
     <div className="flex min-h-screen flex-col items-center dark:bg-slate-800">
       <Header title="hk5" canonical="https://ussh-hk5-neon.vercel.app/hk5" />
-      {/* <div className="max-w-180 flex w-full flex-1 flex-col"> */}
-      <HtmlRenderer htmlContent={htmlContent} />
-      {/* </div> */}
+      <div className="container mx-auto">
+        <HtmlRenderer htmlContent={htmlContent} />
+      </div>
       <Footer />
       <StickyFloatingButtons />
     </div>

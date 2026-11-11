@@ -23,7 +23,7 @@ export default function Page() {
             <a
               key={index}
               href={`#m${index + 1}`}
-              className="hover:rotate-5 mx-5 inline-block transform text-sky-600 transition-[transform,color] duration-300 ease-in-out hover:text-primary dark:text-sky-300"
+              className="hover:rotate-5 mx-5 inline-block transform text-sky-600 transition-[transform,color] duration-300 ease-in-out hover:text-amber-400 dark:text-sky-300 dark:hover:text-yellow-400"
             >
               ⭑.ᐟ {subject}
             </a>

@@ -90,7 +90,11 @@ function Session({ lesson, shuffled }: { lesson: Lesson; shuffled: boolean }) {
         </div>
 
         <p className="text-md mb-4">
-          {current.speaker && <strong>{current.speaker}: </strong>}
+          {current.speaker && (
+            <span className="font-light text-slate-500">
+              {current.speaker}:{" "}
+            </span>
+          )}
           {current.vietnamese}
         </p>
 
@@ -151,7 +155,7 @@ function Session({ lesson, shuffled }: { lesson: Lesson; shuffled: boolean }) {
             {!q.lastCorrect && q.diff && q.input.trim() && (
               <div className="mt-4">
                 <div className="mb-1 text-[13px] text-slate-500 dark:text-slate-300">
-                  Bài của bạn (đã bỏ dấu câu)
+                  Kiểm tra bài của bạn (đã bỏ dấu câu)
                 </div>
                 <div className="ztai__zh break-all">
                   {q.diff.map((t, i) => (
@@ -161,8 +165,8 @@ function Session({ lesson, shuffled }: { lesson: Lesson; shuffled: boolean }) {
                         t.type === "same"
                           ? "text-[#23735f] dark:text-[#6fd0b4]"
                           : t.type === "extra"
-                            ? "text-[#b83a27] line-through dark:text-[#ff8b78]"
-                            : "border-b-2 border-dashed border-[#b83a27] text-slate-500 dark:border-[#ff8b78] dark:text-slate-300"
+                            ? "text-rose-600 line-through dark:text-rose-300"
+                            : "border-b-2 border-dashed border-rose-600 text-rose-600 dark:border-rose-300 dark:text-slate-300"
                       }
                     >
                       {t.ch}
@@ -205,26 +209,25 @@ export default function TranslationQuiz({ lesson }: { lesson: Lesson }) {
   const [shuffled, setShuffled] = useState(false);
 
   return (
-    <div className="px-4 py-6">
-      <div className="max-w-180 mx-auto">
-        <div className="mb-4 flex flex-wrap items-center gap-3">
-          <label className="text-sm">
-            <input
-              type="checkbox"
-              checked={shuffled}
-              onChange={(e) => {
-                setShuffled(e.target.checked);
-              }}
-            />{" "}
-            Xáo trộn câu
-          </label>
-        </div>
-        <Session
-          key={`${lesson.id}-${shuffled}`}
-          lesson={lesson}
-          shuffled={shuffled}
-        />
+    <div className="mx-auto w-full px-4 py-6">
+      <h1 className="ztai__zh mb-4 text-xl text-sky-700">{lesson.title}</h1>
+      <div className="flex flex-wrap items-center gap-3">
+        <label className="text-sm">
+          <input
+            type="checkbox"
+            checked={shuffled}
+            onChange={(e) => {
+              setShuffled(e.target.checked);
+            }}
+          />{" "}
+          Xáo trộn câu
+        </label>
       </div>
+      <Session
+        key={`${lesson.id}-${shuffled}`}
+        lesson={lesson}
+        shuffled={shuffled}
+      />
     </div>
   );
 }

@@ -71,15 +71,15 @@ export default function GTHN() {
   }
 
   // Tất cả Bài dịch
-  const dirPathDich = path.join(process.cwd(), "public", "hk5", "dich");
-  let filesDich: string[] = [];
-  try {
-    const files = fs.readdirSync(dirPathDich);
-    const htmlFilesDich = files.filter((file) => file.endsWith(".html"));
-    filesDich = htmlFilesDich.map((file) => file.replace(/\.html$/, ""));
-  } catch (error) {
-    console.error("Không tìm thấy thư mục public/hk5/dich:", error);
-  }
+  // const dirPathDich = path.join(process.cwd(), "public", "hk5", "dich");
+  // let filesDich: string[] = [];
+  // try {
+  //   const files = fs.readdirSync(dirPathDich);
+  //   const htmlFilesDich = files.filter((file) => file.endsWith(".html"));
+  //   filesDich = htmlFilesDich.map((file) => file.replace(/\.html$/, ""));
+  // } catch (error) {
+  //   console.error("Không tìm thấy thư mục public/hk5/dich:", error);
+  // }
 
   return (
     <div className="max-w-200 mx-auto">
@@ -87,13 +87,85 @@ export default function GTHN() {
         GTHN
       </h2>
 
+      <div className="mb-4 grid grid-cols-1 gap-3 text-slate-500 dark:text-slate-300 md:grid-cols-[1fr_1fr]">
+        <div className="flex flex-col rounded-sm border border-cyan-800/20 p-5 dark:border-slate-700">
+          <Link
+            href="/hk5/dich"
+            prefetch={false}
+            // target="_blank"
+            // rel="noopener noreferrer"
+            className="text-sky-600 hover:text-yellow-600 dark:text-sky-300 dark:hover:text-yellow-400"
+          >
+            •̀ ᴗ - Luyện Dịch
+          </Link>
+
+          <ul className="mt-3 text-slate-800 dark:text-slate-200">
+            <li className="border-b border-dashed border-cyan-800/20 py-2 last:border-0 dark:border-slate-700">
+              Dịch sang Việt: 5 câu, 1 đoạn.
+            </li>
+            <li className="border-b border-dashed border-cyan-800/20 py-2 last:border-0 dark:border-slate-700">
+              Dịch sang Trung: 5 câu, 1 đoạn.
+            </li>
+            <li className="border-b border-dashed border-cyan-800/20 py-2 last:border-0 dark:border-slate-700">
+              Phạm vi: quyển 4,{" "}
+              <span className="font-bold text-fuchsia-600">bài 15-25</span>
+              <br />
+              (70% đã học + 30% bên ngoài).
+            </li>
+            <li>
+              <small>GV: thầy Minh (GK), cô Diệp (CK).</small>
+            </li>
+          </ul>
+        </div>
+
+        <div className="flex flex-col gap-1.5 rounded-sm border border-cyan-800/20 p-3 dark:border-slate-700">
+          <ul className="mt-3 text-slate-800 dark:text-slate-200">
+            <li className="border-b border-dashed border-cyan-800/20 py-2 last:border-0 dark:border-slate-700">
+              Câu hỏi trắc nghiệm (25x0.2 = 5 điểm)
+            </li>
+            <li className="border-b border-dashed border-cyan-800/20 py-2 last:border-0 dark:border-slate-700">
+              Sắp xếp câu (3x0.5 = 1.5 điểm)
+            </li>
+            <li className="border-b border-dashed border-cyan-800/20 py-2 last:border-0 dark:border-slate-700">
+              Sửa câu sai (3x0.2 = 1.5 điểm)
+            </li>
+            <li className="border-b border-dashed border-cyan-800/20 py-2 last:border-0 dark:border-slate-700">
+              Điền trống không cho từ (10x0.2 = 2.0 điểm)
+            </li>
+            <li className="border-b border-dashed border-cyan-800/20 py-2 last:border-0 dark:border-slate-700">
+              Phạm vi: quyển 4,{" "}
+              <span className="font-bold text-fuchsia-600">bài 15-25</span>
+              <br />
+              (70% đã học + 30% bên ngoài).
+            </li>
+          </ul>
+
+          {btHrefs.map((bt) => (
+            <div
+              key={bt.href}
+              className={`border-b border-dashed border-cyan-800/20 py-1 last:border-0 dark:border-slate-700`}
+            >
+              <Link
+                href={bt.href}
+                prefetch={false}
+                // target="_blank"
+                // rel="noopener noreferrer"
+                className="inline-block px-5 text-slate-500 hover:text-yellow-500 dark:text-sky-400 dark:hover:text-yellow-300"
+              >
+                {bt.name}
+              </Link>
+            </div>
+          ))}
+        </div>
+      </div>
+
       {/* bài khoá chính và bài khoá phụ  */}
       <div className="mb-4 grid grid-cols-1 gap-3 text-slate-500 dark:text-slate-300 md:grid-cols-[0.5fr_1fr]">
         <div className="flex flex-col justify-center rounded-sm border border-cyan-800/20 p-3 dark:border-slate-700">
           {["gthn3-bai11", ...filesGthn].map((fileName) => (
             <div
               key={fileName}
-              className={`flex justify-between gap-2 border-b border-dashed border-cyan-800/20 py-1 last:border-0 dark:border-slate-700`}
+              className={`border-b border-dashed border-cyan-800/20 py-1 last:border-0 dark:border-slate-700`}
             >
               <Link
                 href={`/hk5/gthn/${fileName}`}
@@ -112,7 +184,7 @@ export default function GTHN() {
           {filesBkp.map((fileName) => (
             <div
               key={fileName}
-              className={`flex justify-between gap-2 border-b border-dashed border-cyan-800/20 py-1 last:border-0 dark:border-slate-700`}
+              className={`border-b border-dashed border-cyan-800/20 py-1 last:border-0 dark:border-slate-700`}
             >
               <Link
                 href={`/hk5/bkp/${fileName}`}
@@ -129,45 +201,6 @@ export default function GTHN() {
       </div>
 
       {/* ngữ pháp và bài tập */}
-      <div className="mb-4 grid grid-cols-1 gap-3 text-slate-500 dark:text-slate-300 md:grid-cols-[0.5fr_1fr]">
-        <div className="flex flex-col rounded-sm border border-cyan-800/20 p-3 dark:border-slate-700">
-          {filesDich.map((fileName) => (
-            <div
-              key={fileName}
-              className={`flex justify-between gap-2 border-b border-dashed border-cyan-800/20 py-1 last:border-0 dark:border-slate-700`}
-            >
-              <Link
-                href={`/hk5/dich/${fileName}`}
-                prefetch={false}
-                // target="_blank"
-                // rel="noopener noreferrer"
-                className="inline-block px-5 text-slate-500 hover:text-yellow-500 dark:text-sky-400 dark:hover:text-yellow-300"
-              >
-                Dịch _ {fileName}
-              </Link>
-            </div>
-          ))}
-        </div>
-
-        <div className="flex flex-col gap-1.5 rounded-sm border border-cyan-800/20 p-3 dark:border-slate-700">
-          {btHrefs.map((bt) => (
-            <div
-              key={bt.href}
-              className={`flex justify-between gap-2 border-b border-dashed border-cyan-800/20 py-1 last:border-0 dark:border-slate-700`}
-            >
-              <Link
-                href={bt.href}
-                prefetch={false}
-                // target="_blank"
-                // rel="noopener noreferrer"
-                className="inline-block px-5 text-slate-500 hover:text-yellow-500 dark:text-sky-400 dark:hover:text-yellow-300"
-              >
-                {bt.name}
-              </Link>
-            </div>
-          ))}
-        </div>
-      </div>
 
       <NdthiNPDsc3 />
     </div>
