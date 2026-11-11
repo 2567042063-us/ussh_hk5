@@ -6,9 +6,12 @@ import clsx from "clsx";
 
 import HtmlRenderer from "@shared/components/HtmlRenderer";
 import { classNameActive } from "@shared/constant";
+import { getLessonById, lessonMenu } from "@shared/data/dich/lesson-loader";
 
 import Footer from "../../../common/Footer";
 import Header from "../../../common/Header";
+import LayoutGrbt from "../../../common/LayoutGrbt";
+import TranslationQuiz from "./TranslationQuiz";
 
 export async function generateMetadata({
   params,
@@ -28,6 +31,19 @@ export default async function Page({
   params: Promise<{ filename: string }>;
 }) {
   const { filename } = await params;
+  const lesson = await getLessonById(filename);
+
+  if (lesson) {
+    return (
+      <div className="flex min-h-screen flex-col items-center dark:bg-slate-800">
+        <Header title="hk5" canonical="https://ussh-hk5-neon.vercel.app/hk5" />
+        <LayoutGrbt menuGrbt={lessonMenu} filename={lesson.id}>
+          <TranslationQuiz lesson={lesson} />
+        </LayoutGrbt>
+        <Footer />
+      </div>
+    );
+  }
 
   const filePath = path.join(
     process.cwd(),
