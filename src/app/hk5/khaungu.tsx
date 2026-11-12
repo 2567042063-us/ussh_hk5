@@ -45,7 +45,7 @@ export default function KhauNgu() {
               <tr>
                 <td>1</td>
                 <td>
-                  <span className="ztai__zh">学习汉语的目标</span>
+                  <span className="ztai__zh text-2xl leading-[1.55]">学习汉语的目标</span>
                   <br />
                   <small>Xuéxí Hànyǔ de mùbiāo</small>
                 </td>
@@ -54,7 +54,7 @@ export default function KhauNgu() {
               <tr>
                 <td>2</td>
                 <td>
-                  <span className="ztai__zh">一次难忘的购物经历</span>
+                  <span className="ztai__zh text-2xl leading-[1.55]">一次难忘的购物经历</span>
                   <br />
                   <small>Yí cì nánwàng de gòuwù jīnglì</small>
                 </td>
@@ -63,7 +63,7 @@ export default function KhauNgu() {
               <tr>
                 <td>3</td>
                 <td>
-                  <span className="ztai__zh">说说你这个假期的计划</span>
+                  <span className="ztai__zh text-2xl leading-[1.55]">说说你这个假期的计划</span>
                   <br />
                   <small>Shuōshuo nǐ zhège jiàqī de jìhuà</small>
                 </td>
@@ -72,7 +72,7 @@ export default function KhauNgu() {
               <tr>
                 <td>4</td>
                 <td>
-                  <span className="ztai__zh">说说你所在城市的季节特点</span>
+                  <span className="ztai__zh text-2xl leading-[1.55]">说说你所在城市的季节特点</span>
                   <br />
                   <small>Shuōshuo nǐ suǒzài chéngshì de jìjié tèdiǎn</small>
                 </td>

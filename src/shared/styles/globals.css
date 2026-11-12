@@ -167,20 +167,12 @@ button:focus {
   font-family:
     "KaiTi", "STKaiti", "PingFang SC", "Songti SC", "SimSun",
     "Noto Serif CJK SC", "Noto Serif SC", serif;
-  font-size: 1.5rem;
-  line-height: 1.55;
 }
 
 .ztai__py {
   font-family:
     Inter, "Segoe UI", Roboto, Arial, "Noto Sans", "PingFang SC",
     "Microsoft YaHei", sans-serif;
-  color: #64748b;
-  line-height: 1.45;
-}
-
-.dark .ztai__py {
-  color: #93c5fd;
 }
 
 .ztai__table {
@@ -214,12 +206,6 @@ button:focus {
   background: inherit;
   color: #94a3b8;
 }
-
-/* @media (prefers-color-scheme: dark) {
-  .ztai__py {
-    color: #cbd5e1;
-  }
-} */
 
 /* dochieu */
 
@@ -276,15 +262,6 @@ button:focus {
 .ztai__dochieu__title td {
   background: #fafbfc;
   font-weight: 600;
-}
-/* .ztai__zh {
-  font-size: inherit;
-  line-height: 2;
-} */
-.ztai__py {
-  /* font-size: 15px; */
-  line-height: 1.9;
-  color: #64748b;
 }
 @media (max-width: 720px) {
   .ztai__dochieu__table {

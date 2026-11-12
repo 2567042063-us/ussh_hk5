@@ -157,7 +157,7 @@ function Session({ lesson, shuffled }: { lesson: Lesson; shuffled: boolean }) {
                 <div className="mb-1 text-[13px] text-slate-500 dark:text-slate-300">
                   Kiểm tra bài của bạn (đã bỏ dấu câu)
                 </div>
-                <div className="ztai__zh break-all">
+                <div className="ztai__zh text-2xl leading-[1.55] break-all">
                   {q.diff.map((t, i) => (
                     <span
                       key={i}
@@ -180,7 +180,7 @@ function Session({ lesson, shuffled }: { lesson: Lesson; shuffled: boolean }) {
               <div className="mb-1 text-sm text-slate-500 dark:text-slate-300">
                 Đáp án
               </div>
-              <div className="ztai__zh break-all">{current.zh}</div>
+              <div className="ztai__zh text-2xl leading-[1.55] break-all">{current.zh}</div>
               <div className="mt-3 text-[15px] text-slate-500 dark:text-slate-300">
                 {current.pinyin}
               </div>
@@ -210,7 +210,7 @@ export default function TranslationQuiz({ lesson }: { lesson: Lesson }) {
 
   return (
     <div className="mx-auto w-full px-4 py-6">
-      <h1 className="ztai__zh mb-4 text-xl text-sky-700">{lesson.title}</h1>
+      <h1 className="ztai__zh text-2xl leading-[1.55] mb-4 text-xl text-sky-700">{lesson.title}</h1>
       <div className="flex flex-wrap items-center gap-3">
         <label className="text-sm">
           <input

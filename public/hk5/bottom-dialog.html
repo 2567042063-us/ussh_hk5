@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bottom Dialog với Tailwind CSS</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-100 flex items-center justify-center min-h-screen">
+
+  <!-- 1. Nút bấm mở Dialog -->
+  <button
+    onclick="openDialog()"
+    class="px-5 py-2.5 bg-slate-900 text-white font-medium rounded-lg shadow hover:bg-slate-800 active:scale-95 transition">
+    Mở chi tiết Icon
+  </button>
+
+  <!-- 2. Lớp nền mờ (Backdrop) -->
+  <div
+    id="backdrop"
+    onclick="closeDialog()"
+    class="fixed inset-0 bg-black/40 backdrop-blur-[2px] opacity-0 pointer-events-none transition-opacity duration-300 ease-out z-40">
+  </div>
+
+  <!-- 3. Hộp Dialog trượt từ dưới lên -->
+  <div
+    id="bottomDialog"
+    class="fixed inset-x-0 bottom-0 z-50 mx-auto max-w-2xl translate-y-full opacity-0 transition-all duration-300 ease-out">
+
+    <div class="bg-white border-t border-x border-slate-200 rounded-t-2xl shadow-2xl p-6">
+      <!-- Thanh nắm kéo giả lập (Handle bar) -->
+      <div class="w-12 h-1.5 bg-slate-200 rounded-full mx-auto mb-5"></div>
+
+      <!-- Header -->
+      <div class="flex items-center justify-between mb-4">
+        <div class="flex items-center gap-3">
+          <div class="p-2.5 bg-slate-100 rounded-lg text-slate-800">
+            <!-- Icon minh họa -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 10v12"/><path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2a3.13 3.13 0 0 1 3 3.88Z"/></svg>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-slate-900">thumbs-up</h3>
+            <p class="text-sm text-slate-500">24 × 24 px • Stroke 2px</p>
+          </div>
+        </div>
+
+        <!-- Nút đóng (X) -->
+        <button
+          onclick="closeDialog()"
+          class="p-2 text-slate-400 hover:text-slate-600 hover:bg-slate-100 rounded-lg transition">
+          ✕
+        </button>
+      </div>
+
+      <!-- Nội dung & Các nút hành động -->
+      <div class="flex flex-wrap gap-3 pt-2 border-t border-slate-100">
+        <button class="flex-1 py-2.5 px-4 bg-slate-900 text-white text-sm font-medium rounded-lg hover:bg-slate-800 transition">
+          Copy SVG
+        </button>
+        <button class="flex-1 py-2.5 px-4 bg-slate-100 text-slate-800 text-sm font-medium rounded-lg hover:bg-slate-200 transition">
+          Copy JSX
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. Script điều khiển bật/tắt class Tailwind -->
+  <script>
+    const backdrop = document.getElementById('backdrop');
+    const dialog = document.getElementById('bottomDialog');
+
+    function openDialog() {
+      // Hiện nền mờ
+      backdrop.classList.remove('opacity-0', 'pointer-events-none');
+      backdrop.classList.add('opacity-100');
+
+      // Trượt dialog lên
+      dialog.classList.remove('translate-y-full', 'opacity-0');
+      dialog.classList.add('translate-y-0', 'opacity-100');
+    }
+
+    function closeDialog() {
+      // Ẩn nền mờ
+      backdrop.classList.remove('opacity-100');
+      backdrop.classList.add('opacity-0', 'pointer-events-none');
+
+      // Trượt dialog xuống
+      dialog.classList.remove('translate-y-0', 'opacity-100');
+      dialog.classList.add('translate-y-full', 'opacity-0');
+    }
+
+    // Đóng khi nhấn phím ESC
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeDialog();
+    });
+  </script>
+
+</body>
+</html>

@@ -1529,7 +1529,7 @@ export default function ResultComplementExercise() {
 
       <section className="zbn-sec">
         <h2>
-          <span className="ztai__zh">{section.title}</span>
+          <span className="ztai__zh text-2xl leading-[1.55]">{section.title}</span>
           <span className="mean">{section.mean}</span>
         </h2>
 
@@ -1544,7 +1544,7 @@ export default function ResultComplementExercise() {
                 key={`${section.id}-${i}`}
                 className={done ? (allRight ? "it ok" : "it bad") : "it"}
               >
-                <div className="line ztai__zh">
+                <div className="line ztai__zh text-2xl leading-[1.55]">
                   {item.parts.map((p, k) => (
                     <React.Fragment key={k}>
                       <span>{p}</span>
@@ -1589,13 +1589,13 @@ export default function ResultComplementExercise() {
                 </div>
 
                 {showVi && <div className="vi">{item.vi}</div>}
-                {(showPy || done) && <div className="ztai__py">{item.py}</div>}
+                {(showPy || done) && <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">{item.py}</div>}
 
                 {done && !allRight && (
                   <div className="ans">
                     Đáp án:{" "}
                     {item.answers.map((a, k) => (
-                      <b key={k} className="ztai__zh">
+                      <b key={k} className="ztai__zh text-2xl leading-[1.55]">
                         {a}
                         {item.alts[k].length > 0 && (
                           <span className="alt">

@@ -23,28 +23,28 @@ export default function Template() {
         <div className="rules">
           <div className="rule">
             <b>Khẳng định</b>
-            <span className="ztai__zh chip2">动词 + BNKQ (+ 了)</span>
+            <span className="ztai__zh text-2xl leading-[1.55] chip2">动词 + BNKQ (+ 了)</span>
             <br />
-            <span className="ztai__zh">我做完了。</span> <br />
-            <span className="ztai__py" style={{ fontSize: "12px" }}>
+            <span className="ztai__zh text-2xl leading-[1.55]">我做完了。</span> <br />
+            <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]" style={{ fontSize: "12px" }}>
               Wǒ zuòwán le.
             </span>
           </div>
           <div className="rule">
             <b>Phủ định</b>
-            <span className="ztai__zh chip2">没(有) + 动词 + BNKQ</span> (bỏ 了)
+            <span className="ztai__zh text-2xl leading-[1.55] chip2">没(有) + 动词 + BNKQ</span> (bỏ 了)
             <br />
-            <span className="ztai__zh">这课课文我没有看懂。</span> <br />
-            <span className="ztai__py" style={{ fontSize: "12px" }}>
+            <span className="ztai__zh text-2xl leading-[1.55]">这课课文我没有看懂。</span> <br />
+            <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]" style={{ fontSize: "12px" }}>
               Zhè kè kèwén wǒ méiyǒu kàndǒng.
             </span>
           </div>
           <div className="rule">
             <b>Câu hỏi chính phản</b>
-            <span className="ztai__zh chip2">动词 + BNKQ (+宾语) 了没有?</span>
+            <span className="ztai__zh text-2xl leading-[1.55] chip2">动词 + BNKQ (+宾语) 了没有?</span>
             <br />
-            <span className="ztai__zh">你看见玛丽了没有?</span> <br />
-            <span className="ztai__py" style={{ fontSize: "12px" }}>
+            <span className="ztai__zh text-2xl leading-[1.55]">你看见玛丽了没有?</span> <br />
+            <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]" style={{ fontSize: "12px" }}>
               Nǐ kànjiàn Mǎlì le méiyǒu?
             </span>
           </div>
@@ -52,8 +52,8 @@ export default function Template() {
             <b>Vị trí tân ngữ và 了</b>Tân ngữ đứng sau bổ ngữ; 了 đứng sau bổ
             ngữ, trước tân ngữ.
             <br />
-            <span className="ztai__zh">我做错了两道题。</span> <br />
-            <span className="ztai__py" style={{ fontSize: "12px" }}>
+            <span className="ztai__zh text-2xl leading-[1.55]">我做错了两道题。</span> <br />
+            <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]" style={{ fontSize: "12px" }}>
               Wǒ zuòcuòle liǎng dào tí.
             </span>
           </div>
@@ -77,137 +77,137 @@ export default function Template() {
             </thead>
             <tbody>
               <tr>
-                <td className="ztai__zh sz">完</td>
-                <td className="ztai__py">wán</td>
+                <td className="ztai__zh text-2xl leading-[1.55] sz">完</td>
+                <td className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">wán</td>
                 <td>xong</td>
-                <td className="ztai__zh">做完, 看完, 吃完</td>
+                <td className="ztai__zh text-2xl leading-[1.55]">做完, 看完, 吃完</td>
               </tr>
               <tr>
-                <td className="ztai__zh sz">懂</td>
-                <td className="ztai__py">dǒng</td>
+                <td className="ztai__zh text-2xl leading-[1.55] sz">懂</td>
+                <td className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">dǒng</td>
                 <td>hiểu</td>
-                <td className="ztai__zh">听懂, 看懂</td>
+                <td className="ztai__zh text-2xl leading-[1.55]">听懂, 看懂</td>
               </tr>
               <tr>
-                <td className="ztai__zh sz">见</td>
-                <td className="ztai__py">jiàn</td>
+                <td className="ztai__zh text-2xl leading-[1.55] sz">见</td>
+                <td className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">jiàn</td>
                 <td>thấy</td>
-                <td className="ztai__zh">看见, 听见</td>
+                <td className="ztai__zh text-2xl leading-[1.55]">看见, 听见</td>
               </tr>
               <tr>
-                <td className="ztai__zh sz">开</td>
-                <td className="ztai__py">kāi</td>
+                <td className="ztai__zh text-2xl leading-[1.55] sz">开</td>
+                <td className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">kāi</td>
                 <td>mở ra</td>
-                <td className="ztai__zh">打开, 开开</td>
+                <td className="ztai__zh text-2xl leading-[1.55]">打开, 开开</td>
               </tr>
               <tr>
-                <td className="ztai__zh sz">上</td>
-                <td className="ztai__py">shang</td>
+                <td className="ztai__zh text-2xl leading-[1.55] sz">上</td>
+                <td className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">shang</td>
                 <td>khép lại, dính vào</td>
-                <td className="ztai__zh">关上, 合上, 写上, 穿上</td>
+                <td className="ztai__zh text-2xl leading-[1.55]">关上, 合上, 写上, 穿上</td>
               </tr>
               <tr>
-                <td className="ztai__zh sz">到</td>
-                <td className="ztai__py">dào</td>
+                <td className="ztai__zh text-2xl leading-[1.55] sz">到</td>
+                <td className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">dào</td>
                 <td>đạt, tới, đến mốc</td>
-                <td className="ztai__zh">回到, 找到, 买到, 学到, 睡到</td>
+                <td className="ztai__zh text-2xl leading-[1.55]">回到, 找到, 买到, 学到, 睡到</td>
               </tr>
               <tr>
-                <td className="ztai__zh sz">给</td>
-                <td className="ztai__py">gěi</td>
+                <td className="ztai__zh text-2xl leading-[1.55] sz">给</td>
+                <td className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">gěi</td>
                 <td>trao cho</td>
-                <td className="ztai__zh">交给, 还给, 送给, 借给</td>
+                <td className="ztai__zh text-2xl leading-[1.55]">交给, 还给, 送给, 借给</td>
               </tr>
               <tr>
-                <td className="ztai__zh sz">成₁</td>
-                <td className="ztai__py">chéng</td>
+                <td className="ztai__zh text-2xl leading-[1.55] sz">成₁</td>
+                <td className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">chéng</td>
                 <td>biến thành</td>
-                <td className="ztai__zh">写成, 说成, 改成, 换成</td>
+                <td className="ztai__zh text-2xl leading-[1.55]">写成, 说成, 改成, 换成</td>
               </tr>
               <tr>
-                <td className="ztai__zh sz">成₂</td>
-                <td className="ztai__py">chéng</td>
+                <td className="ztai__zh text-2xl leading-[1.55] sz">成₂</td>
+                <td className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">chéng</td>
                 <td>làm xong, thành công</td>
-                <td className="ztai__zh">去成, 做成, 建成</td>
+                <td className="ztai__zh text-2xl leading-[1.55]">去成, 做成, 建成</td>
               </tr>
               <tr>
-                <td className="ztai__zh sz">好</td>
-                <td className="ztai__py">hǎo</td>
+                <td className="ztai__zh text-2xl leading-[1.55] sz">好</td>
+                <td className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">hǎo</td>
                 <td>hoàn thiện</td>
-                <td className="ztai__zh">洗好, 睡好, 办好, 准备好</td>
+                <td className="ztai__zh text-2xl leading-[1.55]">洗好, 睡好, 办好, 准备好</td>
               </tr>
               <tr>
-                <td className="ztai__zh sz">对 / 错</td>
-                <td className="ztai__py">duì / cuò</td>
+                <td className="ztai__zh text-2xl leading-[1.55] sz">对 / 错</td>
+                <td className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">duì / cuò</td>
                 <td>đúng / sai</td>
-                <td className="ztai__zh">做对, 写错, 答错, 看错</td>
+                <td className="ztai__zh text-2xl leading-[1.55]">做对, 写错, 答错, 看错</td>
               </tr>
               <tr>
-                <td className="ztai__zh sz">熟</td>
-                <td className="ztai__py">shú</td>
+                <td className="ztai__zh text-2xl leading-[1.55] sz">熟</td>
+                <td className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">shú</td>
                 <td>thuộc, thạo</td>
-                <td className="ztai__zh">念熟</td>
+                <td className="ztai__zh text-2xl leading-[1.55]">念熟</td>
               </tr>
               <tr>
-                <td className="ztai__zh sz">干净</td>
-                <td className="ztai__py">gānjìng</td>
+                <td className="ztai__zh text-2xl leading-[1.55] sz">干净</td>
+                <td className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">gānjìng</td>
                 <td>sạch</td>
-                <td className="ztai__zh">洗干净</td>
+                <td className="ztai__zh text-2xl leading-[1.55]">洗干净</td>
               </tr>
               <tr>
-                <td className="ztai__zh sz">在</td>
-                <td className="ztai__py">zài</td>
+                <td className="ztai__zh text-2xl leading-[1.55] sz">在</td>
+                <td className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">zài</td>
                 <td>ở tại</td>
-                <td className="ztai__zh">放在, 挂在, 写在, 停在</td>
+                <td className="ztai__zh text-2xl leading-[1.55]">放在, 挂在, 写在, 停在</td>
               </tr>
               <tr>
-                <td className="ztai__zh sz">着</td>
-                <td className="ztai__py">zháo</td>
+                <td className="ztai__zh text-2xl leading-[1.55] sz">着</td>
+                <td className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">zháo</td>
                 <td>đạt mục đích</td>
-                <td className="ztai__zh">找着, 买着, 睡着</td>
+                <td className="ztai__zh text-2xl leading-[1.55]">找着, 买着, 睡着</td>
               </tr>
             </tbody>
           </table>
         </div>
         <div className="toc" aria-label="Nhảy đến nhóm bổ ngữ">
           <a href="#g1">
-            <span className="ztai__zh">完</span>
+            <span className="ztai__zh text-2xl leading-[1.55]">完</span>
           </a>
           <a href="#g2">
-            <span className="ztai__zh">懂</span>
+            <span className="ztai__zh text-2xl leading-[1.55]">懂</span>
           </a>
           <a href="#g3">
-            <span className="ztai__zh">见</span>
+            <span className="ztai__zh text-2xl leading-[1.55]">见</span>
           </a>
           <a href="#g4">
-            <span className="ztai__zh">开 / 上 </span>
+            <span className="ztai__zh text-2xl leading-[1.55]">开 / 上 </span>
           </a>
           <a href="#g5">
-            <span className="ztai__zh">到</span>
+            <span className="ztai__zh text-2xl leading-[1.55]">到</span>
           </a>
           <a href="#g6">
-            <span className="ztai__zh">给</span>
+            <span className="ztai__zh text-2xl leading-[1.55]">给</span>
           </a>
           <a href="#g7">
-            <span className="ztai__zh">成</span>
+            <span className="ztai__zh text-2xl leading-[1.55]">成</span>
           </a>
           <a href="#g8">
-            <span className="ztai__zh">好</span>
+            <span className="ztai__zh text-2xl leading-[1.55]">好</span>
           </a>
           <a href="#g9">
-            <span className="ztai__zh">对</span>
+            <span className="ztai__zh text-2xl leading-[1.55]">对</span>
           </a>
           <a href="#g10">
-            <span className="ztai__zh">熟</span>
+            <span className="ztai__zh text-2xl leading-[1.55]">熟</span>
           </a>
           <a href="#g11">
-            <span className="ztai__zh">在</span>
+            <span className="ztai__zh text-2xl leading-[1.55]">在</span>
           </a>
           <a href="#g12">
-            <span className="ztai__zh">着</span>
+            <span className="ztai__zh text-2xl leading-[1.55]">着</span>
           </a>
           <a href="#g13">
-            <span className="ztai__zh">早 / 晚</span>
+            <span className="ztai__zh text-2xl leading-[1.55]">早 / 晚</span>
           </a>
         </div>
       </section>
@@ -226,7 +226,7 @@ export default function Template() {
             <tr className="grp" id="g1">
               <td colSpan={4}>
                 <div className="gt">
-                  <span className="ztai__zh gz">完 wán</span>
+                  <span className="ztai__zh text-2xl leading-[1.55] gz">完 wán</span>
                   <span className="gm">xong, hoàn tất hành động</span>
                 </div>
                 <div className="gd">
@@ -238,14 +238,14 @@ export default function Template() {
             <tr>
               <td className="stt">1</td>
               <td className="ph">
-                <div className="ztai__zh pz">做完</div>
-                <div className="ztai__py">zuòwán</div>
+                <div className="ztai__zh text-2xl leading-[1.55] pz">做完</div>
+                <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">zuòwán</div>
                 <div className="pv">làm xong</div>
               </td>
               <td className="exs">
                 <div className="ex">
-                  <div className="ztai__zh">我都做完了,但是没都做对。</div>
-                  <div className="ztai__py">
+                  <div className="ztai__zh text-2xl leading-[1.55]">我都做完了,但是没都做对。</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Wǒ dōu zuòwán le, dànshì méi dōu zuòduì.
                   </div>
                   <div className="vi">
@@ -254,8 +254,8 @@ export default function Template() {
                   </div>
                 </div>
                 <div className="ex">
-                  <div className="ztai__zh">题太多了,我没有做完。</div>
-                  <div className="ztai__py">
+                  <div className="ztai__zh text-2xl leading-[1.55]">题太多了,我没有做完。</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Tí tài duō le, wǒ méiyǒu zuòwán.
                   </div>
                   <div className="vi">
@@ -264,8 +264,8 @@ export default function Template() {
                   </div>
                 </div>
                 <div className="ex">
-                  <div className="ztai__zh">今天的作业我做完了。</div>
-                  <div className="ztai__py">Jīntiān de zuòyè wǒ zuòwán le.</div>
+                  <div className="ztai__zh text-2xl leading-[1.55]">今天的作业我做完了。</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">Jīntiān de zuòyè wǒ zuòwán le.</div>
                   <div className="vi">
                     Bài tập hôm nay tớ làm xong rồi.{" "}
                     <span className="src">B4 tr.55</span>
@@ -281,23 +281,23 @@ export default function Template() {
                   <span className="lab">Đi kèm động từ này</span>
                   <div className="chips">
                     <span className="chip">
-                      <span className="ztai__zh">做对</span>{" "}
-                      <span className="ztai__py">zuòduì</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">做对</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">zuòduì</span>{" "}
                       <span className="cv">làm đúng</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">做错</span>{" "}
-                      <span className="ztai__py">zuòcuò</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">做错</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">zuòcuò</span>{" "}
                       <span className="cv">làm sai</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">做好</span>{" "}
-                      <span className="ztai__py">zuòhǎo</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">做好</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">zuòhǎo</span>{" "}
                       <span className="cv">làm xong, làm tốt</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">做成</span>{" "}
-                      <span className="ztai__py">zuòchéng</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">做成</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">zuòchéng</span>{" "}
                       <span className="cv">làm được, làm thành</span>
                     </span>
                   </div>
@@ -307,21 +307,21 @@ export default function Template() {
             <tr>
               <td className="stt">2</td>
               <td className="ph">
-                <div className="ztai__zh pz">看完</div>
-                <div className="ztai__py">kànwán</div>
+                <div className="ztai__zh text-2xl leading-[1.55] pz">看完</div>
+                <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">kànwán</div>
                 <div className="pv">xem/đọc xong</div>
               </td>
               <td className="exs">
                 <div className="ex">
-                  <div className="ztai__zh">你看完了没有?</div>
-                  <div className="ztai__py">Nǐ kànwán le méiyǒu?</div>
+                  <div className="ztai__zh text-2xl leading-[1.55]">你看完了没有?</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">Nǐ kànwán le méiyǒu?</div>
                   <div className="vi">
                     Cậu xem/đọc xong chưa? <span className="src">B4 tr.52</span>
                   </div>
                 </div>
                 <div className="ex">
-                  <div className="ztai__zh">看完电视剧再洗吧。</div>
-                  <div className="ztai__py">Kànwán diànshìjù zài xǐ ba.</div>
+                  <div className="ztai__zh text-2xl leading-[1.55]">看完电视剧再洗吧。</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">Kànwán diànshìjù zài xǐ ba.</div>
                   <div className="vi">
                     Xem xong phim rồi hãy giặt.{" "}
                     <span className="src">B4 tr.52</span>
@@ -334,28 +334,28 @@ export default function Template() {
                   <span className="lab">Đi kèm động từ này</span>
                   <div className="chips">
                     <span className="chip">
-                      <span className="ztai__zh">看懂</span>{" "}
-                      <span className="ztai__py">kàndǒng</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">看懂</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">kàndǒng</span>{" "}
                       <span className="cv">xem hiểu</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">看见</span>{" "}
-                      <span className="ztai__py">kànjiàn</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">看见</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">kànjiàn</span>{" "}
                       <span className="cv">nhìn thấy</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">看错</span>{" "}
-                      <span className="ztai__py">kàncuò</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">看错</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">kàncuò</span>{" "}
                       <span className="cv">xem nhầm</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">看到</span>{" "}
-                      <span className="ztai__py">kàndào</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">看到</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">kàndào</span>{" "}
                       <span className="cv">xem đến, nhìn thấy</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">看清楚</span>{" "}
-                      <span className="ztai__py">kàn qīngchu</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">看清楚</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">kàn qīngchu</span>{" "}
                       <span className="cv">nhìn rõ</span>
                     </span>
                   </div>
@@ -365,14 +365,14 @@ export default function Template() {
             <tr>
               <td className="stt">3</td>
               <td className="ph">
-                <div className="ztai__zh pz">吃完</div>
-                <div className="ztai__py">chīwán</div>
+                <div className="ztai__zh text-2xl leading-[1.55] pz">吃完</div>
+                <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">chīwán</div>
                 <div className="pv">ăn xong</div>
               </td>
               <td className="exs">
                 <div className="ex">
-                  <div className="ztai__zh">吃完晚饭,我和玛丽回到宿舍。</div>
-                  <div className="ztai__py">
+                  <div className="ztai__zh text-2xl leading-[1.55]">吃完晚饭,我和玛丽回到宿舍。</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Chīwán wǎnfàn, wǒ hé Mǎlì huídào sùshè.
                   </div>
                   <div className="vi">
@@ -381,8 +381,8 @@ export default function Template() {
                   </div>
                 </div>
                 <div className="ex">
-                  <div className="ztai__zh">吃完晚饭我们一起去跳舞吧。</div>
-                  <div className="ztai__py">
+                  <div className="ztai__zh text-2xl leading-[1.55]">吃完晚饭我们一起去跳舞吧。</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Chīwán wǎnfàn wǒmen yìqǐ qù tiàowǔ ba.
                   </div>
                   <div className="vi">
@@ -403,18 +403,18 @@ export default function Template() {
                   <span className="lab">Đi kèm động từ này</span>
                   <div className="chips">
                     <span className="chip">
-                      <span className="ztai__zh">吃好</span>{" "}
-                      <span className="ztai__py">chīhǎo</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">吃好</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">chīhǎo</span>{" "}
                       <span className="cv">ăn xong, ăn ngon miệng</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">吃饱</span>{" "}
-                      <span className="ztai__py">chībǎo</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">吃饱</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">chībǎo</span>{" "}
                       <span className="cv">ăn no</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">吃光</span>{" "}
-                      <span className="ztai__py">chīguāng</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">吃光</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">chīguāng</span>{" "}
                       <span className="cv">ăn sạch</span>
                     </span>
                   </div>
@@ -424,16 +424,16 @@ export default function Template() {
             <tr>
               <td className="stt">4</td>
               <td className="ph">
-                <div className="ztai__zh pz">洗完</div>
-                <div className="ztai__py">xǐwán</div>
+                <div className="ztai__zh text-2xl leading-[1.55] pz">洗完</div>
+                <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">xǐwán</div>
                 <div className="pv">giặt/rửa xong</div>
               </td>
               <td className="exs">
                 <div className="ex">
-                  <div className="ztai__zh">
+                  <div className="ztai__zh text-2xl leading-[1.55]">
                     我的衣服还没有洗完呢,还得给我妹妹回信。
                   </div>
-                  <div className="ztai__py">
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Wǒ de yīfu hái méiyǒu xǐwán ne, hái děi gěi wǒ mèimei huí
                     xìn.
                   </div>
@@ -443,8 +443,8 @@ export default function Template() {
                   </div>
                 </div>
                 <div className="ex">
-                  <div className="ztai__zh">洗完了</div>
-                  <div className="ztai__py">xǐwán le</div>
+                  <div className="ztai__zh text-2xl leading-[1.55]">洗完了</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">xǐwán le</div>
                   <div className="vi">
                     giặt xong rồi <span className="src">B4 tr.59</span>
                   </div>
@@ -456,18 +456,18 @@ export default function Template() {
                   <span className="lab">Đi kèm động từ này</span>
                   <div className="chips">
                     <span className="chip">
-                      <span className="ztai__zh">洗好</span>{" "}
-                      <span className="ztai__py">xǐhǎo</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">洗好</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">xǐhǎo</span>{" "}
                       <span className="cv">giặt xong, giặt tốt</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">洗干净</span>{" "}
-                      <span className="ztai__py">xǐ gānjìng</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">洗干净</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">xǐ gānjìng</span>{" "}
                       <span className="cv">giặt sạch</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">洗坏</span>{" "}
-                      <span className="ztai__py">xǐhuài</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">洗坏</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">xǐhuài</span>{" "}
                       <span className="cv">giặt hỏng</span>
                     </span>
                   </div>
@@ -477,14 +477,14 @@ export default function Template() {
             <tr>
               <td className="stt">5</td>
               <td className="ph">
-                <div className="ztai__zh pz">喝完</div>
-                <div className="ztai__py">hēwán</div>
+                <div className="ztai__zh text-2xl leading-[1.55] pz">喝完</div>
+                <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">hēwán</div>
                 <div className="pv">uống hết</div>
               </td>
               <td className="exs">
                 <div className="ex">
-                  <div className="ztai__zh">这杯喝完了。 / 这杯没喝完。</div>
-                  <div className="ztai__py">
+                  <div className="ztai__zh text-2xl leading-[1.55]">这杯喝完了。 / 这杯没喝完。</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Zhè bēi hēwán le. / Zhè bēi méi hēwán.
                   </div>
                   <div className="vi">
@@ -499,18 +499,18 @@ export default function Template() {
                   <span className="lab">Đi kèm động từ này</span>
                   <div className="chips">
                     <span className="chip">
-                      <span className="ztai__zh">喝光</span>{" "}
-                      <span className="ztai__py">hēguāng</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">喝光</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">hēguāng</span>{" "}
                       <span className="cv">uống sạch</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">喝醉</span>{" "}
-                      <span className="ztai__py">hēzuì</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">喝醉</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">hēzuì</span>{" "}
                       <span className="cv">uống say</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">喝多</span>{" "}
-                      <span className="ztai__py">hēduō</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">喝多</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">hēduō</span>{" "}
                       <span className="cv">uống nhiều</span>
                     </span>
                   </div>
@@ -520,14 +520,14 @@ export default function Template() {
             <tr>
               <td className="stt">6</td>
               <td className="ph">
-                <div className="ztai__zh pz">读完</div>
-                <div className="ztai__py">dúwán</div>
+                <div className="ztai__zh text-2xl leading-[1.55] pz">读完</div>
+                <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">dúwán</div>
                 <div className="pv">đọc xong</div>
               </td>
               <td className="exs">
                 <div className="ex">
-                  <div className="ztai__zh">读完了</div>
-                  <div className="ztai__py">dúwán le</div>
+                  <div className="ztai__zh text-2xl leading-[1.55]">读完了</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">dúwán le</div>
                   <div className="vi">
                     đọc xong rồi <span className="src">B4 tr.59</span>
                   </div>
@@ -539,23 +539,23 @@ export default function Template() {
                   <span className="lab">Đi kèm động từ này</span>
                   <div className="chips">
                     <span className="chip">
-                      <span className="ztai__zh">读懂</span>{" "}
-                      <span className="ztai__py">dúdǒng</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">读懂</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">dúdǒng</span>{" "}
                       <span className="cv">đọc hiểu</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">读熟</span>{" "}
-                      <span className="ztai__py">dúshú</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">读熟</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">dúshú</span>{" "}
                       <span className="cv">đọc thuộc, đọc trôi chảy</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">读错</span>{" "}
-                      <span className="ztai__py">dúcuò</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">读错</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">dúcuò</span>{" "}
                       <span className="cv">đọc sai</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">读对</span>{" "}
-                      <span className="ztai__py">dúduì</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">读对</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">dúduì</span>{" "}
                       <span className="cv">đọc đúng</span>
                     </span>
                   </div>
@@ -565,16 +565,16 @@ export default function Template() {
             <tr>
               <td className="stt">7</td>
               <td className="ph">
-                <div className="ztai__zh pz">念完</div>
-                <div className="ztai__py">niànwán</div>
+                <div className="ztai__zh text-2xl leading-[1.55] pz">念完</div>
+                <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">niànwán</div>
                 <div className="pv">đọc to xong</div>
               </td>
               <td className="exs">
                 <div className="ex">
-                  <div className="ztai__zh">
+                  <div className="ztai__zh text-2xl leading-[1.55]">
                     我念完一个故事,问你几个问题,看你能不能答对。
                   </div>
-                  <div className="ztai__py">
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Wǒ niànwán yí ge gùshi, wèn nǐ jǐ ge wèntí, kàn nǐ néng bu
                     néng dáduì.
                   </div>
@@ -590,18 +590,18 @@ export default function Template() {
                   <span className="lab">Đi kèm động từ này</span>
                   <div className="chips">
                     <span className="chip">
-                      <span className="ztai__zh">念熟</span>{" "}
-                      <span className="ztai__py">niànshú</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">念熟</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">niànshú</span>{" "}
                       <span className="cv">đọc thuộc</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">念对</span>{" "}
-                      <span className="ztai__py">niànduì</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">念对</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">niànduì</span>{" "}
                       <span className="cv">đọc đúng</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">念错</span>{" "}
-                      <span className="ztai__py">niàncuò</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">念错</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">niàncuò</span>{" "}
                       <span className="cv">đọc sai</span>
                     </span>
                   </div>
@@ -611,16 +611,16 @@ export default function Template() {
             <tr>
               <td className="stt">8</td>
               <td className="ph">
-                <div className="ztai__zh pz">练习完</div>
-                <div className="ztai__py">liànxí wán</div>
+                <div className="ztai__zh text-2xl leading-[1.55] pz">练习完</div>
+                <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">liànxí wán</div>
                 <div className="pv">luyện tập xong</div>
               </td>
               <td className="exs">
                 <div className="ex">
-                  <div className="ztai__zh">
+                  <div className="ztai__zh text-2xl leading-[1.55]">
                     我们还没有练习完,就听见安娜在门外叫我们。
                   </div>
-                  <div className="ztai__py">
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Wǒmen hái méiyǒu liànxíwán, jiù tīngjiàn Ānnà zài mén wài
                     jiào wǒmen.
                   </div>
@@ -639,13 +639,13 @@ export default function Template() {
                   <span className="lab">Đi kèm động từ này</span>
                   <div className="chips">
                     <span className="chip">
-                      <span className="ztai__zh">复习完</span>{" "}
-                      <span className="ztai__py">fùxí wán</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">复习完</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">fùxí wán</span>{" "}
                       <span className="cv">ôn tập xong</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">预习完</span>{" "}
-                      <span className="ztai__py">yùxí wán</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">预习完</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">yùxí wán</span>{" "}
                       <span className="cv">chuẩn bị bài xong</span>
                     </span>
                   </div>
@@ -655,16 +655,16 @@ export default function Template() {
             <tr>
               <td className="stt">9</td>
               <td className="ph">
-                <div className="ztai__zh pz">说完</div>
-                <div className="ztai__py">shuōwán</div>
+                <div className="ztai__zh text-2xl leading-[1.55] pz">说完</div>
+                <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">shuōwán</div>
                 <div className="pv">nói xong</div>
               </td>
               <td className="exs">
                 <div className="ex">
-                  <div className="ztai__zh">
+                  <div className="ztai__zh text-2xl leading-[1.55]">
                     说完,我们三个就去礼堂看电影了。
                   </div>
-                  <div className="ztai__py">
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Shuōwán, wǒmen sān ge jiù qù lǐtáng kàn diànyǐng le.
                   </div>
                   <div className="vi">
@@ -679,23 +679,23 @@ export default function Template() {
                   <span className="lab">Đi kèm động từ này</span>
                   <div className="chips">
                     <span className="chip">
-                      <span className="ztai__zh">说对</span>{" "}
-                      <span className="ztai__py">shuōduì</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">说对</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">shuōduì</span>{" "}
                       <span className="cv">nói đúng</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">说错</span>{" "}
-                      <span className="ztai__py">shuōcuò</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">说错</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">shuōcuò</span>{" "}
                       <span className="cv">nói sai</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">说成</span>{" "}
-                      <span className="ztai__py">shuōchéng</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">说成</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">shuōchéng</span>{" "}
                       <span className="cv">nói thành, nói nhầm thành</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">说清楚</span>{" "}
-                      <span className="ztai__py">shuō qīngchu</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">说清楚</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">shuō qīngchu</span>{" "}
                       <span className="cv">nói rõ</span>
                     </span>
                   </div>
@@ -705,22 +705,22 @@ export default function Template() {
             <tr>
               <td className="stt">10</td>
               <td className="ph">
-                <div className="ztai__zh pz">学完</div>
-                <div className="ztai__py">xuéwán</div>
+                <div className="ztai__zh text-2xl leading-[1.55] pz">学完</div>
+                <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">xuéwán</div>
                 <div className="pv">học xong</div>
               </td>
               <td className="exs">
                 <div className="ex">
-                  <div className="ztai__zh">第一本书你学完了吗?</div>
-                  <div className="ztai__py">Dì-yī běn shū nǐ xuéwán le ma?</div>
+                  <div className="ztai__zh text-2xl leading-[1.55]">第一本书你学完了吗?</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">Dì-yī běn shū nǐ xuéwán le ma?</div>
                   <div className="vi">
                     Cuốn thứ nhất cậu học xong chưa?{" "}
                     <span className="src">B4 tr.63</span>
                   </div>
                 </div>
                 <div className="ex">
-                  <div className="ztai__zh">(Sửa lỗi) 我学完这本书了。</div>
-                  <div className="ztai__py">
+                  <div className="ztai__zh text-2xl leading-[1.55]">(Sửa lỗi) 我学完这本书了。</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     (Sửa lỗi) Wǒ xuéwán zhè běn shū le.
                   </div>
                   <div className="vi">
@@ -743,18 +743,18 @@ export default function Template() {
                   <span className="lab">Đi kèm động từ này</span>
                   <div className="chips">
                     <span className="chip">
-                      <span className="ztai__zh">学会</span>{" "}
-                      <span className="ztai__py">xuéhuì</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">学会</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">xuéhuì</span>{" "}
                       <span className="cv">học được, biết làm</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">学好</span>{" "}
-                      <span className="ztai__py">xuéhǎo</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">学好</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">xuéhǎo</span>{" "}
                       <span className="cv">học tốt</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">学到</span>{" "}
-                      <span className="ztai__py">xuédào</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">学到</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">xuédào</span>{" "}
                       <span className="cv">học đến, học được</span>
                     </span>
                   </div>
@@ -764,14 +764,14 @@ export default function Template() {
             <tr>
               <td className="stt">11</td>
               <td className="ph">
-                <div className="ztai__zh pz">听完</div>
-                <div className="ztai__py">tīngwán</div>
+                <div className="ztai__zh text-2xl leading-[1.55] pz">听完</div>
+                <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">tīngwán</div>
                 <div className="pv">nghe xong</div>
               </td>
               <td className="exs">
                 <div className="ex">
-                  <div className="ztai__zh">这一课的录音你听完了没有?</div>
-                  <div className="ztai__py">
+                  <div className="ztai__zh text-2xl leading-[1.55]">这一课的录音你听完了没有?</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Zhè yí kè de lùyīn nǐ tīngwán le méiyǒu?
                   </div>
                   <div className="vi">
@@ -792,18 +792,18 @@ export default function Template() {
                   <span className="lab">Đi kèm động từ này</span>
                   <div className="chips">
                     <span className="chip">
-                      <span className="ztai__zh">听懂</span>{" "}
-                      <span className="ztai__py">tīngdǒng</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">听懂</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">tīngdǒng</span>{" "}
                       <span className="cv">nghe hiểu</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">听见</span>{" "}
-                      <span className="ztai__py">tīngjiàn</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">听见</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">tīngjiàn</span>{" "}
                       <span className="cv">nghe thấy</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">听清楚</span>{" "}
-                      <span className="ztai__py">tīng qīngchu</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">听清楚</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">tīng qīngchu</span>{" "}
                       <span className="cv">nghe rõ</span>
                     </span>
                   </div>
@@ -813,14 +813,14 @@ export default function Template() {
             <tr>
               <td className="stt">12</td>
               <td className="ph">
-                <div className="ztai__zh pz">写完</div>
-                <div className="ztai__py">xiěwán</div>
+                <div className="ztai__zh text-2xl leading-[1.55] pz">写完</div>
+                <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">xiěwán</div>
                 <div className="pv">viết xong</div>
               </td>
               <td className="exs">
                 <div className="ex">
-                  <div className="ztai__zh">今天的汉字你写完了没有?</div>
-                  <div className="ztai__py">
+                  <div className="ztai__zh text-2xl leading-[1.55]">今天的汉字你写完了没有?</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Jīntiān de Hànzì nǐ xiěwán le méiyǒu?
                   </div>
                   <div className="vi">
@@ -841,23 +841,23 @@ export default function Template() {
                   <span className="lab">Đi kèm động từ này</span>
                   <div className="chips">
                     <span className="chip">
-                      <span className="ztai__zh">写对</span>{" "}
-                      <span className="ztai__py">xiěduì</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">写对</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">xiěduì</span>{" "}
                       <span className="cv">viết đúng</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">写错</span>{" "}
-                      <span className="ztai__py">xiěcuò</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">写错</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">xiěcuò</span>{" "}
                       <span className="cv">viết sai</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">写成</span>{" "}
-                      <span className="ztai__py">xiěchéng</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">写成</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">xiěchéng</span>{" "}
                       <span className="cv">viết thành</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">写上</span>{" "}
-                      <span className="ztai__py">xiěshang</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">写上</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">xiěshang</span>{" "}
                       <span className="cv">viết thêm vào</span>
                     </span>
                   </div>
@@ -867,14 +867,14 @@ export default function Template() {
             <tr>
               <td className="stt">13</td>
               <td className="ph">
-                <div className="ztai__zh pz">用完</div>
-                <div className="ztai__py">yòngwán</div>
+                <div className="ztai__zh text-2xl leading-[1.55] pz">用完</div>
+                <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">yòngwán</div>
                 <div className="pv">dùng xong</div>
               </td>
               <td className="exs">
                 <div className="ex">
-                  <div className="ztai__zh">我一用完就还给张东了。</div>
-                  <div className="ztai__py">
+                  <div className="ztai__zh text-2xl leading-[1.55]">我一用完就还给张东了。</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Wǒ yí yòngwán jiù huángěi Zhāng Dōng le.
                   </div>
                   <div className="vi">
@@ -895,18 +895,18 @@ export default function Template() {
                   <span className="lab">Đi kèm động từ này</span>
                   <div className="chips">
                     <span className="chip">
-                      <span className="ztai__zh">用好</span>{" "}
-                      <span className="ztai__py">yònghǎo</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">用好</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">yònghǎo</span>{" "}
                       <span className="cv">dùng tốt</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">用错</span>{" "}
-                      <span className="ztai__py">yòngcuò</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">用错</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">yòngcuò</span>{" "}
                       <span className="cv">dùng sai</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">用光</span>{" "}
-                      <span className="ztai__py">yòngguāng</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">用光</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">yòngguāng</span>{" "}
                       <span className="cv">dùng hết sạch</span>
                     </span>
                   </div>
@@ -916,14 +916,14 @@ export default function Template() {
             <tr>
               <td className="stt">14</td>
               <td className="ph">
-                <div className="ztai__zh pz">办完</div>
-                <div className="ztai__py">bànwán</div>
+                <div className="ztai__zh text-2xl leading-[1.55] pz">办完</div>
+                <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">bànwán</div>
                 <div className="pv">làm xong thủ tục</div>
               </td>
               <td className="exs">
                 <div className="ex">
-                  <div className="ztai__zh">昨天你办完签证放在什么地方了?</div>
-                  <div className="ztai__py">
+                  <div className="ztai__zh text-2xl leading-[1.55]">昨天你办完签证放在什么地方了?</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Zuótiān nǐ bànwán qiānzhèng fàng zài shénme dìfang le?
                   </div>
                   <div className="vi">
@@ -938,13 +938,13 @@ export default function Template() {
                   <span className="lab">Đi kèm động từ này</span>
                   <div className="chips">
                     <span className="chip">
-                      <span className="ztai__zh">办好</span>{" "}
-                      <span className="ztai__py">bànhǎo</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">办好</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">bànhǎo</span>{" "}
                       <span className="cv">làm xong, làm ổn thỏa</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">办成</span>{" "}
-                      <span className="ztai__py">bànchéng</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">办成</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">bànchéng</span>{" "}
                       <span className="cv">làm thành công</span>
                     </span>
                   </div>
@@ -954,7 +954,7 @@ export default function Template() {
             <tr className="grp" id="g2">
               <td colSpan={4}>
                 <div className="gt">
-                  <span className="ztai__zh gz">懂 dǒng</span>
+                  <span className="ztai__zh text-2xl leading-[1.55] gz">懂 dǒng</span>
                   <span className="gm">hiểu</span>
                 </div>
                 <div className="gd">
@@ -966,30 +966,30 @@ export default function Template() {
             <tr>
               <td className="stt">15</td>
               <td className="ph">
-                <div className="ztai__zh pz">听懂</div>
-                <div className="ztai__py">tīngdǒng</div>
+                <div className="ztai__zh text-2xl leading-[1.55] pz">听懂</div>
+                <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">tīngdǒng</div>
                 <div className="pv">nghe hiểu</div>
               </td>
               <td className="exs">
                 <div className="ex">
-                  <div className="ztai__zh">很多句子我没听懂。</div>
-                  <div className="ztai__py">Hěn duō jùzi wǒ méi tīngdǒng.</div>
+                  <div className="ztai__zh text-2xl leading-[1.55]">很多句子我没听懂。</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">Hěn duō jùzi wǒ méi tīngdǒng.</div>
                   <div className="vi">
                     Nhiều câu tớ nghe không hiểu.{" "}
                     <span className="src">B4 tr.51</span>
                   </div>
                 </div>
                 <div className="ex">
-                  <div className="ztai__zh">我听懂了老师的话。</div>
-                  <div className="ztai__py">Wǒ tīngdǒngle lǎoshī de huà.</div>
+                  <div className="ztai__zh text-2xl leading-[1.55]">我听懂了老师的话。</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">Wǒ tīngdǒngle lǎoshī de huà.</div>
                   <div className="vi">
                     Tớ nghe hiểu lời thầy giáo.{" "}
                     <span className="src">B4 tr.55</span>
                   </div>
                 </div>
                 <div className="ex">
-                  <div className="ztai__zh">我念了一个故事,玛丽听懂了。</div>
-                  <div className="ztai__py">
+                  <div className="ztai__zh text-2xl leading-[1.55]">我念了一个故事,玛丽听懂了。</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Wǒ niànle yí ge gùshi, Mǎlì tīngdǒng le.
                   </div>
                   <div className="vi">
@@ -1007,28 +1007,28 @@ export default function Template() {
                   <span className="lab">Đi kèm động từ này</span>
                   <div className="chips">
                     <span className="chip">
-                      <span className="ztai__zh">听见</span>{" "}
-                      <span className="ztai__py">tīngjiàn</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">听见</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">tīngjiàn</span>{" "}
                       <span className="cv">nghe thấy</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">听完</span>{" "}
-                      <span className="ztai__py">tīngwán</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">听完</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">tīngwán</span>{" "}
                       <span className="cv">nghe xong</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">听清楚</span>{" "}
-                      <span className="ztai__py">tīng qīngchu</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">听清楚</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">tīng qīngchu</span>{" "}
                       <span className="cv">nghe rõ</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">听错</span>{" "}
-                      <span className="ztai__py">tīngcuò</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">听错</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">tīngcuò</span>{" "}
                       <span className="cv">nghe nhầm</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">听明白</span>{" "}
-                      <span className="ztai__py">tīng míngbai</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">听明白</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">tīng míngbai</span>{" "}
                       <span className="cv">nghe rõ, nghe hiểu</span>
                     </span>
                   </div>
@@ -1038,21 +1038,21 @@ export default function Template() {
             <tr>
               <td className="stt">16</td>
               <td className="ph">
-                <div className="ztai__zh pz">看懂</div>
-                <div className="ztai__py">kàndǒng</div>
+                <div className="ztai__zh text-2xl leading-[1.55] pz">看懂</div>
+                <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">kàndǒng</div>
                 <div className="pv">xem/đọc hiểu</div>
               </td>
               <td className="exs">
                 <div className="ex">
-                  <div className="ztai__zh">都看懂了吗?</div>
-                  <div className="ztai__py">Dōu kàndǒng le ma?</div>
+                  <div className="ztai__zh text-2xl leading-[1.55]">都看懂了吗?</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">Dōu kàndǒng le ma?</div>
                   <div className="vi">
                     Hiểu hết rồi à? <span className="src">B4 tr.52</span>
                   </div>
                 </div>
                 <div className="ex">
-                  <div className="ztai__zh">这课课文我没有看懂。</div>
-                  <div className="ztai__py">
+                  <div className="ztai__zh text-2xl leading-[1.55]">这课课文我没有看懂。</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Zhè kè kèwén wǒ méiyǒu kàndǒng.
                   </div>
                   <div className="vi">
@@ -1070,23 +1070,23 @@ export default function Template() {
                   <span className="lab">Đi kèm động từ này</span>
                   <div className="chips">
                     <span className="chip">
-                      <span className="ztai__zh">看完</span>{" "}
-                      <span className="ztai__py">kànwán</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">看完</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">kànwán</span>{" "}
                       <span className="cv">xem xong</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">看见</span>{" "}
-                      <span className="ztai__py">kànjiàn</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">看见</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">kànjiàn</span>{" "}
                       <span className="cv">nhìn thấy</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">看清楚</span>{" "}
-                      <span className="ztai__py">kàn qīngchu</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">看清楚</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">kàn qīngchu</span>{" "}
                       <span className="cv">nhìn rõ</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">看明白</span>{" "}
-                      <span className="ztai__py">kàn míngbai</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">看明白</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">kàn míngbai</span>{" "}
                       <span className="cv">xem hiểu rõ</span>
                     </span>
                   </div>
@@ -1096,7 +1096,7 @@ export default function Template() {
             <tr className="grp" id="g3">
               <td colSpan={4}>
                 <div className="gt">
-                  <span className="ztai__zh gz">见 jiàn</span>
+                  <span className="ztai__zh text-2xl leading-[1.55] gz">见 jiàn</span>
                   <span className="gm">cảm nhận được bằng giác quan</span>
                 </div>
                 <div className="gd">
@@ -1108,22 +1108,22 @@ export default function Template() {
             <tr>
               <td className="stt">17</td>
               <td className="ph">
-                <div className="ztai__zh pz">看见</div>
-                <div className="ztai__py">kànjiàn</div>
+                <div className="ztai__zh text-2xl leading-[1.55] pz">看见</div>
+                <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">kànjiàn</div>
                 <div className="pv">nhìn thấy</div>
               </td>
               <td className="exs">
                 <div className="ex">
-                  <div className="ztai__zh">我没看见你的词典。</div>
-                  <div className="ztai__py">Wǒ méi kànjiàn nǐ de cídiǎn.</div>
+                  <div className="ztai__zh text-2xl leading-[1.55]">我没看见你的词典。</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">Wǒ méi kànjiàn nǐ de cídiǎn.</div>
                   <div className="vi">
                     Tớ không thấy từ điển của cậu.{" "}
                     <span className="src">B4 tr.51</span>
                   </div>
                 </div>
                 <div className="ex">
-                  <div className="ztai__zh">你看见玛丽了没有? — 看见了。</div>
-                  <div className="ztai__py">
+                  <div className="ztai__zh text-2xl leading-[1.55]">你看见玛丽了没有? — 看见了。</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Nǐ kànjiàn Mǎlì le méiyǒu? — Kànjiàn le.
                   </div>
                   <div className="vi">
@@ -1132,10 +1132,10 @@ export default function Template() {
                   </div>
                 </div>
                 <div className="ex">
-                  <div className="ztai__zh">
+                  <div className="ztai__zh text-2xl leading-[1.55]">
                     我看见玛丽,她在操场打太极拳呢。
                   </div>
-                  <div className="ztai__py">
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Wǒ kànjiàn Mǎlì, tā zài cāochǎng dǎ tàijíquán ne.
                   </div>
                   <div className="vi">
@@ -1154,23 +1154,23 @@ export default function Template() {
                   <span className="lab">Đi kèm động từ này</span>
                   <div className="chips">
                     <span className="chip">
-                      <span className="ztai__zh">看到</span>{" "}
-                      <span className="ztai__py">kàndào</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">看到</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">kàndào</span>{" "}
                       <span className="cv">nhìn thấy, xem đến</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">看懂</span>{" "}
-                      <span className="ztai__py">kàndǒng</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">看懂</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">kàndǒng</span>{" "}
                       <span className="cv">xem hiểu</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">看完</span>{" "}
-                      <span className="ztai__py">kànwán</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">看完</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">kànwán</span>{" "}
                       <span className="cv">xem xong</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">看错</span>{" "}
-                      <span className="ztai__py">kàncuò</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">看错</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">kàncuò</span>{" "}
                       <span className="cv">xem nhầm</span>
                     </span>
                   </div>
@@ -1180,14 +1180,14 @@ export default function Template() {
             <tr>
               <td className="stt">18</td>
               <td className="ph">
-                <div className="ztai__zh pz">听见</div>
-                <div className="ztai__py">tīngjiàn</div>
+                <div className="ztai__zh text-2xl leading-[1.55] pz">听见</div>
+                <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">tīngjiàn</div>
                 <div className="pv">nghe thấy</div>
               </td>
               <td className="exs">
                 <div className="ex">
-                  <div className="ztai__zh">你没有听见吗?安娜在叫你。</div>
-                  <div className="ztai__py">
+                  <div className="ztai__zh text-2xl leading-[1.55]">你没有听见吗?安娜在叫你。</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Nǐ méiyǒu tīngjiàn ma? Ānnà zài jiào nǐ.
                   </div>
                   <div className="vi">
@@ -1196,8 +1196,8 @@ export default function Template() {
                   </div>
                 </div>
                 <div className="ex">
-                  <div className="ztai__zh">听见我说的话 / 听见她叫你</div>
-                  <div className="ztai__py">
+                  <div className="ztai__zh text-2xl leading-[1.55]">听见我说的话 / 听见她叫你</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     tīngjiàn wǒ shuō de huà / tīngjiàn tā jiào nǐ
                   </div>
                   <div className="vi">
@@ -1215,18 +1215,18 @@ export default function Template() {
                   <span className="lab">Đi kèm động từ này</span>
                   <div className="chips">
                     <span className="chip">
-                      <span className="ztai__zh">听到</span>{" "}
-                      <span className="ztai__py">tīngdào</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">听到</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">tīngdào</span>{" "}
                       <span className="cv">nghe thấy (dùng được thay)</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">听懂</span>{" "}
-                      <span className="ztai__py">tīngdǒng</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">听懂</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">tīngdǒng</span>{" "}
                       <span className="cv">nghe hiểu</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">听清楚</span>{" "}
-                      <span className="ztai__py">tīng qīngchu</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">听清楚</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">tīng qīngchu</span>{" "}
                       <span className="cv">nghe rõ</span>
                     </span>
                   </div>
@@ -1236,7 +1236,7 @@ export default function Template() {
             <tr className="grp" id="g4">
               <td colSpan={4}>
                 <div className="gt">
-                  <span className="ztai__zh gz">
+                  <span className="ztai__zh text-2xl leading-[1.55] gz">
                     开 / 上 (mở, đóng, dính vào)
                   </span>
                   <span className="gm">mở ra, khép lại, dính vào</span>
@@ -1251,14 +1251,14 @@ export default function Template() {
             <tr>
               <td className="stt">19</td>
               <td className="ph">
-                <div className="ztai__zh pz">打开</div>
-                <div className="ztai__py">dǎkāi</div>
+                <div className="ztai__zh text-2xl leading-[1.55] pz">打开</div>
+                <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">dǎkāi</div>
                 <div className="pv">mở ra</div>
               </td>
               <td className="exs">
                 <div className="ex">
-                  <div className="ztai__zh">快打开电脑,看看电视剧吧。</div>
-                  <div className="ztai__py">
+                  <div className="ztai__zh text-2xl leading-[1.55]">快打开电脑,看看电视剧吧。</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Kuài dǎkāi diànnǎo, kànkan diànshìjù ba.
                   </div>
                   <div className="vi">
@@ -1267,15 +1267,15 @@ export default function Template() {
                   </div>
                 </div>
                 <div className="ex">
-                  <div className="ztai__zh">打开电脑,好吗?</div>
-                  <div className="ztai__py">Dǎkāi diànnǎo, hǎo ma?</div>
+                  <div className="ztai__zh text-2xl leading-[1.55]">打开电脑,好吗?</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">Dǎkāi diànnǎo, hǎo ma?</div>
                   <div className="vi">
                     Bật máy tính lên nhé? <span className="src">B4 tr.61</span>
                   </div>
                 </div>
                 <div className="ex">
-                  <div className="ztai__zh">打开灯 / 打开窗户 / 打开书</div>
-                  <div className="ztai__py">
+                  <div className="ztai__zh text-2xl leading-[1.55]">打开灯 / 打开窗户 / 打开书</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     dǎkāi dēng / dǎkāi chuānghu / dǎkāi shū
                   </div>
                   <div className="vi">
@@ -1292,23 +1292,23 @@ export default function Template() {
                   <span className="lab">Đi kèm động từ này</span>
                   <div className="chips">
                     <span className="chip">
-                      <span className="ztai__zh">拉开</span>{" "}
-                      <span className="ztai__py">lākāi</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">拉开</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">lākāi</span>{" "}
                       <span className="cv">kéo ra</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">推开</span>{" "}
-                      <span className="ztai__py">tuīkāi</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">推开</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">tuīkāi</span>{" "}
                       <span className="cv">đẩy ra</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">翻开</span>{" "}
-                      <span className="ztai__py">fānkāi</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">翻开</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">fānkāi</span>{" "}
                       <span className="cv">lật mở</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">睁开</span>{" "}
-                      <span className="ztai__py">zhēngkāi</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">睁开</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">zhēngkāi</span>{" "}
                       <span className="cv">mở (mắt)</span>
                     </span>
                   </div>
@@ -1318,14 +1318,14 @@ export default function Template() {
             <tr>
               <td className="stt">20</td>
               <td className="ph">
-                <div className="ztai__zh pz">开开</div>
-                <div className="ztai__py">kāikai</div>
+                <div className="ztai__zh text-2xl leading-[1.55] pz">开开</div>
+                <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">kāikai</div>
                 <div className="pv">mở ra</div>
               </td>
               <td className="exs">
                 <div className="ex">
-                  <div className="ztai__zh">我开开门问她:“什么事?”</div>
-                  <div className="ztai__py">
+                  <div className="ztai__zh text-2xl leading-[1.55]">我开开门问她:“什么事?”</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Wǒ kāikai mén wèn tā: “Shénme shì?”
                   </div>
                   <div className="vi">
@@ -1334,8 +1334,8 @@ export default function Template() {
                   </div>
                 </div>
                 <div className="ex">
-                  <div className="ztai__zh">开开门 / 开开电视</div>
-                  <div className="ztai__py">kāikai mén / kāikai diànshì</div>
+                  <div className="ztai__zh text-2xl leading-[1.55]">开开门 / 开开电视</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">kāikai mén / kāikai diànshì</div>
                   <div className="vi">
                     mở cửa / bật tivi <span className="src">B4 tr.59</span>
                   </div>
@@ -1350,13 +1350,13 @@ export default function Template() {
                   <span className="lab">Đi kèm động từ này</span>
                   <div className="chips">
                     <span className="chip">
-                      <span className="ztai__zh">打开</span>{" "}
-                      <span className="ztai__py">dǎkāi</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">打开</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">dǎkāi</span>{" "}
                       <span className="cv">mở ra</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">关上</span>{" "}
-                      <span className="ztai__py">guānshang</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">关上</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">guānshang</span>{" "}
                       <span className="cv">đóng lại</span>
                     </span>
                   </div>
@@ -1366,28 +1366,28 @@ export default function Template() {
             <tr>
               <td className="stt">21</td>
               <td className="ph">
-                <div className="ztai__zh pz">关上</div>
-                <div className="ztai__py">guānshang</div>
+                <div className="ztai__zh text-2xl leading-[1.55] pz">关上</div>
+                <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">guānshang</div>
                 <div className="pv">đóng lại</div>
               </td>
               <td className="exs">
                 <div className="ex">
-                  <div className="ztai__zh">他关上门了。</div>
-                  <div className="ztai__py">Tā guānshang mén le.</div>
+                  <div className="ztai__zh text-2xl leading-[1.55]">他关上门了。</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">Tā guānshang mén le.</div>
                   <div className="vi">
                     Anh ấy đóng cửa rồi. <span className="src">B4 tr.57</span>
                   </div>
                 </div>
                 <div className="ex">
-                  <div className="ztai__zh">关上门吧。</div>
-                  <div className="ztai__py">Guānshang mén ba.</div>
+                  <div className="ztai__zh text-2xl leading-[1.55]">关上门吧。</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">Guānshang mén ba.</div>
                   <div className="vi">
                     Đóng cửa lại đi. <span className="src">B4 tr.58</span>
                   </div>
                 </div>
                 <div className="ex">
-                  <div className="ztai__zh">外边风很大,关上窗户吧。</div>
-                  <div className="ztai__py">
+                  <div className="ztai__zh text-2xl leading-[1.55]">外边风很大,关上窗户吧。</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Wàibian fēng hěn dà, guānshang chuānghu ba.
                   </div>
                   <div className="vi">
@@ -1412,13 +1412,13 @@ export default function Template() {
                   <span className="lab">Đi kèm động từ này</span>
                   <div className="chips">
                     <span className="chip">
-                      <span className="ztai__zh">关好</span>{" "}
-                      <span className="ztai__py">guānhǎo</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">关好</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">guānhǎo</span>{" "}
                       <span className="cv">đóng chặt, đóng cẩn thận</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">关掉</span>{" "}
-                      <span className="ztai__py">guāndiào</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">关掉</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">guāndiào</span>{" "}
                       <span className="cv">tắt đi</span>
                     </span>
                   </div>
@@ -1428,14 +1428,14 @@ export default function Template() {
             <tr>
               <td className="stt">22</td>
               <td className="ph">
-                <div className="ztai__zh pz">合上</div>
-                <div className="ztai__py">héshang</div>
+                <div className="ztai__zh text-2xl leading-[1.55] pz">合上</div>
+                <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">héshang</div>
                 <div className="pv">khép lại, gập lại</div>
               </td>
               <td className="exs">
                 <div className="ex">
-                  <div className="ztai__zh">请同学们合上书,现在听写。</div>
-                  <div className="ztai__py">
+                  <div className="ztai__zh text-2xl leading-[1.55]">请同学们合上书,现在听写。</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Qǐng tóngxuémen héshang shū, xiànzài tīngxiě.
                   </div>
                   <div className="vi">
@@ -1444,10 +1444,10 @@ export default function Template() {
                   </div>
                 </div>
                 <div className="ex">
-                  <div className="ztai__zh">
+                  <div className="ztai__zh text-2xl leading-[1.55]">
                     她念了一个故事,合上书,问我听懂了没有。
                   </div>
-                  <div className="ztai__py">
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Tā niànle yí ge gùshi, héshang shū, wèn wǒ tīngdǒngle
                     méiyǒu.
                   </div>
@@ -1463,13 +1463,13 @@ export default function Template() {
                   <span className="lab">Đi kèm động từ này</span>
                   <div className="chips">
                     <span className="chip">
-                      <span className="ztai__zh">闭上</span>{" "}
-                      <span className="ztai__py">bìshang</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">闭上</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">bìshang</span>{" "}
                       <span className="cv">nhắm lại (mắt, miệng)</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">关上</span>{" "}
-                      <span className="ztai__py">guānshang</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">关上</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">guānshang</span>{" "}
                       <span className="cv">đóng lại (cửa)</span>
                     </span>
                   </div>
@@ -1479,14 +1479,14 @@ export default function Template() {
             <tr>
               <td className="stt">23</td>
               <td className="ph">
-                <div className="ztai__zh pz">写上</div>
-                <div className="ztai__py">xiěshang</div>
+                <div className="ztai__zh text-2xl leading-[1.55] pz">写上</div>
+                <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">xiěshang</div>
                 <div className="pv">viết thêm lên</div>
               </td>
               <td className="exs">
                 <div className="ex">
-                  <div className="ztai__zh">请在这儿写上你的名字。</div>
-                  <div className="ztai__py">
+                  <div className="ztai__zh text-2xl leading-[1.55]">请在这儿写上你的名字。</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Qǐng zài zhèr xiěshang nǐ de míngzi.
                   </div>
                   <div className="vi">
@@ -1501,18 +1501,18 @@ export default function Template() {
                   <span className="lab">Đi kèm động từ này</span>
                   <div className="chips">
                     <span className="chip">
-                      <span className="ztai__zh">写在</span>{" "}
-                      <span className="ztai__py">xiězài</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">写在</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">xiězài</span>{" "}
                       <span className="cv">viết ở</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">写对</span>{" "}
-                      <span className="ztai__py">xiěduì</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">写对</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">xiěduì</span>{" "}
                       <span className="cv">viết đúng</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">加上</span>{" "}
-                      <span className="ztai__py">jiāshang</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">加上</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">jiāshang</span>{" "}
                       <span className="cv">thêm vào</span>
                     </span>
                   </div>
@@ -1522,14 +1522,14 @@ export default function Template() {
             <tr>
               <td className="stt">24</td>
               <td className="ph">
-                <div className="ztai__zh pz">穿上</div>
-                <div className="ztai__py">chuānshang</div>
+                <div className="ztai__zh text-2xl leading-[1.55] pz">穿上</div>
+                <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">chuānshang</div>
                 <div className="pv">mặc vào</div>
               </td>
               <td className="exs">
                 <div className="ex">
-                  <div className="ztai__zh">你穿上这件衣服试试。</div>
-                  <div className="ztai__py">
+                  <div className="ztai__zh text-2xl leading-[1.55]">你穿上这件衣服试试。</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Nǐ chuānshang zhè jiàn yīfu shìshi.
                   </div>
                   <div className="vi">
@@ -1538,8 +1538,8 @@ export default function Template() {
                   </div>
                 </div>
                 <div className="ex">
-                  <div className="ztai__zh">他穿上衣服了。</div>
-                  <div className="ztai__py">Tā chuānshang yīfu le.</div>
+                  <div className="ztai__zh text-2xl leading-[1.55]">他穿上衣服了。</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">Tā chuānshang yīfu le.</div>
                   <div className="vi">
                     Anh ấy mặc quần áo vào rồi.{" "}
                     <span className="src">B4 tr.58</span>
@@ -1554,18 +1554,18 @@ export default function Template() {
                   <span className="lab">Đi kèm động từ này</span>
                   <div className="chips">
                     <span className="chip">
-                      <span className="ztai__zh">穿好</span>{" "}
-                      <span className="ztai__py">chuānhǎo</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">穿好</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">chuānhǎo</span>{" "}
                       <span className="cv">mặc xong, mặc chỉnh tề</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">戴上</span>{" "}
-                      <span className="ztai__py">dàishang</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">戴上</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">dàishang</span>{" "}
                       <span className="cv">đội/đeo vào</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">带上</span>{" "}
-                      <span className="ztai__py">dàishang</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">带上</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">dàishang</span>{" "}
                       <span className="cv">mang theo</span>
                     </span>
                   </div>
@@ -1575,7 +1575,7 @@ export default function Template() {
             <tr className="grp" id="g5">
               <td colSpan={4}>
                 <div className="gt">
-                  <span className="ztai__zh gz">到 dào</span>
+                  <span className="ztai__zh text-2xl leading-[1.55] gz">到 dào</span>
                   <span className="gm">
                     đạt mục đích, tới nơi, kéo dài đến mốc
                   </span>
@@ -1590,14 +1590,14 @@ export default function Template() {
             <tr>
               <td className="stt">25</td>
               <td className="ph">
-                <div className="ztai__zh pz">回到</div>
-                <div className="ztai__py">huídào</div>
+                <div className="ztai__zh text-2xl leading-[1.55] pz">回到</div>
+                <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">huídào</div>
                 <div className="pv">trở về đến</div>
               </td>
               <td className="exs">
                 <div className="ex">
-                  <div className="ztai__zh">我昨天很晚才回到家。</div>
-                  <div className="ztai__py">
+                  <div className="ztai__zh text-2xl leading-[1.55]">我昨天很晚才回到家。</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Wǒ zuótiān hěn wǎn cái huídào jiā.
                   </div>
                   <div className="vi">
@@ -1606,8 +1606,8 @@ export default function Template() {
                   </div>
                 </div>
                 <div className="ex">
-                  <div className="ztai__zh">吃完晚饭,我和玛丽回到宿舍。</div>
-                  <div className="ztai__py">
+                  <div className="ztai__zh text-2xl leading-[1.55]">吃完晚饭,我和玛丽回到宿舍。</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Chīwán wǎnfàn, wǒ hé Mǎlì huídào sùshè.
                   </div>
                   <div className="vi">
@@ -1616,8 +1616,8 @@ export default function Template() {
                   </div>
                 </div>
                 <div className="ex">
-                  <div className="ztai__zh">我一回到家不是就交给你了吗?</div>
-                  <div className="ztai__py">
+                  <div className="ztai__zh text-2xl leading-[1.55]">我一回到家不是就交给你了吗?</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Wǒ yì huídào jiā bú shì jiù jiāogěi nǐ le ma?
                   </div>
                   <div className="vi">
@@ -1635,23 +1635,23 @@ export default function Template() {
                   <span className="lab">Đi kèm động từ này</span>
                   <div className="chips">
                     <span className="chip">
-                      <span className="ztai__zh">走到</span>{" "}
-                      <span className="ztai__py">zǒudào</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">走到</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">zǒudào</span>{" "}
                       <span className="cv">đi đến</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">跑到</span>{" "}
-                      <span className="ztai__py">pǎodào</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">跑到</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">pǎodào</span>{" "}
                       <span className="cv">chạy đến</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">搬到</span>{" "}
-                      <span className="ztai__py">bāndào</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">搬到</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">bāndào</span>{" "}
                       <span className="cv">chuyển đến</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">送到</span>{" "}
-                      <span className="ztai__py">sòngdào</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">送到</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">sòngdào</span>{" "}
                       <span className="cv">đưa đến</span>
                     </span>
                   </div>
@@ -1661,29 +1661,29 @@ export default function Template() {
             <tr>
               <td className="stt">26</td>
               <td className="ph">
-                <div className="ztai__zh pz">找到</div>
-                <div className="ztai__py">zhǎodào</div>
+                <div className="ztai__zh text-2xl leading-[1.55] pz">找到</div>
+                <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">zhǎodào</div>
                 <div className="pv">tìm được</div>
               </td>
               <td className="exs">
                 <div className="ex">
-                  <div className="ztai__zh">我找到王老师了。</div>
-                  <div className="ztai__py">Wǒ zhǎodào Wáng lǎoshī le.</div>
+                  <div className="ztai__zh text-2xl leading-[1.55]">我找到王老师了。</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">Wǒ zhǎodào Wáng lǎoshī le.</div>
                   <div className="vi">
                     Tớ tìm được thầy Vương rồi.{" "}
                     <span className="src">B4 tr.58</span>
                   </div>
                 </div>
                 <div className="ex">
-                  <div className="ztai__zh">啊,找到了!</div>
-                  <div className="ztai__py">À, zhǎodào le!</div>
+                  <div className="ztai__zh text-2xl leading-[1.55]">啊,找到了!</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">À, zhǎodào le!</div>
                   <div className="vi">
                     À, tìm thấy rồi! <span className="src">B12 tr.197</span>
                   </div>
                 </div>
                 <div className="ex">
-                  <div className="ztai__zh">是在包儿里找到的吗?</div>
-                  <div className="ztai__py">Shì zài bāor lǐ zhǎodào de ma?</div>
+                  <div className="ztai__zh text-2xl leading-[1.55]">是在包儿里找到的吗?</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">Shì zài bāor lǐ zhǎodào de ma?</div>
                   <div className="vi">
                     Là tìm thấy trong túi à?{" "}
                     <span className="src">B12 tr.196</span>
@@ -1699,18 +1699,18 @@ export default function Template() {
                   <span className="lab">Đi kèm động từ này</span>
                   <div className="chips">
                     <span className="chip">
-                      <span className="ztai__zh">找着</span>{" "}
-                      <span className="ztai__py">zhǎozháo</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">找着</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">zhǎozháo</span>{" "}
                       <span className="cv">tìm được</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">找错</span>{" "}
-                      <span className="ztai__py">zhǎocuò</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">找错</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">zhǎocuò</span>{" "}
                       <span className="cv">tìm nhầm</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">找完</span>{" "}
-                      <span className="ztai__py">zhǎowán</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">找完</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">zhǎowán</span>{" "}
                       <span className="cv">tìm xong</span>
                     </span>
                   </div>
@@ -1720,22 +1720,22 @@ export default function Template() {
             <tr>
               <td className="stt">27</td>
               <td className="ph">
-                <div className="ztai__zh pz">买到</div>
-                <div className="ztai__py">mǎidào</div>
+                <div className="ztai__zh text-2xl leading-[1.55] pz">买到</div>
+                <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">mǎidào</div>
                 <div className="pv">mua được</div>
               </td>
               <td className="exs">
                 <div className="ex">
-                  <div className="ztai__zh">罗兰买到那本书了。</div>
-                  <div className="ztai__py">Luólán mǎidào nà běn shū le.</div>
+                  <div className="ztai__zh text-2xl leading-[1.55]">罗兰买到那本书了。</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">Luólán mǎidào nà běn shū le.</div>
                   <div className="vi">
                     Lô Lan mua được cuốn sách đó rồi.{" "}
                     <span className="src">B4 tr.58</span>
                   </div>
                 </div>
                 <div className="ex">
-                  <div className="ztai__zh">你要的那本书我给你买到了。</div>
-                  <div className="ztai__py">
+                  <div className="ztai__zh text-2xl leading-[1.55]">你要的那本书我给你买到了。</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Nǐ yào de nà běn shū wǒ gěi nǐ mǎidào le.
                   </div>
                   <div className="vi">
@@ -1753,23 +1753,23 @@ export default function Template() {
                   <span className="lab">Đi kèm động từ này</span>
                   <div className="chips">
                     <span className="chip">
-                      <span className="ztai__zh">买着</span>{" "}
-                      <span className="ztai__py">mǎizháo</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">买着</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">mǎizháo</span>{" "}
                       <span className="cv">mua được</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">买好</span>{" "}
-                      <span className="ztai__py">mǎihǎo</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">买好</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">mǎihǎo</span>{" "}
                       <span className="cv">mua xong</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">买错</span>{" "}
-                      <span className="ztai__py">mǎicuò</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">买错</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">mǎicuò</span>{" "}
                       <span className="cv">mua nhầm</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">买完</span>{" "}
-                      <span className="ztai__py">mǎiwán</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">买完</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">mǎiwán</span>{" "}
                       <span className="cv">mua xong, mua hết</span>
                     </span>
                   </div>
@@ -1779,14 +1779,14 @@ export default function Template() {
             <tr>
               <td className="stt">28</td>
               <td className="ph">
-                <div className="ztai__zh pz">看到</div>
-                <div className="ztai__py">kàndào</div>
+                <div className="ztai__zh text-2xl leading-[1.55] pz">看到</div>
+                <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">kàndào</div>
                 <div className="pv">xem đến, thấy</div>
               </td>
               <td className="exs">
                 <div className="ex">
-                  <div className="ztai__zh">看到有意思的地方,就想笑。</div>
-                  <div className="ztai__py">
+                  <div className="ztai__zh text-2xl leading-[1.55]">看到有意思的地方,就想笑。</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Kàndào yǒu yìsi de dìfang, jiù xiǎng xiào.
                   </div>
                   <div className="vi">
@@ -1795,8 +1795,8 @@ export default function Template() {
                   </div>
                 </div>
                 <div className="ex">
-                  <div className="ztai__zh">我们看到九点才看完。</div>
-                  <div className="ztai__py">
+                  <div className="ztai__zh text-2xl leading-[1.55]">我们看到九点才看完。</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Wǒmen kàndào jiǔ diǎn cái kànwán.
                   </div>
                   <div className="vi">
@@ -1805,10 +1805,10 @@ export default function Template() {
                   </div>
                 </div>
                 <div className="ex">
-                  <div className="ztai__zh">
+                  <div className="ztai__zh text-2xl leading-[1.55]">
                     我看到一半儿,肚子疼很厉害,就去医院了。
                   </div>
-                  <div className="ztai__py">
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Wǒ kàndào yíbànr, dùzi téng hěn lìhai, jiù qù yīyuàn le.
                   </div>
                   <div className="vi">
@@ -1832,18 +1832,18 @@ export default function Template() {
                   <span className="lab">Đi kèm động từ này</span>
                   <div className="chips">
                     <span className="chip">
-                      <span className="ztai__zh">看见</span>{" "}
-                      <span className="ztai__py">kànjiàn</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">看见</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">kànjiàn</span>{" "}
                       <span className="cv">nhìn thấy</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">看完</span>{" "}
-                      <span className="ztai__py">kànwán</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">看完</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">kànwán</span>{" "}
                       <span className="cv">xem xong</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">看懂</span>{" "}
-                      <span className="ztai__py">kàndǒng</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">看懂</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">kàndǒng</span>{" "}
                       <span className="cv">xem hiểu</span>
                     </span>
                   </div>
@@ -1853,14 +1853,14 @@ export default function Template() {
             <tr>
               <td className="stt">29</td>
               <td className="ph">
-                <div className="ztai__zh pz">听到</div>
-                <div className="ztai__py">tīngdào</div>
+                <div className="ztai__zh text-2xl leading-[1.55] pz">听到</div>
+                <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">tīngdào</div>
                 <div className="pv">nghe thấy</div>
               </td>
               <td className="exs">
                 <div className="ex">
-                  <div className="ztai__zh">听到了</div>
-                  <div className="ztai__py">tīngdào le</div>
+                  <div className="ztai__zh text-2xl leading-[1.55]">听到了</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">tīngdào le</div>
                   <div className="vi">
                     nghe thấy rồi <span className="src">B4 tr.59</span>
                   </div>
@@ -1872,13 +1872,13 @@ export default function Template() {
                   <span className="lab">Đi kèm động từ này</span>
                   <div className="chips">
                     <span className="chip">
-                      <span className="ztai__zh">听见</span>{" "}
-                      <span className="ztai__py">tīngjiàn</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">听见</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">tīngjiàn</span>{" "}
                       <span className="cv">nghe thấy</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">听说</span>{" "}
-                      <span className="ztai__py">tīngshuō</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">听说</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">tīngshuō</span>{" "}
                       <span className="cv">nghe nói</span>
                     </span>
                   </div>
@@ -1888,30 +1888,30 @@ export default function Template() {
             <tr>
               <td className="stt">30</td>
               <td className="ph">
-                <div className="ztai__zh pz">学到</div>
-                <div className="ztai__py">xuédào</div>
+                <div className="ztai__zh text-2xl leading-[1.55] pz">学到</div>
+                <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">xuédào</div>
                 <div className="pv">học đến</div>
               </td>
               <td className="exs">
                 <div className="ex">
-                  <div className="ztai__zh">我们学到二十九课了。</div>
-                  <div className="ztai__py">Wǒmen xuédào èrshíjiǔ kè le.</div>
+                  <div className="ztai__zh text-2xl leading-[1.55]">我们学到二十九课了。</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">Wǒmen xuédào èrshíjiǔ kè le.</div>
                   <div className="vi">
                     Chúng tớ học đến bài 29 rồi.{" "}
                     <span className="src">B4 tr.59</span>
                   </div>
                 </div>
                 <div className="ex">
-                  <div className="ztai__zh">你们学到第几课了?</div>
-                  <div className="ztai__py">Nǐmen xuédào dì-jǐ kè le?</div>
+                  <div className="ztai__zh text-2xl leading-[1.55]">你们学到第几课了?</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">Nǐmen xuédào dì-jǐ kè le?</div>
                   <div className="vi">
                     Các cậu học đến bài mấy rồi?{" "}
                     <span className="src">B4 tr.63</span>
                   </div>
                 </div>
                 <div className="ex">
-                  <div className="ztai__zh">我每天晚上都学到十一二点。</div>
-                  <div className="ztai__py">
+                  <div className="ztai__zh text-2xl leading-[1.55]">我每天晚上都学到十一二点。</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Wǒ měi tiān wǎnshang dōu xuédào shíyī èr diǎn.
                   </div>
                   <div className="vi">
@@ -1926,13 +1926,13 @@ export default function Template() {
                   <span className="lab">Đi kèm động từ này</span>
                   <div className="chips">
                     <span className="chip">
-                      <span className="ztai__zh">学会</span>{" "}
-                      <span className="ztai__py">xuéhuì</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">学会</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">xuéhuì</span>{" "}
                       <span className="cv">học được</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">学完</span>{" "}
-                      <span className="ztai__py">xuéwán</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">学完</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">xuéwán</span>{" "}
                       <span className="cv">học xong</span>
                     </span>
                   </div>
@@ -1942,14 +1942,14 @@ export default function Template() {
             <tr>
               <td className="stt">31</td>
               <td className="ph">
-                <div className="ztai__zh pz">睡到</div>
-                <div className="ztai__py">shuìdào</div>
+                <div className="ztai__zh text-2xl leading-[1.55] pz">睡到</div>
+                <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">shuìdào</div>
                 <div className="pv">ngủ đến</div>
               </td>
               <td className="exs">
                 <div className="ex">
-                  <div className="ztai__zh">星期六早上我睡到九点才起床。</div>
-                  <div className="ztai__py">
+                  <div className="ztai__zh text-2xl leading-[1.55]">星期六早上我睡到九点才起床。</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Xīngqīliù zǎoshang wǒ shuìdào jiǔ diǎn cái qǐchuáng.
                   </div>
                   <div className="vi">
@@ -1967,18 +1967,18 @@ export default function Template() {
                   <span className="lab">Đi kèm động từ này</span>
                   <div className="chips">
                     <span className="chip">
-                      <span className="ztai__zh">玩到</span>{" "}
-                      <span className="ztai__py">wándào</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">玩到</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">wándào</span>{" "}
                       <span className="cv">chơi đến</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">等到</span>{" "}
-                      <span className="ztai__py">děngdào</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">等到</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">děngdào</span>{" "}
                       <span className="cv">đợi đến</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">忙到</span>{" "}
-                      <span className="ztai__py">mángdào</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">忙到</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">mángdào</span>{" "}
                       <span className="cv">bận đến</span>
                     </span>
                   </div>
@@ -1988,14 +1988,14 @@ export default function Template() {
             <tr>
               <td className="stt">32</td>
               <td className="ph">
-                <div className="ztai__zh pz">工作到 / 学习到</div>
-                <div className="ztai__py">gōngzuòdào / xuéxídào</div>
+                <div className="ztai__zh text-2xl leading-[1.55] pz">工作到 / 学习到</div>
+                <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">gōngzuòdào / xuéxídào</div>
                 <div className="pv">làm việc đến / học đến</div>
               </td>
               <td className="exs">
                 <div className="ex">
-                  <div className="ztai__zh">昨天晚上,我工作到十点。</div>
-                  <div className="ztai__py">
+                  <div className="ztai__zh text-2xl leading-[1.55]">昨天晚上,我工作到十点。</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Zuótiān wǎnshang, wǒ gōngzuòdào shí diǎn.
                   </div>
                   <div className="vi">
@@ -2010,8 +2010,8 @@ export default function Template() {
                   </div>
                 </div>
                 <div className="ex">
-                  <div className="ztai__zh">我打算在这儿学习到明年七月。</div>
-                  <div className="ztai__py">
+                  <div className="ztai__zh text-2xl leading-[1.55]">我打算在这儿学习到明年七月。</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Wǒ dǎsuan zài zhèr xuéxídào míngnián qī yuè.
                   </div>
                   <div className="vi">
@@ -2035,13 +2035,13 @@ export default function Template() {
                   <span className="lab">Đi kèm động từ này</span>
                   <div className="chips">
                     <span className="chip">
-                      <span className="ztai__zh">睡到</span>{" "}
-                      <span className="ztai__py">shuìdào</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">睡到</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">shuìdào</span>{" "}
                       <span className="cv">ngủ đến</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">学到</span>{" "}
-                      <span className="ztai__py">xuédào</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">学到</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">xuédào</span>{" "}
                       <span className="cv">học đến</span>
                     </span>
                   </div>
@@ -2051,14 +2051,14 @@ export default function Template() {
             <tr>
               <td className="stt">33</td>
               <td className="ph">
-                <div className="ztai__zh pz">放到</div>
-                <div className="ztai__py">fàngdào</div>
+                <div className="ztai__zh text-2xl leading-[1.55] pz">放到</div>
+                <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">fàngdào</div>
                 <div className="pv">đặt vào</div>
               </td>
               <td className="exs">
                 <div className="ex">
-                  <div className="ztai__zh">是我昨天晚上放到口袋里的。</div>
-                  <div className="ztai__py">
+                  <div className="ztai__zh text-2xl leading-[1.55]">是我昨天晚上放到口袋里的。</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Shì wǒ zuótiān wǎnshang fàngdào kǒudài lǐ de.
                   </div>
                   <div className="vi">
@@ -2076,18 +2076,18 @@ export default function Template() {
                   <span className="lab">Đi kèm động từ này</span>
                   <div className="chips">
                     <span className="chip">
-                      <span className="ztai__zh">放在</span>{" "}
-                      <span className="ztai__py">fàngzài</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">放在</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">fàngzài</span>{" "}
                       <span className="cv">đặt ở</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">放进</span>{" "}
-                      <span className="ztai__py">fàngjìn</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">放进</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">fàngjìn</span>{" "}
                       <span className="cv">bỏ vào</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">放回</span>{" "}
-                      <span className="ztai__py">fànghuí</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">放回</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">fànghuí</span>{" "}
                       <span className="cv">đặt lại</span>
                     </span>
                   </div>
@@ -2097,14 +2097,14 @@ export default function Template() {
             <tr>
               <td className="stt">34</td>
               <td className="ph">
-                <div className="ztai__zh pz">掉到</div>
-                <div className="ztai__py">diàodào</div>
+                <div className="ztai__zh text-2xl leading-[1.55] pz">掉到</div>
+                <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">diàodào</div>
                 <div className="pv">rơi xuống</div>
               </td>
               <td className="exs">
                 <div className="ex">
-                  <div className="ztai__zh">你看看是不是掉到桌子下边了。</div>
-                  <div className="ztai__py">
+                  <div className="ztai__zh text-2xl leading-[1.55]">你看看是不是掉到桌子下边了。</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Nǐ kànkan shì bu shì diàodào zhuōzi xiàbian le.
                   </div>
                   <div className="vi">
@@ -2119,13 +2119,13 @@ export default function Template() {
                   <span className="lab">Đi kèm động từ này</span>
                   <div className="chips">
                     <span className="chip">
-                      <span className="ztai__zh">掉在</span>{" "}
-                      <span className="ztai__py">diàozài</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">掉在</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">diàozài</span>{" "}
                       <span className="cv">rơi ở</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">掉下来</span>{" "}
-                      <span className="ztai__py">diào xiàlai</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">掉下来</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">diào xiàlai</span>{" "}
                       <span className="cv">rơi xuống</span>
                     </span>
                   </div>
@@ -2135,21 +2135,21 @@ export default function Template() {
             <tr>
               <td className="stt">35</td>
               <td className="ph">
-                <div className="ztai__zh pz">迷到</div>
-                <div className="ztai__py">mídào</div>
+                <div className="ztai__zh text-2xl leading-[1.55] pz">迷到</div>
+                <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">mídào</div>
                 <div className="pv">mê đến mức</div>
               </td>
               <td className="exs">
                 <div className="ex">
-                  <div className="ztai__zh">迷到什么程度?</div>
-                  <div className="ztai__py">Mídào shénme chéngdù?</div>
+                  <div className="ztai__zh text-2xl leading-[1.55]">迷到什么程度?</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">Mídào shénme chéngdù?</div>
                   <div className="vi">
                     Mê đến mức nào? <span className="src">B12 tr.197</span>
                   </div>
                 </div>
                 <div className="ex">
-                  <div className="ztai__zh">有时候迷到了发狂的程度。</div>
-                  <div className="ztai__py">
+                  <div className="ztai__zh text-2xl leading-[1.55]">有时候迷到了发狂的程度。</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Yǒu shíhou mídàole fā kuáng de chéngdù.
                   </div>
                   <div className="vi">
@@ -2167,13 +2167,13 @@ export default function Template() {
                   <span className="lab">Đi kèm động từ này</span>
                   <div className="chips">
                     <span className="chip">
-                      <span className="ztai__zh">累到</span>{" "}
-                      <span className="ztai__py">lèidào</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">累到</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">lèidào</span>{" "}
                       <span className="cv">mệt đến mức</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">忙到</span>{" "}
-                      <span className="ztai__py">mángdào</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">忙到</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">mángdào</span>{" "}
                       <span className="cv">bận đến mức</span>
                     </span>
                   </div>
@@ -2183,7 +2183,7 @@ export default function Template() {
             <tr className="grp" id="g6">
               <td colSpan={4}>
                 <div className="gt">
-                  <span className="ztai__zh gz">给 gěi</span>
+                  <span className="ztai__zh text-2xl leading-[1.55] gz">给 gěi</span>
                   <span className="gm">trao cho, dành cho (người nhận)</span>
                 </div>
                 <div className="gd">
@@ -2195,14 +2195,14 @@ export default function Template() {
             <tr>
               <td className="stt">36</td>
               <td className="ph">
-                <div className="ztai__zh pz">交给</div>
-                <div className="ztai__py">jiāogěi</div>
+                <div className="ztai__zh text-2xl leading-[1.55] pz">交给</div>
+                <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">jiāogěi</div>
                 <div className="pv">giao cho, nộp cho</div>
               </td>
               <td className="exs">
                 <div className="ex">
-                  <div className="ztai__zh">我一回到家不是就交给你了吗?</div>
-                  <div className="ztai__py">
+                  <div className="ztai__zh text-2xl leading-[1.55]">我一回到家不是就交给你了吗?</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Wǒ yì huídào jiā bú shì jiù jiāogěi nǐ le ma?
                   </div>
                   <div className="vi">
@@ -2211,10 +2211,10 @@ export default function Template() {
                   </div>
                 </div>
                 <div className="ex">
-                  <div className="ztai__zh">
+                  <div className="ztai__zh text-2xl leading-[1.55]">
                     作业你交给老师了没有? — 交给老师了。
                   </div>
-                  <div className="ztai__py">
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Zuòyè nǐ jiāogěi lǎoshī le méiyǒu? — Jiāogěi lǎoshī le.
                   </div>
                   <div className="vi">
@@ -2232,18 +2232,18 @@ export default function Template() {
                   <span className="lab">Đi kèm động từ này</span>
                   <div className="chips">
                     <span className="chip">
-                      <span className="ztai__zh">还给</span>{" "}
-                      <span className="ztai__py">huángěi</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">还给</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">huángěi</span>{" "}
                       <span className="cv">trả lại cho</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">送给</span>{" "}
-                      <span className="ztai__py">sònggěi</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">送给</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">sònggěi</span>{" "}
                       <span className="cv">tặng cho</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">递给</span>{" "}
-                      <span className="ztai__py">dìgěi</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">递给</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">dìgěi</span>{" "}
                       <span className="cv">chuyển cho</span>
                     </span>
                   </div>
@@ -2253,16 +2253,16 @@ export default function Template() {
             <tr>
               <td className="stt">37</td>
               <td className="ph">
-                <div className="ztai__zh pz">还给</div>
-                <div className="ztai__py">huángěi</div>
+                <div className="ztai__zh text-2xl leading-[1.55] pz">还给</div>
+                <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">huángěi</div>
                 <div className="pv">trả lại cho</div>
               </td>
               <td className="exs">
                 <div className="ex">
-                  <div className="ztai__zh">
+                  <div className="ztai__zh text-2xl leading-[1.55]">
                     那本书我一看完就还给你了,你怎么忘了?
                   </div>
-                  <div className="ztai__py">
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Nà běn shū wǒ yí kànwán jiù huángěi nǐ le, nǐ zěnme wàng le?
                   </div>
                   <div className="vi">
@@ -2277,8 +2277,8 @@ export default function Template() {
                   </div>
                 </div>
                 <div className="ex">
-                  <div className="ztai__zh">还给图书馆 / 还给张东</div>
-                  <div className="ztai__py">
+                  <div className="ztai__zh text-2xl leading-[1.55]">还给图书馆 / 还给张东</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     huángěi túshūguǎn / huángěi Zhāng Dōng
                   </div>
                   <div className="vi">
@@ -2295,13 +2295,13 @@ export default function Template() {
                   <span className="lab">Đi kèm động từ này</span>
                   <div className="chips">
                     <span className="chip">
-                      <span className="ztai__zh">借给</span>{" "}
-                      <span className="ztai__py">jiègěi</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">借给</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">jiègěi</span>{" "}
                       <span className="cv">cho mượn</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">退给</span>{" "}
-                      <span className="ztai__py">tuìgěi</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">退给</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">tuìgěi</span>{" "}
                       <span className="cv">trả lại (hàng, tiền)</span>
                     </span>
                   </div>
@@ -2311,14 +2311,14 @@ export default function Template() {
             <tr>
               <td className="stt">38</td>
               <td className="ph">
-                <div className="ztai__zh pz">送给</div>
-                <div className="ztai__py">sònggěi</div>
+                <div className="ztai__zh text-2xl leading-[1.55] pz">送给</div>
+                <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">sònggěi</div>
                 <div className="pv">tặng cho</div>
               </td>
               <td className="exs">
                 <div className="ex">
-                  <div className="ztai__zh">一个同学送给我的。</div>
-                  <div className="ztai__py">Yí ge tóngxué sònggěi wǒ de.</div>
+                  <div className="ztai__zh text-2xl leading-[1.55]">一个同学送给我的。</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">Yí ge tóngxué sònggěi wǒ de.</div>
                   <div className="vi">
                     Một bạn học tặng tớ. <span className="src">B12 tr.206</span>{" "}
                     <span
@@ -2330,8 +2330,8 @@ export default function Template() {
                   </div>
                 </div>
                 <div className="ex">
-                  <div className="ztai__zh">送给朋友 / 送给玛丽</div>
-                  <div className="ztai__py">sònggěi péngyou / sònggěi Mǎlì</div>
+                  <div className="ztai__zh text-2xl leading-[1.55]">送给朋友 / 送给玛丽</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">sònggěi péngyou / sònggěi Mǎlì</div>
                   <div className="vi">
                     tặng bạn bè / tặng Mary{" "}
                     <span className="src">B12 tr.203, 204</span>
@@ -2347,18 +2347,18 @@ export default function Template() {
                   <span className="lab">Đi kèm động từ này</span>
                   <div className="chips">
                     <span className="chip">
-                      <span className="ztai__zh">寄给</span>{" "}
-                      <span className="ztai__py">jìgěi</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">寄给</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">jìgěi</span>{" "}
                       <span className="cv">gửi (qua bưu điện) cho</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">发给</span>{" "}
-                      <span className="ztai__py">fāgěi</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">发给</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">fāgěi</span>{" "}
                       <span className="cv">gửi cho</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">卖给</span>{" "}
-                      <span className="ztai__py">màigěi</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">卖给</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">màigěi</span>{" "}
                       <span className="cv">bán cho</span>
                     </span>
                   </div>
@@ -2368,16 +2368,16 @@ export default function Template() {
             <tr>
               <td className="stt">39</td>
               <td className="ph">
-                <div className="ztai__zh pz">借给</div>
-                <div className="ztai__py">jiègěi</div>
+                <div className="ztai__zh text-2xl leading-[1.55] pz">借给</div>
+                <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">jiègěi</div>
                 <div className="pv">cho mượn</div>
               </td>
               <td className="exs">
                 <div className="ex">
-                  <div className="ztai__zh">
+                  <div className="ztai__zh text-2xl leading-[1.55]">
                     田芳借给你的那本书你看完了没有?
                   </div>
-                  <div className="ztai__py">
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Tián Fāng jiègěi nǐ de nà běn shū nǐ kànwán le méiyǒu?
                   </div>
                   <div className="vi">
@@ -2386,8 +2386,8 @@ export default function Template() {
                   </div>
                 </div>
                 <div className="ex">
-                  <div className="ztai__zh">田芳借给她一本书。</div>
-                  <div className="ztai__py">
+                  <div className="ztai__zh text-2xl leading-[1.55]">田芳借给她一本书。</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Tián Fāng jiègěi tā yì běn shū.
                   </div>
                   <div className="vi">
@@ -2396,8 +2396,8 @@ export default function Template() {
                   </div>
                 </div>
                 <div className="ex">
-                  <div className="ztai__zh">借给同学</div>
-                  <div className="ztai__py">jiègěi tóngxué</div>
+                  <div className="ztai__zh text-2xl leading-[1.55]">借给同学</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">jiègěi tóngxué</div>
                   <div className="vi">
                     cho bạn học mượn <span className="src">B12 tr.203</span>
                   </div>
@@ -2412,13 +2412,13 @@ export default function Template() {
                   <span className="lab">Đi kèm động từ này</span>
                   <div className="chips">
                     <span className="chip">
-                      <span className="ztai__zh">借</span>{" "}
-                      <span className="ztai__py">jiè</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">借</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">jiè</span>{" "}
                       <span className="cv">mượn (không có 给)</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">还给</span>{" "}
-                      <span className="ztai__py">huángěi</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">还给</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">huángěi</span>{" "}
                       <span className="cv">trả lại</span>
                     </span>
                   </div>
@@ -2428,14 +2428,14 @@ export default function Template() {
             <tr>
               <td className="stt">40</td>
               <td className="ph">
-                <div className="ztai__zh pz">寄给</div>
-                <div className="ztai__py">jìgěi</div>
+                <div className="ztai__zh text-2xl leading-[1.55] pz">寄给</div>
+                <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">jìgěi</div>
                 <div className="pv">gửi cho</div>
               </td>
               <td className="exs">
                 <div className="ex">
-                  <div className="ztai__zh">寄给妈妈</div>
-                  <div className="ztai__py">jìgěi māma</div>
+                  <div className="ztai__zh text-2xl leading-[1.55]">寄给妈妈</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">jìgěi māma</div>
                   <div className="vi">
                     gửi cho mẹ <span className="src">B12 tr.203</span>
                   </div>
@@ -2447,13 +2447,13 @@ export default function Template() {
                   <span className="lab">Đi kèm động từ này</span>
                   <div className="chips">
                     <span className="chip">
-                      <span className="ztai__zh">发给</span>{" "}
-                      <span className="ztai__py">fāgěi</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">发给</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">fāgěi</span>{" "}
                       <span className="cv">gửi cho</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">传给</span>{" "}
-                      <span className="ztai__py">chuángěi</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">传给</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">chuángěi</span>{" "}
                       <span className="cv">chuyển cho</span>
                     </span>
                   </div>
@@ -2463,14 +2463,14 @@ export default function Template() {
             <tr>
               <td className="stt">41</td>
               <td className="ph">
-                <div className="ztai__zh pz">发给</div>
-                <div className="ztai__py">fāgěi</div>
+                <div className="ztai__zh text-2xl leading-[1.55] pz">发给</div>
+                <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">fāgěi</div>
                 <div className="pv">gửi cho</div>
               </td>
               <td className="exs">
                 <div className="ex">
-                  <div className="ztai__zh">我发给你的邮件,你收到了没有?</div>
-                  <div className="ztai__py">
+                  <div className="ztai__zh text-2xl leading-[1.55]">我发给你的邮件,你收到了没有?</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Wǒ fāgěi nǐ de yóujiàn, nǐ shōudàole méiyǒu?
                   </div>
                   <div className="vi">
@@ -2485,8 +2485,8 @@ export default function Template() {
                   </div>
                 </div>
                 <div className="ex">
-                  <div className="ztai__zh">那些照片发给她</div>
-                  <div className="ztai__py">nàxiē zhàopiàn fāgěi tā</div>
+                  <div className="ztai__zh text-2xl leading-[1.55]">那些照片发给她</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">nàxiē zhàopiàn fāgěi tā</div>
                   <div className="vi">
                     những bức ảnh đó gửi cho cô ấy{" "}
                     <span className="src">B12 tr.204</span>
@@ -2499,13 +2499,13 @@ export default function Template() {
                   <span className="lab">Đi kèm động từ này</span>
                   <div className="chips">
                     <span className="chip">
-                      <span className="ztai__zh">寄给</span>{" "}
-                      <span className="ztai__py">jìgěi</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">寄给</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">jìgěi</span>{" "}
                       <span className="cv">gửi bưu điện cho</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">传给</span>{" "}
-                      <span className="ztai__py">chuángěi</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">传给</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">chuángěi</span>{" "}
                       <span className="cv">chuyển cho</span>
                     </span>
                   </div>
@@ -2515,14 +2515,14 @@ export default function Template() {
             <tr>
               <td className="stt">42</td>
               <td className="ph">
-                <div className="ztai__zh pz">带给</div>
-                <div className="ztai__py">dàigěi</div>
+                <div className="ztai__zh text-2xl leading-[1.55] pz">带给</div>
+                <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">dàigěi</div>
                 <div className="pv">mang cho</div>
               </td>
               <td className="exs">
                 <div className="ex">
-                  <div className="ztai__zh">那把雨伞带给麦克</div>
-                  <div className="ztai__py">nà bǎ yǔsǎn dàigěi Màikè</div>
+                  <div className="ztai__zh text-2xl leading-[1.55]">那把雨伞带给麦克</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">nà bǎ yǔsǎn dàigěi Màikè</div>
                   <div className="vi">
                     cây dù đó mang cho Mike{" "}
                     <span className="src">B12 tr.204</span>
@@ -2535,13 +2535,13 @@ export default function Template() {
                   <span className="lab">Đi kèm động từ này</span>
                   <div className="chips">
                     <span className="chip">
-                      <span className="ztai__zh">拿给</span>{" "}
-                      <span className="ztai__py">nágěi</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">拿给</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">nágěi</span>{" "}
                       <span className="cv">đưa cho</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">送给</span>{" "}
-                      <span className="ztai__py">sònggěi</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">送给</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">sònggěi</span>{" "}
                       <span className="cv">tặng cho</span>
                     </span>
                   </div>
@@ -2551,7 +2551,7 @@ export default function Template() {
             <tr className="grp" id="g7">
               <td colSpan={4}>
                 <div className="gt">
-                  <span className="ztai__zh gz">成 chéng</span>
+                  <span className="ztai__zh text-2xl leading-[1.55] gz">成 chéng</span>
                   <span className="gm">
                     biến thành (成₁) / làm xong, thành công (成₂)
                   </span>
@@ -2566,16 +2566,16 @@ export default function Template() {
             <tr>
               <td className="stt">43</td>
               <td className="ph">
-                <div className="ztai__zh pz">写成</div>
-                <div className="ztai__py">xiěchéng</div>
+                <div className="ztai__zh text-2xl leading-[1.55] pz">写成</div>
+                <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">xiěchéng</div>
                 <div className="pv">viết thành, viết nhầm thành</div>
               </td>
               <td className="exs">
                 <div className="ex">
-                  <div className="ztai__zh">
+                  <div className="ztai__zh text-2xl leading-[1.55]">
                     糟糕,写错了,是这个“得”,我写成这个“的”了。
                   </div>
-                  <div className="ztai__py">
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Zāogāo, xiěcuò le, shì zhège “de”, wǒ xiěchéng zhège “de”
                     le.
                   </div>
@@ -2585,8 +2585,8 @@ export default function Template() {
                   </div>
                 </div>
                 <div className="ex">
-                  <div className="ztai__zh">这是个“我”字,你写成“找”字了。</div>
-                  <div className="ztai__py">
+                  <div className="ztai__zh text-2xl leading-[1.55]">这是个“我”字,你写成“找”字了。</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Zhè shì ge “wǒ” zì, nǐ xiěchéng “zhǎo” zì le.
                   </div>
                   <div className="vi">
@@ -2595,8 +2595,8 @@ export default function Template() {
                   </div>
                 </div>
                 <div className="ex">
-                  <div className="ztai__zh">写成小说</div>
-                  <div className="ztai__py">xiěchéng xiǎoshuō</div>
+                  <div className="ztai__zh text-2xl leading-[1.55]">写成小说</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">xiěchéng xiǎoshuō</div>
                   <div className="vi">
                     viết thành tiểu thuyết{" "}
                     <span className="src">B12 tr.203</span>
@@ -2611,18 +2611,18 @@ export default function Template() {
                   <span className="lab">Đi kèm động từ này</span>
                   <div className="chips">
                     <span className="chip">
-                      <span className="ztai__zh">写对</span>{" "}
-                      <span className="ztai__py">xiěduì</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">写对</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">xiěduì</span>{" "}
                       <span className="cv">viết đúng</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">写错</span>{" "}
-                      <span className="ztai__py">xiěcuò</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">写错</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">xiěcuò</span>{" "}
                       <span className="cv">viết sai</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">写完</span>{" "}
-                      <span className="ztai__py">xiěwán</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">写完</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">xiěwán</span>{" "}
                       <span className="cv">viết xong</span>
                     </span>
                   </div>
@@ -2632,14 +2632,14 @@ export default function Template() {
             <tr>
               <td className="stt">44</td>
               <td className="ph">
-                <div className="ztai__zh pz">说成</div>
-                <div className="ztai__py">shuōchéng</div>
+                <div className="ztai__zh text-2xl leading-[1.55] pz">说成</div>
+                <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">shuōchéng</div>
                 <div className="pv">nói thành, nói nhầm thành</div>
               </td>
               <td className="exs">
                 <div className="ex">
-                  <div className="ztai__zh">“是不是”,他总说成“四不四”。</div>
-                  <div className="ztai__py">
+                  <div className="ztai__zh text-2xl leading-[1.55]">“是不是”,他总说成“四不四”。</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     “Shì bu shì”, tā zǒng shuōchéng “sì bu sì”.
                   </div>
                   <div className="vi">
@@ -2654,13 +2654,13 @@ export default function Template() {
                   <span className="lab">Đi kèm động từ này</span>
                   <div className="chips">
                     <span className="chip">
-                      <span className="ztai__zh">发成</span>{" "}
-                      <span className="ztai__py">fāchéng</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">发成</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">fāchéng</span>{" "}
                       <span className="cv">phát âm thành</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">念成</span>{" "}
-                      <span className="ztai__py">niànchéng</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">念成</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">niànchéng</span>{" "}
                       <span className="cv">đọc thành</span>
                     </span>
                   </div>
@@ -2670,16 +2670,16 @@ export default function Template() {
             <tr>
               <td className="stt">45</td>
               <td className="ph">
-                <div className="ztai__zh pz">改成</div>
-                <div className="ztai__py">gǎichéng</div>
+                <div className="ztai__zh text-2xl leading-[1.55] pz">改成</div>
+                <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">gǎichéng</div>
                 <div className="pv">sửa thành, chuyển thành</div>
               </td>
               <td className="exs">
                 <div className="ex">
-                  <div className="ztai__zh">
+                  <div className="ztai__zh text-2xl leading-[1.55]">
                     这篇会话课文,老师要我们改成叙述体。
                   </div>
-                  <div className="ztai__py">
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Zhè piān huìhuà kèwén, lǎoshī yào wǒmen gǎichéng xùshùtǐ.
                   </div>
                   <div className="vi">
@@ -2688,8 +2688,8 @@ export default function Template() {
                   </div>
                 </div>
                 <div className="ex">
-                  <div className="ztai__zh">改成会话</div>
-                  <div className="ztai__py">gǎichéng huìhuà</div>
+                  <div className="ztai__zh text-2xl leading-[1.55]">改成会话</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">gǎichéng huìhuà</div>
                   <div className="vi">
                     chuyển thành hội thoại{" "}
                     <span className="src">B12 tr.203</span>
@@ -2704,13 +2704,13 @@ export default function Template() {
                   <span className="lab">Đi kèm động từ này</span>
                   <div className="chips">
                     <span className="chip">
-                      <span className="ztai__zh">变成</span>{" "}
-                      <span className="ztai__py">biànchéng</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">变成</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">biànchéng</span>{" "}
                       <span className="cv">biến thành</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">换成</span>{" "}
-                      <span className="ztai__py">huànchéng</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">换成</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">huànchéng</span>{" "}
                       <span className="cv">đổi thành</span>
                     </span>
                   </div>
@@ -2720,16 +2720,16 @@ export default function Template() {
             <tr>
               <td className="stt">46</td>
               <td className="ph">
-                <div className="ztai__zh pz">发成</div>
-                <div className="ztai__py">fāchéng</div>
+                <div className="ztai__zh text-2xl leading-[1.55] pz">发成</div>
+                <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">fāchéng</div>
                 <div className="pv">phát âm thành</div>
               </td>
               <td className="exs">
                 <div className="ex">
-                  <div className="ztai__zh">
+                  <div className="ztai__zh text-2xl leading-[1.55]">
                     “ān (安)”这个音,我总是发成“āng”。
                   </div>
-                  <div className="ztai__py">
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     “Ān (安)” zhège yīn, wǒ zǒngshì fāchéng “āng”.
                   </div>
                   <div className="vi">
@@ -2750,13 +2750,13 @@ export default function Template() {
                   <span className="lab">Đi kèm động từ này</span>
                   <div className="chips">
                     <span className="chip">
-                      <span className="ztai__zh">说成</span>{" "}
-                      <span className="ztai__py">shuōchéng</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">说成</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">shuōchéng</span>{" "}
                       <span className="cv">nói thành</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">念成</span>{" "}
-                      <span className="ztai__py">niànchéng</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">念成</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">niànchéng</span>{" "}
                       <span className="cv">đọc thành</span>
                     </span>
                   </div>
@@ -2766,14 +2766,14 @@ export default function Template() {
             <tr>
               <td className="stt">47</td>
               <td className="ph">
-                <div className="ztai__zh pz">译成</div>
-                <div className="ztai__py">yìchéng</div>
+                <div className="ztai__zh text-2xl leading-[1.55] pz">译成</div>
+                <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">yìchéng</div>
                 <div className="pv">dịch thành</div>
               </td>
               <td className="exs">
                 <div className="ex">
-                  <div className="ztai__zh">译成汉语</div>
-                  <div className="ztai__py">yìchéng Hànyǔ</div>
+                  <div className="ztai__zh text-2xl leading-[1.55]">译成汉语</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">yìchéng Hànyǔ</div>
                   <div className="vi">
                     dịch sang tiếng Hán <span className="src">B12 tr.203</span>
                   </div>
@@ -2785,13 +2785,13 @@ export default function Template() {
                   <span className="lab">Đi kèm động từ này</span>
                   <div className="chips">
                     <span className="chip">
-                      <span className="ztai__zh">翻译成</span>{" "}
-                      <span className="ztai__py">fānyìchéng</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">翻译成</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">fānyìchéng</span>{" "}
                       <span className="cv">dịch thành</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">翻译对</span>{" "}
-                      <span className="ztai__py">fānyìduì</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">翻译对</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">fānyìduì</span>{" "}
                       <span className="cv">dịch đúng</span>
                     </span>
                   </div>
@@ -2801,14 +2801,14 @@ export default function Template() {
             <tr>
               <td className="stt">48</td>
               <td className="ph">
-                <div className="ztai__zh pz">换成</div>
-                <div className="ztai__py">huànchéng</div>
+                <div className="ztai__zh text-2xl leading-[1.55] pz">换成</div>
+                <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">huànchéng</div>
                 <div className="pv">đổi thành</div>
               </td>
               <td className="exs">
                 <div className="ex">
-                  <div className="ztai__zh">麻烦您给我换成零钱。</div>
-                  <div className="ztai__py">
+                  <div className="ztai__zh text-2xl leading-[1.55]">麻烦您给我换成零钱。</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Máfan nín gěi wǒ huànchéng língqián.
                   </div>
                   <div className="vi">
@@ -2817,8 +2817,8 @@ export default function Template() {
                   </div>
                 </div>
                 <div className="ex">
-                  <div className="ztai__zh">换成十块一张的就行。</div>
-                  <div className="ztai__py">
+                  <div className="ztai__zh text-2xl leading-[1.55]">换成十块一张的就行。</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Huànchéng shí kuài yì zhāng de jiù xíng.
                   </div>
                   <div className="vi">
@@ -2827,8 +2827,8 @@ export default function Template() {
                   </div>
                 </div>
                 <div className="ex">
-                  <div className="ztai__zh">换成人民币</div>
-                  <div className="ztai__py">huànchéng rénmínbì</div>
+                  <div className="ztai__zh text-2xl leading-[1.55]">换成人民币</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">huànchéng rénmínbì</div>
                   <div className="vi">
                     đổi thành nhân dân tệ{" "}
                     <span className="src">B12 tr.203</span>
@@ -2841,18 +2841,18 @@ export default function Template() {
                   <span className="lab">Đi kèm động từ này</span>
                   <div className="chips">
                     <span className="chip">
-                      <span className="ztai__zh">变成</span>{" "}
-                      <span className="ztai__py">biànchéng</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">变成</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">biànchéng</span>{" "}
                       <span className="cv">biến thành</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">分成</span>{" "}
-                      <span className="ztai__py">fēnchéng</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">分成</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">fēnchéng</span>{" "}
                       <span className="cv">chia thành</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">看成</span>{" "}
-                      <span className="ztai__py">kànchéng</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">看成</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">kànchéng</span>{" "}
                       <span className="cv">nhìn nhầm thành</span>
                     </span>
                   </div>
@@ -2862,14 +2862,14 @@ export default function Template() {
             <tr>
               <td className="stt">49</td>
               <td className="ph">
-                <div className="ztai__zh pz">变成</div>
-                <div className="ztai__py">biànchéng</div>
+                <div className="ztai__zh text-2xl leading-[1.55] pz">变成</div>
+                <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">biànchéng</div>
                 <div className="pv">biến thành</div>
               </td>
               <td className="exs">
                 <div className="ex">
-                  <div className="ztai__zh">变成了</div>
-                  <div className="ztai__py">biànchéng le</div>
+                  <div className="ztai__zh text-2xl leading-[1.55]">变成了</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">biànchéng le</div>
                   <div className="vi">
                     đã biến thành <span className="src">B12 tr.203</span>
                   </div>
@@ -2881,13 +2881,13 @@ export default function Template() {
                   <span className="lab">Đi kèm động từ này</span>
                   <div className="chips">
                     <span className="chip">
-                      <span className="ztai__zh">改成</span>{" "}
-                      <span className="ztai__py">gǎichéng</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">改成</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">gǎichéng</span>{" "}
                       <span className="cv">sửa thành</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">换成</span>{" "}
-                      <span className="ztai__py">huànchéng</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">换成</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">huànchéng</span>{" "}
                       <span className="cv">đổi thành</span>
                     </span>
                   </div>
@@ -2897,14 +2897,14 @@ export default function Template() {
             <tr>
               <td className="stt">50</td>
               <td className="ph">
-                <div className="ztai__zh pz">去成</div>
-                <div className="ztai__py">qùchéng</div>
+                <div className="ztai__zh text-2xl leading-[1.55] pz">去成</div>
+                <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">qùchéng</div>
                 <div className="pv">đi được</div>
               </td>
               <td className="exs">
                 <div className="ex">
-                  <div className="ztai__zh">最后去成了吗? — 去成了。</div>
-                  <div className="ztai__py">
+                  <div className="ztai__zh text-2xl leading-[1.55]">最后去成了吗? — 去成了。</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Zuìhòu qùchéng le ma? — Qùchéng le.
                   </div>
                   <div className="vi">
@@ -2922,13 +2922,13 @@ export default function Template() {
                   <span className="lab">Đi kèm động từ này</span>
                   <div className="chips">
                     <span className="chip">
-                      <span className="ztai__zh">办成</span>{" "}
-                      <span className="ztai__py">bànchéng</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">办成</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">bànchéng</span>{" "}
                       <span className="cv">làm thành công</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">做成</span>{" "}
-                      <span className="ztai__py">zuòchéng</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">做成</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">zuòchéng</span>{" "}
                       <span className="cv">làm xong, làm được</span>
                     </span>
                   </div>
@@ -2938,14 +2938,14 @@ export default function Template() {
             <tr>
               <td className="stt">51</td>
               <td className="ph">
-                <div className="ztai__zh pz">做成</div>
-                <div className="ztai__py">zuòchéng</div>
+                <div className="ztai__zh text-2xl leading-[1.55] pz">做成</div>
+                <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">zuòchéng</div>
                 <div className="pv">làm xong, làm thành</div>
               </td>
               <td className="exs">
                 <div className="ex">
-                  <div className="ztai__zh">做成了</div>
-                  <div className="ztai__py">zuòchéng le</div>
+                  <div className="ztai__zh text-2xl leading-[1.55]">做成了</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">zuòchéng le</div>
                   <div className="vi">
                     làm xong rồi <span className="src">B12 tr.203</span>
                   </div>
@@ -2960,13 +2960,13 @@ export default function Template() {
                   <span className="lab">Đi kèm động từ này</span>
                   <div className="chips">
                     <span className="chip">
-                      <span className="ztai__zh">做完</span>{" "}
-                      <span className="ztai__py">zuòwán</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">做完</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">zuòwán</span>{" "}
                       <span className="cv">làm xong</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">做好</span>{" "}
-                      <span className="ztai__py">zuòhǎo</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">做好</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">zuòhǎo</span>{" "}
                       <span className="cv">làm xong, làm tốt</span>
                     </span>
                   </div>
@@ -2976,14 +2976,14 @@ export default function Template() {
             <tr>
               <td className="stt">52</td>
               <td className="ph">
-                <div className="ztai__zh pz">建成</div>
-                <div className="ztai__py">jiànchéng</div>
+                <div className="ztai__zh text-2xl leading-[1.55] pz">建成</div>
+                <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">jiànchéng</div>
                 <div className="pv">xây xong</div>
               </td>
               <td className="exs">
                 <div className="ex">
-                  <div className="ztai__zh">这座大楼是什么时候建成的?</div>
-                  <div className="ztai__py">
+                  <div className="ztai__zh text-2xl leading-[1.55]">这座大楼是什么时候建成的?</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Zhè zuò dàlóu shì shénme shíhou jiànchéng de?
                   </div>
                   <div className="vi">
@@ -2998,13 +2998,13 @@ export default function Template() {
                   <span className="lab">Đi kèm động từ này</span>
                   <div className="chips">
                     <span className="chip">
-                      <span className="ztai__zh">完成</span>{" "}
-                      <span className="ztai__py">wánchéng</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">完成</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">wánchéng</span>{" "}
                       <span className="cv">hoàn thành</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">修成</span>{" "}
-                      <span className="ztai__py">xiūchéng</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">修成</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">xiūchéng</span>{" "}
                       <span className="cv">sửa/xây xong</span>
                     </span>
                   </div>
@@ -3014,7 +3014,7 @@ export default function Template() {
             <tr className="grp" id="g8">
               <td colSpan={4}>
                 <div className="gt">
-                  <span className="ztai__zh gz">好 hǎo</span>
+                  <span className="ztai__zh text-2xl leading-[1.55] gz">好 hǎo</span>
                   <span className="gm">hoàn thiện, đạt mức tốt/như ý</span>
                 </div>
                 <div className="gd">
@@ -3027,24 +3027,24 @@ export default function Template() {
             <tr>
               <td className="stt">53</td>
               <td className="ph">
-                <div className="ztai__zh pz">考好</div>
-                <div className="ztai__py">kǎohǎo</div>
+                <div className="ztai__zh text-2xl leading-[1.55] pz">考好</div>
+                <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">kǎohǎo</div>
                 <div className="pv">thi tốt</div>
               </td>
               <td className="exs">
                 <div className="ex">
-                  <div className="ztai__zh">这次没考好。</div>
-                  <div className="ztai__py">Zhè cì méi kǎohǎo.</div>
+                  <div className="ztai__zh text-2xl leading-[1.55]">这次没考好。</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">Zhè cì méi kǎohǎo.</div>
                   <div className="vi">
                     Lần này tớ thi không tốt.{" "}
                     <span className="src">B4 tr.51</span>
                   </div>
                 </div>
                 <div className="ex">
-                  <div className="ztai__zh">
+                  <div className="ztai__zh text-2xl leading-[1.55]">
                     这次我没考好,因为考试前我病了。
                   </div>
-                  <div className="ztai__py">
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Zhè cì wǒ méi kǎohǎo, yīnwèi kǎoshì qián wǒ bìng le.
                   </div>
                   <div className="vi">
@@ -3065,13 +3065,13 @@ export default function Template() {
                   <span className="lab">Đi kèm động từ này</span>
                   <div className="chips">
                     <span className="chip">
-                      <span className="ztai__zh">考完</span>{" "}
-                      <span className="ztai__py">kǎowán</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">考完</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">kǎowán</span>{" "}
                       <span className="cv">thi xong</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">考对</span>{" "}
-                      <span className="ztai__py">kǎoduì</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">考对</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">kǎoduì</span>{" "}
                       <span className="cv">thi đúng</span>
                     </span>
                   </div>
@@ -3081,14 +3081,14 @@ export default function Template() {
             <tr>
               <td className="stt">54</td>
               <td className="ph">
-                <div className="ztai__zh pz">洗好</div>
-                <div className="ztai__py">xǐhǎo</div>
+                <div className="ztai__zh text-2xl leading-[1.55] pz">洗好</div>
+                <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">xǐhǎo</div>
                 <div className="pv">giặt xong, giặt tốt</div>
               </td>
               <td className="exs">
                 <div className="ex">
-                  <div className="ztai__zh">我洗好了。 / 我还没洗好呢!</div>
-                  <div className="ztai__py">
+                  <div className="ztai__zh text-2xl leading-[1.55]">我洗好了。 / 我还没洗好呢!</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Wǒ xǐhǎo le. / Wǒ hái méi xǐhǎo ne!
                   </div>
                   <div className="vi">
@@ -3097,8 +3097,8 @@ export default function Template() {
                   </div>
                 </div>
                 <div className="ex">
-                  <div className="ztai__zh">你的衣服洗好了吗?</div>
-                  <div className="ztai__py">Nǐ de yīfu xǐhǎo le ma?</div>
+                  <div className="ztai__zh text-2xl leading-[1.55]">你的衣服洗好了吗?</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">Nǐ de yīfu xǐhǎo le ma?</div>
                   <div className="vi">
                     Quần áo cậu giặt xong chưa?{" "}
                     <span className="src">B12 tr.202</span>
@@ -3111,13 +3111,13 @@ export default function Template() {
                   <span className="lab">Đi kèm động từ này</span>
                   <div className="chips">
                     <span className="chip">
-                      <span className="ztai__zh">洗完</span>{" "}
-                      <span className="ztai__py">xǐwán</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">洗完</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">xǐwán</span>{" "}
                       <span className="cv">giặt xong</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">洗干净</span>{" "}
-                      <span className="ztai__py">xǐ gānjìng</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">洗干净</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">xǐ gānjìng</span>{" "}
                       <span className="cv">giặt sạch</span>
                     </span>
                   </div>
@@ -3127,14 +3127,14 @@ export default function Template() {
             <tr>
               <td className="stt">55</td>
               <td className="ph">
-                <div className="ztai__zh pz">睡好</div>
-                <div className="ztai__py">shuìhǎo</div>
+                <div className="ztai__zh text-2xl leading-[1.55] pz">睡好</div>
+                <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">shuìhǎo</div>
                 <div className="pv">ngủ ngon</div>
               </td>
               <td className="exs">
                 <div className="ex">
-                  <div className="ztai__zh">昨天晚上我没有睡好。</div>
-                  <div className="ztai__py">
+                  <div className="ztai__zh text-2xl leading-[1.55]">昨天晚上我没有睡好。</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Zuótiān wǎnshang wǒ méiyǒu shuìhǎo.
                   </div>
                   <div className="vi">
@@ -3149,13 +3149,13 @@ export default function Template() {
                   <span className="lab">Đi kèm động từ này</span>
                   <div className="chips">
                     <span className="chip">
-                      <span className="ztai__zh">睡着</span>{" "}
-                      <span className="ztai__py">shuìzháo</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">睡着</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">shuìzháo</span>{" "}
                       <span className="cv">ngủ thiếp đi</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">睡够</span>{" "}
-                      <span className="ztai__py">shuìgòu</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">睡够</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">shuìgòu</span>{" "}
                       <span className="cv">ngủ đủ</span>
                     </span>
                   </div>
@@ -3165,14 +3165,14 @@ export default function Template() {
             <tr>
               <td className="stt">56</td>
               <td className="ph">
-                <div className="ztai__zh pz">商量好</div>
-                <div className="ztai__py">shāngliang hǎo</div>
+                <div className="ztai__zh text-2xl leading-[1.55] pz">商量好</div>
+                <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">shāngliang hǎo</div>
                 <div className="pv">bàn bạc xong, thống nhất</div>
               </td>
               <td className="exs">
                 <div className="ex">
-                  <div className="ztai__zh">我跟老板商量好了。</div>
-                  <div className="ztai__py">
+                  <div className="ztai__zh text-2xl leading-[1.55]">我跟老板商量好了。</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Wǒ gēn lǎobǎn shāngliang hǎo le.
                   </div>
                   <div className="vi">
@@ -3187,13 +3187,13 @@ export default function Template() {
                   <span className="lab">Đi kèm động từ này</span>
                   <div className="chips">
                     <span className="chip">
-                      <span className="ztai__zh">商量完</span>{" "}
-                      <span className="ztai__py">shāngliangwán</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">商量完</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">shāngliangwán</span>{" "}
                       <span className="cv">bàn xong</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">决定好</span>{" "}
-                      <span className="ztai__py">juédìng hǎo</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">决定好</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">juédìng hǎo</span>{" "}
                       <span className="cv">quyết định xong</span>
                     </span>
                   </div>
@@ -3203,14 +3203,14 @@ export default function Template() {
             <tr>
               <td className="stt">57</td>
               <td className="ph">
-                <div className="ztai__zh pz">办好</div>
-                <div className="ztai__py">bànhǎo</div>
+                <div className="ztai__zh text-2xl leading-[1.55] pz">办好</div>
+                <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">bànhǎo</div>
                 <div className="pv">làm xong ổn thỏa</div>
               </td>
               <td className="exs">
                 <div className="ex">
-                  <div className="ztai__zh">你的签证办好了没有?</div>
-                  <div className="ztai__py">
+                  <div className="ztai__zh text-2xl leading-[1.55]">你的签证办好了没有?</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Nǐ de qiānzhèng bànhǎo le méiyǒu?
                   </div>
                   <div className="vi">
@@ -3231,13 +3231,13 @@ export default function Template() {
                   <span className="lab">Đi kèm động từ này</span>
                   <div className="chips">
                     <span className="chip">
-                      <span className="ztai__zh">办完</span>{" "}
-                      <span className="ztai__py">bànwán</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">办完</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">bànwán</span>{" "}
                       <span className="cv">làm xong</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">办成</span>{" "}
-                      <span className="ztai__py">bànchéng</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">办成</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">bànchéng</span>{" "}
                       <span className="cv">làm thành công</span>
                     </span>
                   </div>
@@ -3247,16 +3247,16 @@ export default function Template() {
             <tr>
               <td className="stt">58</td>
               <td className="ph">
-                <div className="ztai__zh pz">准备好</div>
-                <div className="ztai__py">zhǔnbèihǎo</div>
+                <div className="ztai__zh text-2xl leading-[1.55] pz">准备好</div>
+                <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">zhǔnbèihǎo</div>
                 <div className="pv">chuẩn bị xong</div>
               </td>
               <td className="exs">
                 <div className="ex">
-                  <div className="ztai__zh">
+                  <div className="ztai__zh text-2xl leading-[1.55]">
                     请大家准备好笔和本子,现在听写句子。
                   </div>
-                  <div className="ztai__py">
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Qǐng dàjiā zhǔnbèihǎo bǐ hé běnzi, xiànzài tīngxiě jùzi.
                   </div>
                   <div className="vi">
@@ -3277,13 +3277,13 @@ export default function Template() {
                   <span className="lab">Đi kèm động từ này</span>
                   <div className="chips">
                     <span className="chip">
-                      <span className="ztai__zh">预习好</span>{" "}
-                      <span className="ztai__py">yùxíhǎo</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">预习好</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">yùxíhǎo</span>{" "}
                       <span className="cv">chuẩn bị bài xong</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">安排好</span>{" "}
-                      <span className="ztai__py">ānpáihǎo</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">安排好</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">ānpáihǎo</span>{" "}
                       <span className="cv">sắp xếp xong</span>
                     </span>
                   </div>
@@ -3293,14 +3293,14 @@ export default function Template() {
             <tr>
               <td className="stt">59</td>
               <td className="ph">
-                <div className="ztai__zh pz">预习好</div>
-                <div className="ztai__py">yùxíhǎo</div>
+                <div className="ztai__zh text-2xl leading-[1.55] pz">预习好</div>
+                <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">yùxíhǎo</div>
                 <div className="pv">chuẩn bị bài xong</div>
               </td>
               <td className="exs">
                 <div className="ex">
-                  <div className="ztai__zh">明天的生词你预习好了没有?</div>
-                  <div className="ztai__py">
+                  <div className="ztai__zh text-2xl leading-[1.55]">明天的生词你预习好了没有?</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Míngtiān de shēngcí nǐ yùxíhǎo le méiyǒu?
                   </div>
                   <div className="vi">
@@ -3321,13 +3321,13 @@ export default function Template() {
                   <span className="lab">Đi kèm động từ này</span>
                   <div className="chips">
                     <span className="chip">
-                      <span className="ztai__zh">预习完</span>{" "}
-                      <span className="ztai__py">yùxíwán</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">预习完</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">yùxíwán</span>{" "}
                       <span className="cv">chuẩn bị xong</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">复习好</span>{" "}
-                      <span className="ztai__py">fùxíhǎo</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">复习好</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">fùxíhǎo</span>{" "}
                       <span className="cv">ôn tập tốt</span>
                     </span>
                   </div>
@@ -3337,14 +3337,14 @@ export default function Template() {
             <tr>
               <td className="stt">60</td>
               <td className="ph">
-                <div className="ztai__zh pz">做好</div>
-                <div className="ztai__py">zuòhǎo</div>
+                <div className="ztai__zh text-2xl leading-[1.55] pz">做好</div>
+                <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">zuòhǎo</div>
                 <div className="pv">làm xong, làm tốt</div>
               </td>
               <td className="exs">
                 <div className="ex">
-                  <div className="ztai__zh">妈妈,晚饭做好了吗?</div>
-                  <div className="ztai__py">Māma, wǎnfàn zuòhǎo le ma?</div>
+                  <div className="ztai__zh text-2xl leading-[1.55]">妈妈,晚饭做好了吗?</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">Māma, wǎnfàn zuòhǎo le ma?</div>
                   <div className="vi">
                     Mẹ ơi, cơm tối làm xong chưa?{" "}
                     <span className="src">B4 tr.62</span>{" "}
@@ -3363,13 +3363,13 @@ export default function Template() {
                   <span className="lab">Đi kèm động từ này</span>
                   <div className="chips">
                     <span className="chip">
-                      <span className="ztai__zh">做完</span>{" "}
-                      <span className="ztai__py">zuòwán</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">做完</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">zuòwán</span>{" "}
                       <span className="cv">làm xong</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">做对</span>{" "}
-                      <span className="ztai__py">zuòduì</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">做对</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">zuòduì</span>{" "}
                       <span className="cv">làm đúng</span>
                     </span>
                   </div>
@@ -3379,7 +3379,7 @@ export default function Template() {
             <tr className="grp" id="g9">
               <td colSpan={4}>
                 <div className="gt">
-                  <span className="ztai__zh gz">对 / 错 duì / cuò</span>
+                  <span className="ztai__zh text-2xl leading-[1.55] gz">对 / 错 duì / cuò</span>
                   <span className="gm">đúng / sai</span>
                 </div>
                 <div className="gd">
@@ -3392,22 +3392,22 @@ export default function Template() {
             <tr>
               <td className="stt">61</td>
               <td className="ph">
-                <div className="ztai__zh pz">做对</div>
-                <div className="ztai__py">zuòduì</div>
+                <div className="ztai__zh text-2xl leading-[1.55] pz">做对</div>
+                <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">zuòduì</div>
                 <div className="pv">làm đúng</div>
               </td>
               <td className="exs">
                 <div className="ex">
-                  <div className="ztai__zh">这道题我没做对。</div>
-                  <div className="ztai__py">Zhè dào tí wǒ méi zuòduì.</div>
+                  <div className="ztai__zh text-2xl leading-[1.55]">这道题我没做对。</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">Zhè dào tí wǒ méi zuòduì.</div>
                   <div className="vi">
                     Câu này tớ làm không đúng.{" "}
                     <span className="src">B4 tr.56</span>
                   </div>
                 </div>
                 <div className="ex">
-                  <div className="ztai__zh">这道题你做对了没有? — 没做对。</div>
-                  <div className="ztai__py">
+                  <div className="ztai__zh text-2xl leading-[1.55]">这道题你做对了没有? — 没做对。</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Zhè dào tí nǐ zuòduì le méiyǒu? — Méi zuòduì.
                   </div>
                   <div className="vi">
@@ -3422,13 +3422,13 @@ export default function Template() {
                   <span className="lab">Đi kèm động từ này</span>
                   <div className="chips">
                     <span className="chip">
-                      <span className="ztai__zh">做错</span>{" "}
-                      <span className="ztai__py">zuòcuò</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">做错</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">zuòcuò</span>{" "}
                       <span className="cv">làm sai</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">做完</span>{" "}
-                      <span className="ztai__py">zuòwán</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">做完</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">zuòwán</span>{" "}
                       <span className="cv">làm xong</span>
                     </span>
                   </div>
@@ -3438,21 +3438,21 @@ export default function Template() {
             <tr>
               <td className="stt">62</td>
               <td className="ph">
-                <div className="ztai__zh pz">做错</div>
-                <div className="ztai__py">zuòcuò</div>
+                <div className="ztai__zh text-2xl leading-[1.55] pz">做错</div>
+                <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">zuòcuò</div>
                 <div className="pv">làm sai</div>
               </td>
               <td className="exs">
                 <div className="ex">
-                  <div className="ztai__zh">我做错了两道题。</div>
-                  <div className="ztai__py">Wǒ zuòcuòle liǎng dào tí.</div>
+                  <div className="ztai__zh text-2xl leading-[1.55]">我做错了两道题。</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">Wǒ zuòcuòle liǎng dào tí.</div>
                   <div className="vi">
                     Tớ làm sai hai câu. <span className="src">B4 tr.57</span>
                   </div>
                 </div>
                 <div className="ex">
-                  <div className="ztai__zh">做错了题</div>
-                  <div className="ztai__py">zuòcuòle tí</div>
+                  <div className="ztai__zh text-2xl leading-[1.55]">做错了题</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">zuòcuòle tí</div>
                   <div className="vi">
                     làm sai câu hỏi <span className="src">B4 tr.59</span>
                   </div>
@@ -3467,8 +3467,8 @@ export default function Template() {
                   <span className="lab">Đi kèm động từ này</span>
                   <div className="chips">
                     <span className="chip">
-                      <span className="ztai__zh">做对</span>{" "}
-                      <span className="ztai__py">zuòduì</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">做对</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">zuòduì</span>{" "}
                       <span className="cv">làm đúng</span>
                     </span>
                   </div>
@@ -3478,14 +3478,14 @@ export default function Template() {
             <tr>
               <td className="stt">63</td>
               <td className="ph">
-                <div className="ztai__zh pz">写对</div>
-                <div className="ztai__py">xiěduì</div>
+                <div className="ztai__zh text-2xl leading-[1.55] pz">写对</div>
+                <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">xiěduì</div>
                 <div className="pv">viết đúng</div>
               </td>
               <td className="exs">
                 <div className="ex">
-                  <div className="ztai__zh">我查一个词,看看写对了没有。</div>
-                  <div className="ztai__py">
+                  <div className="ztai__zh text-2xl leading-[1.55]">我查一个词,看看写对了没有。</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Wǒ chá yí ge cí, kànkan xiěduìle méiyǒu.
                   </div>
                   <div className="vi">
@@ -3494,8 +3494,8 @@ export default function Template() {
                   </div>
                 </div>
                 <div className="ex">
-                  <div className="ztai__zh">这个字写对</div>
-                  <div className="ztai__py">zhège zì xiěduì</div>
+                  <div className="ztai__zh text-2xl leading-[1.55]">这个字写对</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">zhège zì xiěduì</div>
                   <div className="vi">
                     chữ này viết đúng{" "}
                     <span className="src">B4 tr.60 (mẫu thay thế)</span>
@@ -3508,13 +3508,13 @@ export default function Template() {
                   <span className="lab">Đi kèm động từ này</span>
                   <div className="chips">
                     <span className="chip">
-                      <span className="ztai__zh">写错</span>{" "}
-                      <span className="ztai__py">xiěcuò</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">写错</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">xiěcuò</span>{" "}
                       <span className="cv">viết sai</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">写成</span>{" "}
-                      <span className="ztai__py">xiěchéng</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">写成</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">xiěchéng</span>{" "}
                       <span className="cv">viết thành</span>
                     </span>
                   </div>
@@ -3524,22 +3524,22 @@ export default function Template() {
             <tr>
               <td className="stt">64</td>
               <td className="ph">
-                <div className="ztai__zh pz">写错</div>
-                <div className="ztai__py">xiěcuò</div>
+                <div className="ztai__zh text-2xl leading-[1.55] pz">写错</div>
+                <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">xiěcuò</div>
                 <div className="pv">viết sai</div>
               </td>
               <td className="exs">
                 <div className="ex">
-                  <div className="ztai__zh">糟糕,写错了。</div>
-                  <div className="ztai__py">Zāogāo, xiěcuò le.</div>
+                  <div className="ztai__zh text-2xl leading-[1.55]">糟糕,写错了。</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">Zāogāo, xiěcuò le.</div>
                   <div className="vi">
                     Chết rồi, viết sai rồi.{" "}
                     <span className="src">B4 tr.51</span>
                   </div>
                 </div>
                 <div className="ex">
-                  <div className="ztai__zh">写错了字</div>
-                  <div className="ztai__py">xiěcuòle zì</div>
+                  <div className="ztai__zh text-2xl leading-[1.55]">写错了字</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">xiěcuòle zì</div>
                   <div className="vi">
                     viết sai chữ <span className="src">B4 tr.59</span>
                   </div>
@@ -3551,13 +3551,13 @@ export default function Template() {
                   <span className="lab">Đi kèm động từ này</span>
                   <div className="chips">
                     <span className="chip">
-                      <span className="ztai__zh">写对</span>{" "}
-                      <span className="ztai__py">xiěduì</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">写对</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">xiěduì</span>{" "}
                       <span className="cv">viết đúng</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">写成</span>{" "}
-                      <span className="ztai__py">xiěchéng</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">写成</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">xiěchéng</span>{" "}
                       <span className="cv">viết thành</span>
                     </span>
                   </div>
@@ -3567,22 +3567,22 @@ export default function Template() {
             <tr>
               <td className="stt">65</td>
               <td className="ph">
-                <div className="ztai__zh pz">翻译对</div>
-                <div className="ztai__py">fānyìduì</div>
+                <div className="ztai__zh text-2xl leading-[1.55] pz">翻译对</div>
+                <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">fānyìduì</div>
                 <div className="pv">dịch đúng</div>
               </td>
               <td className="exs">
                 <div className="ex">
-                  <div className="ztai__zh">我只翻译对了一个句子。</div>
-                  <div className="ztai__py">Wǒ zhǐ fānyìduìle yí ge jùzi.</div>
+                  <div className="ztai__zh text-2xl leading-[1.55]">我只翻译对了一个句子。</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">Wǒ zhǐ fānyìduìle yí ge jùzi.</div>
                   <div className="vi">
                     Tớ chỉ dịch đúng được một câu.{" "}
                     <span className="src">B4 tr.57</span>
                   </div>
                 </div>
                 <div className="ex">
-                  <div className="ztai__zh">这些句子翻译对</div>
-                  <div className="ztai__py">zhèxiē jùzi fānyìduì</div>
+                  <div className="ztai__zh text-2xl leading-[1.55]">这些句子翻译对</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">zhèxiē jùzi fānyìduì</div>
                   <div className="vi">
                     những câu này dịch đúng{" "}
                     <span className="src">B4 tr.60</span>
@@ -3595,13 +3595,13 @@ export default function Template() {
                   <span className="lab">Đi kèm động từ này</span>
                   <div className="chips">
                     <span className="chip">
-                      <span className="ztai__zh">翻译错</span>{" "}
-                      <span className="ztai__py">fānyìcuò</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">翻译错</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">fānyìcuò</span>{" "}
                       <span className="cv">dịch sai</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">翻译成</span>{" "}
-                      <span className="ztai__py">fānyìchéng</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">翻译成</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">fānyìchéng</span>{" "}
                       <span className="cv">dịch thành</span>
                     </span>
                   </div>
@@ -3611,14 +3611,14 @@ export default function Template() {
             <tr>
               <td className="stt">66</td>
               <td className="ph">
-                <div className="ztai__zh pz">说对</div>
-                <div className="ztai__py">shuōduì</div>
+                <div className="ztai__zh text-2xl leading-[1.55] pz">说对</div>
+                <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">shuōduì</div>
                 <div className="pv">nói đúng</div>
               </td>
               <td className="exs">
                 <div className="ex">
-                  <div className="ztai__zh">说对了</div>
-                  <div className="ztai__py">shuōduì le</div>
+                  <div className="ztai__zh text-2xl leading-[1.55]">说对了</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">shuōduì le</div>
                   <div className="vi">
                     nói đúng rồi <span className="src">B4 tr.59</span>
                   </div>
@@ -3630,13 +3630,13 @@ export default function Template() {
                   <span className="lab">Đi kèm động từ này</span>
                   <div className="chips">
                     <span className="chip">
-                      <span className="ztai__zh">说错</span>{" "}
-                      <span className="ztai__py">shuōcuò</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">说错</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">shuōcuò</span>{" "}
                       <span className="cv">nói sai</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">说完</span>{" "}
-                      <span className="ztai__py">shuōwán</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">说完</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">shuōwán</span>{" "}
                       <span className="cv">nói xong</span>
                     </span>
                   </div>
@@ -3646,22 +3646,22 @@ export default function Template() {
             <tr>
               <td className="stt">67</td>
               <td className="ph">
-                <div className="ztai__zh pz">答对</div>
-                <div className="ztai__py">dáduì</div>
+                <div className="ztai__zh text-2xl leading-[1.55] pz">答对</div>
+                <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">dáduì</div>
                 <div className="pv">trả lời đúng</div>
               </td>
               <td className="exs">
                 <div className="ex">
-                  <div className="ztai__zh">看你能不能答对。</div>
-                  <div className="ztai__py">Kàn nǐ néng bu néng dáduì.</div>
+                  <div className="ztai__zh text-2xl leading-[1.55]">看你能不能答对。</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">Kàn nǐ néng bu néng dáduì.</div>
                   <div className="vi">
                     Xem cậu có trả lời đúng được không.{" "}
                     <span className="src">B4 tr.52</span>
                   </div>
                 </div>
                 <div className="ex">
-                  <div className="ztai__zh">问了她五个问题,她都答对了。</div>
-                  <div className="ztai__py">
+                  <div className="ztai__zh text-2xl leading-[1.55]">问了她五个问题,她都答对了。</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Wènle tā wǔ ge wèntí, tā dōu dáduì le.
                   </div>
                   <div className="vi">
@@ -3679,13 +3679,13 @@ export default function Template() {
                   <span className="lab">Đi kèm động từ này</span>
                   <div className="chips">
                     <span className="chip">
-                      <span className="ztai__zh">答错</span>{" "}
-                      <span className="ztai__py">dácuò</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">答错</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">dácuò</span>{" "}
                       <span className="cv">trả lời sai</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">回答对</span>{" "}
-                      <span className="ztai__py">huídá duì</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">回答对</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">huídá duì</span>{" "}
                       <span className="cv">trả lời đúng</span>
                     </span>
                   </div>
@@ -3695,14 +3695,14 @@ export default function Template() {
             <tr>
               <td className="stt">68</td>
               <td className="ph">
-                <div className="ztai__zh pz">答错</div>
-                <div className="ztai__py">dácuò</div>
+                <div className="ztai__zh text-2xl leading-[1.55] pz">答错</div>
+                <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">dácuò</div>
                 <div className="pv">trả lời sai</div>
               </td>
               <td className="exs">
                 <div className="ex">
-                  <div className="ztai__zh">我答对了四个,答错了一个。</div>
-                  <div className="ztai__py">
+                  <div className="ztai__zh text-2xl leading-[1.55]">我答对了四个,答错了一个。</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Wǒ dáduìle sì ge, dácuòle yí ge.
                   </div>
                   <div className="vi">
@@ -3711,8 +3711,8 @@ export default function Template() {
                   </div>
                 </div>
                 <div className="ex">
-                  <div className="ztai__zh">我答错了两道题。</div>
-                  <div className="ztai__py">Wǒ dácuòle liǎng dào tí.</div>
+                  <div className="ztai__zh text-2xl leading-[1.55]">我答错了两道题。</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">Wǒ dácuòle liǎng dào tí.</div>
                   <div className="vi">
                     Tớ trả lời sai hai câu.{" "}
                     <span className="src">B4 tr.55</span>
@@ -3725,8 +3725,8 @@ export default function Template() {
                   <span className="lab">Đi kèm động từ này</span>
                   <div className="chips">
                     <span className="chip">
-                      <span className="ztai__zh">答对</span>{" "}
-                      <span className="ztai__py">dáduì</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">答对</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">dáduì</span>{" "}
                       <span className="cv">trả lời đúng</span>
                     </span>
                   </div>
@@ -3736,14 +3736,14 @@ export default function Template() {
             <tr>
               <td className="stt">69</td>
               <td className="ph">
-                <div className="ztai__zh pz">回答错</div>
-                <div className="ztai__py">huídá cuò</div>
+                <div className="ztai__zh text-2xl leading-[1.55] pz">回答错</div>
+                <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">huídá cuò</div>
                 <div className="pv">trả lời sai</div>
               </td>
               <td className="exs">
                 <div className="ex">
-                  <div className="ztai__zh">这个问题我回答错了。</div>
-                  <div className="ztai__py">Zhège wèntí wǒ huídá cuò le.</div>
+                  <div className="ztai__zh text-2xl leading-[1.55]">这个问题我回答错了。</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">Zhège wèntí wǒ huídá cuò le.</div>
                   <div className="vi">
                     Câu hỏi này tớ trả lời sai.{" "}
                     <span className="src">B4 tr.64 (đáp án sửa lỗi)</span>{" "}
@@ -3756,8 +3756,8 @@ export default function Template() {
                   </div>
                 </div>
                 <div className="ex">
-                  <div className="ztai__zh">回答错</div>
-                  <div className="ztai__py">huídá cuò</div>
+                  <div className="ztai__zh text-2xl leading-[1.55]">回答错</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">huídá cuò</div>
                   <div className="vi">
                     trả lời sai{" "}
                     <span className="src">B4 tr.60 (mẫu thay thế)</span>
@@ -3773,13 +3773,13 @@ export default function Template() {
                   <span className="lab">Đi kèm động từ này</span>
                   <div className="chips">
                     <span className="chip">
-                      <span className="ztai__zh">回答对</span>{" "}
-                      <span className="ztai__py">huídá duì</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">回答对</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">huídá duì</span>{" "}
                       <span className="cv">trả lời đúng</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">答错</span>{" "}
-                      <span className="ztai__py">dácuò</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">答错</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">dácuò</span>{" "}
                       <span className="cv">trả lời sai</span>
                     </span>
                   </div>
@@ -3789,23 +3789,23 @@ export default function Template() {
             <tr>
               <td className="stt">70</td>
               <td className="ph">
-                <div className="ztai__zh pz">看错</div>
-                <div className="ztai__py">kàncuò</div>
+                <div className="ztai__zh text-2xl leading-[1.55] pz">看错</div>
+                <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">kàncuò</div>
                 <div className="pv">xem nhầm, nhìn nhầm</div>
               </td>
               <td className="exs">
                 <div className="ex">
-                  <div className="ztai__zh">我看错题了。</div>
-                  <div className="ztai__py">Wǒ kàncuò tí le.</div>
+                  <div className="ztai__zh text-2xl leading-[1.55]">我看错题了。</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">Wǒ kàncuò tí le.</div>
                   <div className="vi">
                     Tớ xem nhầm đề rồi. <span className="src">B4 tr.57</span>
                   </div>
                 </div>
                 <div className="ex">
-                  <div className="ztai__zh">
+                  <div className="ztai__zh text-2xl leading-[1.55]">
                     对不起,我看错时间了,所以来晚了。
                   </div>
-                  <div className="ztai__py">
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Duìbuqǐ, wǒ kàncuò shíjiān le, suǒyǐ lái wǎn le.
                   </div>
                   <div className="vi">
@@ -3826,18 +3826,18 @@ export default function Template() {
                   <span className="lab">Đi kèm động từ này</span>
                   <div className="chips">
                     <span className="chip">
-                      <span className="ztai__zh">看对</span>{" "}
-                      <span className="ztai__py">kànduì</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">看对</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">kànduì</span>{" "}
                       <span className="cv">xem đúng</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">看见</span>{" "}
-                      <span className="ztai__py">kànjiàn</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">看见</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">kànjiàn</span>{" "}
                       <span className="cv">nhìn thấy</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">看懂</span>{" "}
-                      <span className="ztai__py">kàndǒng</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">看懂</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">kàndǒng</span>{" "}
                       <span className="cv">xem hiểu</span>
                     </span>
                   </div>
@@ -3847,14 +3847,14 @@ export default function Template() {
             <tr>
               <td className="stt">71</td>
               <td className="ph">
-                <div className="ztai__zh pz">打错</div>
-                <div className="ztai__py">dǎcuò</div>
+                <div className="ztai__zh text-2xl leading-[1.55] pz">打错</div>
+                <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">dǎcuò</div>
                 <div className="pv">gọi nhầm</div>
               </td>
               <td className="exs">
                 <div className="ex">
-                  <div className="ztai__zh">对不起,我打错了。</div>
-                  <div className="ztai__py">Duìbuqǐ, wǒ dǎcuò le.</div>
+                  <div className="ztai__zh text-2xl leading-[1.55]">对不起,我打错了。</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">Duìbuqǐ, wǒ dǎcuò le.</div>
                   <div className="vi">
                     Xin lỗi, tôi gọi nhầm. <span className="src">B4 tr.63</span>{" "}
                     <span
@@ -3866,8 +3866,8 @@ export default function Template() {
                   </div>
                 </div>
                 <div className="ex">
-                  <div className="ztai__zh">打错了电话</div>
-                  <div className="ztai__py">dǎcuòle diànhuà</div>
+                  <div className="ztai__zh text-2xl leading-[1.55]">打错了电话</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">dǎcuòle diànhuà</div>
                   <div className="vi">
                     gọi nhầm số điện thoại <span className="src">B4 tr.59</span>
                   </div>
@@ -3882,13 +3882,13 @@ export default function Template() {
                   <span className="lab">Đi kèm động từ này</span>
                   <div className="chips">
                     <span className="chip">
-                      <span className="ztai__zh">打通</span>{" "}
-                      <span className="ztai__py">dǎtōng</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">打通</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">dǎtōng</span>{" "}
                       <span className="cv">gọi được (thông máy)</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">打开</span>{" "}
-                      <span className="ztai__py">dǎkāi</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">打开</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">dǎkāi</span>{" "}
                       <span className="cv">mở ra</span>
                     </span>
                   </div>
@@ -3898,7 +3898,7 @@ export default function Template() {
             <tr className="grp" id="g10">
               <td colSpan={4}>
                 <div className="gt">
-                  <span className="ztai__zh gz">熟 / 干净 (tính từ khác)</span>
+                  <span className="ztai__zh text-2xl leading-[1.55] gz">熟 / 干净 (tính từ khác)</span>
                   <span className="gm">thuộc, thạo / sạch</span>
                 </div>
                 <div className="gd">
@@ -3910,30 +3910,30 @@ export default function Template() {
             <tr>
               <td className="stt">72</td>
               <td className="ph">
-                <div className="ztai__zh pz">念熟</div>
-                <div className="ztai__py">niànshú</div>
+                <div className="ztai__zh text-2xl leading-[1.55] pz">念熟</div>
+                <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">niànshú</div>
                 <div className="pv">đọc thuộc, đọc trôi chảy</div>
               </td>
               <td className="exs">
                 <div className="ex">
-                  <div className="ztai__zh">这课课文念熟</div>
-                  <div className="ztai__py">zhè kè kèwén niànshú</div>
+                  <div className="ztai__zh text-2xl leading-[1.55]">这课课文念熟</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">zhè kè kèwén niànshú</div>
                   <div className="vi">
                     bài khóa này đọc thuộc{" "}
                     <span className="src">B4 tr.60 (mẫu thay thế)</span>
                   </div>
                 </div>
                 <div className="ex">
-                  <div className="ztai__zh">课文念熟了没有?</div>
-                  <div className="ztai__py">Kèwén niànshú le méiyǒu?</div>
+                  <div className="ztai__zh text-2xl leading-[1.55]">课文念熟了没有?</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">Kèwén niànshú le méiyǒu?</div>
                   <div className="vi">
                     Bài khóa đọc thuộc chưa?{" "}
                     <span className="src">B4 tr.63</span>
                   </div>
                 </div>
                 <div className="ex">
-                  <div className="ztai__zh">课文也读得不太熟。</div>
-                  <div className="ztai__py">Kèwén yě dú de bú tài shú.</div>
+                  <div className="ztai__zh text-2xl leading-[1.55]">课文也读得不太熟。</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">Kèwén yě dú de bú tài shú.</div>
                   <div className="vi">
                     Bài khóa cũng đọc chưa thuộc lắm.{" "}
                     <span className="src">B4 tr.53</span>
@@ -3949,18 +3949,18 @@ export default function Template() {
                   <span className="lab">Đi kèm động từ này</span>
                   <div className="chips">
                     <span className="chip">
-                      <span className="ztai__zh">读熟</span>{" "}
-                      <span className="ztai__py">dúshú</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">读熟</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">dúshú</span>{" "}
                       <span className="cv">đọc thuộc</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">记熟</span>{" "}
-                      <span className="ztai__py">jìshú</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">记熟</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">jìshú</span>{" "}
                       <span className="cv">nhớ kỹ</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">学熟</span>{" "}
-                      <span className="ztai__py">xuéshú</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">学熟</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">xuéshú</span>{" "}
                       <span className="cv">học thuộc</span>
                     </span>
                   </div>
@@ -3970,14 +3970,14 @@ export default function Template() {
             <tr>
               <td className="stt">73</td>
               <td className="ph">
-                <div className="ztai__zh pz">洗干净</div>
-                <div className="ztai__py">xǐ gānjìng</div>
+                <div className="ztai__zh text-2xl leading-[1.55] pz">洗干净</div>
+                <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">xǐ gānjìng</div>
                 <div className="pv">giặt sạch</div>
               </td>
               <td className="exs">
                 <div className="ex">
-                  <div className="ztai__zh">这件衣服没洗干净。</div>
-                  <div className="ztai__py">Zhè jiàn yīfu méi xǐ gānjìng.</div>
+                  <div className="ztai__zh text-2xl leading-[1.55]">这件衣服没洗干净。</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">Zhè jiàn yīfu méi xǐ gānjìng.</div>
                   <div className="vi">
                     Cái áo này giặt chưa sạch.{" "}
                     <span className="src">B4 tr.56</span>
@@ -3990,13 +3990,13 @@ export default function Template() {
                   <span className="lab">Đi kèm động từ này</span>
                   <div className="chips">
                     <span className="chip">
-                      <span className="ztai__zh">擦干净</span>{" "}
-                      <span className="ztai__py">cā gānjìng</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">擦干净</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">cā gānjìng</span>{" "}
                       <span className="cv">lau sạch</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">打扫干净</span>{" "}
-                      <span className="ztai__py">dǎsǎo gānjìng</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">打扫干净</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">dǎsǎo gānjìng</span>{" "}
                       <span className="cv">quét dọn sạch</span>
                     </span>
                   </div>
@@ -4006,7 +4006,7 @@ export default function Template() {
             <tr className="grp" id="g11">
               <td colSpan={4}>
                 <div className="gt">
-                  <span className="ztai__zh gz">在 zài</span>
+                  <span className="ztai__zh text-2xl leading-[1.55] gz">在 zài</span>
                   <span className="gm">
                     ở tại (vị trí kết quả của hành động)
                   </span>
@@ -4021,14 +4021,14 @@ export default function Template() {
             <tr>
               <td className="stt">74</td>
               <td className="ph">
-                <div className="ztai__zh pz">放在</div>
-                <div className="ztai__py">fàngzài</div>
+                <div className="ztai__zh text-2xl leading-[1.55] pz">放在</div>
+                <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">fàngzài</div>
                 <div className="pv">đặt ở</div>
               </td>
               <td className="exs">
                 <div className="ex">
-                  <div className="ztai__zh">放在我的手提包儿里了。</div>
-                  <div className="ztai__py">
+                  <div className="ztai__zh text-2xl leading-[1.55]">放在我的手提包儿里了。</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Fàngzài wǒ de shǒutíbāor lǐ le.
                   </div>
                   <div className="vi">
@@ -4037,10 +4037,10 @@ export default function Template() {
                   </div>
                 </div>
                 <div className="ex">
-                  <div className="ztai__zh">
+                  <div className="ztai__zh text-2xl leading-[1.55]">
                     我的护照你放在哪儿了? — 就放在你的口袋里了。
                   </div>
-                  <div className="ztai__py">
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Wǒ de hùzhào nǐ fàngzài nǎr le? — Jiù fàngzài nǐ de kǒudài
                     lǐ le.
                   </div>
@@ -4050,8 +4050,8 @@ export default function Template() {
                   </div>
                 </div>
                 <div className="ex">
-                  <div className="ztai__zh">放在桌子上 / 放在手提包儿里</div>
-                  <div className="ztai__py">
+                  <div className="ztai__zh text-2xl leading-[1.55]">放在桌子上 / 放在手提包儿里</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     fàngzài zhuōzi shàng / fàngzài shǒutíbāor lǐ
                   </div>
                   <div className="vi">
@@ -4069,28 +4069,28 @@ export default function Template() {
                   <span className="lab">Đi kèm động từ này</span>
                   <div className="chips">
                     <span className="chip">
-                      <span className="ztai__zh">放到</span>{" "}
-                      <span className="ztai__py">fàngdào</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">放到</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">fàngdào</span>{" "}
                       <span className="cv">đặt vào</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">挂在</span>{" "}
-                      <span className="ztai__py">guàzài</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">挂在</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">guàzài</span>{" "}
                       <span className="cv">treo ở</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">住在</span>{" "}
-                      <span className="ztai__py">zhùzài</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">住在</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">zhùzài</span>{" "}
                       <span className="cv">ở tại</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">坐在</span>{" "}
-                      <span className="ztai__py">zuòzài</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">坐在</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">zuòzài</span>{" "}
                       <span className="cv">ngồi ở</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">站在</span>{" "}
-                      <span className="ztai__py">zhànzài</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">站在</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">zhànzài</span>{" "}
                       <span className="cv">đứng ở</span>
                     </span>
                   </div>
@@ -4100,16 +4100,16 @@ export default function Template() {
             <tr>
               <td className="stt">75</td>
               <td className="ph">
-                <div className="ztai__zh pz">挂在</div>
-                <div className="ztai__py">guàzài</div>
+                <div className="ztai__zh text-2xl leading-[1.55] pz">挂在</div>
+                <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">guàzài</div>
                 <div className="pv">treo ở</div>
               </td>
               <td className="exs">
                 <div className="ex">
-                  <div className="ztai__zh">
+                  <div className="ztai__zh text-2xl leading-[1.55]">
                     这张画儿我们挂在哪儿呢? — 挂在这儿吧。
                   </div>
-                  <div className="ztai__py">
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Zhè zhāng huàr wǒmen guàzài nǎr ne? — Guàzài zhèr ba.
                   </div>
                   <div className="vi">
@@ -4118,8 +4118,8 @@ export default function Template() {
                   </div>
                 </div>
                 <div className="ex">
-                  <div className="ztai__zh">挂在墙上</div>
-                  <div className="ztai__py">guàzài qiáng shàng</div>
+                  <div className="ztai__zh text-2xl leading-[1.55]">挂在墙上</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">guàzài qiáng shàng</div>
                   <div className="vi">
                     treo trên tường <span className="src">B12 tr.203</span>
                   </div>
@@ -4131,13 +4131,13 @@ export default function Template() {
                   <span className="lab">Đi kèm động từ này</span>
                   <div className="chips">
                     <span className="chip">
-                      <span className="ztai__zh">放在</span>{" "}
-                      <span className="ztai__py">fàngzài</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">放在</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">fàngzài</span>{" "}
                       <span className="cv">đặt ở</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">贴在</span>{" "}
-                      <span className="ztai__py">tiēzài</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">贴在</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">tiēzài</span>{" "}
                       <span className="cv">dán ở</span>
                     </span>
                   </div>
@@ -4147,14 +4147,14 @@ export default function Template() {
             <tr>
               <td className="stt">76</td>
               <td className="ph">
-                <div className="ztai__zh pz">写在</div>
-                <div className="ztai__py">xiězài</div>
+                <div className="ztai__zh text-2xl leading-[1.55] pz">写在</div>
+                <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">xiězài</div>
                 <div className="pv">viết ở</div>
               </td>
               <td className="exs">
                 <div className="ex">
-                  <div className="ztai__zh">写在本子上</div>
-                  <div className="ztai__py">xiězài běnzi shàng</div>
+                  <div className="ztai__zh text-2xl leading-[1.55]">写在本子上</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">xiězài běnzi shàng</div>
                   <div className="vi">
                     viết vào vở <span className="src">B12 tr.203</span>
                   </div>
@@ -4166,13 +4166,13 @@ export default function Template() {
                   <span className="lab">Đi kèm động từ này</span>
                   <div className="chips">
                     <span className="chip">
-                      <span className="ztai__zh">写上</span>{" "}
-                      <span className="ztai__py">xiěshang</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">写上</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">xiěshang</span>{" "}
                       <span className="cv">viết thêm vào</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">记在</span>{" "}
-                      <span className="ztai__py">jìzài</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">记在</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">jìzài</span>{" "}
                       <span className="cv">ghi ở</span>
                     </span>
                   </div>
@@ -4182,16 +4182,16 @@ export default function Template() {
             <tr>
               <td className="stt">77</td>
               <td className="ph">
-                <div className="ztai__zh pz">记在</div>
-                <div className="ztai__py">jìzài</div>
+                <div className="ztai__zh text-2xl leading-[1.55] pz">记在</div>
+                <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">jìzài</div>
                 <div className="pv">ghi lại vào</div>
               </td>
               <td className="exs">
                 <div className="ex">
-                  <div className="ztai__zh">
+                  <div className="ztai__zh text-2xl leading-[1.55]">
                     老师的电话号码我忘了,因为我没记在本子上。
                   </div>
-                  <div className="ztai__py">
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Lǎoshī de diànhuà hàomǎ wǒ wàng le, yīnwèi wǒ méi jìzài
                     běnzi shàng.
                   </div>
@@ -4216,13 +4216,13 @@ export default function Template() {
                   <span className="lab">Đi kèm động từ này</span>
                   <div className="chips">
                     <span className="chip">
-                      <span className="ztai__zh">写在</span>{" "}
-                      <span className="ztai__py">xiězài</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">写在</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">xiězài</span>{" "}
                       <span className="cv">viết ở</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">记住</span>{" "}
-                      <span className="ztai__py">jìzhù</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">记住</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">jìzhù</span>{" "}
                       <span className="cv">nhớ chắc</span>
                     </span>
                   </div>
@@ -4232,14 +4232,14 @@ export default function Template() {
             <tr>
               <td className="stt">78</td>
               <td className="ph">
-                <div className="ztai__zh pz">停在</div>
-                <div className="ztai__py">tíngzài</div>
+                <div className="ztai__zh text-2xl leading-[1.55] pz">停在</div>
+                <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">tíngzài</div>
                 <div className="pv">đỗ ở</div>
               </td>
               <td className="exs">
                 <div className="ex">
-                  <div className="ztai__zh">汽车停在楼下</div>
-                  <div className="ztai__py">qìchē tíngzài lóu xià</div>
+                  <div className="ztai__zh text-2xl leading-[1.55]">汽车停在楼下</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">qìchē tíngzài lóu xià</div>
                   <div className="vi">
                     ô tô đỗ ở dưới tòa nhà{" "}
                     <span className="src">B12 tr.204</span>
@@ -4252,13 +4252,13 @@ export default function Template() {
                   <span className="lab">Đi kèm động từ này</span>
                   <div className="chips">
                     <span className="chip">
-                      <span className="ztai__zh">停到</span>{" "}
-                      <span className="ztai__py">tíngdào</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">停到</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">tíngdào</span>{" "}
                       <span className="cv">đỗ đến</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">放在</span>{" "}
-                      <span className="ztai__py">fàngzài</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">放在</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">fàngzài</span>{" "}
                       <span className="cv">đặt ở</span>
                     </span>
                   </div>
@@ -4268,16 +4268,16 @@ export default function Template() {
             <tr>
               <td className="stt">79</td>
               <td className="ph">
-                <div className="ztai__zh pz">丢在</div>
-                <div className="ztai__py">diūzài</div>
+                <div className="ztai__zh text-2xl leading-[1.55] pz">丢在</div>
+                <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">diūzài</div>
                 <div className="pv">bỏ quên ở</div>
               </td>
               <td className="exs">
                 <div className="ex">
-                  <div className="ztai__zh">
+                  <div className="ztai__zh text-2xl leading-[1.55]">
                     原来是他到山上去砍柴时,丢在山上了。
                   </div>
-                  <div className="ztai__py">
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Yuánlái shì tā dào shān shàng qù kǎn chái shí, diūzài shān
                     shàng le.
                   </div>
@@ -4293,13 +4293,13 @@ export default function Template() {
                   <span className="lab">Đi kèm động từ này</span>
                   <div className="chips">
                     <span className="chip">
-                      <span className="ztai__zh">落在</span>{" "}
-                      <span className="ztai__py">làzài</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">落在</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">làzài</span>{" "}
                       <span className="cv">bỏ quên ở</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">掉在</span>{" "}
-                      <span className="ztai__py">diàozài</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">掉在</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">diàozài</span>{" "}
                       <span className="cv">rơi ở</span>
                     </span>
                   </div>
@@ -4309,7 +4309,7 @@ export default function Template() {
             <tr className="grp" id="g12">
               <td colSpan={4}>
                 <div className="gt">
-                  <span className="ztai__zh gz">着 zháo</span>
+                  <span className="ztai__zh text-2xl leading-[1.55] gz">着 zháo</span>
                   <span className="gm">đạt được mục đích, có kết quả</span>
                 </div>
                 <div className="gd">
@@ -4322,14 +4322,14 @@ export default function Template() {
             <tr>
               <td className="stt">80</td>
               <td className="ph">
-                <div className="ztai__zh pz">找着</div>
-                <div className="ztai__py">zhǎozháo</div>
+                <div className="ztai__zh text-2xl leading-[1.55] pz">找着</div>
+                <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">zhǎozháo</div>
                 <div className="pv">tìm được</div>
               </td>
               <td className="exs">
                 <div className="ex">
-                  <div className="ztai__zh">我找了半天也没找着。</div>
-                  <div className="ztai__py">
+                  <div className="ztai__zh text-2xl leading-[1.55]">我找了半天也没找着。</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Wǒ zhǎole bàntiān yě méi zhǎozháo.
                   </div>
                   <div className="vi">
@@ -4338,8 +4338,8 @@ export default function Template() {
                   </div>
                 </div>
                 <div className="ex">
-                  <div className="ztai__zh">我的护照你给我找着了没有?</div>
-                  <div className="ztai__py">
+                  <div className="ztai__zh text-2xl leading-[1.55]">我的护照你给我找着了没有?</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Wǒ de hùzhào nǐ gěi wǒ zhǎozháo le méiyǒu?
                   </div>
                   <div className="vi">
@@ -4354,8 +4354,8 @@ export default function Template() {
                   <span className="lab">Đi kèm động từ này</span>
                   <div className="chips">
                     <span className="chip">
-                      <span className="ztai__zh">找到</span>{" "}
-                      <span className="ztai__py">zhǎodào</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">找到</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">zhǎodào</span>{" "}
                       <span className="cv">tìm được</span>
                     </span>
                   </div>
@@ -4365,14 +4365,14 @@ export default function Template() {
             <tr>
               <td className="stt">81</td>
               <td className="ph">
-                <div className="ztai__zh pz">买着</div>
-                <div className="ztai__py">mǎizháo</div>
+                <div className="ztai__zh text-2xl leading-[1.55] pz">买着</div>
+                <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">mǎizháo</div>
                 <div className="pv">mua được</div>
               </td>
               <td className="exs">
                 <div className="ex">
-                  <div className="ztai__zh">你要的那本书我给你买着了。</div>
-                  <div className="ztai__py">
+                  <div className="ztai__zh text-2xl leading-[1.55]">你要的那本书我给你买着了。</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Nǐ yào de nà běn shū wǒ gěi nǐ mǎizháo le.
                   </div>
                   <div className="vi">
@@ -4381,8 +4381,8 @@ export default function Template() {
                   </div>
                 </div>
                 <div className="ex">
-                  <div className="ztai__zh">电影票你买着了吗?</div>
-                  <div className="ztai__py">
+                  <div className="ztai__zh text-2xl leading-[1.55]">电影票你买着了吗?</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Diànyǐng piào nǐ mǎizháo le ma?
                   </div>
                   <div className="vi">
@@ -4403,13 +4403,13 @@ export default function Template() {
                   <span className="lab">Đi kèm động từ này</span>
                   <div className="chips">
                     <span className="chip">
-                      <span className="ztai__zh">买到</span>{" "}
-                      <span className="ztai__py">mǎidào</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">买到</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">mǎidào</span>{" "}
                       <span className="cv">mua được</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">买好</span>{" "}
-                      <span className="ztai__py">mǎihǎo</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">买好</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">mǎihǎo</span>{" "}
                       <span className="cv">mua xong</span>
                     </span>
                   </div>
@@ -4419,14 +4419,14 @@ export default function Template() {
             <tr>
               <td className="stt">82</td>
               <td className="ph">
-                <div className="ztai__zh pz">睡着</div>
-                <div className="ztai__py">shuìzháo</div>
+                <div className="ztai__zh text-2xl leading-[1.55] pz">睡着</div>
+                <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">shuìzháo</div>
                 <div className="pv">ngủ thiếp đi</div>
               </td>
               <td className="exs">
                 <div className="ex">
-                  <div className="ztai__zh">你睡着了吗?</div>
-                  <div className="ztai__py">Nǐ shuìzháo le ma?</div>
+                  <div className="ztai__zh text-2xl leading-[1.55]">你睡着了吗?</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">Nǐ shuìzháo le ma?</div>
                   <div className="vi">
                     Cậu ngủ rồi à? <span className="src">B12 tr.202</span>
                   </div>
@@ -4438,18 +4438,18 @@ export default function Template() {
                   <span className="lab">Đi kèm động từ này</span>
                   <div className="chips">
                     <span className="chip">
-                      <span className="ztai__zh">睡好</span>{" "}
-                      <span className="ztai__py">shuìhǎo</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">睡好</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">shuìhǎo</span>{" "}
                       <span className="cv">ngủ ngon</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">猜着</span>{" "}
-                      <span className="ztai__py">cāizháo</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">猜着</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">cāizháo</span>{" "}
                       <span className="cv">đoán được</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">够着</span>{" "}
-                      <span className="ztai__py">gòuzháo</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">够着</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">gòuzháo</span>{" "}
                       <span className="cv">với tới</span>
                     </span>
                   </div>
@@ -4459,16 +4459,16 @@ export default function Template() {
             <tr>
               <td className="stt">83</td>
               <td className="ph">
-                <div className="ztai__zh pz">拿着 / 租着</div>
-                <div className="ztai__py">názháo / zūzháo</div>
+                <div className="ztai__zh text-2xl leading-[1.55] pz">拿着 / 租着</div>
+                <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">názháo / zūzháo</div>
                 <div className="pv">lấy được / thuê được</div>
               </td>
               <td className="exs">
                 <div className="ex">
-                  <div className="ztai__zh">
+                  <div className="ztai__zh text-2xl leading-[1.55]">
                     照片你拿着了没有? / 房子你租着了没有?
                   </div>
-                  <div className="ztai__py">
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Zhàopiàn nǐ názháo le méiyǒu? / Fángzi nǐ zūzháo le méiyǒu?
                   </div>
                   <div className="vi">
@@ -4492,13 +4492,13 @@ export default function Template() {
                   <span className="lab">Đi kèm động từ này</span>
                   <div className="chips">
                     <span className="chip">
-                      <span className="ztai__zh">拿到</span>{" "}
-                      <span className="ztai__py">nádào</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">拿到</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">nádào</span>{" "}
                       <span className="cv">lấy được</span>
                     </span>
                     <span className="chip">
-                      <span className="ztai__zh">租到</span>{" "}
-                      <span className="ztai__py">zūdào</span>{" "}
+                      <span className="ztai__zh text-2xl leading-[1.55]">租到</span>{" "}
+                      <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">zūdào</span>{" "}
                       <span className="cv">thuê được</span>
                     </span>
                   </div>
@@ -4508,7 +4508,7 @@ export default function Template() {
             <tr className="grp" id="g13">
               <td colSpan={4}>
                 <div className="gt">
-                  <span className="ztai__zh gz">
+                  <span className="ztai__zh text-2xl leading-[1.55] gz">
                     早 (zǎo - sớm) và 晚 (wǎn - muộn){" "}
                   </span>
                   <span className="gm">
@@ -4525,24 +4525,24 @@ export default function Template() {
             <tr>
               <td className="stt">84</td>
               <td className="ph">
-                <div className="ztai__zh pz">来了 / 来晚</div>
-                <div className="ztai__py">lái zǎo / lái wǎn</div>
+                <div className="ztai__zh text-2xl leading-[1.55] pz">来了 / 来晚</div>
+                <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">lái zǎo / lái wǎn</div>
                 <div className="pv">Đến sớm. / Đến muộn.</div>
               </td>
               <td className="exs">
                 <div className="ex">
-                  <div className="ztai__zh">我没来晚。</div>
-                  <div className="ztai__py">Wǒ méi lái wǎn.</div>
+                  <div className="ztai__zh text-2xl leading-[1.55]">我没来晚。</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">Wǒ méi lái wǎn.</div>
                   <div className="vi">Tôi đến không muộn. </div>
                 </div>
                 <div className="ex">
-                  <div className="ztai__zh">你来晚了没有？</div>
-                  <div className="ztai__py">Nǐ lái wǎn le méiyǒu?</div>
+                  <div className="ztai__zh text-2xl leading-[1.55]">你来晚了没有？</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">Nǐ lái wǎn le méiyǒu?</div>
                   <div className="vi">Anh đến muộn phải ko. </div>
                 </div>
                 <div className="ex">
-                  <div className="ztai__zh">对不起，我来晚了。</div>
-                  <div className="ztai__py">Duìbuqǐ, wǒ lái wǎn le.</div>
+                  <div className="ztai__zh text-2xl leading-[1.55]">对不起，我来晚了。</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">Duìbuqǐ, wǒ lái wǎn le.</div>
                   <div className="vi">Xin lỗi, tôi đến muộn rồi.</div>
                 </div>
               </td>
@@ -4551,24 +4551,24 @@ export default function Template() {
             <tr>
               <td className="stt">85</td>
               <td className="ph">
-                <div className="ztai__zh pz">睡早 / 睡晚</div>
-                <div className="ztai__py">shuì zǎo / shuì wǎn</div>
+                <div className="ztai__zh text-2xl leading-[1.55] pz">睡早 / 睡晚</div>
+                <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">shuì zǎo / shuì wǎn</div>
                 <div className="pv">Ngủ sớm. / Ngủ muộn.</div>
               </td>
               <td className="exs">
                 <div className="ex">
-                  <div className="ztai__zh">他没,睡早。</div>
-                  <div className="ztai__py">Tā méi shuì zǎo.</div>
+                  <div className="ztai__zh text-2xl leading-[1.55]">他没,睡早。</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">Tā méi shuì zǎo.</div>
                   <div className="vi">Anh ấy ngủ không sớm. </div>
                 </div>
                 <div className="ex">
-                  <div className="ztai__zh">起早了</div>
-                  <div className="ztai__py">Qǐ zǎo le.</div>
+                  <div className="ztai__zh text-2xl leading-[1.55]">起早了</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">Qǐ zǎo le.</div>
                   <div className="vi">Dậy sớm rồi. </div>
                 </div>
                 <div className="ex">
-                  <div className="ztai__zh">睡晚了</div>
-                  <div className="ztai__py">Shuì wǎn le.</div>
+                  <div className="ztai__zh text-2xl leading-[1.55]">睡晚了</div>
+                  <div className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">Shuì wǎn le.</div>
                   <div className="vi">Ngủ muộn rồi. </div>
                 </div>
               </td>
@@ -4592,7 +4592,7 @@ export default function Template() {
           </li>
           <li>
             <b>找到 và 找着:</b> cùng nghĩa tìm được; 着 đọc{" "}
-            <span className="ztai__py">zháo</span> và khẩu ngữ hơn. Tương tự
+            <span className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">zháo</span> và khẩu ngữ hơn. Tương tự
             买到 / 买着.
           </li>
           <li>

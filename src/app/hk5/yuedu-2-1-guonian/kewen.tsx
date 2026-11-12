@@ -76,14 +76,14 @@ export default function GuoNian() {
         </thead>
         <tbody>
           <tr className="ztai__dochieu__title">
-            <td className="ztai__zh">{TITLE.zh}</td>
-            {showPinyin && <td className="ztai__py">{TITLE.py}</td>}
+            <td className="ztai__zh text-2xl leading-[1.55]">{TITLE.zh}</td>
+            {showPinyin && <td className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">{TITLE.py}</td>}
             {showVi && <td>{TITLE.vi}</td>}
           </tr>
           {ROWS.map((r, i) => (
             <tr key={i}>
-              <td className="ztai__zh">{r.zh}</td>
-              {showPinyin && <td className="ztai__py">{r.py}</td>}
+              <td className="ztai__zh text-2xl leading-[1.55]">{r.zh}</td>
+              {showPinyin && <td className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">{r.py}</td>}
               {showVi && <td>{r.vi}</td>}
             </tr>
           ))}
@@ -91,21 +91,21 @@ export default function GuoNian() {
       </table>
 
       <table className="ztai__dochieu__table">
-        <caption className="ztai__zh p-5 text-3xl text-sky-700">注释</caption>
+        <caption className="ztai__zh leading-[1.55] p-5 text-3xl text-sky-700">注释</caption>
         <tbody>
           <tr>
-            <td className="ztai__zh">大年三十</td>
+            <td className="ztai__zh text-2xl leading-[1.55]">大年三十</td>
             <td>
-              <p className="ztai__zh">中国农历一年中的最后一天，即除夕。</p>
+              <p className="ztai__zh text-2xl leading-[1.55]">中国农历一年中的最后一天，即除夕。</p>
               <p>
                 Ngày cuối cùng của năm âm lịch Trung Quốc, tức đêm giao thừa.
               </p>
             </td>
           </tr>
           <tr>
-            <td className="ztai__zh">超市</td>
+            <td className="ztai__zh text-2xl leading-[1.55]">超市</td>
             <td>
-              <p className="ztai__zh">超级市场的简称。</p>
+              <p className="ztai__zh text-2xl leading-[1.55]">超级市场的简称。</p>
               <p>Cách gọi tắt của siêu thị.</p>
             </td>
           </tr>

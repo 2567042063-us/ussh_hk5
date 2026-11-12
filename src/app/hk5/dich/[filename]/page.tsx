@@ -37,7 +37,11 @@ export default async function Page({
     return (
       <div className="flex min-h-screen flex-col items-center dark:bg-slate-800">
         <Header title="hk5" canonical="https://ussh-hk5-neon.vercel.app/hk5" />
-        <LayoutGrbt menuGrbt={lessonMenu} filename={lesson.id}>
+        <LayoutGrbt
+          menuGrbt={lessonMenu}
+          filename={lesson.id}
+          menuTitle="LUYỆN DỊCH V-T"
+        >
           <TranslationQuiz lesson={lesson} />
         </LayoutGrbt>
         <Footer />

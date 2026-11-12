@@ -4,80 +4,100 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bài Tập Tiếng Trung - 十字路口儿</title>
+    <link rel="stylesheet" href="./styles.css">
     <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f4f7f6;
-        }
-        h1, h2 {
-            color: #2c3e50;
-            text-align: center;
-        }
         .card {
-            background: #fff;
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            margin-bottom: 25px;
+            margin: 12px;
+            padding: 14px;
+            border: 1px solid var(--ln);
+            border-radius: 12px;
+            background: var(--card);
         }
         .text-zh {
-            font-size: 1.15em;
-            line-height: 1.8;
-            margin-bottom: 10px;
-            font-family:"KaiTi", "STKaiti", "Songti SC","SimSun","Noto Serif CJK SC","Noto Serif SC",serif;
+            margin: 0 0 4px;
+            font-size: 22px;
+            line-height: 1.6;
+            font-family: KaiTi, STKaiti, PingFang SC, Songti SC, SimSun, "Noto Serif CJK SC", "Noto Serif SC", serif;
         }
         .text-py {
-            color: #27ae60;
+            margin: 0 0 4px;
+            color: var(--ac);
+            font-size: .9rem;
+            line-height: 1.45;
             font-style: italic;
-            margin-bottom: 10px;
-            font-family: "Noto Sans CJK SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+            font-family: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
         }
         .text-vi {
-            color: #555;
-            margin-bottom: 20px;
+            margin: 0 0 14px;
+            color: var(--mu);
         }
         .blank-answer {
-            color: #e74c3c;
-            font-weight: bold;
+            color: var(--no);
+            font-weight: 700;
             text-decoration: underline;
         }
         table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 15px;
-            background: #fff;
+            margin-top: 12px;
+            background: var(--card);
         }
         th, td {
-            padding: 12px 15px;
-            border: 1px solid #ddd;
+            padding: 8px 10px;
+            border: 1px solid var(--ln);
             text-align: left;
         }
         th {
-            background-color: #3498db;
-            color: white;
+            background: var(--ac);
+            color: var(--bg);
         }
         tr:nth-child(even) {
-            background-color: #f8f9fa;
+            background: var(--ac2);
         }
         tr:hover {
-            background-color: #f1f1f1;
+            background: #eff6ff;
         }
         .section-title {
-            border-bottom: 2px solid #3498db;
+            margin: 0 0 12px;
             padding-bottom: 8px;
-            color: #2c3e50;
-                margin: 0;
+            border-bottom: 2px solid var(--ac);
+            color: var(--ac);
+        }
+        .grammar-notes {
+            margin: 12px;
+            padding: 14px;
+            border: 1px solid var(--ln);
+            border-radius: 12px;
+            background: var(--card);
+        }
+        .grammar-notes h3 {
+            margin: 0 0 10px;
+            color: var(--ac);
+        }
+        .grammar-notes li,
+        .grammar-notes p {
+            margin-bottom: 8px;
+        }
+        .table-wrap {
+            overflow-x: auto;
+        }
+        @media (max-width: 640px) {
+            .card,
+            .grammar-notes {
+                margin: 10px;
+                padding: 12px;
+            }
+            table {
+                min-width: 520px;
+            }
         }
     </style>
 </head>
 <body>
 
-    <h1>十字路口儿 (Ngã Tư)</h1>
+<div class="box">
+    <h1>📖 Bài khoá phụ - Bài 24</h1>
+    <p class="ztaibkptitle">十字路口儿 (Ngã Tư)</p>
 
 <div class="card">
         <h2 class="section-title">课文</h2>
@@ -111,6 +131,7 @@
 
     <div class="card">
         <h2 class="section-title">1. Đáp Án Điền Vào Chỗ Trống</h2>
+        <div class="table-wrap">
         <table>
             <thead>
                 <tr>
@@ -162,8 +183,10 @@
                 </tr>
             </tbody>
         </table>
+        </div>
     </div>
 
+    <div class="grammar-notes">
     <h3 data-path-to-node="3">住 (zh&ugrave;) v&agrave; 往 (wǎng):</h3>
 <ol start="1" data-path-to-node="4">
 <li>
@@ -213,9 +236,11 @@
 </ol>
 <p data-path-to-node="6">&nbsp;Ngo&agrave;i ra&nbsp;<strong data-path-to-node="7,0,1,1,0" data-index-in-node="1">住 </strong>b&igrave;nh thường l&agrave;&nbsp;动词 chỉ nơi ở/chỗ ở.</p>
 <p data-path-to-node="6">&nbsp;V&iacute; dụ: 你<strong data-path-to-node="7,0,1,1,0" data-index-in-node="1">住</strong>在哪家酒店？<em data-path-to-node="7,0,1,1,0" data-index-in-node="8">(Bạn ở/trọ tại kh&aacute;ch sạn n&agrave;o?)</em></p>
+    </div>
 
     <div class="card">
         <h2 class="section-title">2. Bảng Từ Vựng </h2>
+        <div class="table-wrap">
         <table>
             <thead>
                 <tr>
@@ -362,9 +387,11 @@
                 </tr>
             </tbody>
         </table>
+        </div>
     </div>
 
 
 
+</div>
 </body>
 </html>

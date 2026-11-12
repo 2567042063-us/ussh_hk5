@@ -63,7 +63,7 @@ export default function Page() {
                       Number(showPinyin) +
                       Number(showVi)
                     }
-                    className="ztai__zh text-rose-800"
+                    className="ztai__zh text-2xl leading-[1.55] text-rose-800"
                   >
                     （一）我是跟旅游团一起来的。
                   </td>
@@ -78,7 +78,7 @@ export default function Page() {
                       Number(showPinyin) +
                       Number(showVi)
                     }
-                    className="ztai__zh text-stale-600"
+                    className="ztai__zh text-2xl leading-[1.55] text-stale-600"
                   >
                     {showChinese && (
                       <>
@@ -98,12 +98,12 @@ export default function Page() {
               <tr>
                 <td>1</td>
                 {showChinese && (
-                  <td className="ztai__zh">
+                  <td className="ztai__zh text-2xl leading-[1.55]">
                     丹尼丝：王老师，您好！好久不见了。
                   </td>
                 )}
                 {showPinyin && (
-                  <td className="ztai__py">
+                  <td className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Dānnísī: Wáng lǎoshī, nín hǎo! Hǎojiǔ bú jiàn le.
                   </td>
                 )}
@@ -116,12 +116,12 @@ export default function Page() {
               <tr>
                 <td>2</td>
                 {showChinese && (
-                  <td className="ztai__zh">
+                  <td className="ztai__zh text-2xl leading-[1.55]">
                     王老师：丹尼丝！你是什么时候来的？
                   </td>
                 )}
                 {showPinyin && (
-                  <td className="ztai__py">
+                  <td className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Wáng lǎoshī: Dānnísī! Nǐ shì shénme shíhou lái de?
                   </td>
                 )}
@@ -134,10 +134,10 @@ export default function Page() {
               <tr>
                 <td>3</td>
                 {showChinese && (
-                  <td className="ztai__zh">丹尼丝：前天刚到的。</td>
+                  <td className="ztai__zh text-2xl leading-[1.55]">丹尼丝：前天刚到的。</td>
                 )}
                 {showPinyin && (
-                  <td className="ztai__py">Dānnísī: Qiántiān gāng dào de.</td>
+                  <td className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">Dānnísī: Qiántiān gāng dào de.</td>
                 )}
                 {showVi && (
                   <td className="ztai__vi">Denise: Em vừa mới đến hôm kia.</td>
@@ -146,10 +146,10 @@ export default function Page() {
               <tr>
                 <td>4</td>
                 {showChinese && (
-                  <td className="ztai__zh">王老师：是来学习的吗？</td>
+                  <td className="ztai__zh text-2xl leading-[1.55]">王老师：是来学习的吗？</td>
                 )}
                 {showPinyin && (
-                  <td className="ztai__py">
+                  <td className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Wáng lǎoshī: Shì lái xuéxí de ma?
                   </td>
                 )}
@@ -162,10 +162,10 @@ export default function Page() {
               <tr>
                 <td>5</td>
                 {showChinese && (
-                  <td className="ztai__zh">丹尼丝：不是，是来旅行的。</td>
+                  <td className="ztai__zh text-2xl leading-[1.55]">丹尼丝：不是，是来旅行的。</td>
                 )}
                 {showPinyin && (
-                  <td className="ztai__py">
+                  <td className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Dānnísī: Bú shì, shì lái lǚxíng de.
                   </td>
                 )}
@@ -176,10 +176,10 @@ export default function Page() {
               <tr>
                 <td>6</td>
                 {showChinese && (
-                  <td className="ztai__zh">王老师：一个人来的吗？</td>
+                  <td className="ztai__zh text-2xl leading-[1.55]">王老师：一个人来的吗？</td>
                 )}
                 {showPinyin && (
-                  <td className="ztai__py">
+                  <td className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Wáng lǎoshī: Yí ge rén lái de ma?
                   </td>
                 )}
@@ -190,12 +190,12 @@ export default function Page() {
               <tr>
                 <td>7</td>
                 {showChinese && (
-                  <td className="ztai__zh">
+                  <td className="ztai__zh text-2xl leading-[1.55]">
                     丹尼丝：不是，我是跟旅游团一起来的。我当翻译，也是导游。
                   </td>
                 )}
                 {showPinyin && (
-                  <td className="ztai__py">
+                  <td className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Dānnísī: Bú shì, wǒ shì gēn lǚyóutuán yìqǐ lái de. Wǒ dāng
                     fānyì, yě shì dǎoyóu.
                   </td>
@@ -210,10 +210,10 @@ export default function Page() {
               <tr>
                 <td>8</td>
                 {showChinese && (
-                  <td className="ztai__zh">王老师：你已经工作了？</td>
+                  <td className="ztai__zh text-2xl leading-[1.55]">王老师：你已经工作了？</td>
                 )}
                 {showPinyin && (
-                  <td className="ztai__py">
+                  <td className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Wáng lǎoshī: Nǐ yǐjīng gōngzuò le?
                   </td>
                 )}
@@ -224,10 +224,10 @@ export default function Page() {
               <tr>
                 <td>9</td>
                 {showChinese && (
-                  <td className="ztai__zh">丹尼丝：没有，我还在读研究生。</td>
+                  <td className="ztai__zh text-2xl leading-[1.55]">丹尼丝：没有，我还在读研究生。</td>
                 )}
                 {showPinyin && (
-                  <td className="ztai__py">
+                  <td className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Dānnísī: Méiyǒu, wǒ hái zài dú yánjiūshēng.
                   </td>
                 )}
@@ -240,10 +240,10 @@ export default function Page() {
               <tr>
                 <td>10</td>
                 {showChinese && (
-                  <td className="ztai__zh">王老师：是在打工吗？</td>
+                  <td className="ztai__zh text-2xl leading-[1.55]">王老师：是在打工吗？</td>
                 )}
                 {showPinyin && (
-                  <td className="ztai__py">Wáng lǎoshī: Shì zài dǎgōng ma?</td>
+                  <td className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">Wáng lǎoshī: Shì zài dǎgōng ma?</td>
                 )}
                 {showVi && (
                   <td className="ztai__vi">Thầy Vương: Em đang làm thêm à?</td>
@@ -252,12 +252,12 @@ export default function Page() {
               <tr>
                 <td>11</td>
                 {showChinese && (
-                  <td className="ztai__zh">
+                  <td className="ztai__zh text-2xl leading-[1.55]">
                     丹尼丝：是的，利用假期到一家旅行社打工。他们组织了一个旅游团，老板就让我陪他们来了。他知道我需要经常来中国收集资料，所以，一有来中国的旅游团，他就安排我陪团来。
                   </td>
                 )}
                 {showPinyin && (
-                  <td className="ztai__py">
+                  <td className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Dānnísī: Shì de, lìyòng jiàqī dào yì jiā lǚxíngshè dǎgōng.
                     Tāmen zǔzhī le yí ge lǚyóutuán, lǎobǎn jiù ràng wǒ péi tāmen
                     lái le. Tā zhīdào wǒ xūyào jīngcháng lái Zhōngguó shōují
@@ -278,10 +278,10 @@ export default function Page() {
               <tr>
                 <td>12</td>
                 {showChinese && (
-                  <td className="ztai__zh">王老师：这个老板还真不错。</td>
+                  <td className="ztai__zh text-2xl leading-[1.55]">王老师：这个老板还真不错。</td>
                 )}
                 {showPinyin && (
-                  <td className="ztai__py">
+                  <td className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Wáng lǎoshī: Zhège lǎobǎn hái zhēn búcuò.
                   </td>
                 )}
@@ -294,10 +294,10 @@ export default function Page() {
               <tr>
                 <td>13</td>
                 {showChinese && (
-                  <td className="ztai__zh">丹尼丝：是。他给了我很多帮助。</td>
+                  <td className="ztai__zh text-2xl leading-[1.55]">丹尼丝：是。他给了我很多帮助。</td>
                 )}
                 {showPinyin && (
-                  <td className="ztai__py">
+                  <td className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Dānnísī: Shì. Tā gěi le wǒ hěn duō bāngzhù.
                   </td>
                 )}
@@ -310,10 +310,10 @@ export default function Page() {
               <tr>
                 <td>14</td>
                 {showChinese && (
-                  <td className="ztai__zh">王老师：去别的地方了吗？</td>
+                  <td className="ztai__zh text-2xl leading-[1.55]">王老师：去别的地方了吗？</td>
                 )}
                 {showPinyin && (
-                  <td className="ztai__py">
+                  <td className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Wáng lǎoshī: Qù bié de dìfang le ma?
                   </td>
                 )}
@@ -326,12 +326,12 @@ export default function Page() {
               <tr>
                 <td>15</td>
                 {showChinese && (
-                  <td className="ztai__zh">
+                  <td className="ztai__zh text-2xl leading-[1.55]">
                     丹尼丝：去了。我们先在香港玩儿了三天，又去了深圳，是从深圳过来的。
                   </td>
                 )}
                 {showPinyin && (
-                  <td className="ztai__py">
+                  <td className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Dānnísī: Qù le. Wǒmen xiān zài Xiānggǎng wánr le sān tiān,
                     yòu qù le Shēnzhèn, shì cóng Shēnzhèn guòlái de.
                   </td>
@@ -347,10 +347,10 @@ export default function Page() {
               <tr>
                 <td>16</td>
                 {showChinese && (
-                  <td className="ztai__zh">王老师：坐飞机来的吗？</td>
+                  <td className="ztai__zh text-2xl leading-[1.55]">王老师：坐飞机来的吗？</td>
                 )}
                 {showPinyin && (
-                  <td className="ztai__py">
+                  <td className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Wáng lǎoshī: Zuò fēijī lái de ma?
                   </td>
                 )}
@@ -363,12 +363,12 @@ export default function Page() {
               <tr>
                 <td>17</td>
                 {showChinese && (
-                  <td className="ztai__zh">
+                  <td className="ztai__zh text-2xl leading-[1.55]">
                     丹尼丝：不是，坐高铁来的。旅游团的人都想坐坐中国的高铁，看看铁路两边的风光。
                   </td>
                 )}
                 {showPinyin && (
-                  <td className="ztai__py">
+                  <td className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Dānnísī: Bú shì, zuò gāotiě lái de. Lǚyóutuán de rén dōu
                     xiǎng zuò zuo Zhōngguó de gāotiě, kànkan tiělù liǎngbiān de
                     fēngguāng.
@@ -385,10 +385,10 @@ export default function Page() {
               <tr>
                 <td>18</td>
                 {showChinese && (
-                  <td className="ztai__zh">王老师：什么时候回去？</td>
+                  <td className="ztai__zh text-2xl leading-[1.55]">王老师：什么时候回去？</td>
                 )}
                 {showPinyin && (
-                  <td className="ztai__py">
+                  <td className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Wáng lǎoshī: Shénme shíhou huíqù?
                   </td>
                 )}
@@ -399,12 +399,12 @@ export default function Page() {
               <tr>
                 <td>19</td>
                 {showChinese && (
-                  <td className="ztai__zh">
+                  <td className="ztai__zh text-2xl leading-[1.55]">
                     丹尼丝：旅游团后天就回去了。我跟老板商量好了，晚回去几天，我要到孔子的故乡去一趟。今天下午是自由活动时间，所以来看看老师。
                   </td>
                 )}
                 {showPinyin && (
-                  <td className="ztai__py">
+                  <td className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Dānnísī: Lǚyóutuán hòutiān jiù huíqù le. Wǒ gēn lǎobǎn
                     shāngliang hǎo le, wǎn huíqù jǐ tiān, wǒ yào dào Kǒngzǐ de
                     gùxiāng qù yí tàng. Jīntiān xiàwǔ shì zìyóu huódòng shíjiān,
@@ -423,10 +423,10 @@ export default function Page() {
               <tr>
                 <td>20</td>
                 {showChinese && (
-                  <td className="ztai__zh">王老师：在这儿吃了晚饭再走吧。</td>
+                  <td className="ztai__zh text-2xl leading-[1.55]">王老师：在这儿吃了晚饭再走吧。</td>
                 )}
                 {showPinyin && (
-                  <td className="ztai__py">
+                  <td className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Wáng lǎoshī: Zài zhèr chī le wǎnfàn zài zǒu ba.
                   </td>
                 )}
@@ -445,7 +445,7 @@ export default function Page() {
                       Number(showPinyin) +
                       Number(showVi)
                     }
-                    className="ztai__zh text-rose-800"
+                    className="ztai__zh text-2xl leading-[1.55] text-rose-800"
                   >
                     （二）你的汉语是在哪儿学的
                   </td>
@@ -454,12 +454,12 @@ export default function Page() {
               <tr>
                 <td>21</td>
                 {showChinese && (
-                  <td className="ztai__zh">
+                  <td className="ztai__zh text-2xl leading-[1.55]">
                     田芳：麦克，你的汉语是在哪儿学的？
                   </td>
                 )}
                 {showPinyin && (
-                  <td className="ztai__py">
+                  <td className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Tián Fāng: Màikè, nǐ de Hànyǔ shì zài nǎr xué de?
                   </td>
                 )}
@@ -472,20 +472,20 @@ export default function Page() {
               <tr>
                 <td>22</td>
                 {showChinese && (
-                  <td className="ztai__zh">麦克：在美国学的。</td>
+                  <td className="ztai__zh text-2xl leading-[1.55]">麦克：在美国学的。</td>
                 )}
                 {showPinyin && (
-                  <td className="ztai__py">Màikè: Zài Měiguó xué de.</td>
+                  <td className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">Màikè: Zài Měiguó xué de.</td>
                 )}
                 {showVi && <td className="ztai__vi">Mike: Tôi học ở Mỹ.</td>}
               </tr>
               <tr>
                 <td>23</td>
                 {showChinese && (
-                  <td className="ztai__zh">田芳：学了多长时间了？</td>
+                  <td className="ztai__zh text-2xl leading-[1.55]">田芳：学了多长时间了？</td>
                 )}
                 {showPinyin && (
-                  <td className="ztai__py">
+                  <td className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Tián Fāng: Xué le duō cháng shíjiān le?
                   </td>
                 )}
@@ -498,12 +498,12 @@ export default function Page() {
               <tr>
                 <td>24</td>
                 {showChinese && (
-                  <td className="ztai__zh">
+                  <td className="ztai__zh text-2xl leading-[1.55]">
                     麦克：我是从去年暑假才开始学习汉语的，学了一年多了。
                   </td>
                 )}
                 {showPinyin && (
-                  <td className="ztai__py">
+                  <td className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Màikè: Wǒ shì cóng qùnián shǔjià cái kāishǐ xuéxí Hànyǔ de,
                     xué le yì nián duō le.
                   </td>
@@ -518,10 +518,10 @@ export default function Page() {
               <tr>
                 <td>25</td>
                 {showChinese && (
-                  <td className="ztai__zh">田芳：是在大学学的吗？</td>
+                  <td className="ztai__zh text-2xl leading-[1.55]">田芳：是在大学学的吗？</td>
                 )}
                 {showPinyin && (
-                  <td className="ztai__py">
+                  <td className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Tián Fāng: Shì zài dàxué xué de ma?
                   </td>
                 )}
@@ -534,12 +534,12 @@ export default function Page() {
               <tr>
                 <td>26</td>
                 {showChinese && (
-                  <td className="ztai__zh">
+                  <td className="ztai__zh text-2xl leading-[1.55]">
                     麦克：不是。是在一个语言学校学的。
                   </td>
                 )}
                 {showPinyin && (
-                  <td className="ztai__py">
+                  <td className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Màikè: Bú shì. Shì zài yí ge yǔyán xuéxiào xué de.
                   </td>
                 )}
@@ -552,10 +552,10 @@ export default function Page() {
               <tr>
                 <td>27</td>
                 {showChinese && (
-                  <td className="ztai__zh">田芳：是中国老师教的吗？</td>
+                  <td className="ztai__zh text-2xl leading-[1.55]">田芳：是中国老师教的吗？</td>
                 )}
                 {showPinyin && (
-                  <td className="ztai__py">
+                  <td className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Tián Fāng: Shì Zhōngguó lǎoshī jiāo de ma?
                   </td>
                 )}
@@ -568,12 +568,12 @@ export default function Page() {
               <tr>
                 <td>28</td>
                 {showChinese && (
-                  <td className="ztai__zh">
+                  <td className="ztai__zh text-2xl leading-[1.55]">
                     麦克：有中国老师，也有美国老师。你觉得我的汉语说得怎么样？
                   </td>
                 )}
                 {showPinyin && (
-                  <td className="ztai__py">
+                  <td className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Màikè: Yǒu Zhōngguó lǎoshī, yě yǒu Měiguó lǎoshī. Nǐ juéde
                     wǒ de Hànyǔ shuō de zěnmeyàng?
                   </td>
@@ -588,12 +588,12 @@ export default function Page() {
               <tr>
                 <td>29</td>
                 {showChinese && (
-                  <td className="ztai__zh">
+                  <td className="ztai__zh text-2xl leading-[1.55]">
                     田芳：马马虎虎。中国人一听就知道你是老外。
                   </td>
                 )}
                 {showPinyin && (
-                  <td className="ztai__py">
+                  <td className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Tián Fāng: Mǎmǎhūhū. Zhōngguó rén yì tīng jiù zhīdào nǐ shì
                     lǎowài.
                   </td>
@@ -608,12 +608,12 @@ export default function Page() {
               <tr>
                 <td>30</td>
                 {showChinese && (
-                  <td className="ztai__zh">
+                  <td className="ztai__zh text-2xl leading-[1.55]">
                     麦克：一看也知道我是老外呀，高高的鼻子，黄黄的头发，蓝蓝的眼睛。我知道，我的发音和声调都不太好。
                   </td>
                 )}
                 {showPinyin && (
-                  <td className="ztai__py">
+                  <td className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Màikè: Yí kàn yě zhīdào wǒ shì lǎowài ya, gāogāo de bízi,
                     huánghuáng de tóufa, lánlán de yǎnjing. Wǒ zhīdào, wǒ de
                     fāyīn hé shēngdiào dōu bú tài hǎo.
@@ -630,12 +630,12 @@ export default function Page() {
               <tr>
                 <td>31</td>
                 {showChinese && (
-                  <td className="ztai__zh">
+                  <td className="ztai__zh text-2xl leading-[1.55]">
                     田芳：我们互相帮助好不好？我帮你练汉语，希望你帮我练练英语。
                   </td>
                 )}
                 {showPinyin && (
-                  <td className="ztai__py">
+                  <td className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Tián Fāng: Wǒmen hùxiāng bāngzhù hǎo bu hǎo? Wǒ bāng nǐ liàn
                     Hànyǔ, xīwàng nǐ bāng wǒ liànlian Yīngyǔ.
                   </td>
@@ -650,12 +650,12 @@ export default function Page() {
               <tr>
                 <td>32</td>
                 {showChinese && (
-                  <td className="ztai__zh">
+                  <td className="ztai__zh text-2xl leading-[1.55]">
                     麦克：好啊。不过，我的英语也马马虎虎。
                   </td>
                 )}
                 {showPinyin && (
-                  <td className="ztai__py">
+                  <td className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Màikè: Hǎo a. Búguò, wǒ de Yīngyǔ yě mǎmǎhūhū.
                   </td>
                 )}
@@ -669,10 +669,10 @@ export default function Page() {
               <tr>
                 <td>33</td>
                 {showChinese && (
-                  <td className="ztai__zh">田芳：什么？你不是美国人吗？</td>
+                  <td className="ztai__zh text-2xl leading-[1.55]">田芳：什么？你不是美国人吗？</td>
                 )}
                 {showPinyin && (
-                  <td className="ztai__py">
+                  <td className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Tián Fāng: Shénme? Nǐ bú shì Měiguó rén ma?
                   </td>
                 )}
@@ -685,12 +685,12 @@ export default function Page() {
               <tr>
                 <td>34</td>
                 {showChinese && (
-                  <td className="ztai__zh">
+                  <td className="ztai__zh text-2xl leading-[1.55]">
                     麦克：我爸爸是美国人，妈妈是意大利人，我十岁才到的美国。可以当你的老师吗？
                   </td>
                 )}
                 {showPinyin && (
-                  <td className="ztai__py">
+                  <td className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Màikè: Wǒ bàba shì Měiguó rén, māma shì Yìdàlì rén, wǒ shí
                     suì cái dào de Měiguó. Kěyǐ dāng nǐ de lǎoshī ma?
                   </td>
@@ -705,10 +705,10 @@ export default function Page() {
               <tr>
                 <td>35</td>
                 {showChinese && (
-                  <td className="ztai__zh">田芳：马马虎虎吧。</td>
+                  <td className="ztai__zh text-2xl leading-[1.55]">田芳：马马虎虎吧。</td>
                 )}
                 {showPinyin && (
-                  <td className="ztai__py">Tián Fāng: Mǎmǎhūhū ba.</td>
+                  <td className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">Tián Fāng: Mǎmǎhūhū ba.</td>
                 )}
                 {showVi && (
                   <td className="ztai__vi">Điền Phương: Cũng tạm vậy.</td>
@@ -717,12 +717,12 @@ export default function Page() {
               <tr>
                 <td>36</td>
                 {showChinese && (
-                  <td className="ztai__zh">
+                  <td className="ztai__zh text-2xl leading-[1.55]">
                     麦克：不，不能马马虎虎，我们都要认真学习。
                   </td>
                 )}
                 {showPinyin && (
-                  <td className="ztai__py">
+                  <td className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Màikè: Bù, bù néng mǎmǎhūhū, wǒmen dōu yào rènzhēn xuéxí.
                   </td>
                 )}
@@ -739,12 +739,12 @@ export default function Page() {
               <tr>
                 <td>1</td>
                 {showChinese && (
-                  <td className="ztai__zh">
+                  <td className="ztai__zh text-2xl leading-[1.55]">
                     我是前天到的北京，两年前曾经在中国学过汉语，是王老师的学生。
                   </td>
                 )}
                 {showPinyin && (
-                  <td className="ztai__py">
+                  <td className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Wǒ shì qiántiān dào de Běijīng, liǎng nián qián céngjīng zài
                     Zhōngguó xué guo Hànyǔ, shì Wáng lǎoshī de xuésheng.
                   </td>
@@ -759,10 +759,10 @@ export default function Page() {
               <tr>
                 <td>2</td>
                 {showChinese && (
-                  <td className="ztai__zh">这次我不是来学习的，是来旅行的。</td>
+                  <td className="ztai__zh text-2xl leading-[1.55]">这次我不是来学习的，是来旅行的。</td>
                 )}
                 {showPinyin && (
-                  <td className="ztai__py">
+                  <td className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Zhè cì wǒ bú shì lái xuéxí de, shì lái lǚxíng de.
                   </td>
                 )}
@@ -775,12 +775,12 @@ export default function Page() {
               <tr>
                 <td>3</td>
                 {showChinese && (
-                  <td className="ztai__zh">
+                  <td className="ztai__zh text-2xl leading-[1.55]">
                     我不是一个人来的，是跟旅行团一起来的。
                   </td>
                 )}
                 {showPinyin && (
-                  <td className="ztai__py">
+                  <td className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Wǒ bú shì yí ge rén lái de, shì gēn lǚxíngtuán yìqǐ lái de.
                   </td>
                 )}
@@ -793,10 +793,10 @@ export default function Page() {
               <tr>
                 <td>4</td>
                 {showChinese && (
-                  <td className="ztai__zh">我是旅行团的导游和翻译。</td>
+                  <td className="ztai__zh text-2xl leading-[1.55]">我是旅行团的导游和翻译。</td>
                 )}
                 {showPinyin && (
-                  <td className="ztai__py">
+                  <td className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Wǒ shì lǚxíngtuán de dǎoyóu hé fānyì.
                   </td>
                 )}
@@ -809,12 +809,12 @@ export default function Page() {
               <tr>
                 <td>5</td>
                 {showChinese && (
-                  <td className="ztai__zh">
+                  <td className="ztai__zh text-2xl leading-[1.55]">
                     我现在还没有工作，在读研究生，研究的课题是《孔子与中国》，业余时间或寒暑假到一个旅行社去打工。
                   </td>
                 )}
                 {showPinyin && (
-                  <td className="ztai__py">
+                  <td className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Wǒ xiànzài hái méiyǒu gōngzuò, zài dú yánjiūshēng, yánjiū de
                     kètí shì “Kǒngzǐ yǔ Zhōngguó”, yèyú shíjiān huò hánshǔjià
                     dào yí ge lǚxíngshè qù dǎgōng.
@@ -832,12 +832,12 @@ export default function Page() {
               <tr>
                 <td>6</td>
                 {showChinese && (
-                  <td className="ztai__zh">
+                  <td className="ztai__zh text-2xl leading-[1.55]">
                     这次，他们组织了一个旅游团，老板就让我陪团来了。
                   </td>
                 )}
                 {showPinyin && (
-                  <td className="ztai__py">
+                  <td className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Zhè cì, tāmen zǔzhī le yí ge lǚyóutuán, lǎobǎn jiù ràng wǒ
                     péi tuán lái le.
                   </td>
@@ -852,12 +852,12 @@ export default function Page() {
               <tr>
                 <td>7</td>
                 {showChinese && (
-                  <td className="ztai__zh">
+                  <td className="ztai__zh text-2xl leading-[1.55]">
                     他知道我需要经常来中国收集资料，所以，一有来中国的旅游团，就安排我陪团来。
                   </td>
                 )}
                 {showPinyin && (
-                  <td className="ztai__py">
+                  <td className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Tā zhīdào wǒ xūyào jīngcháng lái Zhōngguó shōují zīliào,
                     suǒyǐ, yì yǒu lái Zhōngguó de lǚyóutuán, jiù ānpái wǒ péi
                     tuán lái.
@@ -874,12 +874,12 @@ export default function Page() {
               <tr>
                 <td>8</td>
                 {showChinese && (
-                  <td className="ztai__zh">
+                  <td className="ztai__zh text-2xl leading-[1.55]">
                     我们先到的香港，在香港玩儿了三天，又去了深圳，前天是从深圳坐高铁过来的。
                   </td>
                 )}
                 {showPinyin && (
-                  <td className="ztai__py">
+                  <td className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Wǒmen xiān dào de Xiānggǎng, zài Xiānggǎng wánr le sān tiān,
                     yòu qù le Shēnzhèn, qiántiān shì cóng Shēnzhèn zuò gāotiě
                     guòlái de.
@@ -896,12 +896,12 @@ export default function Page() {
               <tr>
                 <td>9</td>
                 {showChinese && (
-                  <td className="ztai__zh">
+                  <td className="ztai__zh text-2xl leading-[1.55]">
                     原来打算坐飞机，但是旅行团的人都没有坐过中国的高铁，很想坐坐，看看铁路两边的风光。
                   </td>
                 )}
                 {showPinyin && (
-                  <td className="ztai__py">
+                  <td className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Yuánlái dǎsuàn zuò fēijī, dànshì lǚyóutuán de rén dōu méiyǒu
                     zuò guo Zhōngguó de gāotiě, hěn xiǎng zuòzuo, kànkan tiělù
                     liǎngbiān de fēngguāng.
@@ -918,10 +918,10 @@ export default function Page() {
               <tr>
                 <td>10</td>
                 {showChinese && (
-                  <td className="ztai__zh">旅行团后天就回去了。</td>
+                  <td className="ztai__zh text-2xl leading-[1.55]">旅行团后天就回去了。</td>
                 )}
                 {showPinyin && (
-                  <td className="ztai__py">Lǚyóutuán hòutiān jiù huíqù le.</td>
+                  <td className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">Lǚyóutuán hòutiān jiù huíqù le.</td>
                 )}
                 {showVi && (
                   <td className="ztai__vi">Đoàn du lịch ngày kia sẽ trở về.</td>
@@ -930,12 +930,12 @@ export default function Page() {
               <tr>
                 <td>11</td>
                 {showChinese && (
-                  <td className="ztai__zh">
+                  <td className="ztai__zh text-2xl leading-[1.55]">
                     我跟老板说好了，晚回去几天，等送他们上了飞机，我要到孔子的故乡去一趟。
                   </td>
                 )}
                 {showPinyin && (
-                  <td className="ztai__py">
+                  <td className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Wǒ gēn lǎobǎn shuō hǎo le, wǎn huíqù jǐ tiān, děng sòng
                     tāmen shàng le fēijī, wǒ yào dào Kǒngzǐ de gùxiāng qù yí
                     tàng.
@@ -952,12 +952,12 @@ export default function Page() {
               <tr>
                 <td>12</td>
                 {showChinese && (
-                  <td className="ztai__zh">
+                  <td className="ztai__zh text-2xl leading-[1.55]">
                     今天下午是自由活动时间，来看看王老师。
                   </td>
                 )}
                 {showPinyin && (
-                  <td className="ztai__py">
+                  <td className="ztai__py text-slate-500 dark:text-sky-300 leading-[1.45]">
                     Jīntiān xiàwǔ shì zìyóu huódòng shíjiān, lái kànkan Wáng
                     lǎoshī.
                   </td>
@@ -978,7 +978,7 @@ export default function Page() {
           <tbody>
             <tr>
               <td width="283">
-                <p className="ztai__zh">【 số ng&agrave;y +天前 】</p>
+                <p className="ztai__zh text-2xl leading-[1.55]">【 số ng&agrave;y +天前 】</p>
               </td>
               <td width="414">
                 <p>【 số ng&agrave;y + trước 】</p>
@@ -986,7 +986,7 @@ export default function Page() {
             </tr>
             <tr>
               <td width="283">
-                <p className="ztai__zh">三天前</p>
+                <p className="ztai__zh text-2xl leading-[1.55]">三天前</p>
               </td>
               <td width="414">
                 <p>Ba ng&agrave;y trước</p>
@@ -994,7 +994,7 @@ export default function Page() {
             </tr>
             <tr>
               <td width="283">
-                <p className="ztai__zh">前天</p>
+                <p className="ztai__zh text-2xl leading-[1.55]">前天</p>
               </td>
               <td width="414">
                 <p>H&ocirc;m kia</p>
@@ -1002,7 +1002,7 @@ export default function Page() {
             </tr>
             <tr>
               <td width="283">
-                <p className="ztai__zh">昨天</p>
+                <p className="ztai__zh text-2xl leading-[1.55]">昨天</p>
               </td>
               <td width="414">
                 <p>H&ocirc;m qua</p>
@@ -1010,7 +1010,7 @@ export default function Page() {
             </tr>
             <tr>
               <td width="283">
-                <p className="ztai__zh">今天</p>
+                <p className="ztai__zh text-2xl leading-[1.55]">今天</p>
               </td>
               <td width="414">
                 <p>H&ocirc;m nay</p>
@@ -1018,7 +1018,7 @@ export default function Page() {
             </tr>
             <tr>
               <td width="283">
-                <p className="ztai__zh">明天</p>
+                <p className="ztai__zh text-2xl leading-[1.55]">明天</p>
               </td>
               <td width="414">
                 <p>Ng&agrave;y mai</p>
@@ -1026,7 +1026,7 @@ export default function Page() {
             </tr>
             <tr>
               <td width="283">
-                <p className="ztai__zh">后天</p>
+                <p className="ztai__zh text-2xl leading-[1.55]">后天</p>
               </td>
               <td width="414">
                 <p>Ng&agrave;y kia, ng&agrave;y mốt</p>
@@ -1034,7 +1034,7 @@ export default function Page() {
             </tr>
             <tr>
               <td width="283">
-                <p className="ztai__zh">大后天</p>
+                <p className="ztai__zh text-2xl leading-[1.55]">大后天</p>
               </td>
               <td width="414">
                 <p>ng&agrave;y k&igrave;a; ba ng&agrave;y sau</p>
@@ -1042,7 +1042,7 @@ export default function Page() {
             </tr>
             <tr>
               <td width="283">
-                <p className="ztai__zh">四后天</p>
+                <p className="ztai__zh text-2xl leading-[1.55]">四后天</p>
               </td>
               <td width="414">
                 <p>bốn ng&agrave;y sau</p>
@@ -1050,7 +1050,7 @@ export default function Page() {
             </tr>
             <tr>
               <td width="283">
-                <p className="ztai__zh">【 số ng&agrave;y +后天 】</p>
+                <p className="ztai__zh text-2xl leading-[1.55]">【 số ng&agrave;y +后天 】</p>
               </td>
               <td width="414">
                 <p>【 số ng&agrave;y + sau 】</p>
@@ -1068,7 +1068,7 @@ export default function Page() {
                 <p>dǎoy&oacute;u</p>
               </td>
               <td>
-                <p className="ztai__zh">导游</p>
+                <p className="ztai__zh text-2xl leading-[1.55]">导游</p>
               </td>
               <td>
                 <p>hướng dẫn vi&ecirc;n du lịch</p>
@@ -1079,7 +1079,7 @@ export default function Page() {
                 <p>d&agrave;oli&uacute;</p>
               </td>
               <td>
-                <p className="ztai__zh">倒流</p>
+                <p className="ztai__zh text-2xl leading-[1.55]">倒流</p>
               </td>
               <td>
                 <p>chảy ngược, tr&agrave;o ngược</p>
@@ -1090,7 +1090,7 @@ export default function Page() {
                 <p>xūy&agrave;o</p>
               </td>
               <td>
-                <p className="ztai__zh">需要</p>
+                <p className="ztai__zh text-2xl leading-[1.55]">需要</p>
               </td>
               <td>
                 <p>cần, cần phải</p>
@@ -1101,7 +1101,7 @@ export default function Page() {
                 <p>xīy&agrave;o</p>
               </td>
               <td>
-                <p className="ztai__zh">西药</p>
+                <p className="ztai__zh text-2xl leading-[1.55]">西药</p>
               </td>
               <td>
                 <p>thuốc t&acirc;y</p>
@@ -1112,7 +1112,7 @@ export default function Page() {
                 <p>l&igrave;y&ograve;ng</p>
               </td>
               <td>
-                <p className="ztai__zh">利用</p>
+                <p className="ztai__zh text-2xl leading-[1.55]">利用</p>
               </td>
               <td>
                 <p>lợi dụng, sử dụng, tận dụng</p>
@@ -1123,7 +1123,7 @@ export default function Page() {
                 <p>lǐy&oacute;u</p>
               </td>
               <td>
-                <p className="ztai__zh">理由</p>
+                <p className="ztai__zh text-2xl leading-[1.55]">理由</p>
               </td>
               <td>
                 <p>l&yacute; do</p>
@@ -1134,7 +1134,7 @@ export default function Page() {
                 <p>lǎobǎn</p>
               </td>
               <td>
-                <p className="ztai__zh">老板</p>
+                <p className="ztai__zh text-2xl leading-[1.55]">老板</p>
               </td>
               <td>
                 <p>&ocirc;ng chủ, b&agrave; chủ, chủ tiệm</p>
@@ -1145,7 +1145,7 @@ export default function Page() {
                 <p>rǎolu&agrave;n</p>
               </td>
               <td>
-                <p className="ztai__zh">扰乱</p>
+                <p className="ztai__zh text-2xl leading-[1.55]">扰乱</p>
               </td>
               <td>
                 <p>quấy rối, l&agrave;m rối loạn</p>
@@ -1156,7 +1156,7 @@ export default function Page() {
                 <p>y&aacute;njiū</p>
               </td>
               <td>
-                <p className="ztai__zh">研究</p>
+                <p className="ztai__zh text-2xl leading-[1.55]">研究</p>
               </td>
               <td>
                 <p>nghi&ecirc;n cứu</p>
@@ -1167,7 +1167,7 @@ export default function Page() {
                 <p>yān jiǔ</p>
               </td>
               <td>
-                <p className="ztai__zh">烟酒</p>
+                <p className="ztai__zh text-2xl leading-[1.55]">烟酒</p>
               </td>
               <td>
                 <p>thuốc l&aacute; v&agrave; rượu</p>
@@ -1178,7 +1178,7 @@ export default function Page() {
                 <p>z&igrave;y&oacute;u</p>
               </td>
               <td>
-                <p className="ztai__zh">自由</p>
+                <p className="ztai__zh text-2xl leading-[1.55]">自由</p>
               </td>
               <td>
                 <p>tự do</p>
@@ -1189,7 +1189,7 @@ export default function Page() {
                 <p>j&iacute; y&oacute;u</p>
               </td>
               <td>
-                <p className="ztai__zh">集邮</p>
+                <p className="ztai__zh text-2xl leading-[1.55]">集邮</p>
               </td>
               <td>
                 <p>sưu tập tem</p>

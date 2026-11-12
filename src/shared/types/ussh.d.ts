@@ -13,18 +13,19 @@ interface CustomIframeProps {
 }
 
 // vocal?
-interface VocabExample {
+interface Example {
   zh: string;
   py: string;
   vi: string;
-  added?: boolean;
+  added?: boolean; // true = hiện nhãn "thêm" cạnh ví dụ
 }
 
-interface VocabWord {
+interface Word {
   hanzi: string;
   pinyin: string;
-  pos: string; // loại từ
-  meanings: string[]; // nghĩa tiếng Việt
+  pos: string; // loại từ; nếu nhiều loại thì cách nhau bằng " / " (loại đầu tiên dùng để nhóm)
+  meanings: string[];
+  lesson?: number | number[]; // bài học (nếu có)
   usage?: string; // giải thích cách dùng
-  examples: VocabExample[];
+  examples: Example[];
 }

@@ -2,7 +2,7 @@
 // Thêm từ mới: copy một khối { ... } bên dưới, dán vào cuối mảng `vocab`.
 // `added: true` = ví dụ do mình thêm (không có trong sách) → hiện nhãn "thêm" trong box.
 
-export const vocab: VocabWord[] = [
+export const vocab: Word[] = [
   {
     hanzi: "接",
     pinyin: "jiē",
@@ -213,6 +213,14 @@ export const vocab: VocabWord[] = [
         added: true,
       },
     ],
+  },
+  {
+    hanzi: "掉",
+    pinyin: "diào",
+    pos: "động từ",
+    meanings: ["rơi"],
+    usage: "摔(động từ)+坏了(bổ ngữ kết quả). VD: 眼镜儿也掉在地上摔坏了。",
+    examples: [],
   },
   {
     hanzi: "摔",
@@ -487,6 +495,42 @@ export const vocab: VocabWord[] = [
     ],
   },
   {
+    hanzi: "打的",
+    pinyin: "dǎ dī",
+    pos: "động từ",
+    meanings: ["đi taxi"],
+    usage: "",
+    examples: [
+      {
+        zh: "太晚了，我们打的回家吧。",
+        py: "Tài wǎn le, wǒmen dǎdī huí jiā ba.",
+        vi: "Muộn quá rồi, chúng ta đi taxi về nhà đi.",
+        added: true,
+      },
+    ],
+  },
+  {
+    hanzi: "插头",
+    pinyin: "chātóu",
+    pos: "danh từ",
+    meanings: ["trang điểm, ăn diện", "hóa trang (thành…)"],
+    usage: "phích cắm",
+    examples: [
+      {
+        zh: "你把插头插进去了没有?",
+        py: "Nǐ bǎ chātóu chā jìnqu le méiyǒu?",
+        vi: "...",
+        added: true,
+      },
+      {
+        zh: "没有。我没有把插头插进去。",
+        py: "Méiyǒu. Wǒ méiyǒu bǎ chātóu chā jìnqu.",
+        vi: "...",
+        added: true,
+      },
+    ],
+  },
+  {
     hanzi: "擦",
     pinyin: "cā",
     pos: "động từ",
@@ -533,6 +577,56 @@ export const vocab: VocabWord[] = [
         py: "Lǎorén mànmàn de fúzhe fúshou xià lóu.",
         vi: "Cụ già vịn tay vịn, chậm rãi đi xuống lầu.",
         added: true,
+      },
+    ],
+  },
+  {
+    hanzi: "坚持",
+    pinyin: "jiānchí",
+    pos: "động từ",
+    meanings: ["kiên trì; cố gắng"],
+    usage: "",
+    examples: [],
+  },
+  {
+    hanzi: "揉",
+    pinyin: "róu",
+    pos: "động từ",
+    meanings: ["vo", "vò"],
+    usage: "",
+    examples: [
+      {
+        zh: "从0到9，每张纸上各写一个数字，揉成纸团，抓到哪个是哪个吧。",
+        py: "Cóng líng dào jiǔ, měi zhāng zhǐ shang gè xiě yí ge shùzì, róuchéng zhǐtuán, zhuādào nǎge shì nǎge ba.",
+        vi: "Từ 0 đến 9, mỗi tờ giấy viết một con số, vo thành viên, bốc trúng số nào thì là số đó.",
+      },
+    ],
+  },
+  {
+    hanzi: "摇",
+    pinyin: "yáo",
+    pos: "động từ",
+    meanings: ["rung", "lắc", "đong đưa"],
+    usage: "",
+    examples: [
+      {
+        zh: "李四摇摇头说：“3就是散，就是离婚，多不吉利呀！你想想2可以不可以？”",
+        py: "Lǐ Sì yáoyao tóu shuō: “Sān jiùshì sàn, jiùshì líhūn, duō bù jílì ya! Nǐ xiǎngxiang èr kěyǐ bù kěyǐ?”",
+        vi: "Lý Tứ lắc đầu nói: “3 là tan, là ly hôn, xui xẻo quá! Em nghĩ xem 2 được không?”",
+      },
+    ],
+  },
+  {
+    hanzi: "抓",
+    pinyin: "zhuā",
+    pos: "động từ",
+    meanings: ["bốc, chộp"],
+    usage: "",
+    examples: [
+      {
+        zh: "抓到哪个是哪个",
+        py: "zhuādào nǎge shì nǎge ba”",
+        vi: "bốc trúng số nào thì lấy số đó”",
       },
     ],
   },

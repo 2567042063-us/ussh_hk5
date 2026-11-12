@@ -5,18 +5,28 @@ import { classNameActive } from "@shared/constant";
 
 interface LayoutGrbtProps {
   children: React.ReactNode;
+  menuTitle?: string;
   menuGrbt: IMenuGrbt;
   filename?: string;
 }
 
 export default function LayoutGrbt({
   children,
+  menuTitle,
   menuGrbt,
   filename,
 }: LayoutGrbtProps) {
   return (
     <div className="container mx-auto flex flex-1 flex-col gap-3 md:flex-row">
       <div className="md:w-50 flex flex-col gap-1.5 rounded-sm md:shrink-0">
+        <div
+          className={`flex justify-between gap-2 border-b border-dashed border-cyan-800/20 py-1 last:border-0 dark:border-slate-700`}
+        >
+          <span className="text-sky-600 dark:text-sky-300">
+            {" "}
+            ⭑.ᐟ {menuTitle}
+          </span>
+        </div>
         {menuGrbt.map((menu) => (
           <div
             key={menu.id}
