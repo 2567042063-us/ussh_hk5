@@ -1,3 +1,5 @@
+export const bodyPartsVocabularyId = "chude-co-the";
+
 const vocabLoaders = new Map<string, () => Promise<VocabularySet>>([
   [
     "vocabQ3",
@@ -49,6 +51,11 @@ export const vocabMenu: IMenuGrbt = [
     id: "vocabShou",
     title: "Từ vựng có bộ 扌",
     href: "/hk5/tuvung/vocabShou",
+  },
+  {
+    id: bodyPartsVocabularyId,
+    title: "Chủ đề cơ thể",
+    href: `/hk5/tuvung/${bodyPartsVocabularyId}`,
   },
   {
     id: "chengyu",
