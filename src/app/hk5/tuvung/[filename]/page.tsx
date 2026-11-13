@@ -2,9 +2,9 @@ import { notFound } from "next/navigation";
 
 import { getVocabById, vocabMenu } from "@shared/data/tuvung/vocab-loader";
 
-import Footer from "../../../common/Footer";
-import Header from "../../../common/Header";
-import LayoutGrbt from "../../../common/LayoutGrbt";
+import Footer from "@shared/components/common/Footer";
+import Header from "@shared/components/common/Header";
+import LayoutGrbt from "@shared/components/common/LayoutGrbt";
 import VocabGrid from "../VocabGrid";
 
 export async function generateMetadata({

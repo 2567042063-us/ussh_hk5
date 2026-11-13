@@ -1,7 +1,7 @@
-import Footer from "../../common/Footer";
-import Header from "../../common/Header";
-import LayoutGrbt from "../../common/LayoutGrbt";
-import Dashboard from "./Dashboard";
+import Footer from "@shared/components/common/Footer";
+import Header from "@shared/components/common/Header";
+import LayoutGrbt from "@shared/components/common/LayoutGrbt";
+import LayoutGrbtDashboard from "@shared/components/common/LayoutGrbtDashboard";
 
 export function generateMetadata() {
   return {
@@ -28,7 +28,7 @@ export default function Page() {
       <Header title="hk5" canonical="https://ussh-hk5-neon.vercel.app/hk5" />
 
       <LayoutGrbt menuGrbt={nguphapMenu} menuTitle="NGỮ PHÁP">
-        <Dashboard />
+        <LayoutGrbtDashboard />
       </LayoutGrbt>
       <Footer />
     </div>

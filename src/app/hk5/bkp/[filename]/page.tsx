@@ -7,8 +7,8 @@ import clsx from "clsx";
 import HtmlRenderer from "@shared/components/HtmlRenderer";
 import { classNameActive } from "@shared/constant";
 
-import Footer from "../../../common/Footer";
-import Header from "../../../common/Header";
+import Footer from "@shared/components/common/Footer";
+import Header from "@shared/components/common/Header";
 
 export async function generateMetadata({
   params,

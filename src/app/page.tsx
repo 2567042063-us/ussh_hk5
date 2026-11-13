@@ -1,6 +1,6 @@
-import Footer from "./common/Footer";
-import Header from "./common/Header";
-import HeroBanner from "./common/hero-banner";
+import Footer from "@shared/components/common/Footer";
+import Header from "@shared/components/common/Header";
+import HeroBanner from "@shared/components/common/HeroBanner";
 
 export default function Home() {
   return (

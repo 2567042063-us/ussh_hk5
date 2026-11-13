@@ -1,4 +1,4 @@
-// vocabTypes.ts — kiểu dữ liệu + hàm viết tắt dùng chung cho mọi bộ từ vựng.
+// vocabTypes.ts — kiểu dữ liệu + hàm viết tắt dùng chung cho mọi bộ từ vựng <<chỉ trong data>>.
 
 // Loại từ (dùng làm tên nhóm)
 export const N = "danh từ";
@@ -16,7 +16,8 @@ export const O = "từ tượng thanh";
 export const M = "động từ năng nguyện";
 export const X = "cụm từ"; // cụm từ & cấu trúc ngữ pháp
 export const PN = "tên riêng";
-
+export const PRE = "tiền tố";
+export const SUF = "hậu tố";
 // e(...) = một ví dụ
 export const e = (zh: string, py: string, vi: string): Example => ({
   zh,

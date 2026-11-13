@@ -3,8 +3,8 @@ import Link from "next/link";
 
 import BaiTapSapXepCauSBT02 from "@shared/components/baitap/BaiTapSapXepCauSBT02";
 
-import Footer from "../../../common/Footer";
-import Header from "../../../common/Header";
+import Footer from "@shared/components/common/Footer";
+import Header from "@shared/components/common/Header";
 
 export const metadata: Metadata = {
   title: "Sắp xếp câu SBT2",

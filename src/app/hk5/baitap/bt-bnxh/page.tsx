@@ -5,8 +5,8 @@ import { notFound } from "next/navigation";
 
 import HtmlRenderer from "@shared/components/HtmlRenderer";
 
-import Footer from "../../../common/Footer";
-import Header from "../../../common/Header";
+import Footer from "@shared/components/common/Footer";
+import Header from "@shared/components/common/Header";
 
 export const metadata: Metadata = {
   title: "BNXH",

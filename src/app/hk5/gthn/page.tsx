@@ -3,8 +3,8 @@ import path from "path";
 import { Metadata } from "next";
 import Link from "next/link";
 
-import Footer from "../../common/Footer";
-import Header from "../../common/Header";
+import Footer from "@shared/components/common/Footer";
+import Header from "@shared/components/common/Header";
 import NdthiNPDsc3 from "../NdthiNPDsc3";
 
 export const metadata: Metadata = {

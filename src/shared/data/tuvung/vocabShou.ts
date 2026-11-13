@@ -7,10 +7,21 @@ export const vocab: Word[] = [
     hanzi: "接",
     pinyin: "jiē",
     pos: "động từ",
-    meanings: ["nghe, bắt (điện thoại)", "đón (người)", "đỡ, bắt lấy"],
+    meanings: [
+      "nhận, tiếp nhận",
+      "nghe, bắt (điện thoại)",
+      "đón (người)",
+      "đỡ, bắt lấy",
+    ],
+    lesson: 1,
     usage:
       "接电话 = nghe điện thoại. 接 + người = đón ai đó (去机场接朋友). Khi thêm bổ ngữ kết quả 住: 接住 = đỡ/bắt chắc được (接住球). Trái nghĩa với “đón” là 送 (sòng) – tiễn, đưa.",
     examples: [
+      {
+        zh: "我接到了他的电话。",
+        py: "Wǒ jiēdàole tā de diànhuà.",
+        vi: "Tôi nhận được điện thoại của anh ấy.",
+      },
       {
         zh: "电话又响了，你去接吧。",
         py: "Diànhuà yòu xiǎng le, nǐ qù jiē ba.",
@@ -175,14 +186,20 @@ export const vocab: Word[] = [
     pinyin: "ànmó",
     pos: "động từ / danh từ",
     meanings: ["xoa bóp, mát-xa"],
+    lesson: 10,
     usage:
-      "Làm động từ: 给 + người + 按摩 (xoa bóp cho ai), 按摩一下/一会儿. Làm danh từ: 去按摩 (đi mát-xa).",
+      "Chữ 按 có bộ 扌 (ấn, bấm). Làm động từ: 给 + người + 按摩 (xoa bóp cho ai), 按摩一下/一会儿. Làm danh từ: 去按摩 (đi mát-xa).",
     examples: [
       {
         zh: "我肩膀很疼，想去按摩一下。",
         py: "Wǒ jiānbǎng hěn téng, xiǎng qù ànmó yíxià.",
         vi: "Vai tôi rất đau, muốn đi mát-xa một chút.",
         added: true,
+      },
+      {
+        zh: "我肩膀疼，想去按摩。",
+        py: "Wǒ jiānbǎng téng, xiǎng qù ànmó.",
+        vi: "Vai tôi đau, muốn đi mát-xa.",
       },
       {
         zh: "妈妈的腰不舒服，我给她按摩了一会儿。",
@@ -197,9 +214,15 @@ export const vocab: Word[] = [
     pinyin: "mō",
     pos: "động từ",
     meanings: ["sờ, chạm, mò"],
+    lesson: 10,
     usage:
-      "Dùng tay chạm nhẹ. Lặp lại để nói sờ nhẹ/thử: 摸摸, 摸了摸. Hay gặp: 摸一下, 摸不着 (sờ không tới, không nắm bắt được).",
+      "Chữ 摸 có bộ 扌. Dùng tay chạm nhẹ. Lặp lại để nói sờ nhẹ/thử: 摸摸, 摸了摸. Hay gặp: 摸一下, 摸不着 (sờ không tới, không nắm bắt được); trong y học, 摸脉 = bắt mạch.",
     examples: [
+      {
+        zh: "医生摸了摸他的脉。",
+        py: "Yīshēng mōle mō tā de mài.",
+        vi: "Bác sĩ bắt mạch cho anh ấy.",
+      },
       {
         zh: "孩子好奇地摸了摸小狗。",
         py: "Háizi hàoqí de mōle mō xiǎogǒu.",
@@ -207,10 +230,20 @@ export const vocab: Word[] = [
         added: true,
       },
       {
+        zh: "孩子摸了摸小狗的头。",
+        py: "Háizi mōle mō xiǎogǒu de tóu.",
+        vi: "Đứa bé sờ nhẹ lên đầu chú cún.",
+      },
+      {
         zh: "他摸了摸口袋，发现钥匙不见了。",
         py: "Tā mōle mō kǒudai, fāxiàn yàoshi bú jiàn le.",
         vi: "Anh ấy sờ túi, phát hiện chìa khóa biến mất.",
         added: true,
+      },
+      {
+        zh: "别摸，很烫！",
+        py: "Bié mō, hěn tàng!",
+        vi: "Đừng sờ, nóng lắm!",
       },
     ],
   },
@@ -426,10 +459,20 @@ export const vocab: Word[] = [
     hanzi: "拉",
     pinyin: "lā",
     pos: "động từ",
-    meanings: ["kéo", "kéo (đàn vĩ cầm…)", "đi ngoài (拉肚子)"],
+    meanings: [
+      "kéo",
+      "kéo (đàn vĩ cầm…)",
+      "đi ngoài (đại tiện, thường dùng trong 拉肚子)",
+    ],
+    lesson: 2,
     usage:
-      "拉 kéo về phía mình, trái nghĩa 推 (tuī, đẩy) – trên cửa thường ghi 推/拉. 拉小提琴 = kéo vĩ cầm; 拉肚子 = bị tiêu chảy; 拉上 = kéo lại (拉上窗帘).",
+      "Chữ 拉 có bộ 扌. 拉 kéo về phía mình, trái nghĩa 推 (tuī, đẩy) – trên cửa thường ghi 推/拉. 拉小提琴 = kéo vĩ cầm; 拉肚子 = bị tiêu chảy; 拉上 = kéo lại (拉上窗帘).",
     examples: [
+      {
+        zh: "他昨晚拉了好几次。",
+        py: "Tā zuó wǎn lāle hǎo jǐ cì.",
+        vi: "Tối qua anh ấy đi ngoài mấy lần.",
+      },
       {
         zh: "他拉着我的手往前走。",
         py: "Tā lāzhe wǒ de shǒu wǎng qián zǒu.",
@@ -447,6 +490,11 @@ export const vocab: Word[] = [
         py: "Tā huì lā xiǎotíqín.",
         vi: "Anh ấy biết kéo vĩ cầm.",
         added: true,
+      },
+      {
+        zh: "请把门拉开。",
+        py: "Qǐng bǎ mén lākāi.",
+        vi: "Làm ơn kéo cửa ra.",
       },
     ],
   },
@@ -627,6 +675,376 @@ export const vocab: Word[] = [
         zh: "抓到哪个是哪个",
         py: "zhuādào nǎge shì nǎge ba”",
         vi: "bốc trúng số nào thì lấy số đó”",
+      },
+    ],
+  },
+  {
+    hanzi: "担心",
+    pinyin: "dān xīn",
+    pos: "động từ",
+    meanings: ["lo lắng"],
+    usage: "",
+    examples: [
+      {
+        zh: "别担心，我没事。",
+        py: "Bié dānxīn, wǒ méi shì.",
+        vi: "Đừng lo, tôi không sao.",
+      },
+    ],
+  },
+  {
+    hanzi: "扶",
+    pinyin: "fú",
+    pos: "động từ",
+    meanings: ["đỡ, vịn"],
+    usage: "",
+    examples: [
+      {
+        zh: "他扶着老人过马路。",
+        py: "Tā fúzhe lǎorén guò mǎlù.",
+        vi: "Anh ấy đỡ cụ già qua đường.",
+      },
+    ],
+  },
+  {
+    hanzi: "排练",
+    pinyin: "páiliàn",
+    pos: "động từ",
+    meanings: ["diễn tập"],
+    usage: "",
+    examples: [
+      {
+        zh: "他们正在排练话剧。",
+        py: "Tāmen zhèngzài páiliàn huàjù.",
+        vi: "Họ đang diễn tập kịch nói.",
+      },
+    ],
+  },
+  {
+    hanzi: "搬",
+    pinyin: "bān",
+    pos: "động từ",
+    meanings: ["dọn, chuyển"],
+    usage: "",
+    examples: [
+      {
+        zh: "请帮我把桌子搬到楼上。",
+        py: "Qǐng bāng wǒ bǎ zhuōzi bān dào lóu shang.",
+        vi: "Làm ơn giúp tôi chuyển cái bàn lên lầu.",
+      },
+    ],
+  },
+  {
+    hanzi: "打(电话)",
+    pinyin: "dǎ(diànhuà)",
+    pos: "động từ",
+    meanings: ["gọi (điện thoại)"],
+    lesson: 1,
+    usage:
+      "Chữ 打 có bộ 扌. 打电话 = gọi điện thoại; 给 + người + 打电话 = gọi cho ai. Hay gặp: 打错了 (gọi nhầm số), 打通 (gọi được). Trái nghĩa với 接电话 (nghe máy).",
+    examples: [
+      {
+        zh: "我给他打了一个电话。",
+        py: "Wǒ gěi tā dǎle yí gè diànhuà.",
+        vi: "Tôi gọi cho anh ấy một cuộc điện thoại.",
+      },
+      {
+        zh: "请给我打电话。",
+        py: "Qǐng gěi wǒ dǎ diànhuà.",
+        vi: "Hãy gọi điện cho tôi nhé.",
+      },
+      {
+        zh: "对不起，我打错了。",
+        py: "Duìbuqǐ, wǒ dǎcuò le.",
+        vi: "Xin lỗi, tôi gọi nhầm số.",
+      },
+    ],
+  },
+  {
+    hanzi: "打工",
+    pinyin: "dǎ gōng",
+    pos: "động từ",
+    meanings: ["làm thêm, đi làm thuê"],
+    lesson: 11,
+    usage:
+      "Chữ 打 có bộ 扌. Là từ ly hợp (打 + 工): 打了一年工, 打过工. Mẫu: 在 + nơi + 打工 (làm thêm ở đâu).",
+    examples: [
+      {
+        zh: "暑假里他在饭店打工。",
+        py: "Shǔjià li tā zài fàndiàn dǎgōng.",
+        vi: "Kỳ nghỉ hè anh ấy làm thêm ở nhà hàng.",
+      },
+      {
+        zh: "他一边上学一边打工。",
+        py: "Tā yìbiān shàngxué yìbiān dǎgōng.",
+        vi: "Anh ấy vừa đi học vừa làm thêm.",
+      },
+    ],
+  },
+  {
+    hanzi: "打开",
+    pinyin: "dǎ kāi",
+    pos: "động từ",
+    meanings: ["mở ra"],
+    lesson: 4,
+    usage:
+      "Chữ 打 có bộ 扌. 打开 = 打 + bổ ngữ kết quả 开: mở sách, cửa, cửa sổ, máy tính… Trái nghĩa: 关上 / 合上 (đóng, gập lại).",
+    examples: [
+      {
+        zh: "请打开书，看第十页。",
+        py: "Qǐng dǎkāi shū, kàn dì shí yè.",
+        vi: "Hãy mở sách ra, xem trang mười.",
+      },
+      {
+        zh: "他打开门，走了进去。",
+        py: "Tā dǎkāi mén, zǒule jìnqu.",
+        vi: "Anh ấy mở cửa rồi đi vào.",
+      },
+    ],
+  },
+  {
+    hanzi: "打鱼",
+    pinyin: "dǎ yú",
+    pos: "cụm từ",
+    meanings: ["đánh cá"],
+    lesson: 5,
+    usage:
+      "Chữ 打 có bộ 扌. Cấu trúc động từ + tân ngữ: 打 + 鱼. Ở đây 打 mang nghĩa “bắt, săn”: 打鱼 (đánh cá), 打猎 (đi săn).",
+    examples: [
+      {
+        zh: "爷爷常常去河边打鱼。",
+        py: "Yéye chángcháng qù hé biān dǎ yú.",
+        vi: "Ông thường ra bờ sông đánh cá.",
+      },
+      {
+        zh: "打鱼要早起。",
+        py: "Dǎ yú yào zǎo qǐ.",
+        vi: "Đi đánh cá phải dậy sớm.",
+      },
+    ],
+  },
+  {
+    hanzi: "打针",
+    pinyin: "dǎ zhēn",
+    pos: "động từ",
+    meanings: ["tiêm, chích"],
+    lesson: 2,
+    usage:
+      "Chữ 打 có bộ 扌. 给 + người + 打针 (tiêm cho ai); 打了一针 (tiêm một mũi). Thường đi với 吃药 (uống thuốc) khi nói về chữa bệnh.",
+    examples: [
+      {
+        zh: "医生给他打了一针。",
+        py: "Yīshēng gěi tā dǎle yì zhēn.",
+        vi: "Bác sĩ tiêm cho anh ấy một mũi.",
+      },
+      {
+        zh: "我最怕打针。",
+        py: "Wǒ zuì pà dǎzhēn.",
+        vi: "Tôi sợ tiêm nhất.",
+      },
+    ],
+  },
+  {
+    hanzi: "护照",
+    pinyin: "hùzhào",
+    pos: "danh từ",
+    meanings: ["hộ chiếu"],
+    lesson: 12,
+    usage:
+      "Chữ 护 có bộ 扌 (hộ = bảo vệ). Hay đi với: 办护照 (làm hộ chiếu), 带护照 (mang hộ chiếu), 护照丢了 (mất hộ chiếu). Cùng nhóm giấy tờ xuất cảnh với 签证 (visa).",
+    examples: [
+      {
+        zh: "出国要带护照。",
+        py: "Chūguó yào dài hùzhào.",
+        vi: "Ra nước ngoài phải mang theo hộ chiếu.",
+      },
+      {
+        zh: "我的护照丢了。",
+        py: "Wǒ de hùzhào diū le.",
+        vi: "Hộ chiếu của tôi bị mất rồi.",
+      },
+      {
+        zh: "办护照需要两张照片。",
+        py: "Bàn hùzhào xūyào liǎng zhāng zhàopiàn.",
+        vi: "Làm hộ chiếu cần hai tấm ảnh.",
+      },
+    ],
+  },
+  {
+    hanzi: "捡",
+    pinyin: "jiǎn",
+    pos: "động từ",
+    meanings: ["nhặt"],
+    lesson: 8,
+    usage:
+      "Chữ 捡 có bộ 扌. 捡 + vật; thêm bổ ngữ: 捡到 (nhặt được), 捡起来 (nhặt lên). Khác 找 (tìm) và 拿 (cầm, lấy).",
+    examples: [
+      {
+        zh: "我在路上捡到一个钱包。",
+        py: "Wǒ zài lù shang jiǎndào yí gè qiánbāo.",
+        vi: "Tôi nhặt được một cái ví trên đường.",
+      },
+      {
+        zh: "请把地上的书捡起来。",
+        py: "Qǐng bǎ dì shang de shū jiǎn qǐlai.",
+        vi: "Làm ơn nhặt cuốn sách dưới đất lên.",
+      },
+      {
+        zh: "他捡了很多树叶。",
+        py: "Tā jiǎnle hěn duō shùyè.",
+        vi: "Anh ấy nhặt rất nhiều lá cây.",
+      },
+    ],
+  },
+  {
+    hanzi: "拉肚子",
+    pinyin: "lā dùzi",
+    pos: "cụm từ",
+    meanings: ["bị tiêu chảy, đau bụng đi ngoài"],
+    lesson: 2,
+    usage:
+      "Chữ 拉 có bộ 扌. Cách nói khẩu ngữ thông dụng của “tiêu chảy”: 拉肚子 / 拉了三次肚子. Nguyên nhân hay đi kèm: 吃坏了东西 (ăn phải đồ hỏng).",
+    examples: [
+      {
+        zh: "他吃坏了东西，拉肚子了。",
+        py: "Tā chīhuàile dōngxi, lā dùzi le.",
+        vi: "Anh ấy ăn phải đồ hỏng nên bị tiêu chảy.",
+      },
+      {
+        zh: "我肚子疼，还拉肚子。",
+        py: "Wǒ dùzi téng, hái lā dùzi.",
+        vi: "Tôi đau bụng, lại còn bị tiêu chảy.",
+      },
+    ],
+  },
+  {
+    hanzi: "捎",
+    pinyin: "shāo",
+    pos: "động từ",
+    meanings: ["nhờ mang hộ, tiện tay mang giúp"],
+    lesson: 9,
+    usage:
+      "Chữ 捎 có bộ 扌. Mẫu: 给/替 + người + 捎 + vật (tiện đường mang hộ ai cái gì); cũng dùng cho lời nhắn: 捎个信 / 捎个口信.",
+    examples: [
+      {
+        zh: "请你给他捎一本书。",
+        py: "Qǐng nǐ gěi tā shāo yì běn shū.",
+        vi: "Nhờ bạn mang giúp anh ấy một cuốn sách.",
+      },
+      {
+        zh: "你去北京的时候，能不能给我捎点儿茶叶？",
+        py: "Nǐ qù Běijīng de shíhou, néng bu néng gěi wǒ shāo diǎnr cháyè?",
+        vi: "Khi bạn đi Bắc Kinh, có thể mang giúp tôi ít trà không?",
+      },
+    ],
+  },
+  {
+    hanzi: "手提包(儿)",
+    pinyin: "shǒutíbāor",
+    pos: "danh từ",
+    meanings: ["túi xách tay"],
+    lesson: 12,
+    usage:
+      "Chữ 提 có bộ 扌 (xách). Cấu tạo: 手 + 提 + 包 = túi để xách bằng tay. Cùng họ với 口袋 (túi quần/áo) và 包(儿) (túi, cặp).",
+    examples: [
+      {
+        zh: "她买了一个新手提包。",
+        py: "Tā mǎile yí gè xīn shǒutíbāo.",
+        vi: "Cô ấy mua một chiếc túi xách tay mới.",
+      },
+      {
+        zh: "我把手提包落在家里了。",
+        py: "Wǒ bǎ shǒutíbāo là zài jiā li le.",
+        vi: "Tôi để quên túi xách ở nhà rồi.",
+      },
+    ],
+  },
+  {
+    hanzi: "挺",
+    pinyin: "tǐng",
+    pos: "phó từ",
+    meanings: ["khá, khá là"],
+    lesson: 5,
+    usage:
+      "Chữ 挺 có bộ 扌. 挺 + tính từ/động từ tâm lý (+ 的): khá …, mức độ mạnh hơn 比较 nhưng nhẹ hơn 非常. Khẩu ngữ: 挺好, 挺冷的, 挺喜欢.",
+    examples: [
+      {
+        zh: "这个菜挺好吃的。",
+        py: "Zhè gè cài tǐng hǎochī de.",
+        vi: "Món này khá ngon đấy.",
+      },
+      {
+        zh: "他的汉语说得挺好。",
+        py: "Tā de Hànyǔ shuō de tǐng hǎo.",
+        vi: "Anh ấy nói tiếng Hán khá tốt.",
+      },
+      {
+        zh: "今天挺冷的。",
+        py: "Jīntiān tǐng lěng de.",
+        vi: "Hôm nay khá lạnh.",
+      },
+    ],
+  },
+  {
+    hanzi: "托福",
+    pinyin: "tuōfú",
+    pos: "danh từ",
+    meanings: ["TOEFL (kỳ thi tiếng Anh)"],
+    lesson: 1,
+    usage:
+      "Chữ 托 có bộ 扌. Là phiên âm của TOEFL, đi với động từ 考: 考托福 (thi TOEFL). Chữ 托 gốc nghĩa “nâng đỡ, nhờ cậy” (托运 gửi hành lý).",
+    examples: [
+      {
+        zh: "他准备考托福。",
+        py: "Tā zhǔnbèi kǎo tuōfú.",
+        vi: "Anh ấy chuẩn bị thi TOEFL.",
+      },
+      {
+        zh: "你考过托福吗？",
+        py: "Nǐ kǎoguo Tuōfú ma?",
+        vi: "Bạn đã từng thi TOEFL chưa?",
+      },
+    ],
+  },
+  {
+    hanzi: "预报",
+    pinyin: "yùbào",
+    pos: "động từ / danh từ",
+    meanings: ["dự báo"],
+    lesson: 6,
+    usage:
+      "Chữ 报 có bộ 扌. Thường dùng nhất trong 天气预报 (dự báo thời tiết); làm động từ: 预报天气, 预报说…. Chữ 报 còn có trong 报名, 报纸.",
+    examples: [
+      {
+        zh: "天气预报说明天有雪。",
+        py: "Tiānqì yùbào shuō míngtiān yǒu xuě.",
+        vi: "Dự báo thời tiết nói ngày mai có tuyết.",
+      },
+      {
+        zh: "你看了天气预报吗？",
+        py: "Nǐ kànle tiānqì yùbào ma?",
+        vi: "Bạn xem dự báo thời tiết chưa?",
+      },
+    ],
+  },
+  {
+    hanzi: "扎针",
+    pinyin: "zhā zhēn",
+    pos: "động từ",
+    meanings: ["châm cứu, châm kim"],
+    lesson: 10,
+    usage:
+      "Chữ 扎 có bộ 扌 (đâm, châm). 扎针 = châm kim (trong đông y), gần nghĩa với 针灸. Chú ý 扎 đọc zhā (châm, đâm) khác zā (buộc, bó).",
+    examples: [
+      {
+        zh: "中医给他扎了几针。",
+        py: "Zhōngyī gěi tā zhāle jǐ zhēn.",
+        vi: "Thầy thuốc đông y châm cho anh ấy mấy mũi.",
+      },
+      {
+        zh: "扎针有点儿疼。",
+        py: "Zhāzhēn yǒudiǎnr téng.",
+        vi: "Châm cứu hơi đau một chút.",
       },
     ],
   },

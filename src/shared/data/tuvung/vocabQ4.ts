@@ -20,7 +20,7 @@ import {
   V,
   w,
   X,
-} from "../../types/vocabTypes";
+} from "@shared/types/vocabTypes";
 
 export const book4: Word[] = [
   // ——— A ———

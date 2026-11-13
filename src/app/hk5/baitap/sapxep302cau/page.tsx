@@ -2,8 +2,8 @@ import Link from "next/link";
 
 import BaiTapSapXepCau from "@shared/components/baitap/BaiTapSapXepCau";
 
-import Footer from "../../../common/Footer";
-import Header from "../../../common/Header";
+import Footer from "@shared/components/common/Footer";
+import Header from "@shared/components/common/Header";
 
 export default function Page() {
   return (

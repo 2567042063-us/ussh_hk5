@@ -8,9 +8,9 @@ import HtmlRenderer from "@shared/components/HtmlRenderer";
 import { classNameActive } from "@shared/constant";
 import { getLessonById, lessonMenu } from "@shared/data/dich/lesson-loader";
 
-import Footer from "../../../common/Footer";
-import Header from "../../../common/Header";
-import LayoutGrbt from "../../../common/LayoutGrbt";
+import Footer from "@shared/components/common/Footer";
+import Header from "@shared/components/common/Header";
+import LayoutGrbt from "@shared/components/common/LayoutGrbt";
 import TranslationQuiz from "./TranslationQuiz";
 
 export async function generateMetadata({

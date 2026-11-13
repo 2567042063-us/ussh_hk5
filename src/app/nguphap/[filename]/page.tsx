@@ -1,7 +1,7 @@
 import Link from "next/link";
 
-import Footer from "../../common/Footer";
-import Header from "../../common/Header";
+import Footer from "@shared/components/common/Footer";
+import Header from "@shared/components/common/Header";
 import { pagesMeta } from "../config";
 
 interface Props {

@@ -239,14 +239,14 @@ export default function VocabGrid({ title, words, groupByPos = true }: Props) {
                           ? "text-sm"
                           : w.hanzi.length > 2
                             ? "text-lg"
-                            : "text-2xl"
+                            : "text-3xl"
                       }`}
                     >
                       {w.hanzi}
                     </span>
-                    <span className="mt-1 max-w-full truncate text-[11px] text-slate-500 group-hover:text-sky-600">
+                    {/* <span className="mt-1 max-w-full truncate text-[11px] text-slate-500 group-hover:text-sky-600">
                       {w.pinyin}
-                    </span>
+                    </span> */}
                   </button>
                 </li>
               ))}

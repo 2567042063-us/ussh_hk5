@@ -5,9 +5,9 @@ import { notFound } from "next/navigation";
 
 import HtmlRenderer from "@shared/components/HtmlRenderer";
 
-import Footer from "../../../common/Footer";
-import Header from "../../../common/Header";
-import StickyFloatingButtons from "../../../common/StickyFloatingButtons";
+import Footer from "@shared/components/common/Footer";
+import Header from "@shared/components/common/Header";
+import StickyFloatingButtons from "@shared/components/common/StickyFloatingButtons";
 
 export async function generateMetadata({
   params,

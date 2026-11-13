@@ -1,7 +1,7 @@
 // import { CldImage } from "next-cloudinary";
 import Image from "next/image";
 
-export default function Dashboard() {
+export default function LayoutGrbtDashboard() {
   return (
     <div className="flex flex-col">
       <div className="h-100 relative mx-auto flex w-60 justify-center overflow-hidden">

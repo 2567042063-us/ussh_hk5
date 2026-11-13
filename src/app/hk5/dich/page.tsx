@@ -1,9 +1,9 @@
 import { lessonMenu } from "@shared/data/dich/lesson-loader";
 
-import Footer from "../../common/Footer";
-import Header from "../../common/Header";
-import LayoutGrbt from "../../common/LayoutGrbt";
-import Dashboard from "./Dashboard";
+import LayoutGrbtDashboard from "@shared/components/common/LayoutGrbtDashboard";
+import Footer from "@shared/components/common/Footer";
+import Header from "@shared/components/common/Header";
+import LayoutGrbt from "@shared/components/common/LayoutGrbt";
 
 export function generateMetadata() {
   return {
@@ -16,7 +16,7 @@ export default function Page() {
     <div className="flex min-h-screen flex-col items-center dark:bg-slate-800">
       <Header title="hk5" canonical="https://ussh-hk5-neon.vercel.app/hk5" />
       <LayoutGrbt menuGrbt={lessonMenu} menuTitle="LUYỆN DỊCH V-T">
-        <Dashboard />
+        <LayoutGrbtDashboard />
       </LayoutGrbt>
       <Footer />
     </div>
