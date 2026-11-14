@@ -160,14 +160,12 @@ button:focus {
   padding: 24px 16px;
 }
 
-.ztai__fkaiti {
+/* .ztai__fkaiti {
   font-family: var(--font-kaiti);
-}
+} */
 
 .ztai__zh {
-  font-family:
-    "KaiTi", "STKaiti", "PingFang SC", "Songti SC", "SimSun",
-    "Noto Serif CJK SC", "Noto Serif SC", serif;
+  font-family: var(--font-kaiti);
 }
 
 .ztai__py {
