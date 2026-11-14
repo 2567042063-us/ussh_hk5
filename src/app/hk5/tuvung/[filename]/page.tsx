@@ -1,14 +1,15 @@
 import { notFound } from "next/navigation";
 
+import Footer from "@shared/components/common/Footer";
+import Header from "@shared/components/common/Header";
+import LayoutGrbt from "@shared/components/common/LayoutGrbt";
+import StickyFloatingButtons from "@shared/components/common/StickyFloatingButtons";
 import {
   bodyPartsVocabularyId,
   getVocabById,
   vocabMenu,
 } from "@shared/data/tuvung/vocab-loader";
 
-import Footer from "@shared/components/common/Footer";
-import Header from "@shared/components/common/Header";
-import LayoutGrbt from "@shared/components/common/LayoutGrbt";
 import BodyVocabulary from "../ChudeBodyParts";
 import VocabGrid from "../VocabGrid";
 
@@ -51,14 +52,11 @@ export default async function Page({
   return (
     <div className="flex min-h-screen flex-col items-center dark:bg-slate-800">
       <Header title="hk5" canonical="https://ussh-hk5-neon.vercel.app/hk5" />
-      <LayoutGrbt
-        menuGrbt={vocabMenu}
-        filename={filename}
-        menuTitle="TỪ VỰNG"
-      >
+      <LayoutGrbt menuGrbt={vocabMenu} filename={filename} menuTitle="TỪ VỰNG">
         {content}
       </LayoutGrbt>
       <Footer />
+      <StickyFloatingButtons />
     </div>
   );
 }

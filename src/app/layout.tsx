@@ -26,6 +26,12 @@ export default function RootLayout({
   return (
     // <StoreProvider>
     <html lang="en">
+      <head>
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css"
+        />
+      </head>
       <body className={inter.className}>
         <ThemeProvider>{children}</ThemeProvider>
       </body>

@@ -5,6 +5,9 @@
 
 @theme {
   --color-primary-light: #f57264;
+  --font-kaiti:
+    "LXGW WenKai", "KaiTi", "STKaiti", "Songti SC", "SimSun",
+    "Noto Serif CJK SC", "Noto Serif SC", serif;
   --color-primary: #f57264;
   --color-primary-dark: #ff9966;
   --color-secondary: #042045;
@@ -158,9 +161,7 @@ button:focus {
 }
 
 .ztai__fkaiti {
-  font-family:
-    "KaiTi", "STKaiti", "Songti SC", "SimSun", "Noto Serif CJK SC",
-    "Noto Serif SC", serif;
+  font-family: var(--font-kaiti);
 }
 
 .ztai__zh {
