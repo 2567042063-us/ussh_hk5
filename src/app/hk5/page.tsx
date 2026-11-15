@@ -3,6 +3,7 @@ import Link from "next/link";
 
 import Footer from "@shared/components/common/Footer";
 import Header from "@shared/components/common/Header";
+
 import DocHieuSC from "./dochieusc";
 import KhauNgu from "./khaungu";
 import LichThi from "./lichthi";
@@ -193,6 +194,17 @@ export default function Page() {
 
         <div id="m3" className="my-5">
           <DocHieuSC />
+        </div>
+        <div className="my-5">
+          <div className="max-w-200 mx-auto">
+            <Link
+              href="/hk5/self-study"
+              prefetch={false}
+              className="ml-3 text-lg text-sky-600 hover:text-yellow-600 dark:text-sky-300 dark:hover:text-yellow-400"
+            >
+              {`₊·*◟(˶╹̆ꇴ╹̆˵)◜‧*･`}
+            </Link>
+          </div>
         </div>
       </div>
 

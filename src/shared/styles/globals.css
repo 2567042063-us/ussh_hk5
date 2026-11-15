@@ -6,8 +6,8 @@
 @theme {
   --color-primary-light: #f57264;
   --font-kaiti:
-    "LXGW WenKai", "KaiTi", "STKaiti", "Songti SC", "SimSun",
-    "Noto Serif CJK SC", "Noto Serif SC", serif;
+    KaiTi, "STKaiti", "LXGW WenKai", "Songti SC", "SimSun", "Noto Serif CJK SC",
+    "Noto Serif SC", serif;
   --color-primary: #f57264;
   --color-primary-dark: #ff9966;
   --color-secondary: #042045;
