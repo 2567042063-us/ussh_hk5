@@ -4,7 +4,7 @@ import LayoutGrbt from "@shared/components/common/LayoutGrbt";
 
 const lessonMenu: IMenuGrbt = [
   { id: "vocab", title: "生词", href: "/gthnq5/lesson01/vocab" },
-  { id: "text", title: "课文", href: "/gthnq5/lesson01/text" },
+  { id: "kewen", title: "课文", href: "/gthnq5/lesson01/kewen" },
   {
     id: "translation",
     title: "翻译",
