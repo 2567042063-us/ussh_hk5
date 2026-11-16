@@ -3027,10 +3027,7 @@ function EntryBody({ e }: { e: Entry }) {
   const cell = "border border-slate-300 px-3 py-2 align-top";
 
   return (
-    <tbody
-      id={`vocab-${e.id}`}
-      className="scroll-mt-4 border-t-4 border-slate-300 first:border-t-0"
-    >
+    <tbody className="border-t-4 border-slate-300 first:border-t-0">
       {/* Hàng 1: STT | từ (pinyin trên đầu) | từ loại | Hán Việt | nghĩa */}
       <tr>
         <td
@@ -3040,12 +3037,14 @@ function EntryBody({ e }: { e: Entry }) {
           {e.id}
         </td>
         <td rowSpan={2} className={cell}>
-          <ruby className="ztai__zh text-4xl leading-tight">
-            {e.zh}
-            <rt className="text-sm font-normal text-slate-600">
-              <ZhText text={e.py} />
-            </rt>
-          </ruby>
+          <div id={`vocab-${e.id}`} className="scroll-mt-42 lg:scroll-mt-36">
+            <ruby className="ztai__zh text-4xl leading-tight">
+              {e.zh}
+              <rt className="text-sm font-normal text-slate-600">
+                <ZhText text={e.py} />
+              </rt>
+            </ruby>
+          </div>
         </td>
         <td className={cell}>
           <PosTag pos={e.pos} />
@@ -3157,28 +3156,32 @@ function VocabTable({ entries }: { entries: Entry[] }) {
 export default function VocabBai1() {
   return (
     <main className="mx-auto w-full min-w-0 max-w-7xl px-3 pb-5 sm:px-4 sm:pb-8">
-      <header className="mb-3">
-        <h1 className="text-3xl font-extralight leading-tight text-sky-600 dark:border-sky-300 dark:text-sky-300">
-          <span className="ztai__zh">第一课　离家的时候</span>
-        </h1>
-      </header>
-
       {SECTIONS.map((sec) => (
         <section key={sec.title} className="mb-12 min-w-0">
-          <div className="flex items-center gap-3">
-            <h2 className="mb-1 text-2xl font-bold text-slate-900">
-              <ZhText text={sec.title} />
-            </h2>
+          <div className="my-3 flex items-center gap-3">
+            <div className="inline-flex items-center gap-3 rounded-lg bg-stone-200 px-3 py-1.5">
+              <span className="ztai__zh text-stone-600">二</span>
+              <span className="rounded bg-stone-500 px-2 py-0.5 text-white">
+                <span className="ztai__zh">{sec.title} </span>{" "}
+                <span className="text-sm">Shēngcí</span>{" "}
+                <span className="text-sm">New Words</span>
+              </span>
+            </div>
             {sec.subtitle && (
               <p className="text-sm text-slate-500">
                 <ZhText text={sec.subtitle} />
               </p>
             )}
           </div>
+
           {sec.jumpLinks && (
             <>
-              <div className="mb-3 w-full">
-                <audio controls preload="none" className="h-10 w-full">
+              <div className="mb-3 w-full opacity-80">
+                <audio
+                  controls
+                  preload="none"
+                  className="lesson-audio h-10 w-full"
+                >
                   <source
                     src="https://bh9cualrgy9xkq87.public.blob.vercel-storage.com/gthnq5/01_tuvung.mp3"
                     type="audio/mpeg"
@@ -3194,7 +3197,7 @@ export default function VocabBai1() {
                   <a
                     key={String(entry.id)}
                     href={`#vocab-${entry.id}`}
-                    className="rounded-sm bg-slate-100 px-3 py-1 text-xl text-slate-700 transition-colors hover:bg-sky-100 hover:text-sky-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500"
+                    className="rounded-sm bg-stone-100 px-3 py-1 text-xl text-gray-700 transition-colors hover:bg-slate-100 hover:text-slate-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500"
                   >
                     <ZhText text={entry.zh} />
                   </a>

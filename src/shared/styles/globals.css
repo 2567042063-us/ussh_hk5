@@ -168,6 +168,23 @@ button:focus {
   font-family: var(--font-kaiti);
 }
 
+.lesson-audio {
+  accent-color: #0ea5e9;
+  background: transparent;
+  border-radius: 0;
+}
+
+.lesson-audio::-webkit-media-controls-enclosure,
+.lesson-audio::-webkit-media-controls-panel {
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.lesson-audio::-webkit-media-controls-timeline {
+  accent-color: #0ea5e9;
+}
+
 .ztai__py {
   font-family:
     Inter, "Segoe UI", Roboto, Arial, "Noto Sans", "PingFang SC",

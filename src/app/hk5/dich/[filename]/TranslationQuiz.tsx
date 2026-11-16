@@ -8,6 +8,15 @@ const BUTTON_PRIMARY =
   "rounded-lg bg-sky-600 px-4 py-2 text-sm text-white hover:bg-sky-700 disabled:cursor-not-allowed disabled:opacity-40";
 const BUTTON_OUTLINE =
   "rounded-lg border border-sky-600 px-4 py-2 text-sm text-sky-600 hover:bg-sky-600 hover:text-white disabled:cursor-not-allowed disabled:opacity-40";
+const MUTED_LABEL = "text-[13px] text-slate-500 dark:text-slate-300";
+const PINYIN_TEXT = "text-[15px] text-slate-500 dark:text-slate-300";
+const CHINESE_TEXT = "ztai__zh break-all text-2xl leading-[1.55]";
+const FEEDBACK_BASE = "mt-4 rounded-[10px] px-4 py-3 font-semibold";
+const FEEDBACK_CORRECT =
+  "bg-[#e1f1ec] text-[#23735f] dark:bg-[#1a3a31] dark:text-[#6fd0b4]";
+const FEEDBACK_INCORRECT =
+  "bg-[#fbe9e5] text-[#b83a27] dark:bg-[#43211b] dark:text-[#ff8b78]";
+const LESSON_TITLE = "ztai__zh mb-4 text-2xl leading-[1.55] text-sky-700";
 
 function Session({ lesson, shuffled }: { lesson: Lesson; shuffled: boolean }) {
   const q = useQuiz(lesson.items, shuffled);
@@ -26,9 +35,7 @@ function Session({ lesson, shuffled }: { lesson: Lesson; shuffled: boolean }) {
   if (q.phase === "finished") {
     return (
       <div className="rounded-[14px] px-0 py-3 text-center">
-        <div className="mb-1 text-[13px] text-slate-500 dark:text-slate-300">
-          Kết quả
-        </div>
+        <div className={`mb-1 ${MUTED_LABEL}`}>Kết quả</div>
         <div className="my-1.5 text-[44px] font-bold">
           {q.score}/{q.total}
         </div>
@@ -56,12 +63,10 @@ function Session({ lesson, shuffled }: { lesson: Lesson; shuffled: boolean }) {
                   key={i}
                   className="rounded-[10px] border border-[#d9dee4] p-[10px_12px] dark:border-[#2f3943]"
                 >
-                  <div className="break-all font-['Noto_Serif_SC','Songti_SC','SimSun',serif] text-2xl leading-[1.7]">
+                  <div className="ztai__zh break-all font-['Noto_Serif_SC','Songti_SC','SimSun',serif] text-2xl leading-[1.7]">
                     {r.item.zh}
                   </div>
-                  <div className="mt-3 text-[15px] text-slate-500 dark:text-slate-300">
-                    {r.item.pinyin}
-                  </div>
+                  <div className={`mt-3 ${PINYIN_TEXT}`}>{r.item.pinyin}</div>
                 </div>
               ))}
           </div>
@@ -82,14 +87,14 @@ function Session({ lesson, shuffled }: { lesson: Lesson; shuffled: boolean }) {
         />
       </div>
       <div>
-        <div className="mb-2.5 flex justify-between text-[13px] text-slate-500 dark:text-slate-300">
+        <div className={`mb-2.5 flex justify-between ${MUTED_LABEL}`}>
           <span>
             Câu {q.index + 1}/{q.total}
           </span>
           <span>Đúng: {q.score}</span>
         </div>
 
-        <p className="text-md mb-4">
+        <p className="mb-4 text-base">
           {current.speaker && (
             <span className="font-light text-slate-500">
               {current.speaker}:{" "}
@@ -112,9 +117,7 @@ function Session({ lesson, shuffled }: { lesson: Lesson; shuffled: boolean }) {
         {!checked && (
           <>
             {q.showPinyin && (
-              <div className="mt-3 text-[15px] text-slate-500 dark:text-slate-300">
-                {current.pinyin}
-              </div>
+              <div className={`mt-3 ${PINYIN_TEXT}`}>{current.pinyin}</div>
             )}
             <div className="mt-3.5 flex flex-wrap items-center gap-2.5">
               <button
@@ -141,10 +144,8 @@ function Session({ lesson, shuffled }: { lesson: Lesson; shuffled: boolean }) {
         {checked && (
           <>
             <div
-              className={`mt-4 rounded-[10px] px-4 py-3 font-semibold ${
-                q.lastCorrect
-                  ? "bg-[#e1f1ec] text-[#23735f] dark:bg-[#1a3a31] dark:text-[#6fd0b4]"
-                  : "bg-[#fbe9e5] text-[#b83a27] dark:bg-[#43211b] dark:text-[#ff8b78]"
+              className={`${FEEDBACK_BASE} ${
+                q.lastCorrect ? FEEDBACK_CORRECT : FEEDBACK_INCORRECT
               }`}
             >
               {q.lastCorrect
@@ -154,10 +155,10 @@ function Session({ lesson, shuffled }: { lesson: Lesson; shuffled: boolean }) {
 
             {!q.lastCorrect && q.diff && q.input.trim() && (
               <div className="mt-4">
-                <div className="mb-1 text-[13px] text-slate-500 dark:text-slate-300">
+                <div className={`mb-1 ${MUTED_LABEL}`}>
                   Kiểm tra bài của bạn (đã bỏ dấu câu)
                 </div>
-                <div className="ztai__zh text-2xl leading-[1.55] break-all">
+                <div className={CHINESE_TEXT}>
                   {q.diff.map((t, i) => (
                     <span
                       key={i}
@@ -180,10 +181,8 @@ function Session({ lesson, shuffled }: { lesson: Lesson; shuffled: boolean }) {
               <div className="mb-1 text-sm text-slate-500 dark:text-slate-300">
                 Đáp án
               </div>
-              <div className="ztai__zh text-2xl leading-[1.55] break-all">{current.zh}</div>
-              <div className="mt-3 text-[15px] text-slate-500 dark:text-slate-300">
-                {current.pinyin}
-              </div>
+              <div className={CHINESE_TEXT}>{current.zh}</div>
+              <div className={`mt-3 ${PINYIN_TEXT}`}>{current.pinyin}</div>
             </div>
 
             {current.notes && (
@@ -210,7 +209,7 @@ export default function TranslationQuiz({ lesson }: { lesson: Lesson }) {
 
   return (
     <div className="mx-auto w-full px-4 py-6">
-      <h1 className="ztai__zh text-2xl leading-[1.55] mb-4 text-xl text-sky-700">{lesson.title}</h1>
+      {lesson.title && <h1 className={LESSON_TITLE}>{lesson.title}</h1>}
       <div className="flex flex-wrap items-center gap-3">
         <label className="text-sm">
           <input

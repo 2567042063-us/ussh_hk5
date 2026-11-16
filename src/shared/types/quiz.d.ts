@@ -18,6 +18,6 @@ interface Sentence {
 
 interface Lesson {
   id: string;
-  title: string;
+  title?: string;
   items: Sentence[];
 }
