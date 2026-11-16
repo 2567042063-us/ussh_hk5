@@ -3136,7 +3136,7 @@ function EntryBody({ e }: { e: Entry }) {
 function VocabTable({ entries }: { entries: Entry[] }) {
   return (
     <div className="w-full min-w-0 max-w-full overflow-x-auto overscroll-x-contain">
-      <table className="w-full min-w-[760px] table-fixed border-collapse text-slate-900 xl:min-w-[960px]">
+      <table className="min-w-190 xl:min-w-240 w-full table-fixed border-collapse text-slate-900">
         <colgroup>
           <col className="w-14" />
           <col className="w-56" />
@@ -3156,13 +3156,10 @@ function VocabTable({ entries }: { entries: Entry[] }) {
 
 export default function VocabBai1() {
   return (
-    <main className="mx-auto w-full min-w-0 max-w-7xl px-3 py-5 sm:px-4 sm:py-8">
-      <header className="mb-6">
-        <h1 className="text-2xl font-bold text-slate-900 sm:text-3xl">
-          <span className="ztai__zh">第一课　离家的时候</span>{" "}
-          <span className="text-xl font-medium text-slate-500">
-            · Từ vựng GTHN 5 · Bài 1
-          </span>
+    <main className="mx-auto w-full min-w-0 max-w-7xl px-3 pb-5 sm:px-4 sm:pb-8">
+      <header className="mb-3">
+        <h1 className="text-3xl font-extralight leading-tight text-sky-600 dark:border-sky-300 dark:text-sky-300">
+          <span className="ztai__zh">第一课　离家的时候</span>
         </h1>
       </header>
 
@@ -3179,20 +3176,31 @@ export default function VocabBai1() {
             )}
           </div>
           {sec.jumpLinks && (
-            <nav
-              className="sticky top-0 z-20 my-3 flex max-h-32 flex-wrap gap-2 overflow-y-auto border-y border-slate-200 bg-white/95 py-2 backdrop-blur dark:border-slate-700 dark:bg-slate-800/95 lg:max-h-none lg:overflow-visible"
-              aria-label={`Danh sách ${sec.entries.length} từ vựng`}
-            >
-              {sec.entries.map((entry) => (
-                <a
-                  key={String(entry.id)}
-                  href={`#vocab-${entry.id}`}
-                  className="rounded-sm bg-slate-100 px-3 py-1 text-xl text-slate-700 transition-colors hover:bg-sky-100 hover:text-sky-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500"
-                >
-                  <ZhText text={entry.zh} />
-                </a>
-              ))}
-            </nav>
+            <>
+              <div className="mb-3 w-full">
+                <audio controls preload="none" className="h-10 w-full">
+                  <source
+                    src="https://bh9cualrgy9xkq87.public.blob.vercel-storage.com/gthnq5/01_tuvung.mp3"
+                    type="audio/mpeg"
+                  />
+                  Trình duyệt của bạn không hỗ trợ phát âm thanh.
+                </audio>
+              </div>
+              <nav
+                className="sticky top-0 z-20 flex max-h-32 flex-wrap gap-2 overflow-y-auto border-y border-slate-200 bg-white/95 py-2 backdrop-blur dark:border-slate-700 dark:bg-slate-800/95 lg:max-h-none lg:overflow-visible"
+                aria-label={`Danh sách ${sec.entries.length} từ vựng`}
+              >
+                {sec.entries.map((entry) => (
+                  <a
+                    key={String(entry.id)}
+                    href={`#vocab-${entry.id}`}
+                    className="rounded-sm bg-slate-100 px-3 py-1 text-xl text-slate-700 transition-colors hover:bg-sky-100 hover:text-sky-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500"
+                  >
+                    <ZhText text={entry.zh} />
+                  </a>
+                ))}
+              </nav>
+            </>
           )}
           <VocabTable entries={sec.entries} />
         </section>
