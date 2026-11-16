@@ -1,0 +1,25 @@
+import type { GameWord } from "./game-vocabTypes";
+
+export const gameVocabShou: GameWord[] = [
+  ["接", "jiē", "nhận; đón; bắt (máy)", "我去机场接我的朋友。", "Wǒ qù jīchǎng jiē wǒ de péngyou.", "Tôi ra sân bay đón bạn tôi."],
+  ["报名", "bàomíng", "đăng ký (tham gia)", "我想报名参加汉语班。", "Wǒ xiǎng bàomíng cānjiā Hànyǔ bān.", "Tôi muốn đăng ký tham gia lớp tiếng Hán."],
+  ["摆", "bǎi", "bày, sắp đặt", "桌子上摆着很多酒和菜。", "Zhuōzi shàng bǎizhe hěn duō jiǔ hé cài.", "Trên bàn bày rất nhiều rượu và thức ăn."],
+  ["提", "tí", "xách (bằng tay)", "我手里提着一箱子东西，一步一步地往上爬。", "Wǒ shǒu li tízhe yì xiāngzi dōngxi, yí bù yí bù de wǎng shàng pá.", "Tay tôi xách một thùng đồ, từng bước từng bước leo lên."],
+  ["打扫", "dǎsǎo", "quét dọn", "周末我在家打扫房间。", "Zhōumò wǒ zài jiā dǎsǎo fángjiān.", "Cuối tuần tôi ở nhà dọn phòng."],
+  ["挂", "guà", "treo, móc", "把这幅画儿挂在书房里。", "Bǎ zhè fú huàr guà zài shūfáng li.", "Hãy treo bức tranh này trong phòng sách."],
+  ["按摩", "ànmó", "massage, xoa bóp", "他每天晚上给妈妈按摩。", "Tā měitiān wǎnshang gěi māma ànmó.", "Mỗi tối anh ấy massage cho mẹ."],
+  ["摸", "mō", "sờ, chạm vào", "小孩儿喜欢摸小狗的头。", "Xiǎoháir xǐhuan mō xiǎogǒu de tóu.", "Trẻ con thích sờ đầu chú chó nhỏ."],
+  ["摔", "shuāi", "ngã; làm rơi vỡ", "刚出门就摔了一跤，眼镜儿也掉在地上摔坏了。", "Gāng chūmén jiù shuāile yì jiāo, yǎnjìngr yě diào zài dì shàng shuāihuài le.", "Vừa ra khỏi cửa đã ngã một cái, kính cũng rơi xuống đất vỡ mất."],
+  ["拔", "bá", "nhổ, rút ra", "钥匙忘拔下来了。", "Yàoshi wàng bá xiàlai le.", "Quên rút chìa khóa ra rồi."],
+  ["挑", "tiāo", "chọn, lựa", "我挑了几本历史书。", "Wǒ tiāole jǐ běn lìshǐ shū.", "Tôi đã chọn mấy cuốn sách lịch sử."],
+  ["抽", "chōu", "rút ra, lấy ra", "从一个书架上抽出来一本看看。", "Cóng yí ge shūjià shàng chōu chūlai yì běn kànkan.", "Rút một cuốn từ giá sách ra xem thử."],
+  ["插", "chā", "cắm, gài", "钥匙还在自行车上插着呢。", "Yàoshi hái zài zìxíngchē shàng chāzhe ne.", "Chìa khóa vẫn còn cắm trên xe đạp đấy."],
+  ["扛", "káng", "vác (trên vai)", "两个小伙子扛着摄像机。", "Liǎng ge xiǎohuǒzi kángzhe shèxiàngjī.", "Hai chàng trai vác máy quay."],
+  ["搞", "gǎo", "làm, xoay xở, giải quyết", "这件事我搞不好。", "Zhè jiàn shì wǒ gǎo bu hǎo.", "Việc này tôi làm không xong."],
+  ["排", "pái", "xếp hàng; sắp xếp", "大家排队上车。", "Dàjiā páiduì shàng chē.", "Mọi người xếp hàng lên xe."],
+  ["拉", "lā", "kéo", "他拉着我的手往前走。", "Tā lāzhe wǒ de shǒu wǎng qián zǒu.", "Anh ấy kéo tay tôi đi về phía trước."],
+  ["撞", "zhuàng", "đâm, va vào", "他骑车撞到了一棵树。", "Tā qí chē zhuàngdào le yì kē shù.", "Anh ấy đi xe đâm vào một cái cây."],
+  ["打扮", "dǎban", "trang điểm, ăn diện", "她今天打扮得很漂亮。", "Tā jīntiān dǎban de hěn piàoliang.", "Hôm nay cô ấy ăn diện rất đẹp."],
+  ["擦", "cā", "lau, chùi", "请把桌子擦干净。", "Qǐng bǎ zhuōzi cā gānjìng.", "Xin lau sạch cái bàn."],
+  ["扶手", "fúshou", "tay vịn", "上楼的时候，请抓好扶手。", "Shàng lóu de shíhou, qǐng zhuāhǎo fúshou.", "Lúc lên lầu, xin nắm chắc tay vịn."],
+];

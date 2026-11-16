@@ -53,6 +53,16 @@ export const vocabMenu: IMenuGrbt = [
     href: "/hk5/tuvung/vocabShou",
   },
   {
+    id: "gameVocabShou",
+    title: "Game - bộ 扌",
+    href: "/hk5/tuvung/game-tuvung/vocabShou",
+  },
+  {
+    id: "gameVerb",
+    title: "Game - động từ",
+    href: "/hk5/tuvung/game-tuvung/verb",
+  },
+  {
     id: bodyPartsVocabularyId,
     title: "Chủ đề cơ thể",
     href: `/hk5/tuvung/${bodyPartsVocabularyId}`,
