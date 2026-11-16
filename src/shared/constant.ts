@@ -19,17 +19,24 @@ export const MAIN_NAV = [
     label: "HK5",
     href: "/hk5",
   },
-  // {
-  //   id: "nguphap",
-  //   label: "Ngữ Pháp",
-  //   href: "/nguphap",
-  // },
+  {
+    id: "gthnq5",
+    label: "GTHNq5",
+    href: "/gthnq5",
+  },
   // {
   //   id: "about",
   //   label: "About",
   //   href: "/about",
   // },
 ];
+
+export const isMainNavActive = (
+  pathname: string,
+  item: { id: string; href: string },
+) =>
+  pathname === item.href ||
+  (item.id === "gthnq5" && pathname.startsWith(`${item.href}/`));
 
 // fileName === filename ? classNameActive : "",
 export const classNameActive =

@@ -12,7 +12,7 @@ import {
 } from "@headlessui/react";
 import clsx from "clsx";
 
-import { classNameActive, MAIN_NAV } from "@shared/constant";
+import { classNameActive, isMainNavActive, MAIN_NAV } from "@shared/constant";
 import { CloseIcon, DotsVerticalRoundedIcon } from "@shared/icons";
 
 import ThemeSwitch from "./ThemeSwitch";
@@ -82,22 +82,21 @@ export default function MainNavMb() {
               </div> */}
 
               <ul className="mt-3 space-y-6">
-                {MAIN_NAV.map((item) => (
-                  <li key={item.id}>
-                    <Link
-                      href={item.href}
-                      className="block text-lg font-light lowercase hover:text-sky-500 dark:hover:text-sky-400"
-                    >
-                      <span
-                        className={clsx(
-                          currentRoute === item.href ? classNameActive : "",
-                        )}
+                {MAIN_NAV.map((item) => {
+                  const isActive = isMainNavActive(currentRoute, item);
+                  return (
+                    <li key={item.id}>
+                      <Link
+                        href={item.href}
+                        className="block text-lg font-light lowercase hover:text-sky-500 dark:hover:text-sky-400"
                       >
-                        {item.label}
-                      </span>
-                    </Link>
-                  </li>
-                ))}
+                        <span className={clsx(isActive ? classNameActive : "")}>
+                          {item.label}
+                        </span>
+                      </Link>
+                    </li>
+                  );
+                })}
               </ul>
 
               <div className="mt-6 border-t border-slate-200 pt-6 dark:border-slate-200/10">

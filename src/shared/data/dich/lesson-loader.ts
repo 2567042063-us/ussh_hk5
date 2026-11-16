@@ -1,5 +1,16 @@
 const lessonLoaders = new Map<string, () => Promise<Lesson>>([
   [
+    "bai14-1",
+    async () => {
+      const { dataBai14Yi } = await import("./bai14-1");
+      return {
+        id: "bai14-1",
+        title: "第十四课：星期天，我和麦克一起骑车到图书城去买书",
+        items: dataBai14Yi,
+      };
+    },
+  ],
+  [
     "bai15-1",
     async () => {
       const { dataBai15Yi } = await import("./bai15-1");
@@ -68,6 +79,7 @@ const lessonLoaders = new Map<string, () => Promise<Lesson>>([
 ]);
 
 export const lessonMenu: IMenuGrbt = [
+  { id: "bai14-1", title: "第14课（一）", href: "/hk5/dich/bai14-1" },
   { id: "bai15-1", title: "第15课（一）", href: "/hk5/dich/bai15-1" },
   { id: "bai15-2", title: "第15课（二）", href: "/hk5/dich/bai15-2" },
   { id: "bai16-1", title: "第16课（一）", href: "/hk5/dich/bai16-1" },
