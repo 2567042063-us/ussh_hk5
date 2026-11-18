@@ -17,7 +17,7 @@ export const paragraphs: Sentence[][] = [
     {
       zh: "我是独生女，如果把这件事告诉父母，他们多半不会同意，因此，我只跟朋友和教我汉语的老师商量，把一切手续都办好以后才告诉他们。",
       py: "Wǒ shì dúshēngnǚ, rúguǒ bǎ zhè jiàn shì gàosu fùmǔ, tāmen duōbàn bú huì tóngyì, yīncǐ, wǒ zhǐ gēn péngyou hé jiāo wǒ Hànyǔ de lǎoshī shāngliang, bǎ yīqiè shǒuxù dōu bànhǎo yǐhòu cái gàosu tāmen.",
-      vi: "Tôi là con gái một, nếu nói chuyện này với bố mẹ thì nhiều khả năng họ sẽ không đồng ý, vì vậy tôi chỉ bàn bạc với bạn bè và cô giáo dạy tiếng Hán cho tôi, đợi làm xong hết các thủ tục rồi mới nói với họ.",
+      vi: "Tôi là con gái một, nếu nói chuyện này với bố mẹ thì nhiều khả năng họ sẽ không đồng ý, vì vậy tôi chỉ bàn bạc với bạn bè và cô giáo dạy tiếng Trung, đợi làm xong hết các thủ tục rồi mới nói với họ.",
     },
     {
       zh: "他们听了，果然不大愿意。",

@@ -14,12 +14,12 @@ const lessonMenu: IMenuGrbt = [
   },
   { id: "phonetic", title: "语音", href: "/gthnq5/lesson01/phonetic" },
   { id: "phrases", title: "词语", href: "/gthnq5/lesson01/phrases" },
-  { id: "notes", title: "注释", href: "/gthnq5/lesson01/notes" },
-  { id: "usage", title: "词语用法", href: "/gthnq5/lesson01/usage" },
+  // { id: "notes", title: "注释", href: "/gthnq5/lesson01/notes" },
+  { id: "usage", title: "注释+词语用法", href: "/gthnq5/lesson01/usage" },
   { id: "exercises", title: "Bài tập", href: "/gthnq5/lesson01/exercises" },
   {
     id: "supplementary",
-    title: "Bài khoá phụ",
+    title: "补充课文",
     href: "/gthnq5/lesson01/supplementary",
   },
 ];
@@ -54,9 +54,11 @@ function Lesson01Header() {
 export default function Lesson01Layout({
   children,
   activeMenuId,
+  hideHeader,
 }: {
   children: React.ReactNode;
   activeMenuId?: string;
+  hideHeader?: boolean;
 }) {
   return (
     <div className="flex min-h-screen flex-col items-center dark:bg-slate-800">
@@ -67,7 +69,7 @@ export default function Lesson01Layout({
         filename={activeMenuId}
       >
         <div className="w-full min-w-0">
-          <Lesson01Header />
+          {!hideHeader && <Lesson01Header />}
           {children}
         </div>
       </LayoutGrbt>

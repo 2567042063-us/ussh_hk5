@@ -1,5 +1,9 @@
+"use client";
+
+import { useId, useState } from "react";
 import Link from "next/link";
 import clsx from "clsx";
+import { ChevronDown } from "lucide-react";
 
 import { classNameActive } from "@shared/constant";
 
@@ -16,36 +20,56 @@ export default function LayoutGrbt({
   menuGrbt,
   filename,
 }: LayoutGrbtProps) {
+  const [isMenuOpen, setIsMenuOpen] = useState(true);
+  const menuId = useId();
+
   return (
     <div className="container mx-auto flex flex-1 flex-col gap-3 md:flex-row">
-      <div className="md:w-50 flex flex-col gap-1.5 rounded-sm md:shrink-0">
+      <div
+        id="hamburger-menu-collapse"
+        className="md:w-50 flex flex-col gap-1.5 rounded-sm md:shrink-0"
+      >
         <div
           className={`flex justify-between gap-2 border-b border-dashed border-cyan-800/20 py-1 last:border-0 dark:border-slate-700`}
         >
-          <span className="text-sky-600 dark:text-sky-300">
-            {" "}
-            ⭑.ᐟ {menuTitle}
-          </span>
-        </div>
-        {menuGrbt.map((menu) => (
-          <div
-            key={menu.id}
-            className={`flex justify-between gap-2 border-b border-dashed border-cyan-800/20 py-1 last:border-0 dark:border-slate-700`}
+          <button
+            type="button"
+            aria-expanded={isMenuOpen}
+            aria-controls={menuId}
+            onClick={() => setIsMenuOpen((open) => !open)}
+            className="flex w-full items-center justify-between text-left text-sky-600 dark:text-sky-300"
           >
-            <Link
-              href={menu.href}
-              prefetch={false}
-              className={clsx(
-                "inline-block px-5 text-slate-500 dark:text-sky-400",
-                menu.id === filename
-                  ? classNameActive
-                  : "hover:text-yellow-500 dark:hover:text-yellow-300",
-              )}
+            <span>⭑.ᐟ {menuTitle}</span>
+            <ChevronDown
+              aria-hidden="true"
+              size={16}
+              className={clsx("shrink-0 transition-transform", {
+                "rotate-180": !isMenuOpen,
+              })}
+            />
+          </button>
+        </div>
+        <div id={menuId} hidden={!isMenuOpen}>
+          {menuGrbt.map((menu) => (
+            <div
+              key={menu.id}
+              className={`flex justify-between gap-2 border-b border-dashed border-cyan-800/20 py-1 last:border-0 dark:border-slate-700`}
             >
-              {menu.title}
-            </Link>
-          </div>
-        ))}
+              <Link
+                href={menu.href}
+                prefetch={false}
+                className={clsx(
+                  "inline-block px-5 text-slate-500 dark:text-sky-400",
+                  menu.id === filename
+                    ? classNameActive
+                    : "hover:text-yellow-500 dark:hover:text-yellow-300",
+                )}
+              >
+                {menu.title}
+              </Link>
+            </div>
+          ))}
+        </div>
       </div>
       <div className="flex w-full min-w-0 flex-1 flex-col gap-1.5 pl-0 md:pl-5">
         {children}
