@@ -44,7 +44,7 @@ export const paragraphs: Sentence[][] = [
     {
       zh: "可是现在，我就是想学汉语，想到中国——这个古老而又年轻的国家去看看。",
       py: "Kěshì xiànzài, wǒ jiù shì xiǎng xué Hànyǔ, xiǎng dào Zhōngguó——zhège gǔlǎo ér yòu niánqīng de guójiā qù kànkan.",
-      vi: "Nhưng bây giờ, tôi chỉ muốn học tiếng Hán, muốn đến Trung Quốc — đất nước vừa cổ xưa vừa trẻ trung này — để xem thử.",
+      vi: "Nhưng bây giờ, tôi chỉ muốn học tiếng Hán, muốn đến Trung Quốc — đất nước vừa cổ xưa vừa trẻ trung hiện đại này — để xem thử.",
     },
     {
       zh: "我对父母说：“我已经长大了，就像小鸟一样，该自己飞了。我要独立地生活，自由自在地去国外过一年，然后再考虑今后的打算。”",
