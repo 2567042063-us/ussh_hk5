@@ -48,7 +48,7 @@ function VocabularyGrid({
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder="Tìm chữ Hán, Hán Việt, nghĩa..."
-          className="w-full rounded-xl border border-sky-100 bg-white px-4 py-2.5 text-sm outline-none transition placeholder:text-slate-400 focus:border-sky-400 focus:ring-4 focus:ring-sky-100 sm:max-w-xs"
+          className="w-full rounded-xl border border-sky-100 bg-white px-4 py-2.5 text-sm outline-none transition placeholder:text-slate-400 focus:border-sky-400 sm:max-w-xs"
         />
       </div>
 
@@ -101,7 +101,7 @@ function LessonLineCard({
       type="button"
       onClick={() => setOpen((value) => !value)}
       aria-expanded={open}
-      className="group w-full rounded-sm border border-sky-100 bg-white p-4 text-left transition focus:outline-none focus:ring-1 focus:ring-sky-100 sm:p-5"
+      className="group w-full rounded-sm border border-sky-100 bg-white p-4 text-left transition focus:outline-none sm:p-5"
     >
       <div className="flex items-start gap-3">
         {line.speaker && (

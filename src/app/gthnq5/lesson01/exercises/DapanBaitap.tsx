@@ -598,7 +598,7 @@ function Card({
           <Question item={item} open={open} />
           <button
             onClick={toggle}
-            className="mt-2 rounded-md border border-stone-300 px-3 py-1 text-sm text-stone-600 hover:bg-stone-50 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="mt-2 rounded-md border border-stone-300 px-3 py-1 text-sm text-stone-600 hover:bg-stone-50 focus:outline-none"
           >
             {open ? "Ẩn đáp án" : "Xem đáp án"}
           </button>

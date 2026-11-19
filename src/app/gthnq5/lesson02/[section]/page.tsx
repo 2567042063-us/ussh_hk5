@@ -15,5 +15,9 @@ export default async function Page({
     notFound();
   }
 
-  return <LessonLayout lesson={lesson02}>{null}</LessonLayout>;
+  return (
+    <LessonLayout lesson={lesson02}>
+      <p className="py-6 text-slate-500">trống</p>
+    </LessonLayout>
+  );
 }

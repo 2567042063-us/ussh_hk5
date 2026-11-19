@@ -1,10 +1,9 @@
-import LessonLayout from "../LessonLayout";
-import { lesson02 } from "../lessons/lesson02";
+import { redirect } from "next/navigation";
 
 export const metadata = {
   title: "GTHN q5 - Bài 02",
 };
 
 export default function Page() {
-  return <LessonLayout lesson={lesson02}>{null}</LessonLayout>;
+  redirect("/gthnq5/lesson02/vocab");
 }

@@ -81,31 +81,39 @@ export default function LessonSidebar({
                     <nav
                       id={itemNavId}
                       aria-label={`Danh mục ${item.title}`}
-                      hidden={!isNavOpen}
-                      className="mt-2"
+                      aria-hidden={!isNavOpen}
+                      className={clsx(
+                        "grid transition-[grid-template-rows] duration-300 ease-in-out",
+                        isNavOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]",
+                      )}
                     >
-                      {item.menu.map((menu) => (
-                        <div
-                          key={menu.id}
-                          className="flex justify-between gap-2 border-b border-dashed border-cyan-800/20 py-1 last:border-0 dark:border-slate-700"
-                        >
-                          <Link
-                            href={menu.href}
-                            prefetch={false}
-                            aria-current={
-                              pathname === menu.href ? "page" : undefined
-                            }
-                            className={clsx(
-                              "inline-block px-2 text-slate-500 dark:text-sky-400",
-                              pathname === menu.href
-                                ? classNameActive
-                                : "hover:text-yellow-500 dark:hover:text-yellow-300",
-                            )}
+                      <div className="overflow-hidden">
+                        <div className="pt-2">
+                          {item.menu.map((menu) => (
+                          <div
+                            key={menu.id}
+                            className="flex justify-between gap-2 border-b border-dashed border-cyan-800/20 py-1 last:border-0 dark:border-slate-700"
                           >
-                            {menu.title}
-                          </Link>
+                            <Link
+                              href={menu.href}
+                              prefetch={false}
+                              aria-current={
+                                pathname === menu.href ? "page" : undefined
+                              }
+                              tabIndex={isNavOpen ? 0 : -1}
+                              className={clsx(
+                                "inline-block px-2 text-slate-500 dark:text-sky-400",
+                                pathname === menu.href
+                                  ? classNameActive
+                                  : "hover:text-yellow-500 dark:hover:text-yellow-300",
+                              )}
+                            >
+                              {menu.title}
+                            </Link>
+                          </div>
+                          ))}
                         </div>
-                      ))}
+                      </div>
                     </nav>
                   </section>
                 );

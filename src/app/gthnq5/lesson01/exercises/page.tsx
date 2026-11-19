@@ -1,5 +1,6 @@
 import LessonLayout from "../../LessonLayout";
 import { lesson01 } from "../../lessons/lesson01";
+import ExercisesQuiz from "./ExercisesQuiz";
 import ExercisesWithToggle from "./ExercisesWithToggle";
 
 export function generateMetadata() {
@@ -9,6 +10,7 @@ export function generateMetadata() {
 export default function Page() {
   return (
     <LessonLayout lesson={lesson01} hideHeader>
+      <ExercisesQuiz />
       <ExercisesWithToggle />
     </LessonLayout>
   );

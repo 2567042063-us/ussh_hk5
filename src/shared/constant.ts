@@ -36,7 +36,7 @@ export const isMainNavActive = (
   item: { id: string; href: string },
 ) =>
   pathname === item.href ||
-  (item.id === "gthnq5" && pathname.startsWith(`${item.href}/`));
+  (item.id === "gthnq5" && pathname.startsWith("/gthnq5"));
 
 // fileName === filename ? classNameActive : "",
 export const classNameActive =

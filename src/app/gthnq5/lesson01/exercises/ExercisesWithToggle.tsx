@@ -8,7 +8,7 @@ export default function ExercisesWithToggle() {
   const [isVisible, setIsVisible] = useState(false);
 
   return (
-    <>
+    <div className="mt-10">
       <button
         id="dapan-giaithich"
         type="button"
@@ -18,10 +18,10 @@ export default function ExercisesWithToggle() {
         className="px-4 text-sky-600 hover:text-yellow-600 dark:text-sky-300 dark:hover:text-yellow-400"
       >
         {isVisible
-          ? "Ẩn đáp án theo sách kèm giải thích"
-          : "Đáp án theo sách kèm giải thích"}
+          ? "𓇢𓆸 Ẩn đáp án theo sách kèm giải thích"
+          : "𓇢𓆸 Đáp án theo sách kèm giải thích"}
       </button>
       {isVisible && <Baitap />}
-    </>
+    </div>
   );
 }
