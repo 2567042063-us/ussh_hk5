@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 
+import TranslationQuiz from "../../../hk5/dich/[filename]/TranslationQuiz";
+
 const P = [
   [
     [
@@ -159,6 +161,27 @@ const C = [
   ],
 ];
 
+const supplementaryTranslation = {
+  id: "gthnq5-lesson01-supplementary-consultation",
+  // title: "Dịch Việt – Trung · 请教 Consultation",
+  items: C.map(([speaker, zh, pinyin, vietnamese]) => ({
+    speaker,
+    zh,
+    pinyin,
+    vietnamese,
+  })),
+};
+
+const supplementaryTextTranslation = {
+  id: "gthnq5-lesson01-supplementary-text",
+  title: "Dịch Việt – Trung · 补充课文 · trang 42",
+  items: P.flat().map(([zh, pinyin, vietnamese]) => ({
+    zh: zh.replace(/\{\d+\|([^}]+)\}/g, "$1"),
+    pinyin,
+    vietnamese,
+  })),
+};
+
 // [no, word, pinyin, pos, hán việt, meaning, usage, ex zh, ex py, ex vi, synonyms, related]
 const V = [
   [
@@ -295,18 +318,18 @@ function Sent({ zh, py, vi, all, who }) {
     <div
       onClick={() => setO(!o)}
       className={
-        "my-1 cursor-pointer rounded-lg px-3 py-2 transition " +
-        (show ? "bg-stone-50" : "hover:bg-gray-100")
+        "mb-1 cursor-pointer transition " +
+        (show ? "bg-slate-50" : "hover:bg-stone-50")
       }
     >
-      <div className="ztai__zh text-3xl leading-9 text-gray-900">
+      <div className="ztai__zh text-xl leading-9 text-gray-900">
         {who && <span className="mr-2 text-sky-700">{who}:</span>}
         <Zh s={zh} />
       </div>
       {show && (
         <div className="mt-1 text-sm">
-          <div className="text-gray-500">{py}</div>
-          <div className="text-sky-700">{vi}</div>
+          <div className="text-sky-700">{py}</div>
+          <div className="text-gray-500">{vi}</div>
         </div>
       )}
     </div>
@@ -363,7 +386,7 @@ export default function Lesson1BaiKhoaPhu() {
           </p>
           <Toggle all={all} setAll={setAll} />
           {P.map((para, i) => (
-            <div key={i} className="mb-3 indent-8">
+            <div key={i} className="mb-3">
               {para.map((s, j) => (
                 <Sent key={j} zh={s[0]} py={s[1]} vi={s[2]} all={all} />
               ))}
@@ -391,7 +414,7 @@ export default function Lesson1BaiKhoaPhu() {
                   </div>
                   <div className="text-sm">
                     <span className="text-gray-500">({v[3]})</span>{" "}
-                    <span className="font-bold text-red-700">{v[4]}</span>
+                    <span className="font-bold text-stone-700">{v[4]}</span>
                     <div className="text-gray-800">{v[5]}</div>
                   </div>
                 </div>
@@ -401,8 +424,8 @@ export default function Lesson1BaiKhoaPhu() {
                   </div>
                   <div className="rounded-lg bg-sky-50 p-2">
                     <div className="text-lg">{v[7]}</div>
-                    <div className="italic text-gray-500">{v[8]}</div>
-                    <div className="text-blue-700">{v[9]}</div>
+                    <div className="ztai__py text-sky-700">{v[8]}</div>
+                    <div className="text-slate-700">{v[9]}</div>
                   </div>
                   <div>
                     <span className="font-semibold">
@@ -421,25 +444,38 @@ export default function Lesson1BaiKhoaPhu() {
       )}
 
       {tab === 2 && (
-        <div>
-          <h2 className="mb-1 text-lg font-bold">
-            交际会话 · 请教 (1) Consultation (1)
-          </h2>
-          <p className="mb-2 text-xs text-gray-500">
-            Bấm vào từng câu để xem pinyin + tiếng Việt.
-          </p>
-          <Toggle all={all} setAll={setAll} />
-          {C.map((c, i) => (
-            <Sent key={i} who={c[0]} zh={c[1]} py={c[2]} vi={c[3]} all={all} />
-          ))}
-        </div>
+        <>
+          <div>
+            <h2 className="mb-1 text-lg font-bold">
+              交际会话 · 请教 (1) Consultation (1)
+            </h2>
+            <p className="mb-2 text-xs text-gray-500">
+              Bấm vào từng câu để xem pinyin + tiếng Việt.
+            </p>
+            <Toggle all={all} setAll={setAll} />
+            {C.map((c, i) => (
+              <Sent
+                key={i}
+                who={c[0]}
+                zh={c[1]}
+                py={c[2]}
+                vi={c[3]}
+                all={all}
+              />
+            ))}
+          </div>
+          <div className="mt-5 rounded-lg bg-white p-0 shadow dark:bg-slate-700">
+            <p className="pt-6 text-lg font-bold uppercase">
+              <span className="border-l-4 border-stone-600 px-4 text-stone-600">
+                luyện tập dịch
+              </span>
+            </p>
+            <TranslationQuiz lesson={supplementaryTranslation} />
+          </div>
+        </>
       )}
 
-      {tab === 3 && (
-        <div className="min-h-[300px] rounded-xl border-2 border-dashed p-6 text-center text-gray-300">
-          Dịch Việt – Trung (để trống)
-        </div>
-      )}
+      {tab === 3 && <TranslationQuiz lesson={supplementaryTextTranslation} />}
     </div>
   );
 }

@@ -1,4 +1,5 @@
-import Lesson01Layout from "../Lesson01Layout";
+import LessonLayout from "../../LessonLayout";
+import { lesson01 } from "../../lessons/lesson01";
 
 export function generateMetadata() {
   return { title: "GTHN q5 - Bài 01 - 词语用法" };
@@ -6,8 +7,8 @@ export function generateMetadata() {
 
 export default function Page() {
   return (
-    <Lesson01Layout activeMenuId="usage">
+    <LessonLayout lesson={lesson01}>
       <p className="py-6 text-slate-500">Đang làm tiếp...</p>
-    </Lesson01Layout>
+    </LessonLayout>
   );
 }

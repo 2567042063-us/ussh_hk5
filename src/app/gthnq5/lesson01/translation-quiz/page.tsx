@@ -1,6 +1,7 @@
 import TranslationQuiz from "../../../hk5/dich/[filename]/TranslationQuiz";
+import LessonLayout from "../../LessonLayout";
+import { lesson01 } from "../../lessons/lesson01";
 import { paragraphs, questions } from "../kewen/Kewen";
-import Lesson01Layout from "../Lesson01Layout";
 
 const translationLesson: Lesson = {
   id: "gthnq5-lesson01",
@@ -17,8 +18,8 @@ export function generateMetadata() {
 
 export default function Page() {
   return (
-    <Lesson01Layout activeMenuId="translation">
+    <LessonLayout lesson={lesson01}>
       <TranslationQuiz lesson={translationLesson} />
-    </Lesson01Layout>
+    </LessonLayout>
   );
 }

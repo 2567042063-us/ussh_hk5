@@ -1,5 +1,6 @@
-import Lesson01Layout from "../Lesson01Layout";
-import VocabBai1 from "../Vocab";
+import LessonLayout from "../../LessonLayout";
+import { lesson01 } from "../../lessons/lesson01";
+import VocabBai1 from "./Vocab";
 
 export function generateMetadata() {
   return { title: "GTHN q5 - Bài 01 - 生词" };
@@ -7,8 +8,8 @@ export function generateMetadata() {
 
 export default function Page() {
   return (
-    <Lesson01Layout activeMenuId="vocab">
+    <LessonLayout lesson={lesson01}>
       <VocabBai1 />
-    </Lesson01Layout>
+    </LessonLayout>
   );
 }

@@ -67,9 +67,9 @@ export default function Page() {
         </button>
       </div>
 
-      <article className="space-y-6">
+      <article className="space-y-1">
         {paragraphs.map((paragraph, paragraphIndex) => (
-          <section key={paragraphIndex} className="space-y-1">
+          <section key={paragraphIndex} className="ztai__paragraph">
             {paragraph.map((sentence, sentenceIndex) => {
               const id = `p${paragraphIndex}-${sentenceIndex}`;
 

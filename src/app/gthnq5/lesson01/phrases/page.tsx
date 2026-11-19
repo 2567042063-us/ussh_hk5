@@ -1,4 +1,5 @@
-import Lesson01Layout from "../Lesson01Layout";
+import LessonLayout from "../../LessonLayout";
+import { lesson01 } from "../../lessons/lesson01";
 
 export function generateMetadata() {
   return { title: "GTHN q5 - Bài 01 - 注释" };
@@ -6,7 +7,7 @@ export function generateMetadata() {
 
 export default function Page() {
   return (
-    <Lesson01Layout activeMenuId="phonetic">
+    <LessonLayout lesson={lesson01}>
       <main className="px-3 pb-8 pt-3 sm:px-6 sm:pb-10 sm:pt-3">
         <div className="inline-flex items-center gap-3 rounded-sm bg-stone-200 px-3 py-1.5">
           <span className="ztai__zh text-stone-600">二</span>
@@ -200,6 +201,6 @@ export default function Page() {
           </table>
         </section>
       </main>
-    </Lesson01Layout>
+    </LessonLayout>
   );
 }

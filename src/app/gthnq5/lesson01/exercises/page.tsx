@@ -1,5 +1,6 @@
-import Lesson01Layout from "../Lesson01Layout";
-import Baitap from "./BaiTap";
+import LessonLayout from "../../LessonLayout";
+import { lesson01 } from "../../lessons/lesson01";
+import ExercisesWithToggle from "./ExercisesWithToggle";
 
 export function generateMetadata() {
   return { title: "GTHN q5 - Bài 01 - Bài tập" };
@@ -7,8 +8,8 @@ export function generateMetadata() {
 
 export default function Page() {
   return (
-    <Lesson01Layout activeMenuId="exercises" hideHeader>
-      <Baitap />
-    </Lesson01Layout>
+    <LessonLayout lesson={lesson01} hideHeader>
+      <ExercisesWithToggle />
+    </LessonLayout>
   );
 }

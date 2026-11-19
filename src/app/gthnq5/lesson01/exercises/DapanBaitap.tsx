@@ -556,13 +556,13 @@ const SECTIONS: Section[] = [
 function Question({ item, open }: { item: Item; open: boolean }) {
   const parts = item.q.split("{}");
   return (
-    <p className="whitespace-pre-line font-serif text-lg leading-9 text-stone-900">
+    <p className="ztai__zh whitespace-pre-line font-serif text-lg leading-9 text-stone-900">
       {parts.map((p, i) => (
         <span key={i}>
           {p}
           {i < parts.length - 1 &&
             (open ? (
-              <span className="mx-1 border-b-2 border-blue-600 px-1 font-bold text-blue-700">
+              <span className="mx-1 border-b-2 border-sky-600 px-1 font-bold text-sky-700">
                 {item.a?.[i]}
               </span>
             ) : (
@@ -618,7 +618,7 @@ function Card({
               )}
               <p className="text-stone-500">{item.py}</p>
               <p className="text-stone-700">{item.vi}</p>
-              <p className="rounded-md bg-stone-50 p-3 text-stone-800">
+              <p className="rounded-md bg-sky-50 p-3 text-stone-800">
                 <span className="font-semibold">Giải thích: </span>
                 {item.note}
               </p>
@@ -650,7 +650,7 @@ export default function Lesson1BaiTap() {
   };
 
   return (
-    <div className="mx-auto px-4 py-8">
+    <div className="mx-auto p-4">
       <header>
         <p className="text-sm text-stone-500">
           汉语教程（第3版）第三册 上 · Hán ngữ giáo trình quyển 5

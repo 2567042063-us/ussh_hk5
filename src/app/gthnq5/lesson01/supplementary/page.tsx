@@ -1,4 +1,5 @@
-import Lesson01Layout from "../Lesson01Layout";
+import LessonLayout from "../../LessonLayout";
+import { lesson01 } from "../../lessons/lesson01";
 import BaiKhoaPhu from "./BaiKhoaPhu";
 
 export function generateMetadata() {
@@ -7,8 +8,8 @@ export function generateMetadata() {
 
 export default function Page() {
   return (
-    <Lesson01Layout activeMenuId="supplementary" hideHeader>
+    <LessonLayout lesson={lesson01} hideHeader>
       <BaiKhoaPhu />
-    </Lesson01Layout>
+    </LessonLayout>
   );
 }

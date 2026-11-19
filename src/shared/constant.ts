@@ -22,7 +22,7 @@ export const MAIN_NAV = [
   {
     id: "gthnq5",
     label: "GTHNq5",
-    href: "/gthnq5",
+    href: "/gthnq5/lesson01/vocab",
   },
   // {
   //   id: "about",

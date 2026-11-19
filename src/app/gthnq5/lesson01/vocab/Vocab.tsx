@@ -2876,8 +2876,8 @@ function Hl({
             key={i}
             className={
               chinese || /[\u3400-\u9fff]/.test(part)
-                ? "text-blue-700"
-                : "font-semibold text-blue-700"
+                ? "text-sky-700"
+                : "font-semibold text-sky-700"
             }
           >
             <ZhText text={part} />

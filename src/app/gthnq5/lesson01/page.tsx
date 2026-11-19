@@ -1,17 +1,5 @@
-import LayoutGrbtDashboard from "@shared/components/common/LayoutGrbtDashboard";
-
-import Lesson01Layout from "./Lesson01Layout";
-
-export function generateMetadata() {
-  return {
-    title: `GTHN q5 lesson 01`,
-  };
-}
+import { redirect } from "next/navigation";
 
 export default function Page() {
-  return (
-    <Lesson01Layout>
-      <LayoutGrbtDashboard />
-    </Lesson01Layout>
-  );
+  redirect("/gthnq5/lesson01/vocab");
 }

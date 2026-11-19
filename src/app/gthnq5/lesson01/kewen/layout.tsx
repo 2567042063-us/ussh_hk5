@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
-import Lesson01Layout from "../Lesson01Layout";
+import LessonLayout from "../../LessonLayout";
+import { lesson01 } from "../../lessons/lesson01";
 
 export const metadata: Metadata = {
   title: "GTHN q5 - Bài 01 - 课文",
@@ -9,7 +10,5 @@ export const metadata: Metadata = {
 export default function KewenLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
-  return (
-    <Lesson01Layout activeMenuId="kewen">{children}</Lesson01Layout>
-  );
+  return <LessonLayout lesson={lesson01}>{children}</LessonLayout>;
 }
