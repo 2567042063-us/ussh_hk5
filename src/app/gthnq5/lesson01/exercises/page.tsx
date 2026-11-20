@@ -10,7 +10,9 @@ export function generateMetadata() {
 export default function Page() {
   return (
     <LessonLayout lesson={lesson01} hideHeader>
-      <ExercisesQuiz />
+      <div className="px-5">
+        <ExercisesQuiz />
+      </div>
       <ExercisesWithToggle />
     </LessonLayout>
   );

@@ -6,7 +6,9 @@ html { scroll-behavior: smooth; scroll-padding-top: 80px; }
   .show-pinyin .pinyin { display: block; }
   .show-viet .viet { display: block; }
 
-  .pinyin { color: #0284c7; font-size: 0.9em; font-style: italic; }
+  .pinyin { color: #6d6154; font-size: 0.9em;
+     /* font-style: italic;  */
+    }
   .chinese {
         font-family: KaiTi, STKaiti, PingFang SC, Songti SC, SimSun, Noto Serif CJK SC, Noto Serif SC, serif;
     font-size: 1.5rem;
@@ -14,7 +16,7 @@ html { scroll-behavior: smooth; scroll-padding-top: 80px; }
    }
   .viet { color: #475569; font-size: 0.95em; }
 
-  .sentence { margin-bottom: 1rem; padding: 0.75rem; border-radius: 0.5rem; border-left: 3px solid transparent; }
+  .sentence {  padding: 0.75rem; border-radius: 0.5rem; border-left: 3px solid transparent; }
   .sentence:hover { background-color: #f0f9ff; border-left-color: #0284c7; }
 
   .menu-link { transition: all 0.2s; }

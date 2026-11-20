@@ -234,7 +234,7 @@ const SECTIONS: Section[] = [
         q: "我{}先在这儿学两年汉语，然后去别的大学学习中国经济（jīngjì, economy）。（打算 / 愿意）",
         a: ["打算"],
         py: "Wǒ dǎsuàn xiān zài zhèr xué liǎng nián Hànyǔ, ránhòu qù bié de dàxué xuéxí Zhōngguó jīngjì.",
-        vi: "Tôi dự định học tiếng Hán hai năm ở đây trước, sau đó sang trường đại học khác học kinh tế Trung Quốc.",
+        vi: "Tôi dự định học tiếng Trung hai năm ở đây trước, sau đó sang trường đại học khác học kinh tế Trung Quốc.",
         note: "打算: có kế hoạch, dự định cho tương lai. 愿意 là bằng lòng, sẵn lòng, nói về thái độ chứ không phải kế hoạch.",
       },
       {

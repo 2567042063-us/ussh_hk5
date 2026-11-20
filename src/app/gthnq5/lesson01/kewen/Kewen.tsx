@@ -5,7 +5,7 @@ export const paragraphs: Sentence[][] = [
     {
       zh: "我很早就希望能有机会来中国学习汉语，现在这个愿望终于实现了，心里有说不出的高兴。",
       py: "Wǒ hěn zǎo jiù xīwàng néng yǒu jīhuì lái Zhōngguó xuéxí Hànyǔ, xiànzài zhège yuànwàng zhōngyú shíxiàn le, xīnli yǒu shuō bu chū de gāoxìng.",
-      vi: "Từ rất sớm tôi đã mong có cơ hội đến Trung Quốc học tiếng Hán, giờ đây ước nguyện này cuối cùng đã thành hiện thực, trong lòng vui sướng không sao nói hết.",
+      vi: "Từ rất sớm tôi đã mong có cơ hội đến Trung Quốc học tiếng Trung, giờ đây ước nguyện này cuối cùng đã thành hiện thực, trong lòng vui sướng không sao nói hết.",
     },
   ],
   [
@@ -44,7 +44,7 @@ export const paragraphs: Sentence[][] = [
     {
       zh: "可是现在，我就是想学汉语，想到中国——这个古老而又年轻的国家去看看。",
       py: "Kěshì xiànzài, wǒ jiù shì xiǎng xué Hànyǔ, xiǎng dào Zhōngguó——zhège gǔlǎo ér yòu niánqīng de guójiā qù kànkan.",
-      vi: "Nhưng bây giờ, tôi chỉ muốn học tiếng Hán, muốn đến Trung Quốc — đất nước vừa cổ xưa vừa trẻ trung hiện đại này — để xem thử.",
+      vi: "Nhưng bây giờ, tôi chỉ muốn học tiếng Trung, muốn đến Trung Quốc — đất nước vừa cổ xưa vừa trẻ trung hiện đại này — để xem thử.",
     },
     {
       zh: "我对父母说：“我已经长大了，就像小鸟一样，该自己飞了。我要独立地生活，自由自在地去国外过一年，然后再考虑今后的打算。”",

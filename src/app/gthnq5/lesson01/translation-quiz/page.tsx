@@ -13,7 +13,7 @@ const translationLesson: Lesson = {
 };
 
 export function generateMetadata() {
-  return { title: "GTHN q5 - Bài 01 - 翻译" };
+  return { title: "GTHN q5 - Bài 01 - 越中翻译练习" };
 }
 
 export default function Page() {

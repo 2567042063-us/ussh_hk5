@@ -3135,10 +3135,10 @@ function EntryBody({ e }: { e: Entry }) {
 function VocabTable({ entries }: { entries: Entry[] }) {
   return (
     <div className="w-full min-w-0 max-w-full overflow-x-auto overscroll-x-contain">
-      <table className="min-w-190 xl:min-w-240 w-full table-fixed border-collapse text-slate-900">
+      <table className="min-w-100 xl:min-w-240 w-full table-fixed border-collapse text-slate-900">
         <colgroup>
           <col className="w-14" />
-          <col className="w-56" />
+          <col className="w-28" />
           <col className="w-28" />
           <col className="w-60" />
           <col />

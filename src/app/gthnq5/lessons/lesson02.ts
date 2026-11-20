@@ -8,9 +8,9 @@ export const lesson02 = {
     pinyin: "Dì-èr kè",
     ordinal: "第二课",
     label: "Lesson 2",
-    pronunciation: "trống",
-    title: "trống",
-    translation: "trống",
+    pronunciation: "Yì fēng xìn",
+    title: "一封信",
+    translation: "A letter",
   },
   menu: [
     { id: "vocab", title: "生词", href: "/gthnq5/lesson02/vocab" },

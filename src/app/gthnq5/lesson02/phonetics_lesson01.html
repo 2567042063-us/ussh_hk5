@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GTHNQ5 - Bài 01 - 语音 Phonetics</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen bg-stone-50 text-stone-800">
+  <div class="mx-auto max-w-5xl px-4 py-8 sm:px-8">
+    <header class="mb-8 rounded-2xl bg-white p-5 shadow-sm ring-1 ring-stone-200">
+      <div class="flex flex-wrap items-center gap-3 text-sm text-stone-500">
+        <span class="rounded-full bg-amber-100 px-3 py-1 font-semibold text-amber-800">GTHNQ5</span>
+        <span>Bài 01</span><span>•</span><span>语音 Phonetics</span>
+      </div>
+      <h1 class="mt-3 text-2xl font-bold tracking-tight sm:text-3xl">语音 · Phonetics</h1>
+      <p class="mt-2 text-stone-600">Luyện phân biệt phát âm, thanh điệu và đọc các cụm từ.</p>
+    </header>
+
+    <main class="space-y-8">
+      <section class="rounded-2xl bg-white p-5 shadow-sm ring-1 ring-stone-200 sm:p-7">
+        <div class="mb-5">
+          <h2 class="text-xl font-bold">(1) 辨音辨调</h2>
+          <p class="mt-1 text-stone-500">Distinguish the pronunciations and tones</p>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="w-full min-w-[520px] border-collapse text-left">
+            <thead><tr class="border-b border-stone-200 text-sm text-stone-500">
+              <th class="px-4 py-3 font-medium">左边</th><th class="px-4 py-3 font-medium">Pinyin</th><th class="px-4 py-3 font-medium">Tiếng Việt</th>
+              <th class="px-4 py-3 font-medium">右边</th><th class="px-4 py-3 font-medium">Pinyin</th><th class="px-4 py-3 font-medium">Tiếng Việt</th>
+            </tr></thead>
+            <tbody class="divide-y divide-stone-100">
+              <tr><td class="px-4 py-3 text-lg font-medium">个子</td><td class="px-4 py-3">gèzi</td><td class="px-4 py-3 text-stone-600">vóc dáng, chiều cao</td><td class="px-4 py-3 text-lg font-medium">各自</td><td class="px-4 py-3">gèzì</td><td class="px-4 py-3 text-stone-600">mỗi người / riêng từng người</td></tr>
+              <tr><td class="px-4 py-3 text-lg font-medium">放心</td><td class="px-4 py-3">fàng xīn</td><td class="px-4 py-3 text-stone-600">yên tâm</td><td class="px-4 py-3 text-lg font-medium">烦心</td><td class="px-4 py-3">fánxīn</td><td class="px-4 py-3 text-stone-600">phiền lòng, lo lắng</td></tr>
+              <tr><td class="px-4 py-3 text-lg font-medium">柔和</td><td class="px-4 py-3">róuhé</td><td class="px-4 py-3 text-stone-600">dịu dàng, mềm mại</td><td class="px-4 py-3 text-lg font-medium">如何</td><td class="px-4 py-3">rúhé</td><td class="px-4 py-3 text-stone-600">như thế nào</td></tr>
+              <tr><td class="px-4 py-3 text-lg font-medium">体质</td><td class="px-4 py-3">tǐzhì</td><td class="px-4 py-3 text-stone-600">thể chất</td><td class="px-4 py-3 text-lg font-medium">抵制</td><td class="px-4 py-3">dǐzhì</td><td class="px-4 py-3 text-stone-600">chống lại, phản đối</td></tr>
+              <tr><td class="px-4 py-3 text-lg font-medium">预防</td><td class="px-4 py-3">yùfáng</td><td class="px-4 py-3 text-stone-600">phòng ngừa</td><td class="px-4 py-3 text-lg font-medium">乙方</td><td class="px-4 py-3">yǐfāng</td><td class="px-4 py-3 text-stone-600">bên B (trong hợp đồng)</td></tr>
+              <tr><td class="px-4 py-3 text-lg font-medium">竹子</td><td class="px-4 py-3">zhúzi</td><td class="px-4 py-3 text-stone-600">cây tre</td><td class="px-4 py-3 text-lg font-medium">出自</td><td class="px-4 py-3">chūzì</td><td class="px-4 py-3 text-stone-600">xuất phát từ, bắt nguồn từ</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="rounded-2xl bg-white p-5 shadow-sm ring-1 ring-stone-200 sm:p-7">
+        <h2 class="text-xl font-bold">(2) 朗读</h2>
+        <p class="mt-1 text-stone-500">Read out the following phrases</p>
+        <div class="mt-5 space-y-4">
+          <article class="rounded-xl bg-stone-50 p-4 ring-1 ring-stone-100">
+            <p class="text-xl leading-loose sm:text-2xl">诗中有画，画中有诗。</p>
+            <p class="mt-2 text-stone-600">Shī zhōng yǒu huà, huà zhōng yǒu shī.</p>
+            <p class="mt-2 text-stone-700">Nơi thơ có tranh, trong tranh có thơ (ý nói thơ và tranh hòa quyện, có hình ảnh trong thơ và chất thơ trong tranh).</p>
+            <button onclick="speak('诗中有画，画中有诗。')" class="mt-3 inline-flex items-center gap-2 rounded-lg bg-amber-500 px-3 py-2 text-sm font-semibold text-white hover:bg-amber-600">🔊 Nghe đọc</button>
+          </article>
+          <article class="rounded-xl bg-stone-50 p-4 ring-1 ring-stone-100">
+            <p class="text-xl leading-loose sm:text-2xl">儿行千里母担忧。</p>
+            <p class="mt-2 text-stone-600">Ér xíng qiānlǐ mǔ dānyōu.</p>
+            <p class="mt-2 text-stone-700">Con đi xa ngàn dặm, mẹ luôn lo lắng.</p>
+            <button onclick="speak('儿行千里母担忧。')" class="mt-3 inline-flex items-center gap-2 rounded-lg bg-amber-500 px-3 py-2 text-sm font-semibold text-white hover:bg-amber-600">🔊 Nghe đọc</button>
+          </article>
+        </div>
+      </section>
+    </main>
+    <footer class="mt-8 text-center text-xs text-stone-400">Tailwind CSS · Responsive layout</footer>
+  </div>
+  <script>
+    function speak(text) {
+      if (!('speechSynthesis' in window)) { alert('Trình duyệt không hỗ trợ phát âm.'); return; }
+      speechSynthesis.cancel();
+      const utterance = new SpeechSynthesisUtterance(text);
+      utterance.lang = 'zh-CN';
+      utterance.rate = 0.85;
+      speechSynthesis.speak(utterance);
+    }
+  </script>
+</body>
+</html>

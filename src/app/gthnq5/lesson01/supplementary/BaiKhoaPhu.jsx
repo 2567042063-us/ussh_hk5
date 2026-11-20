@@ -93,7 +93,7 @@ const P = [
     [
       "在病房里,这位朋友还教我学汉语,成了我的辅导老师。",
       "Zài bìngfáng lǐ, zhè wèi péngyou hái jiāo wǒ xué Hànyǔ, chéng le wǒ de fǔdǎo lǎoshī.",
-      "Trong phòng bệnh, bạn ấy còn dạy tôi học tiếng Hán, trở thành gia sư của tôi.",
+      "Trong phòng bệnh, bạn ấy còn dạy tôi học tiếng Trung, trở thành gia sư của tôi.",
     ],
     [
       "{9|在}她的帮助下,我的功课并没有因为住院而落下。",
@@ -120,7 +120,7 @@ const C = [
     "A",
     "老师,我想去中国学汉语。",
     "Lǎoshī, wǒ xiǎng qù Zhōngguó xué Hànyǔ.",
-    "Thưa thầy, em muốn đến Trung Quốc học tiếng Hán.",
+    "Thưa thầy, em muốn đến Trung Quốc học tiếng Trung.",
   ],
   [
     "B",

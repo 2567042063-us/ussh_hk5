@@ -39,7 +39,10 @@ export default function Page() {
     }`;
 
   return (
-    <main className="px-3 pb-8 pt-3 sm:px-6 sm:pb-10 sm:pt-3">
+    <main
+      id="gthnq5bai1kewen"
+      className="px-3 pb-8 pt-3 sm:px-6 sm:pb-10 sm:pt-3"
+    >
       <div className="mb-3 w-full opacity-80">
         <audio controls preload="none" className="lesson-audio h-10 w-full">
           <source

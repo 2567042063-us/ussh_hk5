@@ -287,7 +287,7 @@ const TABS: Tab[] = [
         a: ["打算"],
         choices: [o("打算", "dǎsuàn"), o("愿意", "yuànyì")],
         py: "Wǒ dǎsuàn xiān zài zhèr xué liǎng nián Hànyǔ, ránhòu qù bié de dàxué xuéxí Zhōngguó jīngjì.",
-        vi: "Tôi dự định học tiếng Hán hai năm ở đây trước, sau đó sang trường đại học khác học kinh tế Trung Quốc.",
+        vi: "Tôi dự định học tiếng Trung hai năm ở đây trước, sau đó sang trường đại học khác học kinh tế Trung Quốc.",
         note: "打算: có kế hoạch, dự định cho tương lai. 愿意 là bằng lòng, sẵn lòng, nói về thái độ chứ không phải kế hoạch.",
       },
       {
@@ -846,7 +846,7 @@ function FillTab({ tab }: { tab: Tab }) {
   return (
     <div>
       {tab.options && (
-        <div className="mb-4 rounded-lg border border-dashed border-sky-300 bg-sky-50 p-3">
+        <div className="mb-4 rounded-lg border border-dashed border-stone-300 bg-stone-50 p-3">
           <div className="flex flex-wrap gap-x-5 gap-y-2">
             {tab.options.map((w) => (
               <span key={w.zh} className="text-center leading-tight">
@@ -884,9 +884,9 @@ function FillTab({ tab }: { tab: Tab }) {
                               setVals({ ...vals, [i]: cur });
                             }}
                             className={
-                              "mx-1 min-w-[4.5rem] cursor-pointer appearance-none rounded px-2 py-0.5 text-center text-base focus:outline-none " +
+                              "min-w-18 mx-1 cursor-pointer appearance-none rounded px-2 py-0.5 text-center text-base focus:outline-none " +
                               (!checked
-                                ? "bg-sky-50 text-slate-900 hover:bg-sky-100"
+                                ? "bg-blue-50 text-slate-900 hover:bg-stone-100"
                                 : res[j]
                                   ? "bg-emerald-100 text-emerald-800"
                                   : "bg-rose-100 text-rose-800")
@@ -1583,16 +1583,22 @@ export default function Lesson1Quiz() {
         汉语教程（第3版）第三册 上 · 第一课 离家的时候
       </p>
 
-      <div className="mb-5 flex gap-1 overflow-x-auto border-b border-slate-200">
+      <div className="mb-4 flex flex-wrap gap-2 bg-stone-50 py-3">
         {KEYS.map((k) => (
           <button
             key={k}
             onClick={() => setTab(k)}
+            // className={
+            //   "-mb-px shrink-0 rounded-t-md px-4 py-2 text-sm font-medium focus:outline-none " +
+            //   (k === tab
+            //     ? " bg-stone-800 text-white"
+            //     : "border-transparent text-slate-500 hover:text-slate-800")
+            // }
             className={
-              "-mb-px shrink-0 rounded-t-md border-b-2 px-4 py-2 text-sm font-medium focus:outline-none " +
+              "rounded-lg px-3 py-1.5 text-sm font-medium transition " +
               (k === tab
-                ? "border-sky-600 bg-sky-50 text-sky-700"
-                : "border-transparent text-slate-500 hover:text-slate-800")
+                ? "bg-stone-800 text-white hover:bg-stone-700"
+                : "border border-stone-300 text-stone-600 hover:bg-stone-100")
             }
           >
             Bài {k}

@@ -1,6 +1,6 @@
 "use client";
 
-import { useId, useState } from "react";
+import { useEffect, useId, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import clsx from "clsx";
@@ -29,9 +29,21 @@ export default function LessonSidebar({
   const sidebarId = useId();
   const pathname = usePathname();
 
+  useEffect(() => {
+    const mobileMedia = window.matchMedia("(max-width: 767px)");
+
+    const updateCollapsedState = () => setIsCollapsed(mobileMedia.matches);
+
+    updateCollapsedState();
+    mobileMedia.addEventListener("change", updateCollapsedState);
+
+    return () =>
+      mobileMedia.removeEventListener("change", updateCollapsedState);
+  }, []);
+
   return (
     <>
-      <div className="container mx-auto flex flex-1 gap-4 overflow-hidden px-3 md:px-0">
+      <div className="container mx-auto flex flex-1 overflow-hidden px-3 md:px-0">
         <aside
           id={sidebarId}
           aria-label="Danh mục các bài GTHNq5"
@@ -90,27 +102,35 @@ export default function LessonSidebar({
                       <div className="overflow-hidden">
                         <div className="pt-2">
                           {item.menu.map((menu) => (
-                          <div
-                            key={menu.id}
-                            className="flex justify-between gap-2 border-b border-dashed border-cyan-800/20 py-1 last:border-0 dark:border-slate-700"
-                          >
-                            <Link
-                              href={menu.href}
-                              prefetch={false}
-                              aria-current={
-                                pathname === menu.href ? "page" : undefined
-                              }
-                              tabIndex={isNavOpen ? 0 : -1}
-                              className={clsx(
-                                "inline-block px-2 text-slate-500 dark:text-sky-400",
-                                pathname === menu.href
-                                  ? classNameActive
-                                  : "hover:text-yellow-500 dark:hover:text-yellow-300",
-                              )}
+                            <div
+                              key={menu.id}
+                              className="flex justify-between gap-2 border-b border-dashed border-cyan-800/20 py-1 last:border-0 dark:border-slate-700"
                             >
-                              {menu.title}
-                            </Link>
-                          </div>
+                              <Link
+                                href={menu.href}
+                                prefetch={false}
+                                onClick={() => {
+                                  if (
+                                    window.matchMedia("(max-width: 767px)")
+                                      .matches
+                                  ) {
+                                    setIsCollapsed(true);
+                                  }
+                                }}
+                                aria-current={
+                                  pathname === menu.href ? "page" : undefined
+                                }
+                                tabIndex={isNavOpen ? 0 : -1}
+                                className={clsx(
+                                  "inline-block px-2 text-slate-500 dark:text-sky-400",
+                                  pathname === menu.href
+                                    ? classNameActive
+                                    : "hover:text-yellow-500 dark:hover:text-yellow-300",
+                                )}
+                              >
+                                {menu.title}
+                              </Link>
+                            </div>
                           ))}
                         </div>
                       </div>

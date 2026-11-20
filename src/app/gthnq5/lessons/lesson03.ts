@@ -5,12 +5,12 @@ export const lesson03 = {
   title: "GTHNq5 - Bài 03",
   basePath: "/gthnq5/lesson03",
   header: {
-    pinyin: "Dì-sān kè",
-    ordinal: "第三课",
-    label: "Lesson 3",
-    pronunciation: "trống",
-    title: "trống",
-    translation: "trống",
+    pinyin: "Dì-èr kè",
+    ordinal: "第二课",
+    label: "Lesson 2",
+    pronunciation: "Yì fēng xìn",
+    title: "一封信",
+    translation: "A letter",
   },
   menu: [
     { id: "vocab", title: "生词", href: "/gthnq5/lesson03/vocab" },
