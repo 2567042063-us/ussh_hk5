@@ -21,6 +21,7 @@
     "date-fns": "^3.6.0",
     "decimal.js": "^10.4.3",
     "framer-motion": "^11.13.1",
+    "hanzi-writer": "^3.7.3",
     "lightgallery": "^2.8.2",
     "lodash": "^4.17.21",
     "lucide-react": "^1.75.0",

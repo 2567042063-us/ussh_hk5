@@ -38,6 +38,11 @@ const vocabLoaders = new Map<string, () => Promise<VocabularySet>>([
 
 export const vocabMenu: IMenuGrbt = [
   {
+    id: "stroke-order",
+    title: "THỨ TỰ NÉT",
+    href: "/hk5/tuvung/stroke-order",
+  },
+  {
     id: "vocabQ3",
     title: "Từ vựng quyển 3",
     href: "/hk5/tuvung/vocabQ3",

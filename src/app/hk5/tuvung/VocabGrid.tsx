@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import HanziWriter from "hanzi-writer";
 
 type Props = {
   title: string; // tiêu đề trang, ví dụ "Từ vựng quyển 4"
@@ -50,6 +51,119 @@ const normalize = (s: string) =>
     .normalize("NFD")
     .replace(/[\u0300-\u036f]/g, "")
     .replace(/đ/g, "d");
+
+function VocabStrokePreview({ text }: { text: string }) {
+  const characters = useMemo(
+    () => text.split("").filter((char) => /[\u4e00-\u9fa5]/.test(char)),
+    [text],
+  );
+  const writersRef = useRef<(HanziWriter | null)[]>([]);
+  const containerRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+  useEffect(() => {
+    writersRef.current = [];
+
+    characters.forEach((char, index) => {
+      const targetEl = containerRefs.current[index];
+      if (!targetEl) return;
+
+      targetEl.innerHTML = "";
+      writersRef.current[index] = HanziWriter.create(targetEl, char, {
+        width: 96,
+        height: 96,
+        padding: 6,
+        showOutline: true,
+        outlineColor: "#E5E7EB",
+        strokeColor: "#4A4A4A",
+        strokeAnimationSpeed: 1.5,
+        delayBetweenStrokes: 120,
+        drawingFadeDuration: 400,
+      });
+    });
+
+    const timer = setTimeout(async () => {
+      for (const writer of writersRef.current) {
+        if (!writer) continue;
+        await new Promise<void>((resolve) => {
+          writer.animateCharacter({
+            onComplete: () => resolve(),
+          });
+        });
+      }
+    }, 150);
+
+    return () => clearTimeout(timer);
+  }, [characters]);
+
+  const replayCharacter = (index: number) => {
+    const writer = writersRef.current[index];
+    if (!writer) return;
+
+    writer.hideCharacter({
+      duration: 350,
+      onComplete: () => {
+        setTimeout(() => writer.animateCharacter(), 100);
+      },
+    });
+  };
+
+  return (
+    <div className="inline-flex flex-wrap border-l border-t border-slate-200 bg-white">
+      {characters.map((char, index) => (
+        <div
+          key={`${char}-${index}`}
+          onClick={() => replayCharacter(index)}
+          title="Bấm vào chữ để xem lại thứ tự nét"
+          className="relative h-24 w-24 cursor-pointer select-none border-b border-r border-slate-200"
+        >
+          <svg
+            className="pointer-events-none absolute inset-0 h-full w-full"
+            viewBox="0 0 96 96"
+          >
+            <line
+              x1="0"
+              y1="0"
+              x2="96"
+              y2="96"
+              stroke="#E5E7EB"
+              strokeWidth="1"
+            />
+            <line
+              x1="96"
+              y1="0"
+              x2="0"
+              y2="96"
+              stroke="#E5E7EB"
+              strokeWidth="1"
+            />
+            <line
+              x1="48"
+              y1="0"
+              x2="48"
+              y2="96"
+              stroke="#E5E7EB"
+              strokeWidth="1"
+            />
+            <line
+              x1="0"
+              y1="48"
+              x2="96"
+              y2="48"
+              stroke="#E5E7EB"
+              strokeWidth="1"
+            />
+          </svg>
+          <div
+            ref={(el) => {
+              containerRefs.current[index] = el;
+            }}
+            className="relative z-10 h-full w-full"
+          />
+        </div>
+      ))}
+    </div>
+  );
+}
 
 export default function VocabGrid({ title, words, groupByPos = true }: Props) {
   const [query, setQuery] = useState("");
@@ -154,7 +268,7 @@ export default function VocabGrid({ title, words, groupByPos = true }: Props) {
   );
 
   return (
-    <main className="mx-auto w-full max-w-5xl px-4 py-8 sm:px-6">
+    <main className="mx-auto w-full max-w-5xl px-4 pb-8 sm:px-6">
       <h1 className="mb-5 text-2xl font-semibold text-slate-900">{title}</h1>
 
       {/* Ô tìm kiếm */}
@@ -283,17 +397,13 @@ export default function VocabGrid({ title, words, groupByPos = true }: Props) {
               <div className="mx-auto mb-5 h-1.5 w-12 rounded-full bg-slate-200" />
               <div className="mb-4 flex items-center justify-between gap-3">
                 <div className="flex min-w-0 items-center gap-3">
-                  <div className="rounded-lg bg-slate-100 p-2.5 text-slate-800">
-                    <span className="ztai__zh text-2xl font-medium leading-[1.55]">
-                      {selected.hanzi}
-                    </span>
-                  </div>
                   <div className="min-w-0">
                     <h2 className="ztai__zh truncate text-3xl font-light leading-[1.55] text-slate-900">
                       {selected.hanzi}
                     </h2>
                     <p className="text-sm text-slate-500">{selected.pinyin}</p>
                   </div>
+                  <VocabStrokePreview text={selected.hanzi} />
                 </div>
                 <button
                   type="button"
