@@ -106,8 +106,8 @@ export default function ShaoweiYoudianrExercise() {
 
   return (
     <div className="min-h-screen text-stone-800">
-      <div className="mx-auto max-w-2xl px-4 py-10">
-        <header className="mb-8">
+      <div className="mx-auto max-w-3xl px-4 py-10">
+        <header className="mb-4">
           <h1 className="mb-2 border-b-2 border-t-2 border-dashed border-sky-600 py-3 text-center text-2xl font-extralight leading-tight text-sky-600 dark:text-primary-dark">
             Điền 稍微 hoặc 有点儿 vào chỗ trống
           </h1>
@@ -141,7 +141,7 @@ export default function ShaoweiYoudianrExercise() {
           </div>
         </header>
 
-        <ol className="space-y-5">
+        <ol className="space-y-3">
           {QUESTIONS.map((q) => {
             const choice = picked[q.id];
             const show = revealAll || choice !== undefined;
@@ -184,7 +184,7 @@ export default function ShaoweiYoudianrExercise() {
                   </div>
                 </div>
 
-                <div className="mt-4 flex flex-wrap gap-2 pl-9">
+                <div className="mt-2 flex flex-wrap gap-2 pl-9">
                   {CHOICES.map((c) => {
                     const isPicked = choice === c.word;
                     const isAnswer = q.answer === c.word;
@@ -230,18 +230,19 @@ export default function ShaoweiYoudianrExercise() {
           })}
         </ol>
 
-        <section className="mt-8 rounded-sm border border-stone-300 bg-stone-50 p-5">
+        <section className="mt-3 rounded-sm border border-sky-100 bg-sky-50 p-5">
           <h2 className="text-base font-semibold text-stone-900">
             Ghi nhớ nhanh
           </h2>
-          <ul className="mt-2 list-disc space-y-1 pl-5 text-sm leading-relaxed text-stone-700">
+          <ul className="mt-2 list-disc space-y-1 pl-5 text-sm leading-relaxed text-stone-900">
             <li>
               有点儿 (yǒudiǎnr) + tính từ: miêu tả trạng thái hiện tại, thường
-              không như ý. Ví dụ: 有点儿累 (hơi mệt), 有点儿贵 (hơi đắt).
+              không như ý. <br />
+              Ví dụ: 有点儿累 (hơi mệt), 有点儿贵 (hơi đắt).
             </li>
             <li>
-              稍微 (shāowēi) + động từ/tính từ + 一点儿/一下: mức độ nhẹ, hay
-              dùng trong câu đề nghị. Ví dụ: 稍微等一下 (đợi một chút).
+              稍微 (shāowēi) + động từ/tính từ + 一点儿/一下 <br /> mức độ nhẹ,
+              hay dùng trong câu đề nghị. Ví dụ: 稍微等一下 (đợi một chút).
             </li>
             <li>
               Câu có 请 hoặc ý nhờ bảo thường dùng 稍微, không dùng 有点儿.
