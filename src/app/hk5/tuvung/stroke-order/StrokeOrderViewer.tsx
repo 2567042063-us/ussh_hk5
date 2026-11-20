@@ -86,7 +86,8 @@ export default function StrokeOrderViewer() {
           padding: 10,
           showOutline: true, // Hiện nét mờ nền trước và trong khi vẽ
           outlineColor: "#E5E7EB", // Màu xám nhạt hài hòa với đường kẻ ô
-          strokeColor: "#4A4A4A", // Màu xám đậm của nét vẽ
+          strokeColor: "#0369a1", // Màu xám đậm của nét vẽ
+          radicalColor: "#ca8a04",
           strokeAnimationSpeed: 1.5, // Tốc độ vẽ
           delayBetweenStrokes: 120, // Thời gian nghỉ giữa các nét (ms)
           drawingFadeDuration: 400,

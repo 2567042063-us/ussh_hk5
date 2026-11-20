@@ -11,7 +11,7 @@ import {
   M,
   N,
   NU,
-  O,
+  // O,
   P,
   PN,
   Q,
@@ -1187,7 +1187,7 @@ export const book4: Word[] = [
   w(
     "哈",
     "hā",
-    O,
+    I,
     "ha ha (tiếng cười)",
     25,
     e("哈哈，太好笑了！", "Hā hā, tài hǎoxiào le!", "Ha ha, buồn cười quá!"),
