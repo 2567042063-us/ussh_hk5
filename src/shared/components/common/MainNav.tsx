@@ -14,19 +14,30 @@ export default function MainNav() {
     <div className="ml-auto hidden lg:flex lg:items-center">
       {MAIN_NAV.map((item) => {
         const isActive = isMainNavActive(currentRoute, item);
+        const isHome = item.id === "home";
         return (
           <Link
             key={item.id}
             href={item.href}
             className={clsx(
-              "relative ml-8 border-b-[5px] text-lg font-light lowercase",
-              isActive
+              "relative ml-8",
+              isHome
+                ? "flex-none font-semibold"
+                : "border-b-[5px] text-lg font-light lowercase",
+              !isHome && isActive
                 ? classNameActive
-                : "border-transparent hover:text-sky-500 dark:hover:text-sky-300",
+                : !isHome &&
+                    "border-transparent hover:text-sky-500 dark:hover:text-sky-300",
             )}
           >
-            {item.label}
-            {isActive ? (
+            {isHome ? (
+              <span className="bg-linear-to-r bg-size-[200%_auto] mb-20 animate-linear from-yellow-300 via-sky-400 to-yellow-300 bg-clip-text text-2xl font-bold text-transparent">
+                NNT HK5
+              </span>
+            ) : (
+              item.label
+            )}
+            {isActive && !isHome ? (
               <hr className="absolute -bottom-1 -left-1/4 h-px w-[150%] border-0 bg-gray-700 dark:bg-gray-300" />
             ) : (
               ""

@@ -20,6 +20,11 @@ export const MAIN_NAV = [
     href: "/hk5",
   },
   {
+    id: "nguphap",
+    label: "Ngữ Pháp",
+    href: "/nguphap",
+  },
+  {
     id: "gthnq5",
     label: "GTHNq5",
     href: "/gthnq5/lesson01/vocab",
@@ -36,6 +41,7 @@ export const isMainNavActive = (
   item: { id: string; href: string },
 ) =>
   pathname === item.href ||
+  (item.id === "nguphap" && pathname.startsWith(`${item.href}/`)) ||
   (item.id === "gthnq5" && pathname.startsWith("/gthnq5"));
 
 // fileName === filename ? classNameActive : "",

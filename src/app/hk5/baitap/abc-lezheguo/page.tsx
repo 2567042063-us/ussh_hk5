@@ -2,7 +2,6 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 import BaiTapLeZheGuo from "@shared/components/baitap/BaiTapLeZheGuo";
-
 import Footer from "@shared/components/common/Footer";
 import Header from "@shared/components/common/Header";
 
@@ -323,7 +322,7 @@ export default function Page() {
             rel="noopener noreferrer"
             className="text-blue-600 hover:underline"
           >
-            Ref: Verb-ing away (着) - Tiffany's Mandarin
+            Ref: Verb-ing away (着) - Tiffany&apos;s Mandarin
           </Link>
         </div>
       </div>

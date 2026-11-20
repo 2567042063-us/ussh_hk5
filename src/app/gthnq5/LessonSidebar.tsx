@@ -43,14 +43,16 @@ export default function LessonSidebar({
 
   return (
     <>
-      <div className="container mx-auto flex flex-1 overflow-hidden px-3 md:px-0">
+      <div className="container mx-auto flex flex-1 overflow-x-clip px-3 md:px-0">
         <aside
           id={sidebarId}
           aria-label="Danh mục các bài GTHNq5"
           aria-hidden={isCollapsed}
           inert={isCollapsed}
-          className={`relative shrink-0 overflow-hidden transition-[width] duration-300 ease-in-out ${
-            isCollapsed ? "w-0" : "w-75"
+          className={`sticky top-0 shrink-0 overflow-hidden transition-[width] duration-300 ease-in-out ${
+            isCollapsed
+              ? "h-0 w-0 md:h-[calc(100dvh-5rem)]"
+              : "w-75 h-[calc(100dvh-3.5rem)] md:h-[calc(100dvh-5rem)]"
           }`}
         >
           <div
@@ -58,7 +60,7 @@ export default function LessonSidebar({
               isCollapsed ? "-translate-x-full" : "translate-x-0"
             }`}
           >
-            <div className="h-full rounded-sm border border-cyan-800/20 p-3 dark:border-slate-700">
+            <div className="h-full overflow-y-auto rounded-sm border border-cyan-800/20 p-3 dark:border-slate-700">
               {lessons.map((item) => {
                 const isNavOpen = openLessonIds.includes(item.id);
                 const itemNavId = `${sidebarId}-${item.id}-nav`;

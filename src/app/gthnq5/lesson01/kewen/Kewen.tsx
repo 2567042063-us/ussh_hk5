@@ -11,12 +11,12 @@ export const paragraphs: Sentence[][] = [
   [
     {
       zh: "从去年夏天起，我就忙着联系学校，办各种手续，可是，这一切都是瞒着我父母做的。",
-      py: "Cóng qùnián xiàtiān qǐ, wǒ jiù mángzhe liánxì xuéxiào, bàn gèzhǒng shǒuxù, kěshì, zhè yīqiè dōu shì mánzhe wǒ fùmǔ zuò de.",
+      py: "Cóng qùnián xiàtiān qǐ, wǒ jiù mángzhe liánxì xuéxiào, bàn gèzhǒng shǒuxù, kěshì, zhè yíqiè dōu shì mánzhe wǒ fùmǔ zuò de.",
       vi: "Từ mùa hè năm ngoái, tôi bận rộn liên hệ trường học, làm đủ loại thủ tục, nhưng tất cả những việc này đều là giấu bố mẹ tôi làm.",
     },
     {
       zh: "我是独生女，如果把这件事告诉父母，他们多半不会同意，因此，我只跟朋友和教我汉语的老师商量，把一切手续都办好以后才告诉他们。",
-      py: "Wǒ shì dúshēngnǚ, rúguǒ bǎ zhè jiàn shì gàosu fùmǔ, tāmen duōbàn bú huì tóngyì, yīncǐ, wǒ zhǐ gēn péngyou hé jiāo wǒ Hànyǔ de lǎoshī shāngliang, bǎ yīqiè shǒuxù dōu bànhǎo yǐhòu cái gàosu tāmen.",
+      py: "Wǒ shì dúshēngnǚ, rúguǒ bǎ zhè jiàn shì gàosu fùmǔ, tāmen duōbàn bú huì tóngyì, yīncǐ, wǒ zhǐ gēn péngyou hé jiāo wǒ Hànyǔ de lǎoshī shāngliang, bǎ yíqiè shǒuxù dōu bànhǎo yǐhòu cái gàosu tāmen.",
       vi: "Tôi là con gái một, nếu nói chuyện này với bố mẹ thì nhiều khả năng họ sẽ không đồng ý, vì vậy tôi chỉ bàn bạc với bạn bè và cô giáo dạy tiếng Trung, đợi làm xong hết các thủ tục rồi mới nói với họ.",
     },
     {
@@ -65,7 +65,7 @@ export const paragraphs: Sentence[][] = [
     },
     {
       zh: "爸爸说：“最好常常跟我们视频聊聊天儿，告诉我们你在中国的一切。”",
-      py: "Bàba shuō: “Zuìhǎo chángcháng gēn wǒmen shìpín liáoliao tiānr, gàosu wǒmen nǐ zài Zhōngguó de yīqiè.”",
+      py: "Bàba shuō: “Zuìhǎo chángcháng gēn wǒmen shìpín liáoliao tiānr, gàosu wǒmen nǐ zài Zhōngguó de yíqiè.”",
       vi: "Bố nói: “Tốt nhất là thường xuyên gọi video trò chuyện với bố mẹ, kể cho bố mẹ nghe mọi chuyện của con ở Trung Quốc.”",
     },
     {

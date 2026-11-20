@@ -30,7 +30,7 @@ export const paragraphs: Para[] = [
       },
       {
         zh: "我现在一切都很好，吃得好，睡得好，学习也不错。",
-        py: "Wǒ xiànzài yīqiè dōu hěn hǎo, chī de hǎo, shuì de hǎo, xuéxí yě búcuò.",
+        py: "Wǒ xiànzài yíqiè dōu hěn hǎo, chī de hǎo, shuì de hǎo, xuéxí yě búcuò.",
         vi: "Bây giờ mọi thứ của con đều rất tốt, ăn ngon, ngủ ngon, việc học cũng không tệ.",
       },
       {
@@ -282,4 +282,3 @@ export const questions: Sentence[] = [
     vi: "Hãy giới thiệu mấy tấm ảnh này.",
   },
 ];
-
