@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import { Search } from "lucide-react";
 
 type Ex = [zh: string, py: string, vi: string];
 type Point = {
@@ -888,13 +889,17 @@ export default function NguPhapGTHN() {
       <header className="sticky top-0 z-10 backdrop-blur">
         <div className="mx-auto max-w-5xl px-4 py-4">
           <div className="relative mt-3">
+            <Search
+              aria-hidden="true"
+              className="pointer-events-none absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-stone-400"
+            />
             <input
               value={q}
               onChange={(e) => setQ(e.target.value)}
               type="search"
               placeholder="Tìm điểm ngữ pháp: 了, 比, bổ ngữ, bi, ruguo, trạng thái…"
               aria-label="Tìm điểm ngữ pháp"
-              className="w-full rounded-lg border border-stone-300 bg-white py-2.5 pl-4 pr-10 text-stone-900 placeholder:text-stone-400 focus:border-stone-500 focus:outline-none focus:ring-2 focus:ring-stone-400/40"
+              className="w-full rounded-lg border border-stone-300 bg-white py-2.5 pl-11 pr-10 text-stone-900 placeholder:text-stone-400 focus:border-stone-500 focus:outline-none focus:ring-2 focus:ring-stone-400/40"
             />
             {q && (
               <button
@@ -934,7 +939,7 @@ export default function NguPhapGTHN() {
                     <span className="text-sm tabular-nums text-stone-400">
                       {n}.
                     </span>
-                    <h2 className="font-semibold text-stone-900">{p.name}</h2>
+                    <h2 className="font-semibold text-sky-800">{p.name}</h2>
                     {p.lesson && (
                       <span className="rounded bg-stone-200 px-1.5 py-0.5 text-xs text-stone-600">
                         {p.lesson} · từ PDF
@@ -946,7 +951,7 @@ export default function NguPhapGTHN() {
                       {p.structure.map((s) => (
                         <li
                           key={s}
-                          className="ztai__zh rounded bg-slate-50 px-2 py-1 text-xl"
+                          className="ztai__py rounded-lg border border-stone-200/80 bg-stone-100/90 p-2.5 text-sm text-stone-800"
                         >
                           {s}
                         </li>

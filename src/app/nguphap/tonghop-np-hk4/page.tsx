@@ -1,10 +1,10 @@
 import NguphapLayout from "../NguphapLayout";
-import NguPhapGTHN from "./NguPhapGTHN";
+import NguPhapGTHNq3 from "./NguPhapGTHNq3";
 
 export default function TongHop2Page() {
   return (
     <NguphapLayout>
-      <NguPhapGTHN />
+      <NguPhapGTHNq3 />
     </NguphapLayout>
   );
 }
