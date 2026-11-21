@@ -20,7 +20,7 @@ export default function Page() {
         <div className="mx-auto max-w-3xl px-4 py-10">
           <header>
             <h1 className="mb-2 border-b-2 border-t-2 border-dashed border-sky-600 py-3 text-center text-2xl font-extralight leading-tight text-sky-600 dark:text-primary-dark">
-              Sắp xếp câu
+              Sắp xếp câu HSK4
             </h1>
 
             <Link

@@ -13,6 +13,7 @@ type Question = {
   words: string[];
   answer: string[];
   pinyin: string;
+  vi?: string;
 };
 
 const QUESTIONS: Question[] = [
@@ -43,12 +44,14 @@ const QUESTIONS: Question[] = [
       "了",
     ],
     pinyin: "Wǒ yǐjīng bǎ zhīdào de shìqing quándōu gàosu nǐ le",
+    vi: "Tôi đã nói hết tất cả những chuyện tôi biết cho bạn rồi.",
   },
   {
     id: "2",
     words: ["送给", "这", "想", "玛丽", "特别", "我", "礼物", "份", "的"],
     answer: ["这", "份", "特别", "的", "礼物", "我", "想", "送给", "玛丽"],
     pinyin: "Zhè fèn tèbié de lǐwù wǒ xiǎng sònggěi Mǎlì",
+    vi: "Món quà đặc biệt này tôi muốn tặng cho Mary.",
   },
   {
     id: "3",
@@ -79,6 +82,7 @@ const QUESTIONS: Question[] = [
       "瓶子里",
     ],
     pinyin: "Méi hē guo de qǐng dào zài zhèxiē lǜsè de píngzi lǐ",
+    vi: "Những chai chưa uống thì xin hãy rót vào những cái chai màu xanh lá này.",
   },
   {
     id: "4",
@@ -109,6 +113,7 @@ const QUESTIONS: Question[] = [
       "电影",
     ],
     pinyin: "Tāmen yǐjīng bǎ zhè běn yǒumíng xiǎoshuō pāi chéng le diànyǐng",
+    vi: "Họ đã chuyển thể cuốn tiểu thuyết nổi tiếng này thành phim rồi.",
   },
   {
     id: "5",
@@ -139,6 +144,7 @@ const QUESTIONS: Question[] = [
       "菜",
     ],
     pinyin: "Dàjiā zài wǎnhuì shàng kěyǐ yìqǐ pǐncháng gèguó de tèsè cài",
+    vi: "Mọi người có thể cùng nhau thưởng thức các món đặc sản của nhiều nước trong buổi tiệc.",
   },
   {
     id: "6",
@@ -170,12 +176,14 @@ const QUESTIONS: Question[] = [
     ],
     pinyin:
       "Wǒmen yòng cǎidēng hé cǎidài bǎ shèngdànshù zhuāngshì de fēicháng piàoliang",
+    vi: "Chúng tôi dùng đèn màu và dây ruy băng trang trí cây thông Noel rất đẹp.",
   },
   {
     id: "7",
     words: ["大门", "爸爸", "上", "贴了", "的", "红红", "在", "对联", "一副"],
     answer: ["爸爸", "在", "大门", "上", "贴了", "一副", "红红", "的", "对联"],
     pinyin: "Bàba zài dàmén shàng tiēle yí fù hónghóng de duìlián",
+    vi: "Bố dán một đôi câu đối đỏ lên cánh cổng.",
   },
 ];
 
@@ -291,10 +299,6 @@ export default function SentenceOrdering() {
             </span>
           </div>
 
-          <h1 className="mb-4 text-base text-stone-800">
-            Sắp xếp các từ thành một câu hoàn chỉnh.
-          </h1>
-
           {/* Khung xếp câu */}
           <div
             aria-label="Câu đã xếp"
@@ -396,6 +400,9 @@ export default function SentenceOrdering() {
                 {q.answer.join("")}
               </p>
               <p className="mt-1 text-sm text-sky-700">{q.pinyin}</p>
+              <p className="mt-3 border-t border-sky-100 pt-3 text-sm text-stone-700">
+                {q.vi}
+              </p>
             </div>
           )}
         </section>
