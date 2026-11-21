@@ -170,17 +170,6 @@ export default function ShaoweiYoudianrExercise() {
                       </span>
                       {q.after}
                     </p>
-                    <p className="mt-1 text-sm text-stone-500">
-                      {q.pinyinBefore}{" "}
-                      <span className={show ? "font-medium text-sky-700" : ""}>
-                        {show
-                          ? q.answer === "稍微"
-                            ? "shāowēi"
-                            : "yǒudiǎnr"
-                          : "____"}
-                      </span>{" "}
-                      {q.pinyinAfter}
-                    </p>
                   </div>
                 </div>
 
@@ -206,7 +195,7 @@ export default function ShaoweiYoudianrExercise() {
                         }
                         className={`rounded-sm border px-4 py-2 text-sm transition focus:outline-none focus-visible:ring-2 focus-visible:ring-stone-500 focus-visible:ring-offset-2 disabled:cursor-default ${style}`}
                       >
-                        {c.word} <span className="opacity-70">{c.pinyin}</span>
+                        {c.word}
                       </button>
                     );
                   })}
@@ -221,8 +210,19 @@ export default function ShaoweiYoudianrExercise() {
                           : `Chưa đúng, đáp án là ${q.answer}.`}
                       </p>
                     )}
-                    <p className="text-stone-700">{q.explanation}</p>
-                    <p className="mt-2 text-stone-500">Dịch: {q.vi}</p>
+                    <p className="text-light text-stone-700">{q.explanation}</p>
+                    <p className="mt-2 text-sm text-stone-500">
+                      {q.pinyinBefore}{" "}
+                      <span className={show ? "font-medium text-sky-700" : ""}>
+                        {show
+                          ? q.answer === "稍微"
+                            ? "shāowēi"
+                            : "yǒudiǎnr"
+                          : "____"}
+                      </span>{" "}
+                      {q.pinyinAfter}
+                    </p>
+                    <p className="mt-1 text-stone-500">{q.vi}</p>
                   </div>
                 )}
               </li>

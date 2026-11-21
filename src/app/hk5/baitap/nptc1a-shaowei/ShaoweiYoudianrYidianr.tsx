@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { Check, X } from "lucide-react";
 
 type Choice = "稍微" | "有点儿" | "一点儿";
 
@@ -53,7 +54,11 @@ const COMPARE = [
   },
   {
     label: "Câu cầu khiến",
-    cells: ["Dùng được", "Không dùng được", "Dùng được"],
+    cells: [
+      <Check key="check-1" />,
+      <X key="circle-x" />,
+      <Check key="check-2" />,
+    ],
   },
   {
     label: "Ví dụ",
@@ -281,161 +286,159 @@ export default function ShaoweiYoudianrYidianr() {
   };
 
   return (
-    <div className="min-h-screen text-stone-800">
-      <div className="mx-auto max-w-3xl px-4">
-        <p className="mt-1 text-sm text-stone-500">
-          Xem bảng so sánh, sau đó làm 20 câu để thấy sự khác biệt.
-        </p>
+    <>
+      <p className="mt-1 text-sm text-stone-500">
+        Xem bảng so sánh, sau đó làm 20 câu để thấy sự khác biệt.
+      </p>
 
-        <section className="overflow-x-auto rounded-sm border border-stone-300 bg-white">
-          <table className="min-w-160 w-full border-collapse text-left text-sm">
-            <thead>
-              <tr className="bg-stone-200 text-stone-900">
-                <th className="w-28 px-4 py-3 font-medium"></th>
-                {CHOICES.map((c) => (
-                  <th key={c} className="px-4 py-3 font-medium">
-                    <span className="text-base">{c}</span>{" "}
-                    <span className="font-normal text-stone-600">
-                      {PINYIN[c]}
-                    </span>
-                  </th>
+      <section className="overflow-x-auto rounded-sm border border-stone-300 bg-white">
+        <table className="min-w-160 w-full border-collapse text-left text-sm">
+          <thead>
+            <tr className="bg-stone-200 text-stone-900">
+              <th className="w-28 px-4 py-3 font-medium"></th>
+              {CHOICES.map((c) => (
+                <th key={c} className="px-4 py-3 font-medium">
+                  <span className="ztai__zh block text-3xl">{c}</span>{" "}
+                  <span className="font-normal text-stone-600">
+                    {PINYIN[c]}
+                  </span>
+                </th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {COMPARE.map((row) => (
+              <tr
+                key={row.label}
+                className="border-t border-stone-200 align-top"
+              >
+                <th className="bg-stone-50 px-4 py-3 font-medium text-stone-700">
+                  {row.label}
+                </th>
+                {row.cells.map((cell, i) => (
+                  <td
+                    key={i}
+                    className="whitespace-pre-line px-4 py-3 leading-relaxed text-stone-700"
+                  >
+                    {cell}
+                  </td>
                 ))}
               </tr>
-            </thead>
-            <tbody>
-              {COMPARE.map((row) => (
-                <tr
-                  key={row.label}
-                  className="border-t border-stone-200 align-top"
-                >
-                  <th className="bg-stone-50 px-4 py-3 font-medium text-stone-700">
-                    {row.label}
-                  </th>
-                  {row.cells.map((cell, i) => (
-                    <td
-                      key={i}
-                      className="whitespace-pre-line px-4 py-3 leading-relaxed text-stone-700"
+            ))}
+          </tbody>
+        </table>
+      </section>
+
+      <h2 className="mb-4 mt-10 text-lg font-semibold text-stone-900">
+        Bài tập: chọn 稍微, 有点儿 hoặc 一点儿
+      </h2>
+
+      <ol className="space-y-5">
+        {QUESTIONS.map((q, i) => {
+          const choice = picked[i];
+          const show = revealAll || choice !== undefined;
+          const correct = choice === q.answer;
+
+          return (
+            <li
+              key={i}
+              className="rounded-sm border border-stone-300 bg-white p-5"
+            >
+              <div className="flex gap-3">
+                <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-stone-200 text-xs font-medium text-stone-700">
+                  {i + 1}
+                </span>
+                <div className="min-w-0">
+                  <p className="text-xl leading-relaxed text-stone-900">
+                    {q.before}
+                    <span
+                      className={`mx-1 inline-block min-w-[4.5rem] border-b-2 px-1 text-center ${
+                        show
+                          ? "border-sky-600 font-medium text-sky-700"
+                          : "border-stone-400 text-transparent"
+                      }`}
                     >
-                      {cell}
-                    </td>
-                  ))}
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </section>
-
-        <h2 className="mb-4 mt-10 text-lg font-semibold text-stone-900">
-          Bài tập: chọn 稍微, 有点儿 hoặc 一点儿
-        </h2>
-
-        <ol className="space-y-5">
-          {QUESTIONS.map((q, i) => {
-            const choice = picked[i];
-            const show = revealAll || choice !== undefined;
-            const correct = choice === q.answer;
-
-            return (
-              <li
-                key={i}
-                className="rounded-xl border border-stone-300 bg-white p-5 shadow-sm"
-              >
-                <div className="flex gap-3">
-                  <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-stone-200 text-xs font-medium text-stone-700">
-                    {i + 1}
-                  </span>
-                  <div className="min-w-0">
-                    <p className="text-xl leading-relaxed text-stone-900">
-                      {q.before}
-                      <span
-                        className={`mx-1 inline-block min-w-[4.5rem] border-b-2 px-1 text-center ${
-                          show
-                            ? "border-sky-600 font-medium text-sky-700"
-                            : "border-stone-400 text-transparent"
-                        }`}
-                      >
-                        {show ? q.answer : "＿＿"}
-                      </span>
-                      {q.after}
-                    </p>
-                    <p className="mt-1 text-sm text-stone-500">
-                      {q.pinyinBefore}{" "}
-                      <span className={show ? "font-medium text-sky-700" : ""}>
-                        {show ? PINYIN[q.answer] : "____"}
-                      </span>{" "}
-                      {q.pinyinAfter}
-                    </p>
-                  </div>
+                      {show ? q.answer : "＿＿"}
+                    </span>
+                    {q.after}
+                  </p>
                 </div>
+              </div>
 
-                <div className="mt-4 flex flex-wrap gap-2 pl-9">
-                  {CHOICES.map((c) => {
-                    const isPicked = choice === c;
-                    const isAnswer = q.answer === c;
-                    let style =
-                      "border-stone-300 bg-stone-50 text-stone-700 hover:bg-stone-200";
-                    if (choice !== undefined && isAnswer)
-                      style = "border-sky-600 bg-sky-600 text-white";
-                    else if (isPicked && !isAnswer)
-                      style =
-                        "border-stone-400 bg-stone-200 text-stone-500 line-through";
+              <div className="mt-4 flex flex-wrap gap-2 pl-9">
+                {CHOICES.map((c) => {
+                  const isPicked = choice === c;
+                  const isAnswer = q.answer === c;
+                  let style =
+                    "border-stone-300 bg-stone-50 text-stone-700 hover:bg-stone-200";
+                  if (choice !== undefined && isAnswer)
+                    style = "border-sky-600 bg-sky-600 text-white";
+                  else if (isPicked && !isAnswer)
+                    style =
+                      "border-stone-400 bg-stone-200 text-stone-500 line-through";
 
-                    return (
-                      <button
-                        key={c}
-                        type="button"
-                        disabled={choice !== undefined}
-                        onClick={() => setPicked((p) => ({ ...p, [i]: c }))}
-                        className={`rounded-lg border px-4 py-2 text-sm transition focus:outline-none focus-visible:ring-2 focus-visible:ring-stone-500 focus-visible:ring-offset-2 disabled:cursor-default ${style}`}
-                      >
-                        {c} <span className="opacity-70">{PINYIN[c]}</span>
-                      </button>
-                    );
-                  })}
+                  return (
+                    <button
+                      key={c}
+                      type="button"
+                      disabled={choice !== undefined}
+                      onClick={() => setPicked((p) => ({ ...p, [i]: c }))}
+                      className={`rounded-lg border px-4 py-2 text-sm transition focus:outline-none focus-visible:ring-2 focus-visible:ring-stone-500 focus-visible:ring-offset-2 disabled:cursor-default ${style}`}
+                    >
+                      {c}
+                    </button>
+                  );
+                })}
+              </div>
+
+              {show && (
+                <div className="ml-9 mt-4 rounded-lg border border-stone-200 bg-stone-50 p-4 text-sm leading-relaxed">
+                  {choice !== undefined && (
+                    <p className="mb-2 font-medium text-sky-700">
+                      {correct
+                        ? "Chính xác."
+                        : `Chưa đúng, đáp án là ${q.answer}.`}
+                    </p>
+                  )}
+                  <p className="text-stone-700">{q.explanation}</p>
+                  <p className="mt-2 text-sm text-stone-500">
+                    {q.pinyinBefore}{" "}
+                    <span className={show ? "font-medium text-sky-700" : ""}>
+                      {show ? PINYIN[q.answer] : "____"}
+                    </span>{" "}
+                    {q.pinyinAfter}
+                  </p>
+                  <p className="mt-1 text-stone-500">{q.vi}</p>
                 </div>
+              )}
+            </li>
+          );
+        })}
+      </ol>
 
-                {show && (
-                  <div className="ml-9 mt-4 rounded-lg border border-stone-200 bg-stone-50 p-4 text-sm leading-relaxed">
-                    {choice !== undefined && (
-                      <p className="mb-2 font-medium text-sky-700">
-                        {correct
-                          ? "Chính xác."
-                          : `Chưa đúng, đáp án là ${q.answer}.`}
-                      </p>
-                    )}
-                    <p className="text-stone-700">{q.explanation}</p>
-                    <p className="mt-2 text-stone-500">Dịch: {q.vi}</p>
-                  </div>
-                )}
-              </li>
-            );
-          })}
-        </ol>
-
-        <footer className="mt-8 flex flex-wrap items-center justify-between gap-3">
-          <p className="text-sm text-stone-600">
-            {done
-              ? `Kết quả: ${score}/${QUESTIONS.length} câu đúng`
-              : `Đã làm ${answered}/${QUESTIONS.length} câu`}
-          </p>
-          <div className="flex gap-2">
-            <button
-              type="button"
-              onClick={() => setRevealAll((v) => !v)}
-              className="rounded-lg border border-stone-300 bg-white px-4 py-2 text-sm text-stone-700 transition hover:bg-stone-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-stone-500"
-            >
-              {revealAll ? "Ẩn đáp án" : "Xem tất cả đáp án"}
-            </button>
-            <button
-              type="button"
-              onClick={reset}
-              className="rounded-lg bg-stone-800 px-4 py-2 text-sm text-stone-50 transition hover:bg-stone-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-stone-500 focus-visible:ring-offset-2"
-            >
-              Làm lại
-            </button>
-          </div>
-        </footer>
-      </div>
-    </div>
+      <footer className="mt-8 flex flex-wrap items-center justify-between gap-3">
+        <p className="text-sm text-stone-600">
+          {done
+            ? `Kết quả: ${score}/${QUESTIONS.length} câu đúng`
+            : `Đã làm ${answered}/${QUESTIONS.length} câu`}
+        </p>
+        <div className="flex gap-2">
+          <button
+            type="button"
+            onClick={() => setRevealAll((v) => !v)}
+            className="rounded-lg border border-stone-300 bg-white px-4 py-2 text-sm text-stone-700 transition hover:bg-stone-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-stone-500"
+          >
+            {revealAll ? "Ẩn đáp án" : "Xem tất cả đáp án"}
+          </button>
+          <button
+            type="button"
+            onClick={reset}
+            className="rounded-lg bg-stone-800 px-4 py-2 text-sm text-stone-50 transition hover:bg-stone-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-stone-500 focus-visible:ring-offset-2"
+          >
+            Làm lại
+          </button>
+        </div>
+      </footer>
+    </>
   );
 }
