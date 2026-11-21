@@ -71,9 +71,9 @@ const P = [
       "Đúng lúc tôi cảm thấy vô cùng cô độc và cô đơn, tôi gặp một bạn sinh viên Trung Quốc rất nhiệt tình.",
     ],
     [
-      "{8|正好}与我同住一个病房,每天都邀请我一起下楼去吃饭、散步。",
-      "Zhènghǎo yǔ wǒ tóng zhù yí ge bìngfáng, měitiān dōu yāoqǐng wǒ yìqǐ xià lóu qù chīfàn, sànbù.",
-      "Vừa hay bạn ấy ở cùng phòng bệnh với tôi, ngày nào cũng mời tôi cùng xuống lầu ăn cơm, đi dạo.",
+      "{8|她}与我同住一个病房,每天都邀请我一起下楼去吃饭、散步。",
+      "Tā yǔ wǒ tóng zhù yí ge bìngfáng, měitiān dōu yāoqǐng wǒ yìqǐ xià lóu qù chīfàn, sànbù.",
+      "Cô ấy ở chung phòng bệnh với tôi, ngày nào cũng rủ tôi cùng xuống lầu ăn cơm, đi dạo.",
     ],
     [
       "我觉得心情一下子好多了。",
