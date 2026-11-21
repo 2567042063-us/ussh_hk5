@@ -1,8 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
-import { UndoDot } from "lucide-react";
 
 type Choice = "稍微" | "有点儿";
 
@@ -105,175 +103,158 @@ export default function ShaoweiYoudianrExercise() {
   };
 
   return (
-    <div className="min-h-screen text-stone-800">
-      <div className="mx-auto max-w-3xl px-4 py-10">
-        <header className="mb-4">
-          <h1 className="mb-2 border-b-2 border-t-2 border-dashed border-sky-600 py-3 text-center text-2xl font-extralight leading-tight text-sky-600 dark:text-primary-dark">
-            Điền 稍微 hoặc 有点儿 vào chỗ trống
-          </h1>
-
-          <Link
-            href="/hk5/baitap"
-            prefetch={false}
-            className="flex text-sky-600 hover:text-yellow-600 dark:text-sky-300 dark:hover:text-yellow-400"
-          >
-            <UndoDot />
-            <span> Bài tập</span>
-          </Link>
-
-          <div className="mt-3 grid gap-3 sm:grid-cols-2">
-            {CHOICES.map((c) => (
-              <div
-                key={c.word}
-                className="rounded-sm border border-stone-300 bg-stone-50 px-4 py-3 text-sm"
-              >
-                <p className="text-base font-medium text-stone-900">
-                  <span className="ztai__zh text-3xl">{c.word} </span>
-                  <span className="font-normal text-stone-500">{c.pinyin}</span>
-                </p>
-                <p className="mt-1 text-stone-600">
-                  {c.word === "稍微"
-                    ? "Một chút, hơi. Hay dùng khi đề nghị hoặc so sánh, không mang sắc thái bất mãn."
-                    : "Hơi, có chút. Diễn tả trạng thái không như ý, thường mang sắc thái bất mãn."}
-                </p>
-              </div>
-            ))}
-          </div>
-        </header>
-
-        <ol className="space-y-3">
-          {QUESTIONS.map((q) => {
-            const choice = picked[q.id];
-            const show = revealAll || choice !== undefined;
-            const correct = choice === q.answer;
-
-            return (
-              <li
-                key={q.id}
-                className="rounded-sm border border-stone-300 bg-white p-5"
-              >
-                <div className="flex gap-3">
-                  <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-stone-200 text-xs font-medium text-stone-700">
-                    {q.id}
-                  </span>
-                  <div className="min-w-0">
-                    <p className="text-xl leading-relaxed text-stone-900">
-                      {q.before}
-                      <span
-                        className={`mx-1 inline-block min-w-[4.5rem] border-b-2 px-1 text-center ${
-                          show
-                            ? "border-sky-600 font-medium text-sky-700"
-                            : "border-stone-400 text-transparent"
-                        }`}
-                      >
-                        {show ? q.answer : "＿＿"}
-                      </span>
-                      {q.after}
-                    </p>
-                  </div>
-                </div>
-
-                <div className="mt-2 flex flex-wrap gap-2 pl-9">
-                  {CHOICES.map((c) => {
-                    const isPicked = choice === c.word;
-                    const isAnswer = q.answer === c.word;
-                    let style =
-                      "border-stone-300 bg-stone-50 text-stone-700 hover:bg-stone-200";
-                    if (choice !== undefined && isAnswer)
-                      style = "border-sky-600 bg-sky-600 text-white";
-                    else if (isPicked && !isAnswer)
-                      style =
-                        "border-stone-400 bg-stone-200 text-stone-500 line-through";
-
-                    return (
-                      <button
-                        key={c.word}
-                        type="button"
-                        disabled={choice !== undefined}
-                        onClick={() =>
-                          setPicked((p) => ({ ...p, [q.id]: c.word }))
-                        }
-                        className={`rounded-sm border px-4 py-2 text-sm transition focus:outline-none focus-visible:ring-2 focus-visible:ring-stone-500 focus-visible:ring-offset-2 disabled:cursor-default ${style}`}
-                      >
-                        {c.word}
-                      </button>
-                    );
-                  })}
-                </div>
-
-                {show && (
-                  <div className="ml-9 mt-4 rounded-sm border border-stone-200 bg-stone-50 p-4 text-sm leading-relaxed">
-                    {choice !== undefined && (
-                      <p className="mb-2 font-medium text-sky-700">
-                        {correct
-                          ? "Chính xác."
-                          : `Chưa đúng, đáp án là ${q.answer}.`}
-                      </p>
-                    )}
-                    <p className="text-light text-stone-700">{q.explanation}</p>
-                    <p className="mt-2 text-sm text-stone-500">
-                      {q.pinyinBefore}{" "}
-                      <span className={show ? "font-medium text-sky-700" : ""}>
-                        {show
-                          ? q.answer === "稍微"
-                            ? "shāowēi"
-                            : "yǒudiǎnr"
-                          : "____"}
-                      </span>{" "}
-                      {q.pinyinAfter}
-                    </p>
-                    <p className="mt-1 text-stone-500">{q.vi}</p>
-                  </div>
-                )}
-              </li>
-            );
-          })}
-        </ol>
-
-        <section className="mt-3 rounded-sm border border-sky-100 bg-sky-50 p-5">
-          <h2 className="text-base font-semibold text-stone-900">
-            Ghi nhớ nhanh
-          </h2>
-          <ul className="mt-2 list-disc space-y-1 pl-5 text-sm leading-relaxed text-stone-900">
-            <li>
-              有点儿 (yǒudiǎnr) + tính từ: miêu tả trạng thái hiện tại, thường
-              không như ý. <br />
-              Ví dụ: 有点儿累 (hơi mệt), 有点儿贵 (hơi đắt).
-            </li>
-            <li>
-              稍微 (shāowēi) + động từ/tính từ + 一点儿/一下 <br /> mức độ nhẹ,
-              hay dùng trong câu đề nghị. Ví dụ: 稍微等一下 (đợi một chút).
-            </li>
-            <li>
-              Câu có 请 hoặc ý nhờ bảo thường dùng 稍微, không dùng 有点儿.
-            </li>
-          </ul>
-        </section>
-
-        <footer className="mt-6 flex flex-wrap items-center justify-between gap-3">
-          <p className="text-sm text-stone-600">
-            {done
-              ? `Kết quả: ${score}/${QUESTIONS.length} câu đúng`
-              : `Đã làm ${answered}/${QUESTIONS.length} câu`}
-          </p>
-          <div className="flex gap-2">
-            <button
-              type="button"
-              onClick={() => setRevealAll((v) => !v)}
-              className="rounded-sm border border-stone-300 bg-white px-4 py-2 text-sm text-stone-700 transition hover:bg-stone-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-stone-500"
+    <>
+      <div className="mb-4">
+        <div className="mt-3 grid gap-3 sm:grid-cols-2">
+          {CHOICES.map((c) => (
+            <div
+              key={c.word}
+              className="rounded-sm border border-stone-300 bg-stone-50 px-4 py-3 text-sm"
             >
-              {revealAll ? "Ẩn đáp án" : "Xem tất cả đáp án"}
-            </button>
-            <button
-              type="button"
-              onClick={reset}
-              className="rounded-sm bg-stone-800 px-4 py-2 text-sm text-stone-50 transition hover:bg-stone-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-stone-500 focus-visible:ring-offset-2"
-            >
-              Làm lại
-            </button>
-          </div>
-        </footer>
+              <p className="text-base font-medium text-stone-900">
+                <span className="ztai__zh text-3xl">{c.word} </span>
+                <span className="font-normal text-stone-500">{c.pinyin}</span>
+              </p>
+              <p className="mt-1 text-stone-600">
+                {c.word === "稍微"
+                  ? "Một chút, hơi. Hay dùng khi đề nghị hoặc so sánh, không mang sắc thái bất mãn."
+                  : "Hơi, có chút. Diễn tả trạng thái không như ý, thường mang sắc thái bất mãn."}
+              </p>
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+
+      <ol className="space-y-3">
+        {QUESTIONS.map((q) => {
+          const choice = picked[q.id];
+          const show = revealAll || choice !== undefined;
+          const correct = choice === q.answer;
+
+          return (
+            <li
+              key={q.id}
+              className="rounded-sm border border-stone-300 bg-white p-5"
+            >
+              <div className="flex gap-3">
+                <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-stone-200 text-xs font-medium text-stone-700">
+                  {q.id}
+                </span>
+                <div className="min-w-0">
+                  <p className="text-xl leading-relaxed text-stone-900">
+                    {q.before}
+                    <span
+                      className={`mx-1 inline-block min-w-[4.5rem] border-b-2 px-1 text-center ${
+                        show
+                          ? "border-sky-600 font-medium text-sky-700"
+                          : "border-stone-400 text-transparent"
+                      }`}
+                    >
+                      {show ? q.answer : "＿＿"}
+                    </span>
+                    {q.after}
+                  </p>
+                </div>
+              </div>
+
+              <div className="mt-2 flex flex-wrap gap-2 pl-9">
+                {CHOICES.map((c) => {
+                  const isPicked = choice === c.word;
+                  const isAnswer = q.answer === c.word;
+                  let style =
+                    "border-stone-300 bg-stone-50 text-stone-700 hover:bg-stone-200";
+                  if (choice !== undefined && isAnswer)
+                    style = "border-sky-600 bg-sky-600 text-white";
+                  else if (isPicked && !isAnswer)
+                    style =
+                      "border-stone-400 bg-stone-200 text-stone-500 line-through";
+
+                  return (
+                    <button
+                      key={c.word}
+                      type="button"
+                      disabled={choice !== undefined}
+                      onClick={() =>
+                        setPicked((p) => ({ ...p, [q.id]: c.word }))
+                      }
+                      className={`rounded-sm border px-4 py-2 text-sm transition focus:outline-none focus-visible:ring-2 focus-visible:ring-stone-500 focus-visible:ring-offset-2 disabled:cursor-default ${style}`}
+                    >
+                      {c.word}
+                    </button>
+                  );
+                })}
+              </div>
+
+              {show && (
+                <div className="ml-9 mt-4 rounded-sm border border-stone-200 bg-stone-50 p-4 text-sm leading-relaxed">
+                  {choice !== undefined && (
+                    <p className="mb-2 font-medium text-sky-700">
+                      {correct
+                        ? "Chính xác."
+                        : `Chưa đúng, đáp án là ${q.answer}.`}
+                    </p>
+                  )}
+                  <p className="text-light text-stone-700">{q.explanation}</p>
+                  <p className="mt-2 text-sm text-stone-500">
+                    {q.pinyinBefore}{" "}
+                    <span className={show ? "font-medium text-sky-700" : ""}>
+                      {show
+                        ? q.answer === "稍微"
+                          ? "shāowēi"
+                          : "yǒudiǎnr"
+                        : "____"}
+                    </span>{" "}
+                    {q.pinyinAfter}
+                  </p>
+                  <p className="mt-1 text-stone-500">{q.vi}</p>
+                </div>
+              )}
+            </li>
+          );
+        })}
+      </ol>
+
+      <section className="mt-3 rounded-sm border border-sky-100 bg-sky-50 p-5">
+        <h2 className="text-base font-semibold text-stone-900">
+          Ghi nhớ nhanh
+        </h2>
+        <ul className="mt-2 list-disc space-y-1 pl-5 text-sm leading-relaxed text-stone-900">
+          <li>
+            有点儿 (yǒudiǎnr) + tính từ: miêu tả trạng thái hiện tại, thường
+            không như ý. <br />
+            Ví dụ: 有点儿累 (hơi mệt), 有点儿贵 (hơi đắt).
+          </li>
+          <li>
+            稍微 (shāowēi) + động từ/tính từ + 一点儿/一下 <br /> mức độ nhẹ,
+            hay dùng trong câu đề nghị. Ví dụ: 稍微等一下 (đợi một chút).
+          </li>
+          <li>Câu có 请 hoặc ý nhờ bảo thường dùng 稍微, không dùng 有点儿.</li>
+        </ul>
+      </section>
+
+      <footer className="mt-6 flex flex-wrap items-center justify-between gap-3">
+        <p className="text-sm text-stone-600">
+          {done
+            ? `Kết quả: ${score}/${QUESTIONS.length} câu đúng`
+            : `Đã làm ${answered}/${QUESTIONS.length} câu`}
+        </p>
+        <div className="flex gap-2">
+          <button
+            type="button"
+            onClick={() => setRevealAll((v) => !v)}
+            className="rounded-sm border border-stone-300 bg-white px-4 py-2 text-sm text-stone-700 transition hover:bg-stone-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-stone-500"
+          >
+            {revealAll ? "Ẩn đáp án" : "Xem tất cả đáp án"}
+          </button>
+          <button
+            type="button"
+            onClick={reset}
+            className="rounded-sm bg-stone-800 px-4 py-2 text-sm text-stone-50 transition hover:bg-stone-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-stone-500 focus-visible:ring-offset-2"
+          >
+            Làm lại
+          </button>
+        </div>
+      </footer>
+    </>
   );
 }

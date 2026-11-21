@@ -11,8 +11,12 @@ export const metadata: Metadata = {
 
 const btNptc1aHrefs = [
   {
-    name: "稍微 hoặc 有点儿",
+    name: "nptc1a __ 稍微 hoặc 有点儿",
     href: "/hk5/baitap/nptc1a-shaowei",
+  },
+  {
+    name: "〔 draft 〕 ccad __ 第十七课翻译练习",
+    href: "/hk5/baitap/ccad-dich01",
   },
 ];
 

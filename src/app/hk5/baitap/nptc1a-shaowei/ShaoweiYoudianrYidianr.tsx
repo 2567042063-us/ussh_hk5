@@ -291,8 +291,8 @@ export default function ShaoweiYoudianrYidianr() {
         Xem bảng so sánh, sau đó làm 20 câu để thấy sự khác biệt.
       </p>
 
-      <section className="overflow-x-auto rounded-sm border border-stone-300 bg-white">
-        <table className="min-w-160 w-full border-collapse text-left text-sm">
+      <section className="hidden rounded-sm border border-stone-300 bg-white sm:block sm:overflow-x-auto">
+        <table className="w-full min-w-160 border-collapse text-left text-sm">
           <thead>
             <tr className="bg-stone-200 text-stone-900">
               <th className="w-28 px-4 py-3 font-medium"></th>
@@ -329,6 +329,34 @@ export default function ShaoweiYoudianrYidianr() {
         </table>
       </section>
 
+      <section className="space-y-3 sm:hidden" aria-label="Bảng so sánh">
+        {COMPARE.map((row) => (
+          <article
+            key={row.label}
+            className="overflow-hidden rounded-sm border border-stone-300 bg-white"
+          >
+            <h3 className="bg-stone-100 px-3 py-2 text-sm font-medium text-stone-700">
+              {row.label}
+            </h3>
+            <div className="divide-y divide-stone-200">
+              {CHOICES.map((choice, i) => (
+                <div key={choice} className="grid grid-cols-[5.5rem_1fr] gap-2 px-3 py-3">
+                  <div className="text-sm font-medium text-stone-800">
+                    <span className="ztai__zh block text-xl">{choice}</span>
+                    <span className="font-normal text-xs text-stone-500">
+                      {PINYIN[choice]}
+                    </span>
+                  </div>
+                  <div className="whitespace-pre-line text-sm leading-relaxed text-stone-700">
+                    {row.cells[i]}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </article>
+        ))}
+      </section>
+
       <h2 className="mb-4 mt-10 text-lg font-semibold text-stone-900">
         Bài tập: chọn 稍微, 有点儿 hoặc 一点儿
       </h2>
@@ -342,17 +370,17 @@ export default function ShaoweiYoudianrYidianr() {
           return (
             <li
               key={i}
-              className="rounded-sm border border-stone-300 bg-white p-5"
+              className="rounded-sm border border-stone-300 bg-white p-3 sm:p-5"
             >
               <div className="flex gap-3">
                 <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-stone-200 text-xs font-medium text-stone-700">
                   {i + 1}
                 </span>
                 <div className="min-w-0">
-                  <p className="text-xl leading-relaxed text-stone-900">
+                  <p className="text-lg leading-relaxed text-stone-900 sm:text-xl">
                     {q.before}
                     <span
-                      className={`mx-1 inline-block min-w-[4.5rem] border-b-2 px-1 text-center ${
+                      className={`mx-0.5 inline-block min-w-[4rem] border-b-2 px-1 text-center sm:mx-1 sm:min-w-[4.5rem] ${
                         show
                           ? "border-sky-600 font-medium text-sky-700"
                           : "border-stone-400 text-transparent"
@@ -365,7 +393,7 @@ export default function ShaoweiYoudianrYidianr() {
                 </div>
               </div>
 
-              <div className="mt-4 flex flex-wrap gap-2 pl-9">
+              <div className="mt-4 grid grid-cols-3 gap-2 sm:flex sm:flex-wrap">
                 {CHOICES.map((c) => {
                   const isPicked = choice === c;
                   const isAnswer = q.answer === c;
@@ -383,7 +411,7 @@ export default function ShaoweiYoudianrYidianr() {
                       type="button"
                       disabled={choice !== undefined}
                       onClick={() => setPicked((p) => ({ ...p, [i]: c }))}
-                      className={`rounded-lg border px-4 py-2 text-sm transition focus:outline-none focus-visible:ring-2 focus-visible:ring-stone-500 focus-visible:ring-offset-2 disabled:cursor-default ${style}`}
+                      className={`min-h-11 rounded-lg border px-2 py-2 text-sm transition focus:outline-none focus-visible:ring-2 focus-visible:ring-stone-500 focus-visible:ring-offset-2 disabled:cursor-default sm:min-h-0 sm:px-4 ${style}`}
                     >
                       {c}
                     </button>
@@ -392,7 +420,7 @@ export default function ShaoweiYoudianrYidianr() {
               </div>
 
               {show && (
-                <div className="ml-9 mt-4 rounded-lg border border-stone-200 bg-stone-50 p-4 text-sm leading-relaxed">
+                <div className="mt-4 rounded-lg border border-stone-200 bg-stone-50 p-3 text-sm leading-relaxed sm:ml-9 sm:p-4">
                   {choice !== undefined && (
                     <p className="mb-2 font-medium text-sky-700">
                       {correct
@@ -416,17 +444,17 @@ export default function ShaoweiYoudianrYidianr() {
         })}
       </ol>
 
-      <footer className="mt-8 flex flex-wrap items-center justify-between gap-3">
-        <p className="text-sm text-stone-600">
+      <footer className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between">
+        <p className="text-sm text-stone-600 sm:flex-none">
           {done
             ? `Kết quả: ${score}/${QUESTIONS.length} câu đúng`
             : `Đã làm ${answered}/${QUESTIONS.length} câu`}
         </p>
-        <div className="flex gap-2">
+        <div className="grid grid-cols-2 gap-2 sm:flex">
           <button
             type="button"
             onClick={() => setRevealAll((v) => !v)}
-            className="rounded-lg border border-stone-300 bg-white px-4 py-2 text-sm text-stone-700 transition hover:bg-stone-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-stone-500"
+            className="rounded-lg border border-stone-300 bg-white px-3 py-2 text-sm text-stone-700 transition hover:bg-stone-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-stone-500 sm:px-4"
           >
             {revealAll ? "Ẩn đáp án" : "Xem tất cả đáp án"}
           </button>
