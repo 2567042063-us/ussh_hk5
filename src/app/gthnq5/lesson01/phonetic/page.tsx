@@ -10,7 +10,7 @@ export default function Page() {
     <LessonLayout lesson={lesson01}>
       <main className="px-3 pb-8 pt-3 sm:px-6 sm:pb-10 sm:pt-3">
         <div className="inline-flex items-center gap-3 rounded-sm bg-stone-200 px-3 py-1.5">
-          <span className="ztai__zh text-stone-600">二</span>
+          <span className="ztai__zh text-stone-600">五</span>
           <span className="rounded bg-stone-500 px-2 py-0.5 text-white">
             <span className="ztai__zh">语音</span>{" "}
             <span className="text-sm">Yǔyīn</span>{" "}

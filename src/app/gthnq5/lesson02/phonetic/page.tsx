@@ -10,7 +10,7 @@ export default function Page() {
     <LessonLayout lesson={lesson02}>
       <main className="px-3 pb-8 pt-3 sm:px-6 sm:pb-10 sm:pt-3">
         <div className="inline-flex items-center gap-3 rounded-sm bg-stone-200 px-3 py-1.5">
-          <span className="ztai__zh text-stone-600">二</span>
+          <span className="ztai__zh text-stone-600">五</span>
           <span className="rounded bg-stone-500 px-2 py-0.5 text-white">
             <span className="ztai__zh">语音</span>{" "}
             <span className="text-sm">Yǔyīn</span>{" "}
@@ -48,10 +48,14 @@ export default function Page() {
                 <tr>
                   <td className="ztai__zh p-3 px-4 py-3 text-2xl">个子</td>
                   <td className="px-4 py-3">gèzi</td>
-                  <td className="px-4 py-3 text-stone-600">vóc dáng, chiều cao</td>
+                  <td className="px-4 py-3 text-stone-600">
+                    vóc dáng, chiều cao
+                  </td>
                   <td className="ztai__zh p-3 px-4 py-3 text-2xl">各自</td>
                   <td className="px-4 py-3">gèzì</td>
-                  <td className="px-4 py-3 text-stone-600">mỗi người / riêng từng người</td>
+                  <td className="px-4 py-3 text-stone-600">
+                    mỗi người / riêng từng người
+                  </td>
                 </tr>
                 <tr>
                   <td className="ztai__zh p-3 px-4 py-3 text-2xl">放心</td>
@@ -59,12 +63,16 @@ export default function Page() {
                   <td className="px-4 py-3 text-stone-600">yên tâm</td>
                   <td className="ztai__zh p-3 px-4 py-3 text-2xl">烦心</td>
                   <td className="px-4 py-3">fánxīn</td>
-                  <td className="px-4 py-3 text-stone-600">phiền lòng, lo lắng</td>
+                  <td className="px-4 py-3 text-stone-600">
+                    phiền lòng, lo lắng
+                  </td>
                 </tr>
                 <tr>
                   <td className="ztai__zh p-3 px-4 py-3 text-2xl">柔和</td>
                   <td className="px-4 py-3">róuhé</td>
-                  <td className="px-4 py-3 text-stone-600">dịu dàng, mềm mại</td>
+                  <td className="px-4 py-3 text-stone-600">
+                    dịu dàng, mềm mại
+                  </td>
                   <td className="ztai__zh p-3 px-4 py-3 text-2xl">如何</td>
                   <td className="px-4 py-3">rúhé</td>
                   <td className="px-4 py-3 text-stone-600">như thế nào</td>
@@ -75,7 +83,9 @@ export default function Page() {
                   <td className="px-4 py-3 text-stone-600">thể chất</td>
                   <td className="ztai__zh p-3 px-4 py-3 text-2xl">抵制</td>
                   <td className="px-4 py-3">dǐzhì</td>
-                  <td className="px-4 py-3 text-stone-600">chống lại, phản đối</td>
+                  <td className="px-4 py-3 text-stone-600">
+                    chống lại, phản đối
+                  </td>
                 </tr>
                 <tr>
                   <td className="ztai__zh p-3 px-4 py-3 text-2xl">预防</td>
@@ -83,7 +93,9 @@ export default function Page() {
                   <td className="px-4 py-3 text-stone-600">phòng ngừa</td>
                   <td className="ztai__zh p-3 px-4 py-3 text-2xl">乙方</td>
                   <td className="px-4 py-3">yǐfāng</td>
-                  <td className="px-4 py-3 text-stone-600">bên B (trong hợp đồng)</td>
+                  <td className="px-4 py-3 text-stone-600">
+                    bên B (trong hợp đồng)
+                  </td>
                 </tr>
                 <tr>
                   <td className="ztai__zh p-3 px-4 py-3 text-2xl">竹子</td>
@@ -91,7 +103,9 @@ export default function Page() {
                   <td className="px-4 py-3 text-stone-600">cây tre</td>
                   <td className="ztai__zh p-3 px-4 py-3 text-2xl">出自</td>
                   <td className="px-4 py-3">chūzì</td>
-                  <td className="px-4 py-3 text-stone-600">xuất phát từ, bắt nguồn từ</td>
+                  <td className="px-4 py-3 text-stone-600">
+                    xuất phát từ, bắt nguồn từ
+                  </td>
                 </tr>
               </tbody>
             </table>
