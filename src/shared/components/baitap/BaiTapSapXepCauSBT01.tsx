@@ -628,7 +628,7 @@ export default function BaiTapSapXepCauSGK() {
     <div className="bt">
       <style dangerouslySetInnerHTML={{ __html: CSS }} />
       <div className="bt-w">
-        <h1>Sắp xếp câu tiếng Trung</h1>
+        <h1>Sắp xếp câu - SBT01</h1>
         <p className="bt-sub">
           {ITEMS.length} câu. Sắp xếp các từ thành một câu hoàn chỉnh: chạm từ
           để xếp, chạm lại để gỡ ra.
@@ -754,7 +754,7 @@ export default function BaiTapSapXepCauSGK() {
 /* ───────────────────────── CSS (nhúng sẵn) ───────────────────────── */
 
 const CSS = `
-.bt{--bg:#fff;--card:#fff;--tx:#222;--mu:#6b6b6b;--bd:#e3ded4;--ac:#c0392b;--acbg:#fbeae7;--ok:#2e7d32;--okbg:#e6f4e7;--no:#c0392b;
+.bt{--bg:#fff;--card:#fff;--tx:#222;--mu:#6b6b6b;--bd:#e3ded4;--ac:#0284c7;--acbg:#f0f9ff;--ok:#2e7d32;--okbg:#e6f4e7;--no:#0284c7;
 box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
 background:var(--bg);color:var(--tx);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.5}
 @media (prefers-color-scheme:dark){.bt{color-scheme:dark;--bg:#1d293d;--card:#0f172a;--tx:#ece8e0;--mu:#a09a8e;--bd:#3a3731;--ac:#ff8a78;--acbg:#3a2623;--ok:#7bd88a;--okbg:#22331f;--no:#ff8a78}}

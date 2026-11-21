@@ -15,6 +15,11 @@ const btNptc1aHrefs = [
     href: "/hk5/baitap/nptc1a-shaowei",
   },
   {
+    name: "nptc1a __ sắp xếp câu",
+    href: "/hk5/baitap/nptc1a-sxc",
+  },
+
+  {
     name: "〔 draft 〕 ccad __ 第十七课翻译练习",
     href: "/hk5/baitap/ccad-dich01",
   },
@@ -49,7 +54,10 @@ const btHrefs = [
     name: "Bài tập 就 才 再 又",
     href: "/hk5/baitap/abcd-youzaicaijiu",
   },
-
+  {
+    name: "Sắp xếp câu HSK4",
+    href: "/hk5/baitap/sapxephsk4",
+  },
   {
     name: "Sắp xếp 302 câu tiếng Trung HSK 3-4-5",
     href: "/hk5/baitap/sapxep302cau",

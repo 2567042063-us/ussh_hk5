@@ -1374,7 +1374,7 @@ export default function BoNguKetQuaGoDapAn() {
 }
 
 const CSS = `
-.bnkq{--bg:#fff;--card:#fff;--tx:#222;--mu:#6b6b6b;--bd:#e3ded4;--ac:#0284c7;--acbg:#f0f9ff;--ok:#2e7d32;--okbg:#e6f4e7;--no:#c0392b;
+.bnkq{--bg:#fff;--card:#fff;--tx:#222;--mu:#6b6b6b;--bd:#e3ded4;--ac:#0284c7;--acbg:#f0f9ff;--ok:#2e7d32;--okbg:#e6f4e7;--no:#0284c7;
 background:var(--bg);color:var(--tx);min-height:100vh;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.5;color-scheme:light dark}
 @media(prefers-color-scheme:dark){.bnkq{--bg:#101b2c;--card:#101b2c;--tx:#ece8e0;--mu:#a09a8e;--bd:#3a3731;--ac:#ff8a78;--acbg:#3a2623;--ok:#7bd88a;--okbg:#22331f;--no:#ff8a78}}
 .bnkq *{box-sizing:border-box}

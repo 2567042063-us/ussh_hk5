@@ -658,14 +658,14 @@ export default function GaiCuoiBaiTap() {
           </div>
         </div>
 
-        <section className="rounded-xl border border-stone-300 bg-white px-5 py-2">
+        <section className="rounded-sm border border-stone-300 bg-white px-5 py-2">
           <p className="text-sm text-stone-500">Câu sai</p>
           <p className="text-2xl leading-relaxed" lang="zh-CN">
             {wrong}
           </p>
         </section>
 
-        <section className="flex flex-col gap-3 rounded-xl border border-stone-300 bg-white px-5 py-2">
+        <section className="flex flex-col gap-3 rounded-sm border border-stone-300 bg-white px-5 py-2">
           <label htmlFor="ans" className="text-sm text-stone-500">
             Câu của bạn (sửa trực tiếp ở đây)
           </label>

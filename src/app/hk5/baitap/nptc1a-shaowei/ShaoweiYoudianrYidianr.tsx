@@ -292,7 +292,7 @@ export default function ShaoweiYoudianrYidianr() {
       </p>
 
       <section className="hidden rounded-sm border border-stone-300 bg-white sm:block sm:overflow-x-auto">
-        <table className="w-full min-w-160 border-collapse text-left text-sm">
+        <table className="min-w-160 w-full border-collapse text-left text-sm">
           <thead>
             <tr className="bg-stone-200 text-stone-900">
               <th className="w-28 px-4 py-3 font-medium"></th>
@@ -340,10 +340,13 @@ export default function ShaoweiYoudianrYidianr() {
             </h3>
             <div className="divide-y divide-stone-200">
               {CHOICES.map((choice, i) => (
-                <div key={choice} className="grid grid-cols-[5.5rem_1fr] gap-2 px-3 py-3">
+                <div
+                  key={choice}
+                  className="grid grid-cols-[5.5rem_1fr] gap-2 px-3 py-3"
+                >
                   <div className="text-sm font-medium text-stone-800">
                     <span className="ztai__zh block text-xl">{choice}</span>
-                    <span className="font-normal text-xs text-stone-500">
+                    <span className="text-xs font-normal text-stone-500">
                       {PINYIN[choice]}
                     </span>
                   </div>
@@ -380,7 +383,7 @@ export default function ShaoweiYoudianrYidianr() {
                   <p className="text-lg leading-relaxed text-stone-900 sm:text-xl">
                     {q.before}
                     <span
-                      className={`mx-0.5 inline-block min-w-[4rem] border-b-2 px-1 text-center sm:mx-1 sm:min-w-[4.5rem] ${
+                      className={`sm:min-w-18 mx-0.5 inline-block min-w-16 border-b-2 px-1 text-center sm:mx-1 ${
                         show
                           ? "border-sky-600 font-medium text-sky-700"
                           : "border-stone-400 text-transparent"
