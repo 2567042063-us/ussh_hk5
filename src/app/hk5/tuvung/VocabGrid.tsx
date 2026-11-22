@@ -72,6 +72,7 @@ function VocabStrokePreview({ text }: { text: string }) {
         width: 96,
         height: 96,
         padding: 6,
+        showCharacter: true,
         showOutline: true,
         outlineColor: "#E5E7EB",
         strokeColor: "#0369a1",
@@ -81,19 +82,6 @@ function VocabStrokePreview({ text }: { text: string }) {
         drawingFadeDuration: 400,
       });
     });
-
-    const timer = setTimeout(async () => {
-      for (const writer of writersRef.current) {
-        if (!writer) continue;
-        await new Promise<void>((resolve) => {
-          writer.animateCharacter({
-            onComplete: () => resolve(),
-          });
-        });
-      }
-    }, 150);
-
-    return () => clearTimeout(timer);
   }, [characters]);
 
   const replayCharacter = (index: number) => {

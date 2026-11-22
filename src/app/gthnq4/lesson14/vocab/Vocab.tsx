@@ -7,7 +7,7 @@ export default function VocabBai1() {
   return (
     <main className="mx-auto w-full min-w-0 max-w-7xl px-3 pb-5 sm:px-4 sm:pb-8">
       <section>
-        <div className="my-3 flex items-center gap-3">
+        <div className="my-3 flex flex-col items-start gap-2 sm:flex-row sm:items-center sm:gap-3">
           <div className="inline-flex items-center gap-3 rounded-lg bg-stone-200 px-3 py-1.5">
             <span className="ztai__zh text-stone-600">二</span>
             <span className="rounded bg-stone-500 px-2 py-0.5 text-white">
@@ -21,7 +21,7 @@ export default function VocabBai1() {
           </p>
         </div>
 
-        <div className="sticky top-0 z-30 mb-3 w-full bg-white/95 py-2 backdrop-blur dark:bg-slate-800/95">
+        <div className="z-9 sticky top-0 mb-3 w-full bg-white/95 py-2 backdrop-blur dark:bg-slate-800/95">
           <audio controls preload="none" className="lesson-audio h-10 w-full">
             <source
               src="https://bh9cualrgy9xkq87.public.blob.vercel-storage.com/gthnq4/14-shengci.mp3"

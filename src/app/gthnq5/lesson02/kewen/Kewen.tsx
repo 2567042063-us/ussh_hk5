@@ -46,7 +46,7 @@ export default function Lesson2Kewen() {
       id="gthnq5bai2kewen"
       className="px-3 pb-8 pt-3 sm:px-6 sm:pb-10 sm:pt-3"
     >
-      <div className="sticky top-0 z-30 mb-3 w-full bg-white/95 py-2 backdrop-blur dark:bg-slate-800/95">
+      <div className="z-9 sticky top-0 mb-3 w-full bg-white/95 py-2 backdrop-blur dark:bg-slate-800/95">
         <audio controls preload="none" className="lesson-audio h-10 w-full">
           <source
             src="https://bh9cualrgy9xkq87.public.blob.vercel-storage.com/gthnq5/02_kewen.mp3"

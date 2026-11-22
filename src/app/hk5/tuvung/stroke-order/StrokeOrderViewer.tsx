@@ -1,13 +1,19 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import HanziWriter from "hanzi-writer";
-import { RotateCcwSquare } from "lucide-react";
+import { pinyin } from "pinyin-pro";
 
 export default function StrokeOrderViewer() {
   const [inputText, setInputText] = useState<string>("加油");
   const [characters, setCharacters] = useState<string[]>(["加", "油"]);
-  const [isAnimating, setIsAnimating] = useState<boolean>(false);
+  const characterPinyin = useMemo(
+    () =>
+      characters.map(
+        (char) => pinyin(char, { toneType: "symbol", type: "array" })[0] ?? "",
+      ),
+    [characters],
+  );
 
   // Lưu trữ danh sách các instance của HanziWriter và thẻ DOM tương ứng
   const writersRef = useRef<(HanziWriter | null)[]>([]);
@@ -22,8 +28,6 @@ export default function StrokeOrderViewer() {
     isCancelledRef.current = true;
     await new Promise((resolve) => setTimeout(resolve, 50));
     isCancelledRef.current = false;
-
-    setIsAnimating(true);
 
     if (!skipFadeOut) {
       const hidePromises = writersRef.current.map(
@@ -64,10 +68,6 @@ export default function StrokeOrderViewer() {
           });
         });
       }
-    }
-
-    if (!isCancelledRef.current) {
-      setIsAnimating(false);
     }
   };
 
@@ -145,7 +145,6 @@ export default function StrokeOrderViewer() {
       className="mx-auto w-full max-w-5xl px-4 pb-8 sm:px-6"
       id="strokeorder"
     >
-      <h1 className="mb-5 text-2xl font-semibold text-slate-900">Thứ tự nét</h1>
       <div className="flex w-full flex-col items-start">
         <form
           onSubmit={handleSubmit}
@@ -173,15 +172,6 @@ export default function StrokeOrderViewer() {
               className="w-full bg-transparent text-lg text-slate-800 placeholder:text-slate-400 focus:outline-none"
             />
           </label>
-          {/* <button
-            type="submit"
-            disabled={isAnimating}
-            className="flex h-12 w-fit shrink-0 items-center justify-center gap-3 self-start rounded-xl bg-sky-500 px-6 text-white transition-colors hover:bg-sky-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 disabled:opacity-50"
-            title="Vẽ lại thứ tự nét"
-          >
-            <RotateCcwSquare />
-            <span>vẽ</span>
-          </button> */}
         </form>
         <div className="characters">
           {/* Phần 2: Giao diện hiển thị giống hình mẫu */}
@@ -192,56 +182,59 @@ export default function StrokeOrderViewer() {
                   key={`${char}-${index}`}
                   onClick={() => handleSingleCharClick(index)}
                   title="Bấm vào chữ để vẽ lại riêng chữ này"
-                  className="h-35 w-35 relative cursor-pointer select-none border-b border-r border-gray-200"
+                  className="relative flex cursor-pointer select-none flex-col border-b border-r border-gray-200"
                 >
-                  {/* Nền SVG tạo đường kẻ ngang, dọc và 2 đường chéo mờ */}
-                  <svg
-                    className="pointer-events-none absolute inset-0 h-full w-full"
-                    viewBox="0 0 140 140"
-                  >
-                    {/* Đường chéo */}
-                    <line
-                      x1="0"
-                      y1="0"
-                      x2="140"
-                      y2="140"
-                      stroke="#E5E7EB"
-                      strokeWidth="1"
-                    />
-                    <line
-                      x1="140"
-                      y1="0"
-                      x2="0"
-                      y2="140"
-                      stroke="#E5E7EB"
-                      strokeWidth="1"
-                    />
-                    {/* Đường chữ thập */}
-                    <line
-                      x1="70"
-                      y1="0"
-                      x2="70"
-                      y2="140"
-                      stroke="#E5E7EB"
-                      strokeWidth="1"
-                    />
-                    <line
-                      x1="0"
-                      y1="70"
-                      x2="140"
-                      y2="70"
-                      stroke="#E5E7EB"
-                      strokeWidth="1"
-                    />
-                  </svg>
+                  <div className="h-35 w-35 relative">
+                    {/* Nền SVG tạo đường kẻ ngang, dọc và 2 đường chéo mờ */}
+                    <svg
+                      className="pointer-events-none absolute inset-0 h-full w-full"
+                      viewBox="0 0 140 140"
+                    >
+                      <line
+                        x1="0"
+                        y1="0"
+                        x2="140"
+                        y2="140"
+                        stroke="#E5E7EB"
+                        strokeWidth="1"
+                      />
+                      <line
+                        x1="140"
+                        y1="0"
+                        x2="0"
+                        y2="140"
+                        stroke="#E5E7EB"
+                        strokeWidth="1"
+                      />
+                      <line
+                        x1="70"
+                        y1="0"
+                        x2="70"
+                        y2="140"
+                        stroke="#E5E7EB"
+                        strokeWidth="1"
+                      />
+                      <line
+                        x1="0"
+                        y1="70"
+                        x2="140"
+                        y2="70"
+                        stroke="#E5E7EB"
+                        strokeWidth="1"
+                      />
+                    </svg>
 
-                  {/* Container chứa nét chữ của HanziWriter */}
-                  <div
-                    ref={(el) => {
-                      containerRefs.current[index] = el;
-                    }}
-                    className="relative z-10 h-full w-full"
-                  />
+                    {/* Container chứa nét chữ của HanziWriter */}
+                    <div
+                      ref={(el) => {
+                        containerRefs.current[index] = el;
+                      }}
+                      className="relative z-10 h-full w-full"
+                    />
+                  </div>
+                  <p className="ztai__py w-35 flex h-12 items-center justify-center border-t border-gray-100 text-center text-xl font-semibold leading-none text-sky-700">
+                    {characterPinyin[index]}
+                  </p>
                 </div>
               ))}
             </div>

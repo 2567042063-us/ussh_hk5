@@ -8,7 +8,7 @@ import StrokeOrderViewer from "./StrokeOrderViewer";
 
 export function generateMetadata() {
   return {
-    title: "Từ vựng - Thứ tự nét",
+    title: "Từ vựng - Từ điển",
   };
 }
 
