@@ -30,6 +30,11 @@ export const MAIN_NAV = [
     href: "/hk5/baitap",
   },
   {
+    id: "gthnq4",
+    label: "GTHNq4",
+    href: "/gthnq4/lesson14/vocab",
+  },
+  {
     id: "gthnq5",
     label: "GTHNq5",
     href: "/gthnq5/lesson01/vocab",

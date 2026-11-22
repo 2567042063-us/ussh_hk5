@@ -7,6 +7,7 @@ export default async function NotFound() {
       <div className="relative mx-auto flex h-80 w-60 justify-center overflow-hidden">
         <Image
           fill
+          loading="eager"
           alt="langlang"
           src="/images/letsgo.jpg"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
