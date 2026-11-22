@@ -7,846 +7,490 @@ type E = { id: string; sec: string; h: string; p: string; v: string };
 // h: {từ khoá} = highlight · "/" = ranh giới cụm · # = bài đặt từ · * = câu sai (不能说)
 const SEC: { k: string; t: string; e: string }[] = [
   {
-    k: "sh",
-    t: "说实话",
-    e: "Nói thật (说实话 / 说心里话 / 说真的): dùng để dẫn vào phần sau, nói ra suy nghĩ, cảm xúc thật của mình.",
+    k: "ts",
+    t: "唐诗 Tángshī",
+    e: "唐诗 (Tángshī): thơ ca đời Đường. Triều Đường (618–907) là một trong những triều đại phồn vinh của Trung Quốc cổ đại; kinh đô là Trường An, nay là thành phố Tây An, tỉnh Thiểm Tây. (Mục này chỉ là chú thích, không có câu ví dụ.)",
   },
   {
-    k: "gx",
-    t: "过一年",
-    e: "“过一年” = 生活一年: sống một năm (ở nước ngoài).",
+    k: "kao",
+    t: "靠 kào (动)",
+    e: "靠 (động từ) dựa vào, gần sát, có 3 nghĩa: (1) 依靠: dựa vào, nhờ vào; (2) 接近或挨着某地方: gần, sát một nơi nào đó; (3) 人或物体倚着其他人或物体: tựa vào người hoặc vật khác.",
   },
   {
-    k: "yx",
-    t: "一下子",
-    e: "一下子 làm trạng ngữ, chỉ động tác rất nhanh, thời gian rất ngắn; nhấn mạnh động tác hoàn thành, tình huống xuất hiện hoặc thay đổi trong khoảng thời gian rất ngắn.",
+    k: "fb",
+    t: "分别 fēnbié (副)",
+    e: "分别 (phó từ) riêng, lần lượt: 各自, 不一起. (1) 采取不同方式, 有区别地: dùng cách khác nhau, xử lý riêng từng trường hợp; (2) 几个主体对几个对象, 各自, 分头: nhiều chủ thể, nhiều đối tượng, mỗi bên làm riêng.",
   },
   {
-    k: "zy",
-    t: "终于 (副)",
-    e: "终于 (phó từ) cuối cùng: sau một thời gian dài nỗ lực hoặc chờ đợi, cuối cùng xuất hiện một kết quả; kết quả này phần lớn là điều mong muốn.",
+    k: "ge",
+    t: "各 gè (代)",
+    e: "各 (đại từ) mỗi, các: chỉ tất cả cá thể trong một phạm vi, dùng trước danh từ hoặc lượng từ. So sánh 各 và 每: (1) Đều chỉ tất cả cá thể nhưng trọng tâm khác nhau: 每 nhấn mạnh chỉ chung (mỗi, từng cái một), 各 nhấn mạnh chỉ riêng từng phần. (2) 各 có thể đứng trực tiếp trước một số danh từ; 每 phải kèm lượng từ hoặc số lượng từ (trừ 人、家、年、月、日、天、星期、周). (3) 每 có thể kết hợp với số lượng từ, 各 không thể.",
   },
   {
-    k: "yq",
-    t: "一切 (代)",
-    e: "一切 (đại từ) tất cả: biểu thị toàn bộ, mọi loại; làm chủ ngữ, tân ngữ, định ngữ, thường dùng với 都. Khi làm định ngữ bổ nghĩa danh từ thì không mang 的.",
-  },
-  {
-    k: "rg",
-    t: "如果 (连)",
-    e: "如果 (liên từ) nếu: biểu thị giả thiết, phần nhiều đứng đầu phân câu trước. Sau “如果……” có thể thêm trợ từ 的话.",
-  },
-  {
-    k: "gr",
-    t: "果然 (副)",
-    e: "果然 (phó từ) quả nhiên: sự thật giống như dự đoán hoặc như lời người khác nói; dùng trước động từ vị ngữ, tính từ hoặc chủ ngữ.",
-  },
-  {
-    k: "dy",
-    t: "对于 (介)",
-    e: "对于 (giới từ) đối với, về: dẫn ra đối tượng của động tác hoặc sự việc liên quan; thường đứng trước danh từ, rất ít kết hợp với động từ, phó từ. Chú ý: câu dùng 对于 đều có thể đổi sang 对; nhưng nhiều câu dùng 对 thì không đổi được sang 对于. Đối tượng 对 dẫn có thể là người, còn 对于 không trực tiếp dẫn người.",
-  },
-  {
-    k: "er",
-    t: "而 (连)",
-    e: "而 (liên từ) và; nhưng. (1) Văn viết: nối hai tính từ/cụm tính từ song song, bổ sung cho nhau. (2) Nối tính từ, động từ, phân câu biểu thị chuyển ý, cách dùng giống 但是、却.",
-  },
-  {
-    k: "zh",
-    t: "只好 (副)",
-    e: "只好 (phó từ) đành phải: biểu thị (trong hoàn cảnh nào đó) không có lựa chọn khác, chỉ có thể làm như vậy.",
+    k: "bs",
+    t: "表示 biǎoshì (动、名)",
+    e: "表示 (động từ, danh từ) biểu thị, bày tỏ. (1) Động từ: dùng lời nói, hành động để bộc lộ tư tưởng, tình cảm, thái độ; có thể mang 了, 过, có thể lặp lại, mang tân ngữ danh từ hoặc động từ. (2) Động từ: bản thân sự vật có ý nghĩa nào đó, hoặc nhờ sự vật nào đó mà thể hiện ý nghĩa. (3) Danh từ: lời nói, hành động hoặc thần sắc bộc lộ tư tưởng, tình cảm.",
   },
 ];
 const S: E[] = [
   {
-    id: "sh1",
-    sec: "sh",
-    h: "{说实话},/今天/老师讲的/我/有的地方/没听懂。",
-    p: "Shuō shíhuà, jīntiān lǎoshī jiǎng de wǒ yǒu de dìfang méi tīngdǒng.",
-    v: "Nói thật, hôm nay có chỗ tôi không nghe hiểu những gì thầy giảng.",
+    id: "kao1",
+    sec: "kao",
+    h: "中国人/常说:/“在家/{靠}/父母,/出门/{靠}/朋友。”/我/现在/交了/好多/朋友。",
+    p: "Zhōngguórén cháng shuō: “Zàijiā kào fùmǔ, chūmén kào péngyou.” Wǒ xiànzài jiāo le hǎo duō péngyou.",
+    v: "Người Trung Quốc thường nói: “Ở nhà dựa vào bố mẹ, ra ngoài dựa vào bạn bè.” Bây giờ tôi đã kết giao được rất nhiều bạn.",
   },
   {
-    id: "sh2",
-    sec: "sh",
-    h: "{说实话},/我也/是第一次/来/这个地方。",
-    p: "Shuō shíhuà, wǒ yě shì dì-yī cì lái zhège dìfang.",
-    v: "Nói thật, tôi cũng là lần đầu đến nơi này.",
+    id: "kao2",
+    sec: "kao",
+    h: "她/学习/这么好,/全/{靠}/自己的/努力。",
+    p: "Tā xuéxí zhème hǎo, quán kào zìjǐ de nǔlì.",
+    v: "Cô ấy học giỏi như vậy, hoàn toàn nhờ vào nỗ lực của bản thân.",
   },
   {
-    id: "sh3",
-    sec: "sh",
-    h: "{说实话},/我/一点儿/也/不想去。",
-    p: "Shuō shíhuà, wǒ yìdiǎnr yě bù xiǎng qù.",
-    v: "Nói thật, tôi chẳng muốn đi chút nào.",
+    id: "kao3",
+    sec: "kao",
+    h: "他是/{靠}/奖学金/读完/大学的。",
+    p: "Tā shì kào jiǎngxuéjīn dúwán dàxué de.",
+    v: "Anh ấy nhờ học bổng mà học xong đại học.",
   },
   {
-    id: "gx1",
-    sec: "gx",
-    h: "自由自在地/去/国外/{过一年}。",
-    p: "Zìyóu-zìzài de qù guówài guò yì nián.",
-    v: "Tự do tự tại ra nước ngoài sống một năm.",
+    id: "kao4",
+    sec: "kao",
+    h: "我的家乡,/前边/临着/一条河,/后边/{靠}着/一座山,/是/有名的/风景区。",
+    p: "Wǒ de jiāxiāng, qiánbian lín zhe yì tiáo hé, hòubian kào zhe yí zuò shān, shì yǒumíng de fēngjǐngqū.",
+    v: "Quê tôi phía trước giáp một con sông, phía sau tựa vào một ngọn núi, là khu thắng cảnh nổi tiếng.",
   },
   {
-    id: "yx0",
-    sec: "yx",
-    h: "我的眼泪/也/{一下子}/流了出来。",
-    p: "Wǒ de yǎnlèi yě yíxiàzi liú le chūlái.",
-    v: "Nước mắt tôi cũng bỗng chốc trào ra.",
+    id: "kao5",
+    sec: "kao",
+    h: "#屋子里,/{靠}/墙/放着一张桌子。",
+    p: "Wūzi li, kào qiáng fàng zhe yì zhāng zhuōzi.",
+    v: "Trong phòng, có một cái bàn đặt sát tường.",
   },
   {
-    id: "yx1",
-    sec: "yx",
-    h: "几年不见,/他/{一下子}/长/这么高了。",
-    p: "Jǐ nián bú jiàn, tā yíxiàzi zhǎng zhème gāo le.",
-    v: "Mấy năm không gặp, anh ấy bỗng chốc cao thế này rồi.",
+    id: "kao6",
+    sec: "kao",
+    h: "#别/{靠}/在我身上。",
+    p: "Bié kào zài wǒ shēnshang.",
+    v: "Đừng dựa vào người tôi.",
   },
   {
-    id: "yx2",
-    sec: "yx",
-    h: "#一过“五一”,/天/{一下子}/就热起来了。",
-    p: "Yí guò “Wǔ-Yī”, tiān yíxiàzi jiù rè qǐlái le.",
-    v: "Vừa qua dịp 1/5, trời bỗng chốc nóng lên.",
+    id: "kao7",
+    sec: "kao",
+    h: "他/{靠}着/沙发/睡着了。",
+    p: "Tā kào zhe shāfā shuìzháo le.",
+    v: "Anh ấy tựa vào ghế sofa ngủ thiếp đi.",
   },
   {
-    id: "yx3",
-    sec: "yx",
-    h: "她/没走好,/{一下子}/从楼梯上/摔下来了。",
-    p: "Tā méi zǒu hǎo, yíxiàzi cóng lóutī shang shuāi xiàlái le.",
-    v: "Cô ấy bước không vững, bỗng chốc ngã từ cầu thang xuống.",
+    id: "fb1",
+    sec: "fb",
+    h: "对/不同情况,/应该/{分别}/对待。",
+    p: "Duì bù tóng qíngkuàng, yīnggāi fēnbié duìdài.",
+    v: "Đối với các tình huống khác nhau, nên xử lý riêng từng trường hợp.",
   },
   {
-    id: "zy1",
-    sec: "zy",
-    h: "我很早就/希望/能有机会/来中国/学习汉语,/现在/这个愿望/{终于}/实现了,/心里/有说不出的/高兴。",
-    p: "Wǒ hěn zǎo jiù xīwàng néng yǒu jīhuì lái Zhōngguó xuéxí Hànyǔ, xiànzài zhège yuànwàng zhōngyú shíxiàn le, xīnli yǒu shuō bu chū de gāoxìng.",
-    v: "Từ rất sớm tôi đã mong có cơ hội đến Trung Quốc học tiếng Trung, giờ ước nguyện này cuối cùng đã thành, trong lòng vui không nói nên lời.",
+    id: "fb2",
+    sec: "fb",
+    h: "#我们班的同学/{分别}/来自亚洲、非洲、欧洲、美洲、大洋洲等五大洲十一个国家。",
+    p: "Wǒmen bān de tóngxué fēnbié láizì Yàzhōu, Fēizhōu, Ōuzhōu, Měizhōu, Dàyángzhōu děng wǔ dàzhōu shíyī ge guójiā.",
+    v: "Các bạn trong lớp chúng tôi lần lượt đến từ mười một quốc gia thuộc năm châu: Á, Phi, Âu, Mỹ, Đại Dương.",
   },
   {
-    id: "zy2",
-    sec: "zy",
-    h: "经过努力,/他/{终于}/考上了/大学。",
-    p: "Jīngguò nǔlì, tā zhōngyú kǎoshàng le dàxué.",
-    v: "Qua nỗ lực, cuối cùng anh ấy đã đỗ đại học.",
+    id: "fb3",
+    sec: "fb",
+    h: "#王老师和林老师/{分别}/找她俩谈了话,/现在她俩的关系好多了。",
+    p: "Wáng lǎoshī hé Lín lǎoshī fēnbié zhǎo tāliǎ tán le huà, xiànzài tāliǎ de guānxi hǎo duō le.",
+    v: "Thầy Vương và cô Lâm lần lượt tìm hai bạn ấy nói chuyện riêng, bây giờ quan hệ của hai bạn tốt hơn nhiều rồi.",
   },
   {
-    id: "zy3",
-    sec: "zy",
-    h: "#我很早就想看看长城,/今天我/{终于}/看到了。",
-    p: "Wǒ hěn zǎo jiù xiǎng kànkan Chángchéng, jīntiān wǒ zhōngyú kàndào le.",
-    v: "Từ sớm tôi đã muốn xem Trường Thành, hôm nay cuối cùng tôi đã thấy rồi.",
+    id: "ge1",
+    sec: "ge",
+    h: "能跟/这么多同学/一起/学习,/认识/这么多/世界/{各}国/来的/朋友,/我感到/非常高兴。",
+    p: "Néng gēn zhème duō tóngxué yìqǐ xuéxí, rènshi zhème duō shìjiè gè guó lái de péngyou, wǒ gǎndào fēicháng gāoxìng.",
+    v: "Được học cùng nhiều bạn như vậy, quen biết nhiều bạn đến từ các nước trên thế giới, tôi cảm thấy rất vui.",
   },
   {
-    id: "zy4",
-    sec: "zy",
-    h: "她/当翻译的/愿望/{终于}/实现了。",
-    p: "Tā dāng fānyì de yuànwàng zhōngyú shíxiàn le.",
-    v: "Ước nguyện làm phiên dịch của cô ấy cuối cùng đã thành hiện thực.",
+    id: "ge2",
+    sec: "ge",
+    h: "每天/都有/全国/{各}地的/旅游者/来这里/参观。",
+    p: "Měi tiān dōu yǒu quánguó gè dì de lǚyóuzhě lái zhèlǐ cānguān.",
+    v: "Mỗi ngày đều có du khách từ khắp nơi trong nước đến đây tham quan.",
   },
   {
-    id: "yq1",
-    sec: "yq",
-    h: "从去年夏天起,/我就忙着/联系学校,/办各种手续,/可是,/这/{一切}/都是/瞒着/我父母/做的。",
-    p: "Cóng qùnián xiàtiān qǐ, wǒ jiù mángzhe liánxì xuéxiào, bàn gè zhǒng shǒuxù, kěshì, zhè yíqiè dōu shì mánzhe wǒ fùmǔ zuò de.",
-    v: "Từ mùa hè năm ngoái, tôi bận liên hệ trường, làm đủ loại thủ tục, nhưng tất cả những việc này đều giấu bố mẹ tôi mà làm.",
+    id: "ge3",
+    sec: "ge",
+    h: "请/{各}班/同学/快/上车,/我们/马上/就要/出发了。",
+    p: "Qǐng gè bān tóngxué kuài shàngchē, wǒmen mǎshàng jiù yào chūfā le.",
+    v: "Mời học sinh các lớp mau lên xe, chúng ta sắp xuất phát rồi.",
   },
   {
-    id: "yq2",
-    sec: "yq",
-    h: "#刚来时是有很多地方不习惯,/但是现在/{一切}/都习惯了。",
-    p: "Gāng lái shí shì yǒu hěn duō dìfang bù xíguàn, dànshì xiànzài yíqiè dōu xíguàn le.",
-    v: "Lúc mới đến quả có nhiều chỗ không quen, nhưng giờ mọi thứ đều quen rồi.",
+    id: "cm1",
+    sec: "ge",
+    h: "{每}个人/都有/自己的/爱好。",
+    p: "Měi ge rén dōu yǒu zìjǐ de àihào.",
+    v: "Mỗi người đều có sở thích riêng của mình.",
   },
   {
-    id: "yq3",
-    sec: "yq",
-    h: "这里的/{一切}/对我来说,/都是/那么有趣。",
-    p: "Zhèlǐ de yíqiè duì wǒ lái shuō, dōu shì nàme yǒuqù.",
-    v: "Mọi thứ ở đây đối với tôi đều thú vị đến thế.",
+    id: "nc1",
+    sec: "ge",
+    h: "*{各}个人都有自己的爱好。",
+    p: "Gè ge rén dōu yǒu zìjǐ de àihào.",
+    v: "✗ Không thể nói (theo sách). Ở đây dùng 每 (chỉ chung, từng người một), không dùng 各 → 每个人都有自己的爱好。",
   },
   {
-    id: "yq4",
-    sec: "yq",
-    h: "我/{一切}/手续/都/办好了,/就等/机票了。",
-    p: "Wǒ yíqiè shǒuxù dōu bàn hǎo le, jiù děng jīpiào le.",
-    v: "Tôi đã làm xong mọi thủ tục, chỉ chờ vé máy bay.",
+    id: "cm2",
+    sec: "ge",
+    h: "{每}星期/有/一次/太极拳课。",
+    p: "Měi xīngqī yǒu yí cì tàijíquán kè.",
+    v: "Mỗi tuần có một buổi học Thái cực quyền.",
   },
   {
-    id: "rg1",
-    sec: "rg",
-    h: "我是独生女,/{如果}/把这件事/告诉父母,/他们/多半/不会同意。",
-    p: "Wǒ shì dúshēngnǚ, rúguǒ bǎ zhè jiàn shì gàosu fùmǔ, tāmen duōbàn bú huì tóngyì.",
-    v: "Tôi là con gái một, nếu nói chuyện này với bố mẹ, phần nhiều họ sẽ không đồng ý.",
+    id: "nc2",
+    sec: "ge",
+    h: "*{各}星期有一次太极拳课。",
+    p: "Gè xīngqī yǒu yí cì tàijíquán kè.",
+    v: "✗ Không thể nói. 星期 thuộc nhóm đi trực tiếp sau 每 (人、家、年、月、日、天、星期、周); không dùng 各星期 → 每星期有一次太极拳课。",
   },
   {
-    id: "rg2",
-    sec: "rg",
-    h: "{如果}/有问题,/可以/来找我。",
-    p: "Rúguǒ yǒu wèntí, kěyǐ lái zhǎo wǒ.",
-    v: "Nếu có vấn đề, có thể đến tìm tôi.",
+    id: "cm3",
+    sec: "ge",
+    h: "#他/{每}/一门课/都学得很好。",
+    p: "Tā měi yì mén kè dōu xué de hěn hǎo.",
+    v: "Anh ấy môn nào cũng học rất tốt.",
   },
   {
-    id: "rg3",
-    sec: "rg",
-    h: "{如果}/你想/学太极拳,/就/去报名吧。",
-    p: "Rúguǒ nǐ xiǎng xué tàijíquán, jiù qù bàomíng ba.",
-    v: "Nếu bạn muốn học Thái cực quyền thì đi đăng ký đi.",
+    id: "nc3",
+    sec: "ge",
+    h: "*他{各}一门课都学得很好。",
+    p: "Tā gè yì mén kè dōu xué de hěn hǎo.",
+    v: "✗ Không thể nói. 每 có thể kết hợp với số lượng từ (一门), 各 thì không → 他每一门课都学得很好。",
   },
   {
-    id: "rg4",
-    sec: "rg",
-    h: "{如果}/有时间,/我/一定/去中国/旅行。",
-    p: "Rúguǒ yǒu shíjiān, wǒ yídìng qù Zhōngguó lǚxíng.",
-    v: "Nếu có thời gian, tôi nhất định đi du lịch Trung Quốc.",
+    id: "pa",
+    sec: "ge",
+    h: "~各国、各学校、各医院、各单位",
+    p: "gè guó, gè xuéxiào, gè yīyuàn, gè dānwèi",
+    v: "可以说: các nước, các trường, các bệnh viện, các đơn vị. 各 đứng trực tiếp trước danh từ.",
   },
   {
-    id: "rg5",
-    sec: "rg",
-    h: "如果/下雨/{的话},/我们/还去/吗?",
-    p: "Rúguǒ xià yǔ de huà, wǒmen hái qù ma?",
-    v: "Nếu trời mưa, chúng ta còn đi không?",
+    id: "pn",
+    sec: "ge",
+    h: "*每国、每学校、每医院、每单位",
+    p: "měi guó, měi xuéxiào, měi yīyuàn, měi dānwèi",
+    v: "✗ 不能说: 每 phải kèm lượng từ/số lượng từ trước danh từ (trừ 人、家、年、月、日、天、星期、周). Nói: 各国、各学校… hoặc 每个国家、每个学校…",
   },
   {
-    id: "gr1",
-    sec: "gr",
-    h: "我把/出国留学的事/告诉了父母,/他们/听了,/{果然}/不大愿意。",
-    p: "Wǒ bǎ chūguó liúxué de shì gàosu le fùmǔ, tāmen tīng le, guǒrán bú dà yuànyì.",
-    v: "Tôi nói chuyện đi du học với bố mẹ, nghe xong, quả nhiên họ không mấy bằng lòng.",
+    id: "pb",
+    sec: "ge",
+    h: "~每个国家、每个学校、每个医院、每个单位",
+    p: "měi ge guójiā, měi ge xuéxiào, měi ge yīyuàn, měi ge dānwèi",
+    v: "可以说: mỗi quốc gia, mỗi trường, mỗi bệnh viện, mỗi đơn vị. 每 + lượng từ + danh từ.",
   },
   {
-    id: "gr2",
-    sec: "gr",
-    h: "#听朋友说那个饭店的菜又好吃又便宜,/我去吃了一次,/{果然}/不错。",
-    p: "Tīng péngyou shuō nàge fàndiàn de cài yòu hǎochī yòu piányi, wǒ qù chī le yí cì, guǒrán búcuò.",
-    v: "Nghe bạn nói món ở nhà hàng đó vừa ngon vừa rẻ, tôi đi ăn một lần, quả nhiên không tệ.",
+    id: "bs1",
+    sec: "bs",
+    h: "#朋友们看到以后,/都/向我/{表示}/祝贺。",
+    p: "Péngyoumen kàndào yǐhòu, dōu xiàng wǒ biǎoshì zhùhè.",
+    v: "Sau khi thấy, bạn bè đều chúc mừng tôi.",
   },
   {
-    id: "gr3",
-    sec: "gr",
-    h: "天气预报/说/今天有雨,/你看,/{果然}/下起来了。",
-    p: "Tiānqì yùbào shuō jīntiān yǒu yǔ, nǐ kàn, guǒrán xià qǐlái le.",
-    v: "Dự báo thời tiết nói hôm nay có mưa, bạn xem, quả nhiên mưa rồi.",
+    id: "bs2",
+    sec: "bs",
+    h: "我送给/老师/一张照片,/向老师/{表示}/感谢。",
+    p: "Wǒ sòng gěi lǎoshī yì zhāng zhàopiàn, xiàng lǎoshī biǎoshì gǎnxiè.",
+    v: "Tôi tặng thầy một tấm ảnh để bày tỏ lòng cảm ơn với thầy.",
   },
   {
-    id: "gr4",
-    sec: "gr",
-    h: "大夫说/吃了这种药/我的病/就会好的,/我吃了药以后,/{果然}/病/一天比一天/好了。",
-    p: "Dàifu shuō chī le zhè zhǒng yào wǒ de bìng jiù huì hǎo de, wǒ chī le yào yǐhòu, guǒrán bìng yì tiān bǐ yì tiān hǎo le.",
-    v: "Bác sĩ nói uống thuốc này bệnh sẽ khỏi, sau khi uống thuốc, quả nhiên bệnh ngày một đỡ hơn.",
+    id: "bs3",
+    sec: "bs",
+    h: "#点头/{表示}/同意。",
+    p: "Diǎntóu biǎoshì tóngyì.",
+    v: "Gật đầu tỏ ý đồng ý.",
   },
   {
-    id: "dy1",
-    sec: "dy",
-    h: "说实话,{对于}将来要做什么,我还没想好。",
-    p: "Shuō shíhuà, duìyú jiānglái yào zuò shénme, wǒ hái méi xiǎnghǎo.",
-    v: "Nói thật, về việc sau này làm gì, tôi vẫn chưa nghĩ kỹ.",
+    id: "bs4",
+    sec: "bs",
+    h: "他/送/你/玫瑰花/是/{表示}/对你的爱。",
+    p: "Tā sòng nǐ méiguihuā shì biǎoshì duì nǐ de ài.",
+    v: "Anh ấy tặng bạn hoa hồng là để bày tỏ tình yêu với bạn.",
   },
   {
-    id: "dy2",
-    sec: "dy",
-    h: "{对于}/这个问题,/大家/都/很感兴趣。",
-    p: "Duìyú zhège wèntí, dàjiā dōu hěn gǎn xìngqù.",
-    v: "Về vấn đề này, mọi người đều rất quan tâm.",
+    id: "bs5",
+    sec: "bs",
+    h: "你说了以后,/他/有/什么/{表示}?",
+    p: "Nǐ shuō le yǐhòu, tā yǒu shénme biǎoshì?",
+    v: "Sau khi bạn nói, anh ấy có biểu hiện (phản ứng) gì không?",
   },
   {
-    id: "dx1",
-    sec: "dy",
-    h: "*我们都{对于}这个问题感兴趣。",
-    p: "Wǒmen dōu duìyú zhège wèntí gǎn xìngqù.",
-    v: "✗ Không thể nói. 对于 ít kết hợp với phó từ (都) đứng trước nó; phải đặt 对于…ở đầu câu (对于这个问题,我们都感兴趣) hoặc dùng 对 (我们都对这个问题感兴趣).",
-  },
-  {
-    id: "dy3",
-    sec: "dy",
-    h: "{对于}/工作,/他/是/很认真的。",
-    p: "Duìyú gōngzuò, tā shì hěn rènzhēn de.",
-    v: "Đối với công việc, anh ấy rất nghiêm túc.",
-  },
-  {
-    id: "dy4",
-    sec: "dy",
-    h: "多跟/中国人/谈话,/{对于}/提高/汉语听说能力/非常/有帮助。",
-    p: "Duō gēn Zhōngguórén tánhuà, duìyú tígāo Hànyǔ tīngshuō nénglì fēicháng yǒu bāngzhù.",
-    v: "Nói chuyện nhiều với người Trung Quốc rất có ích cho việc nâng cao khả năng nghe nói tiếng Hán.",
-  },
-  {
-    id: "dy5",
-    sec: "dy",
-    h: "大家/{对于}/这个问题/的/看法/不一样。",
-    p: "Dàjiā duìyú zhège wèntí de kànfǎ bù yíyàng.",
-    v: "Cách nhìn của mọi người về vấn đề này không giống nhau.",
-  },
-  {
-    id: "dy6",
-    sec: "dy",
-    h: "大家/{对}/这个问题/的/看法/不一样。",
-    p: "Dàjiā duì zhège wèntí de kànfǎ bù yíyàng.",
-    v: "Cách nhìn của mọi người về vấn đề này không giống nhau. (Có thể nói: dùng 对 thay cho 对于.)",
-  },
-  {
-    id: "dy8",
-    sec: "dy",
-    h: "朋友们/{对}/我/很热情。",
-    p: "Péngyoumen duì wǒ hěn rèqíng.",
-    v: "Bạn bè rất nhiệt tình với tôi.",
-  },
-  {
-    id: "dx2",
-    sec: "dy",
-    h: "*朋友们{对于}我很热情。",
-    p: "Péngyoumen duìyú wǒ hěn rèqíng.",
-    v: "✗ Không thể nói. 对于 không trực tiếp dẫn đối tượng là người (我), phải dùng 对.",
-  },
-  {
-    id: "er1",
-    sec: "er",
-    h: "可是现在,/我就是想/学汉语,/想到中国——/这个/古老/{而}/年轻的/国家/去看看。",
-    p: "Kěshì xiànzài, wǒ jiù shì xiǎng xué Hànyǔ, xiǎngdào Zhōngguó——zhège gǔlǎo ér niánqīng de guójiā qù kànkan.",
-    v: "Nhưng bây giờ, tôi chỉ muốn học tiếng Trung, muốn đến Trung Quốc, đất nước vừa cổ xưa vừa trẻ trung này, để xem.",
-  },
-  {
-    id: "er2",
-    sec: "er",
-    h: "她是/一个/聪明/{而}/美丽的/姑娘。",
-    p: "Tā shì yí ge cōngmíng ér měilì de gūniang.",
-    v: "Cô ấy là một cô gái thông minh và xinh đẹp.",
-  },
-  {
-    id: "er3",
-    sec: "er",
-    h: "#这种水果/好看/{而}/不好吃。",
-    p: "Zhè zhǒng shuǐguǒ hǎokàn ér bù hǎochī.",
-    v: "Loại trái cây này đẹp mắt nhưng không ngon.",
-  },
-  {
-    id: "er4",
-    sec: "er",
-    h: "我/选择/这家饭店,/花钱少/{而}/吃得好。",
-    p: "Wǒ xuǎnzé zhè jiā fàndiàn, huā qián shǎo ér chī de hǎo.",
-    v: "Tôi chọn nhà hàng này, tốn ít tiền mà ăn ngon.",
-  },
-  {
-    id: "er5",
-    sec: "er",
-    h: "哈尔滨/还很冷,/{而}/中国南方/已经/春暖花开了。",
-    p: "Hā’ěrbīn hái hěn lěng, ér Zhōngguó nánfāng yǐjīng chūnnuǎn-huākāi le.",
-    v: "Cáp Nhĩ Tân vẫn còn rất lạnh, còn miền nam Trung Quốc đã xuân ấm hoa nở.",
-  },
-  {
-    id: "zh1",
-    sec: "zh",
-    h: "父母/觉得/我的想法/是对的,/就/{只好}/同意了。",
-    p: "Fùmǔ juéde wǒ de xiǎngfǎ shì duì de, jiù zhǐhǎo tóngyì le.",
-    v: "Bố mẹ thấy suy nghĩ của tôi là đúng, đành đồng ý.",
-  },
-  {
-    id: "zh2",
-    sec: "zh",
-    h: "半路上/忽然/下起了雨,/我/没带/雨伞,/{只好}/淋着雨/往回跑。",
-    p: "Bànlù shang hūrán xià qǐ le yǔ, wǒ méi dài yǔsǎn, zhǐhǎo lín zhe yǔ wǎng huí pǎo.",
-    v: "Giữa đường bỗng đổ mưa, tôi không mang ô, đành dầm mưa chạy về.",
-  },
-  {
-    id: "zh3",
-    sec: "zh",
-    h: "#昨天晚上我回来时/已经没有公共汽车了,/{只好}/坐出租车。",
-    p: "Zuótiān wǎnshang wǒ huílái shí yǐjīng méiyǒu gōnggòng qìchē le, zhǐhǎo zuò chūzūchē.",
-    v: "Tối qua lúc tôi về đã hết xe buýt, đành đi taxi.",
-  },
-  {
-    id: "zh4",
-    sec: "zh",
-    h: "我的手机/摔坏了,/{只好}/再买/一个。",
-    p: "Wǒ de shǒujī shuāihuài le, zhǐhǎo zài mǎi yí ge.",
-    v: "Điện thoại tôi rơi hỏng rồi, đành mua cái khác.",
+    id: "bs6",
+    sec: "bs",
+    h: "她/这样/做/是/友好的/{表示}。",
+    p: "Tā zhèyàng zuò shì yǒuhǎo de biǎoshì.",
+    v: "Cô ấy làm như vậy là một biểu hiện thân thiện.",
   },
 ];
-const MC: [string, string][] = [
-  ["sh1", "终于|只好|一切"],
-  ["sh2", "终于|只好|一下子"],
-  ["sh3", "终于|一切|一下子"],
-  ["gx1", "一年过|过年一|过一岁"],
-  ["yx0", "如果|对于|一切"],
-  ["yx1", "如果|对于|只好"],
-  ["yx2", "如果|对于|只好"],
-  ["yx3", "如果|对于|一切"],
-  ["zy1", "如果|对于|而"],
-  ["zy2", "如果|对于|一切"],
-  ["zy3", "而|对于|如果"],
-  ["zy4", "如果|而|对于"],
-  ["yq1", "如果|果然|对于"],
-  ["yq2", "如果|对于|而"],
-  ["yq3", "如果|而|只好"],
-  ["yq4", "如果|终于|果然"],
-  ["rg1", "一切|对于|果然"],
-  ["rg2", "果然|只好|一切"],
-  ["rg3", "对于|果然|终于"],
-  ["rg4", "终于|只好|一切"],
-  ["rg5", "的吧|的了|的呢"],
-  ["gr1", "如果|对于|一切"],
-  ["gr2", "如果|对于|一切"],
-  ["gr3", "如果|对于|而"],
-  ["gr4", "对于|只好|一下子"],
-  ["dy1", "终于|只好|一切"],
-  ["dy2", "终于|而|只好"],
-  ["dx1", "对于|如果|而"],
-  ["dy3", "终于|只好|而"],
-  ["dy4", "而|只好|果然"],
-  ["dy5", "如果|终于|而"],
-  ["dy6", "如果|终于|而"],
-  ["dy8", "如果|终于|而"],
-  ["dx2", "对于|终于|而"],
-  ["er1", "如果|只好|果然"],
-  ["er2", "如果|只好|终于"],
-  ["er3", "终于|只好|如果"],
-  ["er4", "如果|终于|对于"],
-  ["er5", "如果|只好|果然"],
-  ["zh1", "如果|对于|而"],
-  ["zh2", "如果|对于|一切"],
-  ["zh3", "对于|一切|一下子"],
-  ["zh4", "对于|一切|而"],
+const MC: ([string, string] | [string, string, string, string])[] = [
+  ["kao1", "分别|各|表示"],
+  ["kao2", "分别|各|表示"],
+  ["kao3", "分别|各|表示"],
+  ["kao4", "分别|各|表示"],
+  ["kao5", "分别|各|表示"],
+  ["kao6", "分别|各|表示"],
+  ["kao7", "分别|各|表示"],
+  ["fb1", "靠|各|表示"],
+  ["fb2", "靠|表示|终于"],
+  ["fb3", "靠|表示|而"],
+  ["ge1", "每|分别|靠"],
+  ["ge2", "每|分别|靠"],
+  ["ge3", "靠|分别|表示"],
+  ["cm1", "各|分别|靠"],
+  ["cm2", "各|分别|表示"],
+  ["cm3", "各|分别|靠"],
+  ["bs1", "靠|分别|各"],
+  ["bs2", "靠|分别|各"],
+  ["bs3", "靠|而|如果"],
+  ["bs4", "靠|分别|各"],
+  ["bs5", "靠|分别|各"],
+  ["bs6", "靠|分别|各"],
+  [
+    "＿＿国、＿＿学校、＿＿医院、＿＿单位",
+    "各",
+    "每|另|整",
+    "各 có thể đứng trực tiếp trước một số danh từ: 各国、各学校、各医院、各单位 (không nói 每国、每学校…).",
+  ],
+  [
+    "每＿＿国家、每＿＿学校、每＿＿医院、每＿＿单位",
+    "个",
+    "各|位|条",
+    "每 phải kèm lượng từ trước danh từ: 每个国家、每个学校、每个医院、每个单位.",
+  ],
 ];
 const FIX: [string, string, string, string?][] = [
   [
-    "说实话的,今天老师讲的我有的地方没听懂。",
-    "“说实话” dùng trực tiếp ở đầu câu để dẫn vào phần sau, không thêm “的”.",
-    "sh1",
+    "中国人常说:“在家父母靠,出门朋友靠。”我现在交了好多朋友。",
+    "“靠” là động từ, đứng trước đối tượng được dựa vào: 靠父母、靠朋友.",
+    "kao1",
   ],
   [
-    "实话说,我也是第一次来这个地方。",
-    "Cách nói cố định là “说实话”, không đảo thành “实话说”.",
-    "sh2",
+    "她学习这么好,全自己的努力靠。",
+    "“靠” đứng trước đối tượng: 全靠自己的努力.",
+    "kao2",
   ],
   [
-    "说实话,我一点儿也想去。",
-    "“一点儿也” dùng với phủ định: 一点儿也不想去.",
-    "sh3",
+    "他是奖学金靠读完大学的。",
+    "“靠” đứng trước đối tượng: 靠奖学金读完大学.",
+    "kao3",
   ],
   [
-    "自由自在地去国外一年过。",
-    "“过一年” (sống một năm) đứng sau địa điểm, không đảo: 去国外过一年.",
-    "gx1",
+    "我的家乡,前边临着一条河,后边一座山靠着,是有名的风景区。",
+    "“靠着” đứng trước đối tượng: 靠着一座山.",
+    "kao4",
   ],
   [
-    "我的眼泪也流了出来一下子。",
-    "“一下子” làm trạng ngữ, đứng trước động từ: 一下子流了出来.",
-    "yx0",
+    "屋子里,墙靠放着一张桌子。",
+    "“靠” đứng trước địa điểm, rồi mới đến động từ: 靠墙放着一张桌子.",
+    "kao5",
+  ],
+  ["别在我身上靠。", "“靠” đứng trước 在: 靠在我身上.", "kao6"],
+  [
+    "他沙发靠着睡着了。",
+    "“靠着” đứng trước đối tượng: 靠着沙发睡着了.",
+    "kao7",
   ],
   [
-    "几年不见,他长一下子这么高了。",
-    "“一下子” làm trạng ngữ, đứng trước động từ: 他一下子长这么高了.",
-    "yx1",
+    "对不同情况,应该对待分别。",
+    "“分别” là phó từ, đứng trước động từ: 分别对待.",
+    "fb1",
   ],
   [
-    "一过“五一”,天就热一下子起来了。",
-    "“一下子” đứng trước cụm vị ngữ, không chen vào giữa: 天一下子就热起来了.",
-    "yx2",
+    "我们班的同学来自分别亚洲、非洲、欧洲、美洲、大洋洲等五大洲十一个国家。",
+    "“分别” đứng trước động từ: 分别来自…",
+    "fb2",
   ],
   [
-    "她没走好,从楼梯上摔下来了一下子。",
-    "“一下子” làm trạng ngữ, đứng trước động từ: 一下子从楼梯上摔下来了.",
-    "yx3",
+    "王老师和林老师找分别她俩谈了话,现在她俩的关系好多了。",
+    "“分别” đứng trước động từ: 分别找她俩谈了话.",
+    "fb3",
   ],
   [
-    "我很早就希望能有机会来中国学习汉语,现在这个愿望实现了终于,心里有说不出的高兴。",
-    "“终于” là phó từ, đứng trước động từ vị ngữ: 终于实现了.",
-    "zy1",
+    "能跟这么多同学一起学习,认识这么多各世界国来的朋友,我感到非常高兴。",
+    "“各” đứng trước danh từ 国: 世界各国.",
+    "ge1",
   ],
   [
-    "经过努力,他考上了终于大学。",
-    "“终于” đứng trước động từ: 他终于考上了大学.",
-    "zy2",
+    "每天都有各全国地的旅游者来这里参观。",
+    "“各” đứng trước danh từ 地: 全国各地.",
+    "ge2",
   ],
   [
-    "我很早就想看看长城,今天我看到终于了。",
-    "“终于” là phó từ, đứng trước động từ vị ngữ: 终于看到了.",
-    "zy3",
+    "请班各同学快上车,我们马上就要出发了。",
+    "“各” đứng trước danh từ 班: 各班同学.",
+    "ge3",
   ],
   [
-    "她当翻译的愿望实现终于了。",
-    "“终于” đứng trước động từ: 终于实现了.",
-    "zy4",
+    "各个人都有自己的爱好。",
+    "Theo sách, ở đây dùng 每 (chỉ chung, từng người một), không dùng 各: 每个人都有自己的爱好.",
+    "cm1",
   ],
   [
-    "这一切的都是瞒着我父母做的。",
-    "“一切” thường đi với 都, không thêm “的” sau 一切.",
-    "yq1",
+    "各星期有一次太极拳课。",
+    "星期 đi trực tiếp sau 每, không dùng 各星期: 每星期有一次太极拳课.",
+    "cm2",
   ],
   [
-    "刚来时是有很多地方不习惯,但是现在都一切习惯了。",
-    "“一切” làm chủ ngữ, đứng trước 都: 一切都习惯了.",
-    "yq2",
+    "他各一门课都学得很好。",
+    "每 kết hợp được với số lượng từ (一门), 各 thì không: 他每一门课都学得很好.",
+    "cm3",
   ],
   [
-    "这里的一切的对我来说,都是那么有趣。",
-    "“一切” làm chủ ngữ, không thêm “的” phía sau.",
-    "yq3",
+    "朋友们看到以后,都向我祝贺表示。",
+    "“表示” là động từ, đứng trước tân ngữ: 表示祝贺.",
+    "bs1",
   ],
   [
-    "我一切的手续都办好了,就等机票了。",
-    "“一切” làm định ngữ bổ nghĩa danh từ thì không mang “的”.",
-    "yq4",
+    "我送给老师一张照片,向老师感谢表示。",
+    "“表示” đứng trước tân ngữ: 表示感谢.",
+    "bs2",
+  ],
+  ["点头同意表示。", "“表示” đứng trước tân ngữ: 表示同意.", "bs3"],
+  [
+    "他送你玫瑰花是对你的爱表示。",
+    "“表示” đứng trước tân ngữ: 是表示对你的爱.",
+    "bs4",
   ],
   [
-    "我是独生女,把这件事告诉父母如果,他们多半不会同意。",
-    "“如果” đứng đầu phân câu giả thiết: 如果把这件事告诉父母.",
-    "rg1",
+    "你说了以后,他有表示什么?",
+    "“表示” ở đây là danh từ, đứng sau 什么: 有什么表示?",
+    "bs5",
   ],
   [
-    "有问题如果,可以来找我。",
-    "“如果” đứng đầu phân câu giả thiết: 如果有问题.",
-    "rg2",
+    "她这样做是友好表示的。",
+    "“表示” là danh từ làm tân ngữ, đứng sau 的: 友好的表示.",
+    "bs6",
   ],
   [
-    "你想学太极拳,如果就去报名吧。",
-    "“如果” đứng đầu phân câu giả thiết: 如果你想学太极拳,…",
-    "rg3",
-  ],
-  [
-    "有时间,如果我一定去中国旅行。",
-    "“如果” đứng ở đầu phân câu giả thiết: 如果有时间,…",
-    "rg4",
-  ],
-  [
-    "下雨的话如果,我们还去吗?",
-    "“如果” đứng đầu vế giả thiết, “的话” đứng cuối vế đó: 如果下雨的话.",
-    "rg5",
-  ],
-  [
-    "我把出国留学的事告诉了父母,他们听了,不大果然愿意。",
-    "“果然” đứng trước vị ngữ, phía trước “不大”: 果然不大愿意.",
-    "gr1",
-  ],
-  [
-    "听朋友说那个饭店的菜又好吃又便宜,我去吃了一次,不错果然。",
-    "“果然” đứng trước tính từ: 果然不错.",
-    "gr2",
-  ],
-  [
-    "天气预报说今天有雨,你看,下起来果然了。",
-    "“果然” đứng trước vị ngữ: 果然下起来了.",
-    "gr3",
-  ],
-  [
-    "大夫说吃了这种药我的病就会好的,我吃了药以后,病一天比一天好果然了。",
-    "“果然” đứng trước vị ngữ: 果然病一天比一天好了.",
-    "gr4",
-  ],
-  [
-    "说实话,将来要做什么对于,我还没想好。",
-    "“对于” đứng trước đối tượng: 对于将来要做什么.",
-    "dy1",
-  ],
-  [
-    "这个问题对于,大家都很感兴趣。",
-    "“对于” đứng trước đối tượng: 对于这个问题.",
-    "dy2",
-  ],
-  [
-    "我们都对于这个问题感兴趣。",
-    "“对于” ít kết hợp với phó từ (都) đứng trước nó. Sửa: 我们都对这个问题感兴趣 / 对于这个问题,我们都感兴趣.",
-    "dx1",
-    "我们都对这个问题感兴趣。|对于这个问题,我们都感兴趣。",
-  ],
-  ["工作对于,他是很认真的。", "“对于” đứng trước đối tượng: 对于工作.", "dy3"],
-  [
-    "多跟中国人谈话,提高汉语听说能力对于非常有帮助。",
-    "“对于” đứng trước đối tượng: 对于提高汉语听说能力.",
-    "dy4",
-  ],
-  [
-    "大家这个问题对于的看法不一样。",
-    "“对于” đứng trước đối tượng: 对于这个问题.",
-    "dy5",
-  ],
-  [
-    "大家这个问题对的看法不一样。",
-    "“对” đứng trước đối tượng: 对这个问题.",
-    "dy6",
-  ],
-  ["朋友们我对很热情。", "“对” đứng trước đối tượng: 对我很热情.", "dy8"],
-  [
-    "朋友们对于我很热情。",
-    "“对于” không trực tiếp dẫn đối tượng là người (我); phải dùng “对”.",
-    "dx2",
-    "朋友们对我很热情。",
-  ],
-  [
-    "可是现在,我就是想学汉语,想到中国——这个古老而的年轻国家去看看。",
-    "“而” nối trực tiếp hai tính từ, rồi mới thêm “的”: 古老而年轻的国家.",
-    "er1",
-  ],
-  [
-    "她是一个聪明美丽而的姑娘。",
-    "“而” đứng giữa hai tính từ: 聪明而美丽的姑娘.",
-    "er2",
-  ],
-  [
-    "这种水果好看不而好吃。",
-    "“而” biểu thị chuyển ý, đứng trước vế sau: 好看而不好吃.",
-    "er3",
-  ],
-  [
-    "我选择这家饭店,花钱而少吃得好。",
-    "“而” nối hai vế sau “花钱少”: 花钱少而吃得好.",
-    "er4",
-  ],
-  [
-    "哈尔滨还很冷,中国南方而已经春暖花开了。",
-    "“而” biểu thị chuyển ý, đứng đầu vế sau: 而中国南方已经春暖花开了.",
-    "er5",
-  ],
-  [
-    "父母觉得我的想法是对的,就同意只好了。",
-    "“只好” đứng trước động từ: 只好同意了.",
-    "zh1",
-  ],
-  [
-    "半路上忽然下起了雨,我没带雨伞,淋着雨只好往回跑。",
-    "“只好” đứng trước động từ chính: 只好淋着雨往回跑.",
-    "zh2",
-  ],
-  [
-    "昨天晚上我回来时已经没有公共汽车了,坐只好出租车。",
-    "“只好” đứng trước động từ: 只好坐出租车.",
-    "zh3",
-  ],
-  [
-    "我的手机摔坏了,只好买再一个。",
-    "“再” đứng trước động từ: 再买一个; “只好” đứng trước cụm vị ngữ.",
-    "zh4",
+    "每国、每学校、每医院、每单位",
+    "每 phải kèm lượng từ trước danh từ (trừ 人、家、年、月、日、天、星期、周). Sửa: 各国、各学校、各医院、各单位 hoặc 每个国家、每个学校、每个医院、每个单位.",
+    "pa",
+    "各国、各学校、各医院、各单位|每个国家、每个学校、每个医院、每个单位",
   ],
 ];
-// Câu 不能说 (*) khi xếp câu sẽ dùng bản đã sửa ở đây
-const ORDX: Record<string, string> = {
-  dx1: "我们/都/{对}/这个问题/感兴趣。",
-  dx2: "朋友们/{对}/我/很热情。",
-};
 
 // ===== DANH SÁCH TAB DỊCH (dùng cho code cũ) — mỗi nhóm = 1 điểm ngữ pháp =====
 export const P: [string, string, string][][] = [
   [
     [
-      "{1|说实话},今天老师讲的我有的地方没听懂。",
-      "Shuō shíhuà, jīntiān lǎoshī jiǎng de wǒ yǒu de dìfang méi tīngdǒng.",
-      "Nói thật, hôm nay có chỗ tôi không nghe hiểu những gì thầy giảng.",
+      "中国人常说:“在家{1|靠}父母,出门{1|靠}朋友。”我现在交了好多朋友。",
+      "Zhōngguórén cháng shuō: “Zàijiā kào fùmǔ, chūmén kào péngyou.” Wǒ xiànzài jiāo le hǎo duō péngyou.",
+      "Người Trung Quốc thường nói: “Ở nhà dựa vào bố mẹ, ra ngoài dựa vào bạn bè.” Bây giờ tôi đã kết giao được rất nhiều bạn.",
     ],
     [
-      "{1|说实话},我也是第一次来这个地方。",
-      "Shuō shíhuà, wǒ yě shì dì-yī cì lái zhège dìfang.",
-      "Nói thật, tôi cũng là lần đầu đến nơi này.",
+      "她学习这么好,全{1|靠}自己的努力。",
+      "Tā xuéxí zhème hǎo, quán kào zìjǐ de nǔlì.",
+      "Cô ấy học giỏi như vậy, hoàn toàn nhờ vào nỗ lực của bản thân.",
     ],
     [
-      "{1|说实话},我一点儿也不想去。",
-      "Shuō shíhuà, wǒ yìdiǎnr yě bù xiǎng qù.",
-      "Nói thật, tôi chẳng muốn đi chút nào.",
-    ],
-  ],
-  [
-    [
-      "自由自在地去国外{1|过一年}。",
-      "Zìyóu-zìzài de qù guówài guò yì nián.",
-      "Tự do tự tại ra nước ngoài sống một năm.",
-    ],
-  ],
-  [
-    [
-      "我的眼泪也{1|一下子}流了出来。",
-      "Wǒ de yǎnlèi yě yíxiàzi liú le chūlái.",
-      "Nước mắt tôi cũng bỗng chốc trào ra.",
+      "他是{1|靠}奖学金读完大学的。",
+      "Tā shì kào jiǎngxuéjīn dúwán dàxué de.",
+      "Anh ấy nhờ học bổng mà học xong đại học.",
     ],
     [
-      "几年不见,他{1|一下子}长这么高了。",
-      "Jǐ nián bú jiàn, tā yíxiàzi zhǎng zhème gāo le.",
-      "Mấy năm không gặp, anh ấy bỗng chốc cao thế này rồi.",
+      "我的家乡,前边临着一条河,后边{1|靠}着一座山,是有名的风景区。",
+      "Wǒ de jiāxiāng, qiánbian lín zhe yì tiáo hé, hòubian kào zhe yí zuò shān, shì yǒumíng de fēngjǐngqū.",
+      "Quê tôi phía trước giáp một con sông, phía sau tựa vào một ngọn núi, là khu thắng cảnh nổi tiếng.",
     ],
     [
-      "一过“五一”,天{1|一下子}就热起来了。",
-      "Yí guò “Wǔ-Yī”, tiān yíxiàzi jiù rè qǐlái le.",
-      "Vừa qua dịp 1/5, trời bỗng chốc nóng lên.",
+      "屋子里,{1|靠}墙放着一张桌子。",
+      "Wūzi li, kào qiáng fàng zhe yì zhāng zhuōzi.",
+      "Trong phòng, có một cái bàn đặt sát tường.",
     ],
     [
-      "她没走好,{1|一下子}从楼梯上摔下来了。",
-      "Tā méi zǒu hǎo, yíxiàzi cóng lóutī shang shuāi xiàlái le.",
-      "Cô ấy bước không vững, bỗng chốc ngã từ cầu thang xuống.",
+      "别{1|靠}在我身上。",
+      "Bié kào zài wǒ shēnshang.",
+      "Đừng dựa vào người tôi.",
+    ],
+    [
+      "他{1|靠}着沙发睡着了。",
+      "Tā kào zhe shāfā shuìzháo le.",
+      "Anh ấy tựa vào ghế sofa ngủ thiếp đi.",
     ],
   ],
   [
     [
-      "我很早就希望能有机会来中国学习汉语,现在这个愿望{1|终于}实现了,心里有说不出的高兴。",
-      "Wǒ hěn zǎo jiù xīwàng néng yǒu jīhuì lái Zhōngguó xuéxí Hànyǔ, xiànzài zhège yuànwàng zhōngyú shíxiàn le, xīnli yǒu shuō bu chū de gāoxìng.",
-      "Từ rất sớm tôi đã mong có cơ hội đến Trung Quốc học tiếng Trung, giờ ước nguyện này cuối cùng đã thành, trong lòng vui không nói nên lời.",
+      "对不同情况,应该{1|分别}对待。",
+      "Duì bù tóng qíngkuàng, yīnggāi fēnbié duìdài.",
+      "Đối với các tình huống khác nhau, nên xử lý riêng từng trường hợp.",
     ],
     [
-      "经过努力,他{1|终于}考上了大学。",
-      "Jīngguò nǔlì, tā zhōngyú kǎoshàng le dàxué.",
-      "Qua nỗ lực, cuối cùng anh ấy đã đỗ đại học.",
+      "我们班的同学{1|分别}来自亚洲、非洲、欧洲、美洲、大洋洲等五大洲十一个国家。",
+      "Wǒmen bān de tóngxué fēnbié láizì Yàzhōu, Fēizhōu, Ōuzhōu, Měizhōu, Dàyángzhōu děng wǔ dàzhōu shíyī ge guójiā.",
+      "Các bạn trong lớp chúng tôi lần lượt đến từ mười một quốc gia thuộc năm châu: Á, Phi, Âu, Mỹ, Đại Dương.",
     ],
     [
-      "我很早就想看看长城,今天我{1|终于}看到了。",
-      "Wǒ hěn zǎo jiù xiǎng kànkan Chángchéng, jīntiān wǒ zhōngyú kàndào le.",
-      "Từ sớm tôi đã muốn xem Trường Thành, hôm nay cuối cùng tôi đã thấy rồi.",
-    ],
-    [
-      "她当翻译的愿望{1|终于}实现了。",
-      "Tā dāng fānyì de yuànwàng zhōngyú shíxiàn le.",
-      "Ước nguyện làm phiên dịch của cô ấy cuối cùng đã thành hiện thực.",
+      "王老师和林老师{1|分别}找她俩谈了话,现在她俩的关系好多了。",
+      "Wáng lǎoshī hé Lín lǎoshī fēnbié zhǎo tāliǎ tán le huà, xiànzài tāliǎ de guānxi hǎo duō le.",
+      "Thầy Vương và cô Lâm lần lượt tìm hai bạn ấy nói chuyện riêng, bây giờ quan hệ của hai bạn tốt hơn nhiều rồi.",
     ],
   ],
   [
     [
-      "从去年夏天起,我就忙着联系学校,办各种手续,可是,这{1|一切}都是瞒着我父母做的。",
-      "Cóng qùnián xiàtiān qǐ, wǒ jiù mángzhe liánxì xuéxiào, bàn gè zhǒng shǒuxù, kěshì, zhè yíqiè dōu shì mánzhe wǒ fùmǔ zuò de.",
-      "Từ mùa hè năm ngoái, tôi bận liên hệ trường, làm đủ loại thủ tục, nhưng tất cả những việc này đều giấu bố mẹ tôi mà làm.",
+      "能跟这么多同学一起学习,认识这么多世界{1|各}国来的朋友,我感到非常高兴。",
+      "Néng gēn zhème duō tóngxué yìqǐ xuéxí, rènshi zhème duō shìjiè gè guó lái de péngyou, wǒ gǎndào fēicháng gāoxìng.",
+      "Được học cùng nhiều bạn như vậy, quen biết nhiều bạn đến từ các nước trên thế giới, tôi cảm thấy rất vui.",
     ],
     [
-      "刚来时是有很多地方不习惯,但是现在{1|一切}都习惯了。",
-      "Gāng lái shí shì yǒu hěn duō dìfang bù xíguàn, dànshì xiànzài yíqiè dōu xíguàn le.",
-      "Lúc mới đến quả có nhiều chỗ không quen, nhưng giờ mọi thứ đều quen rồi.",
+      "每天都有全国{1|各}地的旅游者来这里参观。",
+      "Měi tiān dōu yǒu quánguó gè dì de lǚyóuzhě lái zhèlǐ cānguān.",
+      "Mỗi ngày đều có du khách từ khắp nơi trong nước đến đây tham quan.",
     ],
     [
-      "这里的{1|一切}对我来说,都是那么有趣。",
-      "Zhèlǐ de yíqiè duì wǒ lái shuō, dōu shì nàme yǒuqù.",
-      "Mọi thứ ở đây đối với tôi đều thú vị đến thế.",
+      "请{1|各}班同学快上车,我们马上就要出发了。",
+      "Qǐng gè bān tóngxué kuài shàngchē, wǒmen mǎshàng jiù yào chūfā le.",
+      "Mời học sinh các lớp mau lên xe, chúng ta sắp xuất phát rồi.",
     ],
     [
-      "我{1|一切}手续都办好了,就等机票了。",
-      "Wǒ yíqiè shǒuxù dōu bàn hǎo le, jiù děng jīpiào le.",
-      "Tôi đã làm xong mọi thủ tục, chỉ chờ vé máy bay.",
-    ],
-  ],
-  [
-    [
-      "我是独生女,{1|如果}把这件事告诉父母,他们多半不会同意。",
-      "Wǒ shì dúshēngnǚ, rúguǒ bǎ zhè jiàn shì gàosu fùmǔ, tāmen duōbàn bú huì tóngyì.",
-      "Tôi là con gái một, nếu nói chuyện này với bố mẹ, phần nhiều họ sẽ không đồng ý.",
+      "{1|每}个人都有自己的爱好。",
+      "Měi ge rén dōu yǒu zìjǐ de àihào.",
+      "Mỗi người đều có sở thích riêng của mình.",
     ],
     [
-      "{1|如果}有问题,可以来找我。",
-      "Rúguǒ yǒu wèntí, kěyǐ lái zhǎo wǒ.",
-      "Nếu có vấn đề, có thể đến tìm tôi.",
+      "{1|每}星期有一次太极拳课。",
+      "Měi xīngqī yǒu yí cì tàijíquán kè.",
+      "Mỗi tuần có một buổi học Thái cực quyền.",
     ],
     [
-      "{1|如果}你想学太极拳,就去报名吧。",
-      "Rúguǒ nǐ xiǎng xué tàijíquán, jiù qù bàomíng ba.",
-      "Nếu bạn muốn học Thái cực quyền thì đi đăng ký đi.",
-    ],
-    [
-      "{1|如果}有时间,我一定去中国旅行。",
-      "Rúguǒ yǒu shíjiān, wǒ yídìng qù Zhōngguó lǚxíng.",
-      "Nếu có thời gian, tôi nhất định đi du lịch Trung Quốc.",
-    ],
-    [
-      "如果下雨{1|的话},我们还去吗?",
-      "Rúguǒ xià yǔ de huà, wǒmen hái qù ma?",
-      "Nếu trời mưa, chúng ta còn đi không?",
+      "他{1|每}一门课都学得很好。",
+      "Tā měi yì mén kè dōu xué de hěn hǎo.",
+      "Anh ấy môn nào cũng học rất tốt.",
     ],
   ],
   [
     [
-      "我把出国留学的事告诉了父母,他们听了,{1|果然}不大愿意。",
-      "Wǒ bǎ chūguó liúxué de shì gàosu le fùmǔ, tāmen tīng le, guǒrán bú dà yuànyì.",
-      "Tôi nói chuyện đi du học với bố mẹ, nghe xong, quả nhiên họ không mấy bằng lòng.",
+      "朋友们看到以后,都向我{1|表示}祝贺。",
+      "Péngyoumen kàndào yǐhòu, dōu xiàng wǒ biǎoshì zhùhè.",
+      "Sau khi thấy, bạn bè đều chúc mừng tôi.",
     ],
     [
-      "听朋友说那个饭店的菜又好吃又便宜,我去吃了一次,{1|果然}不错。",
-      "Tīng péngyou shuō nàge fàndiàn de cài yòu hǎochī yòu piányi, wǒ qù chī le yí cì, guǒrán búcuò.",
-      "Nghe bạn nói món ở nhà hàng đó vừa ngon vừa rẻ, tôi đi ăn một lần, quả nhiên không tệ.",
+      "我送给老师一张照片,向老师{1|表示}感谢。",
+      "Wǒ sòng gěi lǎoshī yì zhāng zhàopiàn, xiàng lǎoshī biǎoshì gǎnxiè.",
+      "Tôi tặng thầy một tấm ảnh để bày tỏ lòng cảm ơn với thầy.",
+    ],
+    ["点头{1|表示}同意。", "Diǎntóu biǎoshì tóngyì.", "Gật đầu tỏ ý đồng ý."],
+    [
+      "他送你玫瑰花是{1|表示}对你的爱。",
+      "Tā sòng nǐ méiguihuā shì biǎoshì duì nǐ de ài.",
+      "Anh ấy tặng bạn hoa hồng là để bày tỏ tình yêu với bạn.",
     ],
     [
-      "天气预报说今天有雨,你看,{1|果然}下起来了。",
-      "Tiānqì yùbào shuō jīntiān yǒu yǔ, nǐ kàn, guǒrán xià qǐlái le.",
-      "Dự báo thời tiết nói hôm nay có mưa, bạn xem, quả nhiên mưa rồi.",
+      "你说了以后,他有什么{1|表示}?",
+      "Nǐ shuō le yǐhòu, tā yǒu shénme biǎoshì?",
+      "Sau khi bạn nói, anh ấy có biểu hiện (phản ứng) gì không?",
     ],
     [
-      "大夫说吃了这种药我的病就会好的,我吃了药以后,{1|果然}病一天比一天好了。",
-      "Dàifu shuō chī le zhè zhǒng yào wǒ de bìng jiù huì hǎo de, wǒ chī le yào yǐhòu, guǒrán bìng yì tiān bǐ yì tiān hǎo le.",
-      "Bác sĩ nói uống thuốc này bệnh sẽ khỏi, sau khi uống thuốc, quả nhiên bệnh ngày một đỡ hơn.",
-    ],
-  ],
-  [
-    [
-      "说实话,{1|对于}将来要做什么,我还没想好。",
-      "Shuō shíhuà, duìyú jiānglái yào zuò shénme, wǒ hái méi xiǎnghǎo.",
-      "Nói thật, về việc sau này làm gì, tôi vẫn chưa nghĩ kỹ.",
-    ],
-    [
-      "{1|对于}这个问题,大家都很感兴趣。",
-      "Duìyú zhège wèntí, dàjiā dōu hěn gǎn xìngqù.",
-      "Về vấn đề này, mọi người đều rất quan tâm.",
-    ],
-    [
-      "{1|对于}工作,他是很认真的。",
-      "Duìyú gōngzuò, tā shì hěn rènzhēn de.",
-      "Đối với công việc, anh ấy rất nghiêm túc.",
-    ],
-    [
-      "多跟中国人谈话,{1|对于}提高汉语听说能力非常有帮助。",
-      "Duō gēn Zhōngguórén tánhuà, duìyú tígāo Hànyǔ tīngshuō nénglì fēicháng yǒu bāngzhù.",
-      "Nói chuyện nhiều với người Trung Quốc rất có ích cho việc nâng cao khả năng nghe nói tiếng Hán.",
-    ],
-    [
-      "大家{1|对于}这个问题的看法不一样。",
-      "Dàjiā duìyú zhège wèntí de kànfǎ bù yíyàng.",
-      "Cách nhìn của mọi người về vấn đề này không giống nhau.",
-    ],
-    [
-      "大家{1|对}这个问题的看法不一样。",
-      "Dàjiā duì zhège wèntí de kànfǎ bù yíyàng.",
-      "Cách nhìn của mọi người về vấn đề này không giống nhau. (Có thể nói: dùng 对 thay cho 对于.)",
-    ],
-    [
-      "朋友们{1|对}我很热情。",
-      "Péngyoumen duì wǒ hěn rèqíng.",
-      "Bạn bè rất nhiệt tình với tôi.",
-    ],
-  ],
-  [
-    [
-      "可是现在,我就是想学汉语,想到中国——这个古老{1|而}年轻的国家去看看。",
-      "Kěshì xiànzài, wǒ jiù shì xiǎng xué Hànyǔ, xiǎngdào Zhōngguó——zhège gǔlǎo ér niánqīng de guójiā qù kànkan.",
-      "Nhưng bây giờ, tôi chỉ muốn học tiếng Trung, muốn đến Trung Quốc, đất nước vừa cổ xưa vừa trẻ trung này, để xem.",
-    ],
-    [
-      "她是一个聪明{1|而}美丽的姑娘。",
-      "Tā shì yí ge cōngmíng ér měilì de gūniang.",
-      "Cô ấy là một cô gái thông minh và xinh đẹp.",
-    ],
-    [
-      "这种水果好看{1|而}不好吃。",
-      "Zhè zhǒng shuǐguǒ hǎokàn ér bù hǎochī.",
-      "Loại trái cây này đẹp mắt nhưng không ngon.",
-    ],
-    [
-      "我选择这家饭店,花钱少{1|而}吃得好。",
-      "Wǒ xuǎnzé zhè jiā fàndiàn, huā qián shǎo ér chī de hǎo.",
-      "Tôi chọn nhà hàng này, tốn ít tiền mà ăn ngon.",
-    ],
-    [
-      "哈尔滨还很冷,{1|而}中国南方已经春暖花开了。",
-      "Hā’ěrbīn hái hěn lěng, ér Zhōngguó nánfāng yǐjīng chūnnuǎn-huākāi le.",
-      "Cáp Nhĩ Tân vẫn còn rất lạnh, còn miền nam Trung Quốc đã xuân ấm hoa nở.",
-    ],
-  ],
-  [
-    [
-      "父母觉得我的想法是对的,就{1|只好}同意了。",
-      "Fùmǔ juéde wǒ de xiǎngfǎ shì duì de, jiù zhǐhǎo tóngyì le.",
-      "Bố mẹ thấy suy nghĩ của tôi là đúng, đành đồng ý.",
-    ],
-    [
-      "半路上忽然下起了雨,我没带雨伞,{1|只好}淋着雨往回跑。",
-      "Bànlù shang hūrán xià qǐ le yǔ, wǒ méi dài yǔsǎn, zhǐhǎo lín zhe yǔ wǎng huí pǎo.",
-      "Giữa đường bỗng đổ mưa, tôi không mang ô, đành dầm mưa chạy về.",
-    ],
-    [
-      "昨天晚上我回来时已经没有公共汽车了,{1|只好}坐出租车。",
-      "Zuótiān wǎnshang wǒ huílái shí yǐjīng méiyǒu gōnggòng qìchē le, zhǐhǎo zuò chūzūchē.",
-      "Tối qua lúc tôi về đã hết xe buýt, đành đi taxi.",
-    ],
-    [
-      "我的手机摔坏了,{1|只好}再买一个。",
-      "Wǒ de shǒujī shuāihuài le, zhǐhǎo zài mǎi yí ge.",
-      "Điện thoại tôi rơi hỏng rồi, đành mua cái khác.",
+      "她这样做是友好的{1|表示}。",
+      "Tā zhèyàng zuò shì yǒuhǎo de biǎoshì.",
+      "Cô ấy làm như vậy là một biểu hiện thân thiện.",
     ],
   ],
 ];
@@ -854,7 +498,7 @@ export const P: [string, string, string][][] = [
 // ===== HẾT DỮ LIỆU =====
 
 const M: Record<string, E> = Object.fromEntries(S.map((s) => [s.id, s]));
-const clean = (h: string) => h.replace(/[{}*&#]/g, "");
+const clean = (h: string) => h.replace(/[{}*&#~]/g, "");
 const plain = (h: string) => clean(h).replace(/\//g, "");
 const keyOf = (h: string) => h.match(/\{(.+?)\}/)?.[1] ?? "";
 const norm = (s: string) => s.replace(/[\s，。,.？?！!“”":：、；;—\-]/g, "");
@@ -866,24 +510,28 @@ const shuffle = <T,>(a: T[]) => {
   }
   return r;
 };
-const blank = (h: string) => {
-  const m = h.replace(/[*&#/]/g, "").match(/^(.*?)\{(.+?)\}(.*)$/);
-  return m ? m[1] + "＿＿＿＿" + m[3] : plain(h);
-};
+const blank = (h: string) =>
+  h.replace(/[*&#~/]/g, "").replace(/\{.+?\}/g, "＿＿＿＿");
 
-const Hl = ({ h }: { h: string }) => {
-  const m = h.replace(/[*&#/]/g, "").match(/^(.*?)\{(.+?)\}(.*)$/);
-  if (!m) return <>{plain(h)}</>;
-  return (
-    <>
-      {m[1]}
-      <span className="rounded bg-sky-100 px-0.5 font-semibold text-sky-700">
-        {m[2]}
-      </span>
-      {m[3]}
-    </>
-  );
-};
+const Hl = ({ h }: { h: string }) => (
+  <>
+    {h
+      .replace(/[*&#~/]/g, "")
+      .split(/(\{.+?\})/)
+      .map((t, i) =>
+        t[0] === "{" ? (
+          <span
+            key={i}
+            className="rounded bg-sky-100 px-0.5 font-semibold text-sky-700"
+          >
+            {t.slice(1, -1)}
+          </span>
+        ) : (
+          t
+        ),
+      )}
+  </>
+);
 
 const Info = ({ s }: { s: E }) => (
   <div className="mt-2 space-y-0.5 text-sm">
@@ -893,7 +541,7 @@ const Info = ({ s }: { s: E }) => (
 );
 
 const Card = ({ children }: { children: React.ReactNode }) => (
-  <div className="mb-3 rounded-sm border border-stone-200 bg-white p-4">
+  <div className="mb-3 rounded-xl border border-stone-200 bg-white p-4 shadow-sm">
     {children}
   </div>
 );
@@ -937,42 +585,63 @@ const Verdict = ({
   </div>
 );
 
-// ===== 1. TRẮC NGHIỆM =====
+// ===== 1. TRẮC NGHIỆM (có đáp án ngay trên từng câu) =====
 function MCTab() {
   const [seed, setSeed] = useState(0);
   const qs = useMemo(
     () =>
-      MC.map(([id, d]) => {
-        const s = M[id];
-        const neg = s.h[0] === "*";
-        const k = neg ? "对" : keyOf(s.h);
-        return { s, neg, k, opts: shuffle([k, ...d.split("|")]) };
+      MC.map((it) => {
+        if (it.length === 4) {
+          const [stem, k, d, ex] = it;
+          return {
+            stem,
+            k,
+            ex,
+            s: null as E | null,
+            opts: shuffle([k, ...d.split("|")]),
+          };
+        }
+        const s = M[it[0]];
+        const k = keyOf(s.h);
+        return {
+          stem: blank(s.h),
+          k,
+          ex: "",
+          s: s as E | null,
+          opts: shuffle([k, ...it[1].split("|")]),
+        };
       }),
     [seed],
   );
   const [ans, setAns] = useState<Record<number, string>>({});
-  const [chk, setChk] = useState(false);
+  const [shown, setShown] = useState<Record<number, boolean>>({});
+  const done = (i: number) => shown[i] || ans[i] !== undefined;
+  const answered = Object.keys(ans).length;
   const score = qs.filter((q, i) => ans[i] === q.k).length;
   return (
     <>
+      <div className="mb-3 text-sm text-stone-600">
+        Đúng {score}/{answered} câu đã làm · tổng {qs.length} câu
+      </div>
       {qs.map((q, i) => (
         <Card key={i + "-" + seed}>
           <div className="text-lg text-stone-800">
-            {i + 1}. {blank(q.s.h)}
+            {i + 1}. {q.stem}
           </div>
           <div className="mt-3 flex flex-wrap gap-2">
             {q.opts.map((o) => {
-              const sel = ans[i] === o;
               let cls = "border-stone-300 text-stone-700 hover:bg-stone-100";
-              if (chk && o === q.k)
-                cls = "border-emerald-400 bg-emerald-50 text-emerald-800";
-              else if (chk && sel)
-                cls = "border-rose-400 bg-rose-50 text-rose-800";
-              else if (sel) cls = "border-sky-400 bg-sky-50 text-sky-800";
+              if (done(i)) {
+                if (o === q.k)
+                  cls = "border-emerald-400 bg-emerald-50 text-emerald-800";
+                else if (ans[i] === o)
+                  cls = "border-rose-400 bg-rose-50 text-rose-800";
+                else cls = "border-stone-200 text-stone-400";
+              }
               return (
                 <button
                   key={o}
-                  disabled={chk}
+                  disabled={done(i)}
                   onClick={() => setAns({ ...ans, [i]: o })}
                   className={"rounded-lg border px-4 py-1.5 text-base " + cls}
                 >
@@ -981,56 +650,55 @@ function MCTab() {
               );
             })}
           </div>
-          {chk && (
+          {!done(i) && (
+            <button
+              onClick={() => setShown({ ...shown, [i]: true })}
+              className="mt-2 text-sm text-sky-700 hover:underline"
+            >
+              Xem đáp án
+            </button>
+          )}
+          {done(i) && (
             <div className="mt-3 text-lg text-stone-800">
-              {q.neg ? (
-                <>
-                  <span className="text-stone-400 line-through">
-                    {plain(q.s.h)}
-                  </span>
-                  <div>{plain(q.s.h).replace("对于", "对")}</div>
-                  <div className="mt-2 text-sm text-stone-500">
-                    {q.s.p.replace("duìyú", "duì")}
-                  </div>
-                  <div className="text-sm text-stone-700">{q.s.v}</div>
-                </>
-              ) : (
+              {ans[i] !== undefined && (
+                <div
+                  className={
+                    "mb-1 text-sm " +
+                    (ans[i] === q.k ? "text-emerald-700" : "text-rose-700")
+                  }
+                >
+                  {ans[i] === q.k ? "Đúng!" : `Chưa đúng. Đáp án: ${q.k}`}
+                </div>
+              )}
+              {q.s ? (
                 <>
                   <Hl h={q.s.h} />
                   <Info s={q.s} />
                 </>
+              ) : (
+                <div className="text-base text-stone-700">{q.ex}</div>
               )}
             </div>
           )}
         </Card>
       ))}
-      <div className="flex items-center gap-3">
-        <Btn onClick={() => setChk(true)}>Kiểm tra</Btn>
-        <Btn
-          kind="ghost"
-          onClick={() => {
-            setAns({});
-            setChk(false);
-            setSeed(seed + 1);
-          }}
-        >
-          Làm lại
-        </Btn>
-        {chk && (
-          <span className="text-sm text-stone-600">
-            Đúng {score}/{qs.length}
-          </span>
-        )}
-      </div>
+      <Btn
+        kind="ghost"
+        onClick={() => {
+          setAns({});
+          setShown({});
+          setSeed(seed + 1);
+        }}
+      >
+        Làm lại
+      </Btn>
     </>
   );
 }
 
 // ===== 2. SẮP XẾP CÂU =====
 function Ord({ s, n }: { s: E; n: number }) {
-  const neg = s.h[0] === "*";
-  const src = neg ? ORDX[s.id] : s.h;
-  const ch = useMemo(() => clean(src).split("/"), [src]);
+  const ch = useMemo(() => clean(s.h).split("/"), [s]);
   const init = () => shuffle(ch.map((_, i) => i));
   const [pool, setPool] = useState<number[]>(init);
   const [ans, setAns] = useState<number[]>([]);
@@ -1040,7 +708,7 @@ function Ord({ s, n }: { s: E; n: number }) {
   return (
     <Card>
       <div className="text-sm text-stone-500">
-        {n}. {neg ? "Xếp thành câu đúng (dùng 对, không dùng 对于)" : s.v}
+        {n}. {s.v}
       </div>
       <div className="mt-3 flex min-h-11 flex-wrap gap-2 rounded-lg border border-dashed border-stone-300 bg-stone-50 p-2">
         {ans.map((i) => (
@@ -1092,11 +760,9 @@ function Ord({ s, n }: { s: E; n: number }) {
         <Verdict ok={ok}>
           {ok ? "Đúng!" : "Chưa đúng. Đáp án:"}
           <div className="mt-1 text-lg text-stone-800">
-            <Hl h={src} />
+            <Hl h={s.h} />
           </div>
-          <div className="text-stone-500">
-            {neg ? s.p.replace("duìyú", "duì") : s.p}
-          </div>
+          <div className="text-stone-500">{s.p}</div>
         </Verdict>
       )}
     </Card>
@@ -1104,7 +770,7 @@ function Ord({ s, n }: { s: E; n: number }) {
 }
 const OrdTab = () => (
   <>
-    {S.map((s, i) => (
+    {S.filter((s) => !"*~".includes(s.h[0])).map((s, i) => (
       <Ord key={s.id} s={s} n={i + 1} />
     ))}
   </>
@@ -1161,9 +827,7 @@ function Fix({
           <div className="mt-1 text-lg text-stone-800">
             {alt ? rights.join("  /  ") : <Hl h={s.h} />}
           </div>
-          <div className="text-stone-500">
-            {alt ? s.p.replace("duìyú", "duì") : s.p}
-          </div>
+          <div className="text-stone-500">{s.p}</div>
           <div className="mt-1 text-stone-700">{why}</div>
         </Verdict>
       )}
@@ -1322,12 +986,12 @@ export default function App() {
     <div className="min-h-screen text-stone-800">
       <div className="mx-auto max-w-3xl">
         <h1 className="text-xl font-semibold">
-          汉语教程 第三册上 · 第一课 注释 & 词语用法
+          汉语教程 第三册上 · 第二课 注释 & 词语用法
         </h1>
         <p className="mb-4 text-sm text-stone-500">
           Luyện tập từ các câu ví dụ ở phần Notes và Usage
         </p>
-        <div className="mb-4 flex flex-wrap gap-2 bg-stone-50 py-3">
+        <div className="mb-4 flex flex-wrap gap-2">
           {TABS.map(([name], i) => (
             <button
               key={name}
