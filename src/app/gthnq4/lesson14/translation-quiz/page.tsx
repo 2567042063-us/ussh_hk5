@@ -1,10 +1,27 @@
+import TranslationQuiz from "@shared/components/quizdich/TranslationQuiz";
+
 import LessonLayout from "../../LessonLayout";
 import { lesson14 } from "../../lessons/lesson14";
+// import { lesson01 } from "../../lessons/lesson01";
+import { paragraphs, questions } from "../kewen/Kewen";
+
+const translationLesson: Lesson = {
+  id: "gthnq4-lesson14",
+  items: [...paragraphs.flat(), ...questions].map(({ zh, py, vi }) => ({
+    zh,
+    pinyin: py,
+    vietnamese: vi,
+  })),
+};
+
+export function generateMetadata() {
+  return { title: "GTHN q4 - Bài 14 - 钥匙忘拔下来了" };
+}
 
 export default function Page() {
   return (
     <LessonLayout lesson={lesson14}>
-      <p className="py-6 text-slate-500">trống</p>
+      <TranslationQuiz lesson={translationLesson} />
     </LessonLayout>
   );
 }

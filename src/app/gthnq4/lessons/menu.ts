@@ -8,6 +8,7 @@ const lessonSections = [
   // { id: "phonetic", title: "语音", path: "phonetic" },
   // { id: "phrases", title: "词语", path: "phrases" },
   // { id: "exercises", title: "Bài tập", path: "exercises" },
+  { id: "btbnxh", title: "Bài tập BN Xu Hướng", path: "bt-bnxh" },
   { id: "supplementary", title: "补充课文", path: "supplementary" },
 ];
 

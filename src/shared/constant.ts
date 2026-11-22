@@ -52,6 +52,7 @@ export const isMainNavActive = (
 ) =>
   pathname === item.href ||
   (item.id === "nguphap" && pathname.startsWith(`${item.href}/`)) ||
+  (item.id === "gthnq4" && pathname.startsWith("/gthnq4/")) ||
   (item.id === "gthnq5" && pathname.startsWith("/gthnq5"));
 
 // fileName === filename ? classNameActive : "",

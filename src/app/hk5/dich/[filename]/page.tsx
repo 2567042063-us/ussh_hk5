@@ -4,14 +4,13 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import clsx from "clsx";
 
-import HtmlRenderer from "@shared/components/HtmlRenderer";
-import { classNameActive } from "@shared/constant";
-import { getLessonById, lessonMenu } from "@shared/data/dich/lesson-loader";
-
 import Footer from "@shared/components/common/Footer";
 import Header from "@shared/components/common/Header";
 import LayoutGrbt from "@shared/components/common/LayoutGrbt";
-import TranslationQuiz from "./TranslationQuiz";
+import HtmlRenderer from "@shared/components/HtmlRenderer";
+import TranslationQuiz from "@shared/components/quizdich/TranslationQuiz";
+import { classNameActive } from "@shared/constant";
+import { getLessonById, lessonMenu } from "@shared/data/dich/lesson-loader";
 
 export async function generateMetadata({
   params,

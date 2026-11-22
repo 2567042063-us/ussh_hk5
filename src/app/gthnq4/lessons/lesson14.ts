@@ -21,6 +21,11 @@ export const lesson14 = {
       href: "/gthnq4/lesson14/translation-quiz",
     },
     {
+      id: "btbnxh",
+      title: "Bài tập BN Xu Hướng",
+      href: "/gthnq4/lesson14/bt-bnxh",
+    },
+    {
       id: "supplementary",
       title: "补充课文",
       href: "/gthnq4/lesson14/supplementary",

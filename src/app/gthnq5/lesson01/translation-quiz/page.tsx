@@ -1,4 +1,5 @@
-import TranslationQuiz from "../../../hk5/dich/[filename]/TranslationQuiz";
+import TranslationQuiz from "@shared/components/quizdich/TranslationQuiz";
+
 import LessonLayout from "../../LessonLayout";
 import { lesson01 } from "../../lessons/lesson01";
 import { paragraphs, questions } from "../kewen/Kewen";

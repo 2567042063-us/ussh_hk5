@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-import TranslationQuiz from "../../../hk5/dich/[filename]/TranslationQuiz";
+import TranslationQuiz from "@shared/components/quizdich/TranslationQuiz";
 
 // 课文: điền đoạn văn 综合填空 vào đây (cùng định dạng với bài trước):
 // [[ [ "câu có {1|đáp án}", "pinyin", "tiếng Việt" ], ... ], ... ]  (mỗi mảng ngoài = 1 đoạn)

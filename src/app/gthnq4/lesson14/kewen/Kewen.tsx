@@ -178,3 +178,36 @@ const raw: [string, string, string][][] = [
 export const paragraphs: Sentence[][] = raw.map((p) =>
   p.map(([zh, py, vi]) => ({ zh, py, vi })),
 );
+
+export const questions: Sentence[] = [
+  {
+    zh: "星期天，“我”和麦克一起去哪儿买书？",
+    py: "Xīngqītiān, “wǒ” hé Màikè yìqǐ qù nǎr mǎi shū?",
+    vi: "Chủ nhật, “tôi” và Mike cùng đi đâu mua sách?",
+  },
+  {
+    zh: "图书城离学校远不远？他们骑了多长时间才到？",
+    py: "Túshūchéng lí xuéxiào yuǎn bu yuǎn? Tāmen qí le duō cháng shíjiān cái dào?",
+    vi: "Siêu thị sách cách trường có xa không? Họ đạp xe bao lâu mới tới nơi?",
+  },
+  {
+    zh: "“我”和麦克都买了什么？",
+    py: "“Wǒ” hé Màikè dōu mǎi le shénme?",
+    vi: "“Tôi” và Mike đã mua những gì?",
+  },
+  {
+    zh: "“我”回到学校以后，为什么要爬楼梯上十层？",
+    py: "“Wǒ” huídào xuéxiào yǐhòu, wèishénme yào pá lóutī shàng shí céng?",
+    vi: "Sau khi về đến trường, vì sao “tôi” phải leo cầu thang lên tầng mười?",
+  },
+  {
+    zh: "“我”到了门口以后，发现钥匙怎么了？",
+    py: "“Wǒ” dàole ménkǒu yǐhòu, fāxiàn yàoshi zěnme le?",
+    vi: "Sau khi đến trước cửa, “tôi” phát hiện chìa khóa bị làm sao?",
+  },
+  {
+    zh: "最后，麦克给“我”带来了什么？",
+    py: "Zuìhòu, Màikè gěi “wǒ” dài lái le shénme?",
+    vi: "Cuối cùng, Mike mang đến cho “tôi” thứ gì?",
+  },
+];

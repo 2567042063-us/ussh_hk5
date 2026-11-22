@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-import TranslationQuiz from "../../../hk5/dich/[filename]/TranslationQuiz";
+import TranslationQuiz from "@shared/components/quizdich/TranslationQuiz";
 
 const P = [
   [

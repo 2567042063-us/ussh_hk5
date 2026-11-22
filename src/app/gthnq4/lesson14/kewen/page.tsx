@@ -10,7 +10,7 @@ const allIds = paragraphs.flatMap((paragraph, paragraphIndex) =>
 
 function Reveal({ sentence }: { sentence: Sentence }) {
   return (
-    <div className="border-l-2 border-sky-300 pl-3">
+    <div className="border-l-2 border-stone-300 pl-3">
       <p className="text-sm leading-6 text-stone-500">{sentence.py}</p>
       <p className="text-[15px] leading-6 text-stone-800">{sentence.vi}</p>
     </div>
@@ -31,8 +31,8 @@ export default function Page() {
 
   const toggleAll = () => setOpen(allOpen ? new Set() : new Set(allIds));
   const sentenceButtonClass = (id: string) =>
-    `ztai__zh text-2xl cursor-pointer rounded-sm text-left transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 ${
-      open.has(id) ? "bg-sky-100" : "hover:bg-amber-50"
+    `ztai__zh text-2xl cursor-pointer rounded-sm text-left transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-stone-500 ${
+      open.has(id) ? "bg-stone-100" : "hover:bg-amber-50"
     }`;
 
   return (
