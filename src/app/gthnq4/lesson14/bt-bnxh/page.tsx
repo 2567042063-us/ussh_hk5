@@ -1,6 +1,7 @@
 "use client";
 
 import { Fragment, useState } from "react";
+import clsx from "clsx";
 
 import { compoundExercises, exercises, passage } from "./data";
 import { ExerciseGroup } from "./exercise-group";
@@ -26,9 +27,14 @@ export default function Page() {
             type="button"
             aria-pressed={highlighted}
             onClick={() => setHighlighted((current) => !current)}
-            className="rounded border border-stone-300 px-3 py-1 text-sm text-stone-700 hover:bg-stone-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-500"
+            className={clsx(
+              "rounded border px-3 py-1 text-sm hover:bg-slate-50",
+              highlighted
+                ? "border-sky-600 bg-sky-50 text-sky-700"
+                : "border-stone-300 text-stone-700",
+            )}
           >
-            {highlighted ? "Tắt ≖⩊≖" : "Tô sáng ≖⩊≖"}
+            Tô sáng ≖⩊≖
           </button>
           <ul
             aria-label="Chú thích màu"

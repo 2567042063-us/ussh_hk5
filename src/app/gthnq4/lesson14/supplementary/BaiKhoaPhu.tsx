@@ -1,12 +1,43 @@
 "use client";
 
-import { Fragment, useState } from "react";
+import { Fragment, useState, type ReactNode } from "react";
+
+type SentenceMark = { text: string; kind: "bnxh" | "bnkq" };
 
 type Sentence = {
   chinese: string;
   pinyin: string;
   vietnamese: string;
+  /** Các cụm cần tô sáng, theo thứ tự xuất hiện trong câu */
+  marks?: SentenceMark[];
 };
+
+const markClasses = {
+  // Bổ ngữ xu hướng
+  bnxh: "rounded-sm bg-yellow-200 px-0.5 text-inherit",
+  // Bổ ngữ kết quả
+  bnkq: "rounded-sm bg-lime-300 px-0.5 text-stone-900",
+} as const;
+
+function renderChinese(sentence: Sentence, highlighted: boolean): ReactNode {
+  if (!highlighted || !sentence.marks) return sentence.chinese;
+
+  const parts: ReactNode[] = [];
+  let cursor = 0;
+  sentence.marks.forEach((mark, index) => {
+    const start = sentence.chinese.indexOf(mark.text, cursor);
+    if (start === -1) return;
+    parts.push(sentence.chinese.slice(cursor, start));
+    parts.push(
+      <mark key={index} className={markClasses[mark.kind]}>
+        {mark.text}
+      </mark>,
+    );
+    cursor = start + mark.text.length;
+  });
+  parts.push(sentence.chinese.slice(cursor));
+  return parts;
+}
 
 const text: Sentence[] = [
   {
@@ -20,12 +51,14 @@ const text: Sentence[] = [
       "Nǐ hǎo. Wǒ yǐjīng dào le Tài Shān, wǒ shì pá shànglái de, méiyǒu zuò lǎnchē.",
     vietnamese:
       "Xin chào. Mình đã đến Thái Sơn rồi, mình leo lên đấy, không đi cáp treo.",
+    marks: [{ text: "爬上来", kind: "bnxh" }],
   },
   {
     chinese: "登上泰山，真有“一览众山小”的感觉。",
     pinyin: "Dēng shàng Tài Shān, zhēn yǒu “yì lǎn zhòng shān xiǎo” de gǎnjué.",
     vietnamese:
       "Leo lên đỉnh Thái Sơn, đúng là có cảm giác “đứng trên đỉnh núi cao nhìn các núi non khác đều nhỏ bé”.",
+    marks: [{ text: "登上", kind: "bnxh" }],
   },
   {
     chinese:
@@ -34,6 +67,7 @@ const text: Sentence[] = [
       "Wǒ hái zài shān shang zhù le yí yè, děng dì-èr tiān zǎoshang kàn rìchū, néng zhàn zài Tài Shān shang kàn rìchū, wǒ hěn gāoxìng.",
     vietnamese:
       "Mình còn ở lại trên núi một đêm, đợi sáng hôm sau xem mặt trời mọc; được đứng trên Thái Sơn ngắm bình minh, mình rất vui.",
+    marks: [{ text: "站在", kind: "bnkq" }],
   },
   {
     chinese:
@@ -42,11 +76,17 @@ const text: Sentence[] = [
       "Dāng wǒmen kàndào tàiyáng yíxiàzi tiào chūlái de shíhou, dōu xīngfèn de dàshēng jiào le qǐlái, zhēn shì měi jí le.",
     vietnamese:
       "Khi chúng mình thấy mặt trời bỗng nhô lên, ai cũng phấn khích reo hò ầm ĩ, thật sự là đẹp tuyệt vời.",
+    marks: [
+      { text: "看到", kind: "bnkq" },
+      { text: "跳出来", kind: "bnxh" },
+      { text: "叫了起来", kind: "bnxh" },
+    ],
   },
   {
     chinese: "下午，我又从泰山上走下来了。",
     pinyin: "Xiàwǔ, wǒ yòu cóng Tài Shān shang zǒu xiàlái le.",
     vietnamese: "Buổi chiều, mình lại đi từ trên núi xuống.",
+    marks: [{ text: "走下来", kind: "bnxh" }],
   },
   {
     chinese: "明天我要去曲阜参观孔庙和孔林。",
@@ -71,6 +111,7 @@ const text: Sentence[] = [
     pinyin: "Zhè shì wǒ yòng shǒujī zhào de Tài Shān rìchū, fā gěi nǐ kànkan.",
     vietnamese:
       "Đây là ảnh bình minh Thái Sơn mình chụp bằng điện thoại, gửi bạn xem.",
+    marks: [{ text: "发给", kind: "bnkq" }],
   },
   {
     chinese: "祝好",
@@ -447,6 +488,7 @@ export default function BaiKhoaPhu() {
   );
   const [showPinyin, setShowPinyin] = useState(false);
   const [showMeaning, setShowMeaning] = useState(false);
+  const [highlighted, setHighlighted] = useState(false);
   const [answers, setAnswers] = useState<Record<number, number>>({});
   const [orderAnswers, setOrderAnswers] = useState<Record<number, number[]>>(
     {},
@@ -542,6 +584,37 @@ export default function BaiKhoaPhu() {
             >
               Nghĩa
             </button>
+            <button
+              type="button"
+              aria-pressed={highlighted}
+              onClick={() => setHighlighted((value) => !value)}
+              className={`rounded border px-3 py-1 text-sm ${
+                highlighted
+                  ? "border-sky-600 bg-sky-50 text-sky-700"
+                  : "border-slate-200 hover:bg-slate-50"
+              }`}
+            >
+              Tô sáng ≖⩊≖
+            </button>
+            <ul
+              aria-label="Chú thích màu"
+              className="flex items-center gap-x-3 text-sm text-slate-600"
+            >
+              <li className="flex items-center gap-1.5">
+                <span
+                  aria-hidden="true"
+                  className="inline-block h-3 w-3 rounded-sm bg-yellow-200"
+                />
+                Vàng: BNXH
+              </li>
+              <li className="flex items-center gap-1.5">
+                <span
+                  aria-hidden="true"
+                  className="inline-block h-3 w-3 rounded-sm bg-lime-500"
+                />
+                Xanh: BNKQ
+              </li>
+            </ul>
             <p className="text-sm text-sky-700">
               Chạm vào câu để xem pinyin + nghĩa.
             </p>
@@ -559,7 +632,7 @@ export default function BaiKhoaPhu() {
                   className="block w-full py-2 text-left hover:bg-amber-50/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500"
                 >
                   <span className="ztai__zh block text-2xl leading-relaxed">
-                    {sentence.chinese}
+                    {renderChinese(sentence, highlighted)}
                   </span>
                   {(showPinyin || isOpen) && (
                     <span className="block text-sm text-slate-500">

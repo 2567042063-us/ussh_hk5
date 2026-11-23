@@ -22,7 +22,7 @@ export default function MainNav() {
             className={clsx(
               "relative ml-8",
               isHome
-                ? "flex-none font-semibold"
+                ? "-top-0.5 flex-none font-semibold"
                 : "border-b-[5px] text-lg font-light lowercase",
               !isHome && isActive
                 ? classNameActive

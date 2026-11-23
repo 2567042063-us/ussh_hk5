@@ -17,12 +17,12 @@ export const lesson14 = {
     { id: "kewen", title: "课文", href: "/gthnq4/lesson14/kewen" },
     {
       id: "translation",
-      title: "越中翻译练习",
+      title: "课文 - 越中翻译练习",
       href: "/gthnq4/lesson14/translation-quiz",
     },
     {
       id: "btbnxh",
-      title: "Bài tập BN Xu Hướng",
+      title: "课文 - phân tích BNXH",
       href: "/gthnq4/lesson14/bt-bnxh",
     },
     {
