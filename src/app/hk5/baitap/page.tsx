@@ -96,7 +96,7 @@ export default function Page() {
                   •̀ ᴗ - Luyện Dịch
                 </Link>
                 <Link
-                  href="/hk5/tuvung"
+                  href="/hk5/tuvung/hanzi-review"
                   prefetch={false}
                   // target="_blank"
                   // rel="noopener noreferrer"
