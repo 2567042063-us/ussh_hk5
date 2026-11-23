@@ -3,7 +3,7 @@ import { lesson14 } from "../../lessons/lesson14";
 import VocabBai from "./Vocab";
 
 export function generateMetadata() {
-  return { title: "GTHN q5 - Bài 01 - 生词" };
+  return { title: "GTHN q4 - Bài 14 - 钥匙忘拔下来了" };
 }
 
 export default function Page() {

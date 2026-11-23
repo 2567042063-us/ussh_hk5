@@ -2,8 +2,7 @@ import TranslationQuiz from "@shared/components/quizdich/TranslationQuiz";
 
 import LessonLayout from "../../LessonLayout";
 import { lesson14 } from "../../lessons/lesson14";
-// import { lesson01 } from "../../lessons/lesson01";
-import { paragraphs, questions } from "../kewen/Kewen";
+import { paragraphs, questions } from "../Kewen";
 
 const translationLesson: Lesson = {
   id: "gthnq4-lesson14",

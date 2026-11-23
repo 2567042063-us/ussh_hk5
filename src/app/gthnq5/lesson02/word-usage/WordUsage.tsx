@@ -984,7 +984,7 @@ export default function App() {
   const Cur = TABS[t][1];
   return (
     <div className="min-h-screen text-stone-800">
-      <div className="mx-auto max-w-3xl">
+      <div className="mx-auto">
         <h1 className="text-xl font-semibold">
           汉语教程 第三册上 · 第二课 注释 & 词语用法
         </h1>

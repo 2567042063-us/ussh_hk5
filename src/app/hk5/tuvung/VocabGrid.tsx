@@ -385,21 +385,18 @@ export default function VocabGrid({ title, words, groupByPos = true }: Props) {
             <div className="rounded-t-md border-x border-t border-slate-200 bg-white p-6 pb-[calc(1.5rem+env(safe-area-inset-bottom))] shadow-2xl">
               <div className="mx-auto mb-5 h-1.5 w-12 rounded-full bg-slate-200" />
               <div className="mb-4 flex items-center justify-between gap-3">
-                <div className="flex min-w-0 items-center gap-3">
-                  <div className="min-w-0">
-                    <h2 className="ztai__zh truncate text-3xl font-light leading-[1.55] text-slate-900">
-                      {selected.hanzi}
-                    </h2>
-                    <p className="text-sm text-slate-500">{selected.pinyin}</p>
-                  </div>
+                <div className="flex min-w-0 flex-col gap-1">
                   <VocabStrokePreview text={selected.hanzi} />
+                  <p className="mt-2 text-xl font-light text-stone-500">
+                    ［ {selected.pinyin} ］
+                  </p>
                 </div>
                 <button
                   type="button"
                   autoFocus
                   onClick={closeDialog}
                   aria-label="Đóng"
-                  className="rounded-lg p-2 text-slate-400 transition hover:bg-slate-100 hover:text-slate-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500"
+                  className="absolute right-3 top-3 rounded-lg p-2 text-slate-400 transition hover:bg-slate-100 hover:text-slate-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500"
                 >
                   <svg
                     viewBox="0 0 24 24"

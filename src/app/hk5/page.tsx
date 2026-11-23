@@ -70,8 +70,8 @@ export default function Page() {
                   <Link
                     href="/hk5/tuvung"
                     prefetch={false}
-                    // target="_blank"
-                    // rel="noopener noreferrer"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-sky-600 hover:text-yellow-600 dark:text-sky-300 dark:hover:text-yellow-400"
                   >
                     Từ vựng • ˕ •

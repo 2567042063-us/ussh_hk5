@@ -187,6 +187,13 @@ export default function ChineseDictionaryPage() {
 
   // Tìm kiếm trong từ điển cục bộ
   const dictionaryEntry = SAMPLE_DICTIONARY[query.trim()];
+  const resolvedExamples = dictionaryEntry?.examples.length
+    ? dictionaryEntry.examples
+    : dynamicExamples;
+  const resolvedExampleSource = dictionaryEntry?.examples.length
+    ? "dictionary"
+    : exampleSource;
+  const resolvedIsLoading = dictionaryEntry ? false : isLoadingExamples;
 
   // Xử lý tra cứu 3 tầng cho Ví dụ minh họa & Dịch nghĩa
   useEffect(() => {
@@ -195,10 +202,9 @@ export default function ChineseDictionaryPage() {
 
     const entry = SAMPLE_DICTIONARY[cleanQuery];
 
-    // Tầng 1: Lấy ví dụ có sẵn trong Từ điển
+    // Ví dụ cục bộ được suy ra trực tiếp từ dữ liệu từ điển ở phần render.
+    // Không cần cập nhật state đồng bộ bên trong effect.
     if (entry && entry.examples.length > 0) {
-      setDynamicExamples(entry.examples);
-      setExampleSource("dictionary");
       return;
     }
 
@@ -334,21 +340,21 @@ export default function ChineseDictionaryPage() {
 
   // Nhãn hiển thị nguồn của ví dụ minh họa
   const getExampleSourceBadge = () => {
-    if (exampleSource === "dictionary") {
+    if (resolvedExampleSource === "dictionary") {
       return (
         <span className="rounded border border-emerald-200 bg-emerald-50 px-2 py-0.5 text-xs font-medium text-emerald-700">
           Nguồn: Từ điển chuẩn
         </span>
       );
     }
-    if (exampleSource === "corpus") {
+    if (resolvedExampleSource === "corpus") {
       return (
         <span className="rounded border border-amber-200 bg-amber-50 px-2 py-0.5 text-xs font-medium text-amber-700">
           Nguồn: Kho câu song ngữ
         </span>
       );
     }
-    if (exampleSource === "ai") {
+    if (resolvedExampleSource === "ai") {
       return (
         <span className="rounded border border-purple-200 bg-purple-50 px-2 py-0.5 text-xs font-medium text-purple-700">
           Nguồn: AI Generate + Cache
@@ -471,17 +477,17 @@ export default function ChineseDictionaryPage() {
                   <h3 className="text-sm font-semibold uppercase tracking-wider text-slate-400">
                     Ví dụ minh họa
                   </h3>
-                  {!isLoadingExamples && getExampleSourceBadge()}
+                  {!resolvedIsLoading && getExampleSourceBadge()}
                 </div>
 
-                {isLoadingExamples ? (
+                {resolvedIsLoading ? (
                   <div className="space-y-2.5">
                     <div className="h-16 animate-pulse rounded-xl bg-slate-100" />
                     <div className="h-16 animate-pulse rounded-xl bg-slate-100" />
                   </div>
-                ) : dynamicExamples.length > 0 ? (
+                ) : resolvedExamples.length > 0 ? (
                   <div className="space-y-3">
-                    {dynamicExamples.map((ex, idx) => (
+                    {resolvedExamples.map((ex, idx) => (
                       <div
                         key={idx}
                         className="rounded-xl border border-slate-100 bg-slate-50 p-3.5"
