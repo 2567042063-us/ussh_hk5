@@ -1,6 +1,6 @@
 import LessonLayout from "../../LessonLayout";
 import { lesson14 } from "../../lessons/lesson14";
-import Kewen from "./kewen";
+import Kewen from "./BaiKhoaChinh";
 
 export default function Page() {
   return (
