@@ -15,6 +15,7 @@ export const lesson14 = {
   menu: [
     { id: "vocab", title: "生词", href: "/gthnq4/lesson14/vocab" },
     { id: "kewen", title: "课文", href: "/gthnq4/lesson14/kewen" },
+    { id: "phonetic", title: "语音", href: "/gthnq4/lesson14/phonetic" },
     {
       id: "translation",
       title: "课文 - 越中翻译练习",
