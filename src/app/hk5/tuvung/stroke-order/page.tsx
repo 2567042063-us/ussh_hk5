@@ -9,16 +9,16 @@ import StrokeOrderViewer from "./StrokeOrderViewer";
 export function generateMetadata() {
   return {
     title: "Từ vựng - Từ điển",
+    alternates: {
+      canonical: "https://ussh-hk5-neon.vercel.app/hk5/tuvung/stroke-order",
+    },
   };
 }
 
 export default function Page() {
   return (
     <div className="flex min-h-screen flex-col items-center dark:bg-slate-800">
-      <Header
-        title="hk5"
-        canonical="https://ussh-hk5-neon.vercel.app/hk5/tuvung/stroke-order"
-      />
+      <Header />
       <LayoutGrbt
         menuGrbt={vocabMenu}
         filename="stroke-order"

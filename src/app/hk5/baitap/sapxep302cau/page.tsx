@@ -8,7 +8,7 @@ import Header from "@shared/components/common/Header";
 export default function Page() {
   return (
     <div className="flex min-h-screen flex-col items-center dark:bg-slate-800">
-      <Header title="hk5" canonical="https://ussh-hk5-neon.vercel.app/hk5" />
+      <Header />
       <div className="flex-1">
         <h1 className="mb-2 border-b-2 border-t-2 border-dashed border-sky-600 py-3 text-center text-2xl font-extralight leading-tight text-sky-600 dark:text-primary-dark">
           Sắp xếp câu tiếng Trung HSK 3-4-5

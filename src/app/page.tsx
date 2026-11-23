@@ -1,14 +1,19 @@
+import type { Metadata } from "next";
+
 import Footer from "@shared/components/common/Footer";
 import Header from "@shared/components/common/Header";
 import HeroBanner from "@shared/components/common/HeroBanner";
 
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "/",
+  },
+};
+
 export default function Home() {
   return (
     <div className="flex min-h-screen flex-col items-center dark:bg-slate-800">
-      <Header
-        title="nhỏ yêu quái bận tu luyện"
-        canonical="https://ussh-hk5-neon.vercel.app/"
-      />
+      <Header />
 
       <div className="container mb-2 flex flex-1 items-center justify-center sm:mb-10">
         <div className="flex flex-col sm:mt-10 sm:flex-row-reverse">

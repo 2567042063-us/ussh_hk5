@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <div className="flex min-h-screen flex-col items-center dark:bg-slate-800">
-      <Header title="hk5" canonical="https://ussh-hk5-neon.vercel.app/hk5" />
+      <Header />
       <div className="flex-1">
         <div className="mx-auto px-4 py-10">
           <header>

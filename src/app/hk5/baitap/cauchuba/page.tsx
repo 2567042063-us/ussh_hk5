@@ -10,15 +10,15 @@ import Header from "@shared/components/common/Header";
 export const metadata: Metadata = {
   title: "把",
   description: "câu chữ 把",
+  alternates: {
+    canonical: "/hk5/btchuba",
+  },
 };
 
 export default function Page() {
   return (
     <div className="flex min-h-screen flex-col items-center dark:bg-slate-800">
-      <Header
-        title="把"
-        canonical="https://ussh-hk5-neon.vercel.app/hk5/btchuba"
-      />
+      <Header />
       <BaiTapBa />
       <div className="mt-4 flex justify-center">
         <Link

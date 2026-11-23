@@ -16,7 +16,7 @@ export function generateMetadata() {
 export default function Page() {
   return (
     <div className="flex min-h-screen flex-col items-center">
-      <Header title="hk5" canonical="https://ussh-hk5-neon.vercel.app/hk5" />
+      <Header />
       <LayoutGrbt
         menuGrbt={vocabMenu}
         filename="gameVocabShou"

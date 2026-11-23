@@ -1,5 +1,7 @@
 import React from "react";
 
+import ZhText from "@shared/components/ZhText";
+
 /* =====================================================================
    TỪ VỰNG GTHN 5 (汉语教程 第三册 上) — BÀI 1: 离家的时候
    Từ mới: file PDF (01_tuvung.pdf) · Ví dụ / phân biệt: file docx của giáo viên
@@ -2832,22 +2834,6 @@ const POS_LABEL: Record<string, string> = {
 };
 
 const escapeRe = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-
-function ZhText({ text }: { text: string }) {
-  return (
-    <>
-      {text.split(/([\u3400-\u9fff]+)/g).map((part, i) =>
-        /[\u3400-\u9fff]/.test(part) ? (
-          <span key={i} className="ztai__zh">
-            {part}
-          </span>
-        ) : (
-          <React.Fragment key={i}>{part}</React.Fragment>
-        ),
-      )}
-    </>
-  );
-}
 
 /** Tô xanh các từ/cụm trong `words` (nếu có) bên trong `text`. */
 function Hl({

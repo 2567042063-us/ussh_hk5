@@ -38,9 +38,14 @@ const vocabLoaders = new Map<string, () => Promise<VocabularySet>>([
 
 export const vocabMenu: IMenuGrbt = [
   {
-    id: "stroke-order",
+    id: "tu-dien",
     title: "Từ điển Trung - Việt",
     href: "/hk5/tuvung/tu-dien",
+  },
+  {
+    id: "hanzi-review",
+    title: "Hanzi Review",
+    href: "/hk5/tuvung/hanzi-review",
   },
   {
     id: "vocabQ3",

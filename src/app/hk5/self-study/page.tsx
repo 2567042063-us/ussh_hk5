@@ -12,7 +12,7 @@ export function generateMetadata() {
 export default function Page() {
   return (
     <div className="flex min-h-screen flex-col items-center dark:bg-slate-800">
-      <Header title="hk5" canonical="https://ussh-hk5-neon.vercel.app/hk5" />
+      <Header />
       <LayoutGrbt menuGrbt={selfStudyMenu} menuTitle="TỰ HỌC">
         <section className="rounded-2xl bg-sky-50 p-6 sm:p-8">
           <p className="text-sm font-semibold tracking-wide text-sky-700">

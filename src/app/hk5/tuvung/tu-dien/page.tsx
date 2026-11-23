@@ -9,21 +9,17 @@ import Dictionary from "./Dictionary";
 export function generateMetadata() {
   return {
     title: "Từ vựng - Từ điển",
+    alternates: {
+      canonical: "https://ussh-hk5-neon.vercel.app/hk5/tuvung/tu-dien",
+    },
   };
 }
 
 export default function Page() {
   return (
     <div className="flex min-h-screen flex-col items-center dark:bg-slate-800">
-      <Header
-        title="hk5"
-        canonical="https://ussh-hk5-neon.vercel.app/hk5/tuvung/stroke-order"
-      />
-      <LayoutGrbt
-        menuGrbt={vocabMenu}
-        filename="stroke-order"
-        menuTitle="TỪ VỰNG"
-      >
+      <Header />
+      <LayoutGrbt menuGrbt={vocabMenu} filename="tu-dien" menuTitle="TỪ VỰNG">
         <Dictionary />
       </LayoutGrbt>
       <Footer />

@@ -35,7 +35,7 @@ export default function Page() {
   }
   return (
     <div className="flex min-h-screen flex-col items-center dark:bg-slate-800">
-      <Header title="hk5" canonical="https://ussh-hk5-neon.vercel.app/hk5" />
+      <Header />
 
       <div className="container flex-1 px-3 md:px-0">
         <div id="m1" className="my-5">

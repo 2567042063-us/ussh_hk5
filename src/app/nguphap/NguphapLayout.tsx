@@ -10,10 +10,7 @@ export default function NguphapLayout({
 }) {
   return (
     <div className="flex min-h-screen flex-col items-center dark:bg-slate-800">
-      <Header
-        title="Ngữ pháp tiếng Trung"
-        canonical="https://ussh-hk5-neon.vercel.app/nguphap"
-      />
+      <Header />
       <NguphapSidebar>{children}</NguphapSidebar>
       <Footer />
     </div>

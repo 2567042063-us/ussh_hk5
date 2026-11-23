@@ -22,8 +22,12 @@ export default function LayoutGrbt({
 }: LayoutGrbtProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(true);
   const menuId = useId();
-  const alwaysVisibleMenu = menuGrbt.find((menu) => menu.id === "stroke-order");
-  const collapsedMenus = menuGrbt.filter((menu) => menu.id !== "stroke-order");
+  const alwaysVisibleMenus = menuGrbt.filter((menu) =>
+    ["tu-dien", "hanzi-review"].includes(menu.id),
+  );
+  const collapsedMenus = menuGrbt.filter(
+    (menu) => !["tu-dien", "hanzi-review"].includes(menu.id),
+  );
 
   return (
     <div className="container mx-auto flex flex-1 flex-col gap-3 md:flex-row">
@@ -31,20 +35,21 @@ export default function LayoutGrbt({
         id="hamburger-menu-collapse"
         className="md:w-50 flex flex-col gap-1.5 rounded-sm md:shrink-0"
       >
-        {alwaysVisibleMenu && (
+        {alwaysVisibleMenus.map((menu) => (
           <Link
-            href={alwaysVisibleMenu.href}
+            key={menu.id}
+            href={menu.href}
             prefetch={false}
             className={clsx(
               "inline-block border-b border-dashed border-cyan-800/20 px-5 py-1.5 text-slate-500 dark:text-sky-400",
-              alwaysVisibleMenu.id === filename
+              menu.id === filename
                 ? classNameActive
                 : "hover:text-yellow-500 dark:hover:text-yellow-300",
             )}
           >
-            {alwaysVisibleMenu.title}
+            {menu.title}
           </Link>
-        )}
+        ))}
         <div
           className={`flex justify-between gap-2 border-b border-dashed border-cyan-800/20 py-1 last:border-0 dark:border-slate-700`}
         >
