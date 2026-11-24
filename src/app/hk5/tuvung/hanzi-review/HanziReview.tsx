@@ -8,6 +8,7 @@ import {
   type FormEvent,
   type PointerEvent as PE,
 } from "react";
+
 import { DEFAULT_CARDS } from "./defaultCards";
 
 type Card = {
@@ -101,73 +102,55 @@ function WritingPad({
     ctx.lineTo(b.x, b.y);
     ctx.stroke();
   };
-  const clear = () => {
-    const c = ref.current,
-      ctx = c?.getContext("2d");
-    if (!c || !ctx) return;
-    ctx.save();
-    ctx.setTransform(1, 0, 0, 1, 0, 0);
-    ctx.clearRect(0, 0, c.width, c.height);
-    ctx.restore();
-  };
-
   return (
-    <div>
-      <div
-        className="relative mx-auto w-full border border-stone-300 bg-white"
-        style={
-          {
-            aspectRatio: `${n} / 1`,
-            maxWidth: n === 1 ? "18rem" : n === 2 ? "24rem" : "100%",
-            containerType: "inline-size",
-          } as React.CSSProperties
-        }
-      >
-        <div className="absolute inset-0 flex">
-          {chars.map((ch, i) => (
-            <div
-              key={i}
-              className={`relative flex-1 ${i > 0 ? "border-l border-stone-300" : ""}`}
-            >
-              <span className="absolute inset-x-0 top-1/2 border-t border-dashed border-stone-200" />
-              <span className="absolute inset-y-0 left-1/2 border-l border-dashed border-stone-200" />
-              {showAnswer && (
-                <span
-                  lang="zh-CN"
-                  className="ztai__zh absolute inset-0 flex items-center justify-center leading-none text-stone-400"
-                  style={{ fontSize: `${80 / n}cqw` }}
-                >
-                  {ch}
-                </span>
-              )}
-            </div>
-          ))}
-        </div>
-        <canvas
-          ref={ref}
-          className="absolute inset-0 h-full w-full cursor-crosshair touch-none"
-          onPointerDown={(e) => {
-            e.currentTarget.setPointerCapture(e.pointerId);
-            drawing.current = true;
-            last.current = pos(e);
-            line(last.current, last.current);
-          }}
-          onPointerMove={(e) => {
-            if (!drawing.current) return;
-            const p = pos(e);
-            line(last.current, p);
-            last.current = p;
-          }}
-          onPointerUp={() => (drawing.current = false)}
-          onPointerCancel={() => (drawing.current = false)}
-        />
+    <div
+      className="relative mx-auto w-full border border-stone-300 bg-white"
+      style={
+        {
+          aspectRatio: `${n} / 1`,
+          maxWidth: n === 1 ? "18rem" : n === 2 ? "24rem" : "100%",
+          containerType: "inline-size",
+        } as React.CSSProperties
+      }
+    >
+      <div className="absolute inset-0 flex">
+        {chars.map((ch, i) => (
+          <div
+            key={i}
+            className={`relative flex-1 ${i > 0 ? "border-l border-stone-300" : ""}`}
+          >
+            <span className="absolute inset-x-0 top-1/2 border-t border-dashed border-stone-200" />
+            <span className="absolute inset-y-0 left-1/2 border-l border-dashed border-stone-200" />
+            {showAnswer && (
+              <span
+                lang="zh-CN"
+                className="ztai__zh absolute inset-0 flex items-center justify-center leading-none text-stone-400"
+                style={{ fontSize: `${80 / n}cqw` }}
+              >
+                {ch}
+              </span>
+            )}
+          </div>
+        ))}
       </div>
-      <button
-        onClick={clear}
-        className="mx-auto mt-2 block text-sm text-stone-500 underline"
-      >
-        Xoá nét viết
-      </button>
+      <canvas
+        ref={ref}
+        className="absolute inset-0 h-full w-full cursor-crosshair touch-none select-none [-webkit-touch-callout:none] [-webkit-user-select:none]"
+        onPointerDown={(e) => {
+          e.currentTarget.setPointerCapture(e.pointerId);
+          drawing.current = true;
+          last.current = pos(e);
+          line(last.current, last.current);
+        }}
+        onPointerMove={(e) => {
+          if (!drawing.current) return;
+          const p = pos(e);
+          line(last.current, p);
+          last.current = p;
+        }}
+        onPointerUp={() => (drawing.current = false)}
+        onPointerCancel={() => (drawing.current = false)}
+      />
     </div>
   );
 }
@@ -355,7 +338,7 @@ export default function HanziReview() {
         </div>
 
         {tab === "review" && (
-          <section className="mt-6">
+          <section className="mt-6 touch-none select-none [-webkit-touch-callout:none] [-webkit-user-select:none]">
             {!session && cards.length === 0 && (
               <div className="text-center">
                 <p className="text-stone-600">
@@ -450,14 +433,29 @@ export default function HanziReview() {
                   )}
                 </div>
 
-                {!revealed ? (
+                <div className="mt-6 grid grid-cols-3 gap-3">
+                  <button
+                    onClick={() => setRound((r) => r + 1)}
+                    disabled={!usePad}
+                    className="rounded-md border border-stone-300 px-4 py-3 font-medium text-stone-700 hover:bg-stone-100 disabled:opacity-40"
+                  >
+                    Xoá nét viết
+                  </button>
                   <button
                     onClick={() => setRevealed(true)}
-                    className={`${primary} mt-6`}
+                    disabled={revealed}
+                    className="rounded-md border border-stone-300 px-4 py-3 font-medium text-stone-700 hover:bg-stone-100 disabled:opacity-40"
                   >
                     Hiện đáp án
                   </button>
-                ) : (
+                  <button
+                    onClick={() => answer(true)}
+                    className="rounded-md bg-stone-900 px-4 py-3 font-medium text-stone-50 hover:bg-stone-700"
+                  >
+                    Từ tiếp theo
+                  </button>
+                </div>
+                {revealed && (
                   <div className="mt-6">
                     <div className="text-center">
                       <p lang="zh-CN" className="ztai__zh text-5xl">
@@ -475,20 +473,6 @@ export default function HanziReview() {
                     <p className="mt-4 text-center text-sm text-stone-500">
                       Chỉ tính là đúng khi đủ nét và đúng cấu trúc chữ.
                     </p>
-                    <div className="mt-3 grid grid-cols-2 gap-3">
-                      <button
-                        onClick={() => answer(false)}
-                        className="rounded-md border border-red-800 px-4 py-3 font-medium text-red-800 hover:bg-red-50"
-                      >
-                        Mình viết sai
-                      </button>
-                      <button
-                        onClick={() => answer(true)}
-                        className="rounded-md bg-stone-900 px-4 py-3 font-medium text-stone-50 hover:bg-stone-700"
-                      >
-                        Mình viết đúng
-                      </button>
-                    </div>
                   </div>
                 )}
               </div>

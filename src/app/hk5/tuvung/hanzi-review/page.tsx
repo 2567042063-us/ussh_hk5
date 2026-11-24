@@ -1,7 +1,6 @@
 import Footer from "@shared/components/common/Footer";
 import Header from "@shared/components/common/Header";
 import LayoutGrbt from "@shared/components/common/LayoutGrbt";
-import StickyFloatingButtons from "@shared/components/common/StickyFloatingButtons";
 import { vocabMenu } from "@shared/data/tuvung/vocab-loader";
 
 import HanziReview from "./HanziReview";
@@ -27,7 +26,6 @@ export default function Page() {
         <HanziReview />
       </LayoutGrbt>
       <Footer />
-      <StickyFloatingButtons />
     </div>
   );
 }
