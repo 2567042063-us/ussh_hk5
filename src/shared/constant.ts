@@ -20,6 +20,11 @@ export const MAIN_NAV = [
     href: "/hk5",
   },
   {
+    id: "tuvung",
+    label: "từ vựng",
+    href: "/hk5/tuvung/hanzi-review",
+  },
+  {
     id: "nguphap",
     label: "Ngữ Pháp",
     href: "/nguphap",

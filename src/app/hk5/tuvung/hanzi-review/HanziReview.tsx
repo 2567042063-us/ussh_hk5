@@ -8,6 +8,7 @@ import {
   type FormEvent,
   type PointerEvent as PE,
 } from "react";
+import { DEFAULT_CARDS } from "./defaultCards";
 
 type Card = {
   id: string;
@@ -28,7 +29,7 @@ type Session = {
 
 const KEY = "han-tu-hay-quen:v1";
 const INTERVALS = [0, 1, 3, 7, 14, 30]; // ngày chờ theo từng bậc nhớ
-const KAI = '"Kaiti SC","KaiTi","STKaiti","Noto Serif SC",serif';
+
 const HAN = /[\u3400-\u9fff\uf900-\ufaff]/;
 const subscribeToHydration = () => () => {};
 const getClientHydrationSnapshot = () => true;
@@ -133,8 +134,8 @@ function WritingPad({
               {showAnswer && (
                 <span
                   lang="zh-CN"
-                  className="ztai__zh absolute inset-0 flex items-center justify-center leading-none text-red-700/30"
-                  // style={{ fontFamily: KAI, fontSize: `${80 / n}cqw` }}
+                  className="ztai__zh absolute inset-0 flex items-center justify-center leading-none text-stone-400"
+                  style={{ fontSize: `${80 / n}cqw` }}
                 >
                   {ch}
                 </span>
@@ -179,11 +180,26 @@ export default function HanziReview() {
   );
   const [cards, setCards] = useState<Card[]>(() => {
     if (typeof window === "undefined") return [];
+    const withDefaults = (saved: Card[]) => {
+      const have = new Set(saved.map((c) => c.hanzi));
+      const day = ymd(new Date());
+      const fresh: Card[] = DEFAULT_CARDS.filter((c) => !have.has(c.hanzi)).map(
+        ({ day: offset, ...c }) => ({
+          ...c,
+          id: `default-${c.hanzi}`,
+          example: c.example ?? "",
+          box: 0,
+          due: addDays(day, offset),
+          wrong: 0,
+        }),
+      );
+      return [...saved, ...fresh];
+    };
     try {
       const d = JSON.parse(localStorage.getItem(KEY) || "{}");
-      return Array.isArray(d.cards) ? d.cards : [];
+      return withDefaults(Array.isArray(d.cards) ? d.cards : []);
     } catch {
-      return [];
+      return withDefaults([]);
     }
   });
   const [usePad, setUsePad] = useState(() => {
