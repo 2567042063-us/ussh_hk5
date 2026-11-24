@@ -830,7 +830,7 @@ function CheckBar({
 
 function Num({ n }: { n: number }) {
   return (
-    <span className="mt-1 w-7 shrink-0 text-right text-sm font-semibold text-slate-400">
+    <span className="w-7 shrink-0 pt-2 text-right text-sm font-semibold text-slate-400">
       {n}.
     </span>
   );
@@ -1583,7 +1583,7 @@ export default function Lesson1Quiz() {
         汉语教程（第3版）第三册 上 · 第一课 离家的时候
       </p>
 
-      <div className="mb-4 flex flex-wrap gap-2 bg-stone-50 py-3">
+      <div className="mb-2 flex flex-wrap gap-2 bg-stone-50 py-3">
         {KEYS.map((k) => (
           <button
             key={k}
@@ -1607,7 +1607,7 @@ export default function Lesson1Quiz() {
       </div>
 
       <h2 className="font-serif text-xl font-bold">{TITLES[tab].t}</h2>
-      <p className="text-slate-600">{TITLES[tab].s}</p>
+      <p className="mb-2 text-slate-600">{TITLES[tab].s}</p>
 
       {KEYS.map((k) => (
         <div key={k} className={k === tab ? "" : "hidden"}>

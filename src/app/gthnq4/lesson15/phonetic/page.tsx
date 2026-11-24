@@ -3,74 +3,103 @@ import { lesson15 } from "../../lessons/lesson15";
 
 const pairs = [
   [
-    ["进去", "jìnqù", "đi vào"],
-    ["进取", "jìnqǔ", "cầu tiến, tiến thủ"],
+    ["会议", "huìyì", "cuộc họp"],
+    ["回忆", "huíyì", "hồi ức, nhớ lại"],
   ],
   [
-    ["书架", "shūjià", "giá sách"],
-    ["暑假", "shǔjià", "kỳ nghỉ hè"],
+    ["女士", "nǚshì", "quý bà, phụ nữ"],
+    ["律师", "lǜshī", "luật sư"],
   ],
   [
-    ["钥匙", "yàoshi", "chìa khóa"],
-    ["要事", "yàoshì", "việc quan trọng"],
+    ["婚礼", "hūnlǐ", "lễ cưới"],
+    ["顺利", "shùnlì", "thuận lợi"],
   ],
   [
-    ["于是", "yúshì", "thế là, vì vậy"],
-    ["仪式", "yíshì", "nghi lễ"],
+    ["热闹", "rènao", "náo nhiệt"],
+    ["惹恼", "rěnǎo", "chọc tức"],
   ],
   [
-    ["影响", "yǐngxiàng", "ảnh hưởng"],
-    ["印象", "yìnxiàng", "ấn tượng"],
+    ["不停", "bù tíng", "không ngừng"],
+    ["不听", "bù tīng", "không nghe"],
   ],
   [
-    ["只好", "zhǐhǎo", "đành phải"],
-    ["吃好", "chīhǎo", "ăn ngon, ăn no"],
-  ],
-];
-
-const phrases = [
-  [
-    ["放上去", "fàng shàngqù", "đặt lên (đằng kia)"],
-    ["放下来", "fàng xiàlái", "đặt xuống (đằng này)"],
-  ],
-  [
-    ["走进去", "zǒu jìnqù", "đi vào"],
-    ["走出来", "zǒu chūlái", "đi ra"],
-  ],
-  [
-    ["带回去", "dài huíqù", "mang về (đi)"],
-    ["带回来", "dài huílái", "mang về (đây)"],
-  ],
-  [
-    ["拿过去", "ná guòqù", "cầm sang (đằng kia)"],
-    ["拿过来", "ná guòlái", "cầm sang (đằng này)"],
-  ],
-  [
-    ["爬上去", "pá shàngqù", "leo lên"],
-    ["跑下来", "pǎo xiàlái", "chạy xuống"],
-  ],
-  [
-    ["挑出来", "tiāo chūlái", "chọn ra"],
-    ["拔下来", "bá xiàlái", "nhổ / rút xuống"],
+    ["气氛", "qìfēn", "bầu không khí"],
+    ["气愤", "qìfèn", "tức giận"],
   ],
 ];
 
-const sentences = [
+const pourPhrases = [
   [
-    ["爬上楼去了", "pá shàng lóu qù le", "Leo lên lầu rồi"],
-    ["走下楼来了", "zǒu xià lóu lái le", "Đi xuống lầu rồi"],
+    ["倒酒", "dào jiǔ", "rót rượu"],
+    ["倒水", "dào shuǐ", "rót nước"],
   ],
   [
-    ["走进教室去了", "zǒu jìn jiàoshì qù le", "Đi vào lớp học rồi"],
-    ["走出学校去了", "zǒu chū xuéxiào qù le", "Đi ra khỏi trường rồi"],
+    ["倒茶", "dào chá", "rót trà"],
+    ["倒咖啡", "dào kāfēi", "rót cà phê"],
+  ],
+];
+
+const zheWords = [
+  ["听着", "tīngzhe", "đang nghe"],
+  ["看着", "kànzhe", "đang nhìn"],
+  ["说着", "shuōzhe", "đang nói"],
+  ["坐着", "zuòzhe", "đang ngồi"],
+  ["走着", "zǒuzhe", "đang đi"],
+  ["笑着", "xiàozhe", "đang cười"],
+  ["站着", "zhànzhe", "đang đứng"],
+  ["等着", "děngzhe", "đang đợi"],
+  ["玩儿着", "wánrzhe", "đang chơi"],
+  ["拿着", "názhe", "đang cầm"],
+  ["放着", "fàngzhe", "đang đặt"],
+  ["摆着", "bǎizhe", "đang bày"],
+  ["挂着", "guàzhe", "đang treo"],
+  ["穿着", "chuānzhe", "đang mặc"],
+  ["戴着", "dàizhe", "đang đeo"],
+  ["贴着", "tiēzhe", "đang dán"],
+  ["躺着", "tǎngzhe", "đang nằm"],
+  ["提着", "tízhe", "đang xách"],
+];
+
+const zhePhrases = [
+  [
+    ["挂着灯笼", "guàzhe dēnglong", "treo đèn lồng"],
+    ["挂着地图", "guàzhe dìtú", "treo bản đồ"],
   ],
   [
-    ["寄回国去了", "jì huí guó qù le", "Gửi về nước rồi"],
-    ["骑回学校来了", "qí huí xuéxiào lái le", "Đạp xe về trường rồi"],
+    ["挂着衣服", "guàzhe yīfu", "treo quần áo"],
+    ["挂着画儿", "guàzhe huàr", "treo tranh"],
   ],
   [
-    ["跑过马路去了", "pǎo guò mǎlù qù le", "Chạy qua đường rồi"],
-    ["飞回美国去了", "fēi huí Měiguó qù le", "Bay về Mỹ rồi"],
+    ["穿着西服", "chuānzhe xīfú", "mặc vest"],
+    ["穿着裙子", "chuānzhe qúnzi", "mặc váy"],
+  ],
+  [
+    ["戴着手表", "dàizhe shǒubiǎo", "đeo đồng hồ"],
+    ["戴着眼镜儿", "dàizhe yǎnjìngr", "đeo kính"],
+  ],
+  [
+    ["带着照相机", "dàizhe zhàoxiàngjī", "mang theo máy ảnh"],
+    ["带着护照", "dàizhe hùzhào", "mang theo hộ chiếu"],
+  ],
+  [
+    ["带着孩子", "dàizhe háizi", "dẫn theo con"],
+    ["带着学生", "dàizhe xuésheng", "dẫn theo học sinh"],
+  ],
+  [
+    ["做着作业", "zuòzhe zuòyè", "đang làm bài tập"],
+    ["打着手机", "dǎzhe shǒujī", "đang gọi điện thoại"],
+  ],
+  [
+    ["上着课", "shàngzhe kè", "đang học"],
+    ["吃着饭", "chīzhe fàn", "đang ăn cơm"],
+  ],
+  [
+    ["坐着听课", "zuòzhe tīngkè", "ngồi nghe giảng"],
+    ["站着上课", "zhànzhe shàngkè", "đứng giảng bài"],
+  ],
+  [
+    ["走着过去", "zǒuzhe guòqù", "đi bộ qua đó"],
+    ["笑着回答", "xiàozhe huídá", "cười đáp lại"],
   ],
 ];
 
@@ -108,12 +137,35 @@ function ExerciseCards({ rows }: { rows: string[][][] }) {
   );
 }
 
+function WordGrid({ items }: { items: string[][] }) {
+  return (
+    <div className="grid grid-cols-3 gap-3">
+      {items.map((item) => (
+        <article
+          key={item[0]}
+          className="min-w-0 rounded-sm border border-stone-200 bg-white p-3 dark:border-stone-700 dark:bg-stone-900 sm:p-4"
+        >
+          <p className="font-kaiti wrap-break-word text-2xl leading-tight text-stone-900 dark:text-stone-100">
+            {item[0]}
+          </p>
+          <p className="wrap-break-word mt-1 text-sm text-stone-500 dark:text-sky-300">
+            {item[1]}
+          </p>
+          <p className="mt-2 text-sm leading-5 text-stone-800 dark:text-stone-300">
+            {item[2]}
+          </p>
+        </article>
+      ))}
+    </div>
+  );
+}
+
 export default function Page() {
   return (
     <LessonLayout lesson={lesson15}>
       <main className="px-3 pb-8 pt-3 sm:px-6 sm:pb-10 sm:pt-3">
         <div className="inline-flex items-center gap-3 rounded-sm bg-stone-200 px-3 py-1.5">
-          <span className="ztai__zh text-stone-600">五</span>
+          <span className="ztai__zh text-stone-600">一</span>
           <span className="rounded bg-stone-500 px-2 py-0.5 text-white">
             <span className="ztai__zh">语音</span>{" "}
             <span className="text-sm">Yǔyīn</span>{" "}
@@ -141,13 +193,14 @@ export default function Page() {
 
         <section>
           <h2 className="ztai__zh mb-1 mt-3 text-2xl font-bold">(2) 朗读</h2>
-          <h3 className="mb-2 text-stone-500">Cụm từ cơ bản</h3>
-          <ExerciseCards rows={phrases} />
+          <p className="mb-2 text-stone-500">Read out the following phrases</p>
+          <ExerciseCards rows={pourPhrases} />
 
-          <h3 className="mb-2 mt-5 text-stone-500">
-            Câu có tân ngữ nơi chốn + 了
-          </h3>
-          <ExerciseCards rows={sentences} />
+          <h3 className="mb-2 mt-5 text-stone-500">Động từ + 着</h3>
+          <WordGrid items={zheWords} />
+
+          <h3 className="mb-2 mt-5 text-stone-500">Cụm từ với 着</h3>
+          <ExerciseCards rows={zhePhrases} />
         </section>
       </main>
     </LessonLayout>

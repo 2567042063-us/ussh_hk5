@@ -27,6 +27,12 @@ export const lesson14 = {
       href: "/gthnq4/lesson14/bt-bnxh",
     },
     {
+      id: "exercises",
+      title: "练习",
+      href: "/gthnq4/lesson14/exercises",
+    },
+
+    {
       id: "supplementary",
       title: "补充课文",
       href: "/gthnq4/lesson14/supplementary",

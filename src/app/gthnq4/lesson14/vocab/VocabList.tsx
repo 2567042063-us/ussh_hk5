@@ -1,6 +1,6 @@
 export default function VocalList() {
   return (
-    <section className="grid grid-cols-1 gap-2 sm:grid-cols-3 lg:grid-cols-4">
+    <section className="grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3">
       <article
         className="word-card rounded-sm border border-stone-200 bg-white p-4 hover:border-stone-300"
         data-search="图书城 túshūchéng 名 siêu thị sách"

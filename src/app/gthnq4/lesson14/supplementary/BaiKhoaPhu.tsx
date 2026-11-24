@@ -615,7 +615,7 @@ export default function BaiKhoaPhu() {
                 Xanh: BNKQ
               </li>
             </ul>
-            <p className="text-sm text-sky-700">
+            <p className="text-sm text-stone-400">
               Chạm vào câu để xem pinyin + nghĩa.
             </p>
           </div>

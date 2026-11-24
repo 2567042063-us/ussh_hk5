@@ -1,7 +1,6 @@
 import ZhText from "@shared/components/ZhText";
 
-import VocabList from "./VocabList";
-import VocabListExtend from "./VocabListExtend";
+import VocabTable from "./VocabTable";
 
 export default function VocabBai1() {
   return (
@@ -17,7 +16,7 @@ export default function VocabBai1() {
             </span>
           </div>
           <p className="text-sm text-slate-500">
-            <ZhText text="44 từ trong sách" />
+            <ZhText text="39 từ trong sách" />
           </p>
         </div>
 
@@ -31,7 +30,7 @@ export default function VocabBai1() {
           </audio>
         </div>
 
-        <VocabList />
+        <VocabTable />
       </section>
       <div className="my-5 rounded-sm border border-stone-200 bg-white">
         <p className="border-l-3 mt-4 border-stone-600 px-4 text-lg font-semibold text-stone-700">
@@ -90,7 +89,6 @@ export default function VocabBai1() {
           </li>
         </ul>
       </div>
-      <VocabListExtend />
     </main>
   );
 }

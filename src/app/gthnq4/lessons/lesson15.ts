@@ -28,9 +28,9 @@ export const lesson15 = {
       href: "/gthnq4/lesson15/translation-quiz-2",
     },
     {
-      id: "btbnxh",
-      title: "课文 - phân tích BNXH",
-      href: "/gthnq4/lesson15/bt-bnxh",
+      id: "nguphap",
+      title: "语法",
+      href: "/gthnq4/lesson15/nguphap",
     },
     {
       id: "supplementary",
