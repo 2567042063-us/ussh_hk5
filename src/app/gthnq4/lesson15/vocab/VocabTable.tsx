@@ -37,7 +37,7 @@ const words: Word[] = [
     hanzi: "样(子)",
     pinyin: "yàng(zi)",
     pos: "名",
-    vi: "dáng vẻ; hình dáng",
+    vi: "dáng vẻ; hình dáng 〔 bài hát 你的样子 Dáng em 〕",
     meaning: "appearance",
   },
   {

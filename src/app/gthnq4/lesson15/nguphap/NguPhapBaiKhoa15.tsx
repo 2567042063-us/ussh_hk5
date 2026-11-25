@@ -162,7 +162,7 @@ const lessons: Lesson[] = [
   {
     title: {
       chinese: "（二）墙上贴着红双喜字",
-      pinyin: "Qiáng shang tiēzhe hóng shuāngxǐ zì",
+      pinyin: "Qiáng shang tiēzhe hóng shuāng xǐ zì",
       vietnamese: "Trên tường dán chữ Song Hỷ màu đỏ",
       marks: ["贴着"],
     },
@@ -199,7 +199,7 @@ const lessons: Lesson[] = [
       {
         chinese: "屋子里挂着大红灯笼，墙上贴着一个很大的红双喜字。",
         pinyin:
-          "Wūzi li guàzhe dà hóng dēnglong, qiáng shang tiēzhe yí ge hěn dà de hóng shuāngxǐ zì.",
+          "Wūzi li guàzhe dà hóng dēnglong, qiáng shang tiēzhe yí ge hěn dà de hóng shuāng xǐ zì.",
         vietnamese:
           "Trong phòng treo đèn lồng đỏ lớn, trên tường dán một chữ Song Hỷ đỏ rất to.",
         marks: ["挂着", "贴着"],
@@ -286,7 +286,7 @@ const grammar: GrammarPoint[] = [
     examples: [
       {
         chinese: "墙上贴着一个很大的红双喜字。",
-        pinyin: "Qiáng shang tiēzhe yí ge hěn dà de hóng shuāngxǐ zì.",
+        pinyin: "Qiáng shang tiēzhe yí ge hěn dà de hóng shuāng xǐ zì.",
         vietnamese: "Trên tường dán một chữ Song Hỷ đỏ rất to.",
         marks: ["贴着"],
       },

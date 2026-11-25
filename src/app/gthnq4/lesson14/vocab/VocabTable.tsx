@@ -1,8 +1,8 @@
 type Word = {
-  no: number;
+  no?: number;
   hanzi: string;
   pinyin: string;
-  pos: string;
+  pos?: string;
   vi: string;
   meaning: string;
 };
@@ -17,7 +17,6 @@ const words: Word[] = [
     meaning: "bookstore complex; book city",
   },
   {
-    no: 2,
     hanzi: "图书",
     pinyin: "túshū",
     pos: "名",
@@ -41,7 +40,6 @@ const words: Word[] = [
     meaning: "other; another",
   },
   {
-    no: 5,
     hanzi: "另外",
     pinyin: "lìngwài",
     pos: "代",
@@ -57,7 +55,6 @@ const words: Word[] = [
     meaning: "all kinds of; various",
   },
   {
-    no: 7,
     hanzi: "各",
     pinyin: "gè",
     pos: "代",
@@ -65,7 +62,6 @@ const words: Word[] = [
     meaning: "each; every",
   },
   {
-    no: 8,
     hanzi: "样",
     pinyin: "yàng",
     pos: "量",
@@ -129,7 +125,6 @@ const words: Word[] = [
     meaning: "to have winter vacation",
   },
   {
-    no: 16,
     hanzi: "放",
     pinyin: "fàng",
     pos: "动",
@@ -137,7 +132,6 @@ const words: Word[] = [
     meaning: "to let out (school); to start a vacation",
   },
   {
-    no: 17,
     hanzi: "寒假",
     pinyin: "hánjià",
     pos: "名",
@@ -145,7 +139,6 @@ const words: Word[] = [
     meaning: "winter vacation",
   },
   {
-    no: 18,
     hanzi: "暑假",
     pinyin: "shǔjià",
     pos: "名",
@@ -273,7 +266,6 @@ const words: Word[] = [
     meaning: "cardboard box; carton",
   },
   {
-    no: 34,
     hanzi: "纸",
     pinyin: "zhǐ",
     pos: "名",
@@ -329,7 +321,6 @@ const words: Word[] = [
     meaning: "to repair; to maintain",
   },
   {
-    no: 41,
     hanzi: "修",
     pinyin: "xiū",
     pos: "动",
@@ -435,7 +426,7 @@ const words: Word[] = [
   },
 ];
 
-export default function VocabList() {
+export default function VocabTable() {
   return (
     <div className="overflow-x-auto rounded-sm border border-stone-300 bg-white dark:border-stone-700 dark:bg-stone-800">
       <table className="w-full text-left text-sm">
@@ -450,9 +441,9 @@ export default function VocabList() {
           </tr>
         </thead> */}
         <tbody className="divide-y divide-stone-200 dark:divide-stone-700">
-          {words.map((w) => (
+          {words.map((w, i) => (
             <tr
-              key={w.no}
+              key={i}
               className="hover:bg-stone-50 dark:hover:bg-stone-700/50"
             >
               <td className="px-2 py-2 text-stone-400">{w.no}</td>
@@ -462,7 +453,7 @@ export default function VocabList() {
               <td className="ztai__py whitespace-nowrap px-3 py-2 text-stone-600">
                 {w.pinyin}
               </td>
-              <td className="whitespace-nowrap px-3 py-2 text-stone-500 dark:text-stone-400">
+              <td className="px-3 py-2 text-stone-500 dark:text-stone-400">
                 {w.pos}
               </td>
               <td className="px-3 py-2">{w.vi}</td>

@@ -27,11 +27,8 @@ export const lesson15 = {
       title: "课文（二）越中翻译练习",
       href: "/gthnq4/lesson15/translation-quiz-2",
     },
-    {
-      id: "nguphap",
-      title: "语法",
-      href: "/gthnq4/lesson15/nguphap",
-    },
+    { id: "nguphap", title: "语法", href: "/gthnq4/lesson15/nguphap" },
+    { id: "exercises", title: "练习", href: "/gthnq4/lesson15/exercises" },
     {
       id: "supplementary",
       title: "补充课文",

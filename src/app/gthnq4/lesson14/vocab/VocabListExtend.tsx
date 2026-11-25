@@ -1,27 +1,27 @@
 export default function VocabListExtend() {
   return (
     <section>
-      <h2 className="mb-3 text-lg font-semibold text-stone-800 dark:text-stone-100">
+      <h2 className="mb-3 text-lg text-stone-800 dark:text-stone-100">
         So sánh từ dễ nhầm
       </h2>
       <div className="overflow-x-auto rounded-sm border border-stone-200 dark:border-stone-700">
         <table className="min-w-208 w-full border-collapse text-left text-sm text-stone-700 dark:text-stone-200">
           <thead className="bg-stone-100 text-stone-800 dark:bg-stone-700 dark:text-stone-100">
             <tr className="divide-x divide-stone-200 dark:divide-stone-600">
-              <th className="border-b border-stone-200 px-4 py-3 font-semibold dark:border-stone-600">
+              <th className="border-b border-stone-200 px-4 py-3 dark:border-stone-600">
                 Từ
               </th>
-              <th className="border-b border-stone-200 px-4 py-3 font-semibold dark:border-stone-600">
+              <th className="border-b border-stone-200 px-4 py-3 dark:border-stone-600">
                 Pinyin
               </th>
-              <th className="border-b border-stone-200 px-4 py-3 font-semibold dark:border-stone-600">
+              <th className="border-b border-stone-200 px-4 py-3 dark:border-stone-600">
                 Phân biệt
               </th>
             </tr>
           </thead>
           <tbody className="divide-y divide-stone-200 dark:divide-stone-700">
             <tr className="divide-x divide-stone-200 odd:bg-white even:bg-stone-50 dark:divide-stone-700 dark:odd:bg-slate-800 dark:even:bg-slate-800/60">
-              <td className="font-kaiti whitespace-nowrap px-4 py-3 text-2xl font-semibold">
+              <td className="font-kaiti whitespace-nowrap px-4 py-3 text-2xl">
                 拿 / 提
               </td>
               <td className="whitespace-nowrap px-4 py-3">ná / tí</td>
@@ -35,7 +35,7 @@ export default function VocabListExtend() {
               </td>
             </tr>
             <tr className="divide-x divide-stone-200 odd:bg-white even:bg-stone-50 dark:divide-stone-700 dark:odd:bg-slate-800 dark:even:bg-slate-800/60">
-              <td className="font-kaiti whitespace-nowrap px-4 py-3 text-2xl font-semibold">
+              <td className="font-kaiti whitespace-nowrap px-4 py-3 text-2xl">
                 挑 / 选
               </td>
               <td className="whitespace-nowrap px-4 py-3">tiāo / xuǎn</td>
@@ -52,7 +52,7 @@ export default function VocabListExtend() {
               </td>
             </tr>
             <tr className="divide-x divide-stone-200 odd:bg-white even:bg-stone-50 dark:divide-stone-700 dark:odd:bg-slate-800 dark:even:bg-slate-800/60">
-              <td className="font-kaiti whitespace-nowrap px-4 py-3 text-2xl font-semibold">
+              <td className="font-kaiti whitespace-nowrap px-4 py-3 text-2xl">
                 累 / 困
               </td>
               <td className="whitespace-nowrap px-4 py-3">lèi / kùn</td>
@@ -65,7 +65,7 @@ export default function VocabListExtend() {
               </td>
             </tr>
             <tr className="divide-x divide-stone-200 odd:bg-white even:bg-stone-50 dark:divide-stone-700 dark:odd:bg-slate-800 dark:even:bg-slate-800/60">
-              <td className="font-kaiti whitespace-nowrap px-4 py-3 text-2xl font-semibold">
+              <td className="font-kaiti whitespace-nowrap px-4 py-3 text-2xl">
                 另 / 另外
               </td>
               <td className="whitespace-nowrap px-4 py-3">lìng / lìngwài</td>
@@ -81,7 +81,7 @@ export default function VocabListExtend() {
               </td>
             </tr>
             <tr className="divide-x divide-stone-200 odd:bg-white even:bg-stone-50 dark:divide-stone-700 dark:odd:bg-slate-800 dark:even:bg-slate-800/60">
-              <td className="font-kaiti whitespace-nowrap px-4 py-3 text-2xl font-semibold">
+              <td className="font-kaiti whitespace-nowrap px-4 py-3 text-2xl">
                 于是 / 所以
               </td>
               <td className="whitespace-nowrap px-4 py-3">yúshì / suǒyǐ</td>
@@ -98,7 +98,7 @@ export default function VocabListExtend() {
               </td>
             </tr>
             <tr className="divide-x divide-stone-200 odd:bg-white even:bg-stone-50 dark:divide-stone-700 dark:odd:bg-slate-800 dark:even:bg-slate-800/60">
-              <td className="font-kaiti whitespace-nowrap px-4 py-3 text-2xl font-semibold">
+              <td className="font-kaiti whitespace-nowrap px-4 py-3 text-2xl">
                 放 (nghỉ) / 放 (đặt)
               </td>
               <td className="whitespace-nowrap px-4 py-3">fàng</td>

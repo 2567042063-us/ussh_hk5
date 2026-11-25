@@ -31,7 +31,6 @@ export const lesson14 = {
       title: "练习",
       href: "/gthnq4/lesson14/exercises",
     },
-
     {
       id: "supplementary",
       title: "补充课文",

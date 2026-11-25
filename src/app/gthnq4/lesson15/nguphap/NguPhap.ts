@@ -1,9 +1,5 @@
 export type GrammarGroup =
-  | "continue"
-  | "negative"
-  | "question"
-  | "serial"
-  | "together";
+  "continue" | "negative" | "question" | "serial" | "together";
 
 export type GrammarSentence = {
   group: GrammarGroup;
@@ -28,7 +24,7 @@ export const grammarSentences: GrammarSentence[] = [
   {
     group: "continue",
     zh: "他正往墙上贴着红双喜字。",
-    py: "Tā zhèng wǎng qiáng shang tiēzhe hóng shuāngxǐ zì.",
+    py: "Tā zhèng wǎng qiáng shang tiēzhe hóng shuāng xǐ zì.",
     vi: "Anh ấy đang dán chữ song hỷ đỏ lên tường.",
     note: "Động tác “贴” đang tiến hành và kéo dài",
     tokens: ["他", "正", "往", "墙上", "贴着", "红双喜字"],
@@ -36,7 +32,7 @@ export const grammarSentences: GrammarSentence[] = [
   {
     group: "continue",
     zh: "墙上贴着红双喜字。",
-    py: "Qiáng shang tiēzhe hóng shuāngxǐ zì.",
+    py: "Qiáng shang tiēzhe hóng shuāng xǐ zì.",
     vi: "Trên tường dán chữ song hỷ đỏ.",
     note: "Sau khi “贴” xong, chữ song hỷ đỏ ở trạng thái “đang được dán”",
     tokens: ["墙上", "贴着", "红双喜字"],

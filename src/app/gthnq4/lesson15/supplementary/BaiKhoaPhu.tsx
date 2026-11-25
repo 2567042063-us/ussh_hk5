@@ -28,15 +28,18 @@ function shuffle<T>(arr: T[]): T[] {
   return r;
 }
 
-/** Renders <b>…</b> segments as red bold text (đáp án các chỗ trống). */
+/** Renders  segments as red text (đáp án các chỗ trống). */
 function Marked({ text }: { text: string }) {
   return (
     <>
       {text.split(/(<b>.*?<\/b>)/g).map((part, i) =>
         part.startsWith("<b>") ? (
-          <b key={i} className="font-bold text-red-600">
+          <span
+            key={i}
+            className="mx-0.5 rounded bg-yellow-200 px-1 text-red-700"
+          >
             {part.slice(3, -4)}
-          </b>
+          </span>
         ) : (
           <span key={i}>{part}</span>
         ),
@@ -307,7 +310,7 @@ const DIALOGUE: [string, string, string, string][] = [
     "Shēngāo yì mǐ liù zuǒyòu, liú zhe cháng fà, chuān zhe yí jiàn báisè de shàngyī, dài zhe yí fù yǎnjìngr.",
     "Cao khoảng 1 mét 6, để tóc dài, mặc một chiếc áo màu trắng, đeo một cặp kính.",
   ],
-  ["B", "看见了。", "Kànjiàn le.", "Có thấy rồi."],
+  ["B", "看见了。", "Kànjiàn le.", "Có thấy."],
   ["A", "她往哪儿走了？", "Tā wǎng nǎr zǒu le?", "Cô ấy đi về hướng nào rồi?"],
   [
     "B",
@@ -333,7 +336,7 @@ const DIALOGUE: [string, string, string, string][] = [
     "A",
     "就是她。我们也快点儿下去吧。谢谢您了！",
     "Jiù shì tā. Wǒmen yě kuài diǎnr xiàqù ba. Xièxie nín le!",
-    "Chính là cô ấy. Chúng ta cũng nhanh chóng xuống thôi. Cảm ơn ông/bà!",
+    "Chính là cô ấy. Chúng ta cũng nhanh chóng đi xuống thôi. Cảm ơn ông/bà!",
   ],
   ["B", "不客气！", "Bú kèqi!", "Không có gì!"],
 ];
@@ -690,26 +693,31 @@ function DialogueTab() {
         <p className="text-3xl text-sky-600" style={zhFont}>
           打听
         </p>
-        <div className="text-stone-500">Inquiring</div>
-        <div className="font-medium text-stone-800">Hỏi thăm / Hỏi đường</div>
+        <div className="text-stone-500">
+          Inquiring - <span className="pl-2">Hỏi thăm / Hỏi đường</span>
+        </div>
       </header>
 
       <div className="space-y-3">
         {DIALOGUE.map(([who, zh, py, vi], i) => (
           <div
             key={i}
-            className={`rounded-lg border px-4 py-3 ${
+            className={`flex gap-2 rounded-lg border px-4 py-3 ${
               who === "A"
-                ? "mr-6 border-sky-200 bg-sky-50"
+                ? "mr-6 border-gray-200 bg-gray-50"
                 : "ml-6 border-stone-200 bg-white"
             }`}
           >
-            <div className="font-semibold text-stone-500">{who}:</div>
-            <div className="text-[22px] leading-relaxed" style={zhFont}>
-              {zh}
+            <div className="p-1.75 font-semibold text-stone-500">{who}:</div>
+            <div>
+              <div className="text-[22px] leading-relaxed" style={zhFont}>
+                {zh}
+              </div>
+              <div className="text-[0.9rem] leading-snug text-stone-400">
+                {py}
+              </div>
+              <div className="mt-0.5 text-sm text-stone-600">{vi}</div>
             </div>
-            <div className="text-[0.9rem] leading-snug text-sky-600">{py}</div>
-            <div className="mt-0.5 text-sm text-stone-600">{vi}</div>
           </div>
         ))}
       </div>
@@ -736,7 +744,7 @@ function DialogueTab() {
                   <td className="px-3 py-2 text-xl" style={zhFont}>
                     {zh}
                   </td>
-                  <td className="px-3 py-2 text-sm text-sky-600">{py}</td>
+                  <td className="px-3 py-2 text-sm text-stone-600">{py}</td>
                   <td className="px-3 py-2 text-sm text-stone-700">{vi}</td>
                 </tr>
               ))}
@@ -754,7 +762,7 @@ const TABS: { id: TabId; label: string }[] = [
   { id: "a", label: "Bài khoá" },
   { id: "g", label: "Ngữ pháp" },
   { id: "x", label: "Bài tập" },
-  { id: "d", label: "打听" },
+  { id: "d", label: "Hội thoại giao tiếp" },
 ];
 
 export default function Bai15() {
@@ -778,7 +786,7 @@ export default function Bai15() {
                 ? "bg-stone-800 text-white"
                 : "text-stone-600 hover:bg-stone-200"
             }`}
-            style={t.id === "d" ? zhFont : undefined}
+            // style={t.id === "d" ? zhFont : undefined}
           >
             {t.label}
           </button>

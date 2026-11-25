@@ -338,7 +338,7 @@ export default function HanziReview() {
         </div>
 
         {tab === "review" && (
-          <section className="mt-6 touch-none select-none [-webkit-touch-callout:none] [-webkit-user-select:none]">
+          <section className="mt-6">
             {!session && cards.length === 0 && (
               <div className="text-center">
                 <p className="text-stone-600">

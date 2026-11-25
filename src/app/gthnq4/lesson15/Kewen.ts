@@ -118,7 +118,7 @@ export const dialogue1: Dialogue = {
 export const dialogue2: Dialogue = {
   title: s([
     "（二）墙上贴着红双喜字",
-    "(Èr) Qiáng shang tiēzhe hóng shuāngxǐ zì",
+    "(Èr) Qiáng shang tiēzhe hóng shuāng xǐ zì",
     "(2) Trên tường dán cặp chữ Hỷ đỏ",
   ]),
   intro: s([
@@ -153,7 +153,7 @@ export const dialogue2: Dialogue = {
       ],
       [
         "屋子里挂着大红灯笼，墙上贴着一个很大的红双喜字。",
-        "Wūzi li guàzhe dà hóng dēnglong, qiáng shang tiēzhe yí ge hěn dà de hóng shuāngxǐ zì.",
+        "Wūzi li guàzhe dà hóng dēnglong, qiáng shang tiēzhe yí ge hěn dà de hóng shuāng xǐ zì.",
         "Trong phòng treo đèn lồng đỏ lớn, trên tường dán một cặp chữ Hỷ đỏ rất to.",
       ],
       [
