@@ -38,5 +38,10 @@ export const lesson01 = {
       title: "补充课文",
       href: "/gthnq5/lesson01/supplementary",
     },
+    {
+      id: "baitapdicht4",
+      title: "bt dịch t4",
+      href: "/gthnq5/lesson01/baitapdicht4",
+    },
   ],
 } satisfies LessonConfig;

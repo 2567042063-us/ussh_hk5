@@ -338,7 +338,7 @@ export default function HanziReview() {
         </div>
 
         {tab === "review" && (
-          <section className="mt-6">
+          <section className="mt-6 cursor-crosshair touch-none select-none [-webkit-touch-callout:none] [-webkit-user-select:none]">
             {!session && cards.length === 0 && (
               <div className="text-center">
                 <p className="text-stone-600">
@@ -380,7 +380,7 @@ export default function HanziReview() {
             )}
 
             {session && !finished && current && (
-              <div>
+              <div className="m-5">
                 <div className="flex items-center justify-between text-sm text-stone-600">
                   <span>Còn {remaining} chữ</span>
                   <label className="flex items-center gap-2">
