@@ -417,8 +417,11 @@ function ReadingTab() {
       </ul>
 
       <p className="mt-3 text-sm text-stone-500">
-        Chữ <b className="font-bold text-red-600">đỏ đậm</b> = đáp án các chỗ
-        trống ①–⑩ trong đề gốc.
+        Chữ{" "}
+        <span className="text-red-60mx-0.5 rounded bg-yellow-200 px-1 font-bold text-red-700">
+          đỏ
+        </span>{" "}
+        = đáp án các chỗ trống ①–⑩ trong đề gốc.
       </p>
       <p className="mt-2 text-sm text-stone-500">
         Chạm vào câu để xem pinyin + nghĩa.
