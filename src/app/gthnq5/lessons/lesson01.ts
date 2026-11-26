@@ -39,9 +39,14 @@ export const lesson01 = {
       href: "/gthnq5/lesson01/supplementary",
     },
     {
-      id: "baitapdicht4",
-      title: "bt dịch t4",
-      href: "/gthnq5/lesson01/baitapdicht4",
+      id: "baitapt4",
+      title: "bt t4",
+      href: "/gthnq5/lesson01/baitapt4",
     },
+    // {
+    //   id: "baitapdicht4",
+    //   title: "bt dịch t4",
+    //   href: "/gthnq5/lesson01/baitapdicht4",
+    // },
   ],
 } satisfies LessonConfig;

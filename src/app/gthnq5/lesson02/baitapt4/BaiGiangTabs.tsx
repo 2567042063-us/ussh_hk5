@@ -10,7 +10,7 @@ export default function BaiGiangTabs() {
 
   const tabs = [
     { id: "kao" as const, label: "靠" },
-    { id: "gemei" as const, label: "各 还是 每" },
+    { id: "gemei" as const, label: `“各” 还是 “每”` },
   ];
 
   return (
@@ -20,7 +20,7 @@ export default function BaiGiangTabs() {
           <button
             key={t.id}
             onClick={() => setTab(t.id)}
-            className={`rounded-lg px-4 py-2 text-lg font-medium transition ${
+            className={`ztai__zh rounded-lg px-4 py-2 text-lg font-medium transition ${
               tab === t.id
                 ? "bg-white text-stone-900 shadow-sm"
                 : "text-stone-600 hover:text-stone-900"

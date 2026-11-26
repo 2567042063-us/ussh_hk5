@@ -9,6 +9,7 @@ const lessonSections = [
   { id: "phrases", title: "词语", path: "phrases" },
   { id: "exercises", title: "Bài tập", path: "exercises" },
   { id: "supplementary", title: "补充课文", path: "supplementary" },
+  { id: "baitapt4", title: "bt t4", path: "baitapt4" },
 ];
 
 export function createLessonMenu(basePath: string): LessonMenuItem[] {

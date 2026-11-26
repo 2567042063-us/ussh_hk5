@@ -336,7 +336,7 @@ function Exercise() {
                 <button
                   disabled={!full || s.checked}
                   onClick={() => update(i, { checked: true })}
-                  className="rounded-lg bg-stone-800 px-4 py-2 text-sm font-medium text-stone-50 hover:bg-stone-700 disabled:cursor-not-allowed disabled:bg-stone-300 disabled:text-stone-500"
+                  className="rounded-lg bg-sky-600 px-4 py-2 text-sm text-white hover:bg-sky-700 disabled:cursor-not-allowed disabled:opacity-40"
                 >
                   Kiểm tra
                 </button>

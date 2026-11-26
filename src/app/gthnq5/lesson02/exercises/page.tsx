@@ -1,15 +1,15 @@
 import LessonLayout from "../../LessonLayout";
-import { lesson01 } from "../../lessons/lesson01";
+import { lesson02 } from "../../lessons/lesson02";
 import ExercisesQuiz from "./ExercisesQuiz";
 import ExercisesWithToggle from "./ExercisesWithToggle";
 
 export function generateMetadata() {
-  return { title: "GTHN q5 - Bài 01 - Bài tập" };
+  return { title: "GTHN q5 - Bài 02 - Bài tập" };
 }
 
 export default function Page() {
   return (
-    <LessonLayout lesson={lesson01} hideHeader>
+    <LessonLayout lesson={lesson02} hideHeader>
       <div className="px-5">
         <ExercisesQuiz />
       </div>

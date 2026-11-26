@@ -2,7 +2,7 @@ import LessonLayout from "../../LessonLayout";
 import { lesson02 } from "../../lessons/lesson02";
 
 export function generateMetadata() {
-  return { title: "GTHN q5 - Bài 01 - 注释" };
+  return { title: "GTHN q5 - Bài 02 - 练习-词语" };
 }
 
 export default function Page() {

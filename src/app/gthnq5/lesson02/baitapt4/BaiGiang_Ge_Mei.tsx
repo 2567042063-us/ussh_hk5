@@ -127,7 +127,7 @@ const GM_EXERCISE: GmQ[] = [
 
 function GmLesson() {
   return (
-    <section>
+    <section className="mb-4">
       <div className="p-6">
         <p className="text-xs font-semibold uppercase tracking-wider text-stone-500">
           Phân biệt
@@ -155,7 +155,7 @@ function GmLesson() {
             <p className="mt-1 text-sm leading-relaxed text-stone-600">
               {c.focus}
             </p>
-            <p className="mt-3 rounded-lg bg-stone-100 px-3 py-2 text-sm text-stone-700">
+            <p className="mt-3 rounded-lg bg-yellow-50 px-3 py-2 text-sm text-stone-700">
               {c.pattern}
             </p>
             <ul className="mt-3 space-y-2">
@@ -170,6 +170,81 @@ function GmLesson() {
         ))}
       </div>
 
+      <div className="mt-4 rounded-sm border border-stone-200 bg-white p-5">
+        <p className="text-xs font-semibold uppercase tracking-wider text-stone-500">
+          Từ loại
+        </p>
+
+        <div className="mt-3 grid gap-3 sm:grid-cols-2">
+          {/* <!-- 每 --> */}
+          <div className="rounded-xl bg-stone-50 p-4">
+            <div className="flex items-baseline gap-2">
+              <span className="ztai__zh text-5xl text-stone-900">每</span>
+              <span className="text-sm text-stone-500">měi</span>
+            </div>
+            <p className="mt-2 inline-block rounded-full bg-stone-800 px-3 py-0.5 text-xs font-semibold text-stone-50">
+              Đại từ
+            </p>
+            <p className="mt-3 text-sm leading-relaxed text-stone-600">
+              Đứng trước danh từ / lượng từ, chỉ “mỗi một”. Không đứng thẳng
+              trước động từ.
+            </p>
+            <p className="ztai__zh mt-1 text-lg text-stone-900">
+              每个人 · 每两天 · 每一次
+            </p>
+            <div>
+              <p className="mt-3 text-sm leading-relaxed text-stone-600">
+                Thời gian lặp lại 〔 ko dùng 各 〕
+              </p>
+              <p className="ztai__zh mt-1 text-lg text-stone-900">
+                每天 · 每年 · 每星期 · 每次
+              </p>
+            </div>
+            <p className="mt-3 text-sm leading-relaxed text-rose-800">
+              Không đứng một mình trước ĐỘNG TỪ
+            </p>
+          </div>
+
+          {/* <!-- 各 --> */}
+          <div className="rounded-xl bg-stone-50 p-4">
+            <div className="flex items-baseline gap-2">
+              <span className="ztai__zh text-5xl text-stone-900">各</span>
+              <span className="text-sm text-stone-500">gè</span>
+            </div>
+            <div className="mt-2 flex flex-wrap gap-2">
+              <span className="rounded-full bg-stone-800 px-3 py-0.5 text-xs font-semibold text-stone-50">
+                Đại từ
+              </span>
+              <span className="rounded-full bg-stone-300 px-3 py-0.5 text-xs font-semibold text-stone-800">
+                Phó từ
+              </span>
+            </div>
+            <p className="mt-3 text-sm leading-relaxed text-stone-600">
+              Đại từ: đứng trước danh từ (各国, 各位).
+              <br />
+              Phó từ: đứng trước động từ, “mỗi người một cách” (各有特长,
+              各回各的家).
+            </p>
+            <p className="ztai__zh mt-1 text-lg text-stone-900">
+              各国 · 各位 · 各方
+            </p>
+            <div>
+              <p className="mt-3 text-sm leading-relaxed text-stone-600">
+                Đứng trước ĐỘNG TỪ
+              </p>
+              <p className="ztai__zh mt-1 text-lg text-stone-900">
+                各有特长, 各自努力, 各回各的家
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <p className="mt-3 rounded-lg bg-yellow-50 px-3 py-2 text-sm text-stone-700">
+          Chỗ trống đứng <b>trước động từ</b> thì chọn <b>各</b>; <br />
+          Đứng trước <b>lượng từ / thời gian</b> thì chọn <b>每</b>.
+        </p>
+      </div>
+      {/*
       <div className="mt-4 overflow-hidden rounded-sm border border-stone-200 bg-white">
         <div className="grid grid-cols-[7rem_1fr_1fr] text-sm font-semibold sm:grid-cols-[9rem_1fr_1fr]">
           <div className="px-3 py-2" />
@@ -196,7 +271,7 @@ function GmLesson() {
         ))}
       </div>
 
-      {/* <div className="mt-4 rounded-sm bg-stone-800 p-5 text-stone-50">
+      <div className="mt-4 rounded-sm bg-stone-800 p-5 text-stone-50">
         <p className="text-xs font-semibold uppercase tracking-wider text-stone-400">
           Mẹo nhớ nhanh
         </p>
@@ -253,7 +328,7 @@ function GmExerciseBlock() {
 
   return (
     <section>
-      <div className="mb-4 flex flex-wrap items-center justify-between gap-3 rounded-sm border border-stone-200 bg-white p-4">
+      <div className="flex flex-wrap items-center justify-between gap-3 p-4">
         <div>
           <p className="text-base font-semibold text-stone-900">
             Bài tập: Chọn “各” hay “每”
@@ -356,7 +431,7 @@ function GmExerciseBlock() {
                 <button
                   disabled={!full || s.checked}
                   onClick={() => update(i, { checked: true })}
-                  className="rounded-lg bg-stone-800 px-4 py-2 text-sm font-medium text-stone-50 hover:bg-stone-700 disabled:cursor-not-allowed disabled:bg-stone-300 disabled:text-stone-500"
+                  className="rounded-lg bg-sky-600 px-4 py-2 text-sm text-white hover:bg-sky-700 disabled:cursor-not-allowed disabled:opacity-40"
                 >
                   Kiểm tra
                 </button>

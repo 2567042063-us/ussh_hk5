@@ -1,14 +1,14 @@
 import LessonLayout from "../../LessonLayout";
-import { lesson01 } from "../../lessons/lesson01";
+import { lesson02 } from "../../lessons/lesson02";
 import BaiKhoaPhu from "./BaiKhoaPhu";
 
 export function generateMetadata() {
-  return { title: "GTHN q5 - Bài 01 - Bài khoá phụ" };
+  return { title: "GTHN q5 - Bài 02 - Bài khoá phụ" };
 }
 
 export default function Page() {
   return (
-    <LessonLayout lesson={lesson01} hideHeader>
+    <LessonLayout lesson={lesson02} hideHeader>
       <BaiKhoaPhu />
     </LessonLayout>
   );

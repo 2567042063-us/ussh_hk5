@@ -1,5 +1,5 @@
 import LessonLayout from "../../LessonLayout";
-import { lesson01 } from "../../lessons/lesson01";
+import { lesson02 } from "../../lessons/lesson02";
 import WordUsage from "./WordUsage";
 
 export function generateMetadata() {
@@ -8,7 +8,7 @@ export function generateMetadata() {
 
 export default function Page() {
   return (
-    <LessonLayout lesson={lesson01} hideHeader>
+    <LessonLayout lesson={lesson02} hideHeader>
       <div className="px-5">
         <WordUsage />
       </div>

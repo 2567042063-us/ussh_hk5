@@ -47,6 +47,7 @@ export type ComparePoint = {
   py?: string;
   desc: string;
   eg?: Phrase[];
+  examples?: Sentence[];
 };
 export type Compare = {
   title: string;
@@ -1524,10 +1525,35 @@ const MAIN: Entry[] = [
           },
           { zh: "一项计划", py: "yí xiàng jìhuà", vi: "một kế hoạch" },
           { zh: "一项规定", py: "yí xiàng guīdìng", vi: "một quy định" },
+          { zh: "一项问题", py: "yí xiàng wèntí", vi: "một vấn đề" },
         ],
       },
     ],
     examples: [
+      {
+        zh: "还有一项工作要做。",
+        py: "Hái yǒu yí xiàng gōngzuò yào zuò.",
+        vi: "Còn một việc phải làm.",
+        hl: ["一项工作"],
+      },
+      {
+        zh: "我们现在着手讨论一项问题。",
+        py: "Wǒmen xiànzài zhuóshǒu tǎolùn yí xiàng wèntí.",
+        vi: "Bây giờ chúng ta bắt tay vào thảo luận một vấn đề.",
+        hl: ["一项问题"],
+      },
+      {
+        zh: "游泳那项运动很受欢迎的。",
+        py: "Yóuyǒng nà xiàng yùndòng hěn shòu huānyíng de.",
+        vi: "Môn thể thao bơi lội đó rất được ưa chuộng.",
+        hl: ["那项运动"],
+      },
+      {
+        zh: "这项计划牵涉到许多部门。",
+        py: "Zhè xiàng jìhuà qiānshè dào xǔduō bùmén.",
+        vi: "Kế hoạch này liên quan đến nhiều bộ phận.",
+        hl: ["这项计划"],
+      },
       {
         zh: "游泳是一项很好的体育运动。",
         py: "Yóuyǒng shì yí xiàng hěn hǎo de tǐyù yùndòng.",
@@ -1554,6 +1580,9 @@ const MAIN: Entry[] = [
           },
         ],
       },
+    ],
+    notes: [
+      "项 là lượng từ dùng cho các điều khoản, công việc, vấn đề, kế hoạch, các hạng mục thể thao.",
     ],
   },
   {
@@ -1900,8 +1929,49 @@ const MAIN: Entry[] = [
           },
         ],
       },
+      {
+        label: "Làm danh từ (biểu hiện, thái độ)",
+        items: [
+          {
+            zh: "一点表示都没有",
+            py: "yì diǎn biǎoshì dōu méiyǒu",
+            vi: "chẳng có chút biểu hiện nào",
+          },
+          {
+            zh: "悔改的表示",
+            py: "huǐgǎi de biǎoshì",
+            vi: "biểu hiện hối cải",
+          },
+          {
+            zh: "赞许的表示",
+            py: "zànxǔ de biǎoshì",
+            vi: "vẻ tán thưởng",
+          },
+        ],
+      },
     ],
     examples: [
+      {
+        zh: "我们向他表示感谢。",
+        py: "Wǒmen xiàng tā biǎoshì gǎnxiè.",
+        vi: "Chúng tôi bày tỏ lòng biết ơn với anh ấy.",
+        hl: ["表示感谢"],
+        hlVi: ["bày tỏ lòng biết ơn"],
+      },
+      {
+        zh: "他对我的话表示怀疑。",
+        py: "Tā duì wǒ de huà biǎoshì huáiyí.",
+        vi: "Anh ấy tỏ ra nghi ngờ lời tôi nói.",
+        hl: ["表示怀疑"],
+        hlVi: ["tỏ ra nghi ngờ"],
+      },
+      {
+        zh: "我们大家都表示同意了。",
+        py: "Wǒmen dàjiā dōu biǎoshì tóngyì le.",
+        vi: "Tất cả chúng tôi đều thể hiện sự đồng ý.",
+        hl: ["表示同意"],
+        hlVi: ["thể hiện sự đồng ý"],
+      },
       {
         zh: "我想向他表示感谢。",
         py: "Wǒ xiǎng xiàng tā biǎoshì gǎnxiè.",
@@ -1916,8 +1986,120 @@ const MAIN: Entry[] = [
         hl: ["表示心意"],
         added: true,
       },
+      // {
+      //   zh: "红灯表示行人和车辆停止通行。",
+      //   py: "Hóngdēng biǎoshì xíngrén hé chēliàng tíngzhǐ tōngxíng.",
+      //   vi: "Đèn đỏ có nghĩa là người đi bộ và xe cộ phải dừng lại, không được đi qua.",
+      //   hl: ["表示"],
+      //   hlVi: ["có nghĩa là"],
+      // },
+      // {
+      //   zh: "海上红色的灯光表示那儿有浅滩或者礁石。",
+      //   py: "Hǎi shang hóngsè de dēngguāng biǎoshì nàr yǒu qiǎntān huòzhě jiāoshí.",
+      //   vi: "Ánh đèn đỏ trên biển cho biết ở đó có bãi cạn hoặc đá ngầm.",
+      //   hl: ["表示"],
+      //   hlVi: ["cho biết"],
+      // },
+    ],
+    notes: [
+      "Nghĩa 1: tỏ ra, ngỏ lời, tỏ lòng, tỏ vẻ, thể hiện. Chủ ngữ thường là danh từ chỉ người hoặc đại từ (ví dụ: 我们向他表示感谢 / 他对我的话表示怀疑 / 我们大家都表示同意了).",
+      "Nghĩa 2: có ý nghĩa…, biểu hiện, biểu thị. Chủ ngữ thường là danh từ chỉ sự vật, sự việc (ví dụ: 红灯表示… / 海上红色的灯光表示…).",
     ],
     compare: [
+      {
+        title: "表示 (động từ) vs 表示 (danh từ)",
+        points: [
+          {
+            zh: "表示 (động từ)",
+            py: "biǎoshì",
+            desc: "Tỏ ra, bày tỏ, thể hiện; hoặc “có nghĩa là”. Phía sau mang tân ngữ: 表示感谢、表示怀疑、表示同意.",
+            eg: [
+              {
+                zh: "表示同意",
+                py: "biǎoshì tóngyì",
+                vi: "thể hiện sự đồng ý",
+              },
+            ],
+            examples: [
+              {
+                zh: "我们向他表示感谢。",
+                py: "Wǒmen xiàng tā biǎoshì gǎnxiè.",
+                vi: "Chúng tôi bày tỏ lòng biết ơn với anh ấy.",
+                hl: ["表示感谢"],
+                hlVi: ["bày tỏ lòng biết ơn"],
+              },
+              {
+                zh: "他对我的话表示怀疑。",
+                py: "Tā duì wǒ de huà biǎoshì huáiyí.",
+                vi: "Anh ấy tỏ ra nghi ngờ lời tôi nói.",
+                hl: ["表示怀疑"],
+                hlVi: ["tỏ ra nghi ngờ"],
+              },
+              {
+                zh: "我们大家都表示同意了。",
+                py: "Wǒmen dàjiā dōu biǎoshì tóngyì le.",
+                vi: "Tất cả chúng tôi đều thể hiện sự đồng ý.",
+                hl: ["表示同意"],
+                hlVi: ["thể hiện sự đồng ý"],
+              },
+              {
+                zh: "红灯表示行人和车辆停止通行。",
+                py: "Hóngdēng biǎoshì xíngrén hé chēliàng tíngzhǐ tōngxíng.",
+                vi: "Đèn đỏ có nghĩa là người đi bộ và xe cộ phải dừng lại, không được đi qua.",
+                hl: ["表示"],
+                hlVi: ["có nghĩa là"],
+              },
+              {
+                zh: "海上红色的灯光表示那儿有浅滩或者礁石。",
+                py: "Hǎi shang hóngsè de dēngguāng biǎoshì nàr yǒu qiǎntān huòzhě jiāoshí.",
+                vi: "Ánh đèn đỏ trên biển cho biết ở đó có bãi cạn hoặc đá ngầm.",
+                hl: ["表示"],
+                hlVi: ["cho biết"],
+              },
+            ],
+          },
+          {
+            zh: "表示 (danh từ)",
+            py: "biǎoshì",
+            desc: "Biểu cảm, thần thái, động thái (cái được biểu hiện ra). Thường làm tân ngữ của 有 / 没有 / 露出, hoặc đứng sau định ngữ + 的: 一点表示都没有、悔改的表示、赞许的表示.",
+            eg: [
+              {
+                zh: "没有表示",
+                py: "méiyǒu biǎoshì",
+                vi: "không có biểu hiện gì",
+              },
+              {
+                zh: "露出赞许的表示",
+                py: "lùchū zànxǔ de biǎoshì",
+                vi: "lộ ra vẻ tán thưởng",
+              },
+            ],
+            examples: [
+              {
+                zh: "他口口声声说爱我，可是他一点表示都没有。",
+                py: "Tā kǒukǒu-shēngshēng shuō ài wǒ, kěshì tā yì diǎn biǎoshì dōu méiyǒu.",
+                vi: "Anh ta suốt ngày miệng nói yêu tôi, nhưng chẳng có chút biểu hiện nào cả.",
+                hl: ["一点表示都没有"],
+                hlVi: ["chẳng có chút biểu hiện nào"],
+              },
+              {
+                zh: "我好说歹说，但他毫无悔改的表示。",
+                py: "Wǒ hǎo shuō dǎi shuō, dàn tā háowú huǐgǎi de biǎoshì.",
+                vi: "Tôi nói hết lời hay lẽ phải, nhưng anh ấy chẳng có chút biểu hiện hối cải nào.",
+                hl: ["悔改的表示"],
+                hlVi: ["biểu hiện hối cải"],
+              },
+              {
+                zh: "他心里特别满意，但是脸上并没露出赞许的表示。",
+                py: "Tā xīnlǐ tèbié mǎnyì, dànshì liǎn shang bìng méi lùchū zànxǔ de biǎoshì.",
+                vi: "Trong lòng anh ấy rất hài lòng, nhưng trên mặt không hề lộ ra vẻ tán thưởng.",
+                hl: ["赞许的表示"],
+                hlVi: ["vẻ tán thưởng"],
+              },
+            ],
+          },
+        ],
+      },
       {
         title: "表示 vs 表达",
         points: [
@@ -3061,6 +3243,11 @@ function CompareRow({ c }: { c: Compare }) {
                   <span className="text-slate-700">— {e.vi}</span>
                 </div>
               ))}
+              {p.examples?.length ? (
+                <div className="mt-2 border-t border-amber-200 pt-2">
+                  <Sentences list={p.examples} />
+                </div>
+              ) : null}
             </div>
           ))}
         </div>
