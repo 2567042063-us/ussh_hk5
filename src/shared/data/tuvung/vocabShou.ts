@@ -277,6 +277,14 @@ export const vocab: Word[] = [
     ],
   },
   {
+    hanzi: "把",
+    pinyin: "bǎ",
+    pos: "động từ",
+    meanings: ["cầm, nắm"],
+    usage: "",
+    examples: [],
+  },
+  {
     hanzi: "拔",
     pinyin: "bá",
     pos: "động từ",

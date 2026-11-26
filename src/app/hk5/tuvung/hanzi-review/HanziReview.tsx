@@ -461,18 +461,18 @@ export default function HanziReview() {
                       <p lang="zh-CN" className="ztai__zh text-5xl">
                         {current.hanzi}
                       </p>
-                      <p className="mt-1 text-lg text-stone-600">
+                      {/* <p className="mt-1 text-lg text-stone-600">
                         {current.pinyin}
-                      </p>
+                      </p> */}
                       {current.example && (
                         <p lang="zh-CN" className="mt-2 text-stone-600">
                           {current.example}
                         </p>
                       )}
                     </div>
-                    <p className="mt-4 text-center text-sm text-stone-500">
+                    {/* <p className="mt-4 text-center text-sm text-stone-500">
                       Chỉ tính là đúng khi đủ nét và đúng cấu trúc chữ.
-                    </p>
+                    </p> */}
                   </div>
                 )}
               </div>
