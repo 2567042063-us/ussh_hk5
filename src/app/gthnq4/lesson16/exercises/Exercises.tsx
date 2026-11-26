@@ -55,298 +55,296 @@ function grade(item: Q, vals: string[]): boolean[] {
   return res;
 }
 
-// ===== Dữ liệu bài 3 – 6 (第十五课 会议厅的门开着呢) =====
-const TAB3: Tab = {
-  id: "3",
-  label: "3",
-  sub: "Chọn từ thích hợp điền vào chỗ trống",
+// ===== Bài 3 (第十六课 前边开过来一辆空车) =====
+const TAB3_A: Tab = {
+  id: "3A",
+  label: "3A",
+  sub: "Chọn từ thích hợp điền vào chỗ trống (A)",
   options: [
-    {
-      zh: "气氛",
-      py: "qìfēn",
-    },
-    {
-      zh: "戴",
-      py: "dài",
-    },
-    {
-      zh: "样",
-      py: "yàng",
-    },
-    {
-      zh: "开",
-      py: "kāi",
-    },
-    {
-      zh: "挂",
-      py: "guà",
-    },
-    {
-      zh: "摆",
-      py: "bǎi",
-    },
-    {
-      zh: "笑",
-      py: "xiào",
-    },
-    {
-      zh: "西服",
-      py: "xīfú",
-    },
+    { zh: "着", py: "zhe" },
+    { zh: "四合院", py: "sìhéyuàn" },
+    { zh: "越来越", py: "yuèláiyuè" },
+    { zh: "越……越……", py: "yuè...yuè..." },
+    { zh: "靠", py: "kào" },
+    { zh: "尝尝", py: "chángchang" },
+    { zh: "节日", py: "jiérì" },
+    { zh: "欢乐", py: "huānlè" },
   ],
   items: [
     {
-      q: "她{}着一副眼镜儿。",
-      a: ["戴"],
-      py: "Tā dàizhe yí fù yǎnjìngr.",
-      vi: "Cô ấy đang đeo một cặp kính.",
-      note: "戴 = đeo (kính, mũ, nhẫn, khăn…). 戴着: trạng thái đang đeo được duy trì. 副 là lượng từ cho đồ có đôi/cặp.",
+      q: "我家院子里种{}很多花儿。",
+      a: ["着"],
+      py: "Wǒ jiā yuànzi li zhòngzhe hěn duō huār.",
+      vi: "Trong sân nhà tôi trồng rất nhiều hoa.",
+      note: "Câu tồn hiện: Nơi chốn + V + 着 + danh từ. 种着 = trồng (trạng thái duy trì).",
     },
     {
-      q: "他女朋友长什么{}？",
-      a: ["样"],
-      py: "Tā nǚpéngyou zhǎng shénme yàng?",
-      vi: "Bạn gái anh ấy trông như thế nào?",
-      note: "长什么样 = trông thế nào, dung mạo ra sao (长 đọc zhǎng).",
+      q: "我觉得北京的{}是一种建筑文化。",
+      a: ["四合院"],
+      py: "Wǒ juéde Běijīng de sìhéyuàn shì yì zhǒng jiànzhù wénhuà.",
+      vi: "Tôi nghĩ tứ hợp viện của Bắc Kinh là một loại văn hóa kiến trúc.",
+      note: "四合院 = tứ hợp viện (nhà ở truyền thống Bắc Kinh).",
     },
     {
-      q: "里边正{}着教学研讨会呢。",
-      a: ["开"],
-      py: "Lǐbian zhèng kāizhe jiàoxué yántǎohuì ne.",
-      vi: "Bên trong đang họp hội thảo giảng dạy.",
-      note: "开会 = họp. 正…着…呢: đang diễn ra. 开着会 = đang họp.",
+      q: "这种建筑现在{}少了。",
+      a: ["越来越"],
+      py: "Zhè zhǒng jiànzhù xiànzài yuèláiyuè shǎo le.",
+      vi: "Loại kiến trúc này bây giờ ngày càng ít.",
+      note: "越来越 + tính từ: biểu thị mức độ thay đổi theo thời gian.",
     },
     {
-      q: "穿蓝{}的那位就是我的老师。",
-      a: ["西服"],
-      py: "Chuān lán xīfú de nà wèi jiùshì wǒ de lǎoshī.",
-      vi: "Người mặc com-lê xanh kia chính là thầy giáo của tôi.",
-      note: "西服 = com-lê, vest. 穿蓝西服的 là cụm có 的 làm định ngữ cho 那位: người mặc com-lê màu xanh.",
+      q: "汉语{}学{}有意思。",
+      a: ["越", "越"],
+      py: "Hànyǔ yuè xué yuè yǒu yìsi.",
+      vi: "Tiếng Trung càng học càng thấy thú vị.",
+      note: "越 + V + 越 + A: càng... càng...",
     },
     {
-      q: "会上，大家在认真地讨论着，会议的{}很好。",
-      a: ["气氛"],
-      py: "Huì shang, dàjiā zài rènzhēn de tǎolùnzhe, huìyì de qìfēn hěn hǎo.",
-      vi: "Trong cuộc họp, mọi người đang thảo luận nghiêm túc, không khí cuộc họp rất tốt.",
-      note: "气氛 = không khí, bầu không khí (danh từ): 气氛很好, 气氛热烈.",
+      q: "我们全家{}父亲一个人工作生活。",
+      a: ["靠"],
+      py: "Wǒmen quánjiā kào fùqīn yí ge rén gōngzuò shēnghuó.",
+      vi: "Cả gia đình chúng tôi sống và làm việc nhờ vào một mình bố tôi.",
+      note: "靠 = dựa vào, nhờ vào.",
     },
     {
-      q: "房间的墙上{}着一张油画。",
-      a: ["挂"],
-      py: "Fángjiān de qiáng shang guàzhe yì zhāng yóuhuà.",
-      vi: "Trên tường phòng treo một bức tranh sơn dầu.",
-      note: "Câu tồn hiện: nơi chốn + V着 + số lượng + danh từ. 挂着 = đang treo (trạng thái được duy trì).",
+      q: "这是我做的菜，请您{}。",
+      a: ["尝尝"],
+      py: "Zhè shì wǒ zuò de cài, qǐng nín chángchang.",
+      vi: "Đây là món tôi nấu, mời ngài nếm thử.",
+      note: "尝尝 = nếm thử (động từ lặp lại).",
     },
     {
-      q: "我的桌子上{}着全家的照片。",
-      a: ["摆"],
-      py: "Wǒ de zhuōzi shang bǎizhe quánjiā de zhàopiàn.",
-      vi: "Trên bàn tôi bày ảnh cả nhà.",
-      note: "摆着 = bày, đặt (đồ vật đặt trên mặt phẳng như bàn, kệ). Cũng là câu tồn hiện.",
+      q: "中国最大的{}还是春节。",
+      a: ["节日"],
+      py: "Zhōngguó zuì dà de jiérì háishi Chūnjié.",
+      vi: "Ngày lễ lớn nhất của Trung Quốc vẫn là Tết Xuân.",
+      note: "节日 = ngày lễ, dịp lễ.",
     },
     {
-      q: "她对人很热情，总是{}着跟人说话。",
-      a: ["笑"],
-      py: "Tā duì rén hěn rèqíng, zǒngshì xiàozhe gēn rén shuōhuà.",
-      vi: "Cô ấy rất nhiệt tình với mọi người, lúc nào cũng cười nói chuyện với người ta.",
-      note: "V1着 + V2: V1 (笑着) chỉ trạng thái/cách thức kèm theo khi làm V2 (说话): vừa cười vừa nói.",
+      q: "有些人过圣诞节可能是因为喜欢那种{}的气氛。",
+      a: ["欢乐"],
+      py: "Yǒuxiē rén guò Shèngdàn Jié kěnéng shì yīnwèi xǐhuan nà zhǒng huānlè de qìfēn.",
+      vi: "Một số người đón Giáng sinh có thể là vì thích bầu không khí vui vẻ đó.",
+      note: "欢乐 = vui vẻ, hoan lạc.",
     },
   ],
 };
 
-const EX4: Multi[] = [
+const TAB3_B: Tab = {
+  id: "3B",
+  label: "3B",
+  sub: "Chọn từ thích hợp điền vào chỗ trống (B)",
+  options: [
+    { zh: "种着", py: "zhòngzhe" },
+    { zh: "停着", py: "tíngzhe" },
+    { zh: "贴着", py: "tiēzhe" },
+    { zh: "睡着", py: "shuìzhe" },
+    { zh: "摆着", py: "bǎizhe" },
+    { zh: "写着", py: "xiězhe" },
+    { zh: "放着", py: "fàngzhe" },
+    { zh: "挂着", py: "guàzhe" },
+  ],
+  items: [
+    {
+      q: "会议中心前边{}很多花儿。",
+      a: ["种着"],
+      py: "Huìyì zhōngxīn qiánbian zhòngzhe hěn duō huār.",
+      vi: "Phía trước trung tâm hội nghị trồng rất nhiều hoa.",
+      note: "Câu tồn hiện: Nơi chốn + V着 + danh từ.",
+    },
+    {
+      q: "楼前{}几辆车。",
+      a: ["停着"],
+      py: "Lóu qián tíngzhe jǐ liàng chē.",
+      vi: "Trước tòa nhà đỗ mấy chiếc xe.",
+      note: "停着 = đang đỗ (trạng thái).",
+    },
+    {
+      q: "门上{}一个“红双喜字”。",
+      a: ["贴着"],
+      py: "Mén shang tiēzhe yí ge “hóng shuāngxǐ zì”.",
+      vi: "Trên cửa dán một chữ “Song Hỷ” màu đỏ.",
+      note: "贴着 = đang được dán (trạng thái).",
+    },
+    {
+      q: "床上{}一个孩子。",
+      a: ["睡着"],
+      py: "Chuáng shang shuìzhe yí ge háizi.",
+      vi: "Trên giường có một đứa trẻ đang ngủ.",
+      note: "睡着 = đang ngủ (trạng thái). Chú ý: 睡着 (shuìzhe) ở đây là ngủ say, khác với 着急 (zháojí).",
+    },
+    {
+      q: "屋子里{}两个书架。",
+      a: ["放着"],
+      py: "Wūzi li fàngzhe liǎng ge shūjià.",
+      vi: "Trong phòng đặt hai giá sách.",
+      note: "放着 = đang đặt, để (trạng thái).",
+    },
+    {
+      q: "书上{}她的名字，书肯定是她的。",
+      a: ["写着"],
+      py: "Shū shang xiězhe tā de míngzi, shū kěndìng shì tā de.",
+      vi: "Trên sách có viết tên cô ấy, sách chắc chắn là của cô ấy.",
+      note: "写着 = có viết (trạng thái chữ còn đó).",
+    },
+    {
+      q: "桌子上{}一瓶花儿。",
+      a: ["摆着"],
+      py: "Zhuōzi shang bǎizhe yì píng huār.",
+      vi: "Trên bàn bày một lọ hoa.",
+      note: "摆着 = đang bày (trạng thái).",
+    },
+    {
+      q: "教室里{}两张画儿。",
+      a: ["挂着"],
+      py: "Jiàoshì li guàzhe liǎng zhāng huàr.",
+      vi: "Trong lớp học treo hai bức tranh.",
+      note: "挂着 = đang treo (trạng thái).",
+    },
+  ],
+};
+
+// ===== Bài 4: Dùng từ gợi ý điền vào chỗ trống =====
+const EX4_A: Q[] = [
   {
-    q: "我看见她在一张桌子前{}，跟对面的一个人高兴地{}茶，{}话。",
-    a: ["坐着", "喝着", "说着"],
-    word: "着",
-    py: "Wǒ kànjiàn tā zài yì zhāng zhuōzi qián zuòzhe, gēn duìmiàn de yí ge rén gāoxìng de hēzhe chá, shuōzhe huà.",
-    vi: "Tôi thấy cô ấy ngồi trước một cái bàn, vui vẻ vừa uống trà vừa trò chuyện với người ngồi đối diện.",
-    note: "V着 diễn tả trạng thái hoặc hành động đang duy trì. 坐着 là tư thế, 喝着茶 và 说着话 là hai việc đang diễn ra cùng lúc.",
+    q: "出院后，她的身体{}了。",
+    a: ["越来越好"],
+    py: "Chūyuàn hòu, tā de shēntǐ yuèláiyuè hǎo le.",
+    vi: "Sau khi xuất viện, sức khỏe của cô ấy ngày càng tốt hơn.",
+    note: "越来越好: ngày càng tốt hơn.",
   },
   {
-    q: "王老师正在教室前边{}上课呢。",
-    a: ["站着"],
-    word: "着",
-    py: "Wáng lǎoshī zhèngzài jiàoshì qiánbian zhànzhe shàngkè ne.",
-    vi: "Thầy Vương đang đứng ở phía trước lớp giảng bài.",
-    note: "V1着 + V2: 站着 là tư thế kèm theo khi làm V2 (上课): đứng mà giảng bài.",
+    q: "城市里的汽车{}了，城市交通{}了。",
+    a: ["越来越多", "越来越拥挤"],
+    py: "Chéngshì li de qìchē yuèláiyuè duō le, chéngshì jiāotōng yuèláiyuè yōngjǐ le.",
+    vi: "Xe cộ trong thành phố ngày càng nhiều, giao thông thành phố ngày càng đông đúc.",
+    note: "越来越多: ngày càng nhiều. 越来越拥挤: ngày càng chen chúc.",
   },
   {
-    q: "A：你忙什么呢？\nB：我正{}饭呢。",
-    a: ["忙着"],
-    word: "着",
-    py: "A: Nǐ máng shénme ne? B: Wǒ zhèng mángzhe zuò fàn ne.",
-    vi: "A: Bạn đang bận gì thế? B: Tôi đang bận nấu cơm.",
-    note: "忙着 + động từ: đang bận làm việc gì. 正…着…呢: đang diễn ra.",
-    alt: [["做着", "忙着做"]],
-    warn: 'Đáp án sách ghi 忙着, nhưng "我正忙着饭呢" thiếu động từ. Câu tự nhiên là 我正忙着做饭呢 (hoặc 我正做着饭呢). Quiz chấp nhận cả 忙着做 và 做着.',
+    q: "冬天快来了，天{}了。",
+    a: ["越来越冷"],
+    py: "Dōngtiān kuài lái le, tiān yuèláiyuè lěng le.",
+    vi: "Mùa đông sắp đến, trời ngày càng lạnh.",
+    note: "越来越冷: ngày càng lạnh.",
   },
   {
-    q: "慢点儿，别着急，我们{}你。",
-    a: ["等着"],
-    word: "着",
-    py: "Mànr diǎn, bié zháojí, wǒmen děngzhe nǐ.",
-    vi: "Từ từ thôi, đừng vội, chúng tôi đang đợi bạn.",
-    note: "等着 = đang chờ. Chú ý: 着 trong 着急 đọc là zháo, khác với 着 (zhe) chỉ trạng thái.",
+    q: "我对这儿的生活{}了。",
+    a: ["越来越适应"],
+    py: "Wǒ duì zhèr de shēnghuó yuèláiyuè shìyìng le.",
+    vi: "Tôi ngày càng thích nghi với cuộc sống ở đây.",
+    note: "越来越适应: ngày càng thích nghi.",
   },
   {
-    q: "A：玛丽怎么没来？\nB：我刚给她打过电话，她已经出门了，现在可能正在路上{}呢。",
-    a: ["走着"],
-    word: "着",
-    py: "A: Mǎlì zěnme méi lái? B: Wǒ gāng gěi tā dǎ guo diànhuà, tā yǐjīng chūmén le, xiànzài kěnéng zhèngzài lù shang zǒuzhe ne.",
-    vi: "A: Sao Mary chưa đến? B: Tôi vừa gọi điện cho cô ấy, cô ấy đã ra khỏi nhà rồi, bây giờ có lẽ đang đi trên đường.",
-    note: "正在…V着呢: đang trong quá trình, hành động đang tiếp diễn. 走着 = đang đi.",
+    q: "A: 你的发音{}了。\nB: 谢谢！可是我觉得语法{}了。",
+    a: ["越来越好", "越来越难"],
+    py: "A: Nǐ de fāyīn yuèláiyuè hǎo le. B: Xièxie! Kěshì wǒ juéde yǔfǎ yuèláiyuè nán le.",
+    vi: "A: Phát âm của bạn ngày càng tốt. B: Cảm ơn! Nhưng tôi thấy ngữ pháp ngày càng khó.",
+    note: "越来越好: ngày càng tốt. 越来越难: ngày càng khó.",
   },
   {
-    q: "这家门前{}一个红双喜字。",
-    a: ["贴着"],
-    word: "着",
-    py: "Zhè jiā mén qián tiēzhe yí ge hóng shuāngxǐzì.",
-    vi: "Trước cửa nhà này dán một chữ Song Hỷ màu đỏ.",
-    note: "Câu tồn hiện: nơi chốn + V着 + số lượng + danh từ. 贴着 = đang dán ở đó (kết quả duy trì).",
-  },
-  {
-    q: "他的上衣前面{}几个汉字——“不到长城非好汉”。",
-    a: ["写着"],
-    word: "着",
-    py: "Tā de shàngyī qiánmiàn xiězhe jǐ ge Hànzì — “Bú dào Chángchéng fēi hǎohàn”.",
-    vi: "Phía trước áo khoác của anh ấy có viết mấy chữ Hán: “Bất đáo Trường Thành phi hảo hán”.",
-    note: "写着 = có chữ viết ở đó (trạng thái). Cũng là câu tồn hiện, nơi chốn đứng đầu.",
-  },
-  {
-    q: "我{}一纸箱子东西一步一步地往楼上爬。",
-    a: ["提着"],
-    word: "着",
-    py: "Wǒ tízhe yì zhǐ xiāngzi dōngxi yí bù yí bù de wǎng lóu shàng pá.",
-    vi: "Tôi xách một thùng giấy đồ, từng bước từng bước leo lên lầu.",
-    note: "V1着 + O + V2: 提着 là cách thức kèm theo khi leo (爬): vừa xách vừa leo.",
+    q: "来中国学汉语的外国人{}。",
+    a: ["越来越多"],
+    py: "Lái Zhōngguó xué Hànyǔ de wàiguórén yuèláiyuè duō.",
+    vi: "Người nước ngoài đến Trung Quốc học tiếng Trung ngày càng nhiều.",
+    note: "越来越多: ngày càng nhiều.",
   },
 ];
 
-const TAB5: Tab = {
-  id: "5",
-  label: "5",
-  sub: "Điền 了, 着 hoặc 过 vào chỗ trống",
-  options: [
-    {
-      zh: "了",
-      py: "le",
-    },
-    {
-      zh: "着",
-      py: "zhe",
-    },
-    {
-      zh: "过",
-      py: "guo",
-    },
-  ],
-  items: [
-    {
-      q: "昨天的晚会上，玛丽唱{}一首歌。",
-      a: ["了"],
-      py: "Zuótiān de wǎnhuì shang, Mǎlì chàng le yì shǒu gē.",
-      vi: "Trong buổi tiệc tối qua, Mary đã hát một bài.",
-      note: "了 đặt sau động từ: hành động đã hoàn thành. Có số lượng (一首歌) và thời gian quá khứ (昨天).",
-    },
-    {
-      q: "她去年来{}一次中国，今年又来{}。",
-      a: ["过", "了"],
-      py: "Tā qùnián lái guo yí cì Zhōngguó, jīnnián yòu lái le.",
-      vi: "Năm ngoái cô ấy đã đến Trung Quốc một lần, năm nay lại đến.",
-      note: "来过 = đã từng đến (kinh nghiệm, nhấn mạnh việc từng xảy ra). 又来了: lần này đã xảy ra, 了 đặt cuối câu.",
-    },
-    {
-      q: "很多父母带{}孩子来参观这个展览。",
-      a: ["着"],
-      py: "Hěn duō fùmǔ dàizhe háizi lái cānguān zhège zhǎnlǎn.",
-      vi: "Rất nhiều bậc cha mẹ dẫn con đến tham quan triển lãm này.",
-      note: "V1着 + O + V2: 带着孩子 là cách thức kèm theo (dắt theo con) khi làm V2 (来参观).",
-    },
-    {
-      q: "我只去{}一次北京，还没去{}上海。",
-      a: ["过", "过"],
-      py: "Wǒ zhǐ qù guo yí cì Běijīng, hái méi qù guo Shànghǎi.",
-      vi: "Tôi mới chỉ đến Bắc Kinh một lần, vẫn chưa từng đến Thượng Hải.",
-      note: "去过 = từng đi. Phủ định kinh nghiệm: 没(有)去过, vẫn giữ 过.",
-    },
-    {
-      q: "我给你买来{}一件生日礼物，不知道你喜欢不喜欢。",
-      a: ["了"],
-      py: "Wǒ gěi nǐ mǎi lái le yí jiàn shēngrì lǐwù, bù zhīdào nǐ xǐhuan bù xǐhuan.",
-      vi: "Tôi mua cho bạn một món quà sinh nhật, không biết bạn có thích không.",
-      note: "买来了: hành động đã hoàn thành, 了 đặt sau bổ ngữ xu hướng 来 và trước tân ngữ có số lượng.",
-    },
-    {
-      q: "这个地方我们以前没来{}。",
-      a: ["过"],
-      py: "Zhège dìfang wǒmen yǐqián méi lái guo.",
-      vi: "Nơi này trước đây chúng tôi chưa từng đến.",
-      note: "没…过: chưa từng. 以前 gợi ý nói về kinh nghiệm trong quá khứ.",
-    },
-    {
-      q: "我们下{}课就去买票吧。",
-      a: ["了"],
-      py: "Wǒmen xià le kè jiù qù mǎi piào ba.",
-      vi: "Tan học xong chúng ta đi mua vé nhé.",
-      note: "V + 了 + O + 就 + V: xong việc trước rồi mới làm việc sau. 下课 là động từ ly hợp nên 了 chen vào giữa: 下了课.",
-    },
-    {
-      q: "她穿{}一条红裙子。",
-      a: ["着"],
-      py: "Tā chuānzhe yì tiáo hóng qúnzi.",
-      vi: "Cô ấy đang mặc một chiếc váy đỏ.",
-      note: "穿着 = đang mặc (trạng thái duy trì). Khác 穿了 (hành động mặc đã xong). 条 là lượng từ cho váy, quần.",
-    },
-  ],
-};
+const EX4_B: Q[] = [
+  {
+    q: "你看，外边的雪{}。",
+    a: ["越下越大"],
+    py: "Nǐ kàn, wàibian de xuě yuè xià yuè dà.",
+    vi: "Bạn xem, tuyết bên ngoài càng rơi càng to.",
+    note: "越下越大: càng rơi càng to.",
+  },
+  {
+    q: "她的汉语{}了。",
+    a: ["越学越好"],
+    py: "Tā de Hànyǔ yuè xué yuè hǎo le.",
+    vi: "Tiếng Trung của cô ấy càng học càng tốt.",
+    note: "越学越好: càng học càng tốt.",
+  },
+  {
+    q: "这本书很好，我{}。",
+    a: ["越看越喜欢"],
+    py: "Zhè běn shū hěn hǎo, wǒ yuè kàn yuè xǐhuan.",
+    vi: "Cuốn sách này rất hay, tôi càng đọc càng thích.",
+    note: "越看越喜欢: càng xem càng thích.",
+  },
+  {
+    q: "“出门靠朋友”，朋友{}。",
+    a: ["越多越好"],
+    py: "“Chūmén kào péngyou”, péngyou yuè duō yuè hǎo.",
+    vi: "“Ra ngoài nhờ bạn bè”, bạn càng nhiều càng tốt.",
+    note: "越多越好: càng nhiều càng tốt.",
+  },
+  {
+    q: "我觉得她{}。",
+    a: ["越长越漂亮"],
+    py: "Wǒ juéde tā yuè zhǎng yuè piàoliang.",
+    vi: "Tôi thấy cô ấy càng lớn càng xinh.",
+    note: "越长越漂亮: càng lớn càng xinh đẹp.",
+  },
+];
 
-const EX6: Fix[] = [
+// ===== Bài 5: Sửa lỗi sai =====
+const EX5: Fix[] = [
   {
-    wrong: "他吃了饭就躺着床上。",
-    a: "他吃了饭就在床上躺着。",
-    py: "Tā chī le fàn jiù zài chuáng shang tǎngzhe.",
-    vi: "Anh ấy ăn cơm xong là nằm trên giường.",
-    note: "Nơi chốn phải đặt trước động từ bằng 在 + nơi chốn, còn 着 đặt sau động từ: 在床上躺着.",
-    alt: ["他吃了饭就躺在床上。"],
+    wrong: "教室里跑出来了麦克。",
+    a: "教室里跑出来了一个人。",
+    py: "Jiàoshì li pǎochūlái le yí ge rén.",
+    vi: "Từ trong lớp học chạy ra một người.",
+    note: "Câu tồn hiện dùng danh từ không xác định. Đổi “麦克” thành “一个人”.",
   },
   {
-    wrong: "我一进他的房间就看见挂着墙上的画儿。",
-    a: "我一进他的房间就看见挂在墙上的画儿。",
-    py: "Wǒ yí jìn tā de fángjiān jiù kànjiàn guà zài qiáng shang de huàr.",
-    vi: "Vừa bước vào phòng anh ấy tôi liền thấy bức tranh treo trên tường.",
-    note: "V + 在 + nơi chốn: 挂在墙上 chỉ nơi bức tranh được treo. 着 không đi trực tiếp với nơi chốn như vậy. Đổi 着 thành 在.",
-    alt: ["我一进他的房间就看见墙上挂着的画儿。"],
-    warn: "Đáp án sách ở dòng (2) ghi “才”改成“再”, không khớp với câu nào trong đề (có thể in nhầm). Mình sửa theo nội dung câu: (2) 着→在, (3) 着→了, (4) 着→在.",
+    wrong: "很多同学坐着在操场上。",
+    a: "很多同学在操场上坐着。",
+    py: "Hěn duō tóngxué zài cāochǎng shang zuòzhe.",
+    vi: "Rất nhiều học sinh đang ngồi trên sân vận động.",
+    note: "Trạng từ 在 + nơi chốn phải đứng trước động từ. Đổi “坐着在” thành “在...坐着”.",
   },
   {
-    wrong: "他已经病着一个多星期了。",
-    a: "他已经病了一个多星期了。",
-    py: "Tā yǐjīng bìng le yí ge duō xīngqī le.",
-    vi: "Anh ấy đã bệnh hơn một tuần rồi.",
-    note: "Có thời lượng (一个多星期) và nói về khoảng thời gian kéo dài đến nay thì dùng 了 sau động từ, không dùng 着. Đổi 着 thành 了.",
+    wrong: "车里坐在我和一个朋友。",
+    a: "车里坐着我和一个朋友。",
+    py: "Chē li zuòzhe wǒ hé yí ge péngyou.",
+    vi: "Trong xe ngồi tôi và một người bạn.",
+    note: "Dùng 坐着 (trạng thái) thay vì 坐在. Đổi “坐在” thành “坐着”.",
   },
   {
-    wrong: "我们坐着房间里谈话。",
-    a: "我们坐在房间里谈话。",
-    py: "Wǒmen zuò zài fángjiān li tánhuà.",
-    vi: "Chúng tôi ngồi trong phòng nói chuyện.",
-    note: "坐在 + nơi chốn = ngồi ở đâu. 着 không đi trực tiếp với nơi chốn. Đổi 着 thành 在.",
-    alt: ["我们在房间里坐着谈话。"],
+    wrong: "前边开过来他坐的汽车。",
+    a: "前边开过来一辆汽车。",
+    py: "Qiánbian kāi guolai yí liàng qìchē.",
+    vi: "Phía trước chạy tới một chiếc xe hơi.",
+    note: "Câu tồn hiện dùng danh từ không xác định. Đổi “他坐的汽车” thành “一辆车”.",
   },
   {
-    wrong: "中国的商店星期日也不关着门，非常好。",
-    a: "中国的商店星期日也不关门，非常好。",
-    py: "Zhōngguó de shāngdiàn xīngqīrì yě bù guān mén, fēicháng hǎo.",
-    vi: "Cửa hàng ở Trung Quốc chủ nhật cũng không đóng cửa, rất tốt.",
-    note: "Nói về thói quen thường xuyên thì phủ định bằng 不 + động từ, không dùng 着 (着 chỉ trạng thái đang duy trì). Bỏ 着.",
+    wrong: "我们班来了这个新老师。",
+    a: "我们班来了一个新老师。",
+    py: "Wǒmen bān lái le yí ge xīn lǎoshī.",
+    vi: "Lớp chúng tôi có một giáo viên mới đến.",
+    note: "Câu tồn hiện dùng danh từ không xác định. Đổi “这个” thành “一个”.",
   },
   {
-    wrong: "她穿着一件红大衣在身上。",
-    a: "她穿着一件红大衣。",
-    py: "Tā chuānzhe yí jiàn hóng dàyī.",
-    vi: "Cô ấy mặc một chiếc áo khoác đỏ.",
-    note: "穿 đã có nghĩa là mặc trên người nên 在身上 là thừa. Bỏ 在身上.",
+    wrong: "我的汉语越来越很流利了。",
+    a: "我的汉语越来越流利了。",
+    py: "Wǒ de Hànyǔ yuèláiyuè liúlì le.",
+    vi: "Tiếng Trung của tôi ngày càng lưu loát.",
+    note: "越来越 không đi với phó từ chỉ mức độ. Xóa “很”.",
+  },
+  {
+    wrong: "这首歌我越听越很喜欢。",
+    a: "这首歌我越听越喜欢。",
+    py: "Zhè shǒu gē wǒ yuè tīng yuè xǐhuan.",
+    vi: "Bài hát này tôi càng nghe càng thích.",
+    note: "越...越... không đi với phó từ chỉ mức độ. Xóa “很”.",
+  },
+  {
+    wrong: "在床上的他躺着看书。",
+    a: "他在床上躺着看书。",
+    py: "Tā zài chuáng shang tǎngzhe kàn shū.",
+    vi: "Anh ấy nằm trên giường đọc sách.",
+    note: "Chủ ngữ phải đứng trước cụm 在 + nơi chốn. Đổi “在床上的他” thành “他在床上”.",
   },
 ];
 
@@ -354,10 +352,11 @@ const norm = (s: string) =>
   s.replace(/[（(][^）)]*[）)]/g, "").replace(/[^\p{L}\p{N}]/gu, "");
 
 const TITLES: Record<string, { t: string; s: string }> = {
-  "3": { t: "3. 选词填空", s: "Chọn từ thích hợp điền vào chỗ trống" },
-  "4": { t: "4. 用“动词 + 着”填空", s: "Gõ “động từ + 着” vào chỗ trống" },
-  "5": { t: "5. 用“了”“着”“过”填空", s: "Điền 了, 着 hoặc 过 vào chỗ trống" },
-  "6": { t: "6. 改错句", s: "Sửa câu sai" },
+  "3A": { t: "3A. 选词填空", s: "Chọn từ thích hợp điền vào chỗ trống (A)" },
+  "3B": { t: "3B. 选词填空", s: "Chọn từ thích hợp điền vào chỗ trống (B)" },
+  "4A": { t: "4A. 用所给词语完成句子", s: "Dùng từ gợi ý hoàn thành câu (A)" },
+  "4B": { t: "4B. 用所给词语完成句子", s: "Dùng từ gợi ý hoàn thành câu (B)" },
+  "5": { t: "5. 改错句", s: "Sửa câu sai" },
 };
 
 // ===== Thành phần dùng chung =====
@@ -448,7 +447,7 @@ function Num({ n }: { n: number }) {
   );
 }
 
-// ===== Bài 3 (A, B, C) =====
+// ===== FillTab (Dùng cho bài 3A, 3B) =====
 function FillTab({ tab }: { tab: Tab }) {
   const [vals, setVals] = useState<Record<number, string[]>>({});
   const [checked, setChecked] = useState(false);
@@ -549,32 +548,26 @@ function FillTab({ tab }: { tab: Tab }) {
   );
 }
 
-// ===== Bài 4 (gõ tay, nhiều chỗ trống) =====
+// ===== MultiFillTab (Dùng cho bài 4A, 4B) =====
 type Stat = "exact" | "word" | "none";
 
-function MultiFillTab({ items }: { items: Multi[] }) {
+function MultiFillTab({ items }: { items: Q[] }) {
   const [txt, setTxt] = useState<Record<string, string>>({});
   const [checked, setChecked] = useState(false);
 
-  const blank = (it: Multi, j: number, v: string): Stat => {
+  const blank = (it: Q, j: number, v: string): Stat => {
     const n = norm(v);
     if ([it.a[j], ...(it.alt?.[j] ?? [])].some((x) => norm(x) === n))
       return "exact";
-    if (it.word && n.includes(norm(it.word))) return "word";
     return "none";
   };
   const stats = items.map((it, i) =>
     it.a.map((_, j) => blank(it, j, txt[`${i}-${j}`] ?? "")),
   );
   const overall = stats.map((s): Stat =>
-    s.every((x) => x === "exact")
-      ? "exact"
-      : s.every((x) => x !== "none")
-        ? "word"
-        : "none",
+    s.every((x) => x === "exact") ? "exact" : "none",
   );
   const exact = overall.filter((s) => s === "exact").length;
-  const word = overall.filter((s) => s === "word").length;
 
   return (
     <div>
@@ -602,14 +595,12 @@ function MultiFillTab({ items }: { items: Multi[] }) {
                             }
                             placeholder="…"
                             className={
-                              "mx-1 w-24 border-0 border-b-2 bg-transparent px-1 text-center font-serif text-lg focus:outline-none " +
+                              "mx-1 w-32 border-0 border-b-2 bg-transparent px-1 text-center font-serif text-lg focus:outline-none " +
                               (!checked
                                 ? "border-slate-300 focus:border-sky-500"
                                 : stats[i][j] === "exact"
                                   ? "border-emerald-500 text-emerald-800"
-                                  : stats[i][j] === "word"
-                                    ? "border-amber-400 text-amber-800"
-                                    : "border-rose-400 text-rose-800")
+                                  : "border-rose-400 text-rose-800")
                             }
                           />
                         )}
@@ -618,30 +609,15 @@ function MultiFillTab({ items }: { items: Multi[] }) {
                   </p>
                   {checked && (
                     <div className="mt-3">
-                      {overall[i] === "exact" && (
-                        <p className="font-semibold text-emerald-700">
-                          Khớp đáp án sách.
-                        </p>
-                      )}
-                      {overall[i] === "word" && (
-                        <p className="font-semibold text-amber-700">
-                          Bạn đã dùng dạng V着 nhưng khác đáp án sách.{" "}
-                          <span className="font-normal text-slate-700">
-                            Câu của bạn có thể vẫn đúng, hãy so với đáp án bên
-                            dưới.
-                          </span>
-                        </p>
-                      )}
-                      {overall[i] === "none" && (
+                      {overall[i] === "exact" ? (
+                        <p className="font-semibold text-emerald-700">Khớp đáp án.</p>
+                      ) : (
                         <p className="font-semibold text-rose-700">
-                          Chưa đúng.{" "}
-                          <span className="font-normal text-slate-700">
-                            Chỗ trống cần dạng “động từ + 着”.
-                          </span>
+                          Chưa đúng.
                         </p>
                       )}
                       <p className="mt-1 text-slate-700">
-                        Đáp án sách:{" "}
+                        Đáp án:{" "}
                         <span className="whitespace-pre-line font-serif text-lg text-slate-900">
                           {parts.map((p, j) => (
                             <span key={j}>
@@ -677,13 +653,13 @@ function MultiFillTab({ items }: { items: Multi[] }) {
           setChecked(false);
           setTxt({});
         }}
-        summary={`Khớp đáp án ${exact}/${items.length} câu${word > 0 ? ` · ${word} câu dùng đúng dạng V着 nhưng khác đáp án` : ""}`}
+        summary={`Khớp đáp án ${exact}/${items.length} câu`}
       />
     </div>
   );
 }
 
-// ===== Bài 6 (từng câu một) =====
+// ===== Bài 5: FixTab (từng câu một) =====
 function FixTab({ EX7 }: { EX7: Fix[] }) {
   const n = EX7.length;
   const [order, setOrder] = useState<number[]>(EX7.map((_, i) => i));
@@ -858,39 +834,25 @@ function FixTab({ EX7 }: { EX7: Fix[] }) {
 }
 
 // ===== Trang chính =====
-const KEYS = ["3", "4", "5", "6"];
+const KEYS = ["3A", "3B", "4A", "4B", "5"];
 
-export default function Lesson1Quiz() {
-  const [tab, setTab] = useState("3");
+export default function Lesson16Quiz() {
+  const [tab, setTab] = useState("3A");
 
   const render = (k: string) => {
-    if (k === "3") return <FillTab tab={TAB3} />;
-    if (k === "4") return <MultiFillTab items={EX4} />;
-    if (k === "5") return <FillTab tab={TAB5} />;
-    return <FixTab EX7={EX6} />;
+    if (k === "3A") return <FillTab tab={TAB3_A} />;
+    if (k === "3B") return <FillTab tab={TAB3_B} />;
+    if (k === "4A") return <MultiFillTab items={EX4_A} />;
+    if (k === "4B") return <MultiFillTab items={EX4_B} />;
+    return <FixTab EX7={EX5} />;
   };
 
   return (
     <div className="mx-auto">
       <p className="mb-2 text-sm text-slate-500">
-        汉语教程（第3版）第二册 下 · 第十五课 会议厅的门开着呢
+        汉语教程（第3版）第二册 下 · 第十六课 前边开过来一辆空车
       </p>
-      {/* <div className="mb-5 flex gap-1 overflow-x-auto border-b border-slate-200">
-        {KEYS.map((k) => (
-          <button
-            key={k}
-            onClick={() => setTab(k)}
-            className={
-              "-mb-px shrink-0 rounded-t-md border-b-2 px-4 py-2 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-sky-400 " +
-              (k === tab
-                ? "border-sky-600 bg-sky-50 text-sky-700"
-                : "border-transparent text-slate-500 hover:text-slate-800")
-            }
-          >
-            Bài {k}
-          </button>
-        ))}
-      </div> */}
+
       <div className="mb-2 flex flex-wrap gap-2 bg-stone-50 py-3">
         {KEYS.map((k) => (
           <button

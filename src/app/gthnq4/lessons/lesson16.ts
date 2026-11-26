@@ -27,15 +27,15 @@ export const lesson16 = {
       title: "课文（二）越中翻译练习",
       href: "/gthnq4/lesson16/translation-quiz-2",
     },
-    { id: "nguphap", title: "语法 [draf]", href: "/gthnq4/lesson16/nguphap" },
+    { id: "nguphap", title: "语法", href: "/gthnq4/lesson16/nguphap" },
     {
       id: "exercises",
-      title: "练习 [draf]",
+      title: "练习",
       href: "/gthnq4/lesson16/exercises",
     },
     {
       id: "supplementary",
-      title: "补充课文 [draf]",
+      title: "补充课文",
       href: "/gthnq4/lesson16/supplementary",
     },
   ],

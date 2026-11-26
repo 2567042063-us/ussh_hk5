@@ -499,7 +499,7 @@ export default function BaiKhoa15() {
     }`;
 
   return (
-    <main className="mx-auto max-w-3xl overflow-hidden text-slate-800">
+    <main className="mx-auto overflow-hidden text-slate-800">
       <section id="panel-text" aria-label="Bài khoá">
         <div className="mb-3 flex flex-wrap items-center gap-2">
           <button

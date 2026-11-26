@@ -174,7 +174,7 @@ const supplementaryTranslation = {
 
 const supplementaryTextTranslation = {
   id: "gthnq5-lesson01-supplementary-text",
-  title: "Dịch Việt – Trung · 补充课文 · trang 42",
+  title: "补充课文 · trang 42",
   items: P.flat().map(([zh, pinyin, vietnamese]) => ({
     zh: zh.replace(/\{\d+\|([^}]+)\}/g, "$1"),
     pinyin,

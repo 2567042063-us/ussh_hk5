@@ -247,7 +247,7 @@ const supplementaryTranslation = {
 
 const supplementaryTextTranslation = {
   id: "gthnq5-lesson02-supplementary-text",
-  title: "Dịch Việt – Trung · 补充课文 · 雪后爬长城",
+  title: "补充课文 · 雪后爬长城",
   items: P.flat().map(([zh, pinyin, vietnamese]) => ({
     zh: zh.replace(/\{\d+\|([^}]+)\}/g, "$1"),
     pinyin,

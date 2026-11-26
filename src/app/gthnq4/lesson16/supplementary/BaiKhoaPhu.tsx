@@ -1,807 +1,622 @@
 "use client";
 
-import { useEffect, useState, type ReactNode } from "react";
+import { useState } from "react";
 
-/* ───────────────────────── Types & helpers ───────────────────────── */
-
-type TabId = "a" | "g" | "x" | "d";
-type Sentence = [zh: string, pinyin: string, vi: string];
-type Grammar = [title: string, example: string, note: string];
-type ChoiceData = [
-  question: string,
-  options: string[],
-  correctIndex: number,
-  note: string,
+// 课文: [[ [ "câu có {1|đáp án}", "pinyin", "tiếng Việt" ], ... ], ... ]  (mỗi mảng ngoài = 1 đoạn)
+const P = [
+  [
+    [
+      "昨天我们到田芳家去做客。",
+      "Zuótiān wǒmen dào Tián Fāng jiā qù zuòkè.",
+      "Hôm qua chúng tôi đến nhà Điền Phương làm khách.",
+    ],
+    [
+      "去的时候,雨下{1|得}很大,不过我们一到田芳家雨就停了。",
+      "Qù de shíhou, yǔ xià de hěn dà, búguò wǒmen yí dào Tián Fāng jiā yǔ jiù tíng le.",
+      "Lúc đi, mưa rơi rất to, nhưng chúng tôi vừa đến nhà Điền Phương thì mưa tạnh.",
+    ],
+  ],
+  [
+    [
+      "田芳家住{2|在}一个四合院儿里。",
+      "Tián Fāng jiā zhù zài yí ge sìhéyuànr lǐ.",
+      "Nhà Điền Phương ở trong một tứ hợp viện.",
+    ],
+    [
+      "院子里种着一棵枣树,还种着很多花儿,有红的,有黄的,非常漂亮。",
+      "Yuànzi lǐ zhòng zhe yì kē zǎoshù, hái zhòng zhe hěn duō huār, yǒu hóng de, yǒu huáng de, fēicháng piàoliang.",
+      "Trong sân trồng một cây táo ta, còn trồng nhiều hoa, có hoa đỏ, có hoa vàng, rất đẹp.",
+    ],
+    [
+      "他们家的院子不太大,但是很干净,也很安静。",
+      "Tāmen jiā de yuànzi bú tài dà, dànshì hěn gānjìng, yě hěn ānjìng.",
+      "Sân nhà họ không lớn lắm nhưng rất sạch sẽ, cũng rất yên tĩnh.",
+    ],
+  ],
+  [
+    [
+      "田芳的爸爸妈妈一看我们来了,就走出来笑着说:“欢迎你们来我家做客,请到屋里坐吧。”",
+      "Tián Fāng de bàba māma yí kàn wǒmen lái le, jiù zǒu chūlái xiào zhe shuō: “Huānyíng nǐmen lái wǒ jiā zuòkè, qǐng dào wū lǐ zuò ba.”",
+      "Bố mẹ Điền Phương vừa thấy chúng tôi đến liền bước ra, cười nói: “Chào mừng các cháu đến nhà làm khách, mời vào nhà ngồi nhé.”",
+    ],
+  ],
+  [
+    [
+      "田芳给我们介绍了她的爸爸妈妈。",
+      "Tián Fāng gěi wǒmen jièshào le tā de bàba māma.",
+      "Điền Phương giới thiệu bố mẹ cô ấy cho chúng tôi.",
+    ],
+  ],
+  [
+    [
+      "我知道田芳的爸爸妈妈都是大学教授。",
+      "Wǒ zhīdào Tián Fāng de bàba māma dōu shì dàxué jiàoshòu.",
+      "Tôi biết bố mẹ Điền Phương đều là giáo sư đại học.",
+    ],
+    [
+      "田芳的爸爸说:“你们就叫我们田老师和黄老师吧。”",
+      "Tián Fāng de bàba shuō: “Nǐmen jiù jiào wǒmen Tián lǎoshī hé Huáng lǎoshī ba.”",
+      "Bố Điền Phương nói: “Các cháu cứ gọi chúng tôi là thầy Điền và cô Hoàng nhé.”",
+    ],
+    [
+      "黄老师热情{3|地}给我们倒茶,请我们吃水果。",
+      "Huáng lǎoshī rèqíng de gěi wǒmen dào chá, qǐng wǒmen chī shuǐguǒ.",
+      "Cô Hoàng nhiệt tình rót trà cho chúng tôi, mời chúng tôi ăn hoa quả.",
+    ],
+    [
+      "她说:“你们跟田芳是同学,又是好朋友,到这儿来就像到自己家里一样,不要客气。”",
+      "Tā shuō: “Nǐmen gēn Tián Fāng shì tóngxué, yòu shì hǎo péngyou, dào zhèr lái jiù xiàng dào zìjǐ jiā lǐ yíyàng, bú yào kèqi.”",
+      "Cô nói: “Các cháu là bạn học, lại là bạn tốt của Điền Phương, đến đây cứ như về nhà mình, đừng khách sáo.”",
+    ],
+  ],
+  [
+    [
+      "田芳说:“先参观参观我爸爸的书房吧。”",
+      "Tián Fāng shuō: “Xiān cānguān cānguān wǒ bàba de shūfáng ba.”",
+      "Điền Phương nói: “Trước hết tham quan phòng sách của bố mình nhé.”",
+    ],
+    [
+      "她带着我们走进了她爸爸的书房。",
+      "Tā dài zhe wǒmen zǒu jìn le tā bàba de shūfáng.",
+      "Cô ấy dẫn chúng tôi đi vào phòng sách của bố.",
+    ],
+    [
+      "房间不太大,周围摆着几个大书架。",
+      "Fángjiān bú tài dà, zhōuwéi bǎi zhe jǐ ge dà shūjià.",
+      "Căn phòng không lớn lắm, xung quanh bày mấy giá sách lớn.",
+    ],
+    [
+      "书架里放着很多书,有中文的,也有外文的,有文学、历史方面的,也有政治、哲学方面的。",
+      "Shūjià lǐ fàng zhe hěn duō shū, yǒu Zhōngwén de, yě yǒu wàiwén de, yǒu wénxué, lìshǐ fāngmiàn de, yě yǒu zhèngzhì, zhéxué fāngmiàn de.",
+      "Trong giá sách có rất nhiều sách, có sách tiếng Trung, cũng có sách ngoại văn, có sách về văn học, lịch sử, cũng có sách về chính trị, triết học.",
+    ],
+    [
+      "我看{4|了}一下儿,很多书我都不知道,我只认识鲁迅、毛泽东和邓小平的名字,因为我在国内时读过他们的书,当然是翻译成英文的。",
+      "Wǒ kàn le yíxiàr, hěn duō shū wǒ dōu bù zhīdào, wǒ zhǐ rènshi Lǔ Xùn, Máo Zédōng hé Dèng Xiǎopíng de míngzi, yīnwèi wǒ zài guónèi shí dú guo tāmen de shū, dāngrán shì fānyì chéng Yīngwén de.",
+      "Tôi xem qua một lát, rất nhiều sách tôi đều không biết, tôi chỉ biết tên Lỗ Tấn, Mao Trạch Đông và Đặng Tiểu Bình, vì lúc ở nước mình tôi đã đọc sách của họ, tất nhiên là bản dịch sang tiếng Anh.",
+    ],
+    [
+      "窗前是一张写字台,写字台旁边放着一台新电脑,电脑还开{5|着}呢。",
+      "Chuāng qián shì yì zhāng xiězìtái, xiězìtái pángbiān fàng zhe yì tái xīn diànnǎo, diànnǎo hái kāi zhe ne.",
+      "Trước cửa sổ là một chiếc bàn viết, bên cạnh bàn đặt một chiếc máy tính mới, máy tính còn đang mở nữa.",
+    ],
+  ],
+  [
+    [
+      "沙发后面的墙上挂着几幅字画,田芳指着这些字画给我们介绍说:“这是徐悲鸿画的画儿,那是郭沫若写的字。”",
+      "Shāfā hòumiàn de qiáng shàng guà zhe jǐ fú zìhuà, Tián Fāng zhǐ zhe zhèxiē zìhuà gěi wǒmen jièshào shuō: “Zhè shì Xú Bēihóng huà de huàr, nà shì Guō Mòruò xiě de zì.”",
+      "Trên tường sau ghế sofa treo mấy bức thư họa, Điền Phương chỉ vào chúng giới thiệu: “Đây là tranh do Từ Bi Hồng vẽ, kia là chữ do Quách Mạt Nhược viết.”",
+    ],
+    [
+      "田芳问我:“你知道徐悲鸿和郭沫若是谁吗?”我说不知道。我对中国了解得太少了。",
+      "Tián Fāng wèn wǒ: “Nǐ zhīdào Xú Bēihóng hé Guō Mòruò shì shéi ma?” Wǒ shuō bù zhīdào. Wǒ duì Zhōngguó liǎojiě de tài shǎo le.",
+      "Điền Phương hỏi tôi: “Cậu có biết Từ Bi Hồng và Quách Mạt Nhược là ai không?” Tôi nói không biết. Tôi hiểu về Trung Quốc quá ít.",
+    ],
+    [
+      "田芳告诉我,徐悲鸿是中国有名的画家,郭沫若是中国有名的历史学家。",
+      "Tián Fāng gàosu wǒ, Xú Bēihóng shì Zhōngguó yǒumíng de huàjiā, Guō Mòruò shì Zhōngguó yǒumíng de lìshǐxuéjiā.",
+      "Điền Phương cho tôi biết, Từ Bi Hồng là họa sĩ nổi tiếng của Trung Quốc, Quách Mạt Nhược là nhà sử học nổi tiếng của Trung Quốc.",
+    ],
+    [
+      "田芳说:“这些书和字画都是我爷爷留给我们的。”",
+      "Tián Fāng shuō: “Zhèxiē shū hé zìhuà dōu shì wǒ yéye liú gěi wǒmen de.”",
+      "Điền Phương nói: “Những cuốn sách và thư họa này đều là ông nội để lại cho chúng tôi.”",
+    ],
+  ],
+  [
+    [
+      "参观{6|完}书房,田芳说:“我们到客厅坐一会儿吧,你们不是想学包饺子吗?今天,我爸爸妈妈请你们吃饺子。”",
+      "Cānguān wán shūfáng, Tián Fāng shuō: “Wǒmen dào kètīng zuò yíhuìr ba, nǐmen bú shì xiǎng xué bāo jiǎozi ma? Jīntiān, wǒ bàba māma qǐng nǐmen chī jiǎozi.”",
+      "Tham quan xong phòng sách, Điền Phương nói: “Chúng ta ra phòng khách ngồi một lát nhé, các cậu chẳng phải muốn học gói sủi cảo sao? Hôm nay bố mẹ mình mời các cậu ăn sủi cảo.”",
+    ],
+    [
+      "我们走进客厅的时候,田芳的爸爸妈妈正准备包饺子呢。",
+      "Wǒmen zǒu jìn kètīng de shíhou, Tián Fāng de bàba māma zhèng zhǔnbèi bāo jiǎozi ne.",
+      "Lúc chúng tôi bước vào phòng khách, bố mẹ Điền Phương đang chuẩn bị gói sủi cảo.",
+    ],
+    [
+      "她爸爸说:“你们坐着聊天儿吧,我们两个包就行了。”",
+      "Tā bàba shuō: “Nǐmen zuò zhe liáotiānr ba, wǒmen liǎng ge bāo jiù xíng le.”",
+      "Bố cô ấy nói: “Các cháu cứ ngồi trò chuyện đi, hai vợ chồng chúng tôi gói là được rồi.”",
+    ],
+    [
+      "田芳说:“我们一起来吧,麦克和玛丽还想学学呢。”",
+      "Tián Fāng shuō: “Wǒmen yìqǐ lái ba, Màikè hé Mǎlì hái xiǎng xuéxue ne.”",
+      "Điền Phương nói: “Chúng ta cùng làm đi, Mike và Mary còn muốn học nữa mà.”",
+    ],
+  ],
+  [
+    [
+      "我们洗了手就开始包饺子。",
+      "Wǒmen xǐ le shǒu jiù kāishǐ bāo jiǎozi.",
+      "Chúng tôi rửa tay rồi bắt đầu gói sủi cảo.",
+    ],
+  ],
+  [
+    [
+      "来中国以后我吃过一两次饺子,但没有包{7|过}饺子,这是第一次。",
+      "Lái Zhōngguó yǐhòu wǒ chī guo yì liǎng cì jiǎozi, dàn méiyǒu bāo guo jiǎozi, zhè shì dì-yī cì.",
+      "Sau khi đến Trung Quốc tôi đã ăn sủi cảo một hai lần, nhưng chưa từng gói, đây là lần đầu tiên.",
+    ],
+    [
+      "我不会包,包了半天才包了一个,田芳说我包的饺子像小老鼠,说得大家都笑了。",
+      "Wǒ bú huì bāo, bāo le bàntiān cái bāo le yí ge, Tián Fāng shuō wǒ bāo de jiǎozi xiàng xiǎo lǎoshǔ, shuō de dàjiā dōu xiào le.",
+      "Tôi không biết gói, gói mãi mới được một cái, Điền Phương nói sủi cảo tôi gói trông như chuột nhắt, nói làm mọi người đều cười.",
+    ],
+  ],
+  [
+    [
+      "我们大家一边包一边聊天儿,很热闹。我很喜欢这种欢乐的家庭气氛。",
+      "Wǒmen dàjiā yìbiān bāo yìbiān liáotiānr, hěn rènao. Wǒ hěn xǐhuan zhè zhǒng huānlè de jiātíng qìfēn.",
+      "Mọi người vừa gói vừa trò chuyện, rất náo nhiệt. Tôi rất thích bầu không khí gia đình vui vẻ này.",
+    ],
+  ],
+  [
+    [
+      "饺子端出来{8|了}。今天的饺子真好吃,我吃了二十多个。",
+      "Jiǎozi duān chūlái le. Jīntiān de jiǎozi zhēn hǎochī, wǒ chī le èrshí duō ge.",
+      "Sủi cảo được bưng ra rồi. Sủi cảo hôm nay thật ngon, tôi ăn hơn hai mươi cái.",
+    ],
+  ],
+  [
+    [
+      "吃完饺子,我们又坐了一会儿,然后对两位老师说:“我们该走了,谢谢你们,我们过得很愉快。”",
+      "Chī wán jiǎozi, wǒmen yòu zuò le yíhuìr, ránhòu duì liǎng wèi lǎoshī shuō: “Wǒmen gāi zǒu le, xièxie nǐmen, wǒmen guò de hěn yúkuài.”",
+      "Ăn xong sủi cảo, chúng tôi ngồi thêm một lát rồi nói với hai thầy cô: “Chúng em phải về rồi, cảm ơn thầy cô, chúng em đã có khoảng thời gian rất vui.”",
+    ],
+    [
+      "两位老师一直送我们走出大门,对我们说:“欢迎你们常来玩儿。”",
+      "Liǎng wèi lǎoshī yìzhí sòng wǒmen zǒu chū dàmén, duì wǒmen shuō: “Huānyíng nǐmen cháng lái wánr.”",
+      "Hai thầy cô tiễn chúng tôi đến tận cổng, nói với chúng tôi: “Hoan nghênh các cháu thường xuyên đến chơi.”",
+    ],
+  ],
 ];
 
-const zhFont = {
-  fontFamily:
-    'KaiTi, STKaiti, "PingFang SC", "Songti SC", SimSun, "Noto Serif CJK SC", "Noto Serif SC", serif',
-};
+const ANS = ["得", "在", "地", "了", "着", "完", "过", "了"];
 
-function shuffle<T>(arr: T[]): T[] {
-  const r = [...arr];
-  for (let i = r.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [r[i], r[j]] = [r[j], r[i]];
-  }
-  return r;
+// Ghi chú đáp án khác (footer): [số câu, đáp án sách, đáp án khác hoặc "—", ghi chú]
+const NOTES = [
+  [
+    6,
+    "完",
+    "了",
+    "参观完书房 (xem xong) hoặc 参观了书房 (đã xem) đều đúng; sách chọn 完 để nhấn mạnh việc đã hoàn thành.",
+  ],
+  [
+    3,
+    "地",
+    "—",
+    "Trạng ngữ + 地 + động từ (热情地倒茶). Không dùng 的 ở vị trí này.",
+  ],
+  [
+    7,
+    "过",
+    "—",
+    "没(有) + V + 过 diễn tả chưa từng có kinh nghiệm; dùng 了 hay 着 sẽ sai nghĩa.",
+  ],
+];
+
+const C = [
+  [
+    "田芳",
+    "玛丽,我发现你汉语说得越来越好了。",
+    "Mǎlì, wǒ fāxiàn nǐ Hànyǔ shuō de yuèláiyuè hǎo le.",
+    "Mary, mình thấy tiếng Hán của cậu nói càng ngày càng tốt rồi.",
+  ],
+  [
+    "玛丽",
+    "哪里。还差得远呢。",
+    "Nǎlǐ. Hái chà de yuǎn ne.",
+    "Đâu có. Còn kém xa lắm.",
+  ],
+  ["田芳", "真的!", "Zhēn de!", "Thật mà!"],
+  [
+    "玛丽",
+    "我觉得汉语越学越有意思,也越学越难了。",
+    "Wǒ juéde Hànyǔ yuè xué yuè yǒu yìsi, yě yuè xué yuè nán le.",
+    "Mình thấy tiếng Hán càng học càng thú vị, cũng càng học càng khó.",
+  ],
+  [
+    "田芳",
+    "是吗?你觉得哪方面最难?",
+    "Shì ma? Nǐ juéde nǎ fāngmiàn zuì nán?",
+    "Vậy à? Cậu thấy mặt nào khó nhất?",
+  ],
+  [
+    "玛丽",
+    "除了语法以外,我觉得最难的还是词语的用法。",
+    "Chúle yǔfǎ yǐwài, wǒ juéde zuì nán de háishi cíyǔ de yòngfǎ.",
+    "Ngoài ngữ pháp ra, mình thấy khó nhất vẫn là cách dùng từ.",
+  ],
+  [
+    "田芳",
+    "我跟你的感觉一样,我学的英语单词越来越多,用法也越来越难。",
+    "Wǒ gēn nǐ de gǎnjué yíyàng, wǒ xué de Yīngyǔ dāncí yuèláiyuè duō, yòngfǎ yě yuèláiyuè nán.",
+    "Mình cũng cảm thấy giống cậu, từ vựng tiếng Anh mình học càng ngày càng nhiều, cách dùng cũng càng ngày càng khó.",
+  ],
+];
+
+// [no, word, pinyin, pos, hán việt, meaning, usage, ex zh, ex py, ex vi, synonyms, related]
+const V = [
+  [
+    1,
+    "做客",
+    "zuòkè",
+    "动 (离合词)",
+    "TÁC KHÁCH",
+    "làm khách, đến nhà người khác chơi · to be a guest",
+    "去 / 到 + nơi + 做客 · 在…做客 · từ li hợp: 做过客, 做一次客",
+    "周末我们去老师家做客。",
+    "Zhōumò wǒmen qù lǎoshī jiā zuòkè.",
+    "Cuối tuần chúng tôi đến nhà thầy giáo làm khách.",
+    "拜访 bàifǎng: thăm viếng (trang trọng, có mục đích) · 串门儿 chuànménr: ghé nhà chơi (khẩu ngữ) · (trái nghĩa) 请客 qǐngkè / 待客 dàikè: mời khách",
+    "做 zuò: làm · 客 kè: khách (客人, 客气, 客厅)",
+  ],
+  [
+    2,
+    "书房",
+    "shūfáng",
+    "名",
+    "THƯ PHÒNG",
+    "phòng sách · study (room)",
+    "在书房 + V · 间 (lượng từ: 一间书房)",
+    "爸爸在书房看书。",
+    "Bàba zài shūfáng kàn shū.",
+    "Bố đọc sách trong phòng sách.",
+    "书斋 shūzhāi: thư trai (văn viết, trang nhã)",
+    "客厅 kètīng: phòng khách · 卧室 wòshì: phòng ngủ · 厨房 chúfáng: nhà bếp",
+  ],
+  [
+    3,
+    "文学",
+    "wénxué",
+    "名",
+    "VĂN HỌC",
+    "văn học · literature",
+    "文学 + 作品 / 家 / 史 · 对文学感兴趣 · 学文学",
+    "我对中国文学很感兴趣。",
+    "Wǒ duì Zhōngguó wénxué hěn gǎn xìngqù.",
+    "Tôi rất hứng thú với văn học Trung Quốc.",
+    "文艺 wényì: văn nghệ (rộng hơn, gồm cả văn học và nghệ thuật)",
+    "文学家 wénxuéjiā: nhà văn học · 古典文学 gǔdiǎn wénxué: văn học cổ điển",
+  ],
+  [
+    4,
+    "政治",
+    "zhèngzhì",
+    "名",
+    "CHÍNH TRỊ",
+    "chính trị · politics",
+    "关心 / 谈 / 学 + 政治 · 政治 + 家 / 学",
+    "他不太关心政治。",
+    "Tā bú tài guānxīn zhèngzhì.",
+    "Anh ấy không mấy quan tâm đến chính trị.",
+    "Không có từ đồng nghĩa hoàn toàn; gần nghĩa: 政务 zhèngwù (công việc chính quyền)",
+    "政治家 zhèngzhìjiā: nhà chính trị · 政府 zhèngfǔ: chính phủ",
+  ],
+  [
+    5,
+    "哲学",
+    "zhéxué",
+    "名",
+    "TRIẾT HỌC",
+    "triết học · philosophy",
+    "学 / 研究 + 哲学 · 哲学 + 家 / 系",
+    "他在大学学哲学。",
+    "Tā zài dàxué xué zhéxué.",
+    "Anh ấy học triết học ở đại học.",
+    "Gần nghĩa: 哲理 zhélǐ: triết lý, đạo lý sâu xa (chỉ nội dung tư tưởng, không phải môn học)",
+    "哲学家 zhéxuéjiā: triết gia · 哲 zhé: sáng suốt, trí tuệ",
+  ],
+  [
+    6,
+    "写字台",
+    "xiězìtái",
+    "名",
+    "TẢ TỰ ĐÀI",
+    "bàn viết · writing desk",
+    "Lượng từ: 张 · 一张写字台 · 在写字台上 / 旁边",
+    "窗前有一张写字台。",
+    "Chuāng qián yǒu yì zhāng xiězìtái.",
+    "Trước cửa sổ có một chiếc bàn viết.",
+    "书桌 shūzhuō: bàn học, bàn đọc sách (thông dụng hơn) · 办公桌 bàngōngzhuō: bàn làm việc",
+    "写字 xiězì: viết chữ · 台 tái: bàn, bục",
+  ],
+  [
+    7,
+    "沙发",
+    "shāfā",
+    "名",
+    "SA PHÁT (phiên âm)",
+    "ghế sofa · sofa",
+    "Lượng từ: 张 / 个 · 坐 / 躺 + 在沙发上",
+    "他躺在沙发上看电视。",
+    "Tā tǎng zài shāfā shàng kàn diànshì.",
+    "Anh ấy nằm trên sofa xem tivi.",
+    "Từ phiên âm từ “sofa”, không có từ đồng nghĩa thông dụng",
+    "长沙发 chángshāfā: sofa dài · 沙发床 shāfāchuáng: sofa giường",
+  ],
+  [
+    8,
+    "幅",
+    "fú",
+    "量",
+    "PHÚC",
+    "lượng từ cho tranh, thư pháp, vải… · measure word for paintings, calligraphy",
+    "一幅 + 画儿 / 字画 / 照片 / 地图 · 墙上挂着一幅…",
+    "墙上挂着一幅画儿。",
+    "Qiáng shàng guà zhe yì fú huàr.",
+    "Trên tường treo một bức tranh.",
+    "张 zhāng: dùng cho vật phẳng, mỏng (一张画 cũng được, nhưng 幅 trang trọng hơn) · Chú ý: 副 fù là lượng từ cho cặp, bộ (一副对联, 一副眼镜), không nhầm với 幅",
+    "字画 zìhuà: thư họa · 画幅 huàfú: khổ tranh",
+  ],
+  [
+    9,
+    "爷爷",
+    "yéye",
+    "名",
+    "GIA GIA",
+    "ông nội · (paternal) grandpa",
+    "Xưng hô với ông nội (hoặc người đàn ông lớn tuổi, thân mật) · 我爷爷 / 田芳的爷爷",
+    "爷爷今年八十岁了。",
+    "Yéye jīnnián bāshí suì le.",
+    "Ông nội năm nay tám mươi tuổi.",
+    "祖父 zǔfù: ông nội (văn viết, trang trọng)",
+    "奶奶 nǎinai: bà nội · 外公 wàigōng / 姥爷 lǎoye: ông ngoại",
+  ],
+  [
+    10,
+    "包",
+    "bāo",
+    "动",
+    "BAO",
+    "gói, bọc (gói sủi cảo) · to wrap; to make (dumplings)",
+    "Tân ngữ: 饺子 / 包子 / 书 / 礼物 · 包 + 得 / 不 + 好",
+    "我们一起包饺子吧。",
+    "Wǒmen yìqǐ bāo jiǎozi ba.",
+    "Chúng ta cùng gói sủi cảo nhé.",
+    "裹 guǒ: bọc, quấn chặt · 包装 bāozhuāng: đóng gói (hàng hóa)",
+    "Nghĩa khác: 书包 shūbāo: cặp sách · 包括 bāokuò: bao gồm · 一包 yì bāo: một gói",
+  ],
+  [
+    11,
+    "老鼠",
+    "lǎoshǔ",
+    "名",
+    "LÃO THỬ",
+    "chuột · mouse; rat",
+    "Lượng từ: 只 · 抓老鼠 · 小老鼠",
+    "猫在抓老鼠。",
+    "Māo zài zhuā lǎoshǔ.",
+    "Mèo đang bắt chuột.",
+    "耗子 hàozi: chuột (khẩu ngữ, phương Bắc) · 鼠 shǔ: chuột (văn viết, dùng trong từ ghép)",
+    "鼠标 shǔbiāo: chuột máy tính · 米老鼠 Mǐ lǎoshǔ: chuột Mickey",
+  ],
+  [
+    12,
+    "端",
+    "duān",
+    "动",
+    "ĐOAN",
+    "bưng, bê bằng hai tay (giữ ngang) · to carry; to hold sth. level with both hands",
+    "Tân ngữ: 菜 / 汤 / 饺子 / 茶 · 端 + 出来 / 上来 / 到…",
+    "妈妈把汤端到桌子上。",
+    "Māma bǎ tāng duān dào zhuōzi shàng.",
+    "Mẹ bưng canh lên bàn.",
+    "捧 pěng: bưng bằng hai bàn tay khum · 拿 ná: cầm, lấy (chung chung) · 提 tí: xách",
+    "端出来 duān chūlái: bưng ra · 端正 duānzhèng: ngay ngắn, đoan chính",
+  ],
+];
+
+function Zh({ s }) {
+  return s.split(/(\{[^}]+\})/).map((p, i) => {
+    const m = p.match(/^\{(\d+)\|(.+)\}$/);
+    if (!m) return <span key={i}>{p}</span>;
+    return (
+      <mark
+        key={i}
+        className="ztai__zh mx-0.5 rounded bg-yellow-100 px-1 text-red-700"
+      >
+        <sup className="mr-0.5 text-[10px] text-gray-500">{m[1]}</sup>
+        {m[2]}
+      </mark>
+    );
+  });
 }
 
-/** Renders  segments as red text (đáp án các chỗ trống). */
-function Marked({ text }: { text: string }) {
+function Sent({ zh, py, vi, all, who }) {
+  const [o, setO] = useState(false);
+  const show = all || o;
   return (
-    <>
-      {text.split(/(<b>.*?<\/b>)/g).map((part, i) =>
-        part.startsWith("<b>") ? (
-          <span
-            key={i}
-            className="mx-0.5 rounded bg-yellow-200 px-1 text-red-700"
-          >
-            {part.slice(3, -4)}
-          </span>
-        ) : (
-          <span key={i}>{part}</span>
-        ),
+    <div
+      onClick={() => setO(!o)}
+      className={
+        "my-1 cursor-pointer rounded-lg px-3 py-2 transition " +
+        (show ? "bg-stone-50" : "hover:bg-gray-100")
+      }
+    >
+      <div className="ztai__zh text-2xl leading-9 text-gray-900">
+        {who && <span className="mr-2 font-bold text-sky-700">{who}:</span>}
+        <Zh s={zh} />
+      </div>
+      {show && (
+        <div className="mt-1 text-sm">
+          <div className="italic text-gray-500">{py}</div>
+          <div className="text-gray-900">{vi}</div>
+        </div>
       )}
-    </>
+    </div>
   );
 }
 
-function Chip({
-  on,
-  onClick,
-  children,
-}: {
-  on: boolean;
-  onClick: () => void;
-  children: ReactNode;
-}) {
+function Toggle({ all, setAll }) {
   return (
     <button
-      type="button"
-      aria-pressed={on}
-      onClick={onClick}
-      className={`rounded-full border px-3 py-1 text-sm transition-colors ${
-        on
-          ? "border-stone-800 bg-stone-800 text-white"
-          : "border-stone-300 bg-white text-stone-700 hover:bg-stone-100"
-      }`}
+      onClick={() => setAll(!all)}
+      className="mb-3 rounded-full border border-sky-300 px-3 py-1 text-sm text-sky-700 hover:bg-sky-50"
     >
-      {children}
+      {all ? "Ẩn pinyin + dịch" : "Hiện tất cả pinyin + dịch"}
     </button>
   );
 }
 
-/* ───────────────────────────── Data ───────────────────────────── */
-
-const T1: Sentence[] = [
-  [
-    "王老师已经好几天没有<b>给</b>我们上课了，因为他生病住院了。",
-    "Wáng lǎoshī yǐjīng hǎo jǐ tiān méiyǒu gěi wǒmen shàngkè le, yīnwèi tā shēngbìng zhùyuàn le.",
-    "Thầy Vương đã mấy ngày rồi không dạy chúng tôi, vì thầy bị bệnh nhập viện.",
-  ],
-  [
-    "老师住院以后，我们班的学生都去医院看<b>过</b>他。",
-    "Lǎoshī zhùyuàn yǐhòu, wǒmen bān de xuésheng dōu qù yīyuàn kàn guo tā.",
-    "Sau khi thầy nhập viện, học sinh lớp chúng tôi đều đã đến bệnh viện thăm thầy.",
-  ],
-  [
-    "我们都希望老师能早点儿好，因为我们觉得他是个好老师，对我们就像对自己的儿女一样。",
-    "Wǒmen dōu xīwàng lǎoshī néng zǎo diǎnr hǎo, yīnwèi wǒmen juéde tā shì ge hǎo lǎoshī, duì wǒmen jiù xiàng duì zìjǐ de érnǚ yíyàng.",
-    "Chúng tôi đều mong thầy sớm khỏe, vì thấy thầy là thầy giáo tốt, đối với chúng tôi như con ruột.",
-  ],
-  [
-    "今天早上，我<b>刚</b>走进教室，就看见王老师在讲台旁边站<b>着</b>。",
-    "Jīntiān zǎoshang, wǒ gāng zǒujìn jiàoshì, jiù kànjiàn Wáng lǎoshī zài jiǎngtái pángbiān zhàn zhe.",
-    "Sáng nay, tôi vừa bước vào lớp thì thấy thầy Vương đang đứng cạnh bục giảng.",
-  ],
-  [
-    "我高兴<b>地</b>向老师问了一声好。",
-    "Wǒ gāoxìng de xiàng lǎoshī wèn le yì shēng hǎo.",
-    "Tôi vui mừng chào thầy một tiếng.",
-  ],
-  [
-    "我问：“老师，您什么时候出院的？”",
-    "Wǒ wèn: “Lǎoshī, nín shénme shíhou chūyuàn de?”",
-    "Tôi hỏi: “Thầy ơi, thầy xuất viện khi nào ạ?”",
-  ],
-  [
-    "“我前天出的院。听说你也病了，好<b>了</b>吗？”",
-    "“Wǒ qiántiān chū de yuàn. Tīngshuō nǐ yě bìng le, hǎo le ma?”",
-    "“Thầy xuất viện hôm kia. Nghe nói em cũng bị bệnh, khỏi chưa?”",
-  ],
-  [
-    "“好了。老师，您要保重身体！”“谢谢你！”",
-    "“Hǎo le. Lǎoshī, nín yào bǎozhòng shēntǐ!” “Xièxie nǐ!”",
-    "“Khỏi rồi ạ. Thầy nhớ giữ gìn sức khỏe!” “Cảm ơn em!”",
-  ],
-  [
-    "这时，同学们都走进教室<b>来</b>了，大家看到王老师又能给我们上课了，都很高兴。",
-    "Zhèshí, tóngxuémen dōu zǒujìn jiàoshì lái le, dàjiā kàndào Wáng lǎoshī yòu néng gěi wǒmen shàngkè le, dōu hěn gāoxìng.",
-    "Lúc này các bạn đều vào lớp rồi, mọi người thấy thầy lại dạy được thì đều rất vui.",
-  ],
-  [
-    "老师也高兴地和大家说<b>着</b>话，问每个同学的情况。",
-    "Lǎoshī yě gāoxìng de hé dàjiā shuō zhe huà, wèn měi ge tóngxué de qíngkuàng.",
-    "Thầy cũng vui vẻ vừa trò chuyện với mọi người vừa hỏi thăm từng bạn.",
-  ],
-  [
-    "我们都知道王老师刚出院，身体还不太好。上课铃响了。",
-    "Wǒmen dōu zhīdào Wáng lǎoshī gāng chūyuàn, shēntǐ hái bú tài hǎo. Shàngkè líng xiǎng le.",
-    "Chúng tôi đều biết thầy vừa xuất viện, sức khỏe còn chưa tốt. Chuông vào học đã reo.",
-  ],
-  [
-    "大家一起大声地说：“老师好！”王老师笑<b>着</b>点了点头，也对我们说：“同学们好！”",
-    "Dàjiā yìqǐ dàshēng de shuō: “Lǎoshī hǎo!” Wáng lǎoshī xiào zhe diǎn le diǎn tóu, yě duì wǒmen shuō: “Tóngxuémen hǎo!”",
-    "Mọi người cùng nói to: “Chào thầy!” Thầy Vương mỉm cười gật đầu, cũng nói với chúng tôi: “Chào các em!”",
-  ],
-  [
-    "老师拿起书要开始讲课了。山本搬了一把椅子，走到老师面前，说：“老师，今天请您坐<b>着</b>讲吧。”",
-    "Lǎoshī ná qǐ shū yào kāishǐ jiǎngkè le. Shānběn bān le yì bǎ yǐzi, zǒu dào lǎoshī miànqián, shuō: “Lǎoshī, jīntiān qǐng nín zuò zhe jiǎng ba.”",
-    "Thầy cầm sách lên chuẩn bị giảng. Yamamoto bê một chiếc ghế, đi đến trước mặt thầy, nói: “Thầy ơi, hôm nay mời thầy ngồi giảng ạ.”",
-  ],
-  [
-    "王老师说：“谢谢，我不累，我不习惯坐着上课。”王老师没有坐。",
-    "Wáng lǎoshī shuō: “Xièxie, wǒ bú lèi, wǒ bù xíguàn zuò zhe shàngkè.” Wáng lǎoshī méiyǒu zuò.",
-    "Thầy Vương nói: “Cảm ơn, thầy không mệt, thầy không quen ngồi dạy.” Thầy không ngồi.",
-  ],
-  [
-    "“老师，请您坐下讲吧！”这时，班长带着全班同学一起大声地说。",
-    "“Lǎoshī, qǐng nín zuò xià jiǎng ba!” Zhèshí, bānzhǎng dài zhe quán bān tóngxué yìqǐ dàshēng de shuō.",
-    "“Thầy ơi, mời thầy ngồi xuống giảng ạ!” Lúc này, lớp trưởng dẫn cả lớp cùng nói to.",
-  ],
-  [
-    "王老师有点儿激动地看着我们说：“谢谢大家！谢谢同学们！”",
-    "Wáng lǎoshī yǒudiǎnr jīdòng de kàn zhe wǒmen shuō: “Xièxie dàjiā! Xièxie tóngxuémen!”",
-    "Thầy Vương hơi xúc động nhìn chúng tôi nói: “Cảm ơn mọi người! Cảm ơn các em!”",
-  ],
-];
-
-const G: Grammar[] = [
-  [
-    "Bổ ngữ xu hướng đơn: V + 进/起/下…",
-    "走进教室 · 拿起书 · 坐下讲吧",
-    "进 = vào, 起 = lên (nhấc lên), 下 = xuống (ngồi xuống). Chỉ hướng của hành động.",
-  ],
-  [
-    "Bổ ngữ xu hướng kép + tân ngữ nơi chốn",
-    "同学们都走进教室来了",
-    "Tân ngữ chỉ nơi chốn đứng GIỮA: V + 进 + nơi chốn + 来. Không nói 走进来教室.",
-  ],
-  [
-    "Bổ ngữ kết quả: V + 见/到",
-    "看见王老师 · 看到王老师又能上课了 · 走到老师面前",
-    "见/到 = kết quả đã đạt được (thấy, tới nơi). 走到 + nơi chốn: đi tới đâu.",
-  ],
-  [
-    "Động lượng bổ ngữ",
-    "问了一声好 · 点了点头",
-    "Số lần/lượng của hành động: V + 了 + 一声/一下. 点了点头: lặp động từ nhẹ nhàng.",
-  ],
-  [
-    "着 – trạng thái đang tồn tại",
-    "王老师在讲台旁边站着",
-    "V + 着 = duy trì trạng thái. Dạng 在 + nơi chốn + V着 mô tả ai đang ở tư thế nào.",
-  ],
-  [
-    "V1着 + V2 (V1 là cách thức)",
-    "笑着点了点头 · 带着全班同学…说 · 看着我们说",
-    "V1着 cho biết trạng thái/cách thức đi kèm khi làm V2: cười mà gật đầu, nhìn mà nói.",
-  ],
-  [
-    "V + 着 + tân ngữ (hành động kéo dài)",
-    "和大家说着话 · 我不习惯坐着上课",
-    "说着话 = đang nói chuyện (kéo dài); 坐着上课 = ngồi mà dạy (tư thế khi làm việc).",
-  ],
-  [
-    "So sánh 坐着 và 坐下",
-    "请您坐着讲吧 / 请您坐下讲吧",
-    "坐着 = ở trạng thái ngồi; 坐下 = động tác ngồi xuống (bổ ngữ xu hướng). 没有坐 phủ định hành động, không nói 没有坐着了.",
-  ],
-  [
-    "Lưu ý: 了 sau V ≠ 着",
-    "问了一声好 / 站着",
-    "了 = hoàn thành; 着 = đang duy trì trạng thái. Không dùng 了 và 着 cùng lúc để nhấn trạng thái: không nói 站了着.",
-  ],
-];
-
-const E1: ChoiceData[] = [
-  [
-    "我刚____教室，就看见王老师。",
-    ["走进", "走着", "走过"],
-    0,
-    "走进 = bổ ngữ xu hướng: bước vào.",
-  ],
-  [
-    "同学们都走进教室____了。",
-    ["来", "着", "起"],
-    0,
-    "走进 + nơi chốn + 来 (tân ngữ nơi chốn đứng giữa).",
-  ],
-  [
-    "王老师在讲台旁边站____。",
-    ["着", "了", "起来"],
-    0,
-    "站着: trạng thái đứng.",
-  ],
-  [
-    "王老师笑____点了点头。",
-    ["着", "过", "下"],
-    0,
-    "笑着 + V2: cười mà gật đầu.",
-  ],
-  [
-    "老师不习惯坐____上课。",
-    ["着", "下", "起"],
-    0,
-    "坐着上课: ngồi trong khi dạy (tư thế).",
-  ],
-  [
-    "老师，请您坐____吧！(mời ngồi xuống)",
-    ["下", "着", "过"],
-    0,
-    "坐下 = động tác ngồi xuống.",
-  ],
-];
-
-const E2: ChoiceData[] = [
-  [
-    "老师在讲台旁边着站。",
-    ["老师在讲台旁边站着。", "老师在讲台旁边站了着。", "老师着在讲台旁边站。"],
-    0,
-    "着 đứng ngay sau động từ: 站着.",
-  ],
-  [
-    "同学们都走进来教室了。",
-    [
-      "同学们都走进教室来了。",
-      "同学们都进走教室来了。",
-      "同学们都走进教室了来。",
-    ],
-    0,
-    "Tân ngữ nơi chốn đứng giữa: 走进教室来.",
-  ],
-  [
-    "王老师笑点了点头着。",
-    ["王老师笑着点了点头。", "王老师着笑点了点头。", "王老师笑点着了点头。"],
-    0,
-    "V1着 + V2: 笑着点头.",
-  ],
-  [
-    "我不习惯坐了着上课。",
-    ["我不习惯坐着上课。", "我不习惯坐着了上课。", "我不习惯着坐上课。"],
-    0,
-    "Không dùng 了 chen vào V着.",
-  ],
-  [
-    "我问了好一声老师。",
-    ["我向老师问了一声好。", "我问了老师好一声。", "我老师问了一声好。"],
-    0,
-    "Động lượng bổ ngữ: 问了一声好.",
-  ],
-];
-
-const E3: string[][] = [
-  ["王老师", "在讲台旁边", "站着"],
-  ["同学们", "都", "走进教室", "来了"],
-  ["王老师", "笑着", "点了点头"],
-  ["我", "不习惯", "坐着", "上课"],
-  ["班长", "带着", "全班同学", "一起", "大声地说"],
-];
-
-/** 打听 dialogue: [speaker, 中文, pinyin, tiếng Việt] */
-const DIALOGUE: [string, string, string, string][] = [
-  [
-    "A",
-    "请问，您看没看见一个姑娘（gūniang, girl）从这儿过去？",
-    "Qǐngwèn, nín kàn méi kànjiàn yí ge gūniang cóng zhèr guòqù?",
-    "Xin hỏi, ông/bà có thấy một cô gái đi qua đây không?",
-  ],
-  [
-    "B",
-    "什么姑娘？长得什么样？",
-    "Shénme gūniang? Zhǎng de shénme yàng?",
-    "Cô gái nào? Trông cô ấy như thế nào?",
-  ],
-  [
-    "A",
-    "身高一米六左右，留着长发，穿着一件白色的上衣，戴着一副眼镜儿。",
-    "Shēngāo yì mǐ liù zuǒyòu, liú zhe cháng fà, chuān zhe yí jiàn báisè de shàngyī, dài zhe yí fù yǎnjìngr.",
-    "Cao khoảng 1 mét 6, để tóc dài, mặc một chiếc áo màu trắng, đeo một cặp kính.",
-  ],
-  ["B", "看见了。", "Kànjiàn le.", "Có thấy."],
-  ["A", "她往哪儿走了？", "Tā wǎng nǎr zǒu le?", "Cô ấy đi về hướng nào rồi?"],
-  [
-    "B",
-    "从这儿下山去了。",
-    "Cóng zhèr xià shān qù le.",
-    "Đi xuống núi từ đây rồi.",
-  ],
-  [
-    "A",
-    "大概走多长时间了？",
-    "Dàgài zǒu duō cháng shíjiān le?",
-    "Đi được khoảng bao lâu rồi?",
-  ],
-  ["B", "二十多分钟了。", "Èrshí duō fēnzhōng le.", "Hơn hai mươi phút rồi."],
-  [
-    "A",
-    "只她一个人吗？",
-    "Zhǐ tā yí ge rén ma?",
-    "Chỉ có một mình cô ấy thôi sao?",
-  ],
-  ["B", "对。", "Duì.", "Đúng vậy."],
-  [
-    "A",
-    "就是她。我们也快点儿下去吧。谢谢您了！",
-    "Jiù shì tā. Wǒmen yě kuài diǎnr xiàqù ba. Xièxie nín le!",
-    "Chính là cô ấy. Chúng ta cũng nhanh chóng đi xuống thôi. Cảm ơn ông/bà!",
-  ],
-  ["B", "不客气！", "Bú kèqi!", "Không có gì!"],
-];
-
-/** Từ vựng: [中文, pinyin, tiếng Việt] */
-const VOCAB: [string, string, string][] = [
-  ["打听", "dǎtīng", "hỏi thăm,打听 tin tức"],
-  ["请问", "qǐngwèn", "xin hỏi"],
-  ["姑娘", "gūniang", "cô gái"],
-  ["长得什么样", "zhǎng de shénme yàng", "trông như thế nào"],
-  ["身高", "shēngāo", "chiều cao"],
-  ["左右", "zuǒyòu", "khoảng, chừng"],
-  ["留着长发", "liú zhe cháng fà", "để tóc dài"],
-  ["穿着", "chuān zhe", "mặc (đang mặc)"],
-  ["白色的上衣", "báisè de shàngyī", "áo màu trắng"],
-  ["戴着一副眼镜儿", "dài zhe yí fù yǎnjìngr", "đeo một cặp kính"],
-  ["往哪儿走", "wǎng nǎr zǒu", "đi về hướng nào"],
-  ["下山", "xià shān", "xuống núi"],
-  ["大概", "dàgài", "khoảng, đại khái"],
-  ["多长", "duō cháng", "bao lâu"],
-  ["分钟", "fēnzhōng", "phút"],
-  ["就是她", "jiù shì tā", "chính là cô ấy"],
-  ["快点儿", "kuài diǎnr", "nhanh lên"],
-  ["不客气", "bú kèqi", "không có gì / đừng khách sáo"],
-];
-
-/* ─────────────────────────── Tab: Bài khoá ─────────────────────────── */
-
-function ReadingTab() {
-  const [showP, setShowP] = useState(false);
-  const [showV, setShowV] = useState(false);
-  const [open, setOpen] = useState<Set<number>>(new Set());
-
-  const toggle = (i: number) =>
-    setOpen((prev) => {
-      const next = new Set(prev);
-      if (next.has(i)) next.delete(i);
-      else next.add(i);
-      return next;
-    });
-
+export default function Lesson16BaiKhoaPhu() {
+  const [tab, setTab] = useState(0);
+  const [all, setAll] = useState(false);
+  const tabs = ["课文", "生词", "交际会话", "Dịch Việt – Trung"];
   return (
-    <div>
-      <div className="mb-3 flex gap-2">
-        <Chip on={showP} onClick={() => setShowP((v) => !v)}>
-          Pinyin
-        </Chip>
-        <Chip on={showV} onClick={() => setShowV((v) => !v)}>
-          Nghĩa
-        </Chip>
-      </div>
-
-      <ul className="space-y-0">
-        {T1.map(([zh, py, vi], i) => (
-          <li key={i}>
-            <button
-              type="button"
-              onClick={() => toggle(i)}
-              className="block w-full px-2 py-2 text-left transition-colors hover:bg-stone-50"
-            >
-              <span
-                className="block text-[22px] leading-relaxed"
-                style={zhFont}
-              >
-                <Marked text={zh} />
-              </span>
-              {(showP || open.has(i)) && (
-                <span className="text-light mt-1 block text-[0.9rem] leading-snug text-gray-400">
-                  {py}
-                </span>
-              )}
-              {(showV || open.has(i)) && (
-                <span className="mt-1 block text-sm text-stone-600">{vi}</span>
-              )}
-            </button>
-          </li>
-        ))}
-      </ul>
-
-      <p className="mt-3 text-sm text-stone-500">
-        Chữ{" "}
-        <span className="text-red-60mx-0.5 rounded bg-yellow-200 px-1 font-bold text-red-700">
-          đỏ
-        </span>{" "}
-        = đáp án các chỗ trống ①–⑩ trong đề gốc.
-      </p>
-      <p className="mt-2 text-sm text-stone-500">
-        Chạm vào câu để xem pinyin + nghĩa.
-      </p>
-    </div>
-  );
-}
-
-/* ─────────────────────────── Tab: Ngữ pháp ─────────────────────────── */
-
-function GrammarTab() {
-  return (
-    <div className="space-y-3">
-      {G.map(([title, example, note], i) => (
-        <div
-          key={i}
-          className="rounded-lg border border-stone-200 bg-white px-4 py-3"
-        >
-          <b className="text-stone-900">{title}</b>
-          <div className="my-1 text-xl text-sky-700" style={zhFont}>
-            {example}
-          </div>
-          <small className="block text-sm leading-snug text-stone-600">
-            {note}
-          </small>
-        </div>
-      ))}
-    </div>
-  );
-}
-
-/* ─────────────────────────── Tab: Bài tập ─────────────────────────── */
-
-type Question = { q: string; opts: string[]; correct: number; note: string };
-
-function buildQuestions(data: ChoiceData[], doShuffle: boolean): Question[] {
-  return data.map(([q, opts, correct, note]) => {
-    const tagged = opts.map((t, i) => ({ t, ok: i === correct }));
-    const arranged = doShuffle ? shuffle(tagged) : tagged;
-    return {
-      q,
-      opts: arranged.map((x) => x.t),
-      correct: arranged.findIndex((x) => x.ok),
-      note,
-    };
-  });
-}
-
-function ChoiceExercise({ data }: { data: ChoiceData[] }) {
-  // Render unshuffled first (SSR-safe), then shuffle on the client.
-  const [qs, setQs] = useState<Question[]>(() => buildQuestions(data, false));
-  const [picked, setPicked] = useState<Record<number, number>>({});
-
-  useEffect(() => {
-    setQs(buildQuestions(data, true));
-  }, [data]);
-
-  const answered = Object.keys(picked).length;
-  const score = qs.filter((x, i) => picked[i] === x.correct).length;
-
-  const reset = () => {
-    setPicked({});
-    setQs(buildQuestions(data, true));
-  };
-
-  return (
-    <div className="space-y-3">
-      {qs.map((item, i) => {
-        const chosen = picked[i];
-        const done = chosen !== undefined;
-        return (
-          <div
-            key={i}
-            className="rounded-lg border border-stone-200 bg-white px-4 py-3"
-          >
-            <div className="text-xl leading-relaxed" style={zhFont}>
-              {i + 1}. {item.q}
-            </div>
-            <div className="mt-2 flex flex-wrap gap-2">
-              {item.opts.map((o, j) => {
-                let cls =
-                  "border-stone-300 bg-white text-stone-800 hover:bg-stone-100";
-                if (done && j === item.correct)
-                  cls = "border-emerald-600 bg-emerald-50 text-emerald-800";
-                else if (done && j === chosen)
-                  cls = "border-red-500 bg-red-50 text-red-700";
-                return (
-                  <button
-                    key={j}
-                    type="button"
-                    disabled={done}
-                    onClick={() => setPicked((p) => ({ ...p, [i]: j }))}
-                    className={`rounded-lg border px-3 py-1.5 text-lg disabled:cursor-default ${cls}`}
-                    style={zhFont}
-                  >
-                    {o}
-                  </button>
-                );
-              })}
-            </div>
-            {done && (
-              <div
-                className={`mt-2 text-sm ${chosen === item.correct ? "text-emerald-700" : "text-red-600"}`}
-              >
-                {chosen === item.correct ? "✔ " : "✘ "}
-                {item.note}
-              </div>
-            )}
-          </div>
-        );
-      })}
-
-      {answered === qs.length && (
-        <div className="font-medium text-stone-800">
-          Điểm: {score}/{qs.length}
-        </div>
-      )}
-
-      <button
-        type="button"
-        onClick={reset}
-        className="rounded-lg border border-stone-300 bg-white px-4 py-2 text-sm text-stone-700 hover:bg-stone-100"
-      >
-        Làm lại
-      </button>
-    </div>
-  );
-}
-
-type Piece = { id: number; t: string };
-
-function OrderItem({ index, parts }: { index: number; parts: string[] }) {
-  const initial = (): Piece[] => parts.map((t, id) => ({ id, t }));
-  const [pieces, setPieces] = useState<Piece[]>(initial);
-  const [chosen, setChosen] = useState<number[]>([]);
-  const [fb, setFb] = useState<{ ok: boolean; msg: string } | null>(null);
-
-  useEffect(() => {
-    setPieces(shuffle(parts.map((t, id) => ({ id, t }))));
-  }, [parts]);
-
-  const available = pieces.filter((p) => !chosen.includes(p.id));
-
-  const check = () => {
-    const s = chosen.map((id) => parts[id]).join("");
-    const ok = s === parts.join("");
-    setFb({
-      ok,
-      msg: ok
-        ? `✔ Đúng: ${s}`
-        : `✘ Chưa đúng, thử lại. Gợi ý: ${parts.join(" ")}`,
-    });
-  };
-
-  const clear = () => {
-    setChosen([]);
-    setFb(null);
-    setPieces(shuffle(parts.map((t, id) => ({ id, t }))));
-  };
-
-  const pieceCls =
-    "rounded-lg border border-stone-300 bg-white px-3 py-1.5 text-lg text-stone-800 hover:bg-stone-100";
-
-  return (
-    <div className="rounded-lg border border-stone-200 bg-white px-4 py-3">
-      <div className="text-sm text-stone-500">
-        {index + 1}. Chạm các mảnh để ghép thành câu:
-      </div>
-
-      <div className="my-2 flex min-h-[2.75rem] flex-wrap gap-2 rounded-lg border border-dashed border-stone-300 bg-stone-50 p-2">
-        {chosen.map((id) => (
+    <div className="mx-auto max-w-3xl p-4 font-sans">
+      <div className="mb-4 flex gap-2 overflow-x-auto border-b border-stone-200 pb-2">
+        {tabs.map((t, i) => (
           <button
-            key={id}
-            type="button"
-            className={pieceCls}
-            style={zhFont}
-            onClick={() => {
-              setChosen((c) => c.filter((x) => x !== id));
-              setFb(null);
-            }}
-          >
-            {parts[id]}
-          </button>
-        ))}
-      </div>
-
-      <div className="flex flex-wrap gap-2">
-        {available.map((p) => (
-          <button
-            key={p.id}
-            type="button"
-            className={pieceCls}
-            style={zhFont}
-            onClick={() => {
-              setChosen((c) => [...c, p.id]);
-              setFb(null);
-            }}
-          >
-            {p.t}
-          </button>
-        ))}
-      </div>
-
-      <div className="mt-2 flex gap-2">
-        <button
-          type="button"
-          onClick={check}
-          className="rounded-lg bg-stone-800 px-4 py-1.5 text-sm text-white hover:bg-stone-700"
-        >
-          Kiểm tra
-        </button>
-        <button
-          type="button"
-          onClick={clear}
-          className="rounded-lg border border-stone-300 bg-white px-4 py-1.5 text-sm text-stone-700 hover:bg-stone-100"
-        >
-          Xoá
-        </button>
-      </div>
-
-      {fb && (
-        <div
-          className={`mt-2 text-sm ${fb.ok ? "text-emerald-700" : "text-red-600"}`}
-        >
-          {fb.msg}
-        </div>
-      )}
-    </div>
-  );
-}
-
-function OrderExercise() {
-  return (
-    <div className="space-y-3">
-      {E3.map((parts, i) => (
-        <OrderItem key={i} index={i} parts={parts} />
-      ))}
-    </div>
-  );
-}
-
-function ExerciseTab() {
-  const [ex, setEx] = useState<1 | 2 | 3>(1);
-  const subs: [1 | 2 | 3, string][] = [
-    [1, "1. Điền V+bổ ngữ"],
-    [2, "2. Sửa câu"],
-    [3, "3. Sắp xếp"],
-  ];
-
-  return (
-    <div>
-      <div className="mb-3 flex flex-wrap gap-2">
-        {subs.map(([id, label]) => (
-          <Chip key={id} on={ex === id} onClick={() => setEx(id)}>
-            {label}
-          </Chip>
-        ))}
-      </div>
-      {ex === 1 && <ChoiceExercise key="e1" data={E1} />}
-      {ex === 2 && <ChoiceExercise key="e2" data={E2} />}
-      {ex === 3 && <OrderExercise key="e3" />}
-    </div>
-  );
-}
-
-/* ─────────────────────── Tab: 打听 + Từ vựng ─────────────────────── */
-
-function DialogueTab() {
-  return (
-    <div>
-      <header className="mb-4 text-center">
-        <p className="text-3xl text-sky-600" style={zhFont}>
-          打听
-        </p>
-        <div className="text-stone-500">
-          Inquiring - <span className="pl-2">Hỏi thăm / Hỏi đường</span>
-        </div>
-      </header>
-
-      <div className="space-y-3">
-        {DIALOGUE.map(([who, zh, py, vi], i) => (
-          <div
-            key={i}
-            className={`flex gap-2 rounded-lg border px-4 py-3 ${
-              who === "A"
-                ? "mr-6 border-gray-200 bg-gray-50"
-                : "ml-6 border-stone-200 bg-white"
-            }`}
-          >
-            <div className="p-1.75 font-semibold text-stone-500">{who}:</div>
-            <div>
-              <div className="text-[22px] leading-relaxed" style={zhFont}>
-                {zh}
-              </div>
-              <div className="text-[0.9rem] leading-snug text-stone-400">
-                {py}
-              </div>
-              <div className="mt-0.5 text-sm text-stone-600">{vi}</div>
-            </div>
-          </div>
-        ))}
-      </div>
-
-      <section className="mt-8">
-        <h2 className="mb-3 text-lg font-semibold text-stone-900">
-          📚 Từ vựng / Vocabulary
-        </h2>
-        <div className="overflow-x-auto rounded-lg border border-stone-200 bg-white">
-          <table className="min-w-105 w-full border-collapse text-left">
-            <thead>
-              <tr className="border-b border-stone-200 bg-stone-100 text-sm text-stone-600">
-                <th className="px-3 py-2 font-medium">Tiếng Trung</th>
-                <th className="px-3 py-2 font-medium">Pinyin</th>
-                <th className="px-3 py-2 font-medium">Tiếng Việt</th>
-              </tr>
-            </thead>
-            <tbody>
-              {VOCAB.map(([zh, py, vi]) => (
-                <tr
-                  key={zh}
-                  className="border-b border-stone-100 last:border-b-0"
-                >
-                  <td className="px-3 py-2 text-xl" style={zhFont}>
-                    {zh}
-                  </td>
-                  <td className="px-3 py-2 text-sm text-stone-600">{py}</td>
-                  <td className="px-3 py-2 text-sm text-stone-700">{vi}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      </section>
-    </div>
-  );
-}
-
-/* ───────────────────────────── Page ───────────────────────────── */
-
-const TABS: { id: TabId; label: string }[] = [
-  { id: "a", label: "Bài khoá" },
-  { id: "g", label: "Ngữ pháp" },
-  { id: "x", label: "Bài tập" },
-  { id: "d", label: "Hội thoại giao tiếp" },
-];
-
-export default function Bai15() {
-  const [tab, setTab] = useState<TabId>("a");
-
-  return (
-    <div className="mx-auto p-4">
-      <div
-        role="tablist"
-        className="mb-4 flex gap-2 overflow-x-auto border-b border-stone-200 pb-2"
-      >
-        {TABS.map((t) => (
-          <button
-            key={t.id}
-            type="button"
-            role="tab"
-            aria-selected={tab === t.id}
-            onClick={() => setTab(t.id)}
-            className={`shrink-0 rounded-lg px-4 py-1.5 text-sm transition-colors ${
-              tab === t.id
+            key={t}
+            onClick={() => setTab(i)}
+            className={
+              "shrink-0 rounded-lg px-4 py-1.5 text-sm transition-colors " +
+              (tab === i
                 ? "bg-stone-800 text-white"
-                : "text-stone-600 hover:bg-stone-200"
-            }`}
-            // style={t.id === "d" ? zhFont : undefined}
+                : "text-stone-600 hover:bg-stone-200")
+            }
           >
-            {t.label}
+            {t}
           </button>
         ))}
       </div>
 
-      <div role="tabpanel">
-        {tab === "a" && <ReadingTab />}
-        {tab === "g" && <GrammarTab />}
-        {tab === "x" && <ExerciseTab />}
-        {tab === "d" && <DialogueTab />}
-      </div>
+      {tab === 0 && (
+        <div>
+          <h2 className="mb-1 text-lg font-bold">综合填空 (đã điền đáp án)</h2>
+          <div className="mb-3 flex flex-wrap gap-2">
+            {ANS.map((a, i) => (
+              <span
+                key={i}
+                className="ztai__zh rounded bg-yellow-100 px-2 py-0.5 text-2xl text-red-700"
+              >
+                <sup className="mr-0.5 text-gray-500">{i + 1}</sup>
+                {a}
+              </span>
+            ))}
+          </div>
+          <p className="mb-2 text-xs text-gray-500">
+            Bấm vào từng câu để xem pinyin + tiếng Việt.
+          </p>
+          <Toggle all={all} setAll={setAll} />
+          {P.map((para, i) => (
+            <div key={i} className="mb-3 indent-8">
+              {para.map((s, j) => (
+                <Sent key={j} zh={s[0]} py={s[1]} vi={s[2]} all={all} />
+              ))}
+            </div>
+          ))}
+        </div>
+      )}
+
+      {tab === 1 && (
+        <div>
+          <h2 className="mb-3 text-lg font-bold">
+            补充生词 · Supplementary words
+          </h2>
+          <div className="space-y-4">
+            {V.map((v) => (
+              <div
+                key={v[0]}
+                className="overflow-hidden rounded-sm border border-stone-300"
+              >
+                <div className="flex items-center gap-4 bg-gray-50 px-4 py-3">
+                  <span className="w-5 text-sm text-gray-400">{v[0]}</span>
+                  <div className="text-center">
+                    <div className="text-xs text-gray-500">{v[2]}</div>
+                    <div className="ztai__zh text-5xl">{v[1]}</div>
+                  </div>
+                  <div className="text-sm">
+                    <span className="text-gray-500">({v[3]})</span>{" "}
+                    <span className="font-bold text-red-700">{v[4]}</span>
+                    <div className="text-gray-800">{v[5]}</div>
+                  </div>
+                </div>
+                <div className="space-y-2 px-4 py-3 text-sm">
+                  <div>
+                    <span className="font-semibold">Cách dùng:</span> {v[6]}
+                  </div>
+                  <div className="rounded-lg bg-sky-50 p-2">
+                    <div className="text-lg">{v[7]}</div>
+                    <div className="italic text-gray-500">{v[8]}</div>
+                    <div className="text-blue-700">{v[9]}</div>
+                  </div>
+                  <div>
+                    <span className="font-semibold">
+                      Đồng nghĩa / gần nghĩa:
+                    </span>{" "}
+                    {v[10]}
+                  </div>
+                  <div className="text-gray-600">
+                    <span className="font-semibold">Mở rộng:</span> {v[11]}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {tab === 2 && (
+        <div>
+          <h2 className="mb-1 text-lg font-bold">
+            交际会话 · 赞扬 Praising someone
+          </h2>
+          <p className="mb-2 text-xs text-gray-500">
+            Khen ngợi · Bấm vào từng câu để xem pinyin + tiếng Việt.
+          </p>
+          <Toggle all={all} setAll={setAll} />
+          {C.map((c, i) => (
+            <Sent key={i} who={c[0]} zh={c[1]} py={c[2]} vi={c[3]} all={all} />
+          ))}
+        </div>
+      )}
+
+      {tab === 3 && (
+        <div className="min-h-75 rounded-xl border-2 border-dashed p-6 text-center text-gray-300">
+          Dịch Việt – Trung (để trống)
+        </div>
+      )}
+
+      <footer className="mt-8 border-t pt-3 text-sm text-gray-600">
+        <div className="mb-1 font-semibold">Ghi chú đáp án khác</div>
+        <ul className="list-disc space-y-1 pl-5">
+          {NOTES.map((n, i) => (
+            <li key={i}>
+              ({n[0]}) <b>{n[1]}</b>
+              {n[2] !== "—" && (
+                <>
+                  {" "}
+                  hoặc <b>{n[2]}</b>
+                </>
+              )}
+              : {n[3]}
+            </li>
+          ))}
+        </ul>
+      </footer>
     </div>
   );
 }
