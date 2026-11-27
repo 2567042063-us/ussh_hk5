@@ -23,7 +23,7 @@ export default function VocabBai1() {
         <div className="z-9 sticky top-0 mb-3 w-full bg-white/95 py-2 backdrop-blur dark:bg-slate-800/95">
           <audio controls preload="none" className="lesson-audio h-10 w-full">
             <source
-              src="https://bh9cualrgy9xkq87.public.blob.vercel-storage.com/gthnq4/16-shengci.mp3"
+              src="https://bh9cualrgy9xkq87.public.blob.vercel-storage.com/gthnq4/17-shengci.mp3"
               type="audio/mpeg"
             />
             Trình duyệt của bạn không hỗ trợ phát âm thanh.

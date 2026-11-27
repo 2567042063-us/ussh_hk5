@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-import type { Dialogue, Sentence } from "./Kewen";
+import type { Dialogue, Sentence } from "./Kewen17";
 
 function Reveal({ sentence }: { sentence: Sentence }) {
   return (

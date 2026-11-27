@@ -3,123 +3,104 @@ import { lesson17 } from "../../lessons/lesson17";
 
 const pairs = [
   [
-    ["院子", "yuànzi", "sân"],
-    ["原子", "yuánzǐ", "nguyên tử"],
+    ["兴旺", "xīngwàng", "hưng vượng, thịnh vượng"],
+    ["姓王", "xìng Wáng", "họ Vương"],
   ],
   [
-    ["打扮", "dǎban", "ăn diện, trang điểm"],
-    ["打翻", "dǎfān", "làm đổ, lật"],
+    ["布置", "bùzhì", "bày biện, trang trí"],
+    ["不是", "bú shì", "không phải là"],
   ],
   [
-    ["随便", "suíbiàn", "tùy tiện, tùy ý"],
-    ["虽然", "suīrán", "tuy rằng"],
+    ["打扫", "dǎsǎo", "quét dọn"],
+    ["大嫂", "dàsǎo", "chị dâu cả"],
   ],
   [
-    ["出门", "chū mén", "ra ngoài"],
-    ["处分", "chǔfèn", "xử phạt, kỷ luật"],
+    ["品尝", "pǐncháng", "nếm thử"],
+    ["平常", "píngcháng", "bình thường"],
   ],
   [
-    ["父母", "fùmǔ", "cha mẹ"],
-    ["服务", "fúwù", "phục vụ"],
+    ["幸福", "xìngfú", "hạnh phúc"],
+    ["辛苦", "xīnkǔ", "vất vả"],
   ],
   [
-    ["打的", "dǎ dī", "đi taxi"],
-    ["打击", "dǎjī", "đả kích, đánh"],
-  ],
-  [
-    ["欢乐", "huānlè", "vui vẻ"],
-    ["换了", "huàn le", "đổi rồi"],
-  ],
-  [
-    ["遗憾", "yíhàn", "tiếc nuối"],
-    ["银行", "yínháng", "ngân hàng"],
+    ["吉祥", "jíxiáng", "cát tường, may mắn"],
+    ["迹象", "jìxiàng", "dấu hiệu"],
   ],
 ];
 
-const bieLe = [
+const baZai = [
   [
-    ["别等了", "bié děng le", "đừng đợi nữa"],
-    ["别说了", "bié shuō le", "đừng nói nữa"],
+    [
+      "把那瓶花儿放在桌子上",
+      "bǎ nà píng huār fàng zài zhuōzi shang",
+      "đặt bình hoa đó lên bàn",
+    ],
+    ["把名字写在书上", "bǎ míngzi xiě zài shū shang", "viết tên lên sách"],
   ],
   [
-    ["别吃了", "bié chī le", "đừng ăn nữa"],
-    ["别喝了", "bié hē le", "đừng uống nữa"],
-  ],
-  [
-    ["别去了", "bié qù le", "đừng đi nữa"],
-    ["别哭了", "bié kū le", "đừng khóc nữa"],
-  ],
-  [
-    ["别睡了", "bié shuì le", "đừng ngủ nữa"],
-    ["别找了", "bié zhǎo le", "đừng tìm nữa"],
-  ],
-  [
-    ["别写了", "bié xiě le", "đừng viết nữa"],
-    ["别看了", "bié kàn le", "đừng xem nữa"],
+    ["把书摆在书架上", "bǎ shū bǎi zài shūjià shang", "xếp sách lên giá sách"],
+    [
+      "把对联儿贴在门两边",
+      "bǎ duìliánr tiē zài mén liǎngbiān",
+      "dán câu đối hai bên cửa",
+    ],
   ],
 ];
 
-const suibian = [
+const baDao = [
   [
-    ["随便说", "suíbiàn shuō", "nói tùy ý"],
-    ["随便谈", "suíbiàn tán", "trò chuyện thoải mái"],
+    ["把车开到学校去", "bǎ chē kāi dào xuéxiào qù", "lái xe đến trường"],
+    ["把菜放到冰箱里", "bǎ cài fàng dào bīngxiāng li", "cho đồ ăn vào tủ lạnh"],
   ],
   [
-    ["随便坐", "suíbiàn zuò", "ngồi tùy ý"],
-    ["随便要", "suíbiàn yào", "lấy/gọi tùy ý"],
-  ],
-  [
-    ["随便喝", "suíbiàn hē", "uống tùy thích"],
-    ["过生日", "guò shēngrì", "mừng sinh nhật"],
+    ["把椅子搬到楼上", "bǎ yǐzi bān dào lóu shang", "khiêng ghế lên lầu"],
+    ["把她送到车站", "bǎ tā sòng dào chēzhàn", "tiễn cô ấy đến bến xe"],
   ],
 ];
 
-const guo = [
+const baGei = [
   [
-    ["过寒假", "guò hánjià", "nghỉ đông"],
-    ["过暑假", "guò shǔjià", "nghỉ hè"],
+    [
+      "把教室借给我们",
+      "bǎ jiàoshì jiè gěi wǒmen",
+      "cho chúng tôi mượn phòng học",
+    ],
+    ["把照片发给妈妈", "bǎ zhàopiàn fā gěi māma", "gửi ảnh cho mẹ"],
   ],
   [
-    ["过新年", "guò xīnnián", "đón năm mới"],
-    ["过春节", "guò Chūnjié", "đón Tết Xuân"],
-  ],
-];
-
-const yueLaiYue = [
-  [
-    ["越来越热", "yuè lái yuè rè", "ngày càng nóng"],
-    ["越来越冷", "yuè lái yuè lěng", "ngày càng lạnh"],
-  ],
-  [
-    ["越来越好", "yuè lái yuè hǎo", "ngày càng tốt"],
-    ["越来越流利", "yuè lái yuè liúlì", "ngày càng lưu loát"],
-  ],
-  [
-    ["越来越有意思", "yuè lái yuè yǒu yìsi", "ngày càng thú vị"],
-    ["越来越喜欢", "yuè lái yuè xǐhuan", "ngày càng thích"],
-  ],
-  [
-    ["越来越高兴", "yuè lái yuè gāoxìng", "ngày càng vui"],
-    ["越来越习惯", "yuè lái yuè xíguàn", "ngày càng quen"],
+    ["把作业交给老师", "bǎ zuòyè jiāo gěi lǎoshī", "nộp bài tập cho thầy cô"],
+    [
+      "把礼物带给王老师",
+      "bǎ lǐwù dài gěi Wáng lǎoshī",
+      "mang quà cho thầy Vương",
+    ],
   ],
 ];
 
-const yueYue = [
+const baCheng = [
   [
-    ["越学越有意思", "yuè xué yuè yǒu yìsi", "càng học càng thú vị"],
-    ["越写越好", "yuè xiě yuè hǎo", "càng viết càng tốt"],
+    [
+      "把生词翻译成英语",
+      "bǎ shēngcí fānyì chéng Yīngyǔ",
+      "dịch từ mới sang tiếng Anh",
+    ],
+    [
+      "把小说儿拍成电影",
+      "bǎ xiǎoshuōr pāi chéng diànyǐng",
+      "quay tiểu thuyết thành phim",
+    ],
   ],
   [
-    ["越跳越高", "yuè tiào yuè gāo", "càng nhảy càng cao"],
-    ["越跑越快", "yuè pǎo yuè kuài", "càng chạy càng nhanh"],
-  ],
-  [
-    ["越练越熟", "yuè liàn yuè shú", "càng luyện càng thạo"],
-    ["越说越流利", "yuè shuō yuè liúlì", "càng nói càng lưu loát"],
-  ],
-  [
-    ["越说越高兴", "yuè shuō yuè gāoxìng", "càng nói càng vui"],
-    ["越好越贵", "yuè hǎo yuè guì", "càng tốt càng đắt"],
+    [
+      "把美元换成人民币",
+      "bǎ Měiyuán huàn chéng rénmínbì",
+      "đổi đô la Mỹ thành nhân dân tệ",
+    ],
+    [
+      "把教室布置成会场",
+      "bǎ jiàoshì bùzhì chéng huìchǎng",
+      "trang trí phòng học thành hội trường",
+    ],
   ],
 ];
 
@@ -171,9 +152,8 @@ export default function Page() {
         </div>
         <div className="my-3 w-full opacity-80">
           <audio controls preload="none" className="lesson-audio h-10 w-full">
-            {/* TODO: đổi sang link audio thật của 15-yuyin */}
             <source
-              src="https://bh9cualrgy9xkq87.public.blob.vercel-storage.com/gthnq4/16-yuyin.mp3"
+              src="https://bh9cualrgy9xkq87.public.blob.vercel-storage.com/gthnq4/17-yuyin.mp3"
               type="audio/mpeg"
             />
             Trình duyệt của bạn không hỗ trợ phát âm thanh.
@@ -193,22 +173,25 @@ export default function Page() {
           <h2 className="ztai__zh mb-1 mt-3 text-2xl font-bold">(2) 朗读</h2>
           <p className="mb-2 text-stone-500">Read out the following phrases</p>
 
-          <h3 className="mb-2 mt-5 text-stone-500">别 + Động từ + 了</h3>
-          <ExerciseCards rows={bieLe} />
-
-          <h3 className="mb-2 mt-5 text-stone-500">随便 / 过</h3>
-          <ExerciseCards rows={suibian} />
-          <div className="mt-3">
-            <ExerciseCards rows={guo} />
-          </div>
-
-          <h3 className="mb-2 mt-5 text-stone-500">越来越 + Tính từ</h3>
-          <ExerciseCards rows={yueLaiYue} />
+          <h3 className="mb-2 mt-5 text-stone-500">
+            把 + Tân ngữ + Động từ + 在
+          </h3>
+          <ExerciseCards rows={baZai} />
 
           <h3 className="mb-2 mt-5 text-stone-500">
-            越 + Động từ + 越 + Tính từ
+            把 + Tân ngữ + Động từ + 到
           </h3>
-          <ExerciseCards rows={yueYue} />
+          <ExerciseCards rows={baDao} />
+
+          <h3 className="mb-2 mt-5 text-stone-500">
+            把 + Tân ngữ + Động từ + 给
+          </h3>
+          <ExerciseCards rows={baGei} />
+
+          <h3 className="mb-2 mt-5 text-stone-500">
+            把 + Tân ngữ + Động từ + 成
+          </h3>
+          <ExerciseCards rows={baCheng} />
         </section>
       </main>
     </LessonLayout>

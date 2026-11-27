@@ -6,7 +6,7 @@ import { lesson16 } from "../../lessons/lesson16";
 
 const translationLesson: Lesson = {
   id: "gthnq4-lesson16-2",
-  title: "第十五课（二）：年轻人打扮得越来越漂亮了",
+  title: "第十六课（二）：年轻人打扮得越来越漂亮了",
   items: dataBai16Er,
 };
 

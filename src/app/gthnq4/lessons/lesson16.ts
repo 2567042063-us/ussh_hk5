@@ -5,7 +5,7 @@ export const lesson16 = {
   title: "GTHNq4 - Bài 16",
   basePath: "/gthnq4/lesson16",
   header: {
-    pinyin: "Dì-shíwǔ kè",
+    pinyin: "Dì-shíliù kè",
     ordinal: "第十六课",
     label: "Lesson 16",
     pronunciation: "Qiánbian kāi guòlai yí liàng kōngchē",

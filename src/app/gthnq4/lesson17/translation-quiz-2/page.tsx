@@ -1,13 +1,13 @@
 import TranslationQuiz from "@shared/components/quizdich/TranslationQuiz";
-import { dataBai16Er } from "@shared/data/dich/bai16";
 
 import LessonLayout from "../../LessonLayout";
 import { lesson17 } from "../../lessons/lesson17";
+import { dataBai17Dialogue2 } from "../Kewen17Dich";
 
 const translationLesson: Lesson = {
   id: "gthnq4-lesson17-2",
-  title: "第十五课（二）：年轻人打扮得越来越漂亮了",
-  items: dataBai16Er,
+  title: "第十七课",
+  items: dataBai17Dialogue2,
 };
 
 export default function Page() {
