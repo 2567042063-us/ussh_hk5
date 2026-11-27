@@ -399,7 +399,7 @@ export default function BaiKhoaPhuShangLiang() {
   return (
     <div className="mx-auto p-4">
       <h1 className="ztai__zh text-2xl text-gray-800">
-        第二课 雪后爬长城 · 补充课文
+        第二课 · 补充课文 · 雪后爬长城
       </h1>
       <p className="mb-4 text-sm text-gray-500">
         汉语教程 (第3版) 第三册 上 · Bài khoá phụ
