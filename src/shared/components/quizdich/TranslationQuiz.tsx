@@ -104,7 +104,7 @@ function Session({ lesson, shuffled }: { lesson: Lesson; shuffled: boolean }) {
         </p>
 
         <textarea
-          className="min-h-24 w-full resize-y rounded-sm border border-slate-400 bg-transparent p-2 text-2xl opacity-100 focus-visible:outline-1 focus-visible:outline-slate-200 disabled:opacity-80 dark:border-slate-600"
+          className="ztai__zh min-h-24 w-full resize-y rounded-sm border border-slate-400 bg-transparent p-2 text-2xl opacity-100 focus-visible:outline-1 focus-visible:outline-slate-200 disabled:opacity-80 dark:border-slate-600"
           lang="zh-CN"
           placeholder="Nhập câu tiếng Trung…"
           value={q.input}

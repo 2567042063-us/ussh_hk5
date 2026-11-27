@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 
+import TranslationQuiz from "@shared/components/quizdich/TranslationQuiz";
+
 // 课文: [[ [ "câu có {1|đáp án}", "pinyin", "tiếng Việt" ], ... ], ... ]  (mỗi mảng ngoài = 1 đoạn)
 const P = [
   [
@@ -428,6 +430,26 @@ const V = [
   ],
 ];
 
+// Bài dịch Việt – Trung: lấy câu từ 课文 (P) và 交际会话 (C); bỏ ký hiệu ô trống {n|đáp án}
+const stripBlank = (s) => s.replace(/\{\d+\|([^}]*)\}/g, "$1");
+const QUIZ_LESSON = {
+  id: "gthnq4-lesson16-supplementary",
+  title: "",
+  items: [
+    ...P.flat().map(([zh, pinyin, vietnamese]) => ({
+      zh: stripBlank(zh),
+      pinyin,
+      vietnamese,
+    })),
+    ...C.map(([speaker, zh, pinyin, vietnamese]) => ({
+      speaker,
+      zh,
+      pinyin,
+      vietnamese,
+    })),
+  ],
+};
+
 function Zh({ s }) {
   return s.split(/(\{[^}]+\})/).map((p, i) => {
     const m = p.match(/^\{(\d+)\|(.+)\}$/);
@@ -451,12 +473,12 @@ function Sent({ zh, py, vi, all, who }) {
     <div
       onClick={() => setO(!o)}
       className={
-        "my-1 cursor-pointer rounded-lg px-3 py-2 transition " +
+        "cursor-pointer rounded-lg px-3 py-1 transition " +
         (show ? "bg-stone-50" : "hover:bg-gray-100")
       }
     >
       <div className="ztai__zh text-2xl leading-9 text-gray-900">
-        {who && <span className="mr-2 font-bold text-sky-700">{who}:</span>}
+        {who && <span className="mr-2 text-stone-600">{who}:</span>}
         <Zh s={zh} />
       </div>
       {show && (
@@ -475,7 +497,7 @@ function Toggle({ all, setAll }) {
       onClick={() => setAll(!all)}
       className="mb-3 rounded-full border border-sky-300 px-3 py-1 text-sm text-sky-700 hover:bg-sky-50"
     >
-      {all ? "Ẩn pinyin + dịch" : "Hiện tất cả pinyin + dịch"}
+      {all ? "Ẩn ≖⩊≖" : "Hiện ≖⩊≖"}
     </button>
   );
 }
@@ -485,7 +507,7 @@ export default function Lesson16BaiKhoaPhu() {
   const [all, setAll] = useState(false);
   const tabs = ["课文", "生词", "交际会话", "Dịch Việt – Trung"];
   return (
-    <div className="mx-auto max-w-3xl p-4 font-sans">
+    <div className="mx-auto p-4">
       <div className="mb-4 flex gap-2 overflow-x-auto border-b border-stone-200 pb-2">
         {tabs.map((t, i) => (
           <button
@@ -505,7 +527,7 @@ export default function Lesson16BaiKhoaPhu() {
 
       {tab === 0 && (
         <div>
-          <h2 className="mb-1 text-lg font-bold">综合填空 (đã điền đáp án)</h2>
+          {/* <h2 className="mb-1 text-lg font-bold">综合填空 (đã điền đáp án)</h2> */}
           <div className="mb-3 flex flex-wrap gap-2">
             {ANS.map((a, i) => (
               <span
@@ -517,12 +539,12 @@ export default function Lesson16BaiKhoaPhu() {
               </span>
             ))}
           </div>
-          <p className="mb-2 text-xs text-gray-500">
+          {/* <p className="mb-2 text-xs text-gray-500">
             Bấm vào từng câu để xem pinyin + tiếng Việt.
-          </p>
+          </p> */}
           <Toggle all={all} setAll={setAll} />
           {P.map((para, i) => (
-            <div key={i} className="mb-3 indent-8">
+            <div key={i} className="">
               {para.map((s, j) => (
                 <Sent key={j} zh={s[0]} py={s[1]} vi={s[2]} all={all} />
               ))}
@@ -581,12 +603,12 @@ export default function Lesson16BaiKhoaPhu() {
 
       {tab === 2 && (
         <div>
-          <h2 className="mb-1 text-lg font-bold">
+          <h2 className="ztai__zh mb-1 text-2xl">
             交际会话 · 赞扬 Praising someone
           </h2>
-          <p className="mb-2 text-xs text-gray-500">
+          {/* <p className="mb-2 text-xs text-gray-500">
             Khen ngợi · Bấm vào từng câu để xem pinyin + tiếng Việt.
-          </p>
+          </p> */}
           <Toggle all={all} setAll={setAll} />
           {C.map((c, i) => (
             <Sent key={i} who={c[0]} zh={c[1]} py={c[2]} vi={c[3]} all={all} />
@@ -594,11 +616,7 @@ export default function Lesson16BaiKhoaPhu() {
         </div>
       )}
 
-      {tab === 3 && (
-        <div className="min-h-75 rounded-xl border-2 border-dashed p-6 text-center text-gray-300">
-          Dịch Việt – Trung (để trống)
-        </div>
-      )}
+      {tab === 3 && <TranslationQuiz lesson={QUIZ_LESSON} />}
 
       <footer className="mt-8 border-t pt-3 text-sm text-gray-600">
         <div className="mb-1 font-semibold">Ghi chú đáp án khác</div>

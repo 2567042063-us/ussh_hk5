@@ -381,9 +381,9 @@ export default function Lesson1BaiKhoaPhu() {
           <h2 className="mb-1 text-lg font-bold">
             综合填空 · Bài 9 (đã điền đáp án)
           </h2>
-          <p className="mb-2 text-xs text-gray-500">
+          {/* <p className="mb-2 text-xs text-gray-500">
             Bấm vào từng câu để xem pinyin + tiếng Việt. Đáp án được tô vàng.
-          </p>
+          </p> */}
           <Toggle all={all} setAll={setAll} />
           {P.map((para, i) => (
             <div key={i} className="mb-3">
@@ -449,9 +449,9 @@ export default function Lesson1BaiKhoaPhu() {
             <h2 className="mb-1 text-lg font-bold">
               交际会话 · 请教 (1) Consultation (1)
             </h2>
-            <p className="mb-2 text-xs text-gray-500">
+            {/* <p className="mb-2 text-xs text-gray-500">
               Bấm vào từng câu để xem pinyin + tiếng Việt.
-            </p>
+            </p> */}
             <Toggle all={all} setAll={setAll} />
             {C.map((c, i) => (
               <Sent

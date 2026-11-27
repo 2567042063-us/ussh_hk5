@@ -424,9 +424,9 @@ export default function BaiKhoaPhuShangLiang() {
       {tab === 0 && (
         <div>
           <h2 className="mb-1 text-lg font-bold">综合填空</h2>
-          <p className="mb-2 text-xs text-gray-500">
+          {/* <p className="mb-2 text-xs text-gray-500">
             Bấm vào từng câu để xem pinyin + tiếng Việt. Đáp án được tô vàng.
-          </p>
+          </p> */}
           <Toggle all={all} setAll={setAll} />
           {P.length === 0 ? (
             <div className="rounded-xl border-2 border-dashed p-6 text-center text-sm text-gray-400">
