@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-import { bai4Paragraphs, bai4Questions, type Sentence } from "./data";
+import { bai4Paragraphs, bai4Questions } from "./data";
 
 const allIds = [
   ...bai4Paragraphs.flatMap((paragraph, paragraphIndex) =>
@@ -13,7 +13,7 @@ const allIds = [
   ...bai4Questions.map((_, index) => `q${index}`),
 ];
 
-function Reveal({ s }: { s: Sentence }) {
+function Reveal({ s }: { s: Sentence_gthnq5 }) {
   return (
     <div className="border-l-2 border-stone-300 pl-3">
       <p className="text-sm leading-6 text-stone-500">{s.py}</p>

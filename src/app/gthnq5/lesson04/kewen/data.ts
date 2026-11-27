@@ -1,6 +1,4 @@
-export type Sentence = { zh: string; py: string; vi: string };
-export type Para = { kind?: "greet" | "sign"; s: Sentence[] };
-export const bai4Paragraphs: Para[] = [
+export const bai4Paragraphs: Para_gthnq5[] = [
   // ===== (一) 理想 =====
   {
     s: [
@@ -248,7 +246,7 @@ export const bai4Paragraphs: Para[] = [
   },
 ];
 
-export const bai4Questions: Sentence[] = [
+export const bai4Questions: Sentence_gthnq5[] = [
   {
     zh: "“我”为什么要学习中文？你呢？",
     py: "“Wǒ” wèishénme yào xuéxí Zhōngwén? Nǐ ne?",
