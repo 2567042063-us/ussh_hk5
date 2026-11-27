@@ -457,7 +457,7 @@ function Zh({ s }) {
     return (
       <mark
         key={i}
-        className="ztai__zh mx-0.5 rounded bg-yellow-100 px-1 text-red-700"
+        className="ztai__zh mx-0.5 rounded bg-yellow-50 px-1 text-sky-700"
       >
         <sup className="mr-0.5 text-[10px] text-gray-500">{m[1]}</sup>
         {m[2]}
@@ -483,7 +483,7 @@ function Sent({ zh, py, vi, all, who }) {
       </div>
       {show && (
         <div className="mt-1 text-sm">
-          <div className="italic text-gray-500">{py}</div>
+          <div className="text-gray-500">{py}</div>
           <div className="text-gray-900">{vi}</div>
         </div>
       )}
@@ -532,7 +532,7 @@ export default function Lesson16BaiKhoaPhu() {
             {ANS.map((a, i) => (
               <span
                 key={i}
-                className="ztai__zh rounded bg-yellow-100 px-2 py-0.5 text-2xl text-red-700"
+                className="ztai__zh rounded bg-yellow-50 px-2 py-0.5 text-2xl text-sky-700"
               >
                 <sup className="mr-0.5 text-gray-500">{i + 1}</sup>
                 {a}

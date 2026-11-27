@@ -26,7 +26,7 @@ const EXTRA_CARDS: Omit<CardSeed, "day">[] = [
 ];
 
 // Từ vựng quyển 4: chia đều cho DAYS ngày, xếp theo số bài.
-const DAYS = 10;
+const DAYS = 5;
 const lessonOf = (w: Word) =>
   Array.isArray(w.lesson) ? (w.lesson[0] ?? 0) : (w.lesson ?? 0);
 const known = new Set(EXTRA_CARDS.map((c) => c.hanzi));

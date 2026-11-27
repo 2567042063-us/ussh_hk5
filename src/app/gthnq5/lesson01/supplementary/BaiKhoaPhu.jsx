@@ -303,7 +303,7 @@ function Zh({ s }) {
     const m = p.match(/^\{(\d+)\|(.+)\}$/);
     if (!m) return <span key={i}>{p}</span>;
     return (
-      <mark key={i} className="mx-0.5 rounded bg-yellow-200 px-1 text-red-700">
+      <mark key={i} className="mx-0.5 rounded bg-yellow-50 px-1 text-sky-700">
         <sup className="mr-0.5 text-[10px] text-gray-500">{m[1]}</sup>
         {m[2]}
       </mark>

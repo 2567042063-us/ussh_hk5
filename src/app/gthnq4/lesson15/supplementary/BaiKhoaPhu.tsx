@@ -36,7 +36,7 @@ function Marked({ text }: { text: string }) {
         part.startsWith("<b>") ? (
           <span
             key={i}
-            className="mx-0.5 rounded bg-yellow-200 px-1 text-red-700"
+            className="mx-0.5 rounded bg-yellow-50 px-1 text-sky-700"
           >
             {part.slice(3, -4)}
           </span>
@@ -418,8 +418,8 @@ function ReadingTab() {
 
       <p className="mt-3 text-sm text-stone-500">
         Chữ{" "}
-        <span className="text-red-60mx-0.5 rounded bg-yellow-200 px-1 font-bold text-red-700">
-          đỏ
+        <span className="text-red-60mx-0.5 rounded bg-yellow-50 px-1 text-sky-700">
+          xanh
         </span>{" "}
         = đáp án các chỗ trống ①–⑩ trong đề gốc.
       </p>

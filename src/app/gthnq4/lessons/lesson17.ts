@@ -41,7 +41,7 @@ export const lesson17 = {
     },
     {
       id: "supplementary",
-      title: "补充课文 [draft]",
+      title: "补充课文",
       href: "/gthnq4/lesson17/supplementary",
     },
   ],
