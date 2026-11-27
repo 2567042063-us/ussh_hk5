@@ -44,6 +44,11 @@ export const MAIN_NAV = [
     label: "GTHNq5",
     href: "/gthnq5/lesson01/vocab",
   },
+  {
+    id: "dochieusc",
+    label: "Đọc hiểu SC",
+    href: "/dochieusc",
+  },
   // {
   //   id: "about",
   //   label: "About",

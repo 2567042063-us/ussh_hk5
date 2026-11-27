@@ -1186,8 +1186,8 @@ export default function BoNguKetQuaGoDapAn() {
   return (
     <div className="bnkq">
       <style>{CSS}</style>
-      <div className="container-bt">
-        <h1>gõ cụm động từ vào chỗ trống ___</h1>
+      <div>
+        <h2>gõ cụm động từ vào chỗ trống ___</h2>
         <p className="sub">
           {BANK.length} câu từ file tổng hợp Bài 4 và Bài 12, kèm 8 câu bài tập
           trong ảnh ở trang đầu. Gõ bằng bộ gõ pinyin hoặc chữ Hán.

@@ -597,7 +597,7 @@ export default function GaiCuoiBaiTap() {
 
   return (
     <div className="flex flex-col font-sans text-stone-900">
-      <header className="mx-auto w-full max-w-xl pb-2 pt-4">
+      <header className="mx-auto w-full pb-2 pt-4">
         <div className="flex items-baseline justify-between px-4">
           <h1 className="text-lg font-bold">改错句 · Sửa câu sai</h1>
           <span className="text-sm tabular-nums">
