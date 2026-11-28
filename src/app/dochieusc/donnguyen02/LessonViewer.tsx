@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { JSX, useState } from "react";
 
 /* ---------- Kiểu dữ liệu ---------- */
 export type Sent = { zh: string; py: string; vi: string };
@@ -99,11 +99,16 @@ function Word({ v, note }: { v: Vocab; note?: string }) {
         role="tooltip"
         className="pointer-events-none invisible absolute bottom-full left-1/2 z-30 mb-2 w-64 -translate-x-1/2 rounded-lg border border-stone-200 bg-white p-3 text-left indent-0 text-sm font-normal leading-5 text-stone-800 shadow-lg group-hover:visible group-focus:visible"
       >
-        <span className="block text-base font-semibold text-stone-900">
-          {v.zh} <span className="font-normal text-sky-800">{v.py}</span>
+        <span className="block text-xl font-semibold text-stone-900">
+          {v.zh}{" "}
+          <span className="ztai__py text-base font-normal text-sky-800">
+            {v.py}
+          </span>
         </span>
-        <span className="block text-xs text-stone-500">{v.hv}</span>
-        <span className="mt-1 block">{v.vi}</span>
+        <span className="ztai__vi block text-xs uppercase text-stone-500">
+          {v.hv}
+        </span>
+        <span className="ztai__vi mt-1 block">{v.vi}</span>
         {note && (
           <span className="mt-1.5 block rounded bg-sky-50 p-1.5 text-xs text-stone-700">
             {note}
@@ -555,14 +560,25 @@ function OrderTab({ sents, answer }: { sents: Opt[]; answer: number[] }) {
 }
 
 /* ---------- Khung chính ---------- */
+/**
+ *
+Dạng	Bài dùng
+选择解释 (giải nghĩa từ)	cả 4 bài
+选择答案 (chọn đáp án)	cả 4 bài
+判断正误 (đúng/sai)	cả 4 bài
+填空 (điền chỗ trống)	Bài 1, 3, 4
+回答问题 (trả lời câu hỏi)	Bài 1, 2, 3, 4
+连句成段 (sắp xếp câu)	Bài 2
+用汉语解释词语 (giải thích từ)	Bài 4
+ */
 export default function LessonViewer({ lesson }: { lesson: Lesson }) {
   const [tab, setTab] = useState(0);
   const tabs: { label: string; node: JSX.Element }[] = [
-    { label: "课文 · Bài khoá", node: <Text lesson={lesson} /> },
-    { label: "词汇 · Từ vựng", node: <VocabTab v={lesson.vocab} /> },
-    { label: "练习(一) Giải nghĩa từ", node: <MCTab items={lesson.ex1} /> },
-    { label: "练习(二) Chọn đáp án", node: <MCTab items={lesson.ex2} /> },
-    { label: "练习(三) Đúng/Sai", node: <TFTab items={lesson.ex3} /> },
+    { label: "课文", node: <Text lesson={lesson} /> },
+    { label: "词汇", node: <VocabTab v={lesson.vocab} /> },
+    { label: "练习(一) 选择解释", node: <MCTab items={lesson.ex1} /> },
+    { label: "练习(二) 选择答案", node: <MCTab items={lesson.ex2} /> },
+    { label: "练习(三) 判断正误", node: <TFTab items={lesson.ex3} /> },
     ...lesson.extras.map((e) => ({
       label: e.label,
       node:
@@ -579,11 +595,11 @@ export default function LessonViewer({ lesson }: { lesson: Lesson }) {
   ];
   return (
     <div>
-      <header className="mb-6 border-b border-stone-300 pb-4">
+      <header className="mb-3 border-b border-stone-300 pb-2">
         <p className="text-sm text-stone-500">
           {lesson.unit ?? "第二单元 · Đơn nguyên 2"} · 汉语系列阅读(第一册)
         </p>
-        <h1 className="ztai__zh mt-3 text-3xl text-sky-800">{lesson.title}</h1>
+        <h1 className="ztai__zh mt-2 text-3xl text-sky-800">{lesson.title}</h1>
         <p className="text-stone-800">
           {lesson.titlePy} — {lesson.titleVi}
         </p>

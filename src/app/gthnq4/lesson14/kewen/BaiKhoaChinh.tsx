@@ -37,7 +37,7 @@ export default function Page() {
 
   return (
     <>
-      <main className="px-6 pb-10 pt-8">
+      <main className="px-6 pb-10">
         <div className="z-9 sticky top-0 mb-3 w-full bg-white/95 py-2 backdrop-blur dark:bg-slate-800/95">
           <audio controls preload="none" className="lesson-audio h-10 w-full">
             <source
