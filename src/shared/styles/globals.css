@@ -186,6 +186,10 @@ button:focus {
 }
 
 .ztai__py {
+  font-family: "PingFang SC", Inter, "Noto Sans", "Microsoft YaHei", sans-serif;
+}
+
+.ztai__vi {
   font-family:
     Inter, "Segoe UI", Roboto, Arial, "Noto Sans", "PingFang SC",
     "Microsoft YaHei", sans-serif;

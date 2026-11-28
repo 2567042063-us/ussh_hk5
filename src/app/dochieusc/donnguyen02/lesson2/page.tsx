@@ -1,12 +1,12 @@
 import LessonLayout from "../../LessonLayout";
 import { donnguyen02 } from "../../lessons/donnguyen02";
-import Dn02Bai02 from "./Dn02Bai02";
+import Lesson02 from "./Lesson2";
 
 export default function Page() {
   return (
     <LessonLayout lesson={donnguyen02}>
       <div className="px-5">
-        <Dn02Bai02 />
+        <Lesson02 />
       </div>
     </LessonLayout>
   );
