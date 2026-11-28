@@ -73,6 +73,20 @@ export function useQuiz(items: Sentence[], shuffled: boolean) {
   const wrongItems = results.filter((r) => !r.correct).map((r) => r.item);
   const score = results.filter((r) => r.correct).length;
 
+  /** Làm lại câu hiện tại: xóa kết quả của câu này, quay về trạng thái trả lời. */
+  const retryCurrent = useCallback(() => {
+    if (!current || phase !== "checked") return;
+    setResults((r) => {
+      // bỏ kết quả cuối cùng (chính là câu vừa check)
+      const last = r[r.length - 1];
+      if (last && last.item === current) return r.slice(0, -1);
+      return r;
+    });
+    setInput("");
+    setShowPinyin(false);
+    setPhase("answering");
+  }, [current, phase]);
+
   return {
     current,
     index,
@@ -91,5 +105,6 @@ export function useQuiz(items: Sentence[], shuffled: boolean) {
     next,
     giveUp,
     restart,
+    retryCurrent,
   };
 }

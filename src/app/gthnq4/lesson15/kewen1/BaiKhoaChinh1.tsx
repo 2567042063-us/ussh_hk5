@@ -3,7 +3,6 @@
 import { dialogue1 } from "../Kewen";
 import DialogueReader from "../KewenDialogueReader";
 
-// TODO: đổi sang link audio thật của 15-1
 const AUDIO_SRC =
   "https://bh9cualrgy9xkq87.public.blob.vercel-storage.com/gthnq4/15-kewen1.mp3";
 

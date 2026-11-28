@@ -46,7 +46,7 @@ export default function DialogueReader({
     }`;
 
   return (
-    <main className="px-6 pb-10">
+    <main className="px-6 pb-5">
       <div className="z-9 sticky top-0 mb-3 w-full bg-white/95 py-2 backdrop-blur dark:bg-slate-800/95">
         <audio controls preload="none" className="lesson-audio h-10 w-full">
           <source src={audioSrc} type="audio/mpeg" />
@@ -100,7 +100,7 @@ export default function DialogueReader({
           )}
         </section>
 
-        <div className="divide-y divide-stone-200 border-y border-stone-200">
+        <div>
           {turns.map((turn, turnIndex) => {
             const opened = turn.sentences
               .map((sentence, sentenceIndex) => ({
@@ -112,16 +112,16 @@ export default function DialogueReader({
             return (
               <div
                 key={turnIndex}
-                className="grid grid-cols-[4.5rem_1fr] gap-x-3 py-3"
+                className="grid grid-cols-[4.5rem_1fr] gap-x-3 py-1"
               >
-                <div className="pt-1.5 text-stone-500">
+                <div className="pt-1 text-stone-500">
                   <p className="font-serif text-base leading-6 text-stone-700">
                     {turn.speaker.zh}
                   </p>
                   <p className="text-xs">{turn.speaker.vi}</p>
                 </div>
 
-                <div className="space-y-2">
+                <div className="space-y-1">
                   <p className="font-serif text-xl leading-10 text-stone-900">
                     {turn.sentences.map((sentence, sentenceIndex) => {
                       const id = `t${turnIndex}-${sentenceIndex}`;

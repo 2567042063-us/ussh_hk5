@@ -196,6 +196,10 @@ function Session({ lesson, shuffled }: { lesson: Lesson; shuffled: boolean }) {
               <button className={BUTTON_OUTLINE} onClick={q.next} autoFocus>
                 {q.index + 1 >= q.total ? "Xem kết quả" : "Câu tiếp"}
               </button>
+              {/* Nếu muốn nút "Làm lại" không hiện khi câu đó đã đúng (chỉ cho làm lại khi sai), có thể thêm disabled={q.lastCorrect} hoặc ẩn hẳn . */}
+              <button className={BUTTON_OUTLINE} onClick={q.retryCurrent}>
+                Làm lại
+              </button>
             </div>
           </>
         )}

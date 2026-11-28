@@ -141,7 +141,7 @@ function Text({ lesson }: { lesson: Lesson }) {
           }}
           className="rounded-md border border-sky-300 px-3 py-1 text-sm text-sky-800 hover:bg-sky-50"
         >
-          {all ? "Ẩn tất cả" : "Hiện tất cả"}
+          {all ? "Ẩn ≖⩊≖" : "Hiện ≖⩊≖"}
         </button>
       </div>
       <div className="space-y-5">
@@ -402,7 +402,7 @@ function FillTab({ items }: { items: Fill[] }) {
           }
           className="rounded-md border border-sky-300 px-3 py-1 text-sm text-sky-800 hover:bg-sky-50"
         >
-          {allOn ? "Ẩn tất cả" : "Hiện tất cả"}
+          {allOn ? "Ẩn ≖⩊≖" : "Hiện ≖⩊≖"}
         </button>
       </div>
       {items.map((f, i) => (

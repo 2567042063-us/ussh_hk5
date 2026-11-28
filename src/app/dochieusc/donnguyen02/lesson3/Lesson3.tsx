@@ -20,7 +20,7 @@ const lesson: Lesson = {
       {
         zh: "现在当“甩手大爷”的丈夫已经不多见了,他们一般都与妻子共同承担家务。",
         py: "Xiànzài dāng “shuǎishǒu dàye” de zhàngfu yǐjīng bù duō jiàn le, tāmen yìbān dōu yǔ qīzi gòngtóng chéngdān jiāwù.",
-        vi: "Giờ đây những ông chồng làm “ông chủ phủi tay” không còn nhiều, họ thường cùng vợ gánh vác việc nhà.",
+        vi: "Giờ đây những ông chồng làm “ông chủ chỉ tay” (không làm gì cả) không còn nhiều, họ thường cùng vợ gánh vác việc nhà.",
       },
       {
         zh: "传统的“男主外、女主内”的观念正在被打破。",
@@ -54,24 +54,24 @@ const lesson: Lesson = {
       {
         zh: "有些妇女还经常出差,丈夫不做家务根本不行。",
         py: "Yǒuxiē fùnǚ hái jīngcháng chūchāi, zhàngfu bú zuò jiāwù gēnběn bù xíng.",
-        vi: "Một số phụ nữ còn thường xuyên đi công tác, chồng không làm việc nhà thì hoàn toàn không được.",
+        vi: "Một số phụ nữ còn thường xuyên đi công tác, chồng không làm việc nhà thì hoàn toàn không ổn.",
       },
     ],
     [
       {
         zh: "这样的生活现实造就了越来越多的“家庭妇男”,人们把他们叫做“模范丈夫”。",
         py: "Zhèyàng de shēnghuó xiànshí zàojiù le yuèláiyuè duō de “jiātíng fùnán”, rénmen bǎ tāmen jiàozuò “mófàn zhàngfu”.",
-        vi: "Thực tế cuộc sống như vậy đã tạo ra ngày càng nhiều “đàn ông nội trợ”, người ta gọi họ là “người chồng mẫu mực”.",
+        vi: "Thực tế cuộc sống như vậy đã tạo ra ngày càng nhiều “đàn ông nội trợ”, người ta gọi họ là “người chồng kiểu mẫu.",
       },
       {
         zh: "在这种社会风气下,一些女青年,特别是大城市的女青年,把会干家务作为她们寻找理想丈夫的标准之一。",
         py: "Zài zhè zhǒng shèhuì fēngqì xià, yìxiē nǚ qīngnián, tèbié shì dà chéngshì de nǚ qīngnián, bǎ huì gàn jiāwù zuòwéi tāmen xúnzhǎo lǐxiǎng zhàngfu de biāozhǔn zhī yī.",
-        vi: "Trong phong khí xã hội này, một số thanh nữ, nhất là ở thành phố lớn, coi biết làm việc nhà là một tiêu chuẩn tìm chồng lý tưởng.",
+        vi: "Dưới bầu không khí xã hội này, một số Nữ Thanh Niên, đặc biệt là Nữ Thanh Niên ở các thành phố lớn, coi việc biết làm việc nhà là một trong những tiêu chuẩn để tìm người chồng lý tưởng.",
       },
       {
         zh: "与此相适应,一些未婚小伙子也已提前开始这方面的训练,以便得到姑娘们的喜爱。",
         py: "Yǔ cǐ xiāng shìyìng, yìxiē wèihūn xiǎohuǒzi yě yǐ tíqián kāishǐ zhè fāngmiàn de xùnliàn, yǐbiàn dédào gūniang men de xǐ'ài.",
-        vi: "Để thích ứng, một số chàng trai chưa cưới cũng đã luyện tập trước về mặt này, để được các cô gái yêu mến.",
+        vi: "Để thích ứng với điều này, một số chàng trai chưa vợ cũng đã bắt đầu tập luyện về khía cạnh này từ sớm, để có được sự yêu mến của các cô gái.",
       },
     ],
   ],
@@ -82,6 +82,13 @@ const lesson: Lesson = {
       hv: "địa vị",
       vi: "địa vị, vị thế",
       syn: "位置, 身份",
+    },
+    {
+      zh: "收入",
+      py: "shōurù",
+      hv: "thu nhập",
+      vi: "thu nhập, khoản tiền kiếm được",
+      syn: "收益, 进项",
     },
     {
       zh: "来源",
@@ -170,9 +177,17 @@ const lesson: Lesson = {
       vi: "rèn luyện, huấn luyện",
       syn: "练习",
     },
+    {
+      zh: "传统",
+      py: "chuántǒng",
+      hv: "truyền thống",
+      vi: "truyền thống, phong tục, tục lệ, phong tục",
+      syn: "习俗",
+    },
   ],
   usage: {
     地位: "社会地位 / 家庭地位; hay đi với 提高 (nâng cao), 接近 (gần nhau).",
+    收入: "Danh từ “thu nhập”: 妻子的收入, 收入高 / 低. Trái nghĩa 支出 / 开销 (chi tiêu). Còn là động từ “thu vào”.",
     来源: "Danh từ: nguồn (thu nhập, tin tức…): 经济来源, 收入来源.",
     甩手大爷:
       "Ẩn dụ khẩu ngữ: ông chủ phủi tay, người chẳng chịu đụng tay vào việc gì, chỉ ngồi hưởng hoặc chỉ đạo.",
